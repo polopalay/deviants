@@ -1,0 +1,32 @@
+namespace = reforge_interactions
+
+char_interactions.1 = {
+	type = character_event
+	title = Weight
+	desc = Weight
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = interactions.plus_10
+		scope:currency_scope = {
+			change_current_weight = 10
+		}
+		trigger_event = char_interactions.1
+	}
+
+	option = {
+		name = interactions.minus_10
+		scope:currency_scope = {
+			change_current_weight = -10
+		}
+		trigger_event = char_interactions.1
+	}
+	
+	option = {
+		name = interactions.end
+	}
+}

@@ -1,0 +1,29 @@
+﻿l_english:
+
+ open_reforge_menu: "Open reforge menu"
+ close_reforge_menu: "Close reforge menu"
+
+ reforge_switch_character: "Switch"
+ reforge_add_character: "Add"
+ reforge_revoke_character: "Take title"
+ reforge_befriend_character: "Be friend"
+ reforge_unfriend_character: "Unfriend"
+ reforge_remove_rival: "Remove rival"
+ reforge_create_hook: "Create hook"
+ reforge_change_weight: "Change weight"
+ reforge_imprison: "Imprison"
+ reforge_kill_character: "Kill"
+ reforge_offer_vassal: "Vassal"
+ reforge_immortal: "Immortal"
+ reforge_mortal: "Mortal"
+ interactions.plus_10: "#P 10 #!"
+ interactions.minus_10: "#N 10 #!"
+ interactions.end: "End"
+
+ reforge_slut: "Slut"
+
+ reforge_become_slut: "Become prostitute"
+ reforge_revoke_slut: "Give up prostitute"
+
+ reforge_nude: "Nude"
+ reforge_stop_nude: "Stop nude"
