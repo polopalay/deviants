@@ -1,0 +1,34 @@
+morph_genes = {
+	gene_body_markings = {
+		group = body_markings_group
+			
+		no_body_markings = {
+			index = 0			
+		}
+			
+		lust_brand = {
+		index = 3
+		male = {	
+			decal = {		
+				body_part = torso
+				textures = {
+					diffuse = "gfx/models/portraits/decals/succubus_makeup/lust_brand.dds"
+				}
+				blend_modes = {				 
+					diffuse = replace
+				}
+				alpha_curve = {
+					{ 0  0 }
+					{ 1  1 }
+				}
+				decal_apply_order = post_skin_color
+				priority = 11
+			}
+		}
+		female = male
+		boy = male
+		girl = male
+		}
+	}
+}
+

@@ -16,6 +16,7 @@
  reforge_offer_vassal: "Vassal"
  reforge_immortal: "Immortal"
  reforge_mortal: "Mortal"
+ reforge_evil: "Evil"
  interactions.plus_10: "#P 10 #!"
  interactions.minus_10: "#N 10 #!"
  interactions.end: "End"

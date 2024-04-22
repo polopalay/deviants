@@ -365,14 +365,14 @@ reforge_nude = {
 			is_adult = yes
 			is_female = yes
 			NOT = {
-				has_character_flag = is_naked
+				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier 
 			}
 		}
 	}
 
 	on_accept = {
 		scope:recipient = {
-			add_character_flag = is_naked
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		}
 	}
 }
@@ -388,13 +388,14 @@ reforge_stop_nude = {
 			is_ai = no
 		}
 		scope:recipient = {
-			has_character_flag = is_naked
+			has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier 
 		}
 	}
 
 	on_accept = {
 		scope:recipient = {
-			remove_character_flag = is_naked
+			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			remove_character_flag = mrf_is_naked
 		}
 	}
 }
@@ -438,6 +439,42 @@ reforge_mortal = {
 		scope:recipient = {
 			immortal = no
 			remove_character_flag = reforge_immortal
+		}
+	}
+}
+
+reforge_evil = {
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = reforged_menu
+			is_ai = no
+		}
+		scope:recipient = {
+			NOT = {
+				any_secret = { secret_type = secret_deviant }
+				any_secret = { secret_type = secret_witch }
+				any_secret = { secret_type = secret_cannibal }
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			hidden_effect = {
+				add_secret = { 
+					type = secret_deviant
+				}
+				add_secret = { 
+					type = secret_witch
+				}
+				add_secret = { 
+					type = secret_cannibal
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,20 @@
+﻿slut_outfittags = {
+	usage = game
+	slut_outfit = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_body_markings
+				value = 1
+				template = lust_brand
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_modifier = reforge_slut
+			}
+		}
+	}
+}
