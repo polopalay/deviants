@@ -12,9 +12,33 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 200
+				add = 100
 				has_character_modifier = reforge_slut
 			}
 		}
 	}
 }
+nude_clothes = {
+    	usage = game
+    	fallback = unclothed_body
+    	priority = 10000
+
+	no_clothes = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				should_show_nudity = yes
+				should_be_naked_trigger = yes
+				is_female = yes
+			}
+		}
+	}
+}
+
