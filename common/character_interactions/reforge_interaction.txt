@@ -332,6 +332,7 @@ reforge_become_slut = {
 				}
 			}
 			add_character_modifier = reforge_slut
+			add_character_flag = immune_to_disease
 
 		}
 	}
@@ -355,6 +356,7 @@ reforge_revoke_slut = {
 	on_accept = {
 		scope:recipient = {
 			remove_character_modifier = reforge_slut
+			remove_character_flag = immune_to_disease
 		}
 	}
 }
