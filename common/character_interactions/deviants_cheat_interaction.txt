@@ -1,0 +1,261 @@
+deviants_change_interactions = {
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+		}
+	}
+	
+	on_send = {
+		scope:recipient = {
+			save_scope_as = currency_scope
+		}
+		scope:actor = {
+			save_actor_as = currency_actor
+			trigger_event = deviants_events.1
+		}
+	}
+}
+
+deviants_switch_character = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+		}
+		scope:recipient = {
+			is_ai = yes
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			set_player_character = scope:recipient
+		}
+	}
+}
+
+deviants_add_character = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:recipient = {
+			is_landed = no
+			NOT = {
+				is_courtier_of = scope:actor
+			}
+		}
+		scope:actor = {
+			is_ai = no
+			is_landed = yes
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			add_courtier = scope:recipient
+		}
+	}
+}
+
+deviants_imprison = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			imprison = {
+				target = scope:recipient
+				type = dungeon
+			}
+		}
+	}
+}
+
+deviants_vassal_inter = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		scope:recipient = {
+			NOT = { this = scope:actor }
+			is_landed = yes
+			highest_held_title_tier < scope:actor.highest_held_title_tier
+			NOT = { government_has_flag = can_not_be_vassal_or_liege }
+		}
+		scope:actor = {
+			is_ai = no
+		}
+	}
+
+	on_accept = {
+		offer_vassalization_interaction_effect = yes
+	}
+}
+
+deviants_revoke_character = {
+	common_interaction = no
+	use_diplomatic_range = no
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+	special_interaction = revoke_title_interaction
+	target_type = title
+	target_filter = recipient_domain_titles
+	
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_landed = yes
+		}
+		scope:actor = {
+			is_ai = no
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = { is_ai = no }
+	}
+	
+	can_be_picked_title = {
+		scope:target = {
+			holder = scope:recipient
+		}
+	}
+}
+
+deviants_befriend_character = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			NOT = { has_relation_friend = scope:recipient }
+		}
+	}
+
+	on_accept = {
+		scope:actor = {		
+			set_relation_friend = scope:recipient
+		}
+	}
+}
+
+deviants_unfriend_character = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_relation_friend = scope:recipient
+		}
+	}
+
+	on_accept = {
+		scope:actor = {		
+			remove_relation_friend = scope:recipient
+		}
+	}
+}
+
+deviants_add_rival = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+		}
+		NOT = { scope:recipient = scope:actor }
+		NOT = {
+			scope:actor = {
+				any_relation = {
+				type = rival
+					this = scope:recipient
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			set_relation_rival = scope:recipient
+		}
+	}
+}
+
+deviants_remove_rival = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_relation_rival = scope:recipient
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			remove_relation_rival = scope:recipient
+		}
+	}
+}
+
+deviants_create_hook = {
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = favor_hook
+			}
+		}
+	}
+}

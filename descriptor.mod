@@ -3,5 +3,5 @@ tags={
 	"Decisions"
 	"Events"
 }
-name="Reforge"
+name="Deviants"
 supported_version="1.12.*"

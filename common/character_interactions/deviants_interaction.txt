@@ -1,0 +1,617 @@
+deviants_prostitute_interaction = {
+	icon = sex
+	common_interaction = no
+	desc = deviants_prostitute_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	if = {
+		limit = { has_character_modifier = deviants_prostitute }
+		cooldown_against_recipient = { months = 12 }
+	}
+	else = {
+		cooldown_against_recipient = { days = 12 }
+	}
+	cooldown = { months = 6 }
+
+    	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+        	scope:actor = {
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+			is_travelling = no
+			is_attracted_to_gender_of = scope:recipient
+			NOR = {
+				has_character_modifier = deviants_public_toilet
+				has_character_modifier = deviants_prostitute
+			}
+        	}
+        	scope:recipient = {
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+			is_travelling = no
+			NOT = { is_spouse_of = root }
+			OR = {
+				has_character_modifier = deviants_public_toilet
+				has_character_modifier = deviants_prostitute
+			}
+        	}
+    	}
+
+	auto_accept = {
+		scope:recipient = {
+			has_character_modifier = deviants_public_toilet
+		}
+	}
+
+    	on_accept = {
+		scope:recipient = {
+			save_scope_as = seller
+			add_character_modifier = {
+				modifier = deviants_fuckedsilly
+				months = 1
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:actor
+				PREGNANCY_CHANCE = 0
+            		}
+		}
+        	scope:actor = {
+			save_scope_as = buyer
+			if = {
+				limit = { 
+					scope:recipient = { has_character_modifier = deviants_prostitute }
+				}
+				if = {
+					limit = { exists = scope:recipient.liege }
+					pay_short_term_gold = {
+						target = scope:recipient.liege
+						gold = 5
+					}
+					pay_short_term_gold = {
+						target = scope:recipient
+						gold = 5
+					}
+					if = {
+						limit = { scope:recipient = { has_trait = deviants_succubus } }
+						scope:recipient = {
+							add_trait_xp = {
+								trait = deviants_succubus
+								track = demonanalcorruption
+								value = 1
+							}
+						}
+					}
+					if = {
+						limit = { scope:recipient.liege = { has_trait = deviants_succubus } }
+						scope:recipient.liege = {
+							add_trait_xp = {
+								trait = deviants_succubus
+								track = demonpower
+								value = 1
+							}
+						}
+					}
+				}
+				else = {
+					pay_short_term_gold = {
+						target = scope:recipient
+						gold = 10
+					}
+					if = {
+						limit = { scope:recipient = { has_trait = deviants_succubus } }
+						scope:recipient = {
+							add_trait_xp = {
+								trait = deviants_succubus
+								track = demonanalcorruption
+								value = 1
+							}
+						}
+					}
+					if = {
+						limit = { scope:recipient.liege = { has_trait = deviants_succubus } }
+						scope:recipient.liege = {
+							add_trait_xp = {
+								trait = deviants_succubus
+								track = demonpower
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			trigger_event = deviants_prostitution_events.1 
+    		}
+    	}
+
+	ignores_pending_interaction_block = yes
+	ai_frequency = 6
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+		ai_recipients = sub_realm_characters
+		ai_recipients = realm_characters
+	}
+	ai_potential = {
+		always = yes
+	}
+
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+		modifier = {
+			add = 50
+			scope:recipient = {
+				has_trait = lustful
+			}
+		}
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = 15
+			scope:actor = {
+				gold > 100
+			}
+		}
+		modifier = {
+			add = 40
+			scope:actor = {
+				has_trait = lustful
+			}
+		}
+		modifier = {
+			add = -40
+			OR = {
+				scope:actor.dynasty = scope:recipient.dynasty
+				is_close_or_extended_family_of = scope:actor
+				is_close_family_of = scope:actor
+			}
+		}
+	}
+}
+
+deviants_become_prostitute_interaction = {
+	icon = sex
+	common_interaction = no
+	desc = deviants_become_prostitute_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+
+    	is_shown = {
+        	scope:actor = {
+            		is_adult = yes
+			is_landed = yes
+			has_trait = deviants_succubus
+        	}
+        	scope:recipient = {
+            		is_adult = yes
+			is_female = yes
+			NOR = {
+				has_character_modifier = deviants_public_toilet
+				has_character_modifier = deviants_prostitute
+			}
+			OR = {
+				scope:actor = scope:recipient
+				ia_vassal_of = scope:actor
+				is_courtier_of = scope:actor
+				AND = {
+					is_ruler = no
+					is_imprisoned_by = scope:actor
+				}
+			}
+        	}
+    	}
+
+
+
+    	on_accept = {
+		scope:recipient = {
+			add_character_modifier = deviants_prostitute
+			add_character_flag = blocked_from_leaving
+			if = {
+				limit = { is_imprisoned_by = scope:actor }
+				release_from_prison = yes
+			}
+			if = {
+				limit = {
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+					every_spouse = {
+						divorce = scope:recipient
+					}
+				}
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { NOT = { is_liege_or_above_of = scope:recipient } }
+				add_courtier = scope:recipient
+			}
+		}
+    	}
+
+	auto_accept = {
+		OR = {
+			scope:recipient = {
+				is_imprisoned_by = scope:actor
+			}
+			scope:recipient = scope:actor
+		}
+	}
+
+	ai_frequency = 6
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		ai_recipients = self
+		ai_recipients = prisoners
+	}
+	ai_potential = {
+		always = yes
+	}
+
+
+	ai_accept = {
+		base = -50
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 10
+			scope:actor = {
+				gold < 0 
+			}
+		}
+		modifier = {
+			add = 100
+			scope:actor = {
+				has_trait = lustful 
+			}
+			OR = {
+				scope:actor = {
+					has_trait = deviants_succubus
+				}
+			}
+			scope:actor = scope:recipient
+		}
+		modifier = {
+			add = -5
+			scope:actor.dynasty = scope:recipient.dynasty
+		}
+		modifier = {
+			add = -20
+			is_close_or_extended_family_of = scope:recipient
+		}
+		modifier = {
+			add = -5
+			is_close_family_of = scope:recipient
+		}
+		modifier = {
+			add = 50
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+				}
+			}
+		}
+	}
+}
+
+deviants_stop_prostitute_interaction = {
+	icon = deviantsflag
+	common_interaction = no
+	desc = deviants_stop_prostitute_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	cooldown = { months = 6 }
+
+    	is_shown = {
+        	scope:actor = {
+            		is_adult = yes
+			is_landed = yes
+			has_trait = deviants_succubus
+        	}
+        	scope:recipient = {
+            		is_adult = yes
+			is_female = yes
+			has_character_modifier = deviants_prostitute
+			OR = {
+				scope:actor = scope:recipient
+				is_courtier_of = scope:actor
+			}
+        	}
+    	}
+
+
+
+    	on_accept = {
+		scope:recipient = {
+			remove_character_modifier = deviants_prostitute
+		}
+    	}
+
+	auto_accept = yes
+
+	ai_frequency = 6
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		ai_recipients = self
+		ai_recipients = prisoners
+	}
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = -10
+			scope:actor = {
+				gold < 0 
+			}
+		}
+		modifier = {
+			add = 10
+			scope:actor = {
+				gold > 0 
+			}
+		}
+		modifier = {
+			add = -100
+			scope:actor = {
+				has_trait = lustful 
+			}
+			OR = {
+				scope:actor = {
+					has_trait = deviants_succubus
+				}
+			}
+			scope:actor = scope:recipient
+		}
+		modifier = {
+			add = 5
+			scope:actor.dynasty = scope:recipient.dynasty
+		}
+		modifier = {
+			add = 20
+			is_close_or_extended_family_of = scope:recipient
+		}
+		modifier = {
+			add = 5
+			is_close_family_of = scope:recipient
+		}
+		modifier = {
+			add = -50
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+				}
+			}
+		}
+	}
+}
+
+deviants_become_public_toilet_interaction = {
+	icon = sex
+	common_interaction = no
+	desc = deviants_become_public_toilet_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	cooldown = { months = 12 }
+
+    	is_shown = {
+        	scope:actor = {
+            		is_adult = yes
+			is_landed = yes
+			has_trait = deviants_succubus
+        	}
+        	scope:recipient = {
+            		is_adult = yes
+			is_female = yes
+			OR = {
+				scope:actor = scope:recipient
+				ia_vassal_of = scope:actor
+				is_courtier_of = scope:actor
+				AND = {
+					is_ruler = no
+					is_landed = no
+					is_imprisoned_by = scope:actor
+				}
+			}
+			has_character_modifier = deviants_prostitute
+			NOT = { has_character_modifier = deviants_public_toilet }
+        	}
+    	}
+
+    	on_accept = {
+		scope:recipient = {
+			remove_character_modifier = deviants_prostitute
+			add_character_modifier = deviants_public_toilet
+			add_character_flag = blocked_from_leaving
+			if = {
+				limit = { is_imprisoned_by = scope:actor }
+				release_from_prison = yes
+			}
+			if = {
+				limit = {
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+					every_spouse = {
+						divorce = scope:recipient
+					}
+				}
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { NOT = { is_liege_or_above_of = scope:recipient } }
+				add_courtier = scope:recipient
+			}
+		}
+    	}
+
+	auto_accept = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+		}
+	}
+
+	ai_accept = {
+		base = -80
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		ai_recipients = self
+		ai_recipients = prisoners
+	}
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = -5
+			scope:actor.dynasty = scope:recipient.dynasty
+		}
+		modifier = {
+			add = -20
+			is_close_or_extended_family_of = scope:actor
+		}
+		modifier = {
+			add = -5
+			is_close_family_of = scope:actor
+		}
+		modifier = {
+			add = 50
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+				}
+			}
+		}
+	}
+}
+
+deviants_stop_public_toilet_interaction = {
+	icon = deviantsflag
+	common_interaction = no
+	desc = deviants_stop_public_toilet_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	cooldown = { months = 12 }
+
+    	is_shown = {
+        	scope:actor = {
+            		is_adult = yes
+			is_landed = yes
+			is_ruler = yes
+			has_trait = deviants_succubus
+        	}
+        	scope:recipient = {
+            		is_adult = yes
+			is_female = yes
+			OR = {
+				scope:actor = scope:recipient
+				is_courtier_of = scope:actor
+			}
+			has_character_modifier = deviants_public_toilet
+        	}
+    	}
+
+	auto_accept = true
+
+    	on_accept = {
+		scope:recipient = {
+			remove_character_modifier = deviants_public_toilet
+			add_character_modifier = deviants_prostitute
+		}
+    	}
+
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		ai_recipients = self
+		ai_recipients = prisoners
+	}
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 100
+			scope:actor = scope:recipient
+		}
+		modifier = {
+			add = 5
+			scope:actor.dynasty = scope:recipient.dynasty
+		}
+		modifier = {
+			add = 20
+			is_close_or_extended_family_of = scope:actor
+		}
+		modifier = {
+			add = 5
+			is_close_family_of = scope:actor
+		}
+		modifier = {
+			add = -50
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+				}
+			}
+		}
+	}
+}
+

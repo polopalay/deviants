@@ -1,0 +1,180 @@
+namespace = deviants_events
+
+deviants_events.1 = {
+	type = character_event
+	title = deviants_events.1.title
+	desc = deviants_events.1.title
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_greedy
+	}
+	option = {
+		name = deviants_add_immortal
+		scope:currency_scope = {
+			set_immortal_age = 18
+			is_immortal = yes
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		name = deviants_add_xp
+		trigger = {
+			scope:currency_scope = {
+				OR = {
+					has_trait = deviants_mask
+					has_trait = deviants_demonanalslut
+				}
+			}
+		}
+		scope:currency_scope = {
+			hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_mask
+					track = deviantlibido
+					value = 100
+				}
+				add_trait_xp = {
+					trait = deviants_demonanalslut
+					track = demonanalslutcorruption
+					value = 100
+				}
+				add_trait_xp = {
+					trait = deviants_demonanalslut
+					track = demonsubmissionslut
+					value = 100
+				}
+			}
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		trigger = {
+			scope:currency_scope = {
+				is_landed = yes
+			}
+		}
+		name = deviants_add_tyranny
+		scope:currency_scope = {
+			add_tyranny = 10
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		trigger = {
+			scope:currency_scope = {
+				is_landed = yes
+			}
+		}
+		name = deviants_sub_tyranny
+		scope:currency_scope = {
+			add_tyranny = -10
+		}
+		trigger_event = deviants_events.1
+	}
+
+	option = {
+		trigger = {
+			scope:currency_scope = {
+				is_landed = yes
+			}
+		}
+		name = deviants_add_weight
+		scope:currency_scope = {
+			change_current_weight = 10
+		}
+		trigger_event = deviants_events.1
+	}
+
+	option = {
+		trigger = {
+			scope:currency_scope = {
+				is_landed = yes
+			}
+		}
+		name = deviants_sub_weight
+		scope:currency_scope = {
+			change_current_weight = -10
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		trigger = {
+			scope:currency_scope = {
+				is_landed = yes
+			}
+		}
+		name = deviants_change_grovement_feudal
+		scope:currency_scope = {
+			change_government = feudal_government
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		name = deviants_secret
+		trigger = {
+			scope:currency_scope = {
+                       		NOT = {
+                               		any_secret = { secret_type = secret_deviant }
+                               		any_secret = { secret_type = secret_witch }
+                               		any_secret = { secret_type = secret_cannibal }
+                		}
+			}
+		}
+		scope:currency_scope = {
+				add_secret = { 
+					type = secret_deviant
+				}
+				add_secret = { 
+					type = secret_witch
+				}
+				add_secret = { 
+					type = secret_cannibal
+				}
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		name = deviants_nickname
+		scope:currency_scope = {
+			random_list = {
+				50 = {
+					give_nickname = nick_the_lewd
+				}
+				50 = {
+					give_nickname = nick_the_lecher
+				}
+			}
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		name = deviants_nude
+		trigger = {
+			scope:currency_scope = {
+				NOT = {
+					has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+				}
+			}
+		}
+		scope:currency_scope = {
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		name = deviants_stop_nude
+		trigger = {
+			scope:currency_scope = {
+				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+		}
+		scope:currency_scope = {
+			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		}
+		trigger_event = deviants_events.1
+	}
+	option = {
+		name = deviants_events.end
+	}
+}

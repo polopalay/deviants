@@ -1,0 +1,63 @@
+deviants_succubus = {
+	category = health
+	icon = deviantssuccubus.dds
+	minimum_age = 16
+	same_opinion = 50
+	immortal = yes
+	monthly_lifestyle_xp_gain_mult = -10
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_succubus_desc
+			}
+			desc = deviants_succubus_character_desc
+		}
+	}
+
+	tracks = {
+		demonanalcorruption = {
+			50 = {
+				attraction_opinion = 5
+				negate_health_penalty_add = 2
+			}
+
+			100 = {
+				attraction_opinion = 20
+				negate_health_penalty_add = 3
+			}			
+		}
+		demonpower = {
+			30 = {
+				health = 1
+			}
+
+			65 = {
+				health = 2
+			}
+
+			100 = {
+				health = 3
+			}			
+		}
+		menatarmstwistedloyalty = {
+			30 = {
+				knight_effectiveness_mult = 0.05
+			}
+
+			65 = {
+				men_at_arms_maintenance = -0.05
+				knight_effectiveness_mult = 0.10
+			}
+
+			100 = {
+				men_at_arms_maintenance = -0.10
+				knight_effectiveness_mult = 0.15
+			}			
+		}
+	}
+}
+

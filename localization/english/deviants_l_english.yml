@@ -1,0 +1,63 @@
+﻿l_english:
+ deviants_events.1.title: "Interactions menu"
+ deviants_events.1.desc: "Modify character"
+
+ deviants_add_immortal: "Become Immortal"
+ deviants_add_xp: "Add XP"
+ deviants_switch_character: "Change Character"
+ deviants_add_character: "Add to Court"
+ deviants_revoke_character: "Take Title"
+ deviants_imprison: "Imprison"
+ deviants_vassal_inter: "Vassalize Title"
+ deviants_befriend_character: "Add Friend"
+ deviants_unfriend_character: "Remove Friend"
+ deviants_add_rival: "Add rival"
+ deviants_remove_rival: "Remove rival"
+ deviants_create_hook: "Create hook"
+ deviants_change_interactions: "Change interactions"
+ deviants_secret: "Add evil secret"
+ deviants_nickname: "Give Nickname"
+ deviants_change_grovement_feudal: "Change To Feudal Grovement"
+ deviants_add_weight: "Add 10 weight"
+ deviants_sub_weight: "Sub 10 weight"
+ deviants_add_tyranny: "Add 10 tyranny"
+ deviants_sub_tyranny: "Sub 10 tyranny"
+ deviants_events.end: "End"
+
+ trait_deviants_succubus: "Succubus"
+ deviants_succubus_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."
+ deviants_succubus_character_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."
+ trait_track_demonanalcorruption: "Deviant"
+ trait_track_demonanalcorruption_desc: "If I act on the impulses, people will see what I'm hiding inside and treat me accordingly."
+ trait_track_demonpower: "Power"
+ trait_track_demonpower_desc: "If I obey them, I can feel it. They are pleased."
+ trait_track_menatarmstwistedloyalty: "Men-at-arms Loyalty"
+ trait_track_menatarmstwistedloyalty_desc: "There is more than one way to ensure a man's loyalty."
+
+ deviants_prostitute: "Prostitute"
+ deviants_public_toilet: "Public Toilet"
+ deviants_fuckedsilly: "Fucked Silly"
+
+ deviants_become_slut: "Become Slut"
+ deviants_revoke_slut: "Give up Slut"
+
+ deviants_nude: "Nude"
+ deviants_stop_nude: "Stop nude"
+
+ deviants_prostitute_interaction: "Prostitution"
+ deviants_prostitute_interaction.desc: "[buyer.GetShortUIName] lays with [seller.GetShortUIName]"
+ deviants_prostitution_events.1.title: "Throes of Passion"
+ deviants_prostitution_events.1.desc: "I and [recipient.GetShortUIName] had hot passionate sex all night long. I lost count how many times I creampied her pussy."
+ deviants_prostitution_events.1.end: "Wonderfull"
+
+ deviants_become_prostitute_interaction: "Become Prostitution"
+ deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"
+
+ deviants_stop_prostitute_interaction: "Stop Being A Prostitution"
+ deviants_stop_prostitute_interaction.desc: "[recipient.GetShortUIName] Stop Working As Prostitute"
+
+ deviants_become_public_toilet_interaction: "Become Public Toilet"
+ deviants_become_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Become Public Toilet"
+
+ deviants_stop_public_toilet_interaction: "Stop Being A Public Toilet"
+ deviants_stop_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Stop Working As Public Toilet"

@@ -1,0 +1,44 @@
+namespace = deviants_prostitution_events
+
+deviants_prostitution_events.1 = {
+	type = character_event
+	title = deviants_prostitution_events.1.title
+	desc = deviants_prostitution_events.1.desc
+	
+	theme = seduction
+	override_background = { reference = bedchamber }
+
+	left_portrait = {
+		character = scope:seller
+		animation = personality_greedy
+	}
+	
+	right_portrait = {
+		character = scope:buyer
+		animation = love
+	}
+	
+	immediate = {
+		scope:buyer = {
+			add_character_flag = {
+				flag = is_naked
+			}
+		}
+		scope:seller = {
+			add_character_flag = {
+				flag = is_naked
+			}
+		}
+	}
+	
+	option = {
+		name = deviants_prostitution_events.1.end
+	
+		scope:buyer = {
+			remove_character_flag =  is_naked
+		}
+		scope:seller = {
+			remove_character_flag = is_naked
+		}
+	}
+}
