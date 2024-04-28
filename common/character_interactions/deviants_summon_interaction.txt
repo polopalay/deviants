@@ -1,0 +1,93 @@
+deviants_spawn_darkarmy_interaction = {
+	icon = deviantssoldier
+	common_interaction = no
+	desc = deviants_spawn_darkarmy_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonanalcorruption
+				value >= 25
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = deviants_dark_amry
+					stacks = 2
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = deviants_dark_amry
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonanalcorruption
+				value = -25
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_create_lesser_succubus_interaction = {
+	icon = titsgood
+	common_interaction = no
+	desc = deviants_spawn_darkarmy_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:recipient = {
+			is_courtier_of = scope:actor
+			is_female = yes
+			NOR = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonanalcorruption
+				value >= 0
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { has_trait = chaste }
+				remove_trait = chaste
+			}
+			add_trait = lustful
+			add_trait = deviants_lesser_succubus
+			add_character_modifier = deviants_prostitute
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonanalcorruption
+				value = -50
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}

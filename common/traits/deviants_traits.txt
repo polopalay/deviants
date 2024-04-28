@@ -2,7 +2,7 @@ deviants_succubus = {
 	category = health
 	icon = deviantssuccubus.dds
 	minimum_age = 16
-	same_opinion = 50
+	same_opinion = 20
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -10
 
@@ -18,29 +18,34 @@ deviants_succubus = {
 		}
 	}
 
+	opposites = { deviants_lesser_succubus }
+
 	tracks = {
 		demonanalcorruption = {
 			50 = {
 				attraction_opinion = 5
-				negate_health_penalty_add = 2
+				hostile_scheme_resistance_add = 50
 			}
 
 			100 = {
 				attraction_opinion = 20
-				negate_health_penalty_add = 3
+				hostile_scheme_resistance_add = 100
 			}			
 		}
 		demonpower = {
 			30 = {
 				health = 1
+				negate_health_penalty_add = 1
 			}
 
 			65 = {
 				health = 2
+				negate_health_penalty_add = 2
 			}
 
 			100 = {
 				health = 3
+				negate_health_penalty_add = 3
 			}			
 		}
 		menatarmstwistedloyalty = {
@@ -61,3 +66,44 @@ deviants_succubus = {
 	}
 }
 
+deviants_lesser_succubus = {
+	category = health
+	icon = deviantpossessed.dds
+	minimum_age = 16
+	same_opinion = 10
+	compatibility = {
+		deviants_succubus = 50
+	}
+
+	immortal = yes
+	monthly_lifestyle_xp_gain_mult = -10
+
+	flag = can_not_marry
+	inheritance_blocker = all
+	claim_inheritance_blocker = all
+
+	opposites = { deviants_lesser_succubus }
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_lesser_succubusdesc
+			}
+			desc = deviants_lesser_succubus_character_desc
+		}
+	}
+
+	track = {
+		50 = {
+			health = 1
+			negate_health_penalty_add = 1
+		}
+		100 = {
+			health = 2
+			negate_health_penalty_add = 2
+		}
+	}
+}

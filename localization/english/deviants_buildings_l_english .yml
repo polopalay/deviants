@@ -1,0 +1,20 @@
+﻿l_english:
+ 
+ building_deviants_brothel: "Brothel"
+ building_deviants_brothel_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place"
+ building_type_deviants_brothel: "$building_deviants_brothel$"
+ building_type_deviants_brothel_desc: "$building_deviants_brothel_desc$"
+
+ building_deviants_brothel2: "High-class brothel"
+ building_deviants_brothel2_desc: "Providing some special services such as group sex and exhibition"
+ building_type_deviants_brothel2_market: "$building_deviants_brothel2$"
+ building_type_deviants_brothel2_desc: "$building_deviants_brothel2_desc$"
+
+ building_deviants_brothel3: "Luxurious Brothels"
+ building_deviants_brothel3_desc: "Providing all kinds of sexual services: bestiality, sadomasochism"
+ building_type_deviants_brothel3: "$deviants_brothel3$"
+ building_type_deviants_brothel3_desc: "$deviants_brothel2_desc$"
+
+ deviants_racketeers: "Racketeers"
+ deviants_racketeers_flavor: "Racketeers makes money from a dishonest or illegal business activity"
+

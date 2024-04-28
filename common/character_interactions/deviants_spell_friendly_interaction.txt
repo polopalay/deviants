@@ -1,0 +1,265 @@
+deviants_become_succubus = {
+	icon = titsgood
+	common_interaction = no
+	desc = deviants_become_succubus.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = { 
+		scope:actor = scope:recipient
+		scope:actor = { is_ai = no }
+		scope:actor = { 
+			is_female = yes
+			NOR = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = chaste }
+				remove_trait = chaste
+			}
+			set_immortal_age = 18
+			add_trait = lustful
+			add_trait = deviants_succubus
+		}
+	}
+	auto_accept = yes
+}
+
+deviants_buff_interaction = {
+	icon = deviantslegend
+	common_interaction = no
+	desc = deviants_buff_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 1
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 1
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = deviants_buff
+				years = 1
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -1
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -1
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_weight_interaction = {
+	icon = deviantssupply
+	common_interaction = no
+	desc = deviants_weight_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 5
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 5
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			change_current_weight = -500
+			change_current_weight = 120
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -5
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -5
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			base = 10
+			scope:recipient = scope:actor
+		}
+	}
+}
+
+deviants_heal_interaction = {
+	icon = deviantswitchcraft
+	common_interaction = no
+	desc = deviants_heal_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { months = 1 }
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value >= 10
+			} 
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = depressed_1
+				has_trait = depressed_genetic
+				has_trait = lunatic_1
+				has_trait = lunatic_genetic
+				has_trait = possessed_1
+				has_trait = one_eyed
+				has_trait = scarred
+				has_trait = maimed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = sickly
+				has_trait = infirm
+				has_trait = incapable 
+				has_trait = leper
+				has_trait = ill 
+				has_trait = pneumonic 
+				has_trait = gout_ridden 
+				has_trait = typhus 
+				has_trait = consumption 
+				has_trait = cancer 
+				has_trait = great_pox 
+				has_trait = smallpox 
+				has_trait = bubonic_plague 
+				has_trait = lovers_pox 
+				has_trait = great_pox 
+				has_trait = possessed_genetic
+				has_trait = bubonic_plague
+				has_trait = measles
+				has_trait = dysentery
+				has_trait = ergotism
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -10
+				}
+			}
+		}
+		scope:recipient = {
+				remove_trait = depressed_1
+				remove_trait = depressed_genetic
+				remove_trait = lunatic_1
+				remove_trait = lunatic_genetic
+				remove_trait = possessed_1
+				remove_trait = possessed_genetic
+				remove_trait = one_eyed
+				remove_trait = scarred
+				remove_trait = maimed
+				remove_trait = one_legged
+				remove_trait = disfigured
+				remove_trait = eunuch
+				remove_trait = blind
+				remove_trait = sickly
+				remove_trait = infirm
+				remove_trait = incapable 
+				remove_trait = leper
+
+				recover_from_disease_effect = { DISEASE = ill }
+				recover_from_disease_effect = { DISEASE = pneumonic }
+				recover_from_disease_effect = { DISEASE = gout_ridden }
+				recover_from_disease_effect = { DISEASE = typhus }
+				recover_from_disease_effect = { DISEASE = consumption }
+				recover_from_disease_effect = { DISEASE = measles }
+				recover_from_disease_effect = { DISEASE = cancer }
+				recover_from_disease_effect = { DISEASE = great_pox }
+				recover_from_disease_effect = { DISEASE = smallpox }
+				recover_from_disease_effect = { DISEASE = bubonic_plague }
+				recover_from_disease_effect = { DISEASE = lovers_pox }
+				recover_from_disease_effect = { DISEASE = bubonic_plague }
+				recover_from_disease_effect = { DISEASE = dysentery }
+				recover_from_disease_effect = { DISEASE = ergotism }
+				recover_from_disease_effect = { DISEASE = measles }
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = { 
+		ai_recipients = self 
+		ai_recipients = courtiers
+		ai_recipients = family
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0
+		modifier = {
+			base = 100
+			scope:actor = scope:recipient
+		}	
+		modifier = {
+			base = 50
+			is_close_family_of = scope:actor
+		}
+		modifier = {
+			base = 10
+			is_courtier_of = scope:actor
+		}
+	}
+}

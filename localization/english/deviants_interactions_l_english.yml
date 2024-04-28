@@ -1,0 +1,66 @@
+﻿l_english:
+ deviants_change_interactions: "Edit Character"
+ deviants_switch_character: "Change Character"
+ deviants_add_character: "Add to Court"
+ deviants_revoke_character: "Take Title"
+ deviants_imprison: "Imprison"
+ deviants_vassal_inter: "Vassalize Title"
+ deviants_befriend_character: "Add Friend"
+ deviants_unfriend_character: "Remove Friend"
+ deviants_add_rival: "Add rival"
+ deviants_remove_rival: "Remove rival"
+ deviants_create_hook: "Create hook"
+
+ deviants_prostitute_interaction: "Prostituting"
+ deviants_prostitute_interaction.desc: "[buyer.GetShortUIName] lays with [seller.GetShortUIName]"
+
+ deviants_become_prostitute_interaction: "Become Prostitution"
+ deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"
+
+ deviants_stop_prostitute_interaction: "Stop Being A Prostitution"
+ deviants_stop_prostitute_interaction.desc: "[recipient.GetShortUIName] Stop Working As Prostitute"
+
+ deviants_become_public_toilet_interaction: "Become Public Toilet"
+ deviants_become_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Become Public Toilet"
+
+ deviants_stop_public_toilet_interaction: "Stop Being A Public Toilet"
+ deviants_stop_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Stop Working As Public Toilet"
+
+ deviants_trade_slut_interaction: "Exchange Prostitutes"
+ deviants_trade_slut_interaction.desc: "Exchange prostitutes with [recipient.GetShortUIName]"
+ actor_secondary_deviants_trade_slut_interaction: "Choose one"
+
+ deviants_sell_slut_interaction: "Sell Prostitutes"
+ deviants_sell_slut_interaction.desc: "Sell prostitutes with [recipient.GetShortUIName]"
+ actor_secondary_deviants_sell_slut_interaction: "Choose one"
+
+ deviants_buy_slut_interaction: "Buy Prostitutes"
+ deviants_buy_slut_interaction.desc: "Buy prostitutes with [recipient.GetShortUIName]d"
+ actor_secondary_deviants_buy_slut_interaction: "Choose one"
+
+ deviants_buff_interaction: "Devil's Blessing"
+ deviants_buff_interaction.desc: "Exchange 1 portion of the obtained seeds for the Demon Lord's blessing"
+
+ deviants_weight_interaction: "Adjust Weight"
+ deviants_weight_interaction.desc: "Get your weight to the perfect level"
+
+ deviants_heal_interaction: "Healing"
+ deviants_heal_interaction.desc: "Heals all types of diseases and wounds"
+
+ deviants_mind_break_interaction: "Mind Break"
+ deviants_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
+
+ deviants_dull_interaction: "Dulls"
+ deviants_dull_interaction.desc: "Dulls [recipient.GetShortUIName]"
+
+ deviants_kill_interaction: "Kill Character"
+ deviants_kill_interaction.desc: "Immediately kills [recipient.GetShortUIName]"
+ 
+ deviants_spawn_darkarmy_interaction: "Spawn Dark Amry"
+ deviants_spawn_darkarmy_interaction.desc: "Spawn Dark Army in your capital."
+
+ deviants_become_succubus: "Become Succubus"
+ deviants_become_succubus.desc: "[recipient.GetShortUIName] will become Succubus"
+
+ deviants_create_lesser_succubus_interaction: "Create Lesser Succubus"
+ deviants_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"

@@ -1,0 +1,22 @@
+deviants_dark_amry = {
+	icon = skirmishers
+	type = skirmishers 
+	can_recruit = { always = no }
+
+	pursuit = 30
+	screen = 30
+	damage = 30
+	toughness = 30
+	siege_value = 0.5
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 1
+	}
+
+	stack = 100
+	buy_cost = { gold = 0  }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 0 }
+}
+

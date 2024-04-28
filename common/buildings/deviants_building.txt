@@ -1,0 +1,123 @@
+deviants_brothel = {
+	type_icon = "icon_building_longhouses.dds"
+	construction_time = very_quick_construction_time
+	cost = { gold = expensive_building_tier_1_cost }
+	type = duchy_capital
+	levy = 100
+
+	next_building = deviants_brothel2
+
+	can_construct_potential = {
+		is_capital_barony = yes
+		scope:holder = {
+			has_trait = deviants_succubus
+		}
+		NOT = {
+			any_sub_realm_barony = {
+				title_province = { 
+					has_building_or_higher = inn_slut_brothel 
+				}
+			}
+		}
+	}
+	can_construct = { 
+ 	}
+	is_enabled = {
+		scope:holder = {
+			has_trait = deviants_succubus
+		}
+	}
+
+	province_modifier = {
+		monthly_income = 0.1
+	}
+	
+	character_modifier = {
+		monthly_prestige = -0.05
+	}
+	
+	county_modifier = {
+		development_growth = 0.2
+		monthly_county_control_growth_add = -0.1
+	}
+	
+	ai_value = { base = 100 }
+}
+
+deviants_brothel2 = {
+	type_icon = "icon_building_longhouses.dds"
+	construction_time = quick_construction_time
+	cost = { gold = expensive_building_tier_2_cost }
+	type = duchy_capital
+	levy = 250 
+
+	next_building = deviants_brothel3
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+	can_construct = { 
+ 	}
+	is_enabled = {
+		scope:holder = {
+			has_trait = deviants_succubus
+		}
+	}
+
+	province_modifier = {
+		monthly_income =0.2
+	}
+	
+	character_modifier = {
+		monthly_prestige = -0.05
+	}
+	
+	county_modifier = {
+		development_growth = 0.2
+		monthly_county_control_growth_add = -0.2
+		county_opinion_add = 5
+	}
+	
+	ai_value = { base = 100 }
+}
+
+deviants_brothel3 = {
+	type_icon = "icon_building_longhouses.dds"
+	construction_time = standard_construction_time
+	cost = { gold = expensive_building_tier_3_cost }
+	type = duchy_capital
+	levy = 500
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+	}
+	can_construct = { 
+ 	}
+	is_enabled = {
+		scope:holder = {
+			has_trait = deviants_succubus
+		}
+	}
+
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	
+	character_modifier = {
+		spouse_opinion = -20
+		monthly_prestige = -0.1
+	}
+	
+	county_modifier = {
+		development_growth = 0.3
+		monthly_county_control_growth_add = -0.3
+		county_opinion_add = 10
+	}
+	
+	ai_value = {
+		base = 6
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+

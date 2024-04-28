@@ -1,0 +1,408 @@
+deviants_mind_break_interaction = {
+	icon = titsbad
+	common_interaction = no
+	desc = deviants_mind_break_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+			age < 40
+		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value >= 20
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			remove_trait = chaste
+			add_trait = lustful	
+			if = {
+				limit = {
+					is_female = yes
+				}
+				if = {
+					limit = {
+						NOT = { has_character_modifier = deviants_prostitute }
+					}
+					add_character_modifier = deviants_prostitute
+				}
+				if = {
+					limit = { has_character_modifier = deviants_prostitute }
+					remove_character_modifier = deviants_prostitute
+					add_character_modifier = deviants_public_toilet
+				}
+			}
+			add_secret = { 
+				type = secret_deviant
+			}
+			add_secret = { 
+				type = secret_witch
+			}
+			add_secret = { 
+				type = secret_cannibal
+			}
+			random_list = {
+				25 = {
+					give_nickname = nick_the_lewd
+				}
+				25 = {
+					give_nickname = nick_the_lecher
+				}
+				15 = {
+					give_nickname = nick_the_witch
+				}
+				15 = {
+					give_nickname = nick_the_bewitched
+				}
+				10 = {
+					give_nickname = nick_the_cannibal
+				}
+				10 = {
+					add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+				}
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value = -20
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 10
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
+}
+
+deviants_dull_interaction = {
+	icon = deviantsfervor
+	common_interaction = no
+	desc = deviants_dull_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value >= 50
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			remove_trait = logistician
+			remove_trait = military_engineer
+			remove_trait = aggressive_attacker
+			remove_trait = unyielding_defender
+			remove_trait = forder
+			remove_trait = flexible_leader
+			remove_trait = desert_warrior
+			remove_trait = jungle_stalker
+			remove_trait = reaver
+			remove_trait = reckless
+			remove_trait = holy_warrior
+			remove_trait = open_terrain_expert
+			remove_trait = rough_terrain_expert
+			remove_trait = forest_fighter
+			remove_trait = forest_fighter
+			remove_trait = cautious_leader 
+			remove_trait = winter_soldier
+			remove_trait = lifestyle_hunter
+			remove_trait = lifestyle_reveler
+			remove_trait = lifestyle_gardener
+			remove_trait = lifestyle_mystic
+			remove_trait = lifestyle_physician
+			remove_trait = lifestyle_herbalist
+			remove_trait = lifestyle_blademaster
+			remove_trait = lifestyle_traveler
+			remove_trait = tourney_participant
+			remove_trait = beauty_good_1
+			remove_trait = beauty_good_2
+			remove_trait = beauty_good_3
+			remove_trait = intellect_good_1
+			remove_trait = intellect_good_2
+			remove_trait = intellect_good_3
+			remove_trait = physique_good_1
+			remove_trait = physique_good_2
+			remove_trait = physique_good_3
+			remove_trait = pure_blooded
+			remove_trait = strong
+			remove_trait = fecund
+			remove_trait = shrewd
+			remove_trait = pilgrim
+			remove_trait = journaller
+			remove_trait = confider
+			remove_trait = athletic
+			remove_trait = witch
+			remove_trait = lustful
+			remove_trait = chaste
+			remove_trait = gluttonous
+			remove_trait = temperate
+			remove_trait = greedy
+			remove_trait = generous
+			remove_trait = lazy
+			remove_trait = diligent
+			remove_trait = zealous
+			remove_trait = cynical
+			remove_trait = just
+			remove_trait = arbitrary
+			remove_trait = content
+			remove_trait = ambitious
+			remove_trait = gregarious
+			remove_trait = shy
+			remove_trait = brave
+			remove_trait = craven
+			remove_trait = honest
+			remove_trait = deceitful
+			remove_trait = humble
+			remove_trait = arrogant
+			remove_trait = impatient
+			remove_trait = patient
+			remove_trait = calm
+			remove_trait = wrathful
+			remove_trait = forgiving
+			remove_trait = vengeful
+			remove_trait = fickle
+			remove_trait = stubborn
+			remove_trait = sadistic
+			remove_trait = callous
+			remove_trait = compassionate
+			remove_trait = trusting
+			remove_trait = paranoid
+			remove_trait = pregnant
+			remove_trait = diplomat
+			remove_trait = august
+			remove_trait = family_first
+			remove_trait = strategist
+			remove_trait = overseer
+			remove_trait = gallant
+			remove_trait = avaricious
+			remove_trait = architect
+			remove_trait = administrator
+			remove_trait = schemer
+			remove_trait = seducer
+			remove_trait = torturer
+			remove_trait = whole_of_body
+			remove_trait = scholar
+			remove_trait = theologian
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_martial_2
+						has_trait = education_martial_3
+						has_trait = education_martial_4
+						has_trait = education_martial_5
+					}
+				}
+				remove_trait = education_martial_2
+				remove_trait = education_martial_3
+				remove_trait = education_martial_4
+				remove_trait = education_martial_5
+				add_trait = education_martial_1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_diplomacy_2
+						has_trait = education_diplomacy_3
+						has_trait = education_diplomacy_4
+						has_trait = education_diplomacy_5
+					}
+				}
+				remove_trait = education_diplomacy_2
+				remove_trait = education_diplomacy_3
+				remove_trait = education_diplomacy_4
+				remove_trait = education_diplomacy_5
+				add_trait = education_diplomacy_1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_intrigue_2
+						has_trait = education_intrigue_3
+						has_trait = education_intrigue_4
+						has_trait = education_intrigue_5
+					}
+				}
+				remove_trait = education_intrigue_2
+				remove_trait = education_intrigue_3
+				remove_trait = education_intrigue_4
+				remove_trait = education_intrigue_5
+				add_trait = education_intrigue_1
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_stewardship_2
+						has_trait = education_stewardship_3
+						has_trait = education_stewardship_4
+						has_trait = education_stewardship_5
+					}
+				}
+				remove_trait = education_stewardship_2
+				remove_trait = education_stewardship_3
+				remove_trait = education_stewardship_4
+				remove_trait = education_stewardship_5
+				add_trait = education_stewardship_1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_learning_2
+						has_trait = education_learning_3
+						has_trait = education_learning_4
+						has_trait = education_learning_5
+					}
+				}
+				remove_trait = education_learning_2
+				remove_trait = education_learning_3
+				remove_trait = education_learning_4
+				remove_trait = education_learning_5
+				add_trait = education_learning_1
+			}
+			random_list = {
+				1 = {
+					add_trait = vengeful
+					add_trait = sadistic
+					add_trait = lustful
+				}
+				1 = {
+					add_trait = craven
+					add_trait = paranoid
+					add_trait = lustful
+				}
+				1 = {
+					add_trait = greedy
+					add_trait = lazy
+					add_trait = lustful
+				}
+				1 = {
+					add_trait = craven
+					add_trait = cynical
+					add_trait = lustful
+				}
+				1 = {
+					add_trait = gluttonous
+					add_trait = lazy
+					add_trait = lustful
+				}
+			}
+			add_trait = dull
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value = -50
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = -20
+			scope:actor = {
+				OR = {
+					has_relation_friend = scope:recipient
+					has_relation_best_friend = scope:recipient
+					has_relation_has_relation_lover = scope:recipient
+					has_relation_soulmate = scope:recipient
+				}
+			}
+		}
+		modifier = {
+			add = 10
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
+}
+
+deviants_kill_interaction = {
+	icon = deviantsattrition
+	common_interaction = no
+	desc = deviants_kill_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value >= 80
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			death = { death_reason = death_natural_causes }
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value = -80
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 5
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
+}
