@@ -1,6 +1,6 @@
 ﻿l_english:
  deviants_prostitute_interaction: "Prostituting"
- deviants_prostitute_interaction.desc: "[buyer.GetShortUIName] lays with [seller.GetShortUIName]"
+ deviants_prostitute_interaction.desc: "[actor.GetShortUIName] lays with [recipient.GetShortUIName]"
 
  deviants_become_prostitute_interaction: "Become Prostitution"
  deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"

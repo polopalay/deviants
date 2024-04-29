@@ -21,7 +21,7 @@ deviants_add_courtier = {
 	desc = deviants_add_courtier.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
-	cooldown = { years = 1 }
+	cooldown = { years = 10 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
@@ -31,7 +31,10 @@ deviants_add_courtier = {
 				value >= 5
 			} 
 		}
-		scope:recipient = { is_courtier = yes }
+		scope:recipient = { 
+			is_courtier = yes 
+			NOT = { is_courtier_of = scope:actor }
+		}
 	}
 	on_accept = {
 		scope:actor = {
@@ -55,7 +58,7 @@ deviants_befriend = {
 	desc = deviants_befriend.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 1 }
+	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
@@ -89,7 +92,7 @@ deviants_hook = {
 	desc = deviants_hook.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 1 }
+	cooldown = { years = 10 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 

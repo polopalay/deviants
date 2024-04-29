@@ -3,7 +3,7 @@ deviants_rumor_interaction = {
 	desc = deviants_rumor_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
+	cooldown = { years = 10 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -80,7 +80,7 @@ deviants_steal_gold_interaction = {
 	desc = deviants_steal_gold_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
+	cooldown = { years = 10 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -91,7 +91,7 @@ deviants_steal_gold_interaction = {
 			} 
 		}
 		scope:recipient = {
-			gold >= 20
+			gold >= 200
 			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -136,14 +136,8 @@ deviants_imprison_interaction = {
 	desc = deviants_imprison_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	if = {
-		limit = { is_ruler = yes }
-		cooldown = { years = 10 }
-	}
-	else = {
-		cooldown = { months = 1 }
-	}
-	is_shown = {
+	cooldown = { years = 10 }
+	is_valid = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
 			has_trait_xp = {
@@ -195,13 +189,7 @@ deviants_kill_interaction = {
 	desc = deviants_kill_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	if = {
-		limit = { is_ruler = yes }
-		cooldown = { years = 10 }
-	}
-	else = {
-		cooldown = { months = 1 }
-	}
+	cooldown = { years = 10 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
