@@ -1,0 +1,113 @@
+deviants_service_interaction = {
+	icon = deviantsblasphemer
+	desc = deviants_service_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		scope:actor = {
+			has_trait = deviants_succubus
+			is_ruler = yes
+			every_courtier_or_guest = {
+				limit = { is_female = no is_knight = yes }
+				count > 0
+			}
+		}
+		scope:recipient = scope:actor
+	}
+	on_accept = {
+		scope:recipient = {
+			every_courtier_or_guest = {
+				limit = { is_female = no is_knight = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = 0 }
+				scope:recipient = { 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
+					add_trait_xp = { trait = deviants_succubus track = menatarmstwistedloyalty  value = 1 }
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+
+deviants_require_service_interaction = {
+	icon = deviantsblasphemer
+	desc = deviants_require_service_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 2 }
+	cooldown_against_recipient = { years = 1 }
+	is_shown = {
+		scope:actor = { is_knight = yes exists = liege }
+		scope:recipient = scope:actor.liege
+		scope:recipient = {
+			has_trait = deviants_succubus
+			OR = {
+				has_character_modifier = deviants_prostitute
+				has_character_modifier = deviants_public_toilet
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 }
+			add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
+			add_trait_xp = { trait = deviants_succubus track = menatarmstwistedloyalty  value = 1 }
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = liege }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+
+deviants_spawn_darkarmy_interaction = {
+	icon = deviantssoldier
+	desc = deviants_spawn_darkarmy_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = menatarmstwistedloyalty
+				value >= 50
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = deviants_dark_amry
+					stacks = 2
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = deviants_dark_amry
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = menatarmstwistedloyalty
+				value = -50
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}

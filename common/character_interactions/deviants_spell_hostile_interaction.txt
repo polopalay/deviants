@@ -1,6 +1,82 @@
+deviants_rumor_interaction = {
+	icon = deviantsblasphemer
+	desc = deviants_rumor_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value >= 5
+			} 
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+				has_nickname = nick_the_lewd
+				has_nickname = nick_the_lecher
+				has_nickname = nick_the_witch
+				has_nickname = nick_the_bewitched
+				has_nickname = nick_the_cannibal
+				has_nickname = nick_the_unchaste
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			random_list = {
+				1 = {
+					give_nickname = nick_the_lewd
+				}
+				1 = {
+					give_nickname = nick_the_lecher
+				}
+				1 = {
+					give_nickname = nick_the_witch
+				}
+				1 = {
+					give_nickname = nick_the_bewitched
+				}
+				1 = {
+					give_nickname = nick_the_cannibal
+				}
+				1 = {
+					give_nickname = nick_the_unchaste
+				}
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 5
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
+}
+
 deviants_imprison_interaction = {
 	icon = deviantsabduct
-	common_interaction = no
 	desc = deviants_imprison_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -11,12 +87,23 @@ deviants_imprison_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = demonpower
-				value >= 10
+				value >= 15
 			} 
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 		}
 	}
 	on_accept = {
 		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value = -15
+			}
 			imprison = {
 				target = scope:recipient
 				type = dungeon
@@ -43,7 +130,6 @@ deviants_imprison_interaction = {
 
 deviants_mind_break_interaction = {
 	icon = titsbad
-	common_interaction = no
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -53,6 +139,10 @@ deviants_mind_break_interaction = {
 		scope:recipient = {
 			is_adult = yes
 			age < 40
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 		}
 		scope:actor = {
 			has_trait_xp = {
@@ -64,6 +154,16 @@ deviants_mind_break_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
+			any_vassal_or_below = {
+				limit = { is_adult = yes is_female = no }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
+			}
+			every_courtier_or_guest = {
+				limit = { is_adult = yes is_female = no }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
+			}
 			remove_trait = chaste
 			add_trait = lustful	
 			if = {
@@ -139,8 +239,7 @@ deviants_mind_break_interaction = {
 }
 
 deviants_dull_interaction = {
-	icon = deviantsfervor
-	common_interaction = no
+	icon = deviantsattrition
 	desc = deviants_dull_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -397,8 +496,7 @@ deviants_dull_interaction = {
 }
 
 deviants_kill_interaction = {
-	icon = deviantsattrition
-	common_interaction = no
+	icon = deviantsdead
 	desc = deviants_kill_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes

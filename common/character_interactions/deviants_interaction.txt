@@ -1,6 +1,5 @@
 deviants_prostitute_interaction = {
 	icon = sex
-	common_interaction = no
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -158,7 +157,6 @@ deviants_prostitute_interaction = {
 
 deviants_become_prostitute_interaction = {
 	icon = sex
-	common_interaction = no
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -296,7 +294,6 @@ deviants_become_prostitute_interaction = {
 
 deviants_stop_prostitute_interaction = {
 	icon = deviantsflag
-	common_interaction = no
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -379,7 +376,6 @@ deviants_stop_prostitute_interaction = {
 
 deviants_become_public_toilet_interaction = {
 	icon = sex
-	common_interaction = no
 	desc = deviants_become_public_toilet_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -496,7 +492,6 @@ deviants_become_public_toilet_interaction = {
 
 deviants_stop_public_toilet_interaction = {
 	icon = deviantsflag
-	common_interaction = no
 	desc = deviants_stop_public_toilet_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -572,12 +567,12 @@ deviants_stop_public_toilet_interaction = {
 
 deviants_trade_slut_interaction = {
 	icon = deviantsiend
-	common_interaction = no
 	desc = deviants_trade_slut_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 
     	is_shown = {
+		NOT = { scope:actor = scope:recipient }
         	scope:actor = {
             		is_adult = yes
 			OR = {
@@ -685,12 +680,12 @@ deviants_trade_slut_interaction = {
 
 deviants_buy_slut_interaction = {
 	icon = deviantsgold
-	common_interaction = no
 	desc = deviants_buy_slut_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 
     	is_shown = {
+		NOT = { scope:actor = scope:recipient }
         	scope:actor = {
             		is_adult = yes
 			OR = {
@@ -770,12 +765,12 @@ deviants_buy_slut_interaction = {
 
 deviants_sell_slut_interaction = {
 	icon = deviantsgold
-	common_interaction = no
 	desc = deviants_sell_slut_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 
     	is_shown = {
+		NOT = { scope:actor = scope:recipient }
         	scope:actor = {
             		is_adult = yes
 			OR = {

@@ -1,6 +1,47 @@
+deviants_summon_legendary_beast_interaction = {
+	icon = deviantsbeast
+	desc = deviants_summon_legendary_beast_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 2 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			is_ruler = yes
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonanalcorruption
+					value >= 10
+				}
+			}
+		}
+		scope:recipient.capital_county = { NOT = { has_county_modifier = hunt_sighting_legendary_modifier } }
+	}
+	on_accept = {
+		scope:recipient.capital_county = { 
+			add_county_modifier = {
+				modifier = hunt_sighting_legendary_modifier 
+				years = 2
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonanalcorruption
+				value = -10
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
 deviants_child_interaction = {
 	icon = deviantsbastard
-	common_interaction = no
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -59,7 +100,6 @@ deviants_child_interaction = {
 
 deviants_create_lesser_succubus_interaction = {
 	icon = titsgood
-	common_interaction = no
 	desc = deviants_spawn_darkarmy_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -104,49 +144,4 @@ deviants_create_lesser_succubus_interaction = {
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
-}
-
-deviants_spawn_darkarmy_interaction = {
-	icon = deviantssoldier
-	common_interaction = no
-	desc = deviants_spawn_darkarmy_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	cooldown = { years = 10 }
-	is_shown = {
-		scope:actor = scope:recipient
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = menatarmstwistedloyalty
-				value >= 75
-			} 
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			spawn_army = {
-				men_at_arms = {
-					type = deviants_dark_amry
-					stacks = 2
-				}
-				location = scope:recipient.capital_province
-				inheritable = yes
-				uses_supply = no
-				name = deviants_dark_amry
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = menatarmstwistedloyalty
-				value = -75
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
 }

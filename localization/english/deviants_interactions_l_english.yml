@@ -68,17 +68,17 @@
  deviants_create_lesser_succubus_interaction: "Create Lesser Succubus"
  deviants_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
 
- deviants_summon_animals_interaction: "Summon Animals"
- deviants_summon_animals_interaction.desc: "Summon animals to the capital of [recipient.GetShortUIName]"
-
- deviants_summon_beast_interaction: "Summon Beasts"
- deviants_summon_beast_interaction.desc: "Summon beasts to the capital of [recipient.GetShortUIName]"
-
- deviants_summon_falconry_interaction: "Summon Falcons"
- deviants_summon_falconry_interaction.desc: "Summon falcons to the capital of [recipient.GetShortUIName]"
-
  deviants_summon_legendary_beast_interaction: "Summon Legendary Beasts"
  deviants_summon_legendary_beast_interaction.desc: "Summon legendary beasts to the capital of [recipient.GetShortUIName]"
 
  deviants_child_interaction: "Create Child"
  deviants_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"
+
+ deviants_rumor_interaction: "Spreading Rumors"
+ deviants_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
+
+ deviants_service_interaction: "Serves The Army"
+ deviants_service_interaction.desc: "Make love to all your knights to gain favor in the citadel"
+
+ deviants_require_service_interaction: "Request Service"
+ deviants_require_service_interaction.desc: "Ask [recipient.GetShortUIName] to provide free sexual services to maintain loyalty"
