@@ -40,6 +40,10 @@
 			}
 		}
 	}
+}
+
+prostitute_outfittags = {
+	usage = game
 	prostitute_outfit = {
 		dna_modifiers = {
 			morph = {

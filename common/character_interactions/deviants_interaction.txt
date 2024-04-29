@@ -1,5 +1,5 @@
 deviants_prostitute_interaction = {
-	icon = sex
+	icon = deviantshealth
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -41,8 +41,6 @@ deviants_prostitute_interaction = {
 			}
         	}
     	}
-
-	auto_accept = yes
 
     	on_accept = {
 		scope:recipient = {
@@ -187,8 +185,6 @@ deviants_become_prostitute_interaction = {
         	}
     	}
 
-
-
     	on_accept = {
 		scope:recipient = {
 			add_character_modifier = deviants_prostitute
@@ -217,6 +213,13 @@ deviants_become_prostitute_interaction = {
 				}
 				add_courtier = scope:recipient
 			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
 		}
     	}
 
@@ -224,20 +227,25 @@ deviants_become_prostitute_interaction = {
 		OR = {
 			scope:recipient = { is_imprisoned_by = scope:actor }
 			scope:recipient = scope:actor
+			custom_description = {
+				text = "spending_hook"
+				subject = scope:actor
+				object = scope:recipient
+				scope:hook = yes
+			}
 		}
 	}
 
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = courtiers
-		ai_recipients = vassals
-		ai_recipients = self
-		ai_recipients = prisoners
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
 	}
-	ai_potential = {
-		always = yes
-	}
-
+	send_options_exclusive = no
 
 	ai_accept = {
 		base = -50
@@ -252,6 +260,16 @@ deviants_become_prostitute_interaction = {
 		}
 	}
 
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		ai_recipients = self
+		ai_recipients = prisoners
+	}
+	ai_potential = {
+		always = yes
+	}
 	ai_will_do = {
 		base = 5
 		modifier = {
@@ -405,6 +423,31 @@ deviants_become_public_toilet_interaction = {
         	}
     	}
 
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+
+	auto_accept = {
+		OR = { 
+			scope:recipient = {
+				is_imprisoned_by = scope:actor
+			}
+
+			custom_description = {
+				text = "spending_hook"
+				subject = scope:actor
+				object = scope:recipient
+				scope:hook = yes
+			}
+		}
+	}
     	on_accept = {
 		scope:recipient = {
 			remove_character_modifier = deviants_prostitute
@@ -436,12 +479,6 @@ deviants_become_public_toilet_interaction = {
 			}
 		}
     	}
-
-	auto_accept = {
-		scope:recipient = {
-			is_imprisoned_by = scope:actor
-		}
-	}
 
 	ai_accept = {
 		base = -80
@@ -630,12 +667,37 @@ deviants_trade_slut_interaction = {
 		}
 	}
 
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}	
 
     	on_accept = {
 		scope:recipient = {
 			add_courtier = scope:secondary_actor
 		}
 		scope:actor = {
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
 			add_courtier = scope:secondary_recipient
 		}
     	}
@@ -723,6 +785,24 @@ deviants_buy_slut_interaction = {
 			}
 		}
 	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}	
 
     	on_accept = {
 		scope:actor = {
@@ -730,6 +810,13 @@ deviants_buy_slut_interaction = {
 			pay_short_term_gold = {
 				target = scope:recipient
 				gold = 50
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
 			}
 		}
     	}
@@ -808,6 +895,24 @@ deviants_sell_slut_interaction = {
 			}
 		}
 	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}	
 
     	on_accept = {
 		scope:recipient = {
@@ -815,6 +920,15 @@ deviants_sell_slut_interaction = {
 			pay_short_term_gold = {
 				target = scope:actor
 				gold = 50
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
 			}
 		}
     	}

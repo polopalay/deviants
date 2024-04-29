@@ -1,5 +1,5 @@
 deviants_become_succubus = {
-	icon = deviantsflag
+	icon = deviantsfertility
 	desc = deviants_become_succubus.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes

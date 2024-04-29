@@ -136,7 +136,13 @@ deviants_imprison_interaction = {
 	desc = deviants_imprison_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
+	if = {
+		limit = { is_ruler = yes }
+		cooldown = { years = 10 }
+	}
+	else = {
+		cooldown = { months = 1 }
+	}
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -189,7 +195,13 @@ deviants_kill_interaction = {
 	desc = deviants_kill_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
+	if = {
+		limit = { is_ruler = yes }
+		cooldown = { years = 10 }
+	}
+	else = {
+		cooldown = { months = 1 }
+	}
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
@@ -202,7 +214,7 @@ deviants_kill_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 10
+				value >= 5
 			} 
 		}
 	}
@@ -214,7 +226,7 @@ deviants_kill_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -10
+				value = -5
 			}
 		}
 	}

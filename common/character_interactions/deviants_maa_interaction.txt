@@ -22,7 +22,7 @@ deviants_service_interaction = {
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = 0 }
 				scope:recipient = { 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-					add_trait_xp = { trait = deviants_succubus track = maa_loyalty  value = 1 }
+					add_trait_xp = { trait = deviants_succubus track = loyalty  value = 1 }
 				}
 			}
 		}
@@ -45,7 +45,7 @@ deviants_spawn_darkarmy_interaction = {
 		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = maa_loyalty
+				track = loyalty
 				value >= 50
 			} 
 		}
@@ -66,7 +66,7 @@ deviants_spawn_darkarmy_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = maa_loyalty
+				track = loyalty
 				value = -50
 			}
 		}

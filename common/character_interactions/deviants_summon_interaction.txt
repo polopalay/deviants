@@ -51,7 +51,7 @@ deviants_add_courtier = {
 }
 
 deviants_befriend = {
-	icon = sex
+	icon = deviantsdiplomacy
 	desc = deviants_befriend.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes

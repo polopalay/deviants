@@ -24,7 +24,7 @@ deviants_offer_orgy = {
 	on_accept = {
 		scope:recipient = {
 			if = {
-				limit = { scope:actor = { is_female = no } }
+				limit = { is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 }
 				scope:actor = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 				scope:actor = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } } 
@@ -32,8 +32,10 @@ deviants_offer_orgy = {
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 }
-				scope:actor = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
-				scope:actor = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } } 
+				scope:actor = { 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+					add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
+				}
 			}
 		}
 	}
@@ -59,6 +61,151 @@ deviants_offer_orgy = {
 	ai_will_do = { base = 100 }
 }
 
+deviants_dispel_interaction = {
+	icon = deviantsmagic
+	desc = deviants_dispel_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			is_adult = yes
+			is_ruler = yes
+			is_female = yes
+			NOT  = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+			OR = {
+				has_character_modifier = deviants_prostitute
+				has_character_modifier = deviants_public_toilet
+			}
+		}
+		scope:recipient = {
+			is_ruler = yes
+			has_trait = deviants_succubus 
+		}
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}	
+
+	on_accept = {
+		scope:recipient = {
+			every_courtier_or_guest = {
+				limit = { is_female = no is_knight = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 } 
+				scope:actor = { 
+					add_trait_xp = { trait = deviants_succubus track = daring value = 1 } 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				} 
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+			remove_character_modifier = deviants_prostitute
+			remove_character_modifier = deviants_public_toilet
+		}
+	}
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+		ai_recipients = sub_realm_characters
+		ai_recipients = realm_characters
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+deviants_shake_mind_interaction = {
+	icon = deviantsfertility
+	desc = deviants_mind_break_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 2 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+			is_ruler = yes
+			is_female = yes
+			NOT  = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 10
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier years = 1 }	
+			every_courtier_or_guest = {
+				limit = { is_female = no is_knight = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 } 
+				scope:actor = { 
+					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				} 
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -10
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
 deviants_mind_break_interaction = {
 	icon = deviantsmask
 	desc = deviants_mind_break_interaction.desc
@@ -71,7 +218,11 @@ deviants_mind_break_interaction = {
 			is_adult = yes
 			is_ruler = yes
 			is_female = yes
-			NOT  = { has_trait = deviants_succubus }
+			NOT  = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+				has_character_modifier = deviants_public_toilet
+			}
 		}
 		scope:actor = {
 			has_trait_xp = {
@@ -90,20 +241,23 @@ deviants_mind_break_interaction = {
 					is_female = yes
 				}
 				if = {
-					limit = {
-						NOT = { has_character_modifier = deviants_prostitute }
-					}
-					add_character_modifier = deviants_prostitute
+					limit = { has_character_modifier = deviants_prostitute }
+					add_character_modifier = { modifier = deviants_prostitute years = 1 }
 				}
 				if = {
 					limit = { has_character_modifier = deviants_prostitute }
 					remove_character_modifier = deviants_prostitute
-					add_character_modifier = deviants_public_toilet
+					add_character_modifier = { modifier = deviants_public_toilet years = 1 }
 				}
 			}
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 } 
+				scope:actor = { 
+					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
 		}
@@ -119,7 +273,18 @@ deviants_mind_break_interaction = {
 	ai_frequency = 12
 	ai_targets = { ai_recipients = scripted_relations }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 5
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
 }
 
 deviants_dull_interaction = {
@@ -131,18 +296,24 @@ deviants_dull_interaction = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
 			is_adult = yes
-			NOT  = { has_trait = deviants_succubus }
+			NOT  = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 		}
 		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = daring
 				value >= 50
 			} 
 		}
 	}
 	on_accept = {
 		scope:recipient = {
+			limit = { has_character_modifier = deviants_prostitute }
+			remove_character_modifier = deviants_prostitute
+			add_character_modifier = { modifier = deviants_public_toilet years = 1 }
 			remove_trait = logistician
 			remove_trait = military_engineer
 			remove_trait = aggressive_attacker
@@ -341,22 +512,21 @@ deviants_dull_interaction = {
 					add_trait = lustful
 				}
 			}
-			add_trait = dull
-			any_vassal_or_below = {
-				limit = { is_adult = yes is_female = no }
-				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
-				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
-			}
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 } 
+				scope:actor = { 
+					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
 		}
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = daring
 				value = -50
 			}
 		}

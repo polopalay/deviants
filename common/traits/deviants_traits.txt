@@ -47,7 +47,7 @@ deviants_succubus = {
 				negate_health_penalty_add = 3
 			}			
 		}
-		maa_loyalty = {
+		loyalty = {
 			30 = {
 				knight_effectiveness_mult = 0.1
 			}

@@ -1,16 +1,4 @@
 ﻿l_english:
- deviants_change_interactions: "Edit Character"
- deviants_switch_character: "Change Character"
- deviants_add_character: "Add to Court"
- deviants_revoke_character: "Take Title"
- deviants_imprison: "Imprison"
- deviants_vassal_inter: "Vassalize Title"
- deviants_befriend_character: "Add Friend"
- deviants_unfriend_character: "Remove Friend"
- deviants_add_rival: "Add rival"
- deviants_remove_rival: "Remove rival"
- deviants_create_hook: "Create hook"
-
  deviants_prostitute_interaction: "Prostituting"
  deviants_prostitute_interaction.desc: "[buyer.GetShortUIName] lays with [seller.GetShortUIName]"
 
@@ -48,7 +36,7 @@
  deviants_heal_interaction.desc: "Heals all types of diseases and wounds"
 
  deviants_imprison_interaction: "Imprison"
- ddeviants_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
+ deviants_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
 
  deviants_mind_break_interaction: "Mind Break"
  deviants_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
@@ -178,3 +166,9 @@
 
  deviants_steal_gold_interaction: "Steal Gold"
  deviants_steal_gold_interaction.desc: "Stealing money from [recipient.GetShortUIName]"
+
+ deviants_shake_mind_interaction: "Shake The Mind"
+ deviants_shake_mind_interaction.desc: "Transmitting depraved thoughts into [recipient.GetShortUIName]'s mind"
+
+ deviants_dispel_interaction: "Dispel"
+ deviants_dispel_interaction.desc: "Please pray for [recipient.GetShortUIName] to undo the magic she has cast on you"
