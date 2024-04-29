@@ -1,3 +1,46 @@
+deviants_imprison_interaction = {
+	icon = deviantsabduct
+	common_interaction = no
+	desc = deviants_imprison_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value >= 10
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			imprison = {
+				target = scope:recipient
+				type = dungeon
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 5
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
+}
+
 deviants_mind_break_interaction = {
 	icon = titsbad
 	common_interaction = no
@@ -15,7 +58,7 @@ deviants_mind_break_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = demonpower
-				value >= 20
+				value >= 25
 			} 
 		}
 	}
@@ -73,7 +116,7 @@ deviants_mind_break_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = demonpower
-				value = -20
+				value = -25
 			}
 		}
 	}

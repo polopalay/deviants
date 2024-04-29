@@ -9,7 +9,7 @@ deviants_prostitute_interaction = {
 		cooldown_against_recipient = { months = 12 }
 	}
 	else = {
-		cooldown_against_recipient = { days = 12 }
+		cooldown_against_recipient = { months = 1 }
 	}
 	cooldown = { months = 6 }
 
@@ -21,6 +21,10 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_attracted_to_gender_of = scope:recipient
+			NOT = { 
+				is_spouse_of = scope:recipient
+				has_trait = lovers_pox
+			}
 			NOR = {
 				has_character_modifier = deviants_public_toilet
 				has_character_modifier = deviants_prostitute
@@ -65,17 +69,17 @@ deviants_prostitute_interaction = {
 					}
 					pay_short_term_gold = {
 						target = scope:recipient.liege
-						gold = 5
+						gold = 2
 					}
 					pay_short_term_gold = {
 						target = scope:recipient
-						gold = 5
+						gold = 2
 					}
 				}
 				else = {
 					pay_short_term_gold = {
 						target = scope:recipient
-						gold = 10
+						gold = 4
 					}
 				}
 			}
@@ -102,14 +106,13 @@ deviants_prostitute_interaction = {
 			}
 		}
 		if = {
-			limit = { scope:recipient.liege = { has_trait = deviants_lesser_succubus }
+			limit = { scope:recipient = { has_trait = deviants_lesser_succubus } }
 				scope:recipient = {
 					add_trait_xp = {
 						trait = deviants_lesser_succubus
 						value = 1
 					}
 				}
-			}
     		}
 	}
 
@@ -176,7 +179,7 @@ deviants_become_prostitute_interaction = {
 			}
 			OR = {
 				scope:actor = scope:recipient
-				ia_vassal_of = scope:actor
+				is_vassal_of = scope:actor
 				is_courtier_of = scope:actor
 				AND = {
 					is_ruler = no
@@ -221,9 +224,7 @@ deviants_become_prostitute_interaction = {
 
 	auto_accept = {
 		OR = {
-			scope:recipient = {
-				is_imprisoned_by = scope:actor
-			}
+			scope:recipient = { is_imprisoned_by = scope:actor }
 			scope:recipient = scope:actor
 		}
 	}
@@ -242,6 +243,10 @@ deviants_become_prostitute_interaction = {
 
 	ai_accept = {
 		base = -50
+		modifier = {
+			add = 100
+			scope:recipient = { has_trait = deviants_lesser_succubus }
+		}
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
@@ -250,36 +255,28 @@ deviants_become_prostitute_interaction = {
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 5
 		modifier = {
-			add = 10
-			scope:actor = {
-				gold < 0 
+			add = 100
+			scope:recipient = {
+				has_trait = deviants_lesser_succubus
 			}
 		}
 		modifier = {
 			add = 100
-			scope:actor = {
-				has_trait = lustful 
-			}
-			OR = {
-				scope:actor = {
-					has_trait = deviants_succubus
-				}
-			}
 			scope:actor = scope:recipient
+			scope:actor = {
+				has_trait = deviants_succubus
+			}
 		}
 		modifier = {
-			add = -5
-			scope:actor.dynasty = scope:recipient.dynasty
-		}
-		modifier = {
-			add = -20
-			is_close_or_extended_family_of = scope:recipient
-		}
-		modifier = {
-			add = -5
-			is_close_family_of = scope:recipient
+			add = -50
+			is_close_family_of = scope:actor
+			OR = {
+				scope:actor.dynasty = scope:recipient.dynasty
+				is_close_or_extended_family_of = scope:actor
+				is_close_family_of = scope:actor
+			}
 		}
 		modifier = {
 			add = 50
@@ -338,47 +335,31 @@ deviants_stop_prostitute_interaction = {
 		ai_recipients = self
 		ai_recipients = prisoners
 	}
-	ai_potential = {
-		always = yes
-	}
+	ai_potential = { always = yes }
 
 	ai_will_do = {
 		base = 0
 		modifier = {
-			add = -10
-			scope:actor = {
-				gold < 0 
-			}
-		}
-		modifier = {
-			add = 10
-			scope:actor = {
-				gold > 0 
+			add = -100
+			scope:recipient = {
+				has_trait = deviants_lesser_succubus
 			}
 		}
 		modifier = {
 			add = -100
-			scope:actor = {
-				has_trait = lustful 
-			}
-			OR = {
-				scope:actor = {
-					has_trait = deviants_succubus
-				}
-			}
 			scope:actor = scope:recipient
+			scope:actor = {
+				has_trait = deviants_succubus
+			}
 		}
 		modifier = {
-			add = 5
-			scope:actor.dynasty = scope:recipient.dynasty
-		}
-		modifier = {
-			add = 20
-			is_close_or_extended_family_of = scope:recipient
-		}
-		modifier = {
-			add = 5
-			is_close_family_of = scope:recipient
+			add = 50
+			is_close_family_of = scope:actor
+			OR = {
+				scope:actor.dynasty = scope:recipient.dynasty
+				is_close_or_extended_family_of = scope:actor
+				is_close_family_of = scope:actor
+			}
 		}
 		modifier = {
 			add = -50
@@ -415,7 +396,7 @@ deviants_become_public_toilet_interaction = {
 			is_female = yes
 			OR = {
 				scope:actor = scope:recipient
-				ia_vassal_of = scope:actor
+				is_vassal_of = scope:actor
 				is_courtier_of = scope:actor
 				AND = {
 					is_ruler = no
@@ -487,30 +468,15 @@ deviants_become_public_toilet_interaction = {
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 5
 		modifier = {
-			add = 100
-			scope:actor = {
-				has_trait = lustful 
-			}
-			OR = {
-				scope:actor = {
-					has_trait = deviants_succubus
-				}
-			}
-			scope:actor = scope:recipient
-		}
-		modifier = {
-			add = -5
-			scope:actor.dynasty = scope:recipient.dynasty
-		}
-		modifier = {
-			add = -20
-			is_close_or_extended_family_of = scope:actor
-		}
-		modifier = {
-			add = -5
+			add = -50
 			is_close_family_of = scope:actor
+			OR = {
+				scope:actor.dynasty = scope:recipient.dynasty
+				is_close_or_extended_family_of = scope:actor
+				is_close_family_of = scope:actor
+			}
 		}
 		modifier = {
 			add = 50
@@ -580,28 +546,13 @@ deviants_stop_public_toilet_interaction = {
 			scope:actor = scope:recipient
 		}
 		modifier = {
-			add = -100
-			scope:actor = {
-				has_trait = lustful 
-			}
-			OR = {
-				scope:actor = {
-					has_trait = deviants_succubus
-				}
-			}
-			scope:actor = scope:recipient
-		}
-		modifier = {
-			add = 5
-			scope:actor.dynasty = scope:recipient.dynasty
-		}
-		modifier = {
-			add = 20
-			is_close_or_extended_family_of = scope:actor
-		}
-		modifier = {
-			add = 5
+			add = 50
 			is_close_family_of = scope:actor
+			OR = {
+				scope:actor.dynasty = scope:recipient.dynasty
+				is_close_or_extended_family_of = scope:actor
+				is_close_family_of = scope:actor
+			}
 		}
 		modifier = {
 			add = -50

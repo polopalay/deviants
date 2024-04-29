@@ -30,131 +30,26 @@ deviants_become_succubus = {
 	auto_accept = yes
 }
 
-deviants_buff_interaction = {
-	icon = deviantslegend
-	common_interaction = no
-	desc = deviants_buff_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = demonpower
-					value >= 1
-				}
-				has_trait_xp = {
-					trait = deviants_lesser_succubus
-					value >= 1
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			add_character_modifier = {
-				modifier = deviants_buff
-				years = 1
-			}
-		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = deviants_succubus }
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = demonpower
-					value = -1
-				}
-			}
-			if = {
-				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = {
-					trait = deviants_lesser_succubus
-					value = -1
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
-}
-
-deviants_weight_interaction = {
-	icon = deviantssupply
-	common_interaction = no
-	desc = deviants_weight_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_valid = {
-		scope:actor = {
-			OR = {
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = demonpower
-					value >= 5
-				}
-				has_trait_xp = {
-					trait = deviants_lesser_succubus
-					value >= 5
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			change_current_weight = -500
-			change_current_weight = 120
-		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = deviants_succubus }
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = demonpower
-					value = -5
-				}
-			}
-			if = {
-				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = {
-					trait = deviants_lesser_succubus
-					value = -5
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			base = 10
-			scope:recipient = scope:actor
-		}
-	}
-}
-
 deviants_heal_interaction = {
 	icon = deviantswitchcraft
 	common_interaction = no
 	desc = deviants_heal_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
+	cooldown = { days = 10 }
 	is_shown = {
 		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = demonpower
-				value >= 10
-			} 
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 1
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 1
+				}
+			}
 		}
 		scope:recipient = {
 			OR = {
@@ -195,12 +90,10 @@ deviants_heal_interaction = {
 	}
 	on_accept = {
 		scope:actor = {
-			hidden_effect = {
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = demonpower
-					value = -10
-				}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = demonpower
+				value = -1
 			}
 		}
 		scope:recipient = {
@@ -237,6 +130,12 @@ deviants_heal_interaction = {
 				recover_from_disease_effect = { DISEASE = dysentery }
 				recover_from_disease_effect = { DISEASE = ergotism }
 				recover_from_disease_effect = { DISEASE = measles }
+
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -1
+				}
 		}
 	}
 	auto_accept = yes
@@ -248,7 +147,7 @@ deviants_heal_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 0
+		base = 5
 		modifier = {
 			base = 100
 			scope:actor = scope:recipient
@@ -262,4 +161,328 @@ deviants_heal_interaction = {
 			is_courtier_of = scope:actor
 		}
 	}
+}
+
+deviants_weight_interaction = {
+	icon = deviantssupply
+	common_interaction = no
+	desc = deviants_weight_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 1
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 1
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			change_current_weight = -500
+			change_current_weight = 120
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -1
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -1
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			base = 10
+			scope:recipient = scope:actor
+		}
+	}
+}
+
+deviants_buff_interaction = {
+	icon = deviantslegend
+	common_interaction = no
+	desc = deviants_buff_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 2
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 2
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = deviants_buff
+				years = 1
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -2
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -2
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_summon_animals_interaction = {
+	icon = deviantshunt
+	common_interaction = no
+	desc = deviants_summon_animals_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			is_ruler = yes
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 5
+				}
+			}
+		}
+		scope:recipient.capital_county = {
+			NOR = {
+				has_county_modifier = hunt_sighting_standard_modifier
+				has_county_modifier = hunt_sighting_dangerous_modifier
+				has_county_modifier = hunt_sighting_falconry_modifier
+				has_county_modifier = hunt_sighting_legendary_modifier
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient.capital_county = { 
+			add_county_modifier = {
+				modifier = hunt_sighting_standard_modifier 
+				years = 2
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -5
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+
+deviants_summon_beast_interaction = {
+	icon = deviantshunter
+	common_interaction = no
+	desc = deviants_summon_beast_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			is_ruler = yes
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 10
+				}
+			}
+		}
+		scope:recipient.capital_county = {
+			NOR = {
+				has_county_modifier = hunt_sighting_standard_modifier
+				has_county_modifier = hunt_sighting_dangerous_modifier
+				has_county_modifier = hunt_sighting_falconry_modifier
+				has_county_modifier = hunt_sighting_legendary_modifier
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient.capital_county = { 
+			add_county_modifier = {
+				modifier = hunt_sighting_dangerous_modifier 
+				years = 2
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -10
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_summon_falconry_interaction = {
+	icon = deviantsfalconer
+	common_interaction = no
+	desc = deviants_summon_falconry_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			is_ruler = yes
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 10
+				}
+			}
+		}
+		scope:recipient.capital_county = {
+			NOR = {
+				has_county_modifier = hunt_sighting_standard_modifier
+				has_county_modifier = hunt_sighting_dangerous_modifier
+				has_county_modifier = hunt_sighting_falconry_modifier
+				has_county_modifier = hunt_sighting_legendary_modifier
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient.capital_county = { 
+			add_county_modifier = {
+				modifier = hunt_sighting_falconry_modifier 
+				years = 2
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -10
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_summon_legendary_beast_interaction = {
+	icon = deviantsblasphemer
+	common_interaction = no
+	desc = deviants_summon_legendary_beast_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			is_ruler = yes
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value >= 20
+				}
+			}
+		}
+		scope:recipient.capital_county = {
+			NOR = {
+				has_county_modifier = hunt_sighting_standard_modifier
+				has_county_modifier = hunt_sighting_dangerous_modifier
+				has_county_modifier = hunt_sighting_falconry_modifier
+				has_county_modifier = hunt_sighting_legendary_modifier
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient.capital_county = { 
+			add_county_modifier = {
+				modifier = hunt_sighting_legendary_modifier 
+				years = 2
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = demonpower
+					value = -20
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
 }

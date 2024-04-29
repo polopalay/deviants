@@ -78,10 +78,6 @@ nude_clothes = {
 			}
 			accessory = {
 				mode = add
-				gene = clothes
-			}
-			accessory = {
-				mode = add
 				gene = headgear
 			}
 			accessory = {
@@ -95,6 +91,10 @@ nude_clothes = {
 			accessory = {
 				mode = add
 				gene = headgear_base
+			}
+			accessory = {
+				mode = add
+				gene = headgear
 			}
 		} 
 		weight = {

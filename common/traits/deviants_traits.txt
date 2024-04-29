@@ -5,6 +5,7 @@ deviants_succubus = {
 	same_opinion = 20
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -10
+	fertility = -1
 
 	desc = {
 		first_valid = {
@@ -64,6 +65,9 @@ deviants_succubus = {
 			}			
 		}
 	}
+	compatibility = {
+		deviants_lesser_succubus = 50
+	}
 }
 
 deviants_lesser_succubus = {
@@ -71,12 +75,10 @@ deviants_lesser_succubus = {
 	icon = deviantpossessed.dds
 	minimum_age = 16
 	same_opinion = 10
-	compatibility = {
-		deviants_succubus = 50
-	}
 
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -10
+	fertility = -1
 
 	flag = can_not_marry
 	inheritance_blocker = all

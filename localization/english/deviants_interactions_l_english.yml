@@ -47,6 +47,9 @@
  deviants_heal_interaction: "Healing"
  deviants_heal_interaction.desc: "Heals all types of diseases and wounds"
 
+ deviants_imprison_interaction: "Imprison"
+ ddeviants_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
+
  deviants_mind_break_interaction: "Mind Break"
  deviants_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
 
@@ -64,3 +67,18 @@
 
  deviants_create_lesser_succubus_interaction: "Create Lesser Succubus"
  deviants_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
+
+ deviants_summon_animals_interaction: "Summon Animals"
+ deviants_summon_animals_interaction.desc: "Summon animals to the capital of [recipient.GetShortUIName]"
+
+ deviants_summon_beast_interaction: "Summon Beasts"
+ deviants_summon_beast_interaction.desc: "Summon beasts to the capital of [recipient.GetShortUIName]"
+
+ deviants_summon_falconry_interaction: "Summon Falcons"
+ deviants_summon_falconry_interaction.desc: "Summon falcons to the capital of [recipient.GetShortUIName]"
+
+ deviants_summon_legendary_beast_interaction: "Summon Legendary Beasts"
+ deviants_summon_legendary_beast_interaction.desc: "Summon legendary beasts to the capital of [recipient.GetShortUIName]"
+
+ deviants_child_interaction: "Create Child"
+ deviants_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"

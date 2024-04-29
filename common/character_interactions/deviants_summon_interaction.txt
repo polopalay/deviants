@@ -1,32 +1,37 @@
-deviants_spawn_darkarmy_interaction = {
-	icon = deviantssoldier
+deviants_child_interaction = {
+	icon = deviantsbastard
 	common_interaction = no
-	desc = deviants_spawn_darkarmy_interaction.desc
+	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	cooldown = { years = 10 }
 	is_shown = {
-		scope:actor = scope:recipient
+		scope:recipient = scope:actor
 		scope:actor = {
+			is_female = yes
+			is_adult = yes
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = demonanalcorruption
 				value >= 25
 			} 
 		}
+		scope:recipient = {
+			exists = scope:recipient.primary_spouse
+			NOT = {
+				any_child = {
+					is_alive = yes
+					count >= 2
+				}
+			}
+		}
 	}
 	on_accept = {
-		scope:recipient = {
-			spawn_army = {
-				men_at_arms = {
-					type = deviants_dark_amry
-					stacks = 2
-				}
-				location = scope:recipient.capital_province
-				inheritable = yes
-				uses_supply = no
-				name = deviants_dark_amry
-			}
+		create_character = {
+			age = 0
+			mother = scope:recipient
+			father = scope:recipient.primary_spouse
+			dynasty_house = scope:recipient.house
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -37,10 +42,19 @@ deviants_spawn_darkarmy_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
+	ai_frequency = 120
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
+	ai_will_do = { 
+		base = 5
+		modifier = {
+			add = 45
+			any_child = { 
+				is_alive = yes
+				count = 0
+			}
+		}
+	}
 }
 
 deviants_create_lesser_succubus_interaction = {
@@ -63,7 +77,7 @@ deviants_create_lesser_succubus_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = demonanalcorruption
-				value >= 0
+				value >= 50
 			} 
 		}
 	}
@@ -90,4 +104,49 @@ deviants_create_lesser_succubus_interaction = {
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
+}
+
+deviants_spawn_darkarmy_interaction = {
+	icon = deviantssoldier
+	common_interaction = no
+	desc = deviants_spawn_darkarmy_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = menatarmstwistedloyalty
+				value >= 75
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = deviants_dark_amry
+					stacks = 2
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = deviants_dark_amry
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = menatarmstwistedloyalty
+				value = -75
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
 }
