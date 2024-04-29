@@ -80,6 +80,7 @@ deviants_dispel_interaction = {
 			OR = {
 				has_character_modifier = deviants_prostitute
 				has_character_modifier = deviants_public_toilet
+				has_character_flag = accept_every_request
 			}
 		}
 		scope:recipient = {
@@ -129,6 +130,7 @@ deviants_dispel_interaction = {
 			}
 			remove_character_modifier = deviants_prostitute
 			remove_character_modifier = deviants_public_toilet
+			remove_character_flag = accept_every_request
 		}
 	}
 	ai_accept = {
@@ -179,6 +181,7 @@ deviants_shake_mind_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
+			add_character_flag = accept_every_request
 			add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier years = 1 }	
 			every_courtier_or_guest = {
 				limit = { is_female = no is_knight = yes }
@@ -237,18 +240,12 @@ deviants_mind_break_interaction = {
 			remove_trait = chaste
 			add_trait = lustful	
 			if = {
-				limit = {
-					is_female = yes
-				}
-				if = {
-					limit = { has_character_modifier = deviants_prostitute }
-					add_character_modifier = { modifier = deviants_prostitute years = 1 }
-				}
-				if = {
-					limit = { has_character_modifier = deviants_prostitute }
-					remove_character_modifier = deviants_prostitute
-					add_character_modifier = { modifier = deviants_public_toilet years = 1 }
-				}
+				limit = { has_character_modifier = deviants_prostitute }
+				remove_character_modifier = deviants_prostitute
+				add_character_modifier = { modifier = deviants_public_toilet years = 1 }
+			}
+			else = {
+				add_character_modifier = { modifier = deviants_prostitute years = 1 }
 			}
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }

@@ -7,7 +7,8 @@ deviants_prostitute_interaction = {
 		limit = { has_character_modifier = deviants_prostitute }
 		cooldown_against_recipient = { months = 12 }
 	}
-	else = {
+	else_if = {
+		limit = { has_character_modifier = deviants_public_toilet }
 		cooldown_against_recipient = { months = 1 }
 	}
 	cooldown = { months = 6 }
@@ -134,6 +135,12 @@ deviants_prostitute_interaction = {
 			add = 15
 			scope:actor = {
 				gold > 100
+			}
+		}
+		modifier = {
+			add = 100
+			scope:recipient = {
+				has_character_flag = accept_every_request
 			}
 		}
 		modifier = {

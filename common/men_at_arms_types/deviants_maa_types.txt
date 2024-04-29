@@ -7,11 +7,35 @@ deviants_dark_amry = {
 	screen = 30
 	damage = 30
 	toughness = 30
+	siege_value = 0.25
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 1
+	}
+
+	stack = 100
+	buy_cost = { gold = 0  }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 0 }
+}
+
+deviants_death_korps  = {
+	icon = pikemen
+	type = heavy_infantry 
+	can_recruit = { always = no }
+
+	pursuit = 50
+	screen = 50
+	damage = 50
+	toughness = 50
 	siege_value = 0.5
 
 	counters = {
 		pikemen = 1
 		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
 	}
 
 	stack = 100

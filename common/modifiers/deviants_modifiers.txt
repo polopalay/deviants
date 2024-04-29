@@ -31,3 +31,22 @@ deviants_buff = {
 	prowess = 5
 	stacking = yes
 }
+
+deviants_generals = {
+	icon = souls
+	diplomacy = 100
+	martial = 100
+	stewardship = 100
+	intrigue = 100
+	learning = 100
+	prowess = 100
+	movement_speed = 1
+	retreat_losses = -1
+	embarkation_cost_mult = -1
+	naval_movement_speed_mult = 1
+	siege_phase_time = -1
+	siege_morale_loss = 1
+	hard_casualty_modifier = -1
+	supply_duration = 1
+	supply_limit_mult = 1
+}
