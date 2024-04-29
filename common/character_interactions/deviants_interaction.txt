@@ -89,7 +89,7 @@ deviants_prostitute_interaction = {
 			scope:recipient = {
 				add_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value = 1
 				}
 			}
@@ -99,7 +99,7 @@ deviants_prostitute_interaction = {
 			scope:recipient.liege = {
 				add_trait_xp = {
 					trait = deviants_succubus
-					track = demonanalcorruption
+					track = corruption
 					value = 1
 				}
 			}
@@ -118,7 +118,7 @@ deviants_prostitute_interaction = {
 	ignores_pending_interaction_block = yes
 	ai_frequency = 6
 	ai_targets = {
-		a_recipients = liege
+		ai_recipients = liege
 		ai_recipients = courtiers
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
@@ -156,7 +156,7 @@ deviants_prostitute_interaction = {
 }
 
 deviants_become_prostitute_interaction = {
-	icon = sex
+	icon = deviantshealth
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -293,7 +293,7 @@ deviants_become_prostitute_interaction = {
 }
 
 deviants_stop_prostitute_interaction = {
-	icon = deviantsflag
+	icon = deviantsfertility
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -375,7 +375,7 @@ deviants_stop_prostitute_interaction = {
 }
 
 deviants_become_public_toilet_interaction = {
-	icon = sex
+	icon = deviantsexcrement
 	desc = deviants_become_public_toilet_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -491,7 +491,7 @@ deviants_become_public_toilet_interaction = {
 }
 
 deviants_stop_public_toilet_interaction = {
-	icon = deviantsflag
+	icon = deviantslove
 	desc = deviants_stop_public_toilet_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -566,7 +566,7 @@ deviants_stop_public_toilet_interaction = {
 }
 
 deviants_trade_slut_interaction = {
-	icon = deviantsiend
+	icon = deviantsdiplomacy
 	desc = deviants_trade_slut_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -643,7 +643,7 @@ deviants_trade_slut_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = vassals
-		a_recipients = liege
+		ai_recipients = liege
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
@@ -679,7 +679,7 @@ deviants_trade_slut_interaction = {
 }
 
 deviants_buy_slut_interaction = {
-	icon = deviantsgold
+	icon = deviantseconomy
 	desc = deviants_buy_slut_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -737,7 +737,7 @@ deviants_buy_slut_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = vassals
-		a_recipients = liege
+		ai_recipients = liege
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
@@ -764,7 +764,7 @@ deviants_buy_slut_interaction = {
 }
 
 deviants_sell_slut_interaction = {
-	icon = deviantsgold
+	icon = deviantseconomy
 	desc = deviants_sell_slut_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -822,7 +822,7 @@ deviants_sell_slut_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = vassals
-		a_recipients = liege
+		ai_recipients = liege
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}

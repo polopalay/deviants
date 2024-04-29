@@ -1,5 +1,5 @@
 deviants_service_interaction = {
-	icon = deviantsblasphemer
+	icon = deviantsmartial
 	desc = deviants_service_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -22,7 +22,7 @@ deviants_service_interaction = {
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = 0 }
 				scope:recipient = { 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-					add_trait_xp = { trait = deviants_succubus track = menatarmstwistedloyalty  value = 1 }
+					add_trait_xp = { trait = deviants_succubus track = maa_loyalty  value = 1 }
 				}
 			}
 		}
@@ -34,42 +34,8 @@ deviants_service_interaction = {
 	ai_will_do = { base = 100 }
 }
 
-
-deviants_require_service_interaction = {
-	icon = deviantsblasphemer
-	desc = deviants_require_service_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	cooldown = { years = 2 }
-	cooldown_against_recipient = { years = 1 }
-	is_shown = {
-		scope:actor = { is_knight = yes exists = liege }
-		scope:recipient = scope:actor.liege
-		scope:recipient = {
-			has_trait = deviants_succubus
-			OR = {
-				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_public_toilet
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 }
-			add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-			add_trait_xp = { trait = deviants_succubus track = menatarmstwistedloyalty  value = 1 }
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = liege }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
-
 deviants_spawn_darkarmy_interaction = {
-	icon = deviantssoldier
+	icon = deviantsprowess
 	desc = deviants_spawn_darkarmy_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -79,7 +45,7 @@ deviants_spawn_darkarmy_interaction = {
 		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = menatarmstwistedloyalty
+				track = maa_loyalty
 				value >= 50
 			} 
 		}
@@ -100,7 +66,7 @@ deviants_spawn_darkarmy_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = menatarmstwistedloyalty
+				track = maa_loyalty
 				value = -50
 			}
 		}

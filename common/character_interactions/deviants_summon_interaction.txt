@@ -1,47 +1,128 @@
-deviants_summon_legendary_beast_interaction = {
-	icon = deviantsbeast
-	desc = deviants_summon_legendary_beast_interaction.desc
-    	category = interaction_category_vassal
+deviants_switch_body = {
+	icon = deviantsfashion
+	desc = deviants_switch_body.desc
+    	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { years = 2 }
 	is_shown = {
-		scope:actor = scope:recipient
-		scope:actor = {
-			is_ruler = yes
-			OR = {
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = demonanalcorruption
-					value >= 10
-				}
-			}
-		}
-		scope:recipient.capital_county = { NOT = { has_county_modifier = hunt_sighting_legendary_modifier } }
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { is_ai = no has_trait = deviants_succubus }
+		scope:recipient = { has_trait = deviants_succubus }
 	}
 	on_accept = {
-		scope:recipient.capital_county = { 
-			add_county_modifier = {
-				modifier = hunt_sighting_legendary_modifier 
-				years = 2
-			}
-		}
 		scope:actor = {
+			set_player_character = scope:recipient
+		}
+	}
+	auto_accept = yes
+}
+
+deviants_add_courtier = {
+	icon = deviantshostage
+	desc = deviants_add_courtier.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value >= 5
+			} 
+		}
+		scope:recipient = { is_courtier = yes }
+	}
+	on_accept = {
+		scope:actor = {
+			add_courtier = scope:recipient
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = demonanalcorruption
-				value = -10
+				track = corruption
+				value = -5
 			}
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
+	ai_frequency = 120
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
+	ai_will_do = { base = 1 }
+}
+
+deviants_befriend = {
+	icon = sex
+	desc = deviants_befriend.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			NOT = { has_relation_friend = scope:recipient } 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value >= 5
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			set_relation_friend = scope:recipient
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 1 }
+}
+
+deviants_hook = {
+	icon = deviantscontrol
+	desc = deviants_hook.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			NOT = { has_relation_friend = scope:recipient } 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value >= 5
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = favor_hook
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 1 }
 }
 
 deviants_child_interaction = {
-	icon = deviantsbastard
+	icon = deviantsfamily
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -53,7 +134,7 @@ deviants_child_interaction = {
 			is_adult = yes
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = demonanalcorruption
+				track = corruption
 				value >= 25
 			} 
 		}
@@ -77,7 +158,7 @@ deviants_child_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = demonanalcorruption
+				track = corruption
 				value = -25
 			}
 		}
@@ -99,8 +180,8 @@ deviants_child_interaction = {
 }
 
 deviants_create_lesser_succubus_interaction = {
-	icon = titsgood
-	desc = deviants_spawn_darkarmy_interaction.desc
+	icon = deviantstreatment
+	desc = deviants_create_lesser_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	cooldown = { years = 10 }
@@ -116,7 +197,7 @@ deviants_create_lesser_succubus_interaction = {
 		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = demonanalcorruption
+				track = corruption
 				value >= 50
 			} 
 		}
@@ -127,6 +208,134 @@ deviants_create_lesser_succubus_interaction = {
 				limit = { has_trait = chaste }
 				remove_trait = chaste
 			}
+			else_if = {
+				limit = { has_trait = humble }
+				remove_trait = humble
+			}
+			else_if = {
+				limit = { has_trait = gregarious }
+				remove_trait = gregarious
+			}
+			else_if = {
+				limit = { has_trait = shy }
+				remove_trait = shy
+			}
+			else_if = {
+				limit = { has_trait = calm }
+				remove_trait = calm
+			}
+			else_if = {
+				limit = { has_trait = content }
+				remove_trait = content
+			}
+			else_if = {
+				limit = { has_trait = generous }
+				remove_trait = generous
+			}
+			else_if = {
+				limit = { has_trait = just }
+				remove_trait = just
+			}
+			else_if = {
+				limit = { has_trait = honest }
+				remove_trait = honest
+			}
+			else_if = {
+				limit = { has_trait = patient }
+				remove_trait = patient
+			}
+			else_if = {
+				limit = { has_trait = temperate }
+				remove_trait = temperate
+			}
+			else_if = {
+				limit = { has_trait = diligent }
+				remove_trait = diligent
+			}
+			else_if = {
+				limit = { has_trait = ambitious }
+				remove_trait = ambitious
+			}
+			else_if = {
+				limit = { has_trait = brave }
+				remove_trait = brave
+			}
+			else_if = {
+				limit = { has_trait = trusting }
+				remove_trait = trusting
+			}
+			else_if = {
+				limit = { has_trait = compassionate }
+				remove_trait = compassionate
+			}
+			else_if = {
+				limit = { has_trait = zealous }
+				remove_trait = zealous
+			}
+			else_if = {
+				limit = { has_trait = greedy }
+				remove_trait = greedy
+			}
+			else_if = {
+				limit = { has_trait = callous }
+				remove_trait = callous
+			}
+			else_if = {
+				limit = { has_trait = impatient }
+				remove_trait = impatient
+			}
+			else_if = {
+				limit = { has_trait = gluttonous }
+				remove_trait = gluttonous
+			}
+			else_if = {
+				limit = { has_trait = lazy }
+				remove_trait = lazy
+			}
+			else_if = {
+				limit = { has_trait = wrathful }
+				remove_trait = wrathful
+			}
+			else_if = {
+				limit = { has_trait = deceitful }
+				remove_trait = deceitful
+			}
+			else_if = {
+				limit = { has_trait = arrogant }
+				remove_trait = arrogant
+			}
+			else_if = {
+				limit = { has_trait = craven }
+				remove_trait = craven
+			}
+			else_if = {
+				limit = { has_trait = forgiving }
+				remove_trait = forgiving
+			}
+			else_if = {
+				limit = { has_trait = vengeful }
+				remove_trait = vengeful
+			}
+			else_if = {
+				limit = { has_trait = arbitrary }
+				remove_trait = arbitrary
+			}
+			else_if = {
+				limit = { has_trait = stubborn }
+				remove_trait = stubborn
+			}
+			else_if = {
+				limit = { has_trait = fickle }
+				remove_trait = fickle
+			}
+			else_if = {
+				limit = { has_trait = cynical }
+				remove_trait = cynical
+			}
+			else_if = {
+				limit = { has_trait = paranoid }
+				remove_trait = paranoid
+			}
 			add_trait = lustful
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
@@ -134,7 +343,7 @@ deviants_create_lesser_succubus_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = demonanalcorruption
+				track = corruption
 				value = -50
 			}
 		}
@@ -144,4 +353,179 @@ deviants_create_lesser_succubus_interaction = {
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
+}
+
+deviants_create_succubus_interaction = {
+	icon = deviantstreatment
+	desc = deviants_create_succubus_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	cooldown = { years = 50 }
+	is_shown = {
+		scope:recipient = {
+			is_female = yes
+			NOR = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value >= 100
+			} 
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { has_trait = chaste }
+				remove_trait = chaste
+			}
+			else_if = {
+				limit = { has_trait = humble }
+				remove_trait = humble
+			}
+			else_if = {
+				limit = { has_trait = gregarious }
+				remove_trait = gregarious
+			}
+			else_if = {
+				limit = { has_trait = shy }
+				remove_trait = shy
+			}
+			else_if = {
+				limit = { has_trait = calm }
+				remove_trait = calm
+			}
+			else_if = {
+				limit = { has_trait = content }
+				remove_trait = content
+			}
+			else_if = {
+				limit = { has_trait = generous }
+				remove_trait = generous
+			}
+			else_if = {
+				limit = { has_trait = just }
+				remove_trait = just
+			}
+			else_if = {
+				limit = { has_trait = honest }
+				remove_trait = honest
+			}
+			else_if = {
+				limit = { has_trait = patient }
+				remove_trait = patient
+			}
+			else_if = {
+				limit = { has_trait = temperate }
+				remove_trait = temperate
+			}
+			else_if = {
+				limit = { has_trait = diligent }
+				remove_trait = diligent
+			}
+			else_if = {
+				limit = { has_trait = ambitious }
+				remove_trait = ambitious
+			}
+			else_if = {
+				limit = { has_trait = brave }
+				remove_trait = brave
+			}
+			else_if = {
+				limit = { has_trait = trusting }
+				remove_trait = trusting
+			}
+			else_if = {
+				limit = { has_trait = compassionate }
+				remove_trait = compassionate
+			}
+			else_if = {
+				limit = { has_trait = zealous }
+				remove_trait = zealous
+			}
+			else_if = {
+				limit = { has_trait = greedy }
+				remove_trait = greedy
+			}
+			else_if = {
+				limit = { has_trait = callous }
+				remove_trait = callous
+			}
+			else_if = {
+				limit = { has_trait = impatient }
+				remove_trait = impatient
+			}
+			else_if = {
+				limit = { has_trait = gluttonous }
+				remove_trait = gluttonous
+			}
+			else_if = {
+				limit = { has_trait = lazy }
+				remove_trait = lazy
+			}
+			else_if = {
+				limit = { has_trait = wrathful }
+				remove_trait = wrathful
+			}
+			else_if = {
+				limit = { has_trait = deceitful }
+				remove_trait = deceitful
+			}
+			else_if = {
+				limit = { has_trait = arrogant }
+				remove_trait = arrogant
+			}
+			else_if = {
+				limit = { has_trait = craven }
+				remove_trait = craven
+			}
+			else_if = {
+				limit = { has_trait = forgiving }
+				remove_trait = forgiving
+			}
+			else_if = {
+				limit = { has_trait = vengeful }
+				remove_trait = vengeful
+			}
+			else_if = {
+				limit = { has_trait = arbitrary }
+				remove_trait = arbitrary
+			}
+			else_if = {
+				limit = { has_trait = stubborn }
+				remove_trait = stubborn
+			}
+			else_if = {
+				limit = { has_trait = fickle }
+				remove_trait = fickle
+			}
+			else_if = {
+				limit = { has_trait = cynical }
+				remove_trait = cynical
+			}
+			else_if = {
+				limit = { has_trait = paranoid }
+				remove_trait = paranoid
+			}
+			add_trait = lustful
+			add_trait = deviants_succubus
+			add_character_modifier = deviants_prostitute
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = -100
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 500
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 10 }
 }

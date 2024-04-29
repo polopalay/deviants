@@ -1,5 +1,5 @@
 deviants_become_succubus = {
-	icon = titsgood
+	icon = deviantsflag
 	desc = deviants_become_succubus.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -30,7 +30,7 @@ deviants_become_succubus = {
 }
 
 deviants_heal_interaction = {
-	icon = deviantswitchcraft
+	icon = deviantscompass
 	desc = deviants_heal_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -40,7 +40,7 @@ deviants_heal_interaction = {
 			OR = {
 				has_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value >= 1
 				}
 				has_trait_xp = {
@@ -90,7 +90,7 @@ deviants_heal_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = demonpower
+				track = power
 				value = -1
 			}
 		}
@@ -131,7 +131,7 @@ deviants_heal_interaction = {
 
 				add_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value = -1
 				}
 		}
@@ -162,7 +162,7 @@ deviants_heal_interaction = {
 }
 
 deviants_weight_interaction = {
-	icon = deviantssupply
+	icon = deviantstreat
 	desc = deviants_weight_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -172,7 +172,7 @@ deviants_weight_interaction = {
 			OR = {
 				has_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value >= 1
 				}
 				has_trait_xp = {
@@ -192,7 +192,7 @@ deviants_weight_interaction = {
 				limit = { has_trait = deviants_succubus }
 				add_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value = -1
 				}
 			}
@@ -219,7 +219,7 @@ deviants_weight_interaction = {
 }
 
 deviants_buff_interaction = {
-	icon = deviantslegend
+	icon = deviantsmagic
 	desc = deviants_buff_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -228,7 +228,7 @@ deviants_buff_interaction = {
 			OR = {
 				has_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value >= 2
 				}
 				has_trait_xp = {
@@ -250,7 +250,7 @@ deviants_buff_interaction = {
 				limit = { has_trait = deviants_succubus }
 				add_trait_xp = {
 					trait = deviants_succubus
-					track = demonpower
+					track = power
 					value = -2
 				}
 			}

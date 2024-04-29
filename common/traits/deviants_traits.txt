@@ -1,30 +1,28 @@
 deviants_succubus = {
 	category = health
-	icon = deviantssuccubus.dds
+	icon = titsgood.dds
 	minimum_age = 16
 	same_opinion = 20
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -10
+	monthly_lifestyle_xp_gain_mult = -1
 	fertility = -1
 
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
+				trigger = { NOT = { exists = this } }
 				desc = deviants_succubus_desc
 			}
 			desc = deviants_succubus_character_desc
 		}
 	}
 
-	opposites = { deviants_lesser_succubus }
+	opposites = { chaste deviants_lesser_succubus }
 
 	tracks = {
-		demonanalcorruption = {
+		corruption = {
 			50 = {
-				attraction_opinion = 5
+				attraction_opinion = 10
 				hostile_scheme_resistance_add = 50
 			}
 
@@ -33,7 +31,7 @@ deviants_succubus = {
 				hostile_scheme_resistance_add = 100
 			}			
 		}
-		demonpower = {
+		power = {
 			30 = {
 				health = 1
 				negate_health_penalty_add = 1
@@ -49,42 +47,57 @@ deviants_succubus = {
 				negate_health_penalty_add = 3
 			}			
 		}
-		menatarmstwistedloyalty = {
+		maa_loyalty = {
 			30 = {
-				knight_effectiveness_mult = 0.05
+				knight_effectiveness_mult = 0.1
 			}
 
 			65 = {
-				men_at_arms_maintenance = -0.05
-				knight_effectiveness_mult = 0.10
+				men_at_arms_maintenance = -0.1
+				knight_effectiveness_mult = 0.1
 			}
 
 			100 = {
-				men_at_arms_maintenance = -0.10
-				knight_effectiveness_mult = 0.15
+				men_at_arms_maintenance = -0.2
+				knight_effectiveness_mult = 0.2
 			}			
 		}
-	}
-	compatibility = {
-		deviants_lesser_succubus = 50
+		daring = {
+			25 = {
+				monthly_prestige = 0.1
+				opinion_of_male_rulers = 5
+			}
+			50 = {
+				monthly_prestige = 0.2
+				opinion_of_male_rulers = 10
+			}
+			75 = {
+				monthly_prestige = 0.3
+				opinion_of_male_rulers = 15
+			}
+			100 = {
+				monthly_prestige = 0.4
+				opinion_of_male_rulers = 20
+			}
+		}
 	}
 }
 
 deviants_lesser_succubus = {
 	category = health
-	icon = deviantpossessed.dds
+	icon = titsbad.dds
 	minimum_age = 16
 	same_opinion = 10
 
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -10
+	monthly_lifestyle_xp_gain_mult = -1
 	fertility = -1
 
 	flag = can_not_marry
 	inheritance_blocker = all
 	claim_inheritance_blocker = all
 
-	opposites = { deviants_succubus }
+	opposites = { chaste deviants_succubus }
 
 	desc = {
 		first_valid = {

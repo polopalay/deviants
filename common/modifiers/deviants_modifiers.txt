@@ -3,6 +3,7 @@ deviants_prostitute {
 	negate_health_penalty_add = 2
     	health = 2
     	stress_gain_mult = -0.5
+	monthly_lifestyle_xp_gain_mult = -0.5
 }
 
 deviants_public_toilet {
@@ -10,6 +11,7 @@ deviants_public_toilet {
 	negate_health_penalty_add = 1
     	health = 1
     	stress_gain_mult = -1
+	monthly_lifestyle_xp_gain_mult = -1
 }
 
 deviants_fuckedsilly = {
