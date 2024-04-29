@@ -67,6 +67,7 @@ deviants_dispel_interaction = {
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
+	cooldown_against_recipient = { years = 2 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -257,6 +258,7 @@ deviants_mind_break_interaction = {
 				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
+			add_character_flag = accept_every_request
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -519,6 +521,7 @@ deviants_dull_interaction = {
 				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
+			add_character_flag = accept_every_request
 		}
 		scope:actor = {
 			add_trait_xp = {

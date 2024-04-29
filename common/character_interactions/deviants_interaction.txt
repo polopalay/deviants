@@ -11,6 +11,7 @@ deviants_prostitute_interaction = {
 		limit = { has_character_modifier = deviants_public_toilet }
 		cooldown_against_recipient = { months = 1 }
 	}
+	else = { cooldown = { days = 1 } }
 	cooldown = { months = 6 }
 
     	is_shown = {
@@ -42,6 +43,8 @@ deviants_prostitute_interaction = {
 			}
         	}
     	}
+
+	auto_accept = yes
 
     	on_accept = {
 		scope:recipient = {
@@ -125,10 +128,7 @@ deviants_prostitute_interaction = {
 		ai_recipients = sub_realm_characters
 		ai_recipients = realm_characters
 	}
-	ai_potential = {
-		always = yes
-	}
-
+	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 10
 		modifier = {

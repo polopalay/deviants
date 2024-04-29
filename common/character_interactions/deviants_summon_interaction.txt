@@ -128,7 +128,6 @@ deviants_child_interaction = {
     	use_diplomatic_range = yes
 	cooldown = { years = 10 }
 	is_shown = {
-		scope:recipient = scope:actor
 		scope:actor = {
 			is_female = yes
 			is_adult = yes
@@ -139,21 +138,29 @@ deviants_child_interaction = {
 			} 
 		}
 		scope:recipient = {
-			exists = scope:recipient.primary_spouse
-			NOT = {
-				any_child = {
-					is_alive = yes
-					count >= 2
-				}
-			}
+			is_adult = yes
+			is_female = yes
 		}
 	}
 	on_accept = {
-		create_character = {
-			age = 0
-			mother = scope:recipient
-			father = scope:recipient.primary_spouse
-			dynasty_house = scope:recipient.house
+		scope:recipient = {
+			if = {
+				limit = { matrilinear_marriage = yes }
+				create_character = {
+					age = 0
+					mother = scope:recipient
+					father = scope:recipient.primary_spouse
+					dynasty_house = scope:recipient.house
+				}
+			}
+			else = {
+				create_character = {
+					age = 0
+					mother = scope:recipient
+					father = scope:recipient.primary_spouse
+					dynasty_house = scope:recipient.primary_spouse.house
+				}
+			}
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -168,13 +175,23 @@ deviants_child_interaction = {
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 5
+		base = 0
 		modifier = {
-			add = 45
-			any_child = { 
-				is_alive = yes
-				count = 0
+			add = 100
+			scope:recipient = {
+				any_child = { count = 0 }
 			}
+			scope:actor = scope:recipient
+		}
+		modifier = {
+			add = 20
+			scope:recipient = {
+				any_child = {
+					is_alive = yes
+					count =0
+				}
+			}
+			scope:actor = scope:recipient
 		}
 	}
 }
