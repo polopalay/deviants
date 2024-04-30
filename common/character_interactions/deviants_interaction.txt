@@ -66,13 +66,13 @@ deviants_prostitute_interaction = {
 					}
 					pay_short_term_gold = {
 						target = scope:recipient
-						gold = 2
+						gold = 3
 					}
 				}
 				else = {
 					pay_short_term_gold = {
 						target = scope:recipient
-						gold = 4
+						gold = 5
 					}
 				}
 			}
@@ -121,7 +121,7 @@ deviants_prostitute_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 20
+		base = 80
 		modifier = {
 			add = 100
 			scope:recipient = {
@@ -135,10 +135,8 @@ deviants_prostitute_interaction = {
 			}
 		}
 		modifier = {
-			add = -40
-			OR = {
-				scope:actor.dynasty = scope:recipient.dynasty
-				is_close_or_extended_family_of = scope:actor
+			add = -100
+			scope:recipient = {
 				is_close_family_of = scope:actor
 			}
 		}
@@ -279,10 +277,7 @@ deviants_become_prostitute_interaction = {
 		}
 		modifier = {
 			add = -50
-			is_close_family_of = scope:actor
-			OR = {
-				scope:actor.dynasty = scope:recipient.dynasty
-				is_close_or_extended_family_of = scope:actor
+			scope:recipient = {
 				is_close_family_of = scope:actor
 			}
 		}
@@ -361,10 +356,7 @@ deviants_stop_prostitute_interaction = {
 		}
 		modifier = {
 			add = 50
-			is_close_family_of = scope:actor
-			OR = {
-				scope:actor.dynasty = scope:recipient.dynasty
-				is_close_or_extended_family_of = scope:actor
+			scope:recipient = {
 				is_close_family_of = scope:actor
 			}
 		}
@@ -496,10 +488,7 @@ deviants_become_public_toilet_interaction = {
 		base = 5
 		modifier = {
 			add = -50
-			is_close_family_of = scope:actor
-			OR = {
-				scope:actor.dynasty = scope:recipient.dynasty
-				is_close_or_extended_family_of = scope:actor
+			scope:recipient = {
 				is_close_family_of = scope:actor
 			}
 		}
@@ -571,10 +560,7 @@ deviants_stop_public_toilet_interaction = {
 		}
 		modifier = {
 			add = 50
-			is_close_family_of = scope:actor
-			OR = {
-				scope:actor.dynasty = scope:recipient.dynasty
-				is_close_or_extended_family_of = scope:actor
+			scope:recipient = {
 				is_close_family_of = scope:actor
 			}
 		}

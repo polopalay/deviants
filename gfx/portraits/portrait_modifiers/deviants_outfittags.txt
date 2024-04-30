@@ -48,9 +48,9 @@ prostitute_outfittags = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = gene_bs_body_shape
+				gene = deviants_body_markings
 				value = 1
-				template = body_shape_rectangle_half
+				template = lust_brand
 			}
 			morph = {
 				mode = add
