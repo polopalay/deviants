@@ -12,6 +12,11 @@ deviants_service_interaction = {
 				limit = { is_female = no is_knight = yes }
 				count > 0
 			}
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1
+				}
+			}
 		}
 		scope:recipient = scope:actor
 	}
@@ -111,7 +116,7 @@ deviants_spawn_darkarmy_interaction = {
 		scope:actor = {
 			any_held_title = {
 				any_county_province = {
-					has_building_or_higher = deviants_brothel
+					has_building_or_higher = deviants_brothel1
 				}
 			}
 			add_trait_xp = {
@@ -189,7 +194,7 @@ deviants_demon_generals_interaction = {
 		scope:actor = {
 			any_held_title = {
 				any_county_province = {
-					has_building_or_higher = deviants_brothel2
+					has_building_or_higher = deviants_brothel3
 				}
 			}
 			has_trait_xp = {

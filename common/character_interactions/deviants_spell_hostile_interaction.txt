@@ -68,6 +68,11 @@ deviants_rumor_interaction = {
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -145,6 +150,11 @@ deviants_imprison_interaction = {
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -204,6 +214,11 @@ deviants_kill_interaction = {
 			}
 		}
 		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel2 
+				}
+			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
