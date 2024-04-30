@@ -190,3 +190,6 @@
 
  deviants_rival_interaction: "Stop Being Rival"
  deviants_rival_interaction.desc: "[recipient.GetShortUIName] stop being your rival"
+
+ deviants_absorb_interaction: "Absorb"
+ deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"

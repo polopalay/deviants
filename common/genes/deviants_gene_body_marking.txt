@@ -1,12 +1,10 @@
 morph_genes = {
-	deviants_body_markings = {
-		group = body_markings_group
-			
-		no_body_markings = {
+	deviants_body = {
+		no_body = {
 			index = 0			
 		}
-		lust_brand = {
-			index = 3
+		brand = {
+			index = 1
 			male = {	
 				decal = {		
 					body_part = torso
@@ -29,17 +27,39 @@ morph_genes = {
 			girl = male
 		}
 	}
-	deviants_face_markings = {
+	deviants_face = {
 		no_face_markings = {
 			index = 0			
 		}
-		lust_marking = {
+		eyeliner1 = {
 			index = 1
 			male = {
 				decal = {		
 					body_part = head
 					textures = {
-						diffuse = "gfx/models/portraits/decals/marking.dds"
+						diffuse = "gfx/models/portraits/decals/eyeliner1.dds"
+					}
+					blend_modes = {
+						diffuse = replace
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}	
+		eyeliner2 = {
+			index = 2
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/eyeliner2.dds"
 					}
 					blend_modes = {
 						diffuse = replace

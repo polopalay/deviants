@@ -1,9 +1,9 @@
 ﻿l_english:
  
- building_deviants_brothel: "Brothel"
- building_deviants_brothel_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place"
- building_type_deviants_brothel: "$building_deviants_brothel$"
- building_type_deviants_brothel_desc: "$building_deviants_brothel_desc$"
+ building_deviants_brothel1: "Brothel"
+ building_deviants_brothel1_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place"
+ building_type_deviants_brothel1: "$building_deviants_brothe1l$"
+ building_type_deviants_brothel1_desc: "$building_deviants_brothel1_desc$"
 
  building_deviants_brothel2: "High-class brothel"
  building_deviants_brothel2_desc: "Providing some special services such as group sex and exhibition"

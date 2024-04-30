@@ -1,0 +1,35 @@
+﻿succubus_outfit = {
+	usage = game
+	succubus = {
+		traits = {
+			deviants_succubus
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_body
+				value = 1
+				template = brand
+			}
+		}	
+	}
+	lesser_succubus = {
+		traits = {
+			deviants_lesser_succubus
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_body
+				value = 1
+				template = brand
+			}
+			morph = {
+				mode = add
+				gene = deviants_face
+				value = 1
+				template = eyeliner2
+			}
+		}	
+	}
+}

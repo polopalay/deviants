@@ -282,6 +282,14 @@ deviants_create_lesser_succubus_interaction = {
 	on_accept = {
 		scope:recipient = {
 			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
+			}
+			if = {
+				limit = { has_trait = lustful }
+				add_trait = rakish
+			}
+			else_if = {
 				limit = { has_trait = chaste }
 				remove_trait = chaste
 			}
@@ -413,7 +421,6 @@ deviants_create_lesser_succubus_interaction = {
 				limit = { has_trait = paranoid }
 				remove_trait = paranoid
 			}
-			add_trait = lustful
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
 		}
@@ -461,6 +468,14 @@ deviants_create_succubus_interaction = {
 	on_accept = {
 		scope:recipient = {
 			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
+			}
+			if = {
+				limit = { has_trait = lustful }
+				add_trait = rakish
+			}
+			else_if = {
 				limit = { has_trait = chaste }
 				remove_trait = chaste
 			}
@@ -592,7 +607,6 @@ deviants_create_succubus_interaction = {
 				limit = { has_trait = paranoid }
 				remove_trait = paranoid
 			}
-			add_trait = lustful
 			add_trait = deviants_succubus
 			add_character_modifier = deviants_prostitute
 		}
@@ -787,6 +801,14 @@ deviants_become_succubus = {
 	on_accept = {
 		scope:actor = {
 			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
+			}
+			if = {
+				limit = { has_trait = lustful }
+				add_trait = rakish
+			}
+			else_if = {
 				limit = { has_trait = chaste }
 				remove_trait = chaste
 			}
@@ -797,6 +819,10 @@ deviants_become_succubus = {
 			else_if = {
 				limit = { has_trait = gregarious }
 				remove_trait = gregarious
+			}
+			else_if = {
+				limit = { has_trait = zealous }
+				remove_trait = zealous
 			}
 			else_if = {
 				limit = { has_trait = shy }
@@ -849,10 +875,6 @@ deviants_become_succubus = {
 			else_if = {
 				limit = { has_trait = compassionate }
 				remove_trait = compassionate
-			}
-			else_if = {
-				limit = { has_trait = zealous }
-				remove_trait = zealous
 			}
 			else_if = {
 				limit = { has_trait = greedy }
@@ -918,8 +940,84 @@ deviants_become_succubus = {
 				limit = { has_trait = paranoid }
 				remove_trait = paranoid
 			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_martial_2
+						has_trait = education_martial_3
+						has_trait = education_martial_4
+						has_trait = education_martial_5
+					}
+				}
+				remove_trait = education_martial_2
+				remove_trait = education_martial_3
+				remove_trait = education_martial_4
+				remove_trait = education_martial_5
+				add_trait = education_martial_1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_diplomacy_2
+						has_trait = education_diplomacy_3
+						has_trait = education_diplomacy_4
+						has_trait = education_diplomacy_5
+					}
+				}
+				remove_trait = education_diplomacy_2
+				remove_trait = education_diplomacy_3
+				remove_trait = education_diplomacy_4
+				remove_trait = education_diplomacy_5
+				add_trait = education_diplomacy_1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_intrigue_2
+						has_trait = education_intrigue_3
+						has_trait = education_intrigue_4
+						has_trait = education_intrigue_5
+					}
+				}
+				remove_trait = education_intrigue_2
+				remove_trait = education_intrigue_3
+				remove_trait = education_intrigue_4
+				remove_trait = education_intrigue_5
+				add_trait = education_intrigue_1
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_stewardship_2
+						has_trait = education_stewardship_3
+						has_trait = education_stewardship_4
+						has_trait = education_stewardship_5
+					}
+				}
+				remove_trait = education_stewardship_2
+				remove_trait = education_stewardship_3
+				remove_trait = education_stewardship_4
+				remove_trait = education_stewardship_5
+				add_trait = education_stewardship_1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = education_learning_2
+						has_trait = education_learning_3
+						has_trait = education_learning_4
+						has_trait = education_learning_5
+					}
+				}
+				remove_trait = education_learning_2
+				remove_trait = education_learning_3
+				remove_trait = education_learning_4
+				remove_trait = education_learning_5
+				add_trait = education_learning_1
+			}
+
 			set_immortal_age = 18
-			add_trait = lustful
 			add_trait = deviants_succubus
 		}
 	}

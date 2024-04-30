@@ -64,7 +64,7 @@ deviants_dispel_interaction = {
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
-	cooldown_against_recipient = { years = 6 }
+	cooldown_against_recipient = { months = 2 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -179,7 +179,7 @@ deviants_shake_mind_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 10
+				value >= 5
 			} 
 		}
 	}
@@ -202,7 +202,7 @@ deviants_shake_mind_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -10
+				value = -5
 			}
 		}
 	}
@@ -240,7 +240,7 @@ deviants_mind_break_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 25
+				value >= 10
 			} 
 		}
 	}
@@ -251,10 +251,10 @@ deviants_mind_break_interaction = {
 			if = {
 				limit = { has_character_modifier = deviants_prostitute }
 				remove_character_modifier = deviants_prostitute
-				add_character_modifier = { modifier = deviants_public_toilet years = 1 }
+				add_character_modifier = { modifier = deviants_public_toilet years = 2 }
 			}
 			else = {
-				add_character_modifier = { modifier = deviants_prostitute years = 1 }
+				add_character_modifier = { modifier = deviants_prostitute years = 2 }
 			}
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
@@ -272,7 +272,7 @@ deviants_mind_break_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -25
+				value = -10
 			}
 		}
 	}
@@ -323,9 +323,11 @@ deviants_dull_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			limit = { has_character_modifier = deviants_prostitute }
-			remove_character_modifier = deviants_prostitute
-			add_character_modifier = { modifier = deviants_public_toilet years = 1 }
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				remove_character_modifier = deviants_prostitute
+			}
+			add_character_modifier = { modifier = deviants_public_toilet years = 2 }
 			remove_trait = logistician
 			remove_trait = military_engineer
 			remove_trait = aggressive_attacker

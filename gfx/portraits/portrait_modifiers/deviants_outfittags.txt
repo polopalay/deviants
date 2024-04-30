@@ -1,68 +1,29 @@
-﻿deviants_outfittags = {
-	usage = game
-	succubus_outfit = {
-		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = deviants_body_markings
-				value = 1
-				template = lust_brand
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_trait = deviants_succubus
-			}
-		}
-	}
-	lesser_succubus_outfit = {
-		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = deviants_body_markings
-				value = 1
-				template = lust_brand
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_trait = deviants_lesser_succubus
-			}
-		}
-	}
-}
-
-prostitute_outfittags = {
+﻿prostitute_outfittags = {
 	usage = game
 	prostitute_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_body_markings
+				gene = deviants_body
 				value = 1
-				template = lust_brand
+				template = brand
 			}
 			morph = {
 				mode = add
-				gene = deviants_face_markings
+				gene = deviants_face
 				value = 1
-				template = lust_marking
+				template = eyeliner1
 			}
 		}	
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 10
 				NOR = {
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
 				}
 				OR = {
-					has_character_modifier = deviants_generals
 					has_character_modifier = deviants_prostitute
 					has_character_modifier = deviants_public_toilet
 				}
@@ -71,10 +32,31 @@ prostitute_outfittags = {
 	}
 }
 
+deviants_generals_outfittags = {
+	usage = game
+	prostitute_outfit = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_shape
+				value = 1
+				template = body_shape_rectangle_full
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 10
+				has_character_modifier = deviants_generals
+			}
+		}
+	}
+}
+
 nude_clothes = {
     	usage = game
     	fallback = unclothed_body
-    	priority = 10000
+    	priority = 10
 
 	no_clothes = {
 		dna_modifiers = {

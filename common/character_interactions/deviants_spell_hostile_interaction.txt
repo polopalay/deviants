@@ -37,7 +37,7 @@ deviants_steal_gold_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 60
+	ai_frequency = 12
 	ai_targets = { 
 		ai_recipients = liege
 		ai_recipients = vassals

@@ -1,4 +1,4 @@
-deviants_brothel = {
+deviants_brothel1 = {
 	type_icon = "icon_building_longhouses.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = expensive_building_tier_1_cost }

@@ -14,7 +14,7 @@ deviants_heal_interaction = {
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 1
+					value >= 2
 				}
 			}
 		}
@@ -57,10 +57,20 @@ deviants_heal_interaction = {
 	}
 	on_accept = {
 		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = -1
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value = -1
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -2
+				}
 			}
 		}
 		scope:recipient = {
@@ -97,12 +107,6 @@ deviants_heal_interaction = {
 				recover_from_disease_effect = { DISEASE = dysentery }
 				recover_from_disease_effect = { DISEASE = ergotism }
 				recover_from_disease_effect = { DISEASE = measles }
-
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value = -1
-				}
 		}
 	}
 	auto_accept = yes
@@ -146,7 +150,7 @@ deviants_weight_interaction = {
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 1
+					value >= 2
 				}
 			}
 		}
@@ -169,7 +173,7 @@ deviants_weight_interaction = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -1
+					value = -2
 				}
 			}
 		}
@@ -204,7 +208,7 @@ deviants_give_animal_interaction = {
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 2
+					value >= 4
 				}
 			}
 		}
@@ -259,7 +263,7 @@ deviants_give_animal_interaction = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -2
+					value = -4
 				}
 			}
 		}
@@ -286,7 +290,7 @@ deviants_buff_interaction = {
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 2
+					value >= 4
 				}
 			}
 		}
@@ -311,7 +315,7 @@ deviants_buff_interaction = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -2
+					value = -4
 				}
 			}
 		}
@@ -341,7 +345,7 @@ deviants_learn_language_interaction = {
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 2
+					value >= 4
 				}
 			}
 		}
@@ -361,7 +365,7 @@ deviants_learn_language_interaction = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -2
+					value = -4
 				}
 			}
 		}

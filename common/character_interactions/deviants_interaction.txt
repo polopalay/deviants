@@ -3,7 +3,7 @@ deviants_prostitute_interaction = {
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown_against_recipient = { months = 1 }
+	cooldown_against_recipient = { months = 12 }
 	cooldown = { months = 12 }
 
     	is_shown = {
@@ -106,7 +106,7 @@ deviants_prostitute_interaction = {
 				scope:recipient = {
 					add_trait_xp = {
 						trait = deviants_lesser_succubus
-						value = 1
+						value = 5
 					}
 				}
     		}
@@ -119,6 +119,10 @@ deviants_prostitute_interaction = {
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
+	}
+	ai_targets = {
+		ai_recipients = realm_characters
+		max = 30
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
