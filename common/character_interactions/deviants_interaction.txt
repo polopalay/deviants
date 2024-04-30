@@ -3,9 +3,9 @@ deviants_prostitute_interaction = {
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown_against_recipient = { months = 12 }
-	cooldown = { months = 12 }
-	ignores_pending_interaction_block = no
+	cooldown_against_recipient = { years = 1 }
+	cooldown = { years = 1 }
+	ignores_pending_interaction_block = yes
 
     	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -144,7 +144,7 @@ deviants_become_prostitute_interaction = {
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { months = 12 }
+	cooldown = { years = 1 }
 
     	is_shown = {
         	scope:actor = {
@@ -270,7 +270,7 @@ deviants_stop_prostitute_interaction = {
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { months = 12 }
+	cooldown = { years = 1 }
 
     	is_shown = {
         	scope:actor = {
@@ -323,7 +323,7 @@ deviants_become_public_toilet_interaction = {
 	desc = deviants_become_public_toilet_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { months = 12 }
+	cooldown = { years = 1 }
 
     	is_shown = {
         	scope:actor = {
@@ -442,7 +442,7 @@ deviants_stop_public_toilet_interaction = {
 	desc = deviants_stop_public_toilet_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { months = 12 }
+	cooldown = { years = 1 }
 
     	is_shown = {
         	scope:actor = {

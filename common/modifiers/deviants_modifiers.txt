@@ -1,13 +1,9 @@
 deviants_prostitute {
 	icon = prostitute
-    	stress_gain_mult = -0.5
-	monthly_lifestyle_xp_gain_mult = -0.5
 }
 
 deviants_public_toilet {
 	icon = slave
-    	stress_gain_mult = -1
-	monthly_lifestyle_xp_gain_mult = -1
 }
 
 deviants_fuckedsilly = {

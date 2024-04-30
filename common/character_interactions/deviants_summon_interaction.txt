@@ -186,7 +186,7 @@ deviants_child_interaction = {
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
-	cooldown = { years = 10 }
+	cooldown = { years = 5 }
 	is_shown = {
 		scope:actor = {
 			is_female = yes
@@ -231,24 +231,17 @@ deviants_child_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
+	ai_frequency = 12
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 0
 		modifier = {
-			add = 100
-			scope:recipient = {
-				any_child = { count = 0 }
-			}
-			scope:actor = scope:recipient
-		}
-		modifier = {
 			add = 20
 			scope:recipient = {
 				any_child = {
 					is_alive = yes
-					count =0
+					count = 0
 				}
 			}
 			scope:actor = scope:recipient

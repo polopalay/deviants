@@ -22,27 +22,32 @@ deviants_succubus = {
 	tracks = {
 		corruption = {
 			50 = {
+				monthly_lifestyle_xp_gain_mult = -1
 				attraction_opinion = 10
 				hostile_scheme_resistance_add = 50
 			}
 
 			100 = {
+				monthly_lifestyle_xp_gain_mult = -0.5
 				attraction_opinion = 20
 				hostile_scheme_resistance_add = 100
 			}			
 		}
 		power = {
 			30 = {
+				fertility = -1
 				health = 1
 				negate_health_penalty_add = 1
 			}
 
 			65 = {
+				fertility = -0.75
 				health = 2
 				negate_health_penalty_add = 2
 			}
 
 			100 = {
+				fertility = -0.5
 				health = 3
 				negate_health_penalty_add = 3
 			}			
@@ -50,32 +55,39 @@ deviants_succubus = {
 		loyalty = {
 			30 = {
 				knight_effectiveness_mult = 0.1
+				long_reign_bonus_mult = 0.1
 			}
 
 			65 = {
 				men_at_arms_maintenance = -0.1
 				knight_effectiveness_mult = 0.1
+				long_reign_bonus_mult = 0.1
 			}
 
 			100 = {
 				men_at_arms_maintenance = -0.2
 				knight_effectiveness_mult = 0.2
+				long_reign_bonus_mult = 0.2
 			}			
 		}
 		daring = {
 			25 = {
+    				stress_gain_mult = -0.2
 				monthly_prestige = 0.1
 				opinion_of_male_rulers = 5
 			}
 			50 = {
+    				stress_gain_mult = -0.4
 				monthly_prestige = 0.2
 				opinion_of_male_rulers = 10
 			}
 			75 = {
+    				stress_gain_mult = -0.5
 				monthly_prestige = 0.3
 				opinion_of_male_rulers = 15
 			}
 			100 = {
+    				stress_gain_mult = -1
 				monthly_prestige = 0.4
 				opinion_of_male_rulers = 20
 			}

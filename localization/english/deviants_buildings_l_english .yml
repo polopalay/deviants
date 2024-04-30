@@ -2,7 +2,7 @@
  
  building_deviants_brothel1: "Brothel"
  building_deviants_brothel1_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place"
- building_type_deviants_brothel1: "$building_deviants_brothe1l$"
+ building_type_deviants_brothel1: "$building_deviants_brothel1$"
  building_type_deviants_brothel1_desc: "$building_deviants_brothel1_desc$"
 
  building_deviants_brothel2: "High-class brothel"
