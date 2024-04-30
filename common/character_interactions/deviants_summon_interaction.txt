@@ -32,7 +32,10 @@ deviants_add_courtier = {
 			} 
 		}
 		scope:recipient = { 
-			is_courtier = yes 
+			OR = {
+				is_courtier = yes
+				NOT = { exists = scope:recipient.liege }
+			}
 			NOT = { is_courtier_of = scope:actor }
 		}
 	}
@@ -210,12 +213,14 @@ deviants_child_interaction = {
 	on_accept = {
 		scope:recipient = {
 			if = {
-				limit = { matrilinear_marriage = yes }
+				limit = { patrilinear_marriage = yes }
 				create_character = {
 					age = 0
 					mother = scope:recipient
 					father = scope:recipient.primary_spouse
-					dynasty_house = scope:recipient.house
+					dynasty_house = scope:recipient.primary_spouse.house
+					culture = scope:recipient.primary_spouse.culture
+					faith = scope:recipient.primary_spouse.faith
 				}
 			}
 			else = {
@@ -223,7 +228,9 @@ deviants_child_interaction = {
 					age = 0
 					mother = scope:recipient
 					father = scope:recipient.primary_spouse
-					dynasty_house = scope:recipient.primary_spouse.house
+					dynasty_house = scope:recipient.house
+					culture = scope:recipient.culture
+					faith = scope:recipient.faith
 				}
 			}
 		}
@@ -242,7 +249,7 @@ deviants_child_interaction = {
 	ai_will_do = { 
 		base = 0
 		modifier = {
-			add = 20
+			add = 100
 			scope:recipient = {
 				any_child = {
 					is_alive = yes
@@ -635,162 +642,6 @@ deviants_create_succubus_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 10 }
-}
-
-deviants_epidemic_interaction = {
-	icon = deviantsrat
-	desc = deviants_epidemic_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	cooldown = { years = 100 }
-	is_shown = {
-		scope:actor = { 
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value >= 100
-			} 
-		}
-		scope:recipient = { 
-			is_ruler = yes
-		}
-	}
-	send_option = {
-		flag = measles
-		localization = spawn_epidemic_interaction_measles
-	}
-	send_option = {
-		flag = consumption
-		localization = spawn_epidemic_interaction_consumption
-	}
-	send_option = {
-		flag = smallpox
-		localization = spawn_epidemic_interaction_smallpox
-	}
-	send_option = {
-		flag = ergotism
-		localization = spawn_epidemic_interaction_ergotism
-	}
-	send_option = {
-		flag = bubonic_plague
-		localization = spawn_epidemic_interaction_bubonic_plague
-	}
-	send_option = {
-		flag = typhus
-		localization = spawn_epidemic_interaction_typhus
-	}
-	send_option = {
-		flag = dysentery
-		localization = spawn_epidemic_interaction_dysentery
-	}
-
-	on_accept = {
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = -100
-			}
-			if = {
-				limit = { has_character_modifier = deviants_prostitute }
-				remove_character_modifier = deviants_prostitute
-				add_character_modifier = deviants_public_toilet
-			}
-			else = {
-				add_character_modifier = deviants_public_toilet
-			}
-		}
-		scope:recipient = {
-			hidden_effect = {
-				if = {
-					limit = {
-						scope:measles = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = measles
-							intensity = apocalyptic
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						scope:consumption = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = consumption
-							intensity = apocalyptic
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						scope:smallpox = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = smallpox
-							intensity = apocalyptic
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						scope:dysentery = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = dysentery
-							intensity = apocalyptic
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						scope:bubonic_plague = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = bubonic_plague
-							intensity = apocalyptic
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						scope:ergotism = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = ergotism
-							intensity = apocalyptic
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						scope:typhus = yes
-					}
-					scope:recipient.capital_province = {
-						create_epidemic_outbreak = {
-							type = typhus
-							intensity = apocalyptic
-						}
-					}
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 1000
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = peer_vassals
-		ai_recipients = neighboring_rulers
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
 }
 
 deviants_become_succubus = {

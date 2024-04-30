@@ -119,25 +119,12 @@ deviants_heal_interaction = {
 	ai_frequency = 1
 	ai_targets = { 
 		ai_recipients = self 
-		ai_recipients = courtiers
 		ai_recipients = family
+		ai_recipients = spouses
+		ai_recipients = children
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 5
-		modifier = {
-			base = 100
-			scope:actor = scope:recipient
-		}	
-		modifier = {
-			base = 50
-			is_close_family_of = scope:actor
-		}
-		modifier = {
-			base = 10
-			is_courtier_of = scope:actor
-		}
-	}
+	ai_will_do = { base = 100 }
 }
 
 deviants_sacrifice_interaction = {
@@ -459,7 +446,7 @@ deviants_weight_interaction = {
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
-	is_valid = {
+	is_shown = {
 		scope:actor = {
 			OR = {
 				has_trait_xp = {

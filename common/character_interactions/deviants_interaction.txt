@@ -3,9 +3,9 @@ deviants_prostitute_interaction = {
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown_against_recipient = { years = 1 }
-	cooldown = { years = 1 }
-	ignores_pending_interaction_block = yes
+	cooldown = { months = 2 }
+	cooldown_against_recipient = { months = 2 }
+	ignores_pending_interaction_block = no
 
     	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -29,7 +29,7 @@ deviants_prostitute_interaction = {
             		is_incapable = no
             		is_imprisoned = no
 			is_travelling = no
-			NOT = { is_spouse_of = root }
+			NOT = { is_spouse_of = scope:actor }
 			OR = {
 				has_character_modifier = deviants_public_toilet
 				has_character_modifier = deviants_prostitute
@@ -107,7 +107,7 @@ deviants_prostitute_interaction = {
 				scope:recipient = {
 					add_trait_xp = {
 						trait = deviants_lesser_succubus
-						value = 5
+						value = 2
 					}
 				}
     		}
@@ -247,12 +247,18 @@ deviants_become_prostitute_interaction = {
 	}
 
 	ai_frequency = 12
-	ai_targets = { ai_recipients = courtiers }
-	ai_potential = {
-		always = yes
+	ai_targets = { 
+		ai_recipients = courtiers 
+		ai_recipients = prisoners
+		ai_recipients = vassals
 	}
+	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 5
+		modifier = {
+			add = 95
+			scope:actor = scope:recipient
+		}
 		modifier = {
 			add = 45
 			scope:actor = {

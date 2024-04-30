@@ -55,7 +55,8 @@ deviants_generals_outfittags = {
 
 nude_clothes = {
     	usage = game
-    	fallback = unclothed_body
+    	fallback = no_clothes
+	selection_behavior = max
     	priority = 10
 
 	no_clothes = {
