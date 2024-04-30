@@ -78,7 +78,6 @@ deviants_dispel_interaction = {
 			OR = {
 				has_character_modifier = deviants_prostitute
 				has_character_modifier = deviants_public_toilet
-				has_character_flag = accept_every_request
 			}
 		}
 		scope:recipient = {
@@ -128,7 +127,6 @@ deviants_dispel_interaction = {
 			}
 			remove_character_modifier = deviants_prostitute
 			remove_character_modifier = deviants_public_toilet
-			remove_character_flag = accept_every_request
 		}
 	}
 	ai_accept = {
@@ -185,7 +183,6 @@ deviants_shake_mind_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			add_character_flag = accept_every_request
 			add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier years = 1 }	
 			every_courtier_or_guest = {
 				limit = { is_female = no is_knight = yes }
@@ -266,7 +263,6 @@ deviants_mind_break_interaction = {
 				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
-			add_character_flag = accept_every_request
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -536,7 +532,6 @@ deviants_dull_interaction = {
 				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
-			add_character_flag = accept_every_request
 		}
 		scope:actor = {
 			add_trait_xp = {

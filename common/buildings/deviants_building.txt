@@ -29,16 +29,16 @@ deviants_brothel1 = {
 	}
 
 	province_modifier = {
-		monthly_income = 0.1
+		monthly_income = 0.5
 	}
 	
 	character_modifier = {
-		monthly_prestige = -0.05
+		monthly_prestige = -0.1
 	}
 	
 	county_modifier = {
-		development_growth = 0.2
-		monthly_county_control_growth_add = -0.1
+		development_growth = 0.5
+		monthly_county_control_growth_add = -0.2
 	}
 	
 	ai_value = { base = 100 }
@@ -65,17 +65,17 @@ deviants_brothel2 = {
 	}
 
 	province_modifier = {
-		monthly_income =0.2
+		monthly_income = 2
 	}
 	
 	character_modifier = {
-		monthly_prestige = -0.05
+		monthly_prestige = -0.2
 	}
 	
 	county_modifier = {
-		development_growth = 0.2
-		monthly_county_control_growth_add = -0.2
-		county_opinion_add = 5
+		development_growth = 1
+		monthly_county_control_growth_add = -0.5
+		county_opinion_add = 10
 	}
 	
 	ai_value = { base = 100 }
@@ -100,24 +100,20 @@ deviants_brothel3 = {
 	}
 
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_income = 2.5
 	}
 	
 	character_modifier = {
 		spouse_opinion = -20
-		monthly_prestige = -0.1
+		monthly_prestige = -0.2
 	}
 	
 	county_modifier = {
-		development_growth = 0.3
-		monthly_county_control_growth_add = -0.3
-		county_opinion_add = 10
+		development_growth = 1
+		monthly_county_control_growth_add = -0.5
+		county_opinion_add = 20
 	}
 	
-	ai_value = {
-		base = 6
-		ai_general_building_modifier = yes
-		ai_economical_building_preference_modifier = yes
-	}
+	ai_value = { base = 100 }
 }
 

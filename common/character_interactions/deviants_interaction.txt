@@ -52,6 +52,7 @@ deviants_prostitute_interaction = {
 		}
         	scope:actor = {
 			save_scope_as = buyer
+			trigger_event = deviants_prostitution_events.1 
 			if = {
 				limit = { 
 					scope:recipient = { has_character_modifier = deviants_prostitute }
@@ -76,7 +77,6 @@ deviants_prostitute_interaction = {
 					}
 				}
 			}
-			trigger_event = deviants_prostitution_events.1 
     		}
 		if = {
 			limit = { scope:recipient = { has_trait = deviants_succubus } }
