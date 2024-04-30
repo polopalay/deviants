@@ -12,7 +12,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 1000
+				add = 100
 				has_trait = deviants_succubus
 			}
 		}
@@ -21,21 +21,21 @@
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_face_markings
-				value = 1
-				template = lust_marking
-			}
-			morph = {
-				mode = add
 				gene = deviants_body_markings
 				value = 1
 				template = lust_brand
+			}
+			morph = {
+				mode = add
+				gene = gene_bs_body_shape
+				value = 1
+				template = body_shape_rectangle_half
 			}
 		}	
 		weight = {
 			base = 0
 			modifier = {
-				add = 1000
+				add = 100
 				has_trait = deviants_lesser_succubus
 			}
 		}
@@ -50,7 +50,13 @@ prostitute_outfittags = {
 				mode = add
 				gene = gene_bs_body_shape
 				value = 1
-				template = body_shape_rectangle_full
+				template = body_shape_rectangle_half
+			}
+			morph = {
+				mode = add
+				gene = deviants_face_markings
+				value = 1
+				template = lust_marking
 			}
 		}	
 		weight = {
@@ -100,7 +106,7 @@ nude_clothes = {
 			}
 			accessory = {
 				mode = add
-				gene = headgear
+				gene = additive_headgear
 			}
 		} 
 		weight = {

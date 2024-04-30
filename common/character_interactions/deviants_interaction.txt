@@ -112,17 +112,16 @@ deviants_prostitute_interaction = {
 	ignores_pending_interaction_block = yes
 	ai_frequency = 6
 	ai_targets = {
+		ai_recipients = dynasty
+		ai_recipients = family
 		ai_recipients = liege
-		ai_recipients = courtiers
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
-		ai_recipients = sub_realm_characters
-		ai_recipients = realm_characters
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 5
+		base = 20
 		modifier = {
 			add = 100
 			scope:recipient = {
@@ -130,7 +129,7 @@ deviants_prostitute_interaction = {
 			}
 		}
 		modifier = {
-			add = 40
+			add = 25
 			scope:actor = {
 				has_trait = lustful
 			}

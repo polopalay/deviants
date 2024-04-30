@@ -48,7 +48,10 @@ deviants_add_courtier = {
 	}
 	auto_accept = yes
 	ai_frequency = 120
-	ai_targets = { ai_recipients = self }
+	ai_targets = {
+		ai_recipients = dynasty
+		ai_recipients = family
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 1 }
 }
@@ -58,7 +61,7 @@ deviants_befriend = {
 	desc = deviants_befriend.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
@@ -82,9 +85,58 @@ deviants_befriend = {
 	}
 	auto_accept = yes
 	ai_frequency = 120
-	ai_targets = { ai_recipients = self }
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 1 }
+}
+
+deviants_rival_interaction = {
+	icon = deviantsrock
+	desc = deviants_rival_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			OR = {
+				has_relation_rival = scope:recipient
+				has_relation_nemesis = scope:recipient
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value >= 5
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_relation_rival = scope:recipient }
+				remove_relation_rival = scope:recipient
+			}
+			if = {
+				limit = { has_relation_nemesis = scope:recipient }
+				remove_relation_nemesis = scope:recipient
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 50 }
 }
 
 deviants_hook = {
@@ -92,7 +144,7 @@ deviants_hook = {
 	desc = deviants_hook.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 10 }
+	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
@@ -119,7 +171,12 @@ deviants_hook = {
 	}
 	auto_accept = yes
 	ai_frequency = 120
-	ai_targets = { ai_recipients = self }
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		ai_recipients = vassals
+		ai_recipients = liege
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 1 }
 }
@@ -370,7 +427,11 @@ deviants_create_lesser_succubus_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 120
-	ai_targets = { ai_recipients = self }
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = councillors
+		ai_recipients = vassals
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
 }
@@ -545,7 +606,322 @@ deviants_create_succubus_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 500
-	ai_targets = { ai_recipients = self }
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 10 }
+}
+
+deviants_epidemic_interaction = {
+	icon = deviantsrat
+	desc = deviants_epidemic_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 100 }
+	is_shown = {
+		scope:actor = { 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value >= 100
+			} 
+		}
+		scope:recipient = { 
+			is_ruler = yes
+		}
+	}
+	send_option = {
+		flag = measles
+		localization = spawn_epidemic_interaction_measles
+	}
+	send_option = {
+		flag = consumption
+		localization = spawn_epidemic_interaction_consumption
+	}
+	send_option = {
+		flag = smallpox
+		localization = spawn_epidemic_interaction_smallpox
+	}
+	send_option = {
+		flag = ergotism
+		localization = spawn_epidemic_interaction_ergotism
+	}
+	send_option = {
+		flag = bubonic_plague
+		localization = spawn_epidemic_interaction_bubonic_plague
+	}
+	send_option = {
+		flag = typhus
+		localization = spawn_epidemic_interaction_typhus
+	}
+	send_option = {
+		flag = dysentery
+		localization = spawn_epidemic_interaction_dysentery
+	}
+
+	on_accept = {
+		scope:actor = {
+			remove_trait = deviants_succubus
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				remove_character_modifier = deviants_prostitute
+				add_character_modifier = deviants_public_toilet
+			}
+			else = {
+				add_character_modifier = deviants_public_toilet
+			}
+		}
+		scope:recipient = {
+			hidden_effect = {
+				if = {
+					limit = {
+						scope:measles = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = measles
+							intensity = apocalyptic
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						scope:consumption = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = consumption
+							intensity = apocalyptic
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						scope:smallpox = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = smallpox
+							intensity = apocalyptic
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						scope:dysentery = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = dysentery
+							intensity = apocalyptic
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						scope:bubonic_plague = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = bubonic_plague
+							intensity = apocalyptic
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						scope:ergotism = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = ergotism
+							intensity = apocalyptic
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						scope:typhus = yes
+					}
+					scope:recipient.capital_province = {
+						create_epidemic_outbreak = {
+							type = typhus
+							intensity = apocalyptic
+						}
+					}
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1000
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 1 }
+}
+
+deviants_become_succubus = {
+	icon = deviantsfertility
+	desc = deviants_become_succubus.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = { 
+		scope:actor = scope:recipient
+		scope:actor = { is_ai = no }
+		scope:actor = { 
+			is_female = yes
+			NOR = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = chaste }
+				remove_trait = chaste
+			}
+			else_if = {
+				limit = { has_trait = humble }
+				remove_trait = humble
+			}
+			else_if = {
+				limit = { has_trait = gregarious }
+				remove_trait = gregarious
+			}
+			else_if = {
+				limit = { has_trait = shy }
+				remove_trait = shy
+			}
+			else_if = {
+				limit = { has_trait = calm }
+				remove_trait = calm
+			}
+			else_if = {
+				limit = { has_trait = content }
+				remove_trait = content
+			}
+			else_if = {
+				limit = { has_trait = generous }
+				remove_trait = generous
+			}
+			else_if = {
+				limit = { has_trait = just }
+				remove_trait = just
+			}
+			else_if = {
+				limit = { has_trait = honest }
+				remove_trait = honest
+			}
+			else_if = {
+				limit = { has_trait = patient }
+				remove_trait = patient
+			}
+			else_if = {
+				limit = { has_trait = temperate }
+				remove_trait = temperate
+			}
+			else_if = {
+				limit = { has_trait = diligent }
+				remove_trait = diligent
+			}
+			else_if = {
+				limit = { has_trait = ambitious }
+				remove_trait = ambitious
+			}
+			else_if = {
+				limit = { has_trait = brave }
+				remove_trait = brave
+			}
+			else_if = {
+				limit = { has_trait = trusting }
+				remove_trait = trusting
+			}
+			else_if = {
+				limit = { has_trait = compassionate }
+				remove_trait = compassionate
+			}
+			else_if = {
+				limit = { has_trait = zealous }
+				remove_trait = zealous
+			}
+			else_if = {
+				limit = { has_trait = greedy }
+				remove_trait = greedy
+			}
+			else_if = {
+				limit = { has_trait = callous }
+				remove_trait = callous
+			}
+			else_if = {
+				limit = { has_trait = impatient }
+				remove_trait = impatient
+			}
+			else_if = {
+				limit = { has_trait = gluttonous }
+				remove_trait = gluttonous
+			}
+			else_if = {
+				limit = { has_trait = lazy }
+				remove_trait = lazy
+			}
+			else_if = {
+				limit = { has_trait = wrathful }
+				remove_trait = wrathful
+			}
+			else_if = {
+				limit = { has_trait = deceitful }
+				remove_trait = deceitful
+			}
+			else_if = {
+				limit = { has_trait = arrogant }
+				remove_trait = arrogant
+			}
+			else_if = {
+				limit = { has_trait = craven }
+				remove_trait = craven
+			}
+			else_if = {
+				limit = { has_trait = forgiving }
+				remove_trait = forgiving
+			}
+			else_if = {
+				limit = { has_trait = vengeful }
+				remove_trait = vengeful
+			}
+			else_if = {
+				limit = { has_trait = arbitrary }
+				remove_trait = arbitrary
+			}
+			else_if = {
+				limit = { has_trait = stubborn }
+				remove_trait = stubborn
+			}
+			else_if = {
+				limit = { has_trait = fickle }
+				remove_trait = fickle
+			}
+			else_if = {
+				limit = { has_trait = cynical }
+				remove_trait = cynical
+			}
+			else_if = {
+				limit = { has_trait = paranoid }
+				remove_trait = paranoid
+			}
+			set_immortal_age = 18
+			add_trait = lustful
+			add_trait = deviants_succubus
+		}
+	}
+	auto_accept = yes
 }

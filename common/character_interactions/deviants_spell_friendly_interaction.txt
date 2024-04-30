@@ -1,34 +1,3 @@
-deviants_become_succubus = {
-	icon = deviantsfertility
-	desc = deviants_become_succubus.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-
-	is_shown = { 
-		scope:actor = scope:recipient
-		scope:actor = { is_ai = no }
-		scope:actor = { 
-			is_female = yes
-			NOR = { 
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_trait = chaste }
-				remove_trait = chaste
-			}
-			set_immortal_age = 18
-			add_trait = lustful
-			add_trait = deviants_succubus
-		}
-	}
-	auto_accept = yes
-}
-
 deviants_heal_interaction = {
 	icon = deviantscompass
 	desc = deviants_heal_interaction.desc
@@ -218,6 +187,90 @@ deviants_weight_interaction = {
 	}
 }
 
+deviants_give_animal_interaction = {
+	icon = deviantsbear
+	desc = deviants_give_animal_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value >= 2
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 2
+				}
+			}
+		}
+		scope:recipient = {
+			NOR = {
+				any_owned_story = { story_type = story_cycle_pet_cat }
+				any_owned_story = { story_type = story_cycle_pet_dog }
+			}
+		}
+	}
+	send_option = {
+		is_valid = {
+			NOT = {
+				scope:recipient = { any_owned_story = { story_type = story_cycle_pet_dog } }
+			}
+		}
+		flag = story_cycle_pet_dog
+		localization = story_cycle_pet_dog
+	}
+	
+	send_option = {
+		is_valid = {
+			NOT = {
+				scope:recipient = { any_owned_story = { story_type = story_cycle_pet_cat } }
+			}
+		}
+		flag = story_cycle_pet_cat
+		localization = story_cycle_pet_cat
+	}
+	on_accept = {
+		scope:recipient = {
+			switch = {
+				trigger = yes
+				scope:story_cycle_pet_dog = {
+					start_dog_story_cycle_effect = yes
+				}
+				scope:story_cycle_pet_cat = {
+					start_cat_story_cycle_effect = yes
+				}
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value = -2
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -2
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
 deviants_buff_interaction = {
 	icon = deviantsmagic
 	desc = deviants_buff_interaction.desc
@@ -246,6 +299,56 @@ deviants_buff_interaction = {
 			}
 		}
 		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value = -2
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -2
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_learn_language_interaction = {
+	icon = deviantslearning
+	desc = deviants_buff_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 10 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			NOT = { knows_language_of_culture = scope:recipient.culture }
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value >= 2
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 2
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			learn_language_of_culture = scope:recipient.culture
 			if = {
 				limit = { has_trait = deviants_succubus }
 				add_trait_xp = {

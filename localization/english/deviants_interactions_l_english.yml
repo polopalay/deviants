@@ -178,3 +178,15 @@
 
  deviants_demon_generals_interaction: "Summon Demon Generals"
  deviants_demon_generals_interaction.desc: "Turn all [recipient.GetShortUIName]'s knights into demon generals"
+
+ deviants_give_animal_interaction: "Create Pet"
+ deviants_give_animal_interaction.desc: "Give [recipient.GetShortUIName] a pet"
+
+ deviants_learn_language_interaction: "Learn Language"
+ deviants_learn_language_interaction.desc: "Learn [recipient.GetShortUIName]'s language"
+
+ deviants_epidemic_interaction: "Spawn Epidemic"
+ deviants_epidemic_interaction.desc: "Spawn epidemic in [recipient.GetShortUIName]'s capital"
+
+ deviants_rival_interaction: "Stop Being Rival"
+ deviants_rival_interaction.desc: "[recipient.GetShortUIName] stop being your rival"

@@ -48,14 +48,11 @@ deviants_offer_orgy = {
 		}
 	}
 	ai_frequency = 24
-	ai_targets = { 
+	ai_targets = { 	
 		ai_recipients = liege
-		ai_recipients = courtiers
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
-		ai_recipients = sub_realm_characters
-		ai_recipients = realm_characters
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
@@ -67,7 +64,7 @@ deviants_dispel_interaction = {
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
-	cooldown_against_recipient = { years = 2 }
+	cooldown_against_recipient = { years = 6 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -115,7 +112,7 @@ deviants_dispel_interaction = {
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 } 
 				scope:actor = { 
-					add_trait_xp = { trait = deviants_succubus track = daring value = 1 } 
+					add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
@@ -142,17 +139,23 @@ deviants_dispel_interaction = {
 			multiplier = 1
 		}
 	}
-	ai_frequency = 12
-	ai_targets = {
+	ai_frequency = 2
+	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
-		ai_recipients = sub_realm_characters
-		ai_recipients = realm_characters
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
+	ai_will_do = { 
+		base = 10 
+		modifier = {
+			add = 90
+			scope:recipient = {
+				is_ai = no
+			}
+		}
+	}
 }
 
 deviants_shake_mind_interaction = {
@@ -205,7 +208,12 @@ deviants_shake_mind_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { ai_recipients = scripted_relations }
+	ai_targets = { 	
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
 }
@@ -270,7 +278,12 @@ deviants_mind_break_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { ai_recipients = scripted_relations }
+	ai_targets = { 	
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 0 
@@ -533,7 +546,12 @@ deviants_dull_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 60
-	ai_targets = { ai_recipients = scripted_relations }
+	ai_targets = { 	
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 0 

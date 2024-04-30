@@ -1,3 +1,64 @@
+deviants_steal_gold_interaction = {
+	icon = deviantseconomy
+	desc = deviants_steal_gold_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 2
+			} 
+		}
+		scope:recipient = {
+			gold >= 100
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			pay_short_term_gold = {
+				target = scope:actor
+				gold = 20
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -2
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = { 
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 50
+			scope:actor = {
+				OR = {
+					has_relation_rival = scope:recipient
+					has_relation_nemesis = scope:recipient
+				}
+			}
+		}
+	}
+}
+
 deviants_rumor_interaction = {
 	icon = deviantsopinion
 	desc = deviants_rumor_interaction.desc
@@ -10,7 +71,7 @@ deviants_rumor_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 2
+				value >= 5
 			} 
 		}
 		scope:recipient = {
@@ -53,7 +114,7 @@ deviants_rumor_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -2
+				value = -5
 			}
 		}
 	}
@@ -65,62 +126,6 @@ deviants_rumor_interaction = {
 		base = 0 
 		modifier = {
 			add = 5
-			scope:actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
-			}
-		}
-	}
-}
-
-deviants_steal_gold_interaction = {
-	icon = deviantseconomy
-	desc = deviants_steal_gold_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	cooldown = { years = 10 }
-	is_shown = {
-		NOT = { scope:actor = scope:recipient }
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value >= 2
-			} 
-		}
-		scope:recipient = {
-			gold >= 200
-			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			pay_short_term_gold = {
-				target = scope:actor
-				gold = 20
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = -2
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 60
-	ai_targets = { ai_recipients = scripted_relations }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			add = 50
 			scope:actor = {
 				OR = {
 					has_relation_rival = scope:recipient
@@ -143,7 +148,7 @@ deviants_imprison_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 5
+				value >= 10
 			} 
 		}
 		scope:recipient = {
@@ -158,7 +163,7 @@ deviants_imprison_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -5
+				value = -10
 			}
 			imprison = {
 				target = scope:recipient
@@ -202,7 +207,7 @@ deviants_kill_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 5
+				value >= 10
 			} 
 		}
 	}
@@ -214,7 +219,7 @@ deviants_kill_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -5
+				value = -10
 			}
 		}
 	}
