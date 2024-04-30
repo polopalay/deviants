@@ -142,7 +142,7 @@ deviants_imprison_interaction = {
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
 	cooldown = { years = 10 }
-	is_valid = {
+	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
 			has_trait_xp = {

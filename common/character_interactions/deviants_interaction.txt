@@ -5,6 +5,7 @@ deviants_prostitute_interaction = {
     	use_diplomatic_range = yes
 	cooldown_against_recipient = { months = 12 }
 	cooldown = { months = 12 }
+	ignores_pending_interaction_block = no
 
     	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -112,29 +113,25 @@ deviants_prostitute_interaction = {
     		}
 	}
 
-	ignores_pending_interaction_block = yes
 	ai_frequency = 6
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
-	}
-	ai_targets = {
 		ai_recipients = realm_characters
-		max = 30
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 20
+		base = 10
 		modifier = {
-			add = 25
+			add = 10
 			scope:actor = {
 				has_trait = lustful
 			}
 		}
 		modifier = {
-			add = -40
+			add = -10
 			scope:recipient = {
 				is_close_family_of = scope:actor
 			}

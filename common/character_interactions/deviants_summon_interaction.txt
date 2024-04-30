@@ -801,12 +801,8 @@ deviants_become_succubus = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { NOT = { has_trait = lustful } }
-				add_trait = lustful
-			}
-			if = {
 				limit = { has_trait = lustful }
-				add_trait = rakish
+				add_character_modifier = deviants_prostitute
 			}
 			else_if = {
 				limit = { has_trait = chaste }
@@ -939,6 +935,10 @@ deviants_become_succubus = {
 			else_if = {
 				limit = { has_trait = paranoid }
 				remove_trait = paranoid
+			}
+			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
 			}
 			if = {
 				limit = {

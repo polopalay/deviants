@@ -193,3 +193,9 @@
 
  deviants_absorb_interaction: "Absorb"
  deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
+
+ deviants_remove_stress_interaction: "Dealing With Stress"
+ deviants_remove_stress_interaction.desc: "Neutralize all stress states and stress-related traits"
+
+ deviants_lewd_interaction: "Sacrifice"
+ deviants_lewd_interaction.desc: "Sacrifice your other abilities to increase your power"
