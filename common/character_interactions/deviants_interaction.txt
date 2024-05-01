@@ -3,9 +3,6 @@ deviants_prostitute_interaction = {
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { months = 2 }
-	cooldown_against_recipient = { months = 2 }
-	ignores_pending_interaction_block = no
 
     	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -15,11 +12,8 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_attracted_to_gender_of = scope:recipient
-			NOT = { 
-				is_spouse_of = scope:recipient
-				has_trait = lovers_pox
-			}
 			NOR = {
+				has_trait = lovers_pox
 				has_character_modifier = deviants_public_toilet
 				has_character_modifier = deviants_prostitute
 			}
@@ -29,7 +23,7 @@ deviants_prostitute_interaction = {
             		is_incapable = no
             		is_imprisoned = no
 			is_travelling = no
-			NOT = { is_spouse_of = scope:actor }
+			NOT = { has_character_modifier = deviants_fuckedsilly }
 			OR = {
 				has_character_modifier = deviants_public_toilet
 				has_character_modifier = deviants_prostitute
@@ -41,10 +35,9 @@ deviants_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
-			save_scope_as = seller
 			add_character_modifier = {
 				modifier = deviants_fuckedsilly
-				months = 1
+				years = 1
 			}
 			had_sex_with_effect = {
 				CHARACTER = scope:actor
@@ -52,16 +45,12 @@ deviants_prostitute_interaction = {
             		}
 		}
         	scope:actor = {
-			save_scope_as = buyer
-			trigger_event = deviants_prostitution_events.1 
 			if = {
 				limit = { 
 					scope:recipient = { has_character_modifier = deviants_prostitute }
 				}
 				if = {
-					limit = {
-						exists = scope:recipient.liege
-					}
+					limit = { exists = scope:recipient.liege }
 					pay_short_term_gold = {
 						target = scope:recipient.liege
 						gold = 2
@@ -113,7 +102,7 @@ deviants_prostitute_interaction = {
     		}
 	}
 
-	ai_frequency = 6
+	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals

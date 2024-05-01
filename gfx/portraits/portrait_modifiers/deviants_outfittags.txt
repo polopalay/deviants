@@ -55,8 +55,7 @@ deviants_generals_outfittags = {
 
 nude_clothes = {
     	usage = game
-    	fallback = no_clothes
-	selection_behavior = max
+    	fallback = unclothed_body
     	priority = 10
 
 	no_clothes = {
@@ -76,14 +75,6 @@ nude_clothes = {
 			accessory = {
 				mode = add
 				gene = cloaks
-			}
-			accessory = {
-				mode = add
-				gene = headgear_base
-			}
-			accessory = {
-				mode = add
-				gene = additive_headgear
 			}
 		} 
 		weight = {
