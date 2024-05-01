@@ -33,7 +33,7 @@ deviants_prostitute_interaction = {
 		scope:recipient = {
 			add_character_modifier = {
 				modifier = deviants_fuckedsilly
-				months = 4
+				months = 3
 			}
 			had_sex_with_effect = {
 				CHARACTER = scope:actor

@@ -189,6 +189,7 @@ deviants_shake_mind_interaction = {
 	on_accept = {
 		scope:recipient = {
 			add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier years = 1 }	
+			add_character_modifier = { modifier = deviants_slave years = 1 }
 			every_courtier_or_guest = {
 				limit = { is_female = no is_knight = yes }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
@@ -255,14 +256,8 @@ deviants_mind_break_interaction = {
 		scope:recipient = {
 			remove_trait = chaste
 			add_trait = lustful	
-			if = {
-				limit = { has_character_modifier = deviants_prostitute }
-				remove_character_modifier = deviants_prostitute
-				add_character_modifier = { modifier = deviants_slave years = 2 }
-			}
-			else = {
-				add_character_modifier = { modifier = deviants_prostitute years = 2 }
-			}
+			add_character_modifier = { modifier = deviants_slave }
+			add_character_modifier = { modifier = deviants_prostitute }
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
