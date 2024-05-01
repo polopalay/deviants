@@ -146,59 +146,11 @@ deviants_dispel_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 10 
+		base = 50 
 		modifier = {
-			add = 90
+			add = 50
 			scope:recipient = {
 				is_ai = no
-			}
-		}
-	}
-}
-
-deviants_nude_interaction = {
-	icon = deviantsrock
-	desc = deviants_nude_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	cooldown = { months = 1 }
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 5
-			} 
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			if = { 
-				limit = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-				remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			}
-			else = {
-				add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = -5
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			add = 100
-			scope:actor = {
-				NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 			}
 		}
 	}

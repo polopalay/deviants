@@ -2,6 +2,8 @@ deviants_switch_body = {
 	icon = deviantsfashion
 	desc = deviants_switch_body.desc
     	category = interaction_category_diplomacy
+	interface_priority = 1
+	common_interaction = yes
     	use_diplomatic_range = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }

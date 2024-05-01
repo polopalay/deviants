@@ -35,9 +35,18 @@ deviants_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
-			add_character_modifier = {
-				modifier = deviants_fuckedsilly
-				years = 1
+			if = {
+				limit = { has_character_modifier = deviants_public_toilet }
+				add_character_modifier = {
+					modifier = deviants_fuckedsilly
+					months = 6
+				}
+			}
+			else = {
+				add_character_modifier = {
+					modifier = deviants_fuckedsilly
+					years = 1
+				}
 			}
 			had_sex_with_effect = {
 				CHARACTER = scope:actor

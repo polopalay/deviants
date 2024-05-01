@@ -122,9 +122,6 @@
  deviants_mind_break_interaction: "Mind Break"
  deviants_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
 
- deviants_dull_interaction: "Dulls"
- deviants_dull_interaction.desc: "Dulls [recipient.GetShortUIName]"
-
  deviants_kill_interaction: "Kill Character"
  deviants_kill_interaction.desc: "Immediately kills [recipient.GetShortUIName]"
  
@@ -185,20 +182,8 @@
  deviants_learn_language_interaction: "Learn Language"
  deviants_learn_language_interaction.desc: "Learn [recipient.GetShortUIName]'s language"
 
- deviants_epidemic_interaction: "Spawn Epidemic"
- deviants_epidemic_interaction.desc: "Spawn epidemic in [recipient.GetShortUIName]'s capital"
-
  deviants_rival_interaction: "Stop Being Rival"
  deviants_rival_interaction.desc: "[recipient.GetShortUIName] stop being your rival"
 
  deviants_absorb_interaction: "Absorb"
  deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
-
- deviants_remove_stress_interaction: "Dealing With Stress"
- deviants_remove_stress_interaction.desc: "Neutralize all stress states and stress-related traits"
-
- deviants_sacrifice_interaction: "Sacrifice"
- deviants_sacrifice_interaction.desc: "Sacrifice your other abilities to increase your power"
-
- deviants_nude_interaction: "Naked"
- deviants_nude_interaction.desc: "Sexual art includes artistic nudity"

@@ -55,298 +55,6 @@ deviants_heal_interaction = {
 				has_trait = wounded_1
 				has_trait = wounded_2
 				has_trait = wounded_3
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_trait = deviants_succubus }
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value = -1
-				}
-			}
-			if = {
-				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = {
-					trait = deviants_lesser_succubus
-					value = -2
-				}
-			}
-		}
-		scope:recipient = {
-				remove_trait = depressed_1
-				remove_trait = depressed_genetic
-				remove_trait = lunatic_1
-				remove_trait = lunatic_genetic
-				remove_trait = possessed_1
-				remove_trait = possessed_genetic
-				remove_trait = one_eyed
-				remove_trait = scarred
-				remove_trait = maimed
-				remove_trait = one_legged
-				remove_trait = disfigured
-				remove_trait = eunuch
-				remove_trait = blind
-				remove_trait = sickly
-				remove_trait = infirm
-				remove_trait = incapable 
-				remove_trait = leper
-				remove_trait = wounded_1
-				remove_trait = wounded_2
-				remove_trait = wounded_3
-
-				recover_from_disease_effect = { DISEASE = ill }
-				recover_from_disease_effect = { DISEASE = pneumonic }
-				recover_from_disease_effect = { DISEASE = gout_ridden }
-				recover_from_disease_effect = { DISEASE = typhus }
-				recover_from_disease_effect = { DISEASE = consumption }
-				recover_from_disease_effect = { DISEASE = measles }
-				recover_from_disease_effect = { DISEASE = cancer }
-				recover_from_disease_effect = { DISEASE = great_pox }
-				recover_from_disease_effect = { DISEASE = smallpox }
-				recover_from_disease_effect = { DISEASE = bubonic_plague }
-				recover_from_disease_effect = { DISEASE = lovers_pox }
-				recover_from_disease_effect = { DISEASE = bubonic_plague }
-				recover_from_disease_effect = { DISEASE = dysentery }
-				recover_from_disease_effect = { DISEASE = ergotism }
-				recover_from_disease_effect = { DISEASE = measles }
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 1
-	ai_targets = { 
-		ai_recipients = self 
-		ai_recipients = family
-		ai_recipients = spouses
-		ai_recipients = children
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
-deviants_sacrifice_interaction = {
-	icon = deviantslove
-	desc = deviants_sacrifice_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 10 }
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-		scope:recipient = {
-			OR = {
-				has_trait = logistician
-				has_trait = military_engineer
-				has_trait = aggressive_attacker
-				has_trait = unyielding_defender
-				has_trait = forder
-				has_trait = flexible_leader
-				has_trait = desert_warrior
-				has_trait = jungle_stalker
-				has_trait = reaver
-				has_trait = reckless
-				has_trait = holy_warrior
-				has_trait = open_terrain_expert
-				has_trait = rough_terrain_expert
-				has_trait = forest_fighter
-				has_trait = cautious_leader
-				has_trait = winter_soldier
-				has_trait = lifestyle_hunter
-				has_trait = lifestyle_reveler
-				has_trait = lifestyle_gardener
-				has_trait = lifestyle_mystic
-				has_trait = lifestyle_physician
-				has_trait = lifestyle_herbalist
-				has_trait = lifestyle_blademaster
-				has_trait = lifestyle_traveler
-				has_trait = tourney_participant
-				has_trait = pilgrim
-				has_trait = poet
-				has_trait = loyal
-				has_trait = disloyal
-			}
-		}
-		scope:recipient = scope:actor
-	}
-	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_trait = deviants_succubus }
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = corruption
-					value = 5
-				}
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value = 5
-				}
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = loyalty
-					value = 5
-				}
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = daring
-					value = 5
-				}
-			}
-			if = {
-				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = {
-					trait = deviants_lesser_succubus
-					value = 20
-				}
-			}
-		}
-		scope:recipient = {
-			remove_trait = logistician
-			remove_trait = military_engineer
-			remove_trait = aggressive_attacker
-			remove_trait = unyielding_defender
-			remove_trait = forder
-			remove_trait = flexible_leader
-			remove_trait = desert_warrior
-			remove_trait = jungle_stalker
-			remove_trait = reaver
-			remove_trait = reckless
-			remove_trait = holy_warrior
-			remove_trait = open_terrain_expert
-			remove_trait = rough_terrain_expert
-			remove_trait = forest_fighter
-			remove_trait = forest_fighter
-			remove_trait = cautious_leader 
-			remove_trait = winter_soldier
-			remove_trait = lifestyle_hunter
-			remove_trait = lifestyle_reveler
-			remove_trait = lifestyle_gardener
-			remove_trait = lifestyle_mystic
-			remove_trait = lifestyle_physician
-			remove_trait = lifestyle_herbalist
-			remove_trait = lifestyle_blademaster
-			remove_trait = lifestyle_traveler
-			remove_trait = tourney_participant
-			remove_trait = pilgrim
-			remove_trait = poet
-			remove_trait = loyal
-			remove_trait = disloyal
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_martial_2
-						has_trait = education_martial_3
-						has_trait = education_martial_4
-						has_trait = education_martial_5
-					}
-				}
-				remove_trait = education_martial_2
-				remove_trait = education_martial_3
-				remove_trait = education_martial_4
-				remove_trait = education_martial_5
-				add_trait = education_martial_1
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_diplomacy_2
-						has_trait = education_diplomacy_3
-						has_trait = education_diplomacy_4
-						has_trait = education_diplomacy_5
-					}
-				}
-				remove_trait = education_diplomacy_2
-				remove_trait = education_diplomacy_3
-				remove_trait = education_diplomacy_4
-				remove_trait = education_diplomacy_5
-				add_trait = education_diplomacy_1
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_intrigue_2
-						has_trait = education_intrigue_3
-						has_trait = education_intrigue_4
-						has_trait = education_intrigue_5
-					}
-				}
-				remove_trait = education_intrigue_2
-				remove_trait = education_intrigue_3
-				remove_trait = education_intrigue_4
-				remove_trait = education_intrigue_5
-				add_trait = education_intrigue_1
-			}
-
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_stewardship_2
-						has_trait = education_stewardship_3
-						has_trait = education_stewardship_4
-						has_trait = education_stewardship_5
-					}
-				}
-				remove_trait = education_stewardship_2
-				remove_trait = education_stewardship_3
-				remove_trait = education_stewardship_4
-				remove_trait = education_stewardship_5
-				add_trait = education_stewardship_1
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_learning_2
-						has_trait = education_learning_3
-						has_trait = education_learning_4
-						has_trait = education_learning_5
-					}
-				}
-				remove_trait = education_learning_2
-				remove_trait = education_learning_3
-				remove_trait = education_learning_4
-				remove_trait = education_learning_5
-				add_trait = education_learning_1
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 60
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
-deviants_remove_stress_interaction = {
-	icon = deviantsopinion
-	desc = deviants_heal_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { days = 10 }
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value >= 1
-				}
-				has_trait_xp = {
-					trait = deviants_lesser_succubus
-					value >= 2
-				}
-			}
-		}
-		scope:recipient = {
-			OR = {
-				stress_level >= 1
 				has_trait = drunkard
 				has_trait = hashishiyah
 				has_trait = rakish
@@ -390,6 +98,43 @@ deviants_remove_stress_interaction = {
 			}
 		}
 		scope:recipient = {
+			remove_trait = depressed_1
+			remove_trait = depressed_genetic
+			remove_trait = lunatic_1
+			remove_trait = lunatic_genetic
+			remove_trait = possessed_1
+			remove_trait = possessed_genetic
+			remove_trait = one_eyed
+			remove_trait = scarred
+			remove_trait = maimed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = eunuch
+			remove_trait = blind
+			remove_trait = sickly
+			remove_trait = infirm
+			remove_trait = incapable 
+			remove_trait = leper
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+
+			recover_from_disease_effect = { DISEASE = ill }
+			recover_from_disease_effect = { DISEASE = pneumonic }
+			recover_from_disease_effect = { DISEASE = gout_ridden }
+			recover_from_disease_effect = { DISEASE = typhus }
+			recover_from_disease_effect = { DISEASE = consumption }
+			recover_from_disease_effect = { DISEASE = measles }
+			recover_from_disease_effect = { DISEASE = cancer }
+			recover_from_disease_effect = { DISEASE = great_pox }
+			recover_from_disease_effect = { DISEASE = smallpox }
+			recover_from_disease_effect = { DISEASE = bubonic_plague }
+			recover_from_disease_effect = { DISEASE = lovers_pox }
+			recover_from_disease_effect = { DISEASE = bubonic_plague }
+			recover_from_disease_effect = { DISEASE = dysentery }
+			recover_from_disease_effect = { DISEASE = ergotism }
+			recover_from_disease_effect = { DISEASE = measles }
+
 			remove_trait = drunkard
 			remove_trait = hashishiyah
 			remove_trait = rakish
@@ -412,32 +157,18 @@ deviants_remove_stress_interaction = {
 			remove_trait = fornicator
 			remove_trait = murderer
 			remove_trait = witch
-			add_stress = -100
 		}
 	}
 	auto_accept = yes
 	ai_frequency = 1
 	ai_targets = { 
 		ai_recipients = self 
-		ai_recipients = courtiers
 		ai_recipients = family
+		ai_recipients = spouses
+		ai_recipients = children
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 5
-		modifier = {
-			base = 100
-			scope:actor = scope:recipient
-		}	
-		modifier = {
-			base = 50
-			is_close_family_of = scope:actor
-		}
-		modifier = {
-			base = 10
-			is_courtier_of = scope:actor
-		}
-	}
+	ai_will_do = { base = 100 }
 }
 
 deviants_weight_interaction = {
