@@ -3,7 +3,7 @@ deviants_offer_orgy = {
 	desc = deviants_offer_orgy.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { years = 2 }
+	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
@@ -64,8 +64,6 @@ deviants_dispel_interaction = {
 	desc = deviants_dispel_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	cooldown_against_recipient = { months = 2 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
@@ -77,6 +75,7 @@ deviants_dispel_interaction = {
 				has_trait = deviants_lesser_succubus
 			}
 			OR = {
+				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier 
 				has_character_modifier = deviants_prostitute
 				has_character_modifier = deviants_slave
 			}
@@ -197,7 +196,7 @@ deviants_shake_mind_interaction = {
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = 0 } 
 				scope:actor = { 
-					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+					add_trait_xp = { trait = deviants_succubus track = loyal value = 1 } 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				} 
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
@@ -268,6 +267,12 @@ deviants_mind_break_interaction = {
 					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				} 
+				if = {
+					limit = { is_knight = yes }
+					scope:actor = { 
+						add_trait_xp = { trait = deviants_succubus track = loyal value = 1 } 
+					} 
+				}
 				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 			}
 		}

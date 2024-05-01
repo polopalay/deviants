@@ -22,13 +22,13 @@ deviants_succubus = {
 	tracks = {
 		corruption = {
 			50 = {
-				monthly_lifestyle_xp_gain_mult = -1
+				stewardship = 5
 				attraction_opinion = 10
 				hostile_scheme_resistance_add = 50
 			}
 
 			100 = {
-				monthly_lifestyle_xp_gain_mult = -0.5
+				stewardship = 10
 				attraction_opinion = 20
 				hostile_scheme_resistance_add = 100
 			}			
@@ -36,32 +36,38 @@ deviants_succubus = {
 		power = {
 			33 = {
 				health = 1
+				prowess = 3
 				negate_health_penalty_add = 1
 			}
 
 			66 = {
 				health = 2
+				prowess = 6
 				negate_health_penalty_add = 2
 			}
 
 			100 = {
 				health = 3
+				prowess = 10
 				negate_health_penalty_add = 3
 			}			
 		}
 		loyalty = {
 			33 = {
+				martial = 3
 				knight_effectiveness_mult = 0.1
 				long_reign_bonus_mult = 0.1
 			}
 
 			66 = {
+				martial = 6
 				men_at_arms_maintenance = -0.1
 				knight_effectiveness_mult = 0.1
 				long_reign_bonus_mult = 0.1
 			}
 
 			100 = {
+				martial = 10
 				men_at_arms_maintenance = -0.2
 				knight_effectiveness_mult = 0.2
 				long_reign_bonus_mult = 0.2
@@ -69,21 +75,25 @@ deviants_succubus = {
 		}
 		daring = {
 			25 = {
+				diplomacy = 2
     				stress_gain_mult = -0.2
 				monthly_prestige = 0.1
 				opinion_of_male_rulers = 5
 			}
 			50 = {
+				diplomacy = 4
     				stress_gain_mult = -0.4
 				monthly_prestige = 0.2
 				opinion_of_male_rulers = 10
 			}
 			75 = {
+				diplomacy = 6
     				stress_gain_mult = -0.5
 				monthly_prestige = 0.3
 				opinion_of_male_rulers = 15
 			}
 			100 = {
+				diplomacy = 8
     				stress_gain_mult = -1
 				monthly_prestige = 0.4
 				opinion_of_male_rulers = 20
@@ -121,12 +131,20 @@ deviants_lesser_succubus = {
 
 	track = {
 		50 = {
+			stewardship = 2
+			diplomacy = 2
+			prowess = 2
+			martial = 2
 			attraction_opinion = 10
 			hostile_scheme_resistance_add = 50
 			health = 0.5
 			negate_health_penalty_add = 0.5
 		}
 		100 = {
+			stewardship = 5
+			diplomacy = 5
+			prowess = 5
+			martial = 5
 			attraction_opinion = 20
 			hostile_scheme_resistance_add = 100
 			health = 1

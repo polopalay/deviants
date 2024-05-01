@@ -1,89 +1,3 @@
-deviants_service_interaction = {
-	icon = deviantsmagic
-	desc = deviants_service_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	cooldown = { years = 5 }
-	is_shown = {
-		scope:actor = {
-			has_trait = deviants_succubus
-			is_ruler = yes
-			every_courtier_or_guest = {
-				limit = { is_female = no is_knight = yes }
-				count > 0
-			}
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1
-				}
-			}
-		}
-		scope:recipient = scope:actor
-	}
-	on_accept = {
-		scope:recipient = {
-			every_courtier_or_guest = {
-				limit = { is_female = no is_knight = yes }
-				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = 0 }
-				scope:recipient = { 
-					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-					add_trait_xp = { trait = deviants_succubus track = loyalty  value = 1 }
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 60
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
-deviants_absorb_interaction = {
-	icon = deviantscompass
-	desc = deviants_absorb_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	cooldown = { years = 5 }
-	is_shown = {
-		scope:actor = {
-			has_trait = deviants_succubus
-			is_ruler = yes
-			every_courtier_or_guest = {
-				limit = { is_female = no is_knight = yes }
-				count > 0
-			}
-		}
-		scope:recipient = {
-			OR = {
-				is_courtier_of = scope:actor
-				is_vassal_of = scope:actor
-			}
-			has_trait_xp = { trait = deviants_lesser_succubus value >= 50 }
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			add_trait_xp = {
-				trait = deviants_lesser_succubus
-				value = -50
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value = 25
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 60
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
 deviants_spawn_darkarmy_interaction = {
 	icon = deviantsprowess
 	desc = deviants_spawn_darkarmy_interaction.desc
@@ -209,7 +123,7 @@ deviants_demon_generals_interaction = {
 			every_courtier_or_guest = {
 				limit = { is_knight = yes }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = 0 }
-				add_character_modifier = { modifier = deviants_generals years = 1 } 
+				add_character_modifier = deviants_generals 
 				add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier years = 1 } 
 			}
 		}

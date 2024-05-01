@@ -204,7 +204,7 @@ deviants_child_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 10
+				value >= 20
 			} 
 		}
 		scope:recipient = {
@@ -219,31 +219,31 @@ deviants_child_interaction = {
 				create_character = {
 					age = 0
 					mother = scope:recipient
-					father = scope:recipient.primary_spouse
-					dynasty_house = scope:recipient.primary_spouse.house
-					culture = scope:recipient.primary_spouse.culture
-					faith = scope:recipient.primary_spouse.faith
+					father = primary_spouse
+					dynasty_house = primary_spouse.house
+					culture = primary_spouse.culture
+					faith = primary_spouse.faith
 				}
 			}
 			else = {
 				if = {
-					limit = { exists = scope:recipient.primary_spouse }
+					limit = { exists = primary_spouse }
 					create_character = {
 						age = 0
-						mother = scope:recipient
-						father = scope:recipient.primary_spouse
-						dynasty_house = scope:recipient.house
-						culture = scope:recipient.culture
-						faith = scope:recipient.faith
+						mother = recipient
+						father = primary_spouse
+						dynasty_house = house
+						culture = culture
+						faith = faith
 					}
 				}
-				else {
+				else = {
 					create_character = {
 						age = 0
 						mother = scope:recipient
-						dynasty_house = scope:recipient.house
-						culture = scope:recipient.culture
-						faith = scope:recipient.faith
+						dynasty_house = house
+						culture = culture
+						faith = faith
 					}
 
 				}

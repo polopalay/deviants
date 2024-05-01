@@ -65,9 +65,6 @@
  deviants_rumor_interaction: "Spreading Rumors"
  deviants_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
 
- deviants_service_interaction: "Serves The Army"
- deviants_service_interaction.desc: "Make love to all your knights to gain favor in the citadel"
-
  deviants_require_service_interaction: "Request Service"
  deviants_require_service_interaction.desc: "Ask [recipient.GetShortUIName] to provide free sexual services to maintain loyalty"
 
@@ -184,9 +181,6 @@
 
  deviants_rival_interaction: "Stop Being Rival"
  deviants_rival_interaction.desc: "[recipient.GetShortUIName] stop being your rival"
-
- deviants_absorb_interaction: "Absorb"
- deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
 
  deviants_solicitation_interaction: "Solicitation"
  deviants_solicitation_interaction.desc: "Begging to have sex with [recipient.GetShortUIName]"
