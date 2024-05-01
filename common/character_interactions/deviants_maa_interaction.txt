@@ -1,5 +1,5 @@
 deviants_service_interaction = {
-	icon = deviantsfashion
+	icon = deviantsmagic
 	desc = deviants_service_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -40,7 +40,7 @@ deviants_service_interaction = {
 }
 
 deviants_absorb_interaction = {
-	icon = deviantsfashion
+	icon = deviantscompass
 	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

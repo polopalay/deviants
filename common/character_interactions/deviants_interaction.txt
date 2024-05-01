@@ -18,6 +18,7 @@ deviants_prostitute_interaction = {
 			}
         	}
         	scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
             		is_adult = yes
             		is_incapable = no
             		is_imprisoned = no
@@ -33,11 +34,11 @@ deviants_prostitute_interaction = {
 		scope:recipient = {
 			add_character_modifier = {
 				modifier = deviants_fuckedsilly
-				months = 3
+				months = 6
 			}
 			had_sex_with_effect = {
 				CHARACTER = scope:actor
-				PREGNANCY_CHANCE = 0
+				PREGNANCY_CHANCE = pregnancy_chance
             		}
 		}
         	scope:actor = {
@@ -47,9 +48,12 @@ deviants_prostitute_interaction = {
 				}
 				if = {
 					limit = { exists = scope:recipient.liege }
-					pay_short_term_gold = {
-						target = scope:recipient.liege
-						gold = 2
+					if = {
+						limit = { NOT = { scope:recipient.liege = scope:actor } }
+						pay_short_term_gold = {
+							target = scope:recipient.liege
+							gold = 2
+						}
 					}
 					pay_short_term_gold = {
 						target = scope:recipient
@@ -138,6 +142,7 @@ deviants_solicitation_interaction = {
 	    		is_incapable = no
 	    		is_imprisoned = no
 			is_travelling = no
+			NOT = { is_at_war_with = scope:actor }
 			is_attracted_to_gender_of = scope:recipient
 			has_character_modifier = deviants_slave
 		}
@@ -174,9 +179,7 @@ deviants_solicitation_interaction = {
 		ai_recipients = realm_characters
 	}
 	ai_potential = { always = yes }
-	ai_will_do = {
-		base = 100
-	}
+	ai_will_do = { base = 100 }
 }
 
 deviants_become_prostitute_interaction = {
@@ -191,6 +194,17 @@ deviants_become_prostitute_interaction = {
             		is_adult = yes
 			is_landed = yes
 			has_trait = deviants_succubus
+			OR = {
+				scope:actor = scope:recipient
+				any_courtier = {
+					limit = { has_character_modifier = deviants_prostitute }
+					count < 3
+				}
+				any_vassal = {
+					limit = { has_character_modifier = deviants_prostitute }
+					count < 3
+				}
+			}
         	}
         	scope:recipient = {
             		is_adult = yes
@@ -291,19 +305,10 @@ deviants_become_prostitute_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 5
+		base = 50
 		modifier = {
-			add = 95
+			add = 50
 			scope:actor = scope:recipient
-		}
-		modifier = {
-			add = 45
-			scope:actor = {
-				any_courtier = {
-					limit = { has_character_modifier = deviants_prostitute }
-					count < 2
-				}
-			}
 		}
 	}
 }
@@ -354,7 +359,7 @@ deviants_stop_prostitute_interaction = {
 			scope:actor = {
 				any_courtier = {
 					limit = { has_character_modifier = deviants_prostitute }
-					count > 2
+					count > 5
 				}
 			}
 		}
@@ -382,6 +387,7 @@ deviants_trade_slut_interaction = {
         	}
         	scope:recipient = {
             		is_adult = yes
+			NOT = { is_at_war_with = scope:actor }
 			OR = {
 				is_landed = yes
 				is_ruler = yes
@@ -504,6 +510,7 @@ deviants_buy_slut_interaction = {
 			has_trait = deviants_succubus
         	}
         	scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
             		is_adult = yes
 			OR = {
 				is_landed = yes
@@ -611,6 +618,7 @@ deviants_sell_slut_interaction = {
 			}
         	}
         	scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
             		is_adult = yes
 			OR = {
 				is_landed = yes

@@ -7,6 +7,7 @@ deviants_offer_orgy = {
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
 			is_adult = yes
 			is_ruler = yes
 			NOT  = { is_spouse_of = scope:actor }
@@ -82,6 +83,7 @@ deviants_dispel_interaction = {
 		}
 		scope:recipient = {
 			is_ruler = yes
+			NOT = { is_at_war_with = scope:actor }
 			has_trait = deviants_succubus 
 		}
 	}

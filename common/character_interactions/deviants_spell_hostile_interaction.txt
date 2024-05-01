@@ -162,6 +162,7 @@ deviants_imprison_interaction = {
 			} 
 		}
 		scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
 			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus

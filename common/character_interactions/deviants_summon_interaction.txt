@@ -141,7 +141,7 @@ deviants_rival_interaction = {
 	ai_frequency = 120
 	ai_targets = { ai_recipients = scripted_relations }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 50 }
+	ai_will_do = { base = 10 }
 }
 
 deviants_hook = {
@@ -204,7 +204,7 @@ deviants_child_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 25
+				value >= 10
 			} 
 		}
 		scope:recipient = {
@@ -226,13 +226,26 @@ deviants_child_interaction = {
 				}
 			}
 			else = {
-				create_character = {
-					age = 0
-					mother = scope:recipient
-					father = scope:recipient.primary_spouse
-					dynasty_house = scope:recipient.house
-					culture = scope:recipient.culture
-					faith = scope:recipient.faith
+				if = {
+					limit = { exists = scope:recipient.primary_spouse }
+					create_character = {
+						age = 0
+						mother = scope:recipient
+						father = scope:recipient.primary_spouse
+						dynasty_house = scope:recipient.house
+						culture = scope:recipient.culture
+						faith = scope:recipient.faith
+					}
+				}
+				else {
+					create_character = {
+						age = 0
+						mother = scope:recipient
+						dynasty_house = scope:recipient.house
+						culture = scope:recipient.culture
+						faith = scope:recipient.faith
+					}
+
 				}
 			}
 		}
