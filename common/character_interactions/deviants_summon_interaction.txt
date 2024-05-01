@@ -469,7 +469,7 @@ deviants_create_lesser_succubus_interaction = {
 }
 
 deviants_create_succubus_interaction = {
-	icon = deviantstreatment
+	icon = deviantsexcrement
 	desc = deviants_create_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

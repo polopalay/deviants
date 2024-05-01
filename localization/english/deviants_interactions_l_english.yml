@@ -8,12 +8,6 @@
  deviants_stop_prostitute_interaction: "Stop Being A Prostitution"
  deviants_stop_prostitute_interaction.desc: "[recipient.GetShortUIName] Stop Working As Prostitute"
 
- deviants_become_public_toilet_interaction: "Become Public Toilet"
- deviants_become_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Become Public Toilet"
-
- deviants_stop_public_toilet_interaction: "Stop Being A Public Toilet"
- deviants_stop_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Stop Working As Public Toilet"
-
  deviants_trade_slut_interaction: "Exchange Prostitutes"
  deviants_trade_slut_interaction.desc: "Exchange prostitutes with [recipient.GetShortUIName]"
  actor_secondary_deviants_trade_slut_interaction: "Choose one"
@@ -41,9 +35,6 @@
  deviants_mind_break_interaction: "Mind Break"
  deviants_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
 
- deviants_dull_interaction: "Dulls"
- deviants_dull_interaction.desc: "Dulls [recipient.GetShortUIName]"
-
  deviants_kill_interaction: "Kill Character"
  deviants_kill_interaction.desc: "Immediately kills [recipient.GetShortUIName]"
  
@@ -65,17 +56,8 @@
  deviants_rumor_interaction: "Spreading Rumors"
  deviants_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
 
- deviants_require_service_interaction: "Request Service"
- deviants_require_service_interaction.desc: "Ask [recipient.GetShortUIName] to provide free sexual services to maintain loyalty"
-
  deviants_switch_body: "Switch"
  deviants_switch_body.desc: "Play [recipient.GetShortUIName]"
-
- deviants_befriend_character: "Add Friend"
- deviants_unfriend_character: "Remove Friend"
- deviants_add_rival: "Add rival"
- deviants_remove_rival: "Remove rival"
- deviants_create_hook: "Create hook"
 
  deviants_prostitute_interaction: "Prostituting"
  deviants_prostitute_interaction.desc: "[buyer.GetShortUIName] lays with [seller.GetShortUIName]"
@@ -85,12 +67,6 @@
 
  deviants_stop_prostitute_interaction: "Stop Being A Prostitution"
  deviants_stop_prostitute_interaction.desc: "[recipient.GetShortUIName] Stop Working As Prostitute"
-
- deviants_become_public_toilet_interaction: "Become Public Toilet"
- deviants_become_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Become Public Toilet"
-
- deviants_stop_public_toilet_interaction: "Stop Being A Public Toilet"
- deviants_stop_public_toilet_interaction.desc: "Make [recipient.GetShortUIName] Stop Working As Public Toilet"
 
  deviants_trade_slut_interaction: "Exchange Prostitutes"
  deviants_trade_slut_interaction.desc: "Exchange prostitutes with [recipient.GetShortUIName]"
@@ -172,9 +148,6 @@
 
  deviants_demon_generals_interaction: "Summon Demon Generals"
  deviants_demon_generals_interaction.desc: "Turn all [recipient.GetShortUIName]'s knights into demon generals"
-
- deviants_give_animal_interaction: "Create Pet"
- deviants_give_animal_interaction.desc: "Give [recipient.GetShortUIName] a pet"
 
  deviants_learn_language_interaction: "Learn Language"
  deviants_learn_language_interaction.desc: "Learn [recipient.GetShortUIName]'s language"
