@@ -187,3 +187,6 @@
 
  deviants_absorb_interaction: "Absorb"
  deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
+
+ deviants_solicitation_interaction: "Solicitation"
+ deviants_solicitation_interaction.desc: "Begging to have sex with [recipient.GetShortUIName]"

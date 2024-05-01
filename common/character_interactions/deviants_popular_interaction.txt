@@ -77,7 +77,7 @@ deviants_dispel_interaction = {
 			}
 			OR = {
 				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_public_toilet
+				has_character_modifier = deviants_slave
 			}
 		}
 		scope:recipient = {
@@ -126,7 +126,7 @@ deviants_dispel_interaction = {
 				use_hook = scope:recipient
 			}
 			remove_character_modifier = deviants_prostitute
-			remove_character_modifier = deviants_public_toilet
+			remove_character_modifier = deviants_slave
 		}
 	}
 	ai_accept = {
@@ -235,7 +235,7 @@ deviants_mind_break_interaction = {
 			NOT  = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
-				has_character_modifier = deviants_public_toilet
+				has_character_modifier = deviants_slave
 			}
 		}
 		scope:actor = {
@@ -258,7 +258,7 @@ deviants_mind_break_interaction = {
 			if = {
 				limit = { has_character_modifier = deviants_prostitute }
 				remove_character_modifier = deviants_prostitute
-				add_character_modifier = { modifier = deviants_public_toilet years = 2 }
+				add_character_modifier = { modifier = deviants_slave years = 2 }
 			}
 			else = {
 				add_character_modifier = { modifier = deviants_prostitute years = 2 }

@@ -23,10 +23,7 @@
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
 				}
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_public_toilet
-				}
+				has_character_modifier = deviants_prostitute
 			}
 		}
 	}
@@ -82,10 +79,7 @@ nude_clothes = {
 			modifier = {
 				add = 100
 				should_show_nudity = yes
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_public_toilet
-				}
+				has_character_modifier = deviants_prostitute
 			}
 		}
 	}

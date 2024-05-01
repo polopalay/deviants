@@ -14,7 +14,6 @@ deviants_prostitute_interaction = {
 			is_attracted_to_gender_of = scope:recipient
 			NOR = {
 				has_trait = lovers_pox
-				has_character_modifier = deviants_public_toilet
 				has_character_modifier = deviants_prostitute
 			}
         	}
@@ -24,10 +23,7 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			NOT = { has_character_modifier = deviants_fuckedsilly }
-			OR = {
-				has_character_modifier = deviants_public_toilet
-				has_character_modifier = deviants_prostitute
-			}
+			has_character_modifier = deviants_prostitute
         	}
     	}
 
@@ -35,18 +31,9 @@ deviants_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
-			if = {
-				limit = { has_character_modifier = deviants_public_toilet }
-				add_character_modifier = {
-					modifier = deviants_fuckedsilly
-					months = 6
-				}
-			}
-			else = {
-				add_character_modifier = {
-					modifier = deviants_fuckedsilly
-					years = 1
-				}
+			add_character_modifier = {
+				modifier = deviants_fuckedsilly
+				months = 4
 			}
 			had_sex_with_effect = {
 				CHARACTER = scope:actor
@@ -90,7 +77,7 @@ deviants_prostitute_interaction = {
 		if = {
 			limit = { scope:recipient.liege = { has_trait = deviants_succubus } }
 			random = {
-				chance = 50
+				chance = 25
 				scope:recipient.liege = {
 					add_trait_xp = {
 						trait = deviants_succubus
@@ -137,6 +124,61 @@ deviants_prostitute_interaction = {
 	}
 }
 
+deviants_solicitation_interaction = {
+	icon = deviantsprison
+	desc = deviants_solicitation_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	cooldown = { months = 1 }
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+	    		is_adult = yes
+	    		is_incapable = no
+	    		is_imprisoned = no
+			is_travelling = no
+			is_attracted_to_gender_of = scope:recipient
+			has_character_modifier = deviants_slave
+		}
+	}
+
+    	on_accept = {
+		scope:actor = {
+			add_character_modifier = {
+				modifier = deviants_fuckedsilly
+				years = 1
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:recipient
+				PREGNANCY_CHANCE = pregnancy_chance
+            		}
+		}
+	}
+
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+
+	ai_frequency = 1
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+		ai_recipients = realm_characters
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 100
+	}
+}
+
 deviants_become_prostitute_interaction = {
 	icon = deviantshealth
 	desc = deviants_become_prostitute_interaction.desc
@@ -153,10 +195,7 @@ deviants_become_prostitute_interaction = {
         	scope:recipient = {
             		is_adult = yes
 			is_female = yes
-			NOR = {
-				has_character_modifier = deviants_public_toilet
-				has_character_modifier = deviants_prostitute
-			}
+			NOT = { has_character_modifier = deviants_prostitute }
 			OR = {
 				scope:actor = scope:recipient
 				is_vassal_of = scope:actor
@@ -322,180 +361,6 @@ deviants_stop_prostitute_interaction = {
 	}
 }
 
-deviants_become_public_toilet_interaction = {
-	icon = deviantsexcrement
-	desc = deviants_become_public_toilet_interaction.desc
-    	category = interaction_category_diplomacy
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-
-    	is_shown = {
-        	scope:actor = {
-            		is_adult = yes
-			is_landed = yes
-			has_trait = deviants_succubus
-        	}
-        	scope:recipient = {
-            		is_adult = yes
-			is_female = yes
-			OR = {
-				scope:actor = scope:recipient
-				is_vassal_of = scope:actor
-				is_courtier_of = scope:actor
-				AND = {
-					is_ruler = no
-					is_landed = no
-					is_imprisoned_by = scope:actor
-				}
-			}
-			has_character_modifier = deviants_prostitute
-			NOT = { has_character_modifier = deviants_public_toilet }
-        	}
-    	}
-
-	send_option = {
-		is_valid = {
-			scope:actor = {
-				has_usable_hook = scope:recipient
-			}
-		}
-		flag = hook	
-		localization = GENERIC_SPEND_A_HOOK
-	}
-	send_options_exclusive = no
-
-	auto_accept = {
-		OR = { 
-			scope:recipient = {
-				is_imprisoned_by = scope:actor
-			}
-
-			custom_description = {
-				text = "spending_hook"
-				subject = scope:actor
-				object = scope:recipient
-				scope:hook = yes
-			}
-		}
-	}
-    	on_accept = {
-		scope:recipient = {
-			remove_character_modifier = deviants_prostitute
-			add_character_modifier = deviants_public_toilet
-			add_character_flag = blocked_from_leaving
-			if = {
-				limit = { is_imprisoned_by = scope:actor }
-				release_from_prison = yes
-			}
-			if = {
-				limit = {
-					scope:recipient = {
-						is_spouse_of = scope:actor
-						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
-					}
-					every_spouse = {
-						divorce = scope:recipient
-					}
-				}
-			}
-		}
-		scope:actor = {
-			if = {
-				limit = { 
-					NOT = { is_liege_or_above_of = scope:recipient } 
-					NOT = { scope:recipient = scope:actor }
-				}
-				add_courtier = scope:recipient
-			}
-		}
-    	}
-
-	ai_accept = {
-		base = -80
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = 1
-		}
-	}
-
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = courtiers
-	}
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 5
-		modifier = {
-			add = 45
-			scope:actor = {
-				any_courtier = {
-					limit = { has_character_modifier = deviants_public_toilet }
-					count < 1
-				}
-			}
-		}
-	}
-}
-
-deviants_stop_public_toilet_interaction = {
-	icon = deviantslove
-	desc = deviants_stop_public_toilet_interaction.desc
-    	category = interaction_category_diplomacy
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-
-    	is_shown = {
-        	scope:actor = {
-            		is_adult = yes
-			is_landed = yes
-			has_trait = deviants_succubus
-        	}
-        	scope:recipient = {
-            		is_adult = yes
-			is_female = yes
-			OR = {
-				scope:actor = scope:recipient
-				is_courtier_of = scope:actor
-			}
-			has_character_modifier = deviants_public_toilet
-        	}
-    	}
-
-	auto_accept = yes
-
-    	on_accept = {
-		scope:recipient = {
-			add_character_modifier = deviants_prostitute
-			remove_character_modifier = deviants_public_toilet
-		}
-    	}
-
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = courtiers
-	}
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 50
-			scope:actor = {
-				any_courtier = {
-					limit = { has_character_modifier = deviants_public_toilet }
-					count > 1
-				}
-			}
-		}
-	}
-}
-
 deviants_trade_slut_interaction = {
 	icon = deviantsdiplomacy
 	desc = deviants_trade_slut_interaction.desc
@@ -512,10 +377,7 @@ deviants_trade_slut_interaction = {
 			}
 			has_trait = deviants_succubus
 			any_courtier = {
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_public_toilet
-				}
+				has_character_modifier = deviants_prostitute
 			}
         	}
         	scope:recipient = {
@@ -526,10 +388,7 @@ deviants_trade_slut_interaction = {
 			}
 			has_trait = deviants_succubus
 			any_courtier = {
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_public_toilet
-				}
+				has_character_modifier = deviants_prostitute
 			}
         	}
     	}
@@ -538,10 +397,7 @@ deviants_trade_slut_interaction = {
 		scope:actor = {
 			every_courtier = {
 				limit = {
-					OR = {
-						has_character_modifier = deviants_prostitute
-						has_character_modifier = deviants_public_toilet
-					}
+					has_character_modifier = deviants_prostitute
 				}
 				add_to_list = characters
 			}
@@ -551,10 +407,7 @@ deviants_trade_slut_interaction = {
 		scope:recipient = {
 			every_courtier = {
 				limit = {
-					OR = {
-						has_character_modifier = deviants_prostitute
-						has_character_modifier = deviants_public_toilet
-					}
+					has_character_modifier = deviants_prostitute
 				}
 				add_to_list = characters
 			}
@@ -658,10 +511,7 @@ deviants_buy_slut_interaction = {
 			}
 			has_trait = deviants_succubus
 			any_courtier = {
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_public_toilet
-				}
+				has_character_modifier = deviants_prostitute
 			}
         	}
     	}
@@ -670,10 +520,7 @@ deviants_buy_slut_interaction = {
 		scope:recipient = {
 			every_courtier = {
 				limit = {
-					OR = {
-						has_character_modifier = deviants_prostitute
-						has_character_modifier = deviants_public_toilet
-					}
+					has_character_modifier = deviants_prostitute
 				}
 				add_to_list = characters
 			}
@@ -760,10 +607,7 @@ deviants_sell_slut_interaction = {
 			}
 			has_trait = deviants_succubus
 			any_courtier = {
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_public_toilet
-				}
+				has_character_modifier = deviants_prostitute
 			}
         	}
         	scope:recipient = {
@@ -780,10 +624,7 @@ deviants_sell_slut_interaction = {
 		scope:actor = {
 			every_courtier = {
 				limit = {
-					OR = {
-						has_character_modifier = deviants_prostitute
-						has_character_modifier = deviants_public_toilet
-					}
+					has_character_modifier = deviants_prostitute
 				}
 				add_to_list = characters
 			}
