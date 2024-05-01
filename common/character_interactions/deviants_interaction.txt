@@ -129,7 +129,7 @@ deviants_prostitute_interaction = {
 }
 
 deviants_solicitation_interaction = {
-	icon = deviantsprison
+	icon = deviantslove
 	desc = deviants_solicitation_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -162,7 +162,7 @@ deviants_solicitation_interaction = {
 	}
 
 	ai_accept = {
-		base = 10
+		base = 50
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
@@ -202,7 +202,7 @@ deviants_become_prostitute_interaction = {
 				}
 				any_vassal = {
 					limit = { has_character_modifier = deviants_prostitute }
-					count < 3
+					count < 2
 				}
 			}
         	}
@@ -347,23 +347,13 @@ deviants_stop_prostitute_interaction = {
 	auto_accept = yes
 
 	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = courtiers
+	ai_targets = { 
+		ai_recipients = courtiers 
+		ai_recipients = prisoners
+		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
-
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 50
-			scope:actor = {
-				any_courtier = {
-					limit = { has_character_modifier = deviants_prostitute }
-					count > 5
-				}
-			}
-		}
-	}
+	ai_will_do = { base = 100 }
 }
 
 deviants_trade_slut_interaction = {

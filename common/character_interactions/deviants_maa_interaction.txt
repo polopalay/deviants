@@ -10,7 +10,7 @@ deviants_spawn_darkarmy_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value >= 25
+				value >= 20
 			} 
 		}
 	}
@@ -19,7 +19,7 @@ deviants_spawn_darkarmy_interaction = {
 			spawn_army = {
 				men_at_arms = {
 					type = deviants_dark_amry
-					stacks = 2
+					stacks = 10
 				}
 				location = scope:recipient.capital_province
 				inheritable = yes
@@ -36,7 +36,7 @@ deviants_spawn_darkarmy_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value = -25
+				value = -20
 			}
 		}
 	}
@@ -69,7 +69,7 @@ deviants_spawn_death_korp_interaction = {
 			spawn_army = {
 				men_at_arms = {
 					type = deviants_death_korps
-					stacks = 5
+					stacks = 12
 				}
 				location = scope:recipient.capital_province
 				inheritable = yes

@@ -8,8 +8,7 @@ deviants_slave{
 
 deviants_fuckedsilly = {
 	icon = raped
-    	health = -0.1
-    	stress_gain_mult = -0.1
+    	health = -0.2
 	stacking = yes
 }
 
