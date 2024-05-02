@@ -1,0 +1,346 @@
+deviants_spawn_darkarmy_interaction = {
+	desc = deviants_spawn_darkarmy_interaction.desc
+	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	confirm_text = deviants_spawn_darkarmy_interaction.c
+
+	is_shown = {
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_brothel1
+			}
+		}
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value >= 20
+		} 
+	}
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = deviants_dark_amry
+				stacks = 10
+			}
+			location = capital_province
+			inheritable = yes
+			uses_supply = no
+			name = deviants_dark_amry
+		}
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = -20
+		}
+	}
+	ai_check_frequency = 120
+	ai_will_do = { base = 5 }
+}
+deviants_spawn_death_korp_interaction = {
+	desc = deviants_spawn_death_korp_interaction.desc
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	confirm_text = deviants_spawn_death_korp_interaction.c
+	is_shown = {
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_brothel2
+			}
+		}
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value >= 50
+		} 
+	}
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = deviants_death_korps
+				stacks = 12
+			}
+			location = capital_province
+			inheritable = yes
+			uses_supply = no
+			name = deviants_death_korps
+		}
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = -50
+		}
+	}
+	ai_check_frequency = 120
+	ai_will_do = { base = 5 }
+}
+
+deviants_demon_generals_interaction = {
+	desc = deviants_demon_generals_interaction.desc
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	confirm_text = deviants_demon_generals_interaction.c
+	is_shown = {
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_brothel3
+			}
+		}
+		any_courtier = {
+			limit = { is_knight = yes has_character_modifier = deviants_generals }
+			count = 0
+		}
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value >= 100
+		} 
+	}
+	effect = {
+		every_courtier = {
+			limit = { is_knight = yes }
+			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			root = { add_character_modifier = deviants_fuckedsilly months = 1 }
+			add_character_modifier = deviants_generals 
+			add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier } 
+		}
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = -100
+		}
+	}
+	ai_check_frequency = 120
+	ai_will_do = { base = 5 }
+}
+
+deviants_become_succubus = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	desc = deviants_become_succubus.desc
+	confirm_text = deviants_become_succubus.c
+
+	is_shown = { 
+		is_ai = no
+		is_female = yes
+		age > 18
+		NOR = { 
+			has_trait = deviants_succubus
+			has_trait = deviants_lesser_succubus
+		}
+	}
+	effect = {
+		if = {
+			limit = { has_trait = lustful }
+			add_character_modifier = deviants_prostitute
+		}
+		else_if = {
+			limit = { has_trait = chaste }
+			remove_trait = chaste
+		}
+		else_if = {
+			limit = { has_trait = humble }
+			remove_trait = humble
+		}
+		else_if = {
+			limit = { has_trait = gregarious }
+			remove_trait = gregarious
+		}
+		else_if = {
+			limit = { has_trait = zealous }
+			remove_trait = zealous
+		}
+		else_if = {
+			limit = { has_trait = shy }
+			remove_trait = shy
+		}
+		else_if = {
+			limit = { has_trait = calm }
+			remove_trait = calm
+		}
+		else_if = {
+			limit = { has_trait = content }
+			remove_trait = content
+		}
+		else_if = {
+			limit = { has_trait = generous }
+			remove_trait = generous
+		}
+		else_if = {
+			limit = { has_trait = just }
+			remove_trait = just
+		}
+		else_if = {
+			limit = { has_trait = honest }
+			remove_trait = honest
+		}
+		else_if = {
+			limit = { has_trait = patient }
+			remove_trait = patient
+		}
+		else_if = {
+			limit = { has_trait = temperate }
+			remove_trait = temperate
+		}
+		else_if = {
+			limit = { has_trait = diligent }
+			remove_trait = diligent
+		}
+		else_if = {
+			limit = { has_trait = ambitious }
+			remove_trait = ambitious
+		}
+		else_if = {
+			limit = { has_trait = brave }
+			remove_trait = brave
+		}
+		else_if = {
+			limit = { has_trait = trusting }
+			remove_trait = trusting
+		}
+		else_if = {
+			limit = { has_trait = compassionate }
+			remove_trait = compassionate
+		}
+		else_if = {
+			limit = { has_trait = greedy }
+			remove_trait = greedy
+		}
+		else_if = {
+			limit = { has_trait = callous }
+			remove_trait = callous
+		}
+		else_if = {
+			limit = { has_trait = impatient }
+			remove_trait = impatient
+		}
+		else_if = {
+			limit = { has_trait = gluttonous }
+			remove_trait = gluttonous
+		}
+		else_if = {
+			limit = { has_trait = lazy }
+			remove_trait = lazy
+		}
+		else_if = {
+			limit = { has_trait = wrathful }
+			remove_trait = wrathful
+		}
+		else_if = {
+			limit = { has_trait = deceitful }
+			remove_trait = deceitful
+		}
+		else_if = {
+			limit = { has_trait = arrogant }
+			remove_trait = arrogant
+		}
+		else_if = {
+			limit = { has_trait = craven }
+			remove_trait = craven
+		}
+		else_if = {
+			limit = { has_trait = forgiving }
+			remove_trait = forgiving
+		}
+		else_if = {
+			limit = { has_trait = vengeful }
+			remove_trait = vengeful
+		}
+		else_if = {
+			limit = { has_trait = arbitrary }
+			remove_trait = arbitrary
+		}
+		else_if = {
+			limit = { has_trait = stubborn }
+			remove_trait = stubborn
+		}
+		else_if = {
+			limit = { has_trait = fickle }
+			remove_trait = fickle
+		}
+		else_if = {
+			limit = { has_trait = cynical }
+			remove_trait = cynical
+		}
+		else_if = {
+			limit = { has_trait = paranoid }
+			remove_trait = paranoid
+		}
+		if = {
+			limit = { NOT = { has_trait = lustful } }
+			add_trait = lustful
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = education_martial_2
+					has_trait = education_martial_3
+					has_trait = education_martial_4
+					has_trait = education_martial_5
+				}
+			}
+			remove_trait = education_martial_2
+			remove_trait = education_martial_3
+			remove_trait = education_martial_4
+			remove_trait = education_martial_5
+			add_trait = education_martial_1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = education_diplomacy_2
+					has_trait = education_diplomacy_3
+					has_trait = education_diplomacy_4
+					has_trait = education_diplomacy_5
+				}
+			}
+			remove_trait = education_diplomacy_2
+			remove_trait = education_diplomacy_3
+			remove_trait = education_diplomacy_4
+			remove_trait = education_diplomacy_5
+			add_trait = education_diplomacy_1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = education_intrigue_2
+					has_trait = education_intrigue_3
+					has_trait = education_intrigue_4
+					has_trait = education_intrigue_5
+				}
+			}
+			remove_trait = education_intrigue_2
+			remove_trait = education_intrigue_3
+			remove_trait = education_intrigue_4
+			remove_trait = education_intrigue_5
+			add_trait = education_intrigue_1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = education_stewardship_2
+					has_trait = education_stewardship_3
+					has_trait = education_stewardship_4
+					has_trait = education_stewardship_5
+				}
+			}
+			remove_trait = education_stewardship_2
+			remove_trait = education_stewardship_3
+			remove_trait = education_stewardship_4
+			remove_trait = education_stewardship_5
+			add_trait = education_stewardship_1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = education_learning_2
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+					has_trait = education_learning_5
+				}
+			}
+			remove_trait = education_learning_2
+			remove_trait = education_learning_3
+			remove_trait = education_learning_4
+			remove_trait = education_learning_5
+			add_trait = education_learning_1
+		}
+		set_immortal_age = 18
+		add_trait = deviants_succubus
+	}
+}

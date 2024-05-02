@@ -1,0 +1,12 @@
+have_sex_opinion = {
+	opinion = 50
+	decaying = yes
+	years = 1
+}
+
+refuse_sex_opinion = {
+	opinion = -50
+	decaying = yes
+	years = 1
+}
+

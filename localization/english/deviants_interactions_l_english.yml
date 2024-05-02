@@ -27,7 +27,7 @@
  deviants_weight_interaction.desc: "Get your weight to the perfect level"
 
  deviants_heal_interaction: "Healing"
- deviants_heal_interaction.desc: "Heals all types of diseases and wounds"
+ deviants_heal_interaction.desc: "Eliminates all kinds of diseases, injuries, and all disgraceful names"
 
  deviants_imprison_interaction: "Imprison"
  deviants_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
@@ -38,15 +38,6 @@
  deviants_kill_interaction: "Kill Character"
  deviants_kill_interaction.desc: "Immediately kills [recipient.GetShortUIName]"
  
- deviants_spawn_darkarmy_interaction: "Spawn Dark Amry"
- deviants_spawn_darkarmy_interaction.desc: "Spawn Dark Army in your capital."
- 
- deviants_spawn_death_korp_interaction: "Spawn Death Korps"
- deviants_spawn_death_korp_interaction.desc: "Spawn Death Korps in your capital."
-
- deviants_become_succubus: "Become Succubus"
- deviants_become_succubus.desc: "[recipient.GetShortUIName] will become Succubus"
-
  deviants_create_lesser_succubus_interaction: "Create Lesser Succubus"
  deviants_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
 
@@ -146,9 +137,6 @@
  deviants_dispel_interaction: "Dispel"
  deviants_dispel_interaction.desc: "Please pray for [recipient.GetShortUIName] to undo the magic she has cast on you"
 
- deviants_demon_generals_interaction: "Summon Demon Generals"
- deviants_demon_generals_interaction.desc: "Turn all [recipient.GetShortUIName]'s knights into demon generals"
-
  deviants_learn_language_interaction: "Learn Language"
  deviants_learn_language_interaction.desc: "Learn [recipient.GetShortUIName]'s language"
 
@@ -157,3 +145,9 @@
 
  deviants_solicitation_interaction: "Solicitation"
  deviants_solicitation_interaction.desc: "Begging to have sex with [recipient.GetShortUIName]"
+
+ deviants_absorb_interaction: "Absorb"
+ deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
+
+ deviants_nude_interaction: "Naked"
+ deviants_nude_interaction.desc: "Sexual art includes artistic nudity"

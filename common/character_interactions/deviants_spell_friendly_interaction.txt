@@ -76,6 +76,7 @@ deviants_heal_interaction = {
 				has_trait = adulterer
 				has_trait = fornicator
 				has_trait = witch
+				has_character_modifier = deviants_fuckedsilly
 			}
 		}
 	}
@@ -157,6 +158,8 @@ deviants_heal_interaction = {
 			remove_trait = fornicator
 			remove_trait = murderer
 			remove_trait = witch
+
+			remove_character_modifier = deviants_fuckedsilly
 		}
 	}
 	auto_accept = yes
@@ -168,7 +171,19 @@ deviants_heal_interaction = {
 		ai_recipients = children
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
+	ai_will_do = { 
+		base = 10
+		modifier = {
+			base = 100
+			scope:recipient = scope:actor
+		}
+		modifier = {
+			base = 100
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+	}
 }
 
 deviants_weight_interaction = {
@@ -216,13 +231,13 @@ deviants_weight_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
+	ai_frequency = 24
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 0 
 		modifier = {
-			base = 80
+			base = 50
 			scope:recipient = scope:actor
 		}
 	}
@@ -252,7 +267,7 @@ deviants_buff_interaction = {
 		scope:recipient = {
 			add_character_modifier = {
 				modifier = deviants_buff
-				years = 1
+				years = 10
 			}
 		}
 		scope:actor = {
@@ -274,10 +289,10 @@ deviants_buff_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
+	ai_frequency = 24
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
+	ai_will_do = { base = 1 }
 }
 
 deviants_learn_language_interaction = {
@@ -326,7 +341,10 @@ deviants_learn_language_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 5 }
 }

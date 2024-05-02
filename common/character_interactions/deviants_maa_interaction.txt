@@ -1,143 +1,50 @@
-deviants_spawn_darkarmy_interaction = {
-	icon = deviantsprowess
-	desc = deviants_spawn_darkarmy_interaction.desc
+deviants_absorb_interaction = {
+	icon = deviantscompass
+	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
-	cooldown = { years = 10 }
+	cooldown = { years = 4 }
 	is_shown = {
-		scope:actor = scope:recipient
 		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value >= 20
-			} 
+			has_trait = deviants_succubus
+			is_ruler = yes
+			every_courtier_or_guest = {
+				limit = { is_female = no is_knight = yes }
+				count > 0
+			}
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel2 
+				}
+			}
+		}
+		scope:recipient = {
+			OR = {
+				is_courtier_of = scope:actor
+				is_vassal_of = scope:actor
+			}
+			has_trait_xp = { trait = deviants_lesser_succubus value >= 50 }
 		}
 	}
 	on_accept = {
 		scope:recipient = {
-			spawn_army = {
-				men_at_arms = {
-					type = deviants_dark_amry
-					stacks = 10
-				}
-				location = scope:recipient.capital_province
-				inheritable = yes
-				uses_supply = no
-				name = deviants_dark_amry
-			}
-		}
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1
-				}
-			}
 			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value = -20
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
-}
-
-
-deviants_spawn_death_korp_interaction = {
-	icon = deviantsmartial
-	desc = deviants_spawn_death_korp_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	cooldown = { years = 10 }
-	is_shown = {
-		scope:actor = scope:recipient
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value >= 50
-			} 
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			spawn_army = {
-				men_at_arms = {
-					type = deviants_death_korps
-					stacks = 12
-				}
-				location = scope:recipient.capital_province
-				inheritable = yes
-				uses_supply = no
-				name = deviants_death_korps
-			}
-		}
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2
-				}
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
+				trait = deviants_lesser_succubus
 				value = -50
 			}
 		}
-	}
-	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
-}
-
-deviants_demon_generals_interaction = {
-	icon = deviantsmask
-	desc = deviants_demon_generals_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	cooldown = { years = 10 }
-	is_shown = {
-		scope:actor = scope:recipient
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel3
-				}
-			}
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value >= 100
-			} 
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			every_courtier_or_guest = {
-				limit = { is_knight = yes }
-				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = 0 }
-				add_character_modifier = deviants_generals 
-				add_character_modifier = { modifier = diplomacy_majesty_4090_no_raiment_modifier years = 1 } 
-			}
-		}
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value = -100
+				value = 5
 			}
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
+	ai_frequency = 60
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
+	ai_will_do = { base = 100 }
 }
+

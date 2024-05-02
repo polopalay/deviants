@@ -1,4 +1,20 @@
 ﻿l_english:
- deviants_prostitution_events.1.title: "Throes of Passion"
- deviants_prostitution_events.1.desc: "I and [recipient.GetShortUIName] had hot passionate sex all night long. I lost count how many times I creampied her pussy."
- deviants_prostitution_events.1.end: "Wonderfull"
+ deviants_prostitution_events.10.title: "A Request"
+ deviants_prostitution_events.10.desc: "[knight.GetShortUIName] asks you to serve as a prostitute to maintain his loyalty"
+ deviants_prostitution_events.10.accept: "I accept"
+ deviants_prostitution_events.10.refuse: "I refuse"
+
+ deviants_prostitution_events.11.title: "Passionate night"
+ deviants_prostitution_events.11.desc: "I and [knight.GetShortUIName] had hot passionate sex all night long. I lost count how many times he creampied my pussy"
+ deviants_prostitution_events.11.end: "Wonderfull"
+
+ deviants_prostitution_events.20.title: "A Challenge"
+ deviants_prostitution_events.20.desc: "[knight.GetShortUIName] asks you to serve him as a whore, or submit as a slave"
+ deviants_prostitution_events.20.accept: "I don't have any choice"
+ deviants_prostitution_events.20.refuse: "Against"
+ deviants_prostitution.20.win: "You win the duel"
+ deviants_prostitution.20.lose: "You lost the duel"
+
+ deviants_prostitution_events.21.title: "Punishment"
+ deviants_prostitution_events.21.desc: "[knight.GetShortUIName] continuously whipped me, he tortured me mercilessly. The only way out is for me to become a sex slave to my knights"
+ deviants_prostitution_events.21.end: "Petition"

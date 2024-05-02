@@ -37,7 +37,7 @@ deviants_steal_gold_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
+	ai_frequency = 24
 	ai_targets = { 
 		ai_recipients = liege
 		ai_recipients = vassals
@@ -79,15 +79,12 @@ deviants_rumor_interaction = {
 			} 
 		}
 		scope:recipient = {
-			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_nickname = nick_the_lewd
-				has_nickname = nick_the_lecher
-				has_nickname = nick_the_witch
-				has_nickname = nick_the_bewitched
-				has_nickname = nick_the_cannibal
-				has_nickname = nick_the_unchaste
+			OR = {
+				scope:actor = scope:recipient
+				NOR = {
+					has_trait = deviants_succubus
+					has_trait = deviants_lesser_succubus
+				}
 			}
 		}
 	}
@@ -119,6 +116,17 @@ deviants_rumor_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 0 
+		modifier = {
+			add = 100
+			scope:actor = scope:recipient
+			scope:actor = {
+				NOT = {
+					has_nickname = nick_the_lewd
+					has_nickname = nick_the_lecher
+					has_nickname = nick_the_bewitched
+				}
+			}
+		}
 		modifier = {
 			add = 5
 			scope:actor = {

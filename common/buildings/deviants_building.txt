@@ -1,9 +1,9 @@
 deviants_brothel1 = {
-	type_icon = "icon_building_longhouses.dds"
+	type_icon = "icon_brothel.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = expensive_building_tier_1_cost }
 	type = duchy_capital
-	levy = 100
+	levy = 80
 
 	next_building = deviants_brothel2
 
@@ -29,27 +29,26 @@ deviants_brothel1 = {
 	}
 
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_income = 0.25
 	}
 	
 	character_modifier = {
-		monthly_prestige = -0.1
+		monthly_tyranny = -0.25
 	}
 	
 	county_modifier = {
-		development_growth = 0.5
-		monthly_county_control_growth_add = -0.2
+		development_growth = 0.25
 	}
 	
 	ai_value = { base = 100 }
 }
 
 deviants_brothel2 = {
-	type_icon = "icon_building_longhouses.dds"
+	type_icon = "icon_brothel.dds"
 	construction_time = quick_construction_time
 	cost = { gold = expensive_building_tier_2_cost }
 	type = duchy_capital
-	levy = 250 
+	levy = 125 
 
 	next_building = deviants_brothel3
 
@@ -65,28 +64,26 @@ deviants_brothel2 = {
 	}
 
 	province_modifier = {
-		monthly_income = 2
+		monthly_income = 0.5
 	}
 	
 	character_modifier = {
-		monthly_prestige = -0.2
+		monthly_tyranny = -0.5
 	}
 	
 	county_modifier = {
-		development_growth = 1
-		monthly_county_control_growth_add = -0.5
-		county_opinion_add = 10
+		development_growth = 0.5
 	}
 	
 	ai_value = { base = 100 }
 }
 
 deviants_brothel3 = {
-	type_icon = "icon_building_longhouses.dds"
+	type_icon = "icon_brothel.dds"
 	construction_time = standard_construction_time
 	cost = { gold = expensive_building_tier_3_cost }
 	type = duchy_capital
-	levy = 500
+	levy = 150
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 04 }
@@ -100,18 +97,15 @@ deviants_brothel3 = {
 	}
 
 	province_modifier = {
-		monthly_income = 2.5
+		monthly_income = 1
 	}
 	
 	character_modifier = {
-		spouse_opinion = -20
-		monthly_prestige = -0.2
+		monthly_tyranny = -1
 	}
 	
 	county_modifier = {
 		development_growth = 1
-		monthly_county_control_growth_add = -0.5
-		county_opinion_add = 20
 	}
 	
 	ai_value = { base = 100 }

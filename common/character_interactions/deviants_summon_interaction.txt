@@ -64,7 +64,7 @@ deviants_add_courtier = {
 deviants_befriend = {
 	icon = deviantsdiplomacy
 	desc = deviants_befriend.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
 	is_shown = {
@@ -103,7 +103,7 @@ deviants_befriend = {
 deviants_rival_interaction = {
 	icon = deviantsrock
 	desc = deviants_rival_interaction.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
 	is_shown = {
@@ -147,7 +147,7 @@ deviants_rival_interaction = {
 deviants_hook = {
 	icon = deviantscontrol
 	desc = deviants_hook.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 5 }
 	is_shown = {
@@ -191,7 +191,7 @@ deviants_child_interaction = {
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
 			any_held_title = {
@@ -210,42 +210,87 @@ deviants_child_interaction = {
 		scope:recipient = {
 			is_adult = yes
 			is_female = yes
+			age >= 18
 		}
 	}
 	on_accept = {
 		scope:recipient = {
-			if = {
-				limit = { patrilinear_marriage = yes }
-				create_character = {
-					age = 0
-					mother = scope:recipient
-					father = primary_spouse
-					dynasty_house = primary_spouse.house
-					culture = primary_spouse.culture
-					faith = primary_spouse.faith
-				}
-			}
-			else = {
-				if = {
-					limit = { exists = primary_spouse }
-					create_character = {
-						age = 0
-						mother = recipient
-						father = primary_spouse
-						dynasty_house = house
-						culture = culture
-						faith = faith
+			random_list = {
+				50 = {
+					if = {
+						limit = { patrilinear_marriage = yes }
+						create_character = {
+							age = 0
+							mother = scope:recipient
+							father = primary_spouse
+							dynasty_house = primary_spouse.house
+							culture = primary_spouse.culture
+							faith = primary_spouse.faith
+							gender = female
+						}
+					}
+					else = {
+						if = {
+							limit = { exists = primary_spouse }
+							create_character = {
+								age = 0
+								mother = scope:recipient
+								father = primary_spouse
+								dynasty_house = house
+								culture = culture
+								faith = faith
+								gender = female
+							}
+						}
+						else = {
+							create_character = {
+								age = 0
+								mother = scope:recipient
+								dynasty_house = house
+								culture = culture
+								faith = faith
+								gender = female
+							}
+						}
 					}
 				}
-				else = {
-					create_character = {
-						age = 0
-						mother = scope:recipient
-						dynasty_house = house
-						culture = culture
-						faith = faith
+				50 = {
+					if = {
+						limit = { patrilinear_marriage = yes }
+						create_character = {
+							age = 0
+							mother = scope:recipient
+							father = primary_spouse
+							dynasty_house = primary_spouse.house
+							culture = primary_spouse.culture
+							faith = primary_spouse.faith
+							gender = male
+						}
 					}
-
+					else = {
+						if = {
+							limit = { exists = primary_spouse }
+							create_character = {
+								age = 0
+								mother = scope:recipient
+								father = primary_spouse
+								dynasty_house = house
+								culture = culture
+								faith = faith
+								gender = male
+							}
+						}
+						else = {
+							create_character = {
+								age = 0
+								mother = scope:recipient
+								dynasty_house = house
+								culture = culture
+								faith = faith
+								gender = male
+							}
+						}
+					}
 				}
 			}
 		}
@@ -258,7 +303,7 @@ deviants_child_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
+	ai_frequency = 24
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -659,245 +704,3 @@ deviants_create_succubus_interaction = {
 	ai_will_do = { base = 10 }
 }
 
-deviants_become_succubus = {
-	icon = deviantsfertility
-	desc = deviants_become_succubus.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-
-	is_shown = { 
-		scope:actor = scope:recipient
-		scope:actor = { is_ai = no }
-		scope:actor = { 
-			is_female = yes
-			NOR = { 
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_trait = lustful }
-				add_character_modifier = deviants_prostitute
-			}
-			else_if = {
-				limit = { has_trait = chaste }
-				remove_trait = chaste
-			}
-			else_if = {
-				limit = { has_trait = humble }
-				remove_trait = humble
-			}
-			else_if = {
-				limit = { has_trait = gregarious }
-				remove_trait = gregarious
-			}
-			else_if = {
-				limit = { has_trait = zealous }
-				remove_trait = zealous
-			}
-			else_if = {
-				limit = { has_trait = shy }
-				remove_trait = shy
-			}
-			else_if = {
-				limit = { has_trait = calm }
-				remove_trait = calm
-			}
-			else_if = {
-				limit = { has_trait = content }
-				remove_trait = content
-			}
-			else_if = {
-				limit = { has_trait = generous }
-				remove_trait = generous
-			}
-			else_if = {
-				limit = { has_trait = just }
-				remove_trait = just
-			}
-			else_if = {
-				limit = { has_trait = honest }
-				remove_trait = honest
-			}
-			else_if = {
-				limit = { has_trait = patient }
-				remove_trait = patient
-			}
-			else_if = {
-				limit = { has_trait = temperate }
-				remove_trait = temperate
-			}
-			else_if = {
-				limit = { has_trait = diligent }
-				remove_trait = diligent
-			}
-			else_if = {
-				limit = { has_trait = ambitious }
-				remove_trait = ambitious
-			}
-			else_if = {
-				limit = { has_trait = brave }
-				remove_trait = brave
-			}
-			else_if = {
-				limit = { has_trait = trusting }
-				remove_trait = trusting
-			}
-			else_if = {
-				limit = { has_trait = compassionate }
-				remove_trait = compassionate
-			}
-			else_if = {
-				limit = { has_trait = greedy }
-				remove_trait = greedy
-			}
-			else_if = {
-				limit = { has_trait = callous }
-				remove_trait = callous
-			}
-			else_if = {
-				limit = { has_trait = impatient }
-				remove_trait = impatient
-			}
-			else_if = {
-				limit = { has_trait = gluttonous }
-				remove_trait = gluttonous
-			}
-			else_if = {
-				limit = { has_trait = lazy }
-				remove_trait = lazy
-			}
-			else_if = {
-				limit = { has_trait = wrathful }
-				remove_trait = wrathful
-			}
-			else_if = {
-				limit = { has_trait = deceitful }
-				remove_trait = deceitful
-			}
-			else_if = {
-				limit = { has_trait = arrogant }
-				remove_trait = arrogant
-			}
-			else_if = {
-				limit = { has_trait = craven }
-				remove_trait = craven
-			}
-			else_if = {
-				limit = { has_trait = forgiving }
-				remove_trait = forgiving
-			}
-			else_if = {
-				limit = { has_trait = vengeful }
-				remove_trait = vengeful
-			}
-			else_if = {
-				limit = { has_trait = arbitrary }
-				remove_trait = arbitrary
-			}
-			else_if = {
-				limit = { has_trait = stubborn }
-				remove_trait = stubborn
-			}
-			else_if = {
-				limit = { has_trait = fickle }
-				remove_trait = fickle
-			}
-			else_if = {
-				limit = { has_trait = cynical }
-				remove_trait = cynical
-			}
-			else_if = {
-				limit = { has_trait = paranoid }
-				remove_trait = paranoid
-			}
-			if = {
-				limit = { NOT = { has_trait = lustful } }
-				add_trait = lustful
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_martial_2
-						has_trait = education_martial_3
-						has_trait = education_martial_4
-						has_trait = education_martial_5
-					}
-				}
-				remove_trait = education_martial_2
-				remove_trait = education_martial_3
-				remove_trait = education_martial_4
-				remove_trait = education_martial_5
-				add_trait = education_martial_1
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_diplomacy_2
-						has_trait = education_diplomacy_3
-						has_trait = education_diplomacy_4
-						has_trait = education_diplomacy_5
-					}
-				}
-				remove_trait = education_diplomacy_2
-				remove_trait = education_diplomacy_3
-				remove_trait = education_diplomacy_4
-				remove_trait = education_diplomacy_5
-				add_trait = education_diplomacy_1
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_intrigue_2
-						has_trait = education_intrigue_3
-						has_trait = education_intrigue_4
-						has_trait = education_intrigue_5
-					}
-				}
-				remove_trait = education_intrigue_2
-				remove_trait = education_intrigue_3
-				remove_trait = education_intrigue_4
-				remove_trait = education_intrigue_5
-				add_trait = education_intrigue_1
-			}
-
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_stewardship_2
-						has_trait = education_stewardship_3
-						has_trait = education_stewardship_4
-						has_trait = education_stewardship_5
-					}
-				}
-				remove_trait = education_stewardship_2
-				remove_trait = education_stewardship_3
-				remove_trait = education_stewardship_4
-				remove_trait = education_stewardship_5
-				add_trait = education_stewardship_1
-			}
-			if = {
-				limit = {
-					OR = {
-						has_trait = education_learning_2
-						has_trait = education_learning_3
-						has_trait = education_learning_4
-						has_trait = education_learning_5
-					}
-				}
-				remove_trait = education_learning_2
-				remove_trait = education_learning_3
-				remove_trait = education_learning_4
-				remove_trait = education_learning_5
-				add_trait = education_learning_1
-			}
-
-			set_immortal_age = 18
-			add_trait = deviants_succubus
-		}
-	}
-	auto_accept = yes
-}

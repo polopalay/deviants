@@ -11,6 +11,7 @@ deviants_prostitute_interaction = {
             		is_incapable = no
             		is_imprisoned = no
 			is_travelling = no
+			is_in_army = no
 			is_attracted_to_gender_of = scope:recipient
 			NOR = {
 				has_trait = lovers_pox
@@ -23,8 +24,13 @@ deviants_prostitute_interaction = {
             		is_incapable = no
             		is_imprisoned = no
 			is_travelling = no
+			is_in_army = no
 			NOT = { has_character_modifier = deviants_fuckedsilly }
 			has_character_modifier = deviants_prostitute
+			OR = {
+				has_trait = deviants_lesser_succubus
+				age < 40
+			}
         	}
     	}
 
@@ -81,7 +87,7 @@ deviants_prostitute_interaction = {
 		if = {
 			limit = { scope:recipient.liege = { has_trait = deviants_succubus } }
 			random = {
-				chance = 25
+				chance = 20
 				scope:recipient.liege = {
 					add_trait_xp = {
 						trait = deviants_succubus
@@ -133,44 +139,37 @@ deviants_solicitation_interaction = {
 	desc = deviants_solicitation_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		scope:actor = {
+		scope:recipient = {
 	    		is_adult = yes
 	    		is_incapable = no
 	    		is_imprisoned = no
 			is_travelling = no
-			NOT = { is_at_war_with = scope:actor }
+			is_in_army = no
+			NOT = { is_at_war_with = scope:recipient }
 			is_attracted_to_gender_of = scope:recipient
 			has_character_modifier = deviants_slave
 		}
 	}
 
     	on_accept = {
-		scope:actor = {
+		scope:recipient = {
 			add_character_modifier = {
 				modifier = deviants_fuckedsilly
-				years = 1
+				days = 10
 			}
 			had_sex_with_effect = {
-				CHARACTER = scope:recipient
+				CHARACTER = scope:actor
 				PREGNANCY_CHANCE = pregnancy_chance
             		}
 		}
 	}
 
-	ai_accept = {
-		base = 50
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = 1
-		}
-	}
+	auto_accept = yes
 
-	ai_frequency = 1
+	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
@@ -179,7 +178,7 @@ deviants_solicitation_interaction = {
 		ai_recipients = realm_characters
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
+	ai_will_do = { base = 10 }
 }
 
 deviants_become_prostitute_interaction = {
@@ -194,26 +193,15 @@ deviants_become_prostitute_interaction = {
             		is_adult = yes
 			is_landed = yes
 			has_trait = deviants_succubus
-			OR = {
-				scope:actor = scope:recipient
-				any_courtier = {
-					limit = { has_character_modifier = deviants_prostitute }
-					count < 3
-				}
-				any_vassal = {
-					limit = { has_character_modifier = deviants_prostitute }
-					count < 2
-				}
-			}
         	}
         	scope:recipient = {
             		is_adult = yes
 			is_female = yes
 			NOT = { has_character_modifier = deviants_prostitute }
 			OR = {
-				scope:actor = scope:recipient
-				is_vassal_of = scope:actor
 				is_courtier_of = scope:actor
+				is_vassal_of = scope:actor
+				scope:actor = scope:recipient
 				AND = {
 					is_ruler = no
 					is_imprisoned_by = scope:actor
@@ -318,7 +306,7 @@ deviants_stop_prostitute_interaction = {
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
-	cooldown = { years = 1 }
+	cooldown = { months = 1 }
 
     	is_shown = {
         	scope:actor = {
@@ -353,7 +341,16 @@ deviants_stop_prostitute_interaction = {
 		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			add = 100
+			scope:recipient = {
+				NOT = { has_trait = deviants_lesser_succubus }
+				age > 40
+			}
+		}
+	}
 }
 
 deviants_trade_slut_interaction = {
@@ -382,7 +379,10 @@ deviants_trade_slut_interaction = {
 				is_landed = yes
 				is_ruler = yes
 			}
-			has_trait = deviants_succubus
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 			any_courtier = {
 				has_character_modifier = deviants_prostitute
 			}
@@ -506,7 +506,10 @@ deviants_buy_slut_interaction = {
 				is_landed = yes
 				is_ruler = yes
 			}
-			has_trait = deviants_succubus
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 			any_courtier = {
 				has_character_modifier = deviants_prostitute
 			}
@@ -602,7 +605,10 @@ deviants_sell_slut_interaction = {
 				is_landed = yes
 				is_ruler = yes
 			}
-			has_trait = deviants_succubus
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 			any_courtier = {
 				has_character_modifier = deviants_prostitute
 			}
