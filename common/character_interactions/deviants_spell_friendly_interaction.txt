@@ -171,7 +171,7 @@ deviants_heal_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 10
+		base = 0
 		modifier = {
 			base = 100
 			scope:recipient = scope:actor
@@ -236,7 +236,7 @@ deviants_weight_interaction = {
 	ai_will_do = { 
 		base = 0 
 		modifier = {
-			base = 50
+			base = 100
 			scope:recipient = scope:actor
 		}
 	}

@@ -86,8 +86,8 @@ nude_clothes = {
 			base = 0
 			modifier = {
 				add = 100
-				should_show_nudity = yes
-				has_character_modifier = deviants_prostitute
+				should_be_fully_naked_portrait_trigger = yes
+				is_female = yes
 			}
 		}
 	}

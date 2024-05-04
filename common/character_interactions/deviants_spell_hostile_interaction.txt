@@ -37,7 +37,7 @@ deviants_steal_gold_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
+	ai_frequency = 12
 	ai_targets = { 
 		ai_recipients = liege
 		ai_recipients = vassals
@@ -46,9 +46,9 @@ deviants_steal_gold_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 10 
+		base = 5 
 		modifier = {
-			add = 40
+			add = 5
 			scope:actor = {
 				OR = {
 					has_relation_rival = scope:recipient

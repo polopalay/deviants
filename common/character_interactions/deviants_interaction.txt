@@ -1,8 +1,9 @@
 deviants_prostitute_interaction = {
-	icon = deviantshealth
+	icon = demand_sex
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
+	common_interaction = yes
 
     	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -135,7 +136,7 @@ deviants_prostitute_interaction = {
 }
 
 deviants_solicitation_interaction = {
-	icon = deviantslove
+	icon = sex
 	desc = deviants_solicitation_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -182,7 +183,7 @@ deviants_solicitation_interaction = {
 }
 
 deviants_become_prostitute_interaction = {
-	icon = deviantshealth
+	icon = start_prostitution
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -212,6 +213,7 @@ deviants_become_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			add_character_modifier = deviants_prostitute
 			add_character_flag = blocked_from_leaving
 			if = {
@@ -302,7 +304,7 @@ deviants_become_prostitute_interaction = {
 }
 
 deviants_stop_prostitute_interaction = {
-	icon = deviantsfertility
+	icon = stop_prostitution
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -328,6 +330,7 @@ deviants_stop_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
+			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			remove_character_modifier = deviants_prostitute
 		}
     	}
