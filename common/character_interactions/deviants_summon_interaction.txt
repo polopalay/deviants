@@ -1,5 +1,5 @@
 deviants_switch_body = {
-	icon = deviantsfashion
+	icon = dswitch
 	desc = deviants_switch_body.desc
     	category = interaction_category_diplomacy
 	interface_priority = 1
@@ -19,7 +19,7 @@ deviants_switch_body = {
 }
 
 deviants_add_courtier = {
-	icon = deviantshostage
+	icon = dinvite_to_court
 	desc = deviants_add_courtier.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -62,7 +62,7 @@ deviants_add_courtier = {
 }
 
 deviants_befriend = {
-	icon = deviantsdiplomacy
+	icon = dfriend
 	desc = deviants_befriend.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -110,7 +110,7 @@ deviants_befriend = {
 }
 
 deviants_rival_interaction = {
-	icon = deviantsrock
+	icon = dhostile
 	desc = deviants_rival_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -163,7 +163,7 @@ deviants_rival_interaction = {
 }
 
 deviants_hook = {
-	icon = deviantscontrol
+	icon = dfabricate_hook
 	desc = deviants_hook.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -214,7 +214,7 @@ deviants_hook = {
 }
 
 deviants_child_interaction = {
-	icon = deviantsfamily
+	icon = dchild
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -358,7 +358,7 @@ deviants_child_interaction = {
 }
 
 deviants_create_lesser_succubus_interaction = {
-	icon = deviantstreatment
+	icon = dchastity
 	desc = deviants_create_lesser_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -559,7 +559,7 @@ deviants_create_lesser_succubus_interaction = {
 }
 
 deviants_create_succubus_interaction = {
-	icon = deviantsexcrement
+	icon = devil
 	desc = deviants_create_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

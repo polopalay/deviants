@@ -1,5 +1,5 @@
 deviants_steal_gold_interaction = {
-	icon = deviantseconomy
+	icon = dgold
 	desc = deviants_steal_gold_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -60,7 +60,7 @@ deviants_steal_gold_interaction = {
 }
 
 deviants_rumor_interaction = {
-	icon = deviantsopinion
+	icon = drumor
 	desc = deviants_rumor_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -149,7 +149,7 @@ deviants_rumor_interaction = {
 }
 
 deviants_imprison_interaction = {
-	icon = deviantsprison
+	icon = dprison
 	desc = deviants_imprison_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes

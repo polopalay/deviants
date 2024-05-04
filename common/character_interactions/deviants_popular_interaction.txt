@@ -1,5 +1,5 @@
 deviants_offer_orgy = {
-	icon = deviantslove
+	icon = dsway
 	desc = deviants_offer_orgy.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -60,7 +60,7 @@ deviants_offer_orgy = {
 }
 
 deviants_nude_interaction = {
-	icon = deviantsrock
+	icon = dundress
 	desc = deviants_nude_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -105,7 +105,7 @@ deviants_nude_interaction = {
 }
 
 deviants_shake_mind_interaction = {
-	icon = deviantsfertility
+	icon = dfascinate
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -172,7 +172,7 @@ deviants_shake_mind_interaction = {
 }
 
 deviants_mind_break_interaction = {
-	icon = deviantsmask
+	icon = dmesmerize
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes

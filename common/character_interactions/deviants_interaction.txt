@@ -1,5 +1,5 @@
 deviants_prostitute_interaction = {
-	icon = demand_sex
+	icon = dmoney
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -136,7 +136,7 @@ deviants_prostitute_interaction = {
 }
 
 deviants_solicitation_interaction = {
-	icon = sex
+	icon = dsex
 	desc = deviants_solicitation_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -183,7 +183,7 @@ deviants_solicitation_interaction = {
 }
 
 deviants_become_prostitute_interaction = {
-	icon = start_prostitution
+	icon = dstart_prostitution
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -304,7 +304,7 @@ deviants_become_prostitute_interaction = {
 }
 
 deviants_stop_prostitute_interaction = {
-	icon = stop_prostitution
+	icon = dstop_prostitution
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
