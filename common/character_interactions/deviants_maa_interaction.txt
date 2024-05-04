@@ -12,11 +12,6 @@ deviants_absorb_interaction = {
 				limit = { is_female = no is_knight = yes }
 				count > 0
 			}
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
 		}
 		scope:recipient = {
 			OR = {
@@ -24,6 +19,15 @@ deviants_absorb_interaction = {
 				is_vassal_of = scope:actor
 			}
 			has_trait_xp = { trait = deviants_lesser_succubus value >= 50 }
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel2 
+				}
+			}
 		}
 	}
 	on_accept = {
@@ -48,3 +52,103 @@ deviants_absorb_interaction = {
 	ai_will_do = { base = 100 }
 }
 
+deviants_dispel_interaction = {
+	icon = deviantsmagic
+	desc = deviants_dispel_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			is_adult = yes
+			is_ruler = yes
+			is_female = yes
+			NOT  = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+			OR = {
+				has_character_modifier = deviants_prostitute
+				has_character_modifier = deviants_slave
+				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+		}
+		scope:recipient = {
+			is_ruler = yes
+			NOT = { is_at_war_with = scope:actor }
+			has_trait = deviants_succubus 
+		}
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}	
+
+	on_accept = {
+		scope:recipient = {
+			every_courtier_or_guest = {
+				limit = { is_female = no is_knight = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
+				scope:actor = { 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				} 
+				scope:recipient = { 
+					add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				} 
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+			remove_character_modifier = deviants_prostitute
+			remove_character_modifier = deviants_slave
+			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		}
+	}
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 2
+	ai_targets = { 	
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 50 
+		modifier = {
+			add = 50
+			scope:recipient = {
+				is_ai = no
+			}
+		}
+	}
+}

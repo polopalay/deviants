@@ -8,21 +8,6 @@
  deviants_stop_prostitute_interaction: "Stop Being A Prostitution"
  deviants_stop_prostitute_interaction.desc: "[recipient.GetShortUIName] Stop Working As Prostitute"
 
- deviants_trade_slut_interaction: "Exchange Prostitutes"
- deviants_trade_slut_interaction.desc: "Exchange prostitutes with [recipient.GetShortUIName]"
- actor_secondary_deviants_trade_slut_interaction: "Choose one"
-
- deviants_sell_slut_interaction: "Sell Prostitutes"
- deviants_sell_slut_interaction.desc: "Sell prostitutes with [recipient.GetShortUIName]"
- actor_secondary_deviants_sell_slut_interaction: "Choose one"
-
- deviants_buy_slut_interaction: "Buy Prostitutes"
- deviants_buy_slut_interaction.desc: "Buy prostitutes with [recipient.GetShortUIName]d"
- actor_secondary_deviants_buy_slut_interaction: "Choose one"
-
- deviants_buff_interaction: "Devil's Blessing"
- deviants_buff_interaction.desc: "Exchange 1 portion of the obtained seeds for the Demon Lord's blessing"
-
  deviants_weight_interaction: "Adjust Weight"
  deviants_weight_interaction.desc: "Get your weight to the perfect level"
 
@@ -34,9 +19,6 @@
 
  deviants_mind_break_interaction: "Mind Break"
  deviants_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
-
- deviants_kill_interaction: "Kill Character"
- deviants_kill_interaction.desc: "Immediately kills [recipient.GetShortUIName]"
  
  deviants_create_lesser_succubus_interaction: "Create Lesser Succubus"
  deviants_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"

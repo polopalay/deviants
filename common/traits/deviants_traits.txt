@@ -3,9 +3,10 @@ deviants_succubus = {
 	icon = titsgood.dds
 	minimum_age = 18
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -1
+	monthly_lifestyle_xp_gain_mult = -2
 	can_have_children = no
-	ai_zeal = -100
+	ai_greed = dominant_positive_ai_value
+	ai_zeal = dominant_negative_ai_value
 
 	desc = {
 		first_valid = {
@@ -122,11 +123,12 @@ deviants_lesser_succubus = {
 	icon = titsbad.dds
 	minimum_age = 18
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -1
+	monthly_lifestyle_xp_gain_mult = -2
 	can_have_children = no
 	inheritance_blocker = all
 	claim_inheritance_blocker = all
-	ai_zeal = -100
+	ai_greed = dominant_positive_ai_value
+	ai_zeal = dominant_negative_ai_value
 
 	opposites = { chaste deviants_succubus }
 

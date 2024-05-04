@@ -88,6 +88,15 @@ deviants_rumor_interaction = {
 			}
 		}
 	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
 	on_accept = {
 		scope:recipient = {
 			random_list = {
@@ -144,15 +153,10 @@ deviants_imprison_interaction = {
 	desc = deviants_imprison_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 1 }
+	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -167,6 +171,15 @@ deviants_imprison_interaction = {
 			}
 		}
 	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel2 
+				}
+			}
+		}
+	}
 	on_accept = {
 		scope:actor = {
 			add_trait_xp = {
@@ -177,63 +190,6 @@ deviants_imprison_interaction = {
 			imprison = {
 				target = scope:recipient
 				type = dungeon
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = scripted_relations }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			add = 5
-			scope:actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
-			}
-		}
-	}
-}
-
-deviants_kill_interaction = {
-	icon = deviantsblood
-	desc = deviants_kill_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		NOT = { scope:actor = scope:recipient }
-		scope:recipient = {
-			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value >= 10
-			} 
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			death = { death_reason = death_natural_causes }
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = -10
 			}
 		}
 	}

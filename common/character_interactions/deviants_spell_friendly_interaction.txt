@@ -3,7 +3,6 @@ deviants_heal_interaction = {
 	desc = deviants_heal_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
-	cooldown = { days = 10 }
 	is_shown = {
 		scope:actor = {
 			OR = {
@@ -241,58 +240,6 @@ deviants_weight_interaction = {
 			scope:recipient = scope:actor
 		}
 	}
-}
-
-deviants_buff_interaction = {
-	icon = deviantsmagic
-	desc = deviants_buff_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value >= 2
-				}
-				has_trait_xp = {
-					trait = deviants_lesser_succubus
-					value >= 4
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			add_character_modifier = {
-				modifier = deviants_buff
-				years = 10
-			}
-		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = deviants_succubus }
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value = -2
-				}
-			}
-			if = {
-				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = {
-					trait = deviants_lesser_succubus
-					value = -4
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 24
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
 }
 
 deviants_learn_language_interaction = {

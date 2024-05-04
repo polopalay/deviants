@@ -1,7 +1,7 @@
 random_yearly_everyone_pulse = {
 	on_actions = {
-		delay = { days = { 1000 5000 } }
 		random_army_event
+		random_exp_event
 	}
 }
 
@@ -10,8 +10,20 @@ random_army_event = {
 		has_trait = deviants_succubus
 	}
 	random_events = {
-		chance_to_happen = 20
+		chance_to_happen = 10
 		1 = deviants_prostitution.10		
 		1 = deviants_prostitution.20
+	}
+}
+
+random_exp_event = {
+	trigger = {
+		has_trait = deviants_succubus
+	}
+	random_events = {
+		chance_to_happen = 50
+		1 = deviants_exp.10		
+		1 = deviants_exp.20
+		1 = deviants_exp.30
 	}
 }

@@ -73,6 +73,14 @@ nude_clothes = {
 				mode = add
 				gene = cloaks
 			}
+			accessory = {
+				mode = add
+				gene = headgear_base
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+			}
 		} 
 		weight = {
 			base = 0

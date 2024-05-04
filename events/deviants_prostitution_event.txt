@@ -37,6 +37,7 @@ deviants_prostitution.10 = {
 	}
 	
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution_events.10.accept
 		scope:knight = {
 			add_opinion = {
@@ -51,6 +52,7 @@ deviants_prostitution.10 = {
 		}
 	}
 	option = {
+		ai_chance = { base = 0 }
 		name = deviants_prostitution_events.10.refuse
 		root = {
 			add_trait_xp = { trait = deviants_succubus track = loyalty value = -1 }
@@ -91,41 +93,11 @@ deviants_prostitution.11 = {
 	
 	option = {
 		name = deviants_prostitution_events.11.end
-	}
-}
-
-deviants_prostitution.11 = {
-	type = character_event
-	title = deviants_prostitution_events.11.title
-	desc = deviants_prostitution_events.11.desc
-	
-	theme = seduction
-	immediate = {
 		scope:knight = {
-			add_character_flag = is_naked
+			remove_character_flag = is_naked
 		}
 		root = {
-			add_character_flag = is_naked
-		}
-	}
-
-	left_portrait = {
-		character = root
-		animation = personality_greedy
-	}
-	
-	right_portrait = {
-		character = scope:knight
-		animation = marshal
-	}
-	
-	option = {
-		name = deviants_prostitution_events.11.end
-		scope:knight = {
-			add_opinion = {
-				target = root
-				modifier = have_sex_opinion
-			}
+			remove_character_flag = is_naked
 		}
 	}
 }
@@ -220,7 +192,6 @@ deviants_prostitution.20 = {
 	}
 
 }
-
 
 deviants_prostitution.21 = {
 	type = character_event

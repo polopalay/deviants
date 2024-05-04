@@ -35,6 +35,7 @@ deviants_spawn_darkarmy_interaction = {
 	ai_check_frequency = 120
 	ai_will_do = { base = 5 }
 }
+
 deviants_spawn_death_korp_interaction = {
 	desc = deviants_spawn_death_korp_interaction.desc
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
@@ -48,7 +49,7 @@ deviants_spawn_death_korp_interaction = {
 		has_trait_xp = {
 			trait = deviants_succubus
 			track = loyalty
-			value >= 50
+			value >= 0
 		} 
 	}
 	effect = {

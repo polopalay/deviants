@@ -78,6 +78,15 @@ deviants_befriend = {
 			} 
 		}
 	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
 	on_accept = {
 		scope:actor = {
 			set_relation_friend = scope:recipient
@@ -120,6 +129,15 @@ deviants_rival_interaction = {
 			} 
 		}
 	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
 	on_accept = {
 		scope:actor = {
 			if = {
@@ -147,7 +165,7 @@ deviants_rival_interaction = {
 deviants_hook = {
 	icon = deviantscontrol
 	desc = deviants_hook.desc
-    	category = interaction_category_friendly
+    	category = interaction_category_hostile
     	use_diplomatic_range = yes
 	cooldown = { years = 5 }
 	is_shown = {
@@ -171,6 +189,15 @@ deviants_hook = {
 				trait = deviants_succubus
 				track = corruption
 				value = -5
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
 			}
 		}
 	}
@@ -211,6 +238,15 @@ deviants_child_interaction = {
 			is_adult = yes
 			is_female = yes
 			age >= 18
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
 		}
 	}
 	on_accept = {
@@ -347,6 +383,15 @@ deviants_create_lesser_succubus_interaction = {
 				track = corruption
 				value >= 25
 			} 
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel2 
+				}
+			}
 		}
 	}
 	on_accept = {
@@ -538,6 +583,15 @@ deviants_create_succubus_interaction = {
 				track = corruption
 				value >= 100
 			} 
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel3 
+				}
+			}
 		}
 	}
 	on_accept = {
