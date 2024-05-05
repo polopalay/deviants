@@ -12,6 +12,8 @@ deviants_prostitution.10 = {
 			is_female = no
 			age > 16
 			is_attracted_to_gender_of = root
+			NOT = { is_spouse_of = root }
+			NOT = { is_close_family_of = root }
 		}
 	}
 
@@ -21,6 +23,8 @@ deviants_prostitution.10 = {
 				is_female = no
 				age > 16
 				is_attracted_to_gender_of = root
+				NOT = { is_spouse_of = root }
+				NOT = { is_close_family_of = root }
 			}
 			save_scope_as = knight
 		}
@@ -116,6 +120,8 @@ deviants_prostitution.20 = {
 			is_attracted_to_gender_of = root
 		}
 		NOT = { has_character_modifier = deviants_slave }
+		NOT = { is_spouse_of = root }
+		NOT = { is_close_family_of = root }
 	}
 
 	immediate = {
@@ -123,6 +129,8 @@ deviants_prostitution.20 = {
 			limit = {
 				is_female = no
 				age > 16
+				NOT = { is_spouse_of = root }
+				NOT = { is_close_family_of = root }
 			}
 			save_scope_as = knight
 		}
@@ -213,4 +221,66 @@ deviants_prostitution.21 = {
 		name = deviants_prostitution_events.21.end
 	}
 
+}
+
+deviants_prostitution.30 = {
+	type = character_event
+	title = deviants_prostitution_events.30.title
+	desc = deviants_prostitution_events.30.desc
+	
+	theme = seduction
+
+	trigger = {
+		top_liege.any_vassal_or_below = {
+			is_female = no
+			age > 16
+			is_attracted_to_gender_of = root
+		}
+	}
+
+	immediate = {
+		top_liege.random_vassal_or_below  = {
+			limit = {
+				is_female = no
+				age > 16
+				is_attracted_to_gender_of = root
+			}
+			save_scope_as = knight
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	
+	right_portrait = {
+		character = scope:knight
+		animation = marshal
+	}
+	
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_prostitution_events.30.accept
+		scope:knight = {
+			add_opinion = {
+				target = root
+				modifier = have_sex_opinion
+			}
+		}
+		root = {
+			had_sex_with_effect = { CHARACTER = scope:knight PREGNANCY_CHANCE = pregnancy_chance }
+			add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+		}
+	}
+	option = {
+		ai_chance = { base = 0 }
+		name = deviants_prostitution_events.30.refuse
+		scope:knight = {
+			add_opinion = {
+				target = root
+				modifier = refuse_sex_opinion
+			}
+		}
+	}
 }

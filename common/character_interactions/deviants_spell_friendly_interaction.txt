@@ -3,6 +3,8 @@ deviants_heal_interaction = {
 	desc = deviants_heal_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
+	common_interaction = yes
+
 	is_shown = {
 		scope:actor = {
 			OR = {
@@ -162,19 +164,18 @@ deviants_heal_interaction = {
 	ai_frequency = 1
 	ai_targets = { 
 		ai_recipients = self 
-		ai_recipients = family
 		ai_recipients = spouses
 		ai_recipients = children
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 0
+		base = 20
 		modifier = {
-			base = 100
+			base = 80
 			scope:recipient = scope:actor
 		}
 		modifier = {
-			base = 100
+			base = 30
 			scope:recipient = {
 				is_child_of = scope:actor
 			}

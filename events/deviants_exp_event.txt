@@ -7,11 +7,11 @@ deviants_exp.10 = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value <= 75
+				value <= 100
 			}
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 50
+				value <= 100
 			}
 		}
 		OR = {
@@ -124,11 +124,11 @@ deviants_exp.20 = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value <= 66
+				value <= 100
 			}	 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 50
+				value <= 100
 			}
 		}
 		OR = {
@@ -179,11 +179,11 @@ deviants_exp.30 = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value <= 50
+				value <= 100
 			} 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 50
+				value <= 100
 			}
 		}
 		OR = {
@@ -223,11 +223,4 @@ deviants_exp.30 = {
 		remove_trait = tourney_participant
 	}
 
-}
-
-deviants_exp.40 = {
-	hidden = yes
-	immediate = {
-		contract_disease_effect = { DISEASE = deviants_lustful TREATMENT_EVENT = no }
-	}
 }

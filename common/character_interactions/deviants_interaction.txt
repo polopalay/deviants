@@ -1,5 +1,5 @@
 deviants_prostitute_interaction = {
-	icon = d_money
+	icon = d_sex
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -14,19 +14,23 @@ deviants_prostitute_interaction = {
 			is_travelling = no
 			is_in_army = no
 			is_attracted_to_gender_of = scope:recipient
+			NOT = { is_at_war_with = scope:recipient }
+			NOT  = { is_spouse_of = scope:recipient }
 			NOR = {
-				has_trait = lovers_pox
 				has_character_modifier = deviants_prostitute
+				has_character_modifier = deviants_slave
 			}
         	}
         	scope:recipient = {
-			NOT = { is_at_war_with = scope:actor }
             		is_adult = yes
             		is_incapable = no
             		is_imprisoned = no
 			is_travelling = no
 			is_in_army = no
-			has_character_modifier = deviants_prostitute
+			OR = {
+				has_character_modifier = deviants_prostitute
+				has_character_modifier = deviants_slave
+			}
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -54,6 +58,10 @@ deviants_prostitute_interaction = {
             		}
 		}
         	scope:actor = {
+			add_opinion = {
+				target = scope:recipient
+				modifier = have_sex_opinion
+			}
 			if = {
 				limit = { 
 					scope:recipient = { has_character_modifier = deviants_prostitute }
@@ -76,6 +84,29 @@ deviants_prostitute_interaction = {
 					pay_short_term_gold = {
 						target = scope:recipient
 						gold = 5
+					}
+				}
+				random = {
+					chance = 10
+					modifier = {
+						add = 40
+						has_trait = generous
+					}
+					modifier = {
+						add = 5
+						scope:recipient = { has_trait = beauty_good_1 }
+					}
+					modifier = {
+						add = 8
+						scope:recipient = { has_trait = beauty_good_2 }
+					}
+					modifier = {
+						add = 10
+						scope:recipient = { has_trait = beauty_good_3 }
+					}
+					pay_short_term_gold = {
+						target = scope:recipient
+						gold = 1
 					}
 				}
 			}
@@ -122,11 +153,19 @@ deviants_prostitute_interaction = {
 		ai_recipients = neighboring_rulers
 		ai_recipients = realm_characters
 	}
-	ai_potential = { always = yes }
+	ai_potential = { 
+		primary_title.tier >= tier_county
+	}
 	ai_will_do = {
-		base = 10
+		base = 0
 		modifier = {
-			add = 10
+			add = 5
+			scope:actor = {
+				gold > 10
+			}
+		}
+		modifier = {
+			add = 5
 			scope:actor = {
 				has_trait = lustful
 			}
@@ -137,55 +176,89 @@ deviants_prostitute_interaction = {
 				is_close_family_of = scope:actor
 			}
 		}
-	}
-}
-
-deviants_solicitation_interaction = {
-	icon = d_sex
-	desc = deviants_solicitation_interaction.desc
-    	category = interaction_category_diplomacy
-    	use_diplomatic_range = yes
-	common_interaction = yes
-
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:recipient = {
-	    		is_adult = yes
-	    		is_incapable = no
-	    		is_imprisoned = no
-			is_travelling = no
-			is_in_army = no
-			NOT = { is_at_war_with = scope:recipient }
-			is_attracted_to_gender_of = scope:recipient
-			has_character_modifier = deviants_slave
-		}
-	}
-
-    	on_accept = {
-		scope:recipient = {
-			add_character_modifier = {
-				modifier = deviants_fuckedsilly
-				days = 10
+		modifier = {
+			add = 5
+			scope:recipient = {
+				OR = {
+					has_trait = physique_good_1
+					has_trait = physique_good_2
+					has_trait = physique_good_3
+				}
 			}
-			had_sex_with_effect = {
-				CHARACTER = scope:actor
-				PREGNANCY_CHANCE = pregnancy_chance
-            		}
+		}
+		modifier = {
+			add = -5
+			scope:recipient = {
+				OR = {
+					has_trait = physique_bad_1
+					has_trait = physique_bad_2
+					has_trait = physique_bad_3
+				}
+			}
+		}
+		modifier = {
+			add = 5
+			scope:recipient = {
+				OR = {
+					has_trait = intellect_good_1
+					has_trait = intellect_good_2
+					has_trait = intellect_good_3
+				}
+			}
+		}
+		modifier = {
+			add = -5
+			scope:recipient = {
+				OR = {
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+			}
+		}
+		modifier = {
+			add = -5
+			scope:recipient = {
+				has_trait = beauty_bad_1
+			}
+		}
+		modifier = {
+			add = -8
+			scope:recipient = {
+				has_trait = beauty_bad_2
+			}
+		}
+		modifier = {
+			add = -10
+			scope:recipient = {
+				has_trait = beauty_bad_3
+			}
+		}
+		modifier = {
+			add = 5
+			scope:recipient = {
+				has_trait = beauty_good_1
+			}
+		}
+		modifier = {
+			add = 8
+			scope:recipient = {
+				has_trait = beauty_good_2
+			}
+		}
+		modifier = {
+			add = 10
+			scope:recipient = {
+				has_trait = beauty_good_3
+			}
+		}
+		modifier = {
+			add = -100
+			scope:recipient = {
+				has_trait = lovers_pox
+			}
 		}
 	}
-
-	auto_accept = yes
-
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = neighboring_rulers
-		ai_recipients = realm_characters
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 10 }
 }
 
 deviants_become_prostitute_interaction = {
@@ -201,6 +274,7 @@ deviants_become_prostitute_interaction = {
             		is_adult = yes
 			is_landed = yes
 			has_trait = deviants_succubus
+			NOT = { is_at_war_with = scope:recipient }
         	}
         	scope:recipient = {
             		is_adult = yes
@@ -217,6 +291,31 @@ deviants_become_prostitute_interaction = {
 			}
         	}
     	}
+
+	is_valid = {
+		scope:recipient = {
+			OR = {
+				AND = {
+					is_vassal_of = scope:actor
+					scope:actor = {
+						any_vassal = {
+							has_character_modifier = deviants_prostitute
+							count < 3
+						}	
+					}
+				}
+				AND = {
+					is_courtier_of = scope:actor
+					scope:actor = {
+						any_courtier = {
+							has_character_modifier = deviants_prostitute
+							count < 3
+						}	
+					}
+				}
+			}
+		}
+	}
 
     	on_accept = {
 		scope:recipient = {
@@ -323,6 +422,7 @@ deviants_stop_prostitute_interaction = {
             		is_adult = yes
 			is_landed = yes
 			has_trait = deviants_succubus
+			NOT = { is_at_war_with = scope:recipient }
         	}
         	scope:recipient = {
             		is_adult = yes

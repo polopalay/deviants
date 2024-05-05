@@ -3,13 +3,14 @@ deviants_offer_orgy = {
 	desc = deviants_offer_orgy.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
-			NOT = { is_at_war_with = scope:actor }
 			is_adult = yes
 			is_ruler = yes
+			NOT = { is_at_war_with = scope:actor }
 			NOT  = { is_spouse_of = scope:actor }
 		}
 		scope:actor = {
@@ -66,7 +67,7 @@ deviants_offer_orgy = {
 deviants_nude_interaction = {
 	icon = d_undress
 	desc = deviants_nude_interaction.desc
-    	category = interaction_category_friendly
+    	category = interaction_category_hostile
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
 	is_shown = {
@@ -129,7 +130,7 @@ deviants_shake_mind_interaction = {
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 2 }
+	cooldown = { years = 3 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
@@ -200,7 +201,7 @@ deviants_mind_break_interaction = {
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 2 }
+	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {

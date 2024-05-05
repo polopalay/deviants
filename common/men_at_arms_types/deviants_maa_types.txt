@@ -3,11 +3,11 @@ deviants_dark_amry = {
 	type = skirmishers 
 	can_recruit = { always = no }
 
-	pursuit = 30
-	screen = 30
-	damage = 30
-	toughness = 30
-	siege_value = 0.25
+	pursuit = 40
+	screen = 40
+	damage = 40
+	toughness = 40
+	siege_value = 1
 
 	counters = {
 		pikemen = 1
@@ -25,11 +25,11 @@ deviants_death_korps  = {
 	type = heavy_infantry 
 	can_recruit = { always = no }
 
-	pursuit = 50
-	screen = 50
-	damage = 50
-	toughness = 50
-	siege_value = 0.5
+	pursuit = 80
+	screen = 80
+	damage = 80
+	toughness = 80
+	siege_value = 2
 
 	counters = {
 		pikemen = 1

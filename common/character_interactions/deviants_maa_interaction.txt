@@ -9,6 +9,7 @@ deviants_absorb_interaction = {
 		scope:actor = {
 			has_trait = deviants_succubus
 			is_ruler = yes
+			NOT = { is_at_war_with = scope:recipient }
 			every_courtier_or_guest = {
 				limit = { is_female = no is_knight = yes }
 				count > 0
@@ -65,6 +66,10 @@ deviants_dispel_interaction = {
 			is_adult = yes
 			is_ruler = yes
 			is_female = yes
+			OR = {
+				is_ruler = yes
+				NOT = { is_courtier = scope:recipient }
+			}
 			NOT  = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -173,7 +178,7 @@ deviants_dispel_interaction = {
 			multiplier = 1
 		}
 	}
-	ai_frequency = 2
+	ai_frequency = 1
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals

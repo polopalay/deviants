@@ -13,6 +13,7 @@ random_army_event = {
 		chance_to_happen = 10
 		1 = deviants_prostitution.10		
 		1 = deviants_prostitution.20
+		1 = deviants_prostitution.30
 	}
 }
 

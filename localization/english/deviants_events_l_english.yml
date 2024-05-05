@@ -18,3 +18,8 @@
  deviants_prostitution_events.21.title: "Punishment"
  deviants_prostitution_events.21.desc: "[knight.GetShortUIName] continuously whipped me, he tortured me mercilessly. The only way out is for me to become a sex slave to my knights"
  deviants_prostitution_events.21.end: "Petition"
+
+ deviants_prostitution_events.10.title: "A Request"
+ deviants_prostitution_events.10.desc: "[knight.GetShortUIName] asks you to serve"
+ deviants_prostitution_events.10.accept: "I accept"
+ deviants_prostitution_events.10.refuse: "I refuse"
