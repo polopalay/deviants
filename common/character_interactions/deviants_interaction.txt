@@ -26,14 +26,19 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_in_army = no
-			NOT = { has_character_modifier = deviants_fuckedsilly }
 			has_character_modifier = deviants_prostitute
 			OR = {
+				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
 				age < 40
 			}
         	}
     	}
+	is_valid = {
+        	scope:recipient = {
+			NOT = { has_character_modifier = deviants_fuckedsilly }
+        	}
+	}
 
 	auto_accept = yes
 
@@ -88,7 +93,7 @@ deviants_prostitute_interaction = {
 		if = {
 			limit = { scope:recipient.liege = { has_trait = deviants_succubus } }
 			random = {
-				chance = 20
+				chance = 5
 				scope:recipient.liege = {
 					add_trait_xp = {
 						trait = deviants_succubus

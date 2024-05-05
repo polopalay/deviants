@@ -1,5 +1,5 @@
 deviants_switch_body = {
-	icon = dswitch
+	icon = d_switch
 	desc = deviants_switch_body.desc
     	category = interaction_category_diplomacy
 	interface_priority = 1
@@ -19,7 +19,7 @@ deviants_switch_body = {
 }
 
 deviants_add_courtier = {
-	icon = dinvite_to_court
+	icon = d_invite_to_court
 	desc = deviants_add_courtier.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -62,7 +62,7 @@ deviants_add_courtier = {
 }
 
 deviants_befriend = {
-	icon = dfriend
+	icon = d_friend
 	desc = deviants_befriend.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -110,7 +110,7 @@ deviants_befriend = {
 }
 
 deviants_rival_interaction = {
-	icon = dhostile
+	icon = d_hostile
 	desc = deviants_rival_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -163,7 +163,7 @@ deviants_rival_interaction = {
 }
 
 deviants_hook = {
-	icon = dfabricate_hook
+	icon = d_fabricate_hook
 	desc = deviants_hook.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -214,18 +214,13 @@ deviants_hook = {
 }
 
 deviants_child_interaction = {
-	icon = dchild
+	icon = d_child
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
 			is_female = yes
 			is_adult = yes
 			has_trait_xp = {
@@ -358,7 +353,7 @@ deviants_child_interaction = {
 }
 
 deviants_create_lesser_succubus_interaction = {
-	icon = dchastity
+	icon = d_condemnation
 	desc = deviants_create_lesser_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -373,11 +368,6 @@ deviants_create_lesser_succubus_interaction = {
 			}
 		}
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
@@ -559,7 +549,7 @@ deviants_create_lesser_succubus_interaction = {
 }
 
 deviants_create_succubus_interaction = {
-	icon = devil
+	icon = d_devil
 	desc = deviants_create_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -573,15 +563,10 @@ deviants_create_succubus_interaction = {
 			}
 		}
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 100
+				value >= 50
 			} 
 		}
 	}
@@ -743,7 +728,7 @@ deviants_create_succubus_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = -100
+				value = -50
 			}
 		}
 	}

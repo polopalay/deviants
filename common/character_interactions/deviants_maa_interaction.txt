@@ -1,5 +1,5 @@
 deviants_absorb_interaction = {
-	icon = dabsorb
+	icon = d_absorb
 	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -53,7 +53,7 @@ deviants_absorb_interaction = {
 }
 
 deviants_dispel_interaction = {
-	icon = ddrain_life
+	icon = d_drain_life
 	desc = deviants_dispel_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes

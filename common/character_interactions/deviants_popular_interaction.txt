@@ -1,5 +1,5 @@
 deviants_offer_orgy = {
-	icon = dsway
+	icon = d_sway
 	desc = deviants_offer_orgy.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -15,6 +15,10 @@ deviants_offer_orgy = {
 		scope:actor = {
 			has_trait = deviants_succubus
 			is_adult = yes
+		}
+	}
+	is_valid = {
+		scope:actor = {
 			any_held_title = {
 				any_county_province = {
 					has_building_or_higher = deviants_brothel1 
@@ -60,17 +64,17 @@ deviants_offer_orgy = {
 }
 
 deviants_nude_interaction = {
-	icon = dundress
+	icon = d_undress
 	desc = deviants_nude_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { months = 1 }
+	cooldown = { years = 1 }
 	is_shown = {
 		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 1
+				value >= 5
 			} 
 		}
 		scope:recipient = {
@@ -79,13 +83,29 @@ deviants_nude_interaction = {
 			NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 		}
 	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
 	on_accept = {
 		scope:recipient = {
+			add_character_modifier = { modifier = deviants_prostitute years = 1 }
 			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			scope:actor = {
-				random_courtier = {
-					limit = { is_female = no is_knight = no is_adult = yes }
-					had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
+			random_courtier = {
+				limit = { is_female = no is_knight = no is_adult = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
+				if = {
+					limit = { NOT = { scope:actor = scope:recipient } }
+					had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
+					scope:actor = { 
+						add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+						add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+					}
 				}
 			}
 		}
@@ -93,7 +113,7 @@ deviants_nude_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -1
+				value = -5
 			}
 		}
 	}
@@ -105,7 +125,7 @@ deviants_nude_interaction = {
 }
 
 deviants_shake_mind_interaction = {
-	icon = dfascinate
+	icon = d_fascinate
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -122,16 +142,20 @@ deviants_shake_mind_interaction = {
 			}
 		}
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
 				value >= 10
 			} 
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel2 
+				}
+			}
 		}
 	}
 	on_accept = {
@@ -172,7 +196,7 @@ deviants_shake_mind_interaction = {
 }
 
 deviants_mind_break_interaction = {
-	icon = dmesmerize
+	icon = d_mesmerize
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -195,9 +219,13 @@ deviants_mind_break_interaction = {
 				track = daring
 				value >= 20
 			} 
+		}
+	}
+	is_valid = {
+		scope:actor = {
 			any_held_title = {
 				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
+					has_building_or_higher = deviants_brothel3 
 				}
 			}
 		}
@@ -214,12 +242,16 @@ deviants_mind_break_interaction = {
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
 				scope:actor = { 
 					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
-					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				} 
 				if = {
 					limit = { is_knight = yes }
 					scope:actor = { 
 						add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+					} 
+				}
+				else = {
+					scope:actor = { 
+						add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
 					} 
 				}
 				scope:recipient = { 

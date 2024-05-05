@@ -7,7 +7,7 @@ deviants_slave{
 }
 
 deviants_fuckedsilly = {
-	icon = raped
+	icon = love_negative
     	health = -0.2
 	stacking = yes
 }
