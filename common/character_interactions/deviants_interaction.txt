@@ -1,5 +1,5 @@
 deviants_prostitute_interaction = {
-	icon = dmoney
+	icon = d_money
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -141,10 +141,11 @@ deviants_prostitute_interaction = {
 }
 
 deviants_solicitation_interaction = {
-	icon = dsex
+	icon = d_sex
 	desc = deviants_solicitation_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
+	common_interaction = yes
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -188,10 +189,11 @@ deviants_solicitation_interaction = {
 }
 
 deviants_become_prostitute_interaction = {
-	icon = dstart_prostitution
+	icon = d_start_prostitution
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { months = 1 }
 
     	is_shown = {
@@ -309,10 +311,11 @@ deviants_become_prostitute_interaction = {
 }
 
 deviants_stop_prostitute_interaction = {
-	icon = dstop_prostitution
+	icon = d_stop_prostitution
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { months = 1 }
 
     	is_shown = {

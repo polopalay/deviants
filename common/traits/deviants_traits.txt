@@ -1,6 +1,6 @@
 deviants_succubus = {
 	category = health
-	icon = titsgood.dds
+	icon = succubus.dds
 	minimum_age = 18
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -2
@@ -120,7 +120,7 @@ deviants_succubus = {
 
 deviants_lesser_succubus = {
 	category = health
-	icon = titsbad.dds
+	icon = lesser_succubus.dds
 	minimum_age = 18
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -2

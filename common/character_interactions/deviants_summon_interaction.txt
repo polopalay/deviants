@@ -165,7 +165,7 @@ deviants_rival_interaction = {
 deviants_hook = {
 	icon = d_fabricate_hook
 	desc = deviants_hook.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 5 }
 	is_shown = {
@@ -214,7 +214,7 @@ deviants_hook = {
 }
 
 deviants_child_interaction = {
-	icon = d_child
+	icon = d_pregnant
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

@@ -75,7 +75,6 @@ deviants_heal_interaction = {
 				has_trait = adulterer
 				has_trait = fornicator
 				has_trait = witch
-				has_character_modifier = deviants_fuckedsilly
 			}
 		}
 	}
@@ -157,8 +156,6 @@ deviants_heal_interaction = {
 			remove_trait = fornicator
 			remove_trait = murderer
 			remove_trait = witch
-
-			remove_character_modifier = deviants_fuckedsilly
 		}
 	}
 	auto_accept = yes
@@ -203,6 +200,14 @@ deviants_weight_interaction = {
 					trait = deviants_lesser_succubus
 					value >= 2
 				}
+			}
+		}
+	}
+	is_valid = {
+		scope:recipient = {
+			OR = {
+				current_weight > 20
+				current_weight < 20
 			}
 		}
 	}
