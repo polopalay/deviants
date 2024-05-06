@@ -1,0 +1,10 @@
+deviants_slaver = {
+	corresponding = deviants_slave_owner
+	opinion = -20
+}
+
+deviants_slave_owner = {
+	corresponding = deviants_slaver
+	opinion = 20
+}
+

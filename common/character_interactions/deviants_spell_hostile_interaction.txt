@@ -161,7 +161,7 @@ deviants_imprison_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 5
+				value >= 10
 			} 
 		}
 		scope:recipient = {
@@ -186,7 +186,7 @@ deviants_imprison_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -5
+				value = -10
 			}
 			imprison = {
 				target = scope:recipient
@@ -210,4 +210,55 @@ deviants_imprison_interaction = {
 			}
 		}
 	}
+}
+
+deviants_hook = {
+	icon = d_fabricate_hook
+	desc = deviants_hook.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			NOT = { has_relation_friend = scope:recipient } 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 10
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = favor_hook
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -10
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		ai_recipients = vassals
+		ai_recipients = liege
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 1 }
 }

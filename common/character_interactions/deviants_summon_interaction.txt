@@ -29,8 +29,8 @@ deviants_add_courtier = {
 		scope:actor = { 
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
-				value >= 5
+				track = power
+				value >= 10
 			} 
 		}
 		scope:recipient = { 
@@ -46,8 +46,8 @@ deviants_add_courtier = {
 			add_courtier = scope:recipient
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
-				value = -5
+				track = power
+				value = -10
 			}
 		}
 	}
@@ -56,158 +56,6 @@ deviants_add_courtier = {
 	ai_targets = {
 		ai_recipients = dynasty
 		ai_recipients = family
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
-}
-
-deviants_befriend = {
-	icon = d_friend
-	desc = deviants_befriend.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
-			NOT = { has_relation_friend = scope:recipient } 
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value >= 5
-			} 
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			set_relation_friend = scope:recipient
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = -5
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = neighboring_rulers
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
-}
-
-deviants_rival_interaction = {
-	icon = d_hostile
-	desc = deviants_rival_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
-			OR = {
-				has_relation_rival = scope:recipient
-				has_relation_nemesis = scope:recipient
-			}
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value >= 5
-			} 
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_relation_rival = scope:recipient }
-				remove_relation_rival = scope:recipient
-			}
-			if = {
-				limit = { has_relation_nemesis = scope:recipient }
-				remove_relation_nemesis = scope:recipient
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = -5
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = { ai_recipients = scripted_relations }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 10 }
-}
-
-deviants_hook = {
-	icon = d_fabricate_hook
-	desc = deviants_hook.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 5 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
-			NOT = { has_relation_friend = scope:recipient } 
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value >= 5
-			} 
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			add_hook = {
-				target = scope:recipient
-				type = favor_hook
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = -5
-			}
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = {
-		ai_recipients = neighboring_rulers
-		ai_recipients = peer_vassals
-		ai_recipients = vassals
-		ai_recipients = liege
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 1 }
@@ -225,8 +73,8 @@ deviants_child_interaction = {
 			is_adult = yes
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
-				value >= 5
+				track = power
+				value >= 10
 			} 
 		}
 		scope:recipient = {
@@ -328,8 +176,8 @@ deviants_child_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
-				value = -5
+				track = power
+				value = -10
 			}
 		}
 	}
@@ -360,7 +208,10 @@ deviants_create_lesser_succubus_interaction = {
 	cooldown = { years = 10 }
 	is_shown = {
 		scope:recipient = {
-			is_courtier_of = scope:actor
+			OR = {
+				is_courtier_of = scope:actor
+				is_vassal_of = scope:actor
+			}
 			is_female = yes
 			NOR = { 
 				has_trait = deviants_succubus

@@ -169,9 +169,9 @@ deviants_heal_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 20
+		base = 50
 		modifier = {
-			base = 80
+			base = 50
 			scope:recipient = scope:actor
 		}
 		modifier = {
@@ -302,3 +302,103 @@ deviants_learn_language_interaction = {
 	ai_will_do = { base = 5 }
 }
 
+deviants_befriend = {
+	icon = d_friend
+	desc = deviants_befriend.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			NOT = { has_relation_friend = scope:recipient } 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 5
+			} 
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			set_relation_friend = scope:recipient
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 1 }
+}
+
+deviants_rival_interaction = {
+	icon = d_hostile
+	desc = deviants_rival_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			OR = {
+				has_relation_rival = scope:recipient
+				has_relation_nemesis = scope:recipient
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 5
+			} 
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_held_title = {
+				any_county_province = {
+					has_building_or_higher = deviants_brothel1 
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_relation_rival = scope:recipient }
+				remove_relation_rival = scope:recipient
+			}
+			if = {
+				limit = { has_relation_nemesis = scope:recipient }
+				remove_relation_nemesis = scope:recipient
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 120
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 10 }
+}

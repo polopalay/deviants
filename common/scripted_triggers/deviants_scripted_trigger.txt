@@ -1,0 +1,41 @@
+is_valid_prostitute_trigger = {
+        is_adult = yes
+        is_incapable = no
+        is_imprisoned = no
+	is_travelling = no
+	is_in_army = no
+	scope:actor = { is_attracted_to_gender_of = scope:recipient }
+	OR = {
+		has_trait = deviants_succubus
+		has_trait = deviants_lesser_succubus
+		has_character_modifier = deviants_slave
+		has_character_modifier = deviants_prostitute 
+		age < 40
+	}
+	NOT = { is_spouse_of = scope:actor }
+	NOT = { has_character_modifier = deviants_fuckedsilly }
+}
+
+is_valid_construction_brothel1_trigger = {
+	any_held_title = {
+		any_county_province = {
+			has_building_or_higher = deviants_brothel1 
+		}
+	}
+}
+
+is_valid_construction_brothel2_trigger = {
+	any_held_title = {
+		any_county_province = {
+			has_building_or_higher = deviants_brothel2 
+		}
+	}
+}
+
+is_valid_construction_brothel3_trigger = {
+	any_held_title = {
+		any_county_province = {
+			has_building_or_higher = deviants_brothel3 
+		}
+	}
+}

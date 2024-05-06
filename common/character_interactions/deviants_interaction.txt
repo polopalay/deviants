@@ -13,13 +13,7 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_in_army = no
-			is_attracted_to_gender_of = scope:recipient
 			NOT = { is_at_war_with = scope:recipient }
-			NOT  = { is_spouse_of = scope:recipient }
-			NOR = {
-				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_slave
-			}
         	}
         	scope:recipient = {
             		is_adult = yes
@@ -28,34 +22,74 @@ deviants_prostitute_interaction = {
 			is_travelling = no
 			is_in_army = no
 			OR = {
-				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_slave
-			}
-			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
-				age < 40
+				AND = {
+					has_character_modifier = deviants_prostitute
+					age < 40
+				}
 			}
+			NOT = { any_relation = { type = deviants_slave_owner } }
         	}
     	}
-	is_valid = {
-        	scope:recipient = {
-			NOT = { has_character_modifier = deviants_fuckedsilly }
-        	}
-	}
 
 	auto_accept = yes
+	
+	is_valid = {
+		scope:recipient = {
+			OR = {
+				is_valid_prostitute_trigger = yes
+				any_vassal = {
+					is_valid_prostitute_trigger = yes
+					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
+				}
+				any_courtier = {
+					is_valid_prostitute_trigger = yes
+					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
+				}
+				any_relation = {
+					type = deviants_slaver
+					is_valid_prostitute_trigger = yes
+				}
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			if = {
+				limit = { is_valid_prostitute_trigger = yes }
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = { 
+					is_valid_prostitute_trigger = yes 
+					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
+				}
+				add_to_list = characters
+			}
+			every_vassal = {
+				limit = { 
+					is_valid_prostitute_trigger = yes
+					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
+				}
+				add_to_list = characters
+			}
+			every_relation = {
+				type = deviants_slaver
+				limit = { 
+					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
+					is_valid_prostitute_trigger = yes 
+				}
+				add_to_list = characters
+			}
+		}
+	}
 
     	on_accept = {
-		scope:recipient = {
-			add_character_modifier = {
-				modifier = deviants_fuckedsilly
-				months = 6
-			}
-			had_sex_with_effect = {
-				CHARACTER = scope:actor
-				PREGNANCY_CHANCE = pregnancy_chance
-            		}
+		scope:secondary_recipient = {
+			add_character_modifier = { modifier = deviants_fuckedsilly months = 2 }
+			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 		}
         	scope:actor = {
 			add_opinion = {
@@ -64,83 +98,48 @@ deviants_prostitute_interaction = {
 			}
 			if = {
 				limit = { 
-					scope:recipient = { has_character_modifier = deviants_prostitute }
+					scope:secondary_recipient = { has_character_modifier = deviants_prostitute }
 				}
 				if = {
-					limit = { exists = scope:recipient.liege }
-					if = {
-						limit = { NOT = { scope:recipient.liege = scope:actor } }
-						pay_short_term_gold = {
-							target = scope:recipient.liege
-							gold = 2
-						}
-					}
-					pay_short_term_gold = {
-						target = scope:recipient
-						gold = 3
-					}
+					limit = { scope:secondary_recipient = scope:recipient }
+					pay_short_term_gold = { target = scope:recipient gold = 5 } 
 				}
 				else = {
-					pay_short_term_gold = {
-						target = scope:recipient
-						gold = 5
-					}
+					pay_short_term_gold = { target = scope:recipient gold = 2 }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
 				}
 				random = {
 					chance = 10
-					modifier = {
-						add = 40
-						has_trait = generous
-					}
-					modifier = {
-						add = 5
-						scope:recipient = { has_trait = beauty_good_1 }
-					}
-					modifier = {
-						add = 8
-						scope:recipient = { has_trait = beauty_good_2 }
-					}
-					modifier = {
-						add = 10
-						scope:recipient = { has_trait = beauty_good_3 }
-					}
-					pay_short_term_gold = {
-						target = scope:recipient
-						gold = 1
-					}
+					modifier = { add = 40 has_trait = generous }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
+					modifier = { add = 8 scope:secondary_recipient = { has_trait = beauty_good_2 } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_3 } }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
 				}
 			}
     		}
 		if = {
-			limit = { scope:recipient = { has_trait = deviants_succubus } }
+			limit = { scope:secondary_recipient = { has_trait = deviants_succubus } }
 			scope:recipient = {
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value = 1
-				}
+				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 			}
 		}
 		if = {
-			limit = { scope:recipient.liege = { has_trait = deviants_succubus } }
+			limit = {
+				NOT = { scope:secondary_recipient = scope:recipient }
+				scope:recipient = { has_trait = deviants_succubus } 
+			}
 			random = {
-				chance = 5
-				scope:recipient.liege = {
-					add_trait_xp = {
-						trait = deviants_succubus
-						track = corruption
-						value = 1
-					}
+				chance = 25
+				scope:recipient = {
+					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 				}
 			}
 		}
 		if = {
-			limit = { scope:recipient = { has_trait = deviants_lesser_succubus } }
-				scope:recipient = {
-					add_trait_xp = {
-						trait = deviants_lesser_succubus
-						value = 2
-					}
+			limit = { scope:secondary_recipient = { has_trait = deviants_lesser_succubus } }
+				scope:secondary_recipient = {
+					add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 				}
     		}
 	}
@@ -164,21 +163,21 @@ deviants_prostitute_interaction = {
 				gold > 10
 			}
 		}
-		modifier = {
-			add = 5
+				modifier = {
+		add = 5
 			scope:actor = {
 				has_trait = lustful
 			}
 		}
 		modifier = {
 			add = -10
-			scope:recipient = {
+			scope:secondary_recipient = {
 				is_close_family_of = scope:actor
 			}
 		}
 		modifier = {
 			add = 5
-			scope:recipient = {
+			scope:secondary_recipient = {
 				OR = {
 					has_trait = physique_good_1
 					has_trait = physique_good_2
@@ -188,7 +187,7 @@ deviants_prostitute_interaction = {
 		}
 		modifier = {
 			add = -5
-			scope:recipient = {
+			scope:secondary_recipient = {
 				OR = {
 					has_trait = physique_bad_1
 					has_trait = physique_bad_2
@@ -198,7 +197,7 @@ deviants_prostitute_interaction = {
 		}
 		modifier = {
 			add = 5
-			scope:recipient = {
+			scope:secondary_recipient = {
 				OR = {
 					has_trait = intellect_good_1
 					has_trait = intellect_good_2
@@ -208,7 +207,7 @@ deviants_prostitute_interaction = {
 		}
 		modifier = {
 			add = -5
-			scope:recipient = {
+			scope:secondary_recipient = {
 				OR = {
 					has_trait = intellect_bad_1
 					has_trait = intellect_bad_2
@@ -218,43 +217,43 @@ deviants_prostitute_interaction = {
 		}
 		modifier = {
 			add = -5
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = beauty_bad_1
 			}
 		}
 		modifier = {
 			add = -8
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = beauty_bad_2
 			}
 		}
 		modifier = {
 			add = -10
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = beauty_bad_3
 			}
 		}
 		modifier = {
 			add = 5
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = beauty_good_1
 			}
 		}
 		modifier = {
 			add = 8
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = beauty_good_2
 			}
 		}
 		modifier = {
 			add = 10
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = beauty_good_3
 			}
 		}
 		modifier = {
 			add = -100
-			scope:recipient = {
+			scope:secondary_recipient = {
 				has_trait = lovers_pox
 			}
 		}
@@ -305,7 +304,10 @@ deviants_become_prostitute_interaction = {
 					}
 				}
 				AND = {
-					is_courtier_of = scope:actor
+					OR = {
+						is_courtier_of = scope:actor
+						is_imprisoned_by = scope:actor
+					}
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute

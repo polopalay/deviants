@@ -1,5 +1,5 @@
 deviants_absorb_interaction = {
-	icon = d_absorb
+	icon = d_loyalty
 	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -24,13 +24,7 @@ deviants_absorb_interaction = {
 		}
 	}
 	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
-		}
+		scope:actor = { is_valid_construction_brothel2_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
@@ -62,6 +56,7 @@ deviants_dispel_interaction = {
 	common_interaction = yes
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
+		NOT = { is_at_war_with = scope:recipient }
 		scope:actor = {
 			is_adult = yes
 			is_ruler = yes
@@ -73,25 +68,21 @@ deviants_dispel_interaction = {
 			NOT  = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				is_vassal_of = scope:recipient
+				has_relation_deviants_slave_owner = scope:recipient
 			}
 			OR = {
 				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_slave
 				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			}
 		}
 		scope:recipient = {
 			is_ruler = yes
-			NOT = { is_at_war_with = scope:actor }
 			has_trait = deviants_succubus 
 		}
 	}
 	send_option = {
-		is_valid = {
-			scope:actor = {
-				has_usable_hook = scope:recipient
-			}
-		}
+		is_valid = { scope:actor = { has_usable_hook = scope:recipient } }
 		flag = hook	
 		localization = GENERIC_SPEND_A_HOOK
 	}
@@ -119,33 +110,18 @@ deviants_dispel_interaction = {
 				scope:recipient = {
 					random_courtier = {
 						limit = { is_female = no is_adult = yes }
-						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
 						scope:actor = { 
 							remove_character_modifier = deviants_prostitute
 							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 						} 
-						scope:recipient = { 
-							add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
-							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-						} 
-					}
-				}
-			}
-			if = {
-				limit = { has_character_modifier = deviants_slave }
-				scope:recipient = {
-					random_courtier = {
-						limit = { is_female = no is_adult = yes is_knight = yes }
 						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
-						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
-						scope:actor = { 
-							remove_character_modifier = deviants_slave
-							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-						} 
 						scope:recipient = { 
-							add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+							random = {
+								chance = 25
+								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
+							}
 						} 
 					}
 				}
@@ -155,15 +131,18 @@ deviants_dispel_interaction = {
 				scope:recipient = {
 					random_courtier = {
 						limit = { is_female = no is_adult = yes is_knight = yes }
-						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
 						scope:actor = { 
 							remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 						} 
+						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 						scope:recipient = { 
-							add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
 							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+							random = {
+								chance = 50
+								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+							}
 						} 
 					}
 				}

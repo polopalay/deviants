@@ -1,8 +1,8 @@
-deviants_prostitute {
+deviants_prostitute = {
 	icon = prostitute
 }
 
-deviants_slave{
+deviants_slave = {
 	icon = slave
 }
 

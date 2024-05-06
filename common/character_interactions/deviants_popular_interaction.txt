@@ -19,13 +19,7 @@ deviants_offer_orgy = {
 		}
 	}
 	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
-		}
+		scope:actor = { is_valid_construction_brothel1_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
@@ -75,7 +69,7 @@ deviants_nude_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 5
+				value >= 2
 			} 
 		}
 		scope:recipient = {
@@ -84,28 +78,23 @@ deviants_nude_interaction = {
 			NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 		}
 	}
-	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
-		}
-	}
+	is_valid = { is_valid_construction_brothel1_trigger = yes }
 	on_accept = {
 		scope:recipient = {
-			add_character_modifier = { modifier = deviants_prostitute years = 1 }
 			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			random_courtier = {
 				limit = { is_female = no is_knight = no is_adult = yes }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 				if = {
 					limit = { NOT = { scope:actor = scope:recipient } }
 					had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
 					scope:actor = { 
-						add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
-						add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+						add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
+						random = {
+							chance = 25
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+						}
 					}
 				}
 			}
@@ -114,7 +103,7 @@ deviants_nude_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -5
+				value = -2
 			}
 		}
 	}
@@ -146,33 +135,28 @@ deviants_shake_mind_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 10
+				value >= 5
 			} 
 		}
 	}
 	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
-		}
+		scope:actor = { is_valid_construction_brothel2_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
-			add_character_modifier = { modifier = deviants_slave years = 1 }
-			every_courtier_or_guest = {
-				limit = { is_female = no is_knight = yes }
+			add_character_modifier = deviants_prostitute
+			random_courtier = {
+				limit = { is_female = no is_adult = yes }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
 				scope:actor = { 
-					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+					random = {
+						chance = 25
+						add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+					}
 				} 
-				scope:recipient = { 
-					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-				}
 			}
 			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
 		}
@@ -180,7 +164,7 @@ deviants_shake_mind_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -10
+				value = -5
 			}
 		}
 	}
@@ -214,54 +198,42 @@ deviants_mind_break_interaction = {
 				has_character_modifier = deviants_slave
 			}
 		}
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 20
-			} 
-		}
 	}
 	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel3 
-				}
-			}
-		}
+		scope:actor = { is_valid_construction_brothel3_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
-			remove_trait = chaste
-			add_trait = lustful	
-			add_character_modifier = { modifier = deviants_slave }
-			add_character_modifier = { modifier = deviants_prostitute }
+			set_relation_deviants_slave_owner = scope:actor
+			add_character_modifier = deviants_slave
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
-				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
-				scope:actor = { 
-					add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
-				} 
+				scope:recipient = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				scope:actor = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
 				if = {
 					limit = { is_knight = yes }
-					scope:actor = { 
-						add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+					scope:actor = {
+						random = {
+							chance = 25
+							add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+						}
 					} 
 				}
 				else = {
 					scope:actor = { 
-						add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+						random = {
+							chance = 25
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 } 
+						}
 					} 
-				}
-				scope:recipient = { 
-					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
 				}
 			}
 			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
 		}
 		scope:actor = {
+			set_relation_deviants_slaver =  scope:recipient
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring

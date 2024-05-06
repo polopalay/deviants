@@ -239,7 +239,7 @@ deviants_prostitution.30 = {
 	}
 
 	immediate = {
-		top_liege.random_vassal_or_below  = {
+		random_ruler  = {
 			limit = {
 				is_female = no
 				age > 16
