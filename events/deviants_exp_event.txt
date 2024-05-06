@@ -7,7 +7,7 @@ deviants_exp.10 = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value <= 100
+				value <= 33
 			}
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
@@ -124,7 +124,7 @@ deviants_exp.20 = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value <= 100
+				value <= 33
 			}	 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
@@ -179,7 +179,7 @@ deviants_exp.30 = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value <= 100
+				value <= 50
 			} 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus

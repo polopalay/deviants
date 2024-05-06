@@ -204,17 +204,9 @@ deviants_weight_interaction = {
 			}
 		}
 	}
-	is_valid = {
-		scope:recipient = {
-			OR = {
-				current_weight > 20
-				current_weight < 20
-			}
-		}
-	}
 	on_accept = {
 		scope:recipient = {
-			change_current_weight = -500
+			change_current_weight = -200
 			change_current_weight = 100
 		}
 		scope:actor = {

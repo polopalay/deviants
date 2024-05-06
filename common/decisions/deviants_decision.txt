@@ -3,12 +3,14 @@ deviants_spawn_death_korp_interaction = {
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
 	confirm_text = deviants_spawn_death_korp_interaction.c
 	is_shown = {
-		is_valid_construction_brothel2_trigger = yes
 		has_trait_xp = {
 			trait = deviants_succubus
 			track = loyalty
 			value >= 25
 		} 
+	}
+	is_valid = {
+		is_valid_construction_brothel2_trigger = yes
 	}
 	effect = {
 		spawn_army = {

@@ -7,7 +7,7 @@ deviants_slave = {
 }
 
 deviants_fuckedsilly = {
-	icon = souls
+	icon = d_sex
     	health = -0.2
 	stacking = yes
 }
@@ -34,7 +34,7 @@ deviants_buff = {
 }
 
 deviants_generals = {
-	icon = souls
+	icon = d_devil
 	diplomacy = 100
 	martial = 100
 	stewardship = 100

@@ -38,22 +38,27 @@ deviants_prostitute_interaction = {
 		scope:recipient = {
 			OR = {
 				is_valid_prostitute_trigger = yes
-				any_vassal = {
-					is_valid_prostitute_trigger = yes
+				AND = {
+					any_vassal = { is_valid_prostitute_trigger = yes }
 					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
-				any_courtier = {
-					is_valid_prostitute_trigger = yes
+				AND = {
+					any_courtier = { is_valid_prostitute_trigger = yes }
 					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
-				any_relation = {
-					type = deviants_partner
-					is_valid_prostitute_trigger = yes
+				AND = {
+					any_relation = {
+						type = deviants_partner
+						is_valid_prostitute_trigger = yes
+					}
 					scope:recipient = { is_valid_construction_brothel2_trigger = yes }
 				}
-				any_relation = {
-					type = deviants_slaver
-					is_valid_prostitute_trigger = yes
+				AND = {
+					any_relation = {
+						type = deviants_slaver
+						is_valid_prostitute_trigger = yes
+						scope:recipient = { is_valid_construction_brothel3_trigger = yes }
+					}
 					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 				}
 			}
@@ -291,19 +296,19 @@ deviants_prostitute_interaction = {
 	ai_will_do = {
 		base = 0
 		modifier = {
-			add = 5
+			add = 10
 			scope:actor = {
 				gold > 20
 			}
 		}
-				modifier = {
-		add = 5
+		modifier = {
+			add = 5
 			scope:actor = {
 				has_trait = lustful
 			}
 		}
 		modifier = {
-			add = -10
+			add = -20
 			scope:secondary_recipient = {
 				is_close_family_of = scope:actor
 			}
@@ -444,7 +449,7 @@ deviants_become_prostitute_interaction = {
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
-							count < 3
+							count < 5
 						}	
 					}
 				}
