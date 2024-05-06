@@ -141,10 +141,17 @@ deviants_shake_mind_interaction = {
 	}
 	is_valid = {
 		scope:actor = { is_valid_construction_brothel2_trigger = yes }
+		scope:recipient = {
+			NOR = { 
+				any_relation = { type = deviants_partner }
+				any_relation = { type = deviants_slave_owner }
+			}
+		}
 	}
 	on_accept = {
 		scope:recipient = {
 			add_character_modifier = deviants_prostitute
+			set_relation_deviants_partner = scope:actor
 			random_courtier = {
 				limit = { is_female = no is_adult = yes }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
@@ -161,6 +168,7 @@ deviants_shake_mind_interaction = {
 			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
 		}
 		scope:actor = {
+			set_relation_deviants_partner = scope:recipient
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
@@ -198,12 +206,23 @@ deviants_mind_break_interaction = {
 				has_character_modifier = deviants_slave
 			}
 		}
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 20
+			} 
+		}
 	}
 	is_valid = {
 		scope:actor = { is_valid_construction_brothel3_trigger = yes }
+		scope:recipient = {
+			NOT = { any_relation = { type = deviants_slave_owner } }
+		}
 	}
 	on_accept = {
 		scope:recipient = {
+			remove_relation_deviants_partner = scope:actor
 			set_relation_deviants_slave_owner = scope:actor
 			add_character_modifier = deviants_slave
 			every_courtier_or_guest = {
@@ -233,6 +252,7 @@ deviants_mind_break_interaction = {
 			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
 		}
 		scope:actor = {
+			remove_relation_deviants_partner = scope:actor
 			set_relation_deviants_slaver =  scope:recipient
 			add_trait_xp = {
 				trait = deviants_succubus

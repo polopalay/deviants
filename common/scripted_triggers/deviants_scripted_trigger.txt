@@ -1,16 +1,21 @@
 is_valid_prostitute_trigger = {
         is_adult = yes
+	is_female = yes
         is_incapable = no
         is_imprisoned = no
 	is_travelling = no
 	is_in_army = no
-	scope:actor = { is_attracted_to_gender_of = scope:recipient }
+	is_attracted_to_gender_of = scope:actor
 	OR = {
 		has_trait = deviants_succubus
 		has_trait = deviants_lesser_succubus
-		has_character_modifier = deviants_slave
-		has_character_modifier = deviants_prostitute 
-		age < 40
+		AND = {
+			OR = {
+				has_character_modifier = deviants_slave
+				has_character_modifier = deviants_prostitute 
+			}
+			age < 40
+		}
 	}
 	NOT = { is_spouse_of = scope:actor }
 	NOT = { has_character_modifier = deviants_fuckedsilly }

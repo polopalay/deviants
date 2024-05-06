@@ -33,7 +33,6 @@ deviants_prostitute_interaction = {
         	}
     	}
 
-	auto_accept = yes
 	
 	is_valid = {
 		scope:recipient = {
@@ -48,8 +47,20 @@ deviants_prostitute_interaction = {
 					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
 				any_relation = {
+					type = deviants_partner
+					is_valid_prostitute_trigger = yes
+					NOT = { 
+						has_trait =deviants_succubus
+					}
+					scope:recipient = { is_valid_construction_brothel2_trigger = yes }
+				}
+				any_relation = {
 					type = deviants_slaver
 					is_valid_prostitute_trigger = yes
+					NOT = { 
+						has_trait =deviants_succubus
+					}
+					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 				}
 			}
 		}
@@ -76,10 +87,24 @@ deviants_prostitute_interaction = {
 				add_to_list = characters
 			}
 			every_relation = {
+				type = deviants_partner
+				limit = { 
+					is_valid_prostitute_trigger = yes
+					NOT = { 
+						has_trait =deviants_succubus
+					}
+					scope:recipient = { is_valid_construction_brothel2_trigger = yes }
+				}
+				add_to_list = characters
+			}
+			every_relation = {
 				type = deviants_slaver
 				limit = { 
-					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 					is_valid_prostitute_trigger = yes 
+					NOT = { 
+						has_trait =deviants_succubus
+					}
+					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 				}
 				add_to_list = characters
 			}
@@ -142,6 +167,46 @@ deviants_prostitute_interaction = {
 					add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 				}
     		}
+	}
+
+	auto_accept = {
+		scope:secondary_recipient = {
+			OR = {
+				scope:secondary_recipient = scope:recipient
+				is_courtier_of = scope:recipient
+				is_vassal_of = scope:recipient
+				has_relation_deviants_slave_owner = scope:recipient
+				has_trait = deviants_lesser_succubus
+				has_trait = deviants_succubus
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 10
+		modifier = {
+			add = -50
+			scope:secondary_recipient = { 
+				OR = {
+					is_close_family_of = scope:actor
+					is_child_of = scope:actor
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			scope:secondary_recipient = { 
+				OR = {
+					has_trait = deviants_lesser_succubus
+					has_trait = deviants_succubus
+				}
+			}
+		}
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:secondary_recipient
+			multiplier = 1
+		}
 	}
 
 	ai_frequency = 12
