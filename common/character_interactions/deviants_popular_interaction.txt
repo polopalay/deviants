@@ -224,7 +224,9 @@ deviants_mind_break_interaction = {
 		scope:recipient = {
 			remove_relation_deviants_partner = scope:actor
 			set_relation_deviants_slave_owner = scope:actor
+			remove_character_modifier = deviants_prostitute
 			add_character_modifier = deviants_slave
+			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
@@ -249,7 +251,6 @@ deviants_mind_break_interaction = {
 					} 
 				}
 			}
-			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
 		}
 		scope:actor = {
 			remove_relation_deviants_partner = scope:actor

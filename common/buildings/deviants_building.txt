@@ -1,7 +1,7 @@
 deviants_brothel1 = {
 	type_icon = "icon_smeltworks.dds"
-	construction_time = very_quick_construction_time
-	cost = { gold = expensive_building_tier_1_cost }
+	construction_time = standard_construction_time
+	cost = { gold = expensive_building_tier_3_cost }
 	type = duchy_capital
 	levy = 50
 	max_garrison = 50
@@ -53,8 +53,8 @@ deviants_brothel1 = {
 
 deviants_brothel2 = {
 	type_icon = "icon_smeltworks.dds"
-	construction_time = quick_construction_time
-	cost = { gold = expensive_building_tier_2_cost }
+	construction_time = slow_construction_time
+	cost = { gold = expensive_building_tier_6_cost }
 	type = duchy_capital
 	levy = 100 
 	max_garrison = 100
@@ -96,8 +96,8 @@ deviants_brothel2 = {
 
 deviants_brothel3 = {
 	type_icon = "icon_smeltworks.dds"
-	construction_time = standard_construction_time
-	cost = { gold = expensive_building_tier_3_cost }
+	construction_time = very_slow_construction_time
+	cost = { gold = expensive_building_tier_8_cost }
 	type = duchy_capital
 	levy = 125
 	max_garrison = 125

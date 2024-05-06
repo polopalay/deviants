@@ -243,7 +243,7 @@ deviants_create_lesser_succubus_interaction = {
 			}
 			if = {
 				limit = { has_trait = lustful }
-				add_trait = rakish
+				add_character_modifier = deviants_fuckedsilly
 			}
 			else_if = {
 				limit = { has_trait = chaste }
@@ -379,6 +379,17 @@ deviants_create_lesser_succubus_interaction = {
 			}
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
+			remove_character_modifier = deviants_slave
+			every_relation = {
+				type = deviants_slave_owner
+				scope:recipient = { remove_relation_deviants_slave_owner = this }
+				remove_relation_deviants_slaver =  scope:recipient
+			}
+			every_relation = {
+				type = deviants_partner
+				scope:recipient = { remove_relation_deviants_partner = this }
+				remove_relation_deviants_partner = scope:recipient
+			}
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -438,7 +449,7 @@ deviants_create_succubus_interaction = {
 			}
 			if = {
 				limit = { has_trait = lustful }
-				add_trait = rakish
+				add_character_modifier = deviants_fuckedsilly
 			}
 			else_if = {
 				limit = { has_trait = chaste }
@@ -574,6 +585,17 @@ deviants_create_succubus_interaction = {
 			}
 			add_trait = deviants_succubus
 			add_character_modifier = deviants_prostitute
+			remove_character_modifier = deviants_slave
+			every_relation = {
+				type = deviants_slave_owner
+				scope:recipient = { remove_relation_deviants_slave_owner = this }
+				remove_relation_deviants_slaver =  scope:recipient
+			}
+			every_relation = {
+				type = deviants_partner
+				scope:recipient = { remove_relation_deviants_partner = this }
+				remove_relation_deviants_partner = scope:recipient
+			}
 		}
 		scope:actor = {
 			add_trait_xp = {

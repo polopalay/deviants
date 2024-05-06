@@ -56,8 +56,8 @@ deviants_dispel_interaction = {
 	common_interaction = yes
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
-		NOT = { is_at_war_with = scope:recipient }
 		scope:actor = {
+			NOT = { is_at_war_with = scope:recipient }
 			is_adult = yes
 			is_ruler = yes
 			is_female = yes
@@ -69,7 +69,7 @@ deviants_dispel_interaction = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
 				is_vassal_of = scope:recipient
-				has_relation_deviants_slave_owner = scope:recipient
+				any_relation = { type = deviants_slaver }
 			}
 			OR = {
 				has_character_modifier = deviants_prostitute
@@ -148,9 +148,16 @@ deviants_dispel_interaction = {
 				}
 			}
 		}
+		scope:recipient = {
+			every_relation = {
+				type = deviants_partner
+				scope:recipient = { remove_relation_deviants_partner = this }
+				remove_relation_deviants_partner = scope:recipient
+			}
+		}
 	}
 	ai_accept = {
-		base = 0
+		base = -10
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
@@ -165,5 +172,96 @@ deviants_dispel_interaction = {
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 50 }
+	ai_will_do = { 
+		base = 50 
+		modifier = {
+			add = -45	
+			scope:actor = {
+				any_relation = { type = deviants_slaver }
+			}
+		}
+	}
+}
+
+deviants_free_slave_interaction = {
+	icon = d_free_slave
+	desc = deviants_dispel_interaction.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	common_interaction = yes
+	send_options_exclusive = no
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			NOT = { is_at_war_with = scope:recipient }
+			is_adult = yes
+			is_ruler = yes
+			is_female = yes
+			has_relation_deviants_slave_owner = scope:recipient
+		}
+	}
+	send_option = {
+		is_valid = { scope:actor = { has_usable_hook = scope:recipient } }
+		flag = hook	
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}	
+
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { scope:hook = yes has_hook = scope:recipient }
+				use_hook = scope:recipient
+			}
+			if = {
+				limit = { has_character_modifier = deviants_slave }
+				scope:recipient = {
+					every_courtier = {
+						limit = { is_female = no is_adult = yes }
+						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
+						scope:actor = { 
+							remove_character_modifier = deviants_slave
+							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+						}
+						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+						scope:recipient = { 
+							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+							random = {
+								chance = 25
+								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
+							}
+						} 
+					}
+				}
+			}
+			remove_relation_deviants_slaver = scope:recipient
+		}
+		scope:recipient = {
+			remove_relation_deviants_slave_owner = scope:actor
+		}
+	}
+	ai_accept = {
+		base = -20
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 1
+	ai_targets = { 	
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = neighboring_rulers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
 }

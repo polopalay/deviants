@@ -341,6 +341,17 @@ deviants_become_succubus = {
 			remove_trait = education_learning_5
 			add_trait = education_learning_1
 		}
+		remove_character_modifier = deviants_slave
+		every_relation = {
+			type = deviants_slave_owner
+			root = { remove_relation_deviants_slave_owner = this }
+			remove_relation_deviants_slaver =  root		
+		}
+		every_relation = {
+			type = deviants_partner
+			root = { remove_relation_deviants_partner = this }
+			remove_relation_deviants_partner = root	
+		}
 		set_immortal_age = 18
 		add_trait = deviants_succubus
 	}
