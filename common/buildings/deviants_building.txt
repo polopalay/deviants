@@ -14,11 +14,7 @@ deviants_brothel1 = {
 			has_trait = deviants_succubus
 		}
 		NOT = {
-			any_sub_realm_barony = {
-				title_province = { 
-					has_building_or_higher = inn_slut_brothel 
-				}
-			}
+			is_valid_construction_brothel1_trigger = yes
 		}
 	}
 	can_construct = { 

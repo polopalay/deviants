@@ -56,7 +56,7 @@
  actor_secondary_deviants_buy_slut_interaction: "Choose one"
 
  deviants_buff_interaction: "Devil's Blessing"
- deviants_buff_interaction.desc: "Exchange 1 portion of the obtained seeds for the Demon Lord's blessing"
+ deviants_buff_interaction.desc: "Exchange 5 loyalty for the Demon Lord's blessing"
 
  deviants_weight_interaction: "Adjust Weight"
  deviants_weight_interaction.desc: "Get your weight to the perfect level"
@@ -120,9 +120,6 @@
 
  deviants_dispel_interaction: "Dispel"
  deviants_dispel_interaction.desc: "Please pray for [recipient.GetShortUIName] to undo the magic she has cast on you"
-
- deviants_free_slave_interaction: "Free Slave"
- deviants_free_slave_interaction.desc: "Beg [recipient.GetShortUIName] to free you"
 
  deviants_learn_language_interaction: "Learn Language"
  deviants_learn_language_interaction.desc: "Learn [recipient.GetShortUIName]'s language"

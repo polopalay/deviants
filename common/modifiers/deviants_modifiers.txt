@@ -20,6 +20,16 @@ deviants_buff = {
 	intrigue = 5
 	learning = 5
 	prowess = 5
+	movement_speed = 0.1
+	retreat_losses = -0.1
+	embarkation_cost_mult = -0.1
+	naval_movement_speed_mult = 0.1
+	siege_phase_time = -0.1
+	siege_morale_loss = 0.1
+	hard_casualty_modifier = -0.1
+	supply_duration = 0.1
+	supply_limit_mult = 0.1
+	mercenary_hire_cost_mult = -0.1
 	stacking = yes
 }
 

@@ -2,10 +2,6 @@
  deviants_become_succubus: "Become Succubus"
  deviants_become_succubus.desc: "[recipient.GetShortUIName] will become Succubus"
  deviants_become_succubus.c: "Become Succubus"
-
- deviants_spawn_darkarmy_interaction: "Spawn Dark Amry"
- deviants_spawn_darkarmy_interaction.desc: "Spawn Dark Army in your capital"
- deviants_spawn_darkarmy_interaction.c: "Spawn"
  
  deviants_spawn_death_korp_interaction: "Spawn Death Korps"
  deviants_spawn_death_korp_interaction.desc: "Spawn Death Korps in your capital"

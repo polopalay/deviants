@@ -85,11 +85,7 @@ deviants_child_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
+			is_valid_construction_brothel1_trigger = yes
 		}
 	}
 	on_accept = {
@@ -228,11 +224,7 @@ deviants_create_lesser_succubus_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
+			is_valid_construction_brothel2_trigger = yes
 		}
 	}
 	on_accept = {
@@ -434,11 +426,7 @@ deviants_create_succubus_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel3 
-				}
-			}
+			is_valid_construction_brothel3_trigger = yes
 		}
 	}
 	on_accept = {

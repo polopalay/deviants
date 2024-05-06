@@ -250,7 +250,7 @@ deviants_weight_interaction = {
 
 deviants_learn_language_interaction = {
 	icon = d_learn_language
-	desc = deviants_buff_interaction.desc
+	desc = deviants_learn_language_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
@@ -320,13 +320,7 @@ deviants_befriend = {
 		}
 	}
 	is_valid = {
-		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
-		}
+		is_valid_construction_brothel1_trigger = yes
 	}
 	on_accept = {
 		scope:actor = {
@@ -372,11 +366,7 @@ deviants_rival_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
+			is_valid_construction_brothel1_trigger = yes
 		}
 	}
 	on_accept = {

@@ -68,11 +68,6 @@ deviants_rumor_interaction = {
 	cooldown = { years = 1 }
 	is_shown = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -91,11 +86,7 @@ deviants_rumor_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
+			is_valid_construction_brothel1_trigger = yes
 		}
 	}
 	on_accept = {
@@ -174,11 +165,7 @@ deviants_imprison_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel2 
-				}
-			}
+			is_valid_construction_brothel2_trigger = yes
 		}
 	}
 	on_accept = {
@@ -244,11 +231,7 @@ deviants_hook = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_held_title = {
-				any_county_province = {
-					has_building_or_higher = deviants_brothel1 
-				}
-			}
+			is_valid_construction_brothel2_trigger = yes
 		}
 	}
 	auto_accept = yes

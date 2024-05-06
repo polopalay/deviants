@@ -17,6 +17,7 @@ is_valid_prostitute_trigger = {
 		}
 	}
 	NOT = { is_spouse_of = scope:actor }
+	NOT = { has_character_modifier = deviants_fuckedsilly }
 }
 
 is_valid_construction_brothel1_trigger = {
