@@ -4,6 +4,7 @@ deviants_prostitute_interaction = {
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	common_interaction = yes
+	cooldown = { months = 2 }
 
     	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -254,7 +255,7 @@ deviants_prostitute_interaction = {
 				scope:recipient = { has_trait = deviants_succubus } 
 			}
 			random = {
-				chance = 25
+				chance = 5
 				scope:recipient = {
 					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 				}
@@ -308,13 +309,12 @@ deviants_prostitute_interaction = {
 		}
 	}
 
-	ai_frequency = 12
+	ai_frequency = 2
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
-		ai_recipients = realm_characters
 	}
 	ai_potential = { 
 		primary_title.tier >= tier_county

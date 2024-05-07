@@ -166,6 +166,7 @@ deviants_heal_interaction = {
 		ai_recipients = self 
 		ai_recipients = spouses
 		ai_recipients = children
+		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -379,8 +380,8 @@ deviants_rival_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
+	ai_frequency = 12
 	ai_targets = { ai_recipients = scripted_relations }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 100 }
 }

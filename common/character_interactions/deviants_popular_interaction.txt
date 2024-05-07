@@ -47,7 +47,7 @@ deviants_offer_orgy = {
 			multiplier = 1
 		}
 	}
-	ai_frequency = 24
+	ai_frequency = 60
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals

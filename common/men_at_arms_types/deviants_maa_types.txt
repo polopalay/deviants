@@ -16,10 +16,10 @@ deviants_dark_amry = {
 	stack = 100
 	max_sub_regiments = 5
 	can_recruit = { has_trait = deviants_succubus }
-	buy_cost = { gold = deviants_dark_amry_recruitment_cost  }
-	low_maintenance_cost = { gold = deviants_dark_amry_low_maint_cost }
-	high_maintenance_cost = { gold = deviants_dark_amry_high_maint_cost }
-	ai_quality = { value = culture_ai_weight_deviants_dark_amry }
+	buy_cost = 150
+	low_maintenance_cost = 0.2
+	high_maintenance_cost = 0.5
+	ai_quality = { value = 80 }
 }
 
 deviants_death_korps  = {

@@ -43,7 +43,11 @@ deviants_absorb_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 60
-	ai_targets = { ai_recipients = self }
+	ai_targets = { 
+		ai_recipients = courtiers 
+		ai_recipients = prisoners
+		ai_recipients = vassals
+	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
 }
