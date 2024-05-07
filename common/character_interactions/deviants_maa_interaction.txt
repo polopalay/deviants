@@ -172,18 +172,11 @@ deviants_dispel_interaction = {
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 50 
-		modifier = {
-			add = -45	
-			scope:actor = {
-				any_relation = { type = deviants_slaver }
-			}
-		}
 	}
 }
 
@@ -263,7 +256,6 @@ deviants_free_slave_interaction = {
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }

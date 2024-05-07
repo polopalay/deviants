@@ -229,7 +229,7 @@ deviants_weight_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
+	ai_frequency = 36
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -286,13 +286,6 @@ deviants_learn_language_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = vassals
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
 }
 
 deviants_befriend = {
@@ -326,15 +319,6 @@ deviants_befriend = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = neighboring_rulers
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
 }
 
 deviants_rival_interaction = {

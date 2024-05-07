@@ -52,13 +52,6 @@ deviants_add_courtier = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = {
-		ai_recipients = dynasty
-		ai_recipients = family
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
 }
 
 deviants_child_interaction = {
@@ -178,22 +171,6 @@ deviants_child_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0
-		modifier = {
-			add = 100
-			scope:recipient = {
-				any_child = {
-					is_alive = yes
-					count = 0
-				}
-			}
-			scope:actor = scope:recipient
-		}
-	}
 }
 
 deviants_create_lesser_succubus_interaction = {
@@ -392,14 +369,6 @@ deviants_create_lesser_succubus_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
-	ai_targets = {
-		ai_recipients = courtiers
-		ai_recipients = councillors
-		ai_recipients = vassals
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
 }
 
 deviants_create_succubus_interaction = {
@@ -594,13 +563,5 @@ deviants_create_succubus_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 500
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = peer_vassals
-		ai_recipients = neighboring_rulers
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 10 }
 }
 

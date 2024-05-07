@@ -9,9 +9,8 @@ deviants_prostitution.10 = {
 
 	trigger = {
 		any_courtier = {
-			is_female = no
 			age > 16
-			is_attracted_to_gender_of = root
+			is_valid_prostitute_partner_trigger = yes
 			NOT = { is_spouse_of = root }
 			NOT = { is_close_family_of = root }
 		}
@@ -20,9 +19,8 @@ deviants_prostitution.10 = {
 	immediate = {
 		every_courtier = {
 			limit = {
-				is_female = no
 				age > 16
-				is_attracted_to_gender_of = root
+				is_valid_prostitute_partner_trigger = yes
 				NOT = { is_spouse_of = root }
 				NOT = { is_close_family_of = root }
 			}
@@ -115,9 +113,8 @@ deviants_prostitution.20 = {
 
 	trigger = {
 		any_knight = {
-			is_female = no
 			age > 16
-			is_attracted_to_gender_of = root
+			is_valid_prostitute_partner_trigger = yes
 		}
 		NOT = { has_character_modifier = deviants_slave }
 		NOT = { is_spouse_of = root }
@@ -127,7 +124,6 @@ deviants_prostitution.20 = {
 	immediate = {
 		random_knight = {
 			limit = {
-				is_female = no
 				age > 16
 				NOT = { is_spouse_of = root }
 				NOT = { is_close_family_of = root }
@@ -232,18 +228,16 @@ deviants_prostitution.30 = {
 
 	trigger = {
 		top_liege.any_vassal_or_below = {
-			is_female = no
 			age > 16
-			is_attracted_to_gender_of = root
+			is_valid_prostitute_partner_trigger = yes
 		}
 	}
 
 	immediate = {
 		top_liege.random_vassal_or_below  = {
 			limit = {
-				is_female = no
 				age > 16
-				is_attracted_to_gender_of = root
+				is_valid_prostitute_partner_trigger = yes
 			}
 			save_scope_as = knight
 		}

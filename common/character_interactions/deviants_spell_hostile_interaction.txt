@@ -42,21 +42,11 @@ deviants_steal_gold_interaction = {
 	ai_targets = { 
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
 		base = 5 
-		modifier = {
-			add = 5
-			scope:actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
-			}
-		}
 	}
 }
 
@@ -112,32 +102,6 @@ deviants_rumor_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 60
-	ai_targets = { ai_recipients = scripted_relations }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			add = 100
-			scope:actor = scope:recipient
-			scope:actor = {
-				NOT = {
-					has_nickname = nick_the_lewd
-					has_nickname = nick_the_lecher
-					has_nickname = nick_the_bewitched
-				}
-			}
-		}
-		modifier = {
-			add = 5
-			scope:actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
-			}
-		}
-	}
 }
 
 deviants_imprison_interaction = {
@@ -182,21 +146,6 @@ deviants_imprison_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = scripted_relations }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			add = 5
-			scope:actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
-			}
-		}
-	}
 }
 
 deviants_hook = {
@@ -235,13 +184,12 @@ deviants_hook = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 120
+	ai_frequency = 60
 	ai_targets = {
 		ai_recipients = neighboring_rulers
-		ai_recipients = peer_vassals
 		ai_recipients = vassals
 		ai_recipients = liege
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 5 }
 }

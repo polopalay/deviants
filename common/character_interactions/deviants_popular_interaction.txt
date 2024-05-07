@@ -51,7 +51,6 @@ deviants_offer_orgy = {
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }
@@ -108,7 +107,7 @@ deviants_nude_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
+	ai_frequency = 12
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 10 }
@@ -181,7 +180,6 @@ deviants_shake_mind_interaction = {
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }
@@ -267,7 +265,6 @@ deviants_mind_break_interaction = {
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
 		ai_recipients = neighboring_rulers
 	}
 	ai_potential = { always = yes }
