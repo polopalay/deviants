@@ -55,9 +55,12 @@ deviants_demon_generals_interaction = {
 		every_courtier = {
 			limit = { is_knight = yes }
 			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
-			root = { add_character_modifier = deviants_fuckedsilly months = 1 }
 			add_character_modifier = { modifier = deviants_generals years = 13 }
 			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier 
+			root = {
+				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+				add_character_modifier = deviants_fuckedsilly months = 1
+			}
 		}
 		add_character_modifier = { modifier = deviants_generals years = 13 }
 		add_trait_xp = {
@@ -67,7 +70,7 @@ deviants_demon_generals_interaction = {
 		}
 	}
 	ai_check_frequency = 120
-	ai_will_do = { base = 5 }
+	ai_will_do = { base = 10 }
 }
 
 deviants_become_succubus = {
@@ -310,6 +313,14 @@ deviants_become_succubus = {
 			type = deviants_partner
 			root = { remove_relation_deviants_partner = this }
 			remove_relation_deviants_partner = root	
+		}
+		every_courtier = {
+			limit = { is_knight = yes }
+			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			root = {
+				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+				add_character_modifier = deviants_fuckedsilly months = 1
+			}
 		}
 		set_immortal_age = 18
 		add_trait = deviants_succubus

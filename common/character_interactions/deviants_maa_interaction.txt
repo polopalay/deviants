@@ -126,6 +126,7 @@ deviants_dispel_interaction = {
 								chance = 25
 								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
 							}
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 						} 
 					}
 				}
@@ -147,6 +148,7 @@ deviants_dispel_interaction = {
 								chance = 50
 								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 							}
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 						} 
 					}
 				}
@@ -170,9 +172,8 @@ deviants_dispel_interaction = {
 	}
 	ai_frequency = 1
 	ai_targets = { 	
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = neighboring_rulers
+		ai_recipients = realm_characters
+		max = 10
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -234,6 +235,7 @@ deviants_free_slave_interaction = {
 								chance = 25
 								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
 							}
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 						} 
 					}
 				}
@@ -254,9 +256,8 @@ deviants_free_slave_interaction = {
 	}
 	ai_frequency = 1
 	ai_targets = { 	
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = neighboring_rulers
+		ai_recipients = realm_characters
+		max = 10
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 5 }
