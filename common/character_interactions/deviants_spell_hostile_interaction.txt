@@ -26,7 +26,7 @@ deviants_steal_gold_interaction = {
 		scope:recipient = {
 			pay_short_term_gold = {
 				target = scope:actor
-				gold = 20
+				gold = 100
 			}
 		}
 		scope:actor = {
@@ -49,104 +49,6 @@ deviants_steal_gold_interaction = {
 	}
 }
 
-deviants_rumor_interaction = {
-	icon = d_rumor
-	desc = deviants_rumor_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value >= 2
-			} 
-		}
-		scope:recipient = {
-			OR = {
-				scope:actor = scope:recipient
-				NOR = {
-					has_trait = deviants_succubus
-					has_trait = deviants_lesser_succubus
-				}
-			}
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			is_valid_construction_brothel1_trigger = yes
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			random_list = {
-				1 = {
-					give_nickname = nick_the_lewd
-				}
-				1 = {
-					give_nickname = nick_the_lecher
-				}
-				1 = {
-					give_nickname = nick_the_bewitched
-				}
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = -2
-			}
-		}
-	}
-	auto_accept = yes
-}
-
-deviants_imprison_interaction = {
-	icon = d_prison
-	desc = deviants_imprison_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	cooldown = { years = 5 }
-	is_shown = {
-		NOT = { scope:actor = scope:recipient }
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value >= 10
-			} 
-		}
-		scope:recipient = {
-			NOT = { is_at_war_with = scope:actor }
-			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			is_valid_construction_brothel2_trigger = yes
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = -10
-			}
-			imprison = {
-				target = scope:recipient
-				type = dungeon
-			}
-		}
-	}
-	auto_accept = yes
-}
-
 deviants_hook = {
 	icon = d_fabricate_hook
 	desc = deviants_hook.desc
@@ -162,6 +64,13 @@ deviants_hook = {
 				track = power
 				value >= 10
 			} 
+		}
+		scope:recipient = {
+			is_landed = no
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
 		}
 	}
 	on_accept = {

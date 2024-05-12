@@ -6,14 +6,18 @@ deviants_slave = {
 	icon = slave
 }
 
+deviants_horny = {
+	icon = d_devil
+}
+
 deviants_fuckedsilly = {
-	icon = fertility_negative
+	icon = d_devil
     	health = -0.2
 	stacking = yes
 }
 
 deviants_buff = {
-	icon = compass_positive
+	icon = souls
 	diplomacy = 5
 	martial = 5
 	stewardship = 5

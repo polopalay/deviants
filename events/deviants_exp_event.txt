@@ -11,7 +11,7 @@ deviants_exp.10 = {
 			}
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 100
+				value <= 50
 			}
 		}
 		OR = {
@@ -128,7 +128,7 @@ deviants_exp.20 = {
 			}	 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 100
+				value <= 50
 			}
 		}
 		OR = {
@@ -183,7 +183,7 @@ deviants_exp.30 = {
 			} 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 100
+				value <= 50
 			}
 		}
 		OR = {

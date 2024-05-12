@@ -88,6 +88,23 @@ deviants_become_succubus = {
 		}
 	}
 	effect = {
+		add_secret = { 
+			type = secret_deviant
+		}
+		add_secret = { 
+			type = secret_witch
+		}
+		random_list = {
+			1 = {
+				give_nickname = nick_the_lewd
+			}
+			1 = {
+				give_nickname = nick_the_lecher
+			}
+			1 = {
+				give_nickname = nick_the_bewitched
+			}
+		}
 		if = {
 			limit = { has_trait = lustful }
 			add_character_modifier = deviants_prostitute
@@ -304,16 +321,6 @@ deviants_become_succubus = {
 			add_trait = education_learning_1
 		}
 		remove_character_modifier = deviants_slave
-		every_relation = {
-			type = deviants_slave_owner
-			root = { remove_relation_deviants_slave_owner = this }
-			remove_relation_deviants_slaver =  root		
-		}
-		every_relation = {
-			type = deviants_partner
-			root = { remove_relation_deviants_partner = this }
-			remove_relation_deviants_partner = root	
-		}
 		every_courtier = {
 			limit = { is_knight = yes }
 			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }

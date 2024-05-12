@@ -23,6 +23,7 @@ deviants_add_courtier = {
 	desc = deviants_add_courtier.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -59,6 +60,7 @@ deviants_child_interaction = {
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
@@ -206,6 +208,23 @@ deviants_create_lesser_succubus_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
+			add_secret = { 
+				type = secret_deviant
+			}
+			add_secret = { 
+				type = secret_witch
+			}
+			random_list = {
+				1 = {
+					give_nickname = nick_the_lewd
+				}
+				1 = {
+					give_nickname = nick_the_lecher
+				}
+				1 = {
+					give_nickname = nick_the_bewitched
+				}
+			}
 			if = {
 				limit = { NOT = { has_trait = lustful } }
 				add_trait = lustful
@@ -349,16 +368,6 @@ deviants_create_lesser_succubus_interaction = {
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
 			remove_character_modifier = deviants_slave
-			every_relation = {
-				type = deviants_slave_owner
-				scope:recipient = { remove_relation_deviants_slave_owner = this }
-				remove_relation_deviants_slaver =  scope:recipient
-			}
-			every_relation = {
-				type = deviants_partner
-				scope:recipient = { remove_relation_deviants_partner = this }
-				remove_relation_deviants_partner = scope:recipient
-			}
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -400,9 +409,22 @@ deviants_create_succubus_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			if = {
-				limit = { NOT = { has_trait = lustful } }
-				add_trait = lustful
+			add_secret = { 
+				type = secret_deviant
+			}
+			add_secret = { 
+				type = secret_witch
+			}
+			random_list = {
+				1 = {
+					give_nickname = nick_the_lewd
+				}
+				1 = {
+					give_nickname = nick_the_lecher
+				}
+				1 = {
+					give_nickname = nick_the_bewitched
+				}
 			}
 			if = {
 				limit = { has_trait = lustful }
@@ -540,19 +562,13 @@ deviants_create_succubus_interaction = {
 				limit = { has_trait = paranoid }
 				remove_trait = paranoid
 			}
+			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
+			}
 			add_trait = deviants_succubus
 			add_character_modifier = deviants_prostitute
 			remove_character_modifier = deviants_slave
-			every_relation = {
-				type = deviants_slave_owner
-				scope:recipient = { remove_relation_deviants_slave_owner = this }
-				remove_relation_deviants_slaver =  scope:recipient
-			}
-			every_relation = {
-				type = deviants_partner
-				scope:recipient = { remove_relation_deviants_partner = this }
-				remove_relation_deviants_partner = scope:recipient
-			}
 		}
 		scope:actor = {
 			add_trait_xp = {

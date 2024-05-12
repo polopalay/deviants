@@ -121,6 +121,9 @@
  deviants_dispel_interaction: "Dispel"
  deviants_dispel_interaction.desc: "Please pray for [recipient.GetShortUIName] to undo the magic she has cast on you"
 
+ deviants_free_slave_interaction: "Free"
+ deviants_free_slave_interaction.desc: "Please pray for [recipient.GetShortUIName] to free you"
+
  deviants_learn_language_interaction: "Learn Language"
  deviants_learn_language_interaction.desc: "Learn [recipient.GetShortUIName]'s language"
 

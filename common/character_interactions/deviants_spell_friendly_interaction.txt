@@ -11,11 +11,11 @@ deviants_heal_interaction = {
 				has_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value >= 1
+					value >= 2
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 2
+					value >= 4
 				}
 			}
 		}
@@ -87,14 +87,14 @@ deviants_heal_interaction = {
 				add_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value = -1
+					value = -2
 				}
 			}
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -2
+					value = -4
 				}
 			}
 		}
@@ -191,68 +191,9 @@ deviants_weight_interaction = {
     	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { years = 1 }
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value >= 1
-				}
-				has_trait_xp = {
-					trait = deviants_lesser_succubus
-					value >= 2
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			change_current_weight = -200
-			change_current_weight = 100
-		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = deviants_succubus }
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = power
-					value = -1
-				}
-			}
-			if = {
-				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = {
-					trait = deviants_lesser_succubus
-					value = -2
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 36
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			base = 100
-			scope:recipient = scope:actor
-		}
-	}
-}
 
-deviants_learn_language_interaction = {
-	icon = d_learn_language
-	desc = deviants_learn_language_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
 	is_shown = {
-		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
-			num_of_known_languages <= language_soft_cap
-			NOT = { knows_language_of_culture = scope:recipient.culture }
 			OR = {
 				has_trait_xp = {
 					trait = deviants_succubus
@@ -267,8 +208,11 @@ deviants_learn_language_interaction = {
 		}
 	}
 	on_accept = {
+		scope:recipient = {
+			change_current_weight = -200
+			change_current_weight = 100
+		}
 		scope:actor = {
-			learn_language_of_culture = scope:recipient.culture
 			if = {
 				limit = { has_trait = deviants_succubus }
 				add_trait_xp = {
@@ -287,6 +231,16 @@ deviants_learn_language_interaction = {
 		}
 	}
 	auto_accept = yes
+	ai_frequency = 36
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			base = 100
+			scope:recipient = scope:actor
+		}
+	}
 }
 
 deviants_befriend = {
@@ -302,7 +256,7 @@ deviants_befriend = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 5
+				value >= 10
 			} 
 		}
 	}
@@ -317,7 +271,7 @@ deviants_befriend = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -5
+				value = -10
 			}
 		}
 	}
@@ -340,7 +294,7 @@ deviants_rival_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 5
+				value >= 10
 			} 
 		}
 	}
@@ -362,7 +316,7 @@ deviants_rival_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -5
+				value = -10
 			}
 		}
 	}

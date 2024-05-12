@@ -1,9 +1,0 @@
-deviants_dark_amry_recruitment_cost = @[heavy_infantry_recruitment_cost * 1.5]
-deviants_dark_amry_low_maint_cost = @[heavy_infantry_low_maint_cost * 1.5]
-deviants_dark_amry_high_maint_cost = @[heavy_infantry_high_maint_cost * 1.5]
-
-culture_ai_weight_deviants_dark_amry = {
-	value = 80
-}
-
-

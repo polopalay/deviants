@@ -74,9 +74,12 @@ deviants_dispel_interaction = {
 				has_trait = deviants_lesser_succubus
 				is_vassal_of = scope:recipient
 				any_relation = { type = deviants_slaver }
+				any_relation = { type = deviants_partner }
+				scope:actor.liege = {
+					is_valid_construction_brothel1_trigger	= yes
+				}
 			}
 			OR = {
-				has_character_modifier = deviants_prostitute
 				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			}
 		}
@@ -110,28 +113,6 @@ deviants_dispel_interaction = {
 				use_hook = scope:recipient
 			}
 			if = {
-				limit = { has_character_modifier = deviants_prostitute }
-				scope:recipient = {
-					random_courtier = {
-						limit = { is_female = no is_adult = yes }
-						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
-						scope:actor = { 
-							remove_character_modifier = deviants_prostitute
-							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-						} 
-						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
-						scope:recipient = { 
-							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-							random = {
-								chance = 25
-								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
-							}
-							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
-						} 
-					}
-				}
-			}
-			if = {
 				limit = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 				scope:recipient = {
 					random_courtier = {
@@ -154,13 +135,6 @@ deviants_dispel_interaction = {
 				}
 			}
 		}
-		scope:recipient = {
-			every_relation = {
-				type = deviants_partner
-				scope:recipient = { remove_relation_deviants_partner = this }
-				remove_relation_deviants_partner = scope:recipient
-			}
-		}
 	}
 	ai_accept = {
 		base = -10
@@ -177,7 +151,7 @@ deviants_dispel_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 50 
+		base = 50
 	}
 }
 
@@ -195,7 +169,18 @@ deviants_free_slave_interaction = {
 			is_adult = yes
 			is_ruler = yes
 			is_female = yes
-			has_relation_deviants_slave_owner = scope:recipient
+			OR = {
+				age > 36
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		scope:recipient = {
+			OR = {
+				has_relation_deviants_slave_owner = scope:actor
+				has_relation_deviants_partner = scope:actor
+			}
+			is_valid_construction_brothel2_trigger = yes
 		}
 	}
 	send_option = {
@@ -239,65 +224,83 @@ deviants_free_slave_interaction = {
 						} 
 					}
 				}
+				remove_relation_deviants_slaver = scope:recipient
 			}
-			remove_relation_deviants_slaver = scope:recipient
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				scope:recipient = {
+					random_courtier = {
+						limit = { is_female = no is_adult = yes }
+						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
+						scope:actor = { 
+							remove_character_modifier = deviants_prostitute
+							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+						}
+						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+						scope:recipient = { 
+							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+							random = {
+								chance = 25
+								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+							}
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+						} 
+					}
+				}
+				remove_relation_deviants_partner = scope:recipient
+			}
 		}
 		scope:recipient = {
 			remove_relation_deviants_slave_owner = scope:actor
+			remove_relation_deviants_partner = scope:actor
 		}
 	}
 	ai_accept = {
-		base = -20
+		base = -40
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
 			multiplier = 1
 		}
+		modifier = {
+			add = 40
+			scope:recipient = {
+				age > 50
+			}
+		}
+		modifier = {
+			add = 100
+			scope:recipient = {
+				OR = {
+					has_trait = deviants_succubus
+					has_trait = deviants_lesser_succubus
+				}
+			}
+		}
 	}
 	ai_frequency = 1
-	ai_targets = { 	
+	ai_targets = {
 		ai_recipients = realm_characters
 		max = 10
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
-}
-
-deviants_buff_interaction = {
-	icon = d_money
-	desc = deviants_buff_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	common_interaction = yes
-	cooldown = { months = 1 }
-	is_shown = {
-		scope:actor = {
-			is_ruler = yes
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value >= 5
-			} 
+	ai_will_do = { 
+		base = 5 
+		modifier = {
+			add = 45
+			scope:recipient = {
+				age > 40
+			}
 		}
-	}
-	is_valid = {
-		scope:actor = { is_valid_construction_brothel1_trigger = yes }
-	}
-	on_accept = {
-		scope:recipient = {
-			add_character_modifier = { modifier = deviants_buff years = 13 }
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value = -5
+		modifier = {
+			add = 50
+			scope:recipient = {
+				OR = {
+					has_trait = deviants_succubus
+					has_trait = deviants_lesser_succubus
+				}
 			}
 		}
 	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
 }
+

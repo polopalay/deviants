@@ -2,6 +2,7 @@ deviants_prostitute_interaction = {
 	icon = d_sex
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
+	ignores_pending_interaction_block = no
     	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { months = 2 }
@@ -36,8 +37,6 @@ deviants_prostitute_interaction = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
 			}
-			NOT = { any_relation = { type = deviants_slave_owner } }
-			NOT = { any_relation = { type = deviants_partner } }
         	}
     	}
 
@@ -47,18 +46,15 @@ deviants_prostitute_interaction = {
 				is_valid_prostitute_trigger = yes
 				AND = {
 					any_vassal = { is_valid_prostitute_trigger = yes }
-					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
 				AND = {
 					any_courtier = { is_valid_prostitute_trigger = yes }
-					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
 				AND = {
 					any_relation = {
 						type = deviants_partner
 						is_valid_prostitute_trigger = yes
 					}
-					scope:recipient = { is_valid_construction_brothel2_trigger = yes }
 				}
 				AND = {
 					any_relation = {
@@ -66,7 +62,6 @@ deviants_prostitute_interaction = {
 						is_valid_prostitute_trigger = yes
 						scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 					}
-					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 				}
 			}
 		}
@@ -132,7 +127,6 @@ deviants_prostitute_interaction = {
 				limit = { 
 					is_valid_prostitute_trigger = yes
 					scope:recipient = { is_valid_construction_brothel2_trigger = yes }
-					scope:deviants_prostitute_service_2 = yes
 				}
 				add_to_list = characters
 			}
@@ -141,7 +135,6 @@ deviants_prostitute_interaction = {
 				limit = { 
 					is_valid_prostitute_trigger = yes 
 					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
-					scope:deviants_prostitute_service_3 = yes
 				}
 				add_to_list = characters
 			}
@@ -171,6 +164,37 @@ deviants_prostitute_interaction = {
 			add_opinion = {
 				target = scope:recipient
 				modifier = have_sex_opinion
+			}
+			if = {
+				limit = { scope:deviants_prostitute_service_1 = yes }
+				stress_impact = {
+					base = medium_stress_impact_loss
+					lustful = medium_stress_impact_loss
+					chaste = medium_stress_impact_gain
+				}
+			}
+			else_if = {
+				limit = { scope:deviants_prostitute_service_2 = yes }
+				stress_impact = {
+					base = major_stress_impact_loss
+					lustful = major_stress_impact_loss
+					chaste = major_stress_impact_gain
+				}
+			}
+			else_if = {
+				limit = { scope:deviants_prostitute_service_3 = yes }
+				stress_impact = {
+					base = massive_stress_impact_loss
+					lustful = massive_stress_impact_loss
+					chaste = massive_stress_impact_gain
+				}
+			}
+			else = {
+				stress_impact = {
+					base = minor_stress_impact_loss
+					lustful = minor_stress_impact_loss
+					chaste = minor_stress_impact_gain
+				}
 			}
 			if = {
 				limit = { 
@@ -234,12 +258,40 @@ deviants_prostitute_interaction = {
 		if = {
 			limit = {
 				NOT = { scope:secondary_recipient = scope:recipient }
-				scope:recipient = { has_trait = deviants_succubus } 
 			}
-			random = {
-				chance = 5
-				scope:recipient = {
-					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+			if = {
+				limit = { scope:deviants_prostitute_service_1 = yes }
+				random = {
+					chance = 10
+					scope:recipient = {
+						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					}
+				}
+			}
+			else_if = {
+				limit = { scope:deviants_prostitute_service_2 = yes }
+				random = {
+					chance = 15
+					scope:recipient = {
+						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					}
+				}
+			}
+			else_if = {
+				limit = { scope:deviants_prostitute_service_3 = yes }
+				random = {
+					chance = 20
+					scope:recipient = {
+						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					}
+				}
+			}
+			else = {
+				random = {
+					chance = 5
+					scope:recipient = {
+						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					}
 				}
 			}
 		}
@@ -438,6 +490,7 @@ deviants_become_prostitute_interaction = {
 	is_valid = {
 		scope:recipient = {
 			OR = {
+				scope:actor = scope:recipient
 				AND = {
 					is_vassal_of = scope:actor
 					scope:actor = {

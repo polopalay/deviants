@@ -1,5 +1,6 @@
 namespace = deviants_prostitution
 
+# Courtier require service
 deviants_prostitution.10 = {
 	type = character_event
 	title = deviants_prostitution_events.10.title
@@ -8,6 +9,11 @@ deviants_prostitution.10 = {
 	theme = seduction
 
 	trigger = {
+        	is_adult = yes
+		is_female = yes
+        	is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
 		any_courtier = {
 			age > 16
 			is_valid_prostitute_partner_trigger = yes
@@ -68,6 +74,7 @@ deviants_prostitution.10 = {
 	}
 }
 
+# Knight require service
 deviants_prostitution.11 = {
 	type = character_event
 	title = deviants_prostitution_events.11.title
@@ -112,21 +119,20 @@ deviants_prostitution.20 = {
 	theme = new_royal_court
 
 	trigger = {
+        	is_adult = yes
+		is_female = yes
+        	is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
 		any_knight = {
 			age > 16
-			is_valid_prostitute_partner_trigger = yes
 		}
-		NOT = { has_character_modifier = deviants_slave }
-		NOT = { is_spouse_of = root }
-		NOT = { is_close_family_of = root }
 	}
 
 	immediate = {
 		random_knight = {
 			limit = {
 				age > 16
-				NOT = { is_spouse_of = root }
-				NOT = { is_close_family_of = root }
 			}
 			save_scope_as = knight
 		}
@@ -148,6 +154,7 @@ deviants_prostitution.20 = {
 				target = root
 				modifier = have_sex_opinion
 			}
+			add_character_modifier = deviants_buff
 		}
 		name = deviants_prostitution_events.20.accept
 		had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
@@ -188,7 +195,6 @@ deviants_prostitution.20 = {
 				add_legitimacy = minor_legitimacy_loss
 				had_sex_with_effect = { CHARACTER = scope:knight PREGNANCY_CHANCE = pregnancy_chance }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-				add_character_modifier = { modifier = deviants_slave years = 2 }
 				add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
 				trigger_event = deviants_prostitution.21
 			}
@@ -227,17 +233,48 @@ deviants_prostitution.30 = {
 	theme = seduction
 
 	trigger = {
-		top_liege.any_vassal_or_below = {
-			age > 16
-			is_valid_prostitute_partner_trigger = yes
-		}
+        	is_adult = yes
+		is_female = yes
+        	is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
 	}
 
 	immediate = {
-		top_liege.random_vassal_or_below  = {
+		root = {
+			add_character_flag = is_naked
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = chess_certain_win
+	}
+	
+	option = {
+		name = deviants_prostitution_events.30.a
+		root = {
+			add_character_modifier = { modifier = deviants_horny months = 1 }
+		}
+	}
+	option = {
+		name = deviants_prostitution_events.30.b
+		trigger_event = deviants_prostitution.31
+	}
+}
+deviants_prostitution.31 = {
+	type = character_event
+	title = deviants_prostitution_events.31.title
+	desc = deviants_prostitution_events.31.desc
+
+	theme = memory_positive
+
+	immediate = {
+		random_courtier = {
 			limit = {
 				age > 16
-				is_valid_prostitute_partner_trigger = yes
+				NOT = { is_spouse_of = root }
+				NOT = { is_close_family_of = root }
 			}
 			save_scope_as = knight
 		}
@@ -247,34 +284,76 @@ deviants_prostitution.30 = {
 		character = root
 		animation = personality_greedy
 	}
-	
+
 	right_portrait = {
 		character = scope:knight
-		animation = marshal
-	}
-	
-	option = {
-		ai_chance = { base = 100 }
-		name = deviants_prostitution_events.30.accept
-		scope:knight = {
-			add_opinion = {
-				target = root
-				modifier = have_sex_opinion
-			}
-		}
-		root = {
-			had_sex_with_effect = { CHARACTER = scope:knight PREGNANCY_CHANCE = pregnancy_chance }
-			add_trait_xp = { trait = deviants_succubus track = power value = 1 }
-		}
+		animation = lantern
 	}
 	option = {
-		ai_chance = { base = 0 }
-		name = deviants_prostitution_events.30.refuse
-		scope:knight = {
-			add_opinion = {
-				target = root
-				modifier = refuse_sex_opinion
+		name = deviants_prostitution_events.31.a
+		had_sex_with_effect = { CHARACTER = scope:knight PREGNANCY_CHANCE = pregnancy_chance }
+		add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+		random_list = {
+			5 = {
+				add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+			}
+			10 = {
+				add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 }
+			}
+			40 = {
+				add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
+			}
+			45 = {
+				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 			}
 		}
+		trigger_event = deviants_prostitution.32
 	}
 }
+deviants_prostitution.32 = {
+	type = character_event
+	title = deviants_prostitution_events.32.title
+	desc = deviants_prostitution_events.32.desc
+
+	theme = seduction
+
+	left_portrait = {
+		character = root
+		animation = chess_certain_win
+	}
+
+	option = {
+		name = deviants_prostitution_events.32.a
+		random_list = {
+			1 = { 
+				trigger_event = deviants_prostitution.31
+			}
+			1 = {
+				trigger_event = deviants_prostitution.33
+			}
+		}
+	}
+	option = {
+		name = deviants_prostitution_events.32.b
+		remove_character_flag = is_naked
+	}
+}
+
+deviants_prostitution.33 = {
+	type = character_event
+	title = deviants_prostitution_events.33.title
+	desc = deviants_prostitution_events.33.desc
+
+	theme = seduction
+
+	left_portrait = {
+		character = root
+		animation = disappointed
+	}
+
+	option = {
+		name = deviants_prostitution_events.33.a
+		remove_character_flag = is_naked
+		add_character_modifier = { modifier = deviants_horny days = 10 }
+	}
+} 

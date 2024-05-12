@@ -10,7 +10,7 @@ random_army_event = {
 		has_trait = deviants_succubus
 	}
 	random_events = {
-		chance_to_happen = 10
+		chance_to_happen = 25
 		1 = deviants_prostitution.10		
 		1 = deviants_prostitution.20
 		1 = deviants_prostitution.30
@@ -22,7 +22,7 @@ random_exp_event = {
 		has_trait = deviants_succubus
 	}
 	random_events = {
-		chance_to_happen = 50
+		chance_to_happen = 25
 		1 = deviants_exp.10		
 		1 = deviants_exp.20
 		1 = deviants_exp.30

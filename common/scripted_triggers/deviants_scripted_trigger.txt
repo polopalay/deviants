@@ -14,7 +14,10 @@ is_valid_prostitute_trigger = {
 		age < 40
 	}
 	NOT = { is_spouse_of = scope:actor }
-	NOT = { has_character_modifier = deviants_fuckedsilly }
+	OR = {
+		NOT = { has_character_modifier = deviants_fuckedsilly }
+		has_character_modifier = deviants_horny
+	}
 }
 
 is_valid_prostitute_partner_trigger = {
