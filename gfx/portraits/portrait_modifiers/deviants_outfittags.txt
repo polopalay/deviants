@@ -31,7 +31,7 @@
 
 deviants_generals_outfittags = {
 	usage = game
-	prostitute_outfit = {
+	deviants_generals_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = replace
@@ -50,6 +50,49 @@ deviants_generals_outfittags = {
 	}
 }
 
+succubus_outfittags = {
+	usage = game
+    	fallback = unclothed_body
+    	priority = 10
+
+	succubus_outfit = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = western_sickness
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+			}
+			accessory = {
+				mode = add
+				gene = headgear_base
+			}
+		}	
+		weight = {
+        		base = 0
+            		modifier = {
+            		    	add = 100
+				OR = {
+					has_character_modifier = deviants_prostitute
+					has_character_modifier = deviants_slave
+				}
+        		}
+        	}
+	}
+
+}
+
 nude_clothes = {
     	usage = game
     	fallback = unclothed_body
@@ -61,18 +104,18 @@ nude_clothes = {
 				mode = add
 				gene = clothes
 			}
-			#accessory = {
-			#	mode = add
-			#	gene = headgear
-			#}
+			accessory = {
+				mode = add
+				gene = headgear
+			}
 			accessory = {
 				mode = add
 				gene = legwear
 			}
-			#accessory = {
-			#	mode = add
-			#	gene = cloaks
-			#}
+			accessory = {
+				mode = add
+				gene = cloaks
+			}
 			accessory = {
 				mode = add
 				gene = headgear_base

@@ -519,7 +519,7 @@ deviants_become_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
-			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			#add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			add_character_modifier = deviants_prostitute
 			add_character_flag = blocked_from_leaving
 			if = {
@@ -639,7 +639,7 @@ deviants_stop_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
-			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			#remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			remove_character_modifier = deviants_prostitute
 		}
     	}

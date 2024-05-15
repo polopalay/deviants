@@ -28,7 +28,7 @@ morph_genes = {
 		}
 	}
 	deviants_face = {
-		no_face_markings = {
+		no_face = {
 			index = 0			
 		}
 		eyeliner1 = {

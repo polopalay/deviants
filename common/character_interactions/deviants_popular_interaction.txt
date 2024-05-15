@@ -74,7 +74,6 @@ deviants_nude_interaction = {
 		scope:recipient = {
 			is_adult = yes
 			is_female = yes
-			age < 40
 			NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 		}
 	}
