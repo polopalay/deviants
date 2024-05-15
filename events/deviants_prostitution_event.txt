@@ -154,10 +154,10 @@ deviants_prostitution.20 = {
 				target = root
 				modifier = have_sex_opinion
 			}
-			add_character_modifier = deviants_buff
+			add_character_modifier = { modifier = deviants_buff years = 10 }
+			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
 		}
 		name = deviants_prostitution_events.20.accept
-		had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
 		add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 		add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 }
 	}
@@ -325,11 +325,19 @@ deviants_prostitution.32 = {
 
 	option = {
 		name = deviants_prostitution_events.32.a
+		is_valid = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 1
+			} 
+		}
+		add_trait_xp = { trait = deviants_succubus track = daring value = -1 }
 		random_list = {
 			1 = { 
 				trigger_event = deviants_prostitution.31
 			}
-			1 = {
+			2 = {
 				trigger_event = deviants_prostitution.33
 			}
 		}
@@ -358,3 +366,86 @@ deviants_prostitution.33 = {
 		add_character_modifier = { modifier = deviants_horny days = 10 }
 	}
 } 
+
+deviants_prostitution.40 = {
+	type = character_event
+	title = deviants_prostitution_events.40.title
+	desc = deviants_prostitution_events.40.desc
+	
+	theme = new_royal_court
+
+	trigger = {
+        	is_adult = yes
+		is_female = yes
+        	is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		any_knight = {
+			age > 16
+		}
+	}
+
+	immediate = {
+		random_knight = {
+			limit = {
+				age > 16
+			}
+			save_scope_as = knight
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	
+	right_portrait = {
+		character = scope:knight
+		animation = marshal
+	}
+	
+	option = {
+		scope:knight = {
+			add_opinion = {
+				target = root
+				modifier = have_sex_opinion
+			}
+			add_character_modifier = { modifier = deviants_buff years = 10 }
+			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		name = deviants_prostitution_events.40.b
+		add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+		add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 }
+		add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+	}
+
+	option = {
+		name = deviants_prostitution_events.40.b
+		every_knight = {
+			limit = {
+				age > 16
+				is_valid_prostitute_partner_trigger = yes
+				NOT = { is_spouse_of = root }
+				NOT = { is_close_family_of = root }
+			}
+			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			add_opinion = {
+				target = root
+				modifier = have_sex_opinion
+			}
+			add_character_modifier = { modifier = deviants_buff years = 1 }
+			root = {
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				random = {
+					chance = 50
+					add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 }
+				}
+				random = {
+					chance = 50
+					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+				}
+			}
+		}
+	}
+
+}
