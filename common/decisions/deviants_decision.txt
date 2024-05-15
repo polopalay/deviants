@@ -80,8 +80,9 @@ deviants_become_succubus = {
 
 	is_shown = { 
 		is_ai = no
+		is_ruler = yes
 		is_female = yes
-		age > 18
+		age >= 18
 		NOR = { 
 			has_trait = deviants_succubus
 			has_trait = deviants_lesser_succubus
@@ -326,7 +327,7 @@ deviants_become_succubus = {
 			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
 			root = {
 				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
-				add_character_modifier = deviants_fuckedsilly months = 1
+				add_character_modifier = { modifier =  deviants_fuckedsilly months = 1 }
 			}
 		}
 		set_immortal_age = 18
