@@ -244,7 +244,7 @@ deviants_weight_interaction = {
 }
 
 deviants_befriend = {
-	icon = d_friend
+	icon = synergise_friendship_interaction
 	desc = deviants_befriend.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -279,7 +279,7 @@ deviants_befriend = {
 }
 
 deviants_rival_interaction = {
-	icon = d_hostile
+	icon = icon_hostile
 	desc = deviants_rival_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes

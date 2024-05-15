@@ -19,7 +19,7 @@ deviants_switch_body = {
 }
 
 deviants_add_courtier = {
-	icon = d_invite_to_court
+	icon = invite_to_court_interaction
 	desc = deviants_add_courtier.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

@@ -1,5 +1,5 @@
 deviants_steal_gold_interaction = {
-	icon = d_gold
+	icon = icon_gold
 	desc = deviants_steal_gold_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -51,7 +51,7 @@ deviants_steal_gold_interaction = {
 }
 
 deviants_hook = {
-	icon = d_fabricate_hook
+	icon = fabricate_hook_interaction
 	desc = deviants_hook.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
