@@ -275,6 +275,7 @@ deviants_prostitution.31 = {
 				age > 16
 				NOT = { is_spouse_of = root }
 				NOT = { is_close_family_of = root }
+				is_female = no
 			}
 			save_scope_as = knight
 		}

@@ -145,9 +145,10 @@ deviants_dispel_interaction = {
 		}
 	}
 	ai_frequency = 1
-	ai_targets = { 	
-		ai_recipients = realm_characters
-		max = 10
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -280,8 +281,7 @@ deviants_free_slave_interaction = {
 	}
 	ai_frequency = 1
 	ai_targets = {
-		ai_recipients = realm_characters
-		max = 10
+		ai_recipients = scripted_relations
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 

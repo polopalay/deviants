@@ -345,8 +345,9 @@ deviants_prostitute_interaction = {
 
 	ai_frequency = 2
 	ai_targets = {
-		ai_recipients = realm_characters
-		max = 10
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
 	}
 	ai_potential = { 
 		primary_title.tier >= tier_county

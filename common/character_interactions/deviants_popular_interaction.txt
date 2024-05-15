@@ -193,9 +193,10 @@ deviants_shake_mind_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { 	
-		ai_recipients = realm_characters
-		max = 10
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
@@ -296,9 +297,10 @@ deviants_mind_break_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { 	
-		ai_recipients = realm_characters
-		max = 10
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 

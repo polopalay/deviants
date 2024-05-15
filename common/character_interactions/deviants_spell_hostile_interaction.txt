@@ -39,9 +39,10 @@ deviants_steal_gold_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { 
-		ai_recipients = realm_characters
-		max = 10
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -94,8 +95,11 @@ deviants_hook = {
 	auto_accept = yes
 	ai_frequency = 60
 	ai_targets = {
-		ai_recipients = realm_characters
-		max = 10
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 5 }
