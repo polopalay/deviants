@@ -56,7 +56,7 @@ deviants_add_courtier = {
 }
 
 deviants_child_interaction = {
-	icon = d_pregnant
+	icon = pregnant
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

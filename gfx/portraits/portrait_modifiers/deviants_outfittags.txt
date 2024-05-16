@@ -83,6 +83,7 @@ succubus_outfittags = {
         		base = 0
             		modifier = {
             		    	add = 100
+				should_be_fully_naked_portrait_trigger = no
 				OR = {
 					has_character_modifier = deviants_prostitute
 					has_character_modifier = deviants_slave

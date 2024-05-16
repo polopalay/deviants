@@ -1,5 +1,5 @@
 deviants_offer_orgy = {
-	icon = d_rumor
+	icon = expose_secret_interaction
 	desc = deviants_offer_orgy.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -58,23 +58,49 @@ deviants_offer_orgy = {
 }
 
 deviants_nude_interaction = {
-	icon = d_undress
+	icon = undress_interaction
 	desc = deviants_nude_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 1 }
 	is_shown = {
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 2
-			} 
-		}
-		scope:recipient = {
-			is_adult = yes
-			is_female = yes
-			NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+		OR = {
+			AND = {
+				scope:actor = {
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = daring
+						value >= 10
+					} 
+				}
+				scope:recipient = {
+					is_adult = yes
+					is_female = yes
+					NOR = {
+						has_trait = deviants_succubus
+						has_trait=deviants_lesser_succubus
+					}
+					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+				}
+			}
+			AND = {
+				scope:actor = {
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = daring
+						value >= 1
+					} 
+				}
+				scope:recipient = {
+					is_adult = yes
+					is_female = yes
+					OR = {
+						has_trait = deviants_succubus
+						has_trait=deviants_lesser_succubus
+					}
+					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+				}
+			}
 		}
 	}
 	is_valid = { 
@@ -104,10 +130,25 @@ deviants_nude_interaction = {
 			}
 		}
 		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -2
+			if = {
+				limit = {
+					NOR = {
+						has_trait = deviants_succubus
+						has_trait=deviants_lesser_succubus
+					}
+				}
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = daring
+					value = -2
+				}
+			}
+			else = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = daring
+					value = -1
+				}
 			}
 		}
 	}

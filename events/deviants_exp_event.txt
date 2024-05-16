@@ -11,7 +11,7 @@ deviants_exp.10 = {
 			}
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 50
+				value <= 100
 			}
 		}
 		OR = {
@@ -39,6 +39,7 @@ deviants_exp.10 = {
 	}
 	immediate = {
 		add_trait_xp = { trait = deviants_succubus track = daring value = 5 }
+		add_trait_xp = { trait = deviants_lesser_succubus value = 10 }
 		if = {
 			limit = {
 				OR = {
@@ -128,7 +129,7 @@ deviants_exp.20 = {
 			}	 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 50
+				value <= 100
 			}
 		}
 		OR = {
@@ -152,6 +153,7 @@ deviants_exp.20 = {
 	}
 	immediate = {
 		add_trait_xp = { trait = deviants_succubus track = loyalty value = 5 }
+		add_trait_xp = { trait = deviants_lesser_succubus value = 10 }
 		remove_trait = logistician
 		remove_trait = military_engineer
 		remove_trait = aggressive_attacker
@@ -183,7 +185,7 @@ deviants_exp.30 = {
 			} 
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value <= 50
+				value <= 100
 			}
 		}
 		OR = {
@@ -206,6 +208,7 @@ deviants_exp.30 = {
 	}
 	immediate = {
 		add_trait_xp = { trait = deviants_succubus track = corruption value = 5 }
+		add_trait_xp = { trait = deviants_lesser_succubus value = 10 }
 		remove_trait = pilgrim
 		remove_trait = poet
 		remove_trait = loyal

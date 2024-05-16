@@ -74,7 +74,6 @@ deviants_prostitution.10 = {
 	}
 }
 
-# Knight require service
 deviants_prostitution.11 = {
 	type = character_event
 	title = deviants_prostitution_events.11.title
@@ -208,6 +207,14 @@ deviants_prostitution.21 = {
 	title = deviants_prostitution_events.21.title
 	desc = deviants_prostitution_events.21.desc
 	theme = dungeon
+	immediate = {
+		scope:knight = {
+			add_character_flag = is_naked
+		}
+		root = {
+			add_character_flag = is_naked
+		}
+	}
 
 	left_portrait = {
 		character = root
@@ -221,6 +228,12 @@ deviants_prostitution.21 = {
 
 	option = {
 		name = deviants_prostitution_events.21.end
+		scope:knight = {
+			remove_character_flag = is_naked
+		}
+		root = {
+			remove_character_flag = is_naked
+		}
 	}
 
 }

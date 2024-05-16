@@ -2,10 +2,6 @@
  deviants_prostitute_interaction: "Prostituting"
  deviants_prostitute_interaction.desc: "[actor.GetShortUIName] lays with [recipient.GetShortUIName]"
  recipient_secondary_deviants_prostitute_interaction: "Choose one"
- deviants_prostitute_service_0: "Affordable service"
- deviants_prostitute_service_1: "Intermediate service"
- deviants_prostitute_service_2: "High-quality service"
- deviants_prostitute_service_3: "Luxury service"
 
  deviants_become_prostitute_interaction: "Become Prostitution"
  deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"
