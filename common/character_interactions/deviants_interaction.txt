@@ -24,7 +24,7 @@ deviants_prostitute_interaction = {
 				has_trait = chaste
 				has_trait = celibate
 				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_slaver
+				has_character_modifier = deviants_slave
 			}
         	}
         	scope:recipient = {
@@ -50,19 +50,6 @@ deviants_prostitute_interaction = {
 				AND = {
 					any_courtier = { is_valid_prostitute_trigger = yes }
 				}
-				AND = {
-					any_relation = {
-						type = deviants_partner
-						is_valid_prostitute_trigger = yes
-					}
-				}
-				AND = {
-					any_relation = {
-						type = deviants_slaver
-						is_valid_prostitute_trigger = yes
-						scope:recipient = { is_valid_construction_brothel3_trigger = yes }
-					}
-				}
 			}
 		}
 	}
@@ -84,22 +71,6 @@ deviants_prostitute_interaction = {
 				limit = { 
 					is_valid_prostitute_trigger = yes
 					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
-				}
-				add_to_list = characters
-			}
-			every_relation = {
-				type = deviants_partner
-				limit = { 
-					is_valid_prostitute_trigger = yes
-					scope:recipient = { is_valid_construction_brothel2_trigger = yes }
-				}
-				add_to_list = characters
-			}
-			every_relation = {
-				type = deviants_slaver
-				limit = { 
-					is_valid_prostitute_trigger = yes 
-					scope:recipient = { is_valid_construction_brothel3_trigger = yes }
 				}
 				add_to_list = characters
 			}
@@ -274,7 +245,6 @@ deviants_prostitute_interaction = {
 				scope:secondary_recipient = scope:recipient
 				is_courtier_of = scope:recipient
 				is_vassal_of = scope:recipient
-				has_relation_deviants_slave_owner = scope:recipient
 				has_trait = deviants_lesser_succubus
 				has_trait = deviants_succubus
 			}
