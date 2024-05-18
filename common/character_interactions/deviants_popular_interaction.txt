@@ -61,7 +61,7 @@ deviants_offer_private_orgy = {
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { years = 2 }
+	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
@@ -94,7 +94,7 @@ deviants_offer_private_orgy = {
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				scope:actor = { 
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-					add_trait_xp = { trait = deviants_succubus track = daring value = 2 }
+					add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
 				}
 			}
 		}
@@ -107,7 +107,7 @@ deviants_offer_private_orgy = {
 			multiplier = 1
 		}
 	}
-	ai_frequency = 24
+	ai_frequency = 12
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = peer_vassals
@@ -161,11 +161,6 @@ deviants_nude_interaction = {
 					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 				}
 			}
-		}
-	}
-	is_valid = { 
-		scope:actor = {
-			is_valid_construction_brothel1_trigger = yes 
 		}
 	}
 	on_accept = {

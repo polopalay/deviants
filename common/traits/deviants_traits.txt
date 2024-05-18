@@ -6,6 +6,7 @@ deviants_succubus = {
 	monthly_lifestyle_xp_gain_mult = -2
 	can_have_children = no
 	ai_greed = dominant_positive_ai_value
+	ai_zeal = dominant_negative_ai_value
 
 	desc = {
 		first_valid = {
