@@ -4,7 +4,7 @@ deviants_absorb_interaction = {
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { years = 4 }
+	cooldown = { years = 5 }
 	is_shown = {
 		scope:actor = {
 			has_trait = deviants_succubus
@@ -28,6 +28,7 @@ deviants_absorb_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
+			add_character_modifier = deviants_buff
 			add_trait_xp = {
 				trait = deviants_lesser_succubus
 				value = -50

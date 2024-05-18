@@ -108,6 +108,9 @@
  deviants_offer_orgy: "Offer Orgy"
  deviants_offer_orgy.desc: "Offer to provide an orgy for [recipient.GetShortUIName]"
 
+ deviants_offer_private_orgy: "Offer private Orgy"
+ deviants_offer_private_orgy.desc: "Offer to provide an orgy for [recipient.GetShortUIName]"
+
  deviants_steal_gold_interaction: "Steal Gold"
  deviants_steal_gold_interaction.desc: "Stealing money from [recipient.GetShortUIName]"
 

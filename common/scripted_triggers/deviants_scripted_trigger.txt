@@ -97,4 +97,30 @@ can_be_granted_titles_by = {
 		always = yes
 	}
 }
+can_be_granted_theocratic_titles_by = {
+	save_temporary_scope_as = title_grantee
+	trigger_if = {
+		limit = {
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		always = yes
+	}
+	trigger_else_if = {
+		limit = {
+			$RULER$.faith = { has_doctrine = doctrine_clerical_gender_female_only }
+		}
+		is_female = yes
+	}
+	trigger_else_if = {
+		limit = {
+			$RULER$.faith = { has_doctrine = doctrine_clerical_gender_male_only }
+		}
+		is_male = yes
+	}
+	trigger_else = { always = yes }
+}
+
 

@@ -1,5 +1,5 @@
 deviants_offer_orgy = {
-	icon = expose_secret_interaction
+	icon = d_sex
 	desc = deviants_offer_orgy.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
@@ -14,12 +14,10 @@ deviants_offer_orgy = {
 			NOT  = { is_spouse_of = scope:actor }
 		}
 		scope:actor = {
+			is_valid_construction_brothel1_trigger = yes
 			has_trait = deviants_succubus
 			is_adult = yes
 		}
-	}
-	is_valid = {
-		scope:actor = { is_valid_construction_brothel1_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
@@ -52,6 +50,68 @@ deviants_offer_orgy = {
 	ai_targets = { 	
 		ai_recipients = liege
 		ai_recipients = peer_vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+deviants_offer_private_orgy = {
+	icon = d_sex
+	desc = deviants_offer_private_orgy.desc
+    	category = interaction_category_diplomacy
+    	use_diplomatic_range = yes
+	common_interaction = yes
+	cooldown = { years = 2 }
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+			is_ruler = yes
+			is_female = no
+			NOT = { is_at_war_with = scope:actor }
+			NOT  = { is_spouse_of = scope:actor }
+			any_courtier_or_guest = {
+				is_adult = yes 
+				is_female = no
+			}
+		}
+		scope:actor = {
+			NOT = { is_valid_construction_brothel1_trigger = yes }
+			has_trait = deviants_succubus
+			is_adult = yes
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { is_female = no }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				scope:actor = { add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } }
+				scope:actor = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } } 
+			}
+			random_courtier_or_guest = {
+				limit = { is_adult = yes is_female = no }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				scope:actor = { 
+					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+					add_trait_xp = { trait = deviants_succubus track = daring value = 2 }
+				}
+			}
+		}
+	}
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 24
+	ai_targets = { 	
+		ai_recipients = liege
+		ai_recipients = peer_vassals
+		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }

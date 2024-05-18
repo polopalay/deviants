@@ -1,12 +1,15 @@
 ﻿l_english:
  deviants_become_succubus: "Become Succubus"
- deviants_become_succubus.desc: "[recipient.GetShortUIName] will become Succubus"
+ deviants_become_succubus.desc: "You will become Succubus"
  deviants_become_succubus.c: "Become Succubus"
+ deviants_become_succubus.t: "You will become Succubus"
  
- deviants_spawn_death_korp_interaction: "Spawn Death Korps"
- deviants_spawn_death_korp_interaction.desc: "Spawn Death Korps in your capital"
- deviants_spawn_death_korp_interaction.c: "Spawn"
+ deviants_spawn_death_korp: "Spawn Death Korps"
+ deviants_spawn_death_korp.desc: "Spawn Death Korps in your capital"
+ deviants_spawn_death_korp.c: "Spawn"
+ deviants_spawn_death_korp.t: "Spawn Death Korps in your capital"
 
- deviants_demon_generals_interaction: "Summon Demon Generals"
- deviants_demon_generals_interaction.desc: "Turn all [recipient.GetShortUIName]'s knights into demon generals"
- deviants_demon_generals_interaction.c: "Summon"
+ deviants_demon_generals: "Summon Demon Generals"
+ deviants_demon_generals.desc: "Turn all your knights into demon generals"
+ deviants_demon_generals.c: "Summon"
+ deviants_demon_generals.t: "Turn all your knights into demon generals"

@@ -1,5 +1,6 @@
-deviants_spawn_death_korp_interaction = {
-	desc = deviants_spawn_death_korp_interaction.desc
+deviants_spawn_death_korp = {
+	desc = deviants_spawn_death_korp.desc
+	selection_tooltip = deviants_spawn_death_korp.t
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
 	confirm_text = deviants_spawn_death_korp_interaction.c
 	is_shown = {
@@ -33,10 +34,11 @@ deviants_spawn_death_korp_interaction = {
 	ai_will_do = { base = 5 }
 }
 
-deviants_demon_generals_interaction = {
-	desc = deviants_demon_generals_interaction.desc
+deviants_demon_generals = {
+	desc = deviants_demon_generals.desc
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	confirm_text = deviants_demon_generals_interaction.c
+	selection_tooltip = deviants_demon_generals_interaction.t
 	is_shown = {
 		any_knight = {
 			limit = { has_character_modifier = deviants_generals }
@@ -77,6 +79,7 @@ deviants_become_succubus = {
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	desc = deviants_become_succubus.desc
 	confirm_text = deviants_become_succubus.c
+	selection_tooltip = deviants_become_succubus.t
 
 	is_shown = { 
 		is_ai = no

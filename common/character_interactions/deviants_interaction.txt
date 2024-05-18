@@ -45,10 +45,11 @@ deviants_prostitute_interaction = {
 			OR = {
 				is_valid_prostitute_trigger = yes
 				AND = {
-					any_vassal = { is_valid_prostitute_trigger = yes }
+					any_courtier = { is_valid_prostitute_trigger = yes }
 				}
 				AND = {
-					any_courtier = { is_valid_prostitute_trigger = yes }
+					any_vassal = { is_valid_prostitute_trigger = yes }
+					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
 			}
 		}
@@ -63,7 +64,6 @@ deviants_prostitute_interaction = {
 			every_courtier = {
 				limit = { 
 					is_valid_prostitute_trigger = yes 
-					scope:recipient = { is_valid_construction_brothel1_trigger = yes }
 				}
 				add_to_list = characters
 			}
@@ -237,6 +237,13 @@ deviants_prostitute_interaction = {
 					add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 				}
     		}
+		random = {
+			chance = 10
+			scope:recipient = {
+				add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+				add_character_modifier = { modifier = deviants_horny months = 1 }
+			}
+		}
 	}
 
 	auto_accept = {

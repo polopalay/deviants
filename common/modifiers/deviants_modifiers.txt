@@ -7,23 +7,23 @@ deviants_slave = {
 }
 
 deviants_horny = {
-	icon = d_devil
+	icon = health_positive
 }
 
 deviants_fuckedsilly = {
-	icon = d_devil
+	icon = health_negative
     	health = -0.2
 	stacking = yes
 }
 
 deviants_buff = {
 	icon = souls
-	diplomacy = 5
-	martial = 5
-	stewardship = 5
-	intrigue = 5
-	learning = 5
-	prowess = 5
+	diplomacy = 2
+	martial = 2
+	stewardship = 2
+	intrigue = 2
+	learning = 2
+	prowess = 2
 	movement_speed = 0.1
 	retreat_losses = -0.1
 	embarkation_cost_mult = -0.1
@@ -33,7 +33,6 @@ deviants_buff = {
 	hard_casualty_modifier = -0.1
 	supply_duration = 0.1
 	supply_limit_mult = 0.1
-	mercenary_hire_cost_mult = -0.1
 	stacking = yes
 }
 
