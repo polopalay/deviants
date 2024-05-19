@@ -31,7 +31,7 @@ deviants_add_courtier = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 10
+				value >= 20
 			} 
 		}
 		scope:recipient = { 
@@ -48,7 +48,7 @@ deviants_add_courtier = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -10
+				value = -20
 			}
 		}
 	}
@@ -69,18 +69,13 @@ deviants_child_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 10
+				value >= 20
 			} 
 		}
 		scope:recipient = {
 			is_adult = yes
 			is_female = yes
 			age >= 18
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			is_valid_construction_brothel1_trigger = yes
 		}
 	}
 	on_accept = {
@@ -168,7 +163,7 @@ deviants_child_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -10
+				value = -20
 			}
 		}
 	}
@@ -197,13 +192,13 @@ deviants_create_lesser_succubus_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 25
+				value >= 5
 			} 
 		}
 	}
 	is_valid = {
 		scope:actor = {
-			is_valid_construction_brothel2_trigger = yes
+			is_valid_construction_alchemy3_trigger = yes
 		}
 	}
 	on_accept = {
@@ -404,7 +399,7 @@ deviants_create_succubus_interaction = {
 	}
 	is_valid = {
 		scope:actor = {
-			is_valid_construction_brothel3_trigger = yes
+			is_valid_construction_alchemy3_trigger = yes
 		}
 	}
 	on_accept = {

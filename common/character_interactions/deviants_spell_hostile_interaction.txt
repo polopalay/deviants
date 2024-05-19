@@ -11,11 +11,11 @@ deviants_steal_gold_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 1
+				value >= 10
 			} 
 		}
 		scope:recipient = {
-			gold >= 100
+			gold >= 200
 			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -26,15 +26,20 @@ deviants_steal_gold_interaction = {
 		scope:recipient = {
 			pay_short_term_gold = {
 				target = scope:actor
-				gold = 100
+				gold = 200
 			}
 		}
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -1
+				value = -10
 			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			is_valid_construction_alchemy1_trigger = yes
 		}
 	}
 	auto_accept = yes
@@ -59,7 +64,6 @@ deviants_hook = {
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
-			NOT = { has_relation_friend = scope:recipient } 
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -67,7 +71,6 @@ deviants_hook = {
 			} 
 		}
 		scope:recipient = {
-			is_landed = no
 			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -89,16 +92,13 @@ deviants_hook = {
 	}
 	is_valid = {
 		scope:actor = {
-			is_valid_construction_brothel2_trigger = yes
+			is_valid_construction_alchemy1_trigger = yes
 		}
 	}
 	auto_accept = yes
 	ai_frequency = 60
 	ai_targets = {
 		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
 		ai_recipients = courtiers
 	}
 	ai_potential = { always = yes }

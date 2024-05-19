@@ -241,7 +241,7 @@ deviants_shake_mind_interaction = {
 		}
 	}
 	is_valid = {
-		scope:actor = { is_valid_construction_brothel2_trigger = yes }
+		scope:actor = { is_valid_construction_alchemy2_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
@@ -309,7 +309,7 @@ deviants_mind_break_interaction = {
 		}
 	}
 	is_valid = {
-		scope:actor = { is_valid_construction_brothel3_trigger = yes }
+		scope:actor = { is_valid_construction_alchemy2_trigger = yes }
 	}
 	on_accept = {
 		scope:recipient = {
