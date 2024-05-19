@@ -23,9 +23,6 @@ deviants_absorb_interaction = {
 			has_trait_xp = { trait = deviants_lesser_succubus value >= 50 }
 		}
 	}
-	is_valid = {
-		scope:actor = { is_valid_construction_brothel2_trigger = yes }
-	}
 	on_accept = {
 		scope:recipient = {
 			add_character_modifier = deviants_buff

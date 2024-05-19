@@ -179,6 +179,11 @@ deviants_nude_interaction = {
 							chance = 25
 							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 						}
+						random = {
+							chance = 5
+							add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 }
+						}
+
 						add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 					}
 				}
@@ -255,7 +260,7 @@ deviants_shake_mind_interaction = {
 					add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 					random = {
 						chance = 25
-						add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+						add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 }
 					}
 					add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 				} 
@@ -286,7 +291,7 @@ deviants_mind_break_interaction = {
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = {
