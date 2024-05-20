@@ -30,8 +30,8 @@
  deviants_rumor_interaction: "Spreading Rumors"
  deviants_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
 
- deviants_switch_body: "Switch"
- deviants_switch_body.desc: "Play [recipient.GetShortUIName]"
+ deviants_switch_body_interaction: "Switch"
+ deviants_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
 
  deviants_become_prostitute_interaction: "Become Prostitution"
  deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"
@@ -93,23 +93,23 @@
  deviants_require_service_interaction: "Request Service"
  deviants_require_service_interaction.desc: "Ask [recipient.GetShortUIName] to provide free sexual services to maintain loyalty"
 
- deviants_switch_body: "Switch"
- deviants_switch_body.desc: "Play [recipient.GetShortUIName]"
+ deviants_switch_body_interaction: "Switch"
+ deviants_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
 
- deviants_add_courtier: "Add to Court"
- deviants_add_courtier.desc: "Add [recipient.GetShortUIName] to your Court"
+ deviants_add_courtier_interaction: "Add to Court"
+ deviants_add_courtier_interaction.desc: "Add [recipient.GetShortUIName] to your Court"
 
- deviants_befriend: "Befriend"
- deviants_befriend.desc: "Make [recipient.GetShortUIName] become your friend"
+ deviants_befriend_interaction: "Befriend"
+ deviants_befriend_interaction.desc: "Make [recipient.GetShortUIName] become your friend"
 
- deviants_hook: "Hook"
- deviants_hook.desc: "Create a hook with [recipient.GetShortUIName]"
+ deviants_hook_interaction: "Hook"
+ deviants_hook_interaction.desc: "Create a hook with [recipient.GetShortUIName]"
 
- deviants_offer_orgy: "Offer Orgy"
- deviants_offer_orgy.desc: "Offer to provide an orgy for [recipient.GetShortUIName]"
+ deviants_offer_orgy_interaction: "Offer Orgy"
+ deviants_offer_orgy_interaction.desc: "Offer to provide an orgy for [recipient.GetShortUIName]"
 
- deviants_offer_private_orgy: "Offer private Orgy"
- deviants_offer_private_orgy.desc: "Offer to provide an orgy for [recipient.GetShortUIName]"
+ deviants_offer_private_orgy_interaction: "Offer private Orgy"
+ deviants_offer_private_orgy_interaction.desc: "Offer to provide an orgy for [recipient.GetShortUIName]"
 
  deviants_steal_gold_interaction: "Steal Gold"
  deviants_steal_gold_interaction.desc: "Stealing money from [recipient.GetShortUIName]"

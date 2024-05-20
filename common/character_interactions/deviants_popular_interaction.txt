@@ -1,6 +1,6 @@
-deviants_offer_orgy = {
+deviants_offer_orgy_interaction = {
 	icon = d_sex
-	desc = deviants_offer_orgy.desc
+	desc = deviants_offer_orgy_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	common_interaction = yes
@@ -55,9 +55,9 @@ deviants_offer_orgy = {
 	ai_will_do = { base = 100 }
 }
 
-deviants_offer_private_orgy = {
+deviants_offer_private_orgy_interaction = {
 	icon = d_sex
-	desc = deviants_offer_private_orgy.desc
+	desc = deviants_offer_private_orgy_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
 	common_interaction = yes
@@ -216,7 +216,7 @@ deviants_nude_interaction = {
 	ai_frequency = 12
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 5 }
 }
 
 deviants_shake_mind_interaction = {

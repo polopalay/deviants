@@ -1,6 +1,6 @@
-deviants_switch_body = {
+deviants_switch_body_interaction = {
 	icon = d_switch
-	desc = deviants_switch_body.desc
+	desc = deviants_switch_body_interaction.desc
     	category = interaction_category_diplomacy
 	interface_priority = 1
 	common_interaction = yes
@@ -18,9 +18,9 @@ deviants_switch_body = {
 	auto_accept = yes
 }
 
-deviants_add_courtier = {
+deviants_add_courtier_interaction = {
 	icon = invite_to_court_interaction
-	desc = deviants_add_courtier.desc
+	desc = deviants_add_courtier_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	common_interaction = yes

@@ -243,9 +243,9 @@ deviants_weight_interaction = {
 	}
 }
 
-deviants_befriend = {
+deviants_befriend_interaction = {
 	icon = synergise_friendship_interaction
-	desc = deviants_befriend.desc
+	desc = deviants_befriend_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }

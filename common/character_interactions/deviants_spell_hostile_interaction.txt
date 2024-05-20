@@ -55,6 +55,56 @@ deviants_steal_gold_interaction = {
 	}
 }
 
+deviants_hook_interaction = {
+	icon = fabricate_hook_interaction
+	desc = deviants_hook_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 10
+			} 
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = favor_hook
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -10
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			is_valid_construction_alchemy1_trigger = yes
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = courtiers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
 deviants_hook = {
 	icon = fabricate_hook_interaction
 	desc = deviants_hook.desc
