@@ -15,7 +15,6 @@ deviants_steal_gold_interaction = {
 			} 
 		}
 		scope:recipient = {
-			gold >= 200
 			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus

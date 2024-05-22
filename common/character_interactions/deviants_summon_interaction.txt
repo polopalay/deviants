@@ -30,8 +30,8 @@ deviants_add_courtier_interaction = {
 		scope:actor = { 
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
-				value >= 20
+				track = corruption
+				value >= 1
 			} 
 		}
 		scope:recipient = { 
@@ -47,8 +47,8 @@ deviants_add_courtier_interaction = {
 			add_courtier = scope:recipient
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = power
-				value = -20
+				track = corruption
+				value = -1
 			}
 		}
 	}
@@ -68,8 +68,8 @@ deviants_child_interaction = {
 			is_adult = yes
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
-				value >= 20
+				track = corruption
+				value >= 5
 			} 
 		}
 		scope:recipient = {
@@ -162,8 +162,8 @@ deviants_child_interaction = {
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = power
-				value = -20
+				track = corruption
+				value = -5
 			}
 		}
 	}
@@ -192,7 +192,7 @@ deviants_create_lesser_succubus_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 5
+				value >= 10
 			} 
 		}
 	}
@@ -368,7 +368,7 @@ deviants_create_lesser_succubus_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = -25
+				value = -10
 			}
 		}
 	}

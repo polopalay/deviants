@@ -2,7 +2,7 @@ deviants_spawn_death_korp = {
 	desc = deviants_spawn_death_korp.desc
 	selection_tooltip = deviants_spawn_death_korp.t
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
-	confirm_text = deviants_spawn_death_korp_interaction.c
+	confirm_text = deviants_spawn_death_korp.c
 	is_shown = {
 		has_trait_xp = {
 			trait = deviants_succubus
@@ -11,7 +11,7 @@ deviants_spawn_death_korp = {
 		} 
 	}
 	is_valid = {
-		is_valid_construction_brothel2_trigger = yes
+		is_valid_construction_alchemy3_trigger = yes
 	}
 	effect = {
 		spawn_army = {
@@ -37,8 +37,8 @@ deviants_spawn_death_korp = {
 deviants_demon_generals = {
 	desc = deviants_demon_generals.desc
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	confirm_text = deviants_demon_generals_interaction.c
-	selection_tooltip = deviants_demon_generals_interaction.t
+	confirm_text = deviants_demon_generals.c
+	selection_tooltip = deviants_demon_generals.t
 	is_shown = {
 		any_knight = {
 			limit = { has_character_modifier = deviants_generals }
@@ -325,14 +325,7 @@ deviants_become_succubus = {
 			add_trait = education_learning_1
 		}
 		remove_character_modifier = deviants_slave
-		every_courtier = {
-			limit = { is_knight = yes }
-			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
-			root = {
-				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
-				add_character_modifier = { modifier =  deviants_fuckedsilly months = 1 }
-			}
-		}
+		add_character_modifier = deviants_prostitute
 		set_immortal_age = 18
 		add_trait = deviants_succubus
 	}

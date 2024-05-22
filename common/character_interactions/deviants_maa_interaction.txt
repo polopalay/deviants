@@ -163,7 +163,7 @@ deviants_dispel_interaction = {
 								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 							}
 							random = {
-								chance = 50
+								chance = 10
 								add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 							}
 						} 
@@ -188,7 +188,7 @@ deviants_dispel_interaction = {
 								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 							}
 							random = {
-								chance = 50
+								chance = 10
 								add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 							}
 						} 
@@ -213,7 +213,7 @@ deviants_dispel_interaction = {
 								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
 							}
 							random = {
-								chance = 50
+								chance = 10
 								add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 							}
 						} 
