@@ -159,7 +159,32 @@ deviants_dispel_interaction = {
 						scope:recipient = { 
 							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 							random = {
+								chance = 5
+								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
+							}
+							random = {
 								chance = 50
+								add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+							}
+						} 
+					}
+				}
+			}
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				scope:recipient = {
+					random_courtier = {
+						limit = { is_female = no is_adult = yes }
+						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
+						scope:actor = { 
+							remove_character_modifier = deviants_prostitute
+							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+						}
+						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+						scope:recipient = { 
+							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+							random = {
+								chance = 5
 								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 							}
 							random = {
@@ -184,33 +209,8 @@ deviants_dispel_interaction = {
 						scope:recipient = { 
 							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 							random = {
-								chance = 25
+								chance = 5
 								add_trait_xp = { trait = deviants_succubus track = corruption value = 1 } 
-							}
-							random = {
-								chance = 50
-								add_trait_xp = { trait = deviants_succubus track = power value = 1 }
-							}
-						} 
-					}
-				}
-			}
-			if = {
-				limit = { has_character_modifier = deviants_prostitute }
-				scope:recipient = {
-					random_courtier = {
-						limit = { is_female = no is_adult = yes }
-						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
-						scope:actor = { 
-							remove_character_modifier = deviants_prostitute
-							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-						}
-						had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
-						scope:recipient = { 
-							add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-							random = {
-								chance = 25
-								add_trait_xp = { trait = deviants_succubus track = loyalty value = 1 } 
 							}
 							random = {
 								chance = 50
@@ -223,7 +223,7 @@ deviants_dispel_interaction = {
 		}
 	}
 	ai_accept = {
-		base = -10
+		base = 0
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient

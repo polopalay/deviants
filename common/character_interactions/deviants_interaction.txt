@@ -186,7 +186,14 @@ deviants_prostitute_interaction = {
 		if = {
 			limit = { scope:secondary_recipient = { has_trait = deviants_succubus } }
 			scope:recipient = {
-				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+				random_list = {
+					1 = {
+						add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
+					}
+					1 = {
+						add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+					}
+				}
 			}
 		}
 		if = {

@@ -17,7 +17,7 @@ deviants_spawn_death_korp = {
 		spawn_army = {
 			men_at_arms = {
 				type = deviants_death_korps
-				stacks = 12
+				stacks = 25
 			}
 			location = capital_province
 			inheritable = yes
