@@ -51,6 +51,12 @@ deviants_add_courtier_interaction = {
 				value = -1
 			}
 		}
+		scope:recipient = {
+			if = {
+				limit = { is_female = yes age >= 18 }
+				add_trait = deviants_prostitute
+			}
+		}
 	}
 	auto_accept = yes
 }

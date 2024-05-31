@@ -99,6 +99,13 @@ deviants_heal_interaction = {
 			}
 		}
 		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:actor = scope:recipient } }
+				add_opinion = {
+					target = scope:actor
+					modifier = be_healed_opinion
+				}
+			}
 			remove_trait = depressed_1
 			remove_trait = depressed_genetic
 			remove_trait = lunatic_1

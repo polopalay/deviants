@@ -50,41 +50,6 @@ deviants_absorb_interaction = {
 	ai_will_do = { base = 100 }
 }
 
-deviants_stop_nude_interaction = {
-	icon = dress_interaction
-	desc = deviants_stop_nude_interaction.desc
-    	category = interaction_category_vassal
-	auto_accept = yes
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
-
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 1
-			} 
-		}
-		scope:recipient = {
-			has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		}
-	}
-
-	on_accept = {
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -1
-			}
-		}
-		scope:recipient = {
-			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		}
-	}
-}
-
 deviants_dispel_interaction = {
 	icon = d_drain_life
 	desc = deviants_dispel_interaction.desc
@@ -173,6 +138,19 @@ deviants_dispel_interaction = {
 			if = {
 				limit = { has_character_modifier = deviants_prostitute }
 				scope:recipient = {
+					if = {
+						limit = { 
+							NOT = { scope:actor = scope:recipient } 
+							NOR = {
+								has_trait = deviants_succubus
+								has_trait = deviants_lesser_succubus
+							}
+						}
+						add_opinion = {
+							target = scope:actor
+							modifier = forced_into_prostitution_opinion
+						}
+					}
 					random_courtier = {
 						limit = { is_female = no is_adult = yes }
 						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 
@@ -198,6 +176,19 @@ deviants_dispel_interaction = {
 			if = {
 				limit = { has_character_modifier = deviants_slave }
 				scope:recipient = {
+					if = {
+						limit = { 
+							NOT = { scope:actor = scope:recipient } 
+							NOR = {
+								has_trait = deviants_succubus
+								has_trait = deviants_lesser_succubus
+							}
+						}
+						add_opinion = {
+							target = scope:actor
+							modifier = forced_into_prostitution_opinion
+						}
+					}
 					every_courtier = {
 						limit = { is_female = no is_adult = yes }
 						had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance } 

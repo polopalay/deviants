@@ -96,7 +96,7 @@ deviants_prostitute_interaction = {
 		}
         	scope:actor = {
 			add_opinion = {
-				target = scope:recipient
+				target = scope:secondary_recipient
 				modifier = have_sex_opinion
 			}
 			if = {
@@ -247,6 +247,15 @@ deviants_prostitute_interaction = {
 			scope:recipient = {
 				add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 				add_character_modifier = { modifier = deviants_horny months = 1 }
+			}
+		}
+		random = {
+			chance = 10
+			scope:recipient = {
+				add_character_modifier = { modifier = lost_in_lust_modifier months = 1 }
+				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
 			}
 		}
 	}
@@ -466,7 +475,19 @@ deviants_become_prostitute_interaction = {
 
     	on_accept = {
 		scope:recipient = {
-			#add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			if = {
+				limit = { 
+					NOT = { scope:actor = scope:recipient } 
+					NOR = {
+						has_trait = deviants_succubus
+						has_trait = deviants_lesser_succubus
+					}
+				}
+				add_opinion = {
+					target = scope:actor
+					modifier = forced_into_prostitution_opinion
+				}
+			}
 			add_character_modifier = deviants_prostitute
 			add_character_flag = blocked_from_leaving
 			if = {
@@ -585,8 +606,20 @@ deviants_stop_prostitute_interaction = {
 
 
     	on_accept = {
+		if = {
+			limit = { 
+				NOT = { scope:actor = scope:recipient } 
+				NOR = {
+					has_trait = deviants_succubus
+					has_trait = deviants_lesser_succubus
+				}
+			}
+		}
 		scope:recipient = {
-			#remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			add_opinion = {
+				target = scope:actor
+				modifier = freed_from_prostitution_opinion
+			}
 			remove_character_modifier = deviants_prostitute
 		}
     	}

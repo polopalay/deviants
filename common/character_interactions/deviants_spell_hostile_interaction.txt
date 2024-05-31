@@ -25,7 +25,7 @@ deviants_steal_gold_interaction = {
 		scope:recipient = {
 			pay_short_term_gold = {
 				target = scope:actor
-				gold = 200
+				gold = 100
 			}
 		}
 		scope:actor = {
