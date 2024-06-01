@@ -196,9 +196,7 @@ deviants_prostitute_interaction = {
 			}
 		}
 		if = {
-			limit = {
-				NOT = { scope:secondary_recipient = scope:recipient }
-			}
+			limit = { NOT = { scope:secondary_recipient = scope:recipient } }
 			if = {
 				limit = { scope:deviants_prostitute_service_1 = yes }
 				random = {
@@ -237,17 +235,8 @@ deviants_prostitute_interaction = {
 		}
 		if = {
 			limit = { scope:secondary_recipient = { has_trait = deviants_lesser_succubus } }
-				scope:secondary_recipient = {
-					add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
-				}
+				scope:secondary_recipient = { add_trait_xp = { trait = deviants_lesser_succubus value = 2 } }
     		}
-		random = {
-			chance = 10
-			scope:recipient = {
-				add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
-				add_character_modifier = { modifier = deviants_horny months = 1 }
-			}
-		}
 		random = {
 			chance = 10
 			scope:recipient = {
