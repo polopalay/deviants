@@ -2,6 +2,7 @@
  deviants_prostitute_interaction: "Prostituting"
  deviants_prostitute_interaction.desc: "[actor.GetShortUIName] lays with [recipient.GetShortUIName]"
  recipient_secondary_deviants_prostitute_interaction: "Choose one"
+ exits_prostitution: "There exists any whore who is still strong enough to serve you"
 
  deviants_become_prostitute_interaction: "Become Prostitution"
  deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"

@@ -11,13 +11,13 @@ start_murder_interaction = {
 	send_name = START_SCHEME
 
 	is_shown = {
-		NOR = { 
+		NOT = { 
 			scope:recipient = scope:actor 
-			scheme:recipient = {
-				has_trait = deviants_succubus
-			}
-			scheme:recipient = {
-				has_trait = deviants_lesser_succubus
+			scope:recipient = {
+				OR = {
+					has_trait = deviants_succubus	
+					has_trait = deviants_lesser_succubus
+				}
 			}
 		}
 
@@ -134,7 +134,4 @@ start_murder_interaction = {
 	}
 	
 	auto_accept = yes
-
-	# AI for murders is handled in event murder_scheme_maintenance.1, fired from the five_year_playable_pulse
 }
-

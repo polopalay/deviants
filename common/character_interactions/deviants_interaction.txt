@@ -41,13 +41,12 @@ deviants_prostitute_interaction = {
     	}
 
 	is_valid = {
-		scope:recipient = {
-			OR = {
-				is_valid_prostitute_trigger = yes
-				AND = {
+		custom_description = {
+			text = exits_prostitution
+			scope:recipient = {
+				OR = {
+					is_valid_prostitute_trigger = yes
 					any_courtier = { is_valid_prostitute_trigger = yes }
-				}
-				AND = {
 					any_vassal = { is_valid_prostitute_trigger = yes }
 				}
 			}
