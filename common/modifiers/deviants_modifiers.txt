@@ -1,9 +1,9 @@
 deviants_prostitute = {
-	icon = prostitute
+	icon = prostitute_positive
 }
 
 deviants_slave = {
-	icon = slave
+	icon = slave_positive
 }
 
 deviants_horny = {
@@ -17,7 +17,7 @@ deviants_fuckedsilly = {
 }
 
 deviants_buff = {
-	icon = souls
+	icon = souls_positive
 	diplomacy = 1
 	martial = 1
 	stewardship = 1
@@ -37,7 +37,7 @@ deviants_buff = {
 }
 
 deviants_generals = {
-	icon = souls
+	icon = souls_positive
 	diplomacy = 100
 	martial = 100
 	stewardship = 100

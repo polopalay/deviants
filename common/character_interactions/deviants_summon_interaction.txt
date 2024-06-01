@@ -7,8 +7,19 @@ deviants_switch_body_interaction = {
     	use_diplomatic_range = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		scope:actor = { is_ai = no has_trait = deviants_succubus }
-		scope:recipient = { has_trait = deviants_succubus }
+		scope:actor = { 
+			is_ai = no
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+		scope:recipient = { 
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
 	}
 	on_accept = {
 		scope:actor = {
@@ -53,8 +64,8 @@ deviants_add_courtier_interaction = {
 		}
 		scope:recipient = {
 			if = {
-				limit = { is_female = yes age >= 18 }
-				add_trait = deviants_prostitute
+				limit = { is_female = yes age >= 16 }
+				add_character_modifier = deviants_prostitute
 			}
 		}
 	}

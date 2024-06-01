@@ -1,7 +1,7 @@
 deviants_brothel1 = {
 	type_icon = "icon_brothel.dds"
-	construction_time = standard_construction_time
-	cost = { gold = expensive_building_tier_3_cost }
+	construction_time = very_quick_construction_time
+	cost = { gold = cheap_building_tier_1_cost }
 	type = duchy_capital
 
 	next_building = deviants_brothel2
@@ -36,7 +36,7 @@ deviants_brothel1 = {
 	county_modifier = {
 		monthly_county_control_growth_add = 0.1
 		development_growth = 0.1
-		tax_mult = 0.05
+		tax_mult = 0.01
 	}
 	
 	ai_value = { base = 100 }
@@ -44,8 +44,8 @@ deviants_brothel1 = {
 
 deviants_brothel2 = {
 	type_icon = "icon_brothel.dds"
-	construction_time = slow_construction_time
-	cost = { gold = expensive_building_tier_6_cost }
+	construction_time = very_quick_construction_time
+	cost = { gold = cheap_building_tier_2_cost }
 	type = duchy_capital
 
 	next_building = deviants_brothel3
@@ -74,6 +74,7 @@ deviants_brothel2 = {
 	county_modifier = {
 		monthly_county_control_growth_add = 0.2
 		development_growth = 0.2
+		tax_mult = 0.02
 	}
 	
 	ai_value = { base = 100 }
@@ -81,8 +82,8 @@ deviants_brothel2 = {
 
 deviants_brothel3 = {
 	type_icon = "icon_brothel.dds"
-	construction_time = very_slow_construction_time
-	cost = { gold = expensive_building_tier_8_cost }
+	construction_time = cheap_building_tier_2_cost
+	cost = { gold = cheap_building_tier_3_cost }
 	type = duchy_capital
 
 	can_construct_potential = {
@@ -100,15 +101,16 @@ deviants_brothel3 = {
 		county_opinion_add = 20
 	}
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_income = 0.25
 	}
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.1
 		monthly_dynasty_prestige_mult = 0.1
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.5
+		monthly_county_control_growth_add = 0.25
 		development_growth = 0.25
+		tax_mult = 0.025
 	}
 	
 	ai_value = { base = 100 }
@@ -116,8 +118,8 @@ deviants_brothel3 = {
 
 deviants_alchemy1 = {
 	type_icon = "icon_smeltworks.dds"
-	construction_time = standard_construction_time
-	cost = { gold = expensive_building_tier_3_cost }
+	construction_time = very_quick_construction_time
+	cost = { gold = cheap_building_tier_1_cost }
 	type = duchy_capital
 
 	next_building = deviants_alchemy2
@@ -156,13 +158,13 @@ deviants_alchemy1 = {
 		hostile_raid_time = 0.25
 	}
 	
-	ai_value = { base = 50 }
+	ai_value = { base = 80 }
 }
 
 deviants_alchemy2 = {
 	type_icon = "icon_smeltworks.dds"
-	construction_time = slow_construction_time
-	cost = { gold = expensive_building_tier_6_cost }
+	construction_time = very_quick_construction_time
+	cost = { gold = cheap_building_tier_2_cost }
 	type = duchy_capital
 
 	next_building = deviants_alchemy3
@@ -184,27 +186,27 @@ deviants_alchemy2 = {
 	levy = 250
 	max_garrison = 250
 	duchy_capital_county_modifier = {
-		levy_size = 0.25
+		levy_size = 0.2
 	}
 	province_modifier = {
-		garrison_size = 0.25
+		garrison_size = 0.2
 		fort_level = 5
 	}
 	character_modifier = {
-		mercenary_hire_cost_mult = -0.25
+		mercenary_hire_cost_mult = -0.2
 	}
 	county_modifier = {
 		supply_limit = 2000
 		hostile_raid_time = 0.5
 	}
 	
-	ai_value = { base = 50 }
+	ai_value = { base = 80 }
 }
 
 deviants_alchemy3 = {
 	type_icon = "icon_smeltworks.dds"
-	construction_time = very_slow_construction_time
-	cost = { gold = expensive_building_tier_8_cost }
+	construction_time = quick_construction_time
+	cost = { gold = cheap_building_tier_3_cost }
 	type = duchy_capital
 
 	can_construct_potential = {
@@ -224,20 +226,20 @@ deviants_alchemy3 = {
 	levy = 500
 	max_garrison = 500
 	duchy_capital_county_modifier = {
-		levy_size = 0.5
+		levy_size = 0.25
 	}
 	province_modifier = {
-		garrison_size = 0.5
+		garrison_size = 0.25
 		fort_level = 8
 	}
 	character_modifier = {
-		mercenary_hire_cost_mult = -0.5
+		mercenary_hire_cost_mult = -0.25
 	}
 	county_modifier = {
 		supply_limit = 5000
 		hostile_raid_time = 1
 	}
 	
-	ai_value = { base = 50 }
+	ai_value = { base = 80 }
 }
 
