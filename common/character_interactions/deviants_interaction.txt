@@ -425,7 +425,14 @@ deviants_become_prostitute_interaction = {
         	scope:actor = {
             		is_adult = yes
 			is_landed = yes
-			has_trait = deviants_succubus
+			OR = {
+				has_trait = deviants_succubus
+				AND = {
+					has_trait = lustful
+					scope:actor = scope:recipient
+					age < 40
+				}
+			}
 			NOT = { is_at_war_with = scope:recipient }
         	}
         	scope:recipient = {
@@ -575,6 +582,12 @@ deviants_become_prostitute_interaction = {
 			add = 50
 			scope:actor = scope:recipient
 		}
+		modifier = {
+			add = -99
+			scope:actor = {
+				NOT = { has_trait = deviants_succubus }
+			}
+		}
 	}
 }
 
@@ -590,7 +603,14 @@ deviants_stop_prostitute_interaction = {
         	scope:actor = {
             		is_adult = yes
 			is_landed = yes
-			has_trait = deviants_succubus
+			OR = {
+				has_trait = deviants_succubus
+				AND = {
+					has_trait = lustful
+					scope:actor = scope:recipient
+					age > 40
+				}
+			}
 			NOT = { is_at_war_with = scope:recipient }
         	}
         	scope:recipient = {
@@ -641,7 +661,6 @@ deviants_stop_prostitute_interaction = {
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
 				}
-				age > 40
 			}
 		}
 	}

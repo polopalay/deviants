@@ -70,6 +70,7 @@ deviants_dispel_interaction = {
 			NOT  = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				has_trait = lustful
 				is_vassal_of = scope:recipient
 				scope:actor.liege = {
 					is_valid_construction_brothel1_trigger	= yes
