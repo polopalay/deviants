@@ -16,6 +16,9 @@
  deviants_heal_interaction: "Healing"
  deviants_heal_interaction.desc: "Eliminates all kinds of diseases, injuries, and all disgraceful names"
 
+ deviants_purify_interaction: "Purify"
+ deviants_purify_interaction.desc: "Purify [recipient.GetShortUIName]'s bloodstream, eliminating all bad genes"
+
  deviants_imprison_interaction: "Imprison"
  deviants_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
 

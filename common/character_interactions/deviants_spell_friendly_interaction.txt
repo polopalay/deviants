@@ -191,6 +191,95 @@ deviants_heal_interaction = {
 	}
 }
 
+deviants_purify_interaction = {
+	icon = child
+	desc = deviants_purify_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 5
+			}
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = albino
+				has_trait = lisping
+				has_trait = stuttering
+				has_trait = giant
+				has_trait = scaly
+				has_trait = clubfooted
+				has_trait = dwarf
+				has_trait = hunchbacked
+				has_trait = infertile
+				has_trait = wheezing
+				has_trait = spindly
+				has_trait = bleeder
+				has_trait = weak
+				has_trait = dull
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -5
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:actor = scope:recipient } }
+				add_opinion = {
+					target = scope:actor
+					modifier = be_healed_opinion
+				}
+			}
+			remove_trait = albino
+			remove_trait = lisping
+			remove_trait = stuttering
+			remove_trait = giant
+			remove_trait = scaly
+			remove_trait = clubfooted
+			remove_trait = dwarf
+			remove_trait = hunchbacked
+			remove_trait = infertile
+			remove_trait = wheezing
+			remove_trait = spindly
+			remove_trait = bleeder
+			remove_trait = weak
+			remove_trait = dull
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = { 
+		ai_recipients = self 
+		ai_recipients = spouses
+		ai_recipients = children
+		ai_recipients = vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 50
+		modifier = {
+			base = 50
+			scope:recipient = scope:actor
+		}
+		modifier = {
+			base = 30
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+	}
+}
+
 deviants_weight_interaction = {
 	icon = d_full_body
 	desc = deviants_weight_interaction.desc

@@ -15,6 +15,7 @@ deviants_switch_body_interaction = {
 			}
 		}
 		scope:recipient = { 
+			is_ruler = yes
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -443,6 +444,7 @@ deviants_offer_devils_virgin = {
 	on_accept = {
 		scope:actor = {
 			add_trait = deviants_virgin
+			add_character_modifier = deviants_slave
 			add_secret = { 
 				type = secret_deviant
 			}

@@ -30,7 +30,10 @@ deviants_prostitute_interaction = {
         	scope:recipient = {
             		is_adult = yes
             		is_imprisoned = no
-			has_character_modifier = deviants_prostitute
+			OR = {
+				has_character_modifier = deviants_prostitute
+				has_character_modifier = deviants_slave
+			}
         	}
     	}
 
@@ -40,8 +43,19 @@ deviants_prostitute_interaction = {
 			scope:recipient = {
 				OR = {
 					is_valid_prostitute_trigger = yes
-					any_courtier = { is_valid_prostitute_trigger = yes }
-					any_vassal = { is_valid_prostitute_trigger = yes }
+					AND = {
+						scope:recipient = { 
+							OR = {
+								has_trait = deviants_succubus
+								has_trait = deviants_lesser_succubus
+							}
+						}
+						any_courtier = { is_valid_prostitute_trigger = yes }
+					}
+					AND = {
+						scope:recipient = { has_trait = deviants_succubus }
+						any_vassal = { is_valid_prostitute_trigger = yes }
+					}
 				}
 			}
 		}
@@ -55,12 +69,21 @@ deviants_prostitute_interaction = {
 			}
 			every_courtier = {
 				limit = { 
+					scope:recipient = {
+						OR = {
+							has_trait = deviants_succubus
+							has_trait = deviants_lesser_succubus
+						}
+					}
 					is_valid_prostitute_trigger = yes 
 				}
 				add_to_list = characters
 			}
 			every_vassal = {
 				limit = { 
+					scope:recipient = {
+						has_trait = deviants_succubus
+					}
 					is_valid_prostitute_trigger = yes
 				}
 				add_to_list = characters
@@ -70,20 +93,23 @@ deviants_prostitute_interaction = {
 
     	on_accept = {
 		scope:secondary_recipient = {
-			if = {
+			if = { 
+				limit = { has_character_modifier = deviants_slave }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+			else_if = {
 				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
 			}
 			else_if = {
 				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 10 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 5 }
 			}
 			else_if = {
 				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 8 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 4 }
 			}
 			else = {
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
 			}
 			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 		}
@@ -130,6 +156,10 @@ deviants_prostitute_interaction = {
 				if = {
 					limit = { scope:secondary_recipient = scope:recipient }
 					if = {
+						scope:recipient = { has_character_modifier = deviants_slave }
+						pay_short_term_gold = { target = scope:recipient gold = 1 } 
+					}
+					if = {
 						limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
 						pay_short_term_gold = { target = scope:recipient gold = 15 } 
 					}
@@ -168,11 +198,46 @@ deviants_prostitute_interaction = {
 				}
 				random = {
 					chance = 10
-					modifier = { add = 40 has_trait = generous }
-					modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
-					modifier = { add = 8 scope:secondary_recipient = { has_trait = beauty_good_2 } }
-					modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_3 } }
-					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
+					modifier = { add = 5 has_trait = generous }
+					modifier = { add = -5 has_trait = greedy }
+					modifier = { add = 5 has_trait = rakish }
+					modifier = { add = 5 has_trait = profligate }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = deviants_lesser_succubus } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = deviants_succubus } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_1 } }
+					modifier = { add = 15 scope:secondary_recipient = { has_trait = beauty_good_2 } }
+					modifier = { add = 25 scope:secondary_recipient = { has_trait = beauty_good_3 } }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = physique_good_1 } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = physique_good_2 } }
+					modifier = { add = 15 scope:secondary_recipient = { has_trait = physique_good_3 } }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = intellect_good_1 } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = intellect_good_2 } }
+					modifier = { add = 15 scope:secondary_recipient = { has_trait = intellect_good_3 } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = beauty_bad_1 } }
+					modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
+					modifier = { add = -15 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = physique_bad_1 } }
+					modifier = { add = -10 scope:secondary_recipient = { has_trait = physique_bad_2 } }
+					modifier = { add = -15 scope:secondary_recipient = { has_trait = physique_bad_3 } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = intellect_bad_1 } }
+					modifier = { add = -10 scope:secondary_recipient = { has_trait = intellect_bad_2 } }
+					modifier = { add = -15 scope:secondary_recipient = { has_trait = intellect_bad_3 } }
+					modifier = { add = -1 scope:secondary_recipient = { has_trait = clubfooted } }
+					modifier = { add = -1 scope:secondary_recipient = { has_trait = hunchbacked } }
+					modifier = { add = -1 scope:secondary_recipient = { has_trait = lisping } }
+					modifier = { add = -1 scope:secondary_recipient = { has_trait = stuttering } }
+					modifier = { add = -1 scope:secondary_recipient = { has_trait = dull } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = dwarf } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = giant } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = scaly } }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = strong } }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = devoted } }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = poet } }
+					modifier = { add = 5 scope:secondary_recipient = { age <= 18 } }
+					modifier = { add = 5 scope:secondary_recipient = { age <= 24 } }
+					modifier = { add = -5 scope:secondary_recipient = { age >= 32 } }
+					modifier = { add = -5 scope:secondary_recipient = { age >= 36 } }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 5 }
 				}
 			}
     		}
@@ -181,10 +246,38 @@ deviants_prostitute_interaction = {
 				limit = { has_trait = deviants_succubus }
 				random_list = {
 					1 = {
-						add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
+						if = { 
+							limit = { scope:recipient = { is_valid_construction_brothel1_trigger } }
+							add_trait_xp = { trait = deviants_succubus track = daring value = 2 }
+						}
+						else_if = { 
+							limit = { scope:recipient = { is_valid_construction_brothel2_trigger } }
+							add_trait_xp = { trait = deviants_succubus track = daring value = 3 }
+						}
+						else_if = { 
+							limit = { scope:recipient = { is_valid_construction_brothel3_trigger } }
+							add_trait_xp = { trait = deviants_succubus track = daring value = 4 }
+						}
+						else = {
+							add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
+						}
 					}
 					1 = {
-						add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+						if = { 
+							limit = { scope:recipient = { is_valid_construction_brothel1_trigger } }
+							add_trait_xp = { trait = deviants_succubus track = power value = 2 }
+						}
+						else_if = { 
+							limit = { scope:recipient = { is_valid_construction_brothel2_trigger } }
+							add_trait_xp = { trait = deviants_succubus track = power value = 3 }
+						}
+						else_if = { 
+							limit = { scope:recipient = { is_valid_construction_brothel3_trigger } }
+							add_trait_xp = { trait = deviants_succubus track = power value = 4 }
+						}
+						else = {
+							add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+						}
 					}
 				}
 			}
@@ -192,37 +285,40 @@ deviants_prostitute_interaction = {
 		scope:secondary_recipient = {
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
-				add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
+				if = { 
+					limit = { scope:recipient = { is_valid_construction_brothel1_trigger } }
+					add_trait_xp = { trait = deviants_lesser_succubus value = 3 }
+				}
+				else_if = { 
+					limit = { scope:recipient = { is_valid_construction_brothel2_trigger } }
+					add_trait_xp = { trait = deviants_lesser_succubus value = 4 }
+				}
+				else_if = { 
+					limit = { scope:recipient = { is_valid_construction_brothel3_trigger } }
+					add_trait_xp = { trait = deviants_lesser_succubus value = 5 }
+				}
+				else = {
+					add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
+				}
 			}
     		}
 		scope:recipient = {
 			if = {
 				limit = { NOT = { scope:secondary_recipient = scope:recipient } }
-				if = {
-					limit = { scope:deviants_prostitute_service_1 = yes }
-					random = {
-						chance = 10
-						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+				random = {
+					chance = 5
+					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					modifier = {
+						add = 5
+						is_valid_construction_brothel1_trigger = yes
 					}
-				}
-				else_if = {
-					limit = { scope:deviants_prostitute_service_2 = yes }
-					random = {
-						chance = 15
-						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					modifier = {
+						add = 5
+						is_valid_construction_brothel2_trigger = yes
 					}
-				}
-				else_if = {
-					limit = { scope:deviants_prostitute_service_3 = yes }
-					random = {
-						chance = 20
-						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
-					}
-				}
-				else = {
-					random = {
-						chance = 5
-						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+					modifier = {
+						add = 5
+						is_valid_construction_brothel3_trigger = yes
 					}
 				}
 			}
@@ -230,9 +326,13 @@ deviants_prostitute_interaction = {
 		scope:recipient = {
 			random = {
 				chance = 10
+				modifier = {
+					add = 40
+					has_character_modifier = deviants_slave
+				}
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				add_character_modifier = { modifier = lost_in_lust_modifier months = 1 }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				if = {
 					limit = { has_trait = deviants_succubus }
 					add_trait_xp = { trait = deviants_succubus track = power value = 1 }
@@ -242,42 +342,7 @@ deviants_prostitute_interaction = {
 	}
 
 	auto_accept = {
-		scope:secondary_recipient = {
-			OR = {
-				scope:secondary_recipient = scope:recipient
-				is_courtier_of = scope:recipient
-				is_vassal_of = scope:recipient
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_succubus
-			}
-		}
-	}
-
-	ai_accept = {
-		base = 10
-		modifier = {
-			add = -50
-			scope:secondary_recipient = { 
-				OR = {
-					is_close_family_of = scope:actor
-					is_child_of = scope:actor
-				}
-			}
-		}
-		modifier = {
-			add = 100
-			scope:secondary_recipient = { 
-				OR = {
-					has_trait = deviants_lesser_succubus
-					has_trait = deviants_succubus
-				}
-			}
-		}
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:secondary_recipient
-			multiplier = 1
-		}
+		always = yes
 	}
 
 	ai_frequency = 2
@@ -287,26 +352,23 @@ deviants_prostitute_interaction = {
 		ai_recipients = peer_vassals
 	}
 	ai_potential = { 
-		primary_title.tier >= tier_county
+		always = yes
 	}
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 10
-			scope:actor = {
-				gold > 20
-			}
-		}
-		modifier = {
-			add = 5
-			scope:actor = {
-				has_trait = lustful
-			}
-		}
+		modifier = { add = 5 scope:actor = { has_trait = lustful } }
+		modifier = { add = 10 scope:actor = { gold > 20 } }
+		modifier = { add = 20 scope:actor = { has_trait = rakish } }
 		modifier = {
 			add = -20
 			scope:secondary_recipient = {
 				is_close_family_of = scope:actor
+			}
+		}
+		modifier = {
+			add = 20
+			scope:secondary_recipient = {
+				has_trait = diplomacy_majesty_4090_no_raiment_modifier
 			}
 		}
 		modifier = {
@@ -349,48 +411,24 @@ deviants_prostitute_interaction = {
 				}
 			}
 		}
-		modifier = {
-			add = -5
-			scope:secondary_recipient = {
-				has_trait = beauty_bad_1
-			}
-		}
-		modifier = {
-			add = -8
-			scope:secondary_recipient = {
-				has_trait = beauty_bad_2
-			}
-		}
-		modifier = {
-			add = -10
-			scope:secondary_recipient = {
-				has_trait = beauty_bad_3
-			}
-		}
-		modifier = {
-			add = 5
-			scope:secondary_recipient = {
-				has_trait = beauty_good_1
-			}
-		}
-		modifier = {
-			add = 8
-			scope:secondary_recipient = {
-				has_trait = beauty_good_2
-			}
-		}
-		modifier = {
-			add = 10
-			scope:secondary_recipient = {
-				has_trait = beauty_good_3
-			}
-		}
-		modifier = {
-			add = -100
-			scope:secondary_recipient = {
-				has_trait = lovers_pox
-			}
-		}
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = beauty_bad_1 } }
+		modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
+		modifier = { add = -20 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
+		modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
+		modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_2 } }
+		modifier = { add = 20 scope:secondary_recipient = { has_trait = beauty_good_3 } }
+		modifier = { add = -20 scope:secondary_recipient = { has_trait = lovers_pox } }
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = clubfooted } }
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = hunchbacked } }
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = lisping } }
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = stuttering } }
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = dull } }
+		modifier = { add = -10 scope:secondary_recipient = { has_trait = dwarf } }
+		modifier = { add = -10 scope:secondary_recipient = { has_trait = giant } }
+		modifier = { add = -20 scope:secondary_recipient = { has_trait = scaly } }
+		modifier = { add = 5 scope:secondary_recipient = { has_trait = poet } }
+		modifier = { add = 10 scope:secondary_recipient = { has_trait = strong } }
+		modifier = { add = 20 scope:secondary_recipient = { has_trait = devoted } }
 	}
 }
 
@@ -406,14 +444,7 @@ deviants_become_prostitute_interaction = {
         	scope:actor = {
             		is_adult = yes
 			is_landed = yes
-			OR = {
-				has_trait = deviants_succubus
-				AND = {
-					has_trait = deviants_virgin
-					scope:actor = scope:recipient
-					age < 40
-				}
-			}
+			has_trait = deviants_succubus
 			NOT = { is_at_war_with = scope:recipient }
         	}
         	scope:recipient = {
@@ -563,12 +594,6 @@ deviants_become_prostitute_interaction = {
 			add = 50
 			scope:actor = scope:recipient
 		}
-		modifier = {
-			add = -99
-			scope:actor = {
-				NOT = { has_trait = deviants_succubus }
-			}
-		}
 	}
 }
 
@@ -584,14 +609,7 @@ deviants_stop_prostitute_interaction = {
         	scope:actor = {
             		is_adult = yes
 			is_landed = yes
-			OR = {
-				has_trait = deviants_succubus
-				AND = {
-					has_trait = deviants_virgin
-					scope:actor = scope:recipient
-					age > 40
-				}
-			}
+			has_trait = deviants_succubus
 			NOT = { is_at_war_with = scope:recipient }
         	}
         	scope:recipient = {
@@ -642,6 +660,7 @@ deviants_stop_prostitute_interaction = {
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
 				}
+				age > 40
 			}
 		}
 	}
