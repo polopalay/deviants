@@ -220,7 +220,7 @@ deviants_child_interaction = {
 }
 
 deviants_create_lesser_succubus_interaction = {
-	icon = temporal_condemnation_interaction.dds
+	icon = temporal_condemnation_interaction
 	desc = deviants_create_lesser_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
