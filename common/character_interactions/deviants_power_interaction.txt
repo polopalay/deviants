@@ -3,7 +3,6 @@ deviants_weight_interaction = {
 	desc = deviants_weight_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
-	common_interaction = yes
 	cooldown = { years = 1 }
 
 	is_shown = {
@@ -62,7 +61,6 @@ deavians_dealing_with_stress_interaction = {
 	desc = deavians_dealing_with_stress_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
-	common_interaction = yes
 	is_shown = {
 		scope:actor = {
 			OR = {
