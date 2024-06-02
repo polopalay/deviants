@@ -12,6 +12,7 @@ deviants_switch_body_interaction = {
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				has_trait = deviants_virgin
 			}
 		}
 		scope:recipient = { 
@@ -19,6 +20,7 @@ deviants_switch_body_interaction = {
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				has_trait = deviants_virgin
 			}
 		}
 	}

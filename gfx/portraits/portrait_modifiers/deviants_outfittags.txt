@@ -1,6 +1,6 @@
 ﻿prostitute_markingtags = {
 	usage = game
-	prostitute_outfit = {
+	prostitute_markingt = {
 		dna_modifiers = {
 			morph = {
 				mode = add
@@ -37,7 +37,7 @@ prostitute_outfittags = {
     	fallback = unclothed_body
     	priority = 10
 
-	succubus_outfit = {
+	prostitute_outfit = {
 		dna_modifiers = {
 			accessory = {
 				mode = add
@@ -47,6 +47,14 @@ prostitute_outfittags = {
 			accessory = {
 				mode = add
 				gene = headgear
+			}
+			accessory = {
+				mode = add
+				gene = secondary_headgears
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
 			}
 			accessory = {
 				mode = add
@@ -66,7 +74,10 @@ prostitute_outfittags = {
             		modifier = {
             		    	add = 100
 				should_be_fully_naked_portrait_trigger = no
-				has_character_modifier = deviants_prostitute
+				OR = {
+					has_character_modifier = deviants_prostitute
+					has_character_modifier = deviants_slave
+				}
         		}
         	}
 	}
@@ -85,7 +96,19 @@ nude_clothes = {
 			}
 			accessory = {
 				mode = add
+				gene = headgear_base
+			}
+			accessory = {
+				mode = add
 				gene = headgear
+			}
+			accessory = {
+				mode = add
+				gene = secondary_headgears
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
 			}
 			accessory = {
 				mode = add
@@ -94,10 +117,6 @@ nude_clothes = {
 			accessory = {
 				mode = add
 				gene = cloaks
-			}
-			accessory = {
-				mode = add
-				gene = headgear_base
 			}
 		} 
 		weight = {
