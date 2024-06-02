@@ -1,6 +1,6 @@
 ﻿l_english:
  deviants_prostitute_interaction: "Prostituting"
- deviants_prostitute_interaction.desc: "[actor.GetShortUIName] lays with [recipient.GetShortUIName]"
+ deviants_prostitute_interaction.desc: "Request [recipient.GetShortUIName] to provide sexual services"
  recipient_secondary_deviants_prostitute_interaction: "Choose one"
  exits_prostitution: "There exists any whore who is still strong enough to serve you"
 

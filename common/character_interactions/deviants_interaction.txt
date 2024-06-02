@@ -29,13 +29,17 @@ deviants_prostitute_interaction = {
         	}
         	scope:recipient = {
             		is_adult = yes
-            		is_incapable = no
             		is_imprisoned = no
-			is_travelling = no
-			is_in_army = no
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				AND = {
+					OR = {
+						any_liege_or_above = { count = 0 }
+						any_liege_or_above = { NOT = { is_valid_construction_brothel1_trigger = yes } }
+					}
+					has_character_modifier = deviants_prostitute
+				}
 			}
         	}
     	}
@@ -182,9 +186,9 @@ deviants_prostitute_interaction = {
 				}
 			}
     		}
-		if = {
-			limit = { scope:secondary_recipient = { has_trait = deviants_succubus } }
-			scope:recipient = {
+		scope:secondary_recipient = {
+			if = {
+				limit = { has_trait = deviants_succubus }
 				random_list = {
 					1 = {
 						add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
@@ -195,55 +199,54 @@ deviants_prostitute_interaction = {
 				}
 			}
 		}
-		if = {
-			limit = { NOT = { scope:secondary_recipient = scope:recipient } }
+		scope:secondary_recipient = {
 			if = {
-				limit = { scope:deviants_prostitute_service_1 = yes }
-				random = {
-					chance = 10
-					scope:recipient = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
+			}
+    		}
+		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:secondary_recipient = scope:recipient } }
+				if = {
+					limit = { scope:deviants_prostitute_service_1 = yes }
+					random = {
+						chance = 10
 						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 					}
 				}
-			}
-			else_if = {
-				limit = { scope:deviants_prostitute_service_2 = yes }
-				random = {
-					chance = 15
-					scope:recipient = {
+				else_if = {
+					limit = { scope:deviants_prostitute_service_2 = yes }
+					random = {
+						chance = 15
 						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 					}
 				}
-			}
-			else_if = {
-				limit = { scope:deviants_prostitute_service_3 = yes }
-				random = {
-					chance = 20
-					scope:recipient = {
+				else_if = {
+					limit = { scope:deviants_prostitute_service_3 = yes }
+					random = {
+						chance = 20
 						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 					}
 				}
-			}
-			else = {
-				random = {
-					chance = 5
-					scope:recipient = {
+				else = {
+					random = {
+						chance = 5
 						add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 					}
 				}
 			}
 		}
-		if = {
-			limit = { scope:secondary_recipient = { has_trait = deviants_lesser_succubus } }
-				scope:secondary_recipient = { add_trait_xp = { trait = deviants_lesser_succubus value = 2 } }
-    		}
-		random = {
-			chance = 10
-			scope:recipient = {
-				add_character_modifier = { modifier = lost_in_lust_modifier months = 1 }
-				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+		scope:recipient = {
+			random = {
+				chance = 10
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				add_character_modifier = { modifier = lost_in_lust_modifier months = 1 }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
+				if = {
+					limit = { has_trait = deviants_succubus }
+					add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+				}
 			}
 		}
 	}

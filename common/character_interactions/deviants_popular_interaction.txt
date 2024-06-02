@@ -62,9 +62,11 @@ deviants_nude_interaction = {
 		scope:actor = {
 			if = {
 				limit = {
-					NOR = {
-						has_trait = deviants_succubus
-						has_trait=deviants_lesser_succubus
+					scope:recipient = {
+						NOR = {
+							has_trait = deviants_succubus
+							has_trait=deviants_lesser_succubus
+						}
 					}
 				}
 				add_trait_xp = {
