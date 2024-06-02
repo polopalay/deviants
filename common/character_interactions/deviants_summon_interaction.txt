@@ -444,7 +444,12 @@ deviants_offer_devils_virgin = {
 	on_accept = {
 		scope:actor = {
 			add_trait = deviants_virgin
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				remove_character_modifier = deviants_prostitute
+			}
 			add_character_modifier = deviants_slave
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			add_secret = { 
 				type = secret_deviant
 			}

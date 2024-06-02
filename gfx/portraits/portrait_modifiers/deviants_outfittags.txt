@@ -1,4 +1,4 @@
-﻿prostitute_outfittags = {
+﻿prostitute_markingtags = {
 	usage = game
 	prostitute_outfit = {
 		dna_modifiers = {
@@ -23,34 +23,16 @@
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
 				}
-				has_character_modifier = deviants_prostitute
+				OR = {
+					has_character_modifier = deviants_prostitute
+					has_character_modifier = deviants_slave
+				}
 			}
 		}
 	}
 }
 
-deviants_generals_outfittags = {
-	usage = game
-	deviants_generals_outfit = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_body_shape
-				value = 1
-				template = body_shape_rectangle_full
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 10
-				has_character_modifier = deviants_generals
-			}
-		}
-	}
-}
-
-succubus_outfittags = {
+prostitute_outfittags = {
 	usage = game
     	fallback = unclothed_body
     	priority = 10
@@ -84,14 +66,10 @@ succubus_outfittags = {
             		modifier = {
             		    	add = 100
 				should_be_fully_naked_portrait_trigger = no
-				OR = {
-					has_character_modifier = deviants_prostitute
-					has_character_modifier = deviants_slave
-				}
+				has_character_modifier = deviants_prostitute
         		}
         	}
 	}
-
 }
 
 nude_clothes = {
