@@ -79,6 +79,9 @@
  deviants_create_succubus_interaction: "Create Succubus"
  deviants_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
 
+ deviants_offer_devils_virgin: "Offer devil's virgin"
+ deviants_offer_devils_virgin.desc: "[actor.GetShortUIName] will become the devil's virgin"
+
  deviants_create_lesser_succubus_interaction: "Create Lesser Succubus"
  deviants_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
 

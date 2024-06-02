@@ -236,6 +236,14 @@ deviants_mind_break_interaction = {
 			remove_character_modifier = deviants_prostitute
 			add_character_modifier = deviants_slave
 			add_character_modifier = { modifier = lost_in_lust_modifier months = 4 }
+			if = {
+				limit = { has_trait = chaste }
+				remove_trait = chaste
+			}
+			if = {
+				limit = { NOT = { has_trait = lustful } }
+				add_trait = lustful
+			}
 			every_courtier_or_guest = {
 				limit = { is_adult = yes is_female = no }
 				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }

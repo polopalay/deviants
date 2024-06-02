@@ -19,7 +19,7 @@ deviants_succubus = {
 		}
 	}
 
-	opposites = { chaste deviants_lesser_succubus }
+	opposites = { chaste deviants_lesser_succubus deviants_virgin }
 
 	tracks = {
 		power = {
@@ -129,7 +129,7 @@ deviants_lesser_succubus = {
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
-	opposites = { chaste deviants_succubus }
+	opposites = { chaste deviants_succubus deviants_virgin }
 
 	desc = {
 		first_valid = {
@@ -167,4 +167,25 @@ deviants_lesser_succubus = {
 			negate_health_penalty_add = 1
 		}
 	}
+}
+
+deviants_virgin = {
+	category = fame
+	icon = virgin.dds
+	minimum_age = 18
+	opposites = { chaste deviants_succubus deviants_lesser_succubus }
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_virgin_desc
+			}
+			desc = deviants_virgin_character_desc
+		}
+	}
+	attraction_opinion = 100
+	fertility = 1
 }

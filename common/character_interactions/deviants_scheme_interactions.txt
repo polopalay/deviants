@@ -17,6 +17,7 @@ start_murder_interaction = {
 				OR = {
 					has_trait = deviants_succubus	
 					has_trait = deviants_lesser_succubus
+					has_trait = deviants_virgin
 				}
 			}
 		}

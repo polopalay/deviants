@@ -419,7 +419,7 @@ deviants_become_prostitute_interaction = {
 			OR = {
 				has_trait = deviants_succubus
 				AND = {
-					has_trait = lustful
+					has_trait = deviants_virgin
 					scope:actor = scope:recipient
 					age < 40
 				}
@@ -597,7 +597,7 @@ deviants_stop_prostitute_interaction = {
 			OR = {
 				has_trait = deviants_succubus
 				AND = {
-					has_trait = lustful
+					has_trait = deviants_virgin
 					scope:actor = scope:recipient
 					age > 40
 				}
