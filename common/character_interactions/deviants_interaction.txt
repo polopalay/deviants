@@ -85,24 +85,6 @@ deviants_prostitute_interaction = {
 	}
 
     	on_accept = {
-		scope:secondary_recipient = {
-			if = {
-				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 2 }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 4 }
-			}
-			else = {
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
-			}
-			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
-		}
         	scope:actor = {
 			add_opinion = {
 				target = scope:secondary_recipient
@@ -137,19 +119,33 @@ deviants_prostitute_interaction = {
     		}
 		scope:secondary_recipient = {
 			if = {
+				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+			}
+			else_if = {
+				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 2 }
+			}
+			else_if = {
+				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+			}
+			else = {
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 4 }
+			}
+			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+			if = {
 				limit = { has_trait = deviants_succubus }
 				random_list = {
 					50 = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } }
 					50 = { add_trait_xp = { trait = deviants_succubus track = power value = 1 } }
 				}
 			}
-		}
-		scope:secondary_recipient = {
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 			}
-    		}
+		}
 		scope:recipient = {
 			if = {
 				limit = { NOT = { scope:secondary_recipient = scope:recipient } }
@@ -161,20 +157,25 @@ deviants_prostitute_interaction = {
 					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 				}
 			}
-		}
-		scope:recipient = {
 			random = {
-				chance = 10
-				modifier = {
-					add = 40
-					has_character_modifier = deviants_slave
-				}
+				chance = 0
+				modifier = { add = 10 has_trait = deviants_lesser_succubus }
+				modifier = { add = 25 has_trait = deviants_succubus }
+				modifier = { add = 50 has_character_modifier = deviants_slave }
+				modifier = { add = -5 has_character_modifier = deviants_fuckedsilly }
+
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
-				add_character_modifier = { modifier = lost_in_lust_modifier months = 1 }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				if = {
 					limit = { has_trait = deviants_succubus }
-					add_trait_xp = { trait = deviants_succubus track = power value = 1 }
+					random_list = {
+						50 = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } }
+						50 = { add_trait_xp = { trait = deviants_succubus track = power value = 1 } }
+					}
+				}
+				if = {
+					limit = { has_trait = deviants_lesser_succubus }
+					add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 				}
 			}
 		}
@@ -190,12 +191,8 @@ deviants_prostitute_interaction = {
 	}
 	ai_will_do = {
 		base = 5
-		modifier = {
-			add = 10
-			scope:actor = {
-				gold > 20
-			}
-		}
+		modifier = { add = 10 scope:actor = { gold > 20 } }
+		modifier = { add = 10 scope:actor = { stress_level >= 1 } }
 		modifier = { add = 5 scope:actor = { has_trait = lustful } }
 		modifier = { add = 20 scope:actor = { has_trait = rakish } }
 		modifier = { add = -20 scope:secondary_recipient = { is_close_family_of = scope:actor } }

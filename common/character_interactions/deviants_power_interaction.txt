@@ -1,0 +1,832 @@
+deviants_weight_interaction = {
+	icon = d_full_body
+	desc = deviants_weight_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	common_interaction = yes
+	cooldown = { years = 1 }
+
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value >= 1
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 2
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			change_current_weight = -200
+			change_current_weight = 80
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value = -1
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -2
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 24
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 0 
+		modifier = {
+			base = 100
+			scope:recipient = scope:actor
+		}
+	}
+}
+
+deavians_dealing_with_stress_interaction = {
+	icon = d_fascinate
+	desc = deavians_dealing_with_stress_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	common_interaction = yes
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value >= 1
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 2
+				}
+			}
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = drunkard
+				has_trait = hashishiyah
+				has_trait = rakish
+				has_trait = reclusive
+				has_trait = irritable
+				has_trait = flagellant
+				has_trait = profligate
+				has_trait = improvident
+				has_trait = contrite
+				has_trait = comfort_eater
+				has_trait = inappetetic
+				stress_level >= 1
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value = -1
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -2
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:actor = scope:recipient } }
+				add_opinion = {
+					target = scope:actor
+					modifier = be_healed_opinion
+				}
+			}
+			remove_trait = drunkard
+			remove_trait = hashishiyah
+			remove_trait = rakish
+			remove_trait = reclusive
+			remove_trait = irritable
+			remove_trait = flagellant
+			remove_trait = profligate
+			remove_trait = improvident
+			remove_trait = contrite
+			remove_trait = comfort_eater
+			remove_trait = inappetetic
+	    		stress_impact = {
+				base = -300
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = { 
+		ai_recipients = self 
+		ai_recipients = spouses
+		ai_recipients = children
+		ai_recipients = vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 50
+		modifier = {
+			base = 50
+			scope:recipient = scope:actor
+		}
+		modifier = {
+			base = 30
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+	}
+
+}
+
+deviants_heal_interaction = {
+	icon = d_healing
+	desc = deviants_heal_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value >= 2
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 4
+				}
+			}
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = depressed_1
+				has_trait = depressed_genetic
+				has_trait = lunatic_1
+				has_trait = lunatic_genetic
+				has_trait = possessed_1
+				has_trait = one_eyed
+				has_trait = scarred
+				has_trait = maimed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = sickly
+				has_trait = infirm
+				has_trait = incapable 
+				has_trait = leper
+				has_trait = ill 
+				has_trait = pneumonic 
+				has_trait = gout_ridden 
+				has_trait = typhus 
+				has_trait = consumption 
+				has_trait = cancer 
+				has_trait = great_pox 
+				has_trait = smallpox 
+				has_trait = bubonic_plague 
+				has_trait = lovers_pox 
+				has_trait = great_pox 
+				has_trait = possessed_genetic
+				has_trait = bubonic_plague
+				has_trait = measles
+				has_trait = dysentery
+				has_trait = ergotism
+				has_trait = wounded_1
+				has_trait = wounded_2
+				has_trait = wounded_3
+				has_trait = drunkard
+				has_trait = hashishiyah
+				has_trait = rakish
+				has_trait = reclusive
+				has_trait = irritable
+				has_trait = flagellant
+				has_trait = profligate
+				has_trait = improvident
+				has_trait = contrite
+				has_trait = comfort_eater
+				has_trait = inappetetic
+				has_trait = journaller
+				has_trait = confider
+				has_trait = athletic
+				has_trait = deviant
+				has_trait = cannibal
+				has_trait = sodomite
+				has_trait = incestuous
+				has_trait = adulterer
+				has_trait = fornicator
+				has_trait = witch
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = power
+					value = -2
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -4
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:actor = scope:recipient } }
+				add_opinion = {
+					target = scope:actor
+					modifier = be_healed_opinion
+				}
+			}
+			remove_trait = depressed_1
+			remove_trait = depressed_genetic
+			remove_trait = lunatic_1
+			remove_trait = lunatic_genetic
+			remove_trait = possessed_1
+			remove_trait = possessed_genetic
+			remove_trait = one_eyed
+			remove_trait = scarred
+			remove_trait = maimed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = eunuch
+			remove_trait = blind
+			remove_trait = sickly
+			remove_trait = infirm
+			remove_trait = incapable 
+			remove_trait = leper
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+
+			recover_from_disease_effect = { DISEASE = ill }
+			recover_from_disease_effect = { DISEASE = pneumonic }
+			recover_from_disease_effect = { DISEASE = gout_ridden }
+			recover_from_disease_effect = { DISEASE = typhus }
+			recover_from_disease_effect = { DISEASE = consumption }
+			recover_from_disease_effect = { DISEASE = measles }
+			recover_from_disease_effect = { DISEASE = cancer }
+			recover_from_disease_effect = { DISEASE = great_pox }
+			recover_from_disease_effect = { DISEASE = smallpox }
+			recover_from_disease_effect = { DISEASE = bubonic_plague }
+			recover_from_disease_effect = { DISEASE = lovers_pox }
+			recover_from_disease_effect = { DISEASE = bubonic_plague }
+			recover_from_disease_effect = { DISEASE = dysentery }
+			recover_from_disease_effect = { DISEASE = ergotism }
+			recover_from_disease_effect = { DISEASE = measles }
+
+			remove_trait = drunkard
+			remove_trait = hashishiyah
+			remove_trait = rakish
+			remove_trait = reclusive
+			remove_trait = irritable
+			remove_trait = flagellant
+			remove_trait = profligate
+			remove_trait = improvident
+			remove_trait = contrite
+			remove_trait = comfort_eater
+			remove_trait = inappetetic
+			remove_trait = journaller
+			remove_trait = confider
+			remove_trait = athletic
+			remove_trait = deviant
+			remove_trait = cannibal
+			remove_trait = sodomite
+			remove_trait = incestuous
+			remove_trait = adulterer
+			remove_trait = fornicator
+			remove_trait = murderer
+			remove_trait = witch
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = { 
+		ai_recipients = self 
+		ai_recipients = spouses
+		ai_recipients = children
+		ai_recipients = vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 50
+		modifier = {
+			base = 50
+			scope:recipient = scope:actor
+		}
+		modifier = {
+			base = 30
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+	}
+}
+
+deviants_purify_interaction = {
+	icon = d_absorb
+	desc = deviants_purify_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 5
+			}
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = albino
+				has_trait = lisping
+				has_trait = stuttering
+				has_trait = giant
+				has_trait = scaly
+				has_trait = clubfooted
+				has_trait = dwarf
+				has_trait = hunchbacked
+				has_trait = infertile
+				has_trait = wheezing
+				has_trait = spindly
+				has_trait = bleeder
+				has_trait = weak
+				has_trait = dull
+				has_trait = beauty_bad_1
+				has_trait = beauty_bad_2
+				has_trait = beauty_bad_3
+				has_trait = intellect_bad_1
+				has_trait = intellect_bad_2
+				has_trait = intellect_bad_3
+				has_trait = physique_bad_1
+				has_trait = physique_bad_2
+				has_trait = physique_bad_3
+				has_trait = inbred
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -5
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:actor = scope:recipient } }
+				add_opinion = {
+					target = scope:actor
+					modifier = be_healed_opinion
+				}
+			}
+			remove_trait = albino
+			remove_trait = lisping
+			remove_trait = stuttering
+			remove_trait = giant
+			remove_trait = scaly
+			remove_trait = clubfooted
+			remove_trait = dwarf
+			remove_trait = hunchbacked
+			remove_trait = infertile
+			remove_trait = wheezing
+			remove_trait = spindly
+			remove_trait = bleeder
+			remove_trait = weak
+			remove_trait = dull
+			remove_trait = beauty_bad_1
+			remove_trait = beauty_bad_2
+			remove_trait = beauty_bad_3
+			remove_trait = intellect_bad_1
+			remove_trait = intellect_bad_2
+			remove_trait = intellect_bad_3
+			remove_trait = physique_bad_1
+			remove_trait = physique_bad_2
+			remove_trait = physique_bad_3
+			remove_trait = inbred
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = { 
+		ai_recipients = self 
+		ai_recipients = spouses
+		ai_recipients = children
+		ai_recipients = vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { 
+		base = 50
+		modifier = {
+			base = 50
+			scope:recipient = scope:actor
+		}
+		modifier = {
+			base = 30
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+	}
+}
+
+deviants_personality_interaction = {
+	icon = d_drain_life
+	desc = deviants_purify_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 1
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			is_valid_construction_alchemy2_trigger = yes
+		}
+	}
+
+	send_option = {
+		flag = lustful_chaste
+		localization = lustful_chaste
+	}
+	send_option = {
+		flag = gluttonous_temperate
+		localization = gluttonous_temperate
+	}
+	send_option = {
+		flag = greedy_generous
+		localization = greedy_generous
+	}
+	send_option = {
+		flag = lazy_diligent
+		localization = lazy_diligent
+	}
+	send_option = {
+		flag = wrathful_calm
+		localization = wrathful_calm
+	}
+	send_option = {
+		flag = patient_impatient
+		localization = patient_impatient
+	}
+	send_option = {
+		flag = arrogant_humble
+		localization = arrogant_humble
+	}
+	send_option = {
+		flag = deceitful_honest
+		localization = deceitful_honest
+	}
+	send_option = {
+		flag = craven_brave
+		localization = craven_brave
+	}
+	send_option = {
+		flag = shy_gregarious
+		localization = shy_gregarious
+	}
+	send_option = {
+		flag = ambitious_content
+		localization = ambitious_content
+	}
+	send_option = {
+		flag = arbitrary_just
+		localization = arbitrary_just
+	}
+	send_option = {
+		flag = cynical_zelous
+		localization = cynical_zelous
+	}
+	send_option = {
+		flag = paranoid_trusting
+		localization = paranoid_trusting
+	}
+	send_option = {
+		flag = vengeful_forgiving
+		localization = vengeful_forgiving
+	}
+	send_option = {
+		flag = compassionate_callous_sadistic
+		localization = compassionate_callous_sadistic
+	}
+	send_option = {
+		flag = stubborn_fickle_eccentric
+		localization = stubborn_fickle_eccentric
+	}
+	on_accept = {
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = -1
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { scope:lustful_chaste = yes }
+				if = {
+					limit = { NOR = { has_trait = lustful has_trait = chaste } }
+					add_trait = lustful
+				}
+				else_if = {
+					limit = { has_trait = lustful }
+					remove_trait = lustful
+					add_trait = chaste	
+				}
+				else = {
+					remove_trait = chaste
+				}
+			}
+			if = {
+				limit = { scope:gluttonous_temperate = yes }
+				if = {
+					limit = { NOR = { has_trait = gluttonous has_trait = temperate } }
+					add_trait = gluttonous
+				}
+				else_if = {
+					limit = { has_trait = gluttonous }
+					remove_trait = gluttonous
+					add_trait = temperate	
+				}
+				else = {
+					remove_trait = temperate
+				}
+			}
+			if = {
+				limit = { scope:greedy_generous = yes }
+				if = {
+					limit = { NOR = { has_trait = greedy has_trait = generous } }
+					add_trait = greedy
+				}
+				else_if = {
+					limit = { has_trait = greedy }
+					remove_trait = greedy
+					add_trait = generous	
+				}
+				else = {
+					remove_trait = generous
+				}
+			}
+			if = {
+				limit = { scope:lazy_diligent = yes }
+				if = {
+					limit = { NOR = { has_trait = lazy has_trait = diligent } }
+					add_trait = lazy
+				}
+				else_if = {
+					limit = { has_trait = lazy }
+					remove_trait = lazy
+					add_trait = diligent	
+				}
+				else = {
+					remove_trait = diligent
+				}
+			}
+			if = {
+				limit = { scope:wrathful_calm = yes }
+				if = {
+					limit = { NOR = { has_trait = wrathful has_trait = calm } }
+					add_trait = wrathful
+				}
+				else_if = {
+					limit = { has_trait = wrathful }
+					remove_trait = wrathful
+					add_trait = calm	
+				}
+				else = {
+					remove_trait = calm
+				}
+			}
+			if = {
+				limit = { scope:patient_impatient = yes }
+				if = {
+					limit = { NOR = { has_trait = patient has_trait = impatient } }
+					add_trait = patient
+				}
+				else_if = {
+					limit = { has_trait = patient }
+					remove_trait = patient
+					add_trait = impatient	
+				}
+				else = {
+					remove_trait = impatient
+				}
+			}
+			if = {
+				limit = { scope:arrogant_humble = yes }
+				if = {
+					limit = { NOR = { has_trait = arrogant has_trait = humble } }
+					add_trait = arrogant
+				}
+				else_if = {
+					limit = { has_trait = arrogant }
+					remove_trait = arrogant
+					add_trait = humble	
+				}
+				else = {
+					remove_trait = humble
+				}
+			}
+			if = {
+				limit = { scope:deceitful_honest = yes }
+				if = {
+					limit = { NOR = { has_trait = deceitful has_trait = honest } }
+					add_trait = deceitful
+				}
+				else_if = {
+					limit = { has_trait = deceitful }
+					remove_trait = deceitful
+					add_trait = honest	
+				}
+				else = {
+					remove_trait = honest
+				}
+			}
+			if = {
+				limit = { scope:craven_brave = yes }
+				if = {
+					limit = { NOR = { has_trait = craven has_trait = brave } }
+					add_trait = craven
+				}
+				else_if = {
+					limit = { has_trait = craven }
+					remove_trait = craven
+					add_trait = brave	
+				}
+				else = {
+					remove_trait = brave
+				}
+			}
+			if = {
+				limit = { scope:shy_gregarious = yes }
+				if = {
+					limit = { NOR = { has_trait = shy has_trait = gregarious } }
+					add_trait = shy
+				}
+				else_if = {
+					limit = { has_trait = shy }
+					remove_trait = shy
+					add_trait = gregarious	
+				}
+				else = {
+					remove_trait = gregarious
+				}
+			}
+			if = {
+				limit = { scope:ambitious_content = yes }
+				if = {
+					limit = { NOR = { has_trait = ambitious has_trait = content } }
+					add_trait = ambitious
+				}
+				else_if = {
+					limit = { has_trait = ambitious }
+					remove_trait = ambitious
+					add_trait = content	
+				}
+				else = {
+					remove_trait = content
+				}
+			}
+			if = {
+				limit = { scope:arbitrary_just = yes }
+				if = {
+					limit = { NOR = { has_trait = arbitrary has_trait = just } }
+					add_trait = arbitrary
+				}
+				else_if = {
+					limit = { has_trait = arbitrary }
+					remove_trait = arbitrary
+					add_trait = just	
+				}
+				else = {
+					remove_trait = just
+				}
+			}
+			if = {
+				limit = { scope:cynical_zelous = yes }
+				if = {
+					limit = { NOR = { has_trait = cynical has_trait = zealous } }
+					add_trait = cynical
+				}
+				else_if = {
+					limit = { has_trait = cynical }
+					remove_trait = cynical
+					add_trait = zealous	
+				}
+				else = {
+					remove_trait = zealous
+				}
+			}
+			if = {
+				limit = { scope:paranoid_trusting = yes }
+				if = {
+					limit = { NOR = { has_trait = paranoid has_trait = trusting } }
+					add_trait = paranoid
+				}
+				else_if = {
+					limit = { has_trait = paranoid }
+					remove_trait = paranoid
+					add_trait = trusting	
+				}
+				else = {
+					remove_trait = trusting
+				}
+			}
+			if = {
+				limit = { scope:vengeful_forgiving = yes }
+				if = {
+					limit = { NOR = { has_trait = vengeful has_trait = forgiving } }
+					add_trait = vengeful
+				}
+				else_if = {
+					limit = { has_trait = vengeful }
+					remove_trait = vengeful
+					add_trait = forgiving	
+				}
+				else = {
+					remove_trait = forgiving
+				}
+			}
+			if = {
+				limit = { scope:compassionate_callous_sadistic = yes }
+				if = {
+					limit = { NOR = { has_trait = compassionate has_trait = callous has_trait = sadistic } }
+					add_trait = compassionate
+				}
+				else_if = {
+					limit = { has_trait = compassionate }
+					remove_trait = compassionate
+					add_trait = callous	
+				}
+				else_if = {
+					limit = { has_trait = callous }
+					remove_trait = callous
+					add_trait = sadistic
+				}
+				else = {
+					remove_trait = sadistic
+				}
+			}
+			if = {
+				limit = { scope:stubborn_fickle_eccentric = yes }
+				if = {
+					limit = { NOR = { has_trait = stubborn has_trait = fickle has_trait = eccentric } }
+					add_trait = stubborn
+				}
+				else_if = {
+					limit = { has_trait = stubborn }
+					remove_trait = stubborn
+					add_trait = fickle	
+				}
+				else_if = {
+					limit = { has_trait = fickle }
+					remove_trait = fickle
+					add_trait = eccentric
+				}
+				else = {
+					remove_trait = eccentric
+				}
+			}
+		}
+	}
+	auto_accept = yes
+}

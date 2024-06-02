@@ -33,6 +33,69 @@ deviants_switch_body_interaction = {
 	auto_accept = yes
 }
 
+deviants_offer_devils_virgin = {
+	icon = d_virgin
+	desc = deviants_offer_devils_virgin.desc
+    	category = interaction_category_diplomacy
+	is_shown = {
+		scope:actor = {
+			is_female = yes
+			NOR = { 
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+				has_trait = deviants_virgin
+			}
+			has_trait = lustful
+			age <= 30
+		}
+		scope:recipient = {
+			has_trait = deviants_succubus 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_trait = deviants_virgin
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				remove_character_modifier = deviants_prostitute
+			}
+			add_character_modifier = deviants_slave
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			add_secret = { 
+				type = secret_deviant
+			}
+			add_secret = { 
+				type = secret_witch
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 50
+		modifier = {
+			add = 100
+			scope:recipient = { has_trait = deviants_lesser_succubus }
+		}
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+	}
+	ai_potential = { 
+		primary_title.tier >= tier_county
+	}
+	ai_will_do = {
+		base = 5
+	}
+}
+
 deviants_add_courtier_interaction = {
 	icon = invite_to_court_interaction
 	desc = deviants_add_courtier_interaction.desc
@@ -46,7 +109,7 @@ deviants_add_courtier_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 1
+				value >= 5
 			} 
 		}
 		scope:recipient = { 
@@ -63,7 +126,7 @@ deviants_add_courtier_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = -1
+				value = -5
 			}
 		}
 		scope:recipient = {
@@ -85,10 +148,9 @@ deviants_add_courtier_interaction = {
 	auto_accept = yes
 	ai_frequency = 12
 	ai_targets = { 
-		ai_recipients = courtiers 
-		ai_recipients = prisoners
-		ai_recipients = vassals
-		ai_recipients = self
+		ai_recipients = guests
+		ai_recipients = dynasty
+		ai_recipients = family
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
@@ -119,7 +181,7 @@ deviants_child_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 5
+				value >= 10
 			} 
 		}
 		scope:recipient = {
@@ -213,7 +275,7 @@ deviants_child_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = -5
+				value = -10
 			}
 		}
 	}
@@ -424,69 +486,6 @@ deviants_create_lesser_succubus_interaction = {
 		}
 	}
 	auto_accept = yes
-}
-
-deviants_offer_devils_virgin = {
-	icon = d_virgin
-	desc = deviants_offer_devils_virgin.desc
-    	category = interaction_category_diplomacy
-	is_shown = {
-		scope:actor = {
-			is_female = yes
-			NOR = { 
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_virgin
-			}
-			has_trait = lustful
-			age <= 30
-		}
-		scope:recipient = {
-			has_trait = deviants_succubus 
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			add_trait = deviants_virgin
-			if = {
-				limit = { has_character_modifier = deviants_prostitute }
-				remove_character_modifier = deviants_prostitute
-			}
-			add_character_modifier = deviants_slave
-			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			add_secret = { 
-				type = secret_deviant
-			}
-			add_secret = { 
-				type = secret_witch
-			}
-		}
-	}
-
-	ai_accept = {
-		base = 50
-		modifier = {
-			add = 100
-			scope:recipient = { has_trait = deviants_lesser_succubus }
-		}
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = 1
-		}
-	}
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-	}
-	ai_potential = { 
-		primary_title.tier >= tier_county
-	}
-	ai_will_do = {
-		base = 5
-	}
 }
 
 deviants_create_succubus_interaction = {

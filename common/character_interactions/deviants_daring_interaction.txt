@@ -1,0 +1,312 @@
+deviants_nude_interaction = {
+	icon = undress_interaction
+	desc = deviants_nude_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		OR = {
+			AND = {
+				scope:actor = {
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = daring
+						value >= 10
+					} 
+				}
+				scope:recipient = {
+					is_adult = yes
+					is_female = yes
+					NOR = {
+						has_trait = deviants_succubus
+						has_trait=deviants_lesser_succubus
+					}
+					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+				}
+			}
+			AND = {
+				scope:actor = {
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = daring
+						value >= 1
+					} 
+				}
+				scope:recipient = {
+					is_adult = yes
+					is_female = yes
+					OR = {
+						has_trait = deviants_succubus
+						has_trait=deviants_lesser_succubus
+						has_trait = deviants_virgin
+					}
+					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			random_courtier = {
+				limit = { is_female = no is_adult = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOR = {
+							has_trait = deviants_succubus
+							has_trait = deviants_lesser_succubus
+							has_trait = deviants_virgin
+						}
+					}
+				}
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = daring
+					value = -10
+				}
+			}
+			else = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = daring
+					value = -1
+				}
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+deviants_stop_nude_interaction = {
+	icon = dress_interaction
+	desc = deviants_stop_nude_interaction.desc
+    	category = interaction_category_vassal
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 1
+			} 
+		}
+		scope:recipient = {
+			has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+		}
+		scope:recipient = {
+			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			random_courtier = {
+				limit = { is_female = no is_adult = yes }
+				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
+			}
+		}
+	}
+}
+
+deviants_befriend_interaction = {
+	icon = synergise_friendship_interaction
+	desc = deviants_befriend_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			NOT = { has_relation_friend = scope:recipient } 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 5
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			set_relation_friend = scope:recipient
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+deviants_rival_interaction = {
+	icon = icon_hostile
+	desc = deviants_rival_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			OR = {
+				has_relation_rival = scope:recipient
+				has_relation_nemesis = scope:recipient
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 5
+			} 
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_relation_nemesis = scope:recipient }
+				remove_relation_nemesis = scope:recipient
+			}
+			if = {
+				limit = { has_relation_rival = scope:recipient }
+				remove_relation_rival = scope:recipient
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -5
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+deviants_hook_interaction = {
+	icon = fabricate_hook_interaction
+	desc = deviants_hook_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 5
+			} 
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = favor_hook
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -5
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			is_valid_construction_alchemy1_trigger = yes
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = courtiers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
+
+deviants_mind_break_interaction = {
+	icon = d_mesmerize
+	desc = deviants_mind_break_interaction.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { 
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value >= 25
+			} 
+		}
+		scope:recipient = {
+			NOR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+				has_trait = deviants_virgin
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -25
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { has_character_modifier = deviants_prostitute }
+				remove_character_modifier = deviants_prostitute
+			}
+			if = {
+				limit = { has_trait = chaste }
+				remove_trait = chaste
+			}
+			add_trait = lustful
+			add_trait = deviants_virgin
+			add_character_modifier = deviants_slave
+			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			add_secret = { type = secret_deviant }
+			add_secret = { type = secret_witch }
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			is_valid_construction_alchemy2_trigger = yes
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 60
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 5 }
+}
