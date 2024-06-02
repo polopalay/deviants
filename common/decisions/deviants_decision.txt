@@ -89,6 +89,7 @@ deviants_become_succubus = {
 		NOR = { 
 			has_trait = deviants_succubus
 			has_trait = deviants_lesser_succubus
+			has_trait = deviants_virgin
 		}
 	}
 	effect = {

@@ -1,10 +1,10 @@
 deviants_absorb_interaction = {
-	icon = d_loyalty
+	icon = d_virgin
 	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 1 }
 	is_shown = {
 		scope:actor = {
 			has_trait = deviants_succubus
@@ -40,7 +40,7 @@ deviants_absorb_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 60
+	ai_frequency = 12
 	ai_targets = { 
 		ai_recipients = courtiers 
 		ai_recipients = prisoners

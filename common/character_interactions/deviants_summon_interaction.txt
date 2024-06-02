@@ -17,6 +17,7 @@ deviants_switch_body_interaction = {
 		}
 		scope:recipient = { 
 			is_ruler = yes
+			primary_title.tier >= tier_county
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -235,6 +236,7 @@ deviants_create_lesser_succubus_interaction = {
 			NOR = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				has_trait = deviants_virgin
 			}
 		}
 		scope:actor = {
@@ -499,6 +501,7 @@ deviants_create_succubus_interaction = {
 			NOR = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
+				has_trait = deviants_virgin
 			}
 		}
 		scope:actor = {

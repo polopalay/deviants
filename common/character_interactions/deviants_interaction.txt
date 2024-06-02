@@ -15,7 +15,6 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_in_army = no
-			is_ruler = yes
 			is_valid_prostitute_partner_trigger = yes
 			NOT = { 
 				is_at_war_with = scope:recipient 
@@ -28,8 +27,6 @@ deviants_prostitute_interaction = {
 			}
         	}
         	scope:recipient = {
-            		is_adult = yes
-            		is_imprisoned = no
 			OR = {
 				has_character_modifier = deviants_prostitute
 				has_character_modifier = deviants_slave
@@ -44,7 +41,10 @@ deviants_prostitute_interaction = {
 				OR = {
 					is_valid_prostitute_trigger = yes
 					AND = {
-						has_trait = deviants_lesser_succubus
+						OR = {
+							has_trait = deviants_lesser_succubus
+							has_trait = deviants_succubus
+						}
 						any_courtier = { is_valid_prostitute_trigger = yes }
 					}
 					AND = {
@@ -64,7 +64,12 @@ deviants_prostitute_interaction = {
 			}
 			every_courtier = {
 				limit = { 
-					scope:recipient = { has_trait = deviants_lesser_succubus }
+					scope:recipient = { 
+						OR = {
+							has_trait = deviants_lesser_succubus
+							has_trait = deviants_succubus
+						}
+					}
 					is_valid_prostitute_trigger = yes 
 				}
 				add_to_list = characters
@@ -83,15 +88,15 @@ deviants_prostitute_interaction = {
 		scope:secondary_recipient = {
 			if = {
 				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 2 }
 			}
 			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
+				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+			}
+			else_if = {
+				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 4 }
 			}
 			else = {
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
@@ -103,63 +108,18 @@ deviants_prostitute_interaction = {
 				target = scope:secondary_recipient
 				modifier = have_sex_opinion
 			}
-			if = {
-				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-				stress_impact = { base = massive_stress_impact_loss }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-				stress_impact = { base = major_stress_impact_loss }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-				stress_impact = { base = medium_stress_impact_loss }
-			}
-			else = {
-				stress_impact = { base = minor_stress_impact_loss }
-			}
+			stress_impact = { base = massive_stress_impact_loss }
 			if = {
 				limit = { 
 					scope:secondary_recipient = { has_character_modifier = deviants_prostitute }
 				}
 				if = {
 					limit = { scope:secondary_recipient = scope:recipient }
-					if = {
-						limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-						pay_short_term_gold = { target = scope:recipient gold = 15 } 
-					}
-					else_if = {
-						limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-						pay_short_term_gold = { target = scope:recipient gold = 12 } 
-					}
-					else_if = {
-						limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-						pay_short_term_gold = { target = scope:recipient gold = 8 } 
-					}
-					else = {
-						pay_short_term_gold = { target = scope:recipient gold = 5 } 
-					}
+					pay_short_term_gold = { target = scope:recipient gold = 5 } 
 				}
 				else = {
-					if = {
-						limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-						pay_short_term_gold = { target = scope:recipient gold = 5 }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 10 }
-					}
-					else_if = {
-						limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-						pay_short_term_gold = { target = scope:recipient gold = 4 }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 8 }
-					}
-					else_if = {
-						limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-						pay_short_term_gold = { target = scope:recipient gold = 3 }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 5 }
-					}
-					else = {
-						pay_short_term_gold = { target = scope:recipient gold = 2 }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
-					}
+					pay_short_term_gold = { target = scope:recipient gold = 2 }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
 				}
 				random = {
 					chance = 10
@@ -171,21 +131,7 @@ deviants_prostitute_interaction = {
 					modifier = { add = -5 scope:secondary_recipient = { has_trait = beauty_bad_1 } }
 					modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
 					modifier = { add = -20 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
-					if = {
-						limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 5 }
-					}
-					else_if = {
-						limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
-					}
-					else_if = {
-						limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 2 }
-					}
-					else = {
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
-					}
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
 				}
 			}
     		}
@@ -207,7 +153,13 @@ deviants_prostitute_interaction = {
 		scope:recipient = {
 			if = {
 				limit = { NOT = { scope:secondary_recipient = scope:recipient } }
-				add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+				random = {
+					chance = 10
+					modifier = { add = 5 scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
+					modifier = { add = 5 scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
+					modifier = { add = 5 scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
+					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
+				}
 			}
 		}
 		scope:recipient = {
@@ -237,7 +189,7 @@ deviants_prostitute_interaction = {
 		ai_recipients = peer_vassals
 	}
 	ai_will_do = {
-		base = 0
+		base = 5
 		modifier = {
 			add = 10
 			scope:actor = {

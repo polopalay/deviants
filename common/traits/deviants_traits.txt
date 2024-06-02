@@ -187,7 +187,6 @@ deviants_virgin = {
 		}
 	}
 
-	monthly_lifestyle_xp_gain_mult = -2
 	attraction_opinion = 25
 	fertility = 0.25
 	diplomacy = 5
