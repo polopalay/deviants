@@ -30,17 +30,7 @@ deviants_prostitute_interaction = {
         	scope:recipient = {
             		is_adult = yes
             		is_imprisoned = no
-			OR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				AND = {
-					OR = {
-						any_liege_or_above = { count = 0 }
-						any_liege_or_above = { NOT = { is_valid_construction_brothel1_trigger = yes } }
-					}
-					has_character_modifier = deviants_prostitute
-				}
-			}
+			has_character_modifier = deviants_prostitute
         	}
     	}
 
