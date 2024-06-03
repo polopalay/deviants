@@ -88,7 +88,7 @@ deviants_stop_nude_interaction = {
 	desc = deviants_stop_nude_interaction.desc
     	category = interaction_category_hostile
 	auto_accept = yes
-	use_diplomatic_range = no
+	use_diplomatic_range = yes
 	ignores_pending_interaction_block = yes
 
 	is_shown = {
