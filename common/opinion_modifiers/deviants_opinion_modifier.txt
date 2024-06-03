@@ -4,12 +4,6 @@ have_sex_opinion = {
 	years = 1
 }
 
-refuse_sex_opinion = {
-	opinion = -50
-	decaying = yes
-	years = 1
-}
-
 be_healed_opinion = {
 	opinion = 100
 	decaying = yes
