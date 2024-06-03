@@ -13,10 +13,10 @@ is_valid_prostitute_trigger = {
 		has_trait = deviants_lesser_succubus
 		age < 40
 	}
-	NOT = { is_spouse_of = scope:actor }
-	OR = {
-		NOT = { has_character_modifier = deviants_fuckedsilly }
-		has_character_modifier = deviants_horny
+	NOT = { 
+		is_spouse_of = scope:actor 
+		has_trait = celibate
+		has_character_modifier = deviants_fuckedsilly
 	}
 }
 

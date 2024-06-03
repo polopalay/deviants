@@ -188,22 +188,20 @@ deviants_virgin = {
 	}
 
 	attraction_opinion = 25
-	fertility = 0.25
+	fertility = 1
 	diplomacy = 5
 	martial = 5
 	stewardship = 5
 	intrigue = 5
 	learning = 5
 	prowess = 5
-	movement_speed = 0.25
-	retreat_losses = -0.25
-	embarkation_cost_mult = -0.25
-	naval_movement_speed_mult = 0.25
-	siege_phase_time = -0.25
-	siege_morale_loss = 0.25
-	hard_casualty_modifier = -0.25
-	supply_duration = 0.25
-	supply_limit_mult = 0.25
-	ai_greed = dominant_positive_ai_value
-	ai_zeal = dominant_negative_ai_value
+	movement_speed = 0.1
+	retreat_losses = -0.1
+	embarkation_cost_mult = -0.1
+	naval_movement_speed_mult = 0.1
+	siege_phase_time = -0.1
+	siege_morale_loss = 0.1
+	hard_casualty_modifier = -0.1
+	supply_duration = 0.1
+	supply_limit_mult = 0.1
 }

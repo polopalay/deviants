@@ -6,12 +6,8 @@ deviants_slave = {
 	icon = slave_positive
 }
 
-deviants_horny = {
-	icon = health_positive
-}
-
 deviants_fuckedsilly = {
-	icon = health_negative
+	icon = souls_positive
     	health = -0.2
 	stacking = yes
 }
