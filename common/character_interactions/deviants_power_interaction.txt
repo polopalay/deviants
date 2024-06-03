@@ -44,16 +44,10 @@ deviants_weight_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
+	ai_frequency = 12
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
-		modifier = {
-			base = 100
-			scope:recipient = scope:actor
-		}
-	}
+	ai_will_do = { base = 100 }
 }
 
 deavians_dealing_with_stress_interaction = {
@@ -138,9 +132,7 @@ deavians_dealing_with_stress_interaction = {
 	ai_frequency = 1
 	ai_targets = { 
 		ai_recipients = self 
-		ai_recipients = spouses
 		ai_recipients = children
-		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -172,11 +164,11 @@ deviants_heal_interaction = {
 				has_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value >= 2
+					value >= 1
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 4
+					value >= 2
 				}
 			}
 		}
@@ -248,14 +240,14 @@ deviants_heal_interaction = {
 				add_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value = -2
+					value = -1
 				}
 			}
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -4
+					value = -2
 				}
 			}
 		}
@@ -332,9 +324,7 @@ deviants_heal_interaction = {
 	ai_frequency = 1
 	ai_targets = { 
 		ai_recipients = self 
-		ai_recipients = spouses
 		ai_recipients = children
-		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
@@ -393,6 +383,11 @@ deviants_purify_interaction = {
 				has_trait = physique_bad_3
 				has_trait = inbred
 			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			is_valid_construction_alchemy2_trigger = yes
 		}
 	}
 	on_accept = {

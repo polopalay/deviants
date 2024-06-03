@@ -137,10 +137,7 @@ deviants_prostitute_interaction = {
 			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 			if = {
 				limit = { has_trait = deviants_succubus }
-				random_list = {
-					50 = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } }
-					50 = { add_trait_xp = { trait = deviants_succubus track = power value = 1 } }
-				}
+				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
 			}
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
@@ -159,20 +156,12 @@ deviants_prostitute_interaction = {
 				}
 			}
 			random = {
-				chance = 0
-				modifier = { add = 10 has_trait = deviants_lesser_succubus }
-				modifier = { add = 25 has_trait = deviants_succubus }
-				modifier = { add = 50 has_character_modifier = deviants_slave }
-				modifier = { add = -5 has_character_modifier = deviants_fuckedsilly }
-
+				chance = 50
 				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				if = {
 					limit = { has_trait = deviants_succubus }
-					random_list = {
-						50 = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } }
-						50 = { add_trait_xp = { trait = deviants_succubus track = power value = 1 } }
-					}
+					add_trait_xp = { trait = deviants_succubus track = daring value = 1 }
 				}
 				if = {
 					limit = { has_trait = deviants_lesser_succubus }
@@ -246,7 +235,7 @@ deviants_become_prostitute_interaction = {
 					scope:actor = {
 						any_vassal = {
 							has_character_modifier = deviants_prostitute
-							count < 3
+							count <= 2
 						}	
 					}
 				}
@@ -258,7 +247,7 @@ deviants_become_prostitute_interaction = {
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
-							count < 5
+							count <= 2
 						}	
 					}
 				}
