@@ -4,7 +4,7 @@ deviants_absorb_interaction = {
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { years = 1 }
+	cooldown = { months = 1 }
 	is_shown = {
 		scope:actor = {
 			has_trait = deviants_succubus
