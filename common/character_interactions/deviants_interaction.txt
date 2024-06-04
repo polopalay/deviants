@@ -95,11 +95,17 @@ deviants_prostitute_interaction = {
 				}
 				if = {
 					limit = { scope:secondary_recipient = scope:recipient }
-					pay_short_term_gold = { target = scope:recipient gold = 5 } 
+					if = {
+						limit = { has_character_modifier deviants_prostitute }
+						pay_short_term_gold = { target = scope:secondary_recipient gold = 5 } 
+					}
 				}
 				else = {
 					pay_short_term_gold = { target = scope:recipient gold = 2 }
-					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
+					if = {
+						limit = { has_character_modifier deviants_prostitute }
+						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
+					}
 				}
 				random = {
 					chance = 10
