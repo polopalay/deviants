@@ -13,30 +13,7 @@ is_valid_prostitute_trigger = {
 		has_trait = deviants_lesser_succubus
 		age < 40
 	}
-	NOT = { 
-		is_spouse_of = scope:actor 
-		has_trait = celibate
-		has_character_modifier = deviants_fuckedsilly
-	}
-}
-
-is_valid_prostitute_partner_trigger = {
-	OR = {
-		AND = {
-			is_male = yes
-			OR = {
-				has_sexuality = heterosexual
-				has_sexuality = bisexual
-			}
-		}
-		AND = {
-			is_female = yes
-			OR = {
-				has_sexuality = homosexual
-				has_sexuality = bisexual
-			}
-		}
-	}
+	NOT = { has_character_modifier = deviants_fuckedsilly }
 }
 
 is_valid_construction_brothel1_trigger = {

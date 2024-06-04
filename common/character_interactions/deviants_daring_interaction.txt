@@ -48,11 +48,6 @@ deviants_nude_interaction = {
 	on_accept = {
 		scope:recipient = {
 			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			random_courtier = {
-				limit = { is_female = no is_adult = yes }
-				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-			}
 		}
 		scope:actor = {
 			if = {
@@ -114,11 +109,6 @@ deviants_stop_nude_interaction = {
 		}
 		scope:recipient = {
 			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			random_courtier = {
-				limit = { is_female = no is_adult = yes }
-				had_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance } 
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 } 
-			}
 		}
 	}
 }

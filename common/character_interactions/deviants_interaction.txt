@@ -15,7 +15,7 @@ deviants_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_in_army = no
-			is_valid_prostitute_partner_trigger = yes
+			is_attracted_to_women = yes
 			NOT = { 
 				is_at_war_with = scope:recipient 
 				has_trait = chaste
@@ -36,22 +36,19 @@ deviants_prostitute_interaction = {
     	}
 
 	is_valid = {
-		custom_description = {
-			text = exits_prostitution
-			scope:recipient = {
-				OR = {
-					is_valid_prostitute_trigger = yes
-					AND = {
-						OR = {
-							has_trait = deviants_lesser_succubus
-							has_trait = deviants_succubus
-						}
-						any_courtier = { is_valid_prostitute_trigger = yes }
-					}
-					AND = {
+		scope:recipient = {
+			OR = {
+				is_valid_prostitute_trigger = yes
+				AND = {
+					OR = {
+						has_trait = deviants_lesser_succubus
 						has_trait = deviants_succubus
-						any_vassal = { is_valid_prostitute_trigger = yes }
 					}
+					any_courtier = { is_valid_prostitute_trigger = yes }
+				}
+				AND = {
+					has_trait = deviants_succubus
+					any_vassal = { is_valid_prostitute_trigger = yes }
 				}
 			}
 		}
@@ -134,7 +131,7 @@ deviants_prostitute_interaction = {
 			else = {
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 4 }
 			}
-			had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 			if = {
 				limit = { has_trait = deviants_succubus }
 				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
@@ -156,8 +153,11 @@ deviants_prostitute_interaction = {
 				}
 			}
 			random = {
-				chance = 50
-				had_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				chance = 10
+				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
+				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
+				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
+				buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				if = {
 					limit = { has_trait = deviants_succubus }
