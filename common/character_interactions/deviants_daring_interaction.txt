@@ -242,7 +242,7 @@ deviants_mind_break_interaction = {
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
@@ -255,7 +255,7 @@ deviants_mind_break_interaction = {
 		scope:recipient = {
 			is_female = yes
 			age >= 16
-			age <= 24
+			age <= 30
 			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus

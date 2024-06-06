@@ -2,11 +2,14 @@ deviants_succubus = {
 	category = health
 	icon = succubus.dds
 	minimum_age = 18
+	valid_sex = female
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -2
 	can_have_children = no
 	inheritance_blocker = all
 	claim_inheritance_blocker = all
+	shown_in_encyclopedia = no
+	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
@@ -121,11 +124,14 @@ deviants_lesser_succubus = {
 	category = health
 	icon = lesser_succubus.dds
 	minimum_age = 18
+	valid_sex = female
 	immortal = yes
 	monthly_lifestyle_xp_gain_mult = -2
 	can_have_children = no
 	inheritance_blocker = all
 	claim_inheritance_blocker = all
+	shown_in_encyclopedia = no
+	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
@@ -173,6 +179,7 @@ deviants_virgin = {
 	category = fame
 	icon = virgin.dds
 	minimum_age = 16
+	valid_sex = female
 	opposites = { chaste deviants_succubus deviants_lesser_succubus }
 
 	desc = {

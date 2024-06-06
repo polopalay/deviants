@@ -203,6 +203,7 @@ deviants_prostitute_interaction = {
 
 deviants_become_prostitute_interaction = {
 	icon = d_start_prostitution
+	extra_icon = hook_icon
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes
