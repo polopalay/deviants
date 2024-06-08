@@ -254,7 +254,7 @@ deviants_become_prostitute_interaction = {
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
-							count <= 2
+							count <= 3
 						}	
 					}
 				}
@@ -339,6 +339,10 @@ deviants_become_prostitute_interaction = {
 
 	ai_accept = {
 		base = -50
+		modifier = {
+			add = 100
+			scope:recipient = { is_courtier_of = scope:actor }
+		}
 		modifier = {
 			add = 100
 			scope:recipient = { has_trait = deviants_lesser_succubus }

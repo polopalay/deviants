@@ -137,7 +137,7 @@ deviants_add_courtier_interaction = {
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
-							count < 2
+							count <= 2
 						}
 					}
 				}
