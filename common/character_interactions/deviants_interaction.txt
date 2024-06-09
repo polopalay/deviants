@@ -1,5 +1,5 @@
 deviants_prostitute_interaction = {
-	icon = d_sex
+	icon = lover
 	desc = deviants_prostitute_interaction.desc
     	category = interaction_category_diplomacy
 	ignores_pending_interaction_block = no
@@ -202,7 +202,7 @@ deviants_prostitute_interaction = {
 }
 
 deviants_become_prostitute_interaction = {
-	icon = d_start_prostitution
+	icon = start_prostitution
 	extra_icon = hook_icon
 	desc = deviants_become_prostitute_interaction.desc
     	category = interaction_category_diplomacy
@@ -242,7 +242,7 @@ deviants_become_prostitute_interaction = {
 					scope:actor = {
 						any_vassal = {
 							has_character_modifier = deviants_prostitute
-							count <= 2
+							count < 2
 						}	
 					}
 				}
@@ -254,7 +254,7 @@ deviants_become_prostitute_interaction = {
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
-							count <= 3
+							count < 3
 						}	
 					}
 				}
@@ -372,7 +372,7 @@ deviants_become_prostitute_interaction = {
 }
 
 deviants_stop_prostitute_interaction = {
-	icon = d_stop_prostitution
+	icon = stop_prostitution
 	desc = deviants_stop_prostitute_interaction.desc
     	category = interaction_category_diplomacy
     	use_diplomatic_range = yes

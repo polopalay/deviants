@@ -1,5 +1,5 @@
 deviants_switch_body_interaction = {
-	icon = d_switch
+	icon = propose_best_friendship_interaction
 	desc = deviants_switch_body_interaction.desc
     	category = interaction_category_diplomacy
 	interface_priority = 1
@@ -34,7 +34,7 @@ deviants_switch_body_interaction = {
 }
 
 deviants_offer_devils_virgin = {
-	icon = d_virgin
+	icon = sub_chastity_rules_interaction
 	desc = deviants_offer_devils_virgin.desc
     	category = interaction_category_diplomacy
 	is_shown = {
@@ -489,7 +489,7 @@ deviants_create_lesser_succubus_interaction = {
 }
 
 deviants_create_succubus_interaction = {
-	icon = d_devil
+	icon = devil
 	desc = deviants_create_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes

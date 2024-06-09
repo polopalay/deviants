@@ -1,5 +1,5 @@
 deviants_weight_interaction = {
-	icon = d_full_body
+	icon = full_body_hair_interaction
 	desc = deviants_weight_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -51,7 +51,7 @@ deviants_weight_interaction = {
 }
 
 deavians_dealing_with_stress_interaction = {
-	icon = d_fascinate
+	icon = torment_interaction
 	desc = deavians_dealing_with_stress_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -152,7 +152,7 @@ deavians_dealing_with_stress_interaction = {
 }
 
 deviants_heal_interaction = {
-	icon = d_healing
+	icon = healing
 	desc = deviants_heal_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -315,7 +315,7 @@ deviants_heal_interaction = {
 }
 
 deviants_purify_interaction = {
-	icon = d_absorb
+	icon = dna_icon
 	desc = deviants_purify_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -429,7 +429,7 @@ deviants_purify_interaction = {
 }
 
 deviants_personality_interaction = {
-	icon = d_drain_life
+	icon = drain_life_interaction
 	desc = deviants_purify_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes

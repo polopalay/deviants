@@ -1,5 +1,5 @@
 deviants_absorb_interaction = {
-	icon = d_virgin
+	icon = icon_shift_privileges
 	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -10,10 +10,7 @@ deviants_absorb_interaction = {
 			has_trait = deviants_succubus
 			is_ruler = yes
 			NOT = { is_at_war_with = scope:recipient }
-			every_courtier_or_guest = {
-				limit = { is_female = no is_knight = yes }
-				count > 0
-			}
+			has_trait_xp = { trait = deviants_succubus track = loyalty value < 100 }
 		}
 		scope:recipient = {
 			OR = {

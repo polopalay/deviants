@@ -1,5 +1,5 @@
 deviants_nude_interaction = {
-	icon = undress_interaction
+	icon = nude_inspect_interaction
 	desc = deviants_nude_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
@@ -238,7 +238,7 @@ deviants_hook_interaction = {
 }
 
 deviants_mind_break_interaction = {
-	icon = d_mesmerize
+	icon = mesmerize_interaction
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes
