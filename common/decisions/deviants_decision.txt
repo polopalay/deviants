@@ -40,10 +40,6 @@ deviants_demon_generals = {
 	confirm_text = deviants_demon_generals.c
 	selection_tooltip = deviants_demon_generals.t
 	is_shown = {
-		any_knight = {
-			limit = { has_character_modifier = deviants_generals }
-			count = 0
-		}
 		has_trait_xp = {
 			trait = deviants_succubus
 			track = loyalty
@@ -51,7 +47,7 @@ deviants_demon_generals = {
 		} 
 	}
 	is_valid = {
-		is_valid_construction_brothel3_trigger = yes
+		is_valid_construction_alchemy3_trigger = yes
 	}
 	effect = {
 		every_courtier = {
@@ -93,162 +89,12 @@ deviants_become_succubus = {
 		}
 	}
 	effect = {
-		add_secret = { 
-			type = secret_deviant
-		}
-		add_secret = { 
-			type = secret_witch
-		}
+		add_secret = { type = secret_deviant }
+		add_secret = { type = secret_witch }
 		random_list = {
-			1 = {
-				give_nickname = nick_the_lewd
-			}
-			1 = {
-				give_nickname = nick_the_lecher
-			}
-			1 = {
-				give_nickname = nick_the_bewitched
-			}
-		}
-		if = {
-			limit = { has_trait = lustful }
-			add_character_modifier = deviants_prostitute
-		}
-		else_if = {
-			limit = { has_trait = chaste }
-			remove_trait = chaste
-		}
-		else_if = {
-			limit = { has_trait = humble }
-			remove_trait = humble
-		}
-		else_if = {
-			limit = { has_trait = gregarious }
-			remove_trait = gregarious
-		}
-		else_if = {
-			limit = { has_trait = zealous }
-			remove_trait = zealous
-		}
-		else_if = {
-			limit = { has_trait = shy }
-			remove_trait = shy
-		}
-		else_if = {
-			limit = { has_trait = calm }
-			remove_trait = calm
-		}
-		else_if = {
-			limit = { has_trait = content }
-			remove_trait = content
-		}
-		else_if = {
-			limit = { has_trait = generous }
-			remove_trait = generous
-		}
-		else_if = {
-			limit = { has_trait = just }
-			remove_trait = just
-		}
-		else_if = {
-			limit = { has_trait = honest }
-			remove_trait = honest
-		}
-		else_if = {
-			limit = { has_trait = patient }
-			remove_trait = patient
-		}
-		else_if = {
-			limit = { has_trait = temperate }
-			remove_trait = temperate
-		}
-		else_if = {
-			limit = { has_trait = diligent }
-			remove_trait = diligent
-		}
-		else_if = {
-			limit = { has_trait = ambitious }
-			remove_trait = ambitious
-		}
-		else_if = {
-			limit = { has_trait = brave }
-			remove_trait = brave
-		}
-		else_if = {
-			limit = { has_trait = trusting }
-			remove_trait = trusting
-		}
-		else_if = {
-			limit = { has_trait = compassionate }
-			remove_trait = compassionate
-		}
-		else_if = {
-			limit = { has_trait = greedy }
-			remove_trait = greedy
-		}
-		else_if = {
-			limit = { has_trait = callous }
-			remove_trait = callous
-		}
-		else_if = {
-			limit = { has_trait = impatient }
-			remove_trait = impatient
-		}
-		else_if = {
-			limit = { has_trait = gluttonous }
-			remove_trait = gluttonous
-		}
-		else_if = {
-			limit = { has_trait = lazy }
-			remove_trait = lazy
-		}
-		else_if = {
-			limit = { has_trait = wrathful }
-			remove_trait = wrathful
-		}
-		else_if = {
-			limit = { has_trait = deceitful }
-			remove_trait = deceitful
-		}
-		else_if = {
-			limit = { has_trait = arrogant }
-			remove_trait = arrogant
-		}
-		else_if = {
-			limit = { has_trait = craven }
-			remove_trait = craven
-		}
-		else_if = {
-			limit = { has_trait = forgiving }
-			remove_trait = forgiving
-		}
-		else_if = {
-			limit = { has_trait = vengeful }
-			remove_trait = vengeful
-		}
-		else_if = {
-			limit = { has_trait = arbitrary }
-			remove_trait = arbitrary
-		}
-		else_if = {
-			limit = { has_trait = stubborn }
-			remove_trait = stubborn
-		}
-		else_if = {
-			limit = { has_trait = fickle }
-			remove_trait = fickle
-		}
-		else_if = {
-			limit = { has_trait = cynical }
-			remove_trait = cynical
-		}
-		else_if = {
-			limit = { has_trait = paranoid }
-			remove_trait = paranoid
-		}
-		if = {
-			limit = { NOT = { has_trait = lustful } }
-			add_trait = lustful
+			1 = { give_nickname = nick_the_lewd }
+			1 = { give_nickname = nick_the_lecher }
+			1 = { give_nickname = nick_the_bewitched }
 		}
 		if = {
 			limit = {

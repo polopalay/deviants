@@ -23,7 +23,7 @@ deviants_succubus = {
 		}
 	}
 
-	opposites = { chaste deviants_lesser_succubus deviants_virgin }
+	opposites = { deviants_lesser_succubus deviants_virgin }
 
 	tracks = {
 		power = {
@@ -135,7 +135,7 @@ deviants_lesser_succubus = {
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
-	opposites = { chaste deviants_succubus deviants_virgin }
+	opposites = { deviants_succubus deviants_virgin }
 
 	desc = {
 		first_valid = {
