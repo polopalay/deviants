@@ -44,7 +44,7 @@ deviants_weight_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
+	ai_frequency = 60
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
@@ -136,13 +136,13 @@ deavians_dealing_with_stress_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = { 
-		base = 50
+		base = 10
 		modifier = {
-			base = 50
+			base = 10
 			scope:recipient = scope:actor
 		}
 		modifier = {
-			base = 30
+			base = 5
 			scope:recipient = {
 				is_child_of = scope:actor
 			}

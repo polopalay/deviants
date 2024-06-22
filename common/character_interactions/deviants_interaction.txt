@@ -124,18 +124,18 @@ deviants_prostitute_interaction = {
 		scope:secondary_recipient = {
 			if = {
 				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
 			}
 			else_if = {
 				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 2 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 8 }
 			}
 			else_if = {
 				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 10 }
 			}
 			else = {
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 4 }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
 			}
 			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 			if = {
