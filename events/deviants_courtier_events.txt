@@ -106,7 +106,7 @@ deviants_courtier.1460 = {
 	type = character_event
 	title = deviants_courtier.1460.t
 	desc = deviants_courtier.1460.a.desc
-	cooldown = { years = 1 }
+	cooldown = { years = 2 }
 	theme = diplomacy
 	right_portrait = {
 		character = root

@@ -228,7 +228,7 @@ deviants_loyalty.8099 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
-	cooldown = { years = 1 }
+	cooldown = { years = 2 }
 	trigger = {
 		has_trait_xp = {
 			trait = deviants_succubus
