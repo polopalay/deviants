@@ -287,7 +287,7 @@ deviants_mind_break_interaction = {
 			}
 			add_trait = lustful
 			add_trait = deviants_virgin
-			add_character_modifier = deviants_slave
+			add_character_modifier = deviants_prostitute
 			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 			add_secret = { type = secret_deviant }
 			add_secret = { type = secret_witch }

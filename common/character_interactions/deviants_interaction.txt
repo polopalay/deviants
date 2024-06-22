@@ -24,14 +24,10 @@ deviants_prostitute_interaction = {
 				has_trait = deviants_lesser_succubus
 				has_trait = lovers_pox
 				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_slave
 			}
         	}
         	scope:recipient = {
-			OR = {
-				has_character_modifier = deviants_prostitute
-				has_character_modifier = deviants_slave
-			}
+			has_character_modifier = deviants_prostitute
         	}
     	}
 

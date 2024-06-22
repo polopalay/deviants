@@ -4,6 +4,7 @@ deviants_courtier.1440 = {
 	type = character_event
 	title = deviants_courtier.1440.t
 	desc = deviants_courtier.1440.a.desc
+	cooldown = { years = 1 }
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -105,7 +106,7 @@ deviants_courtier.1460 = {
 	type = character_event
 	title = deviants_courtier.1460.t
 	desc = deviants_courtier.1460.a.desc
-	cooldown = { years = 2 }
+	cooldown = { years = 1 }
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -382,11 +383,6 @@ deviants_courtier.1460 = {
 				trait = deviants_succubus
 				track = daring
 				value = -1
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value = 1
 			}
 			
 		}

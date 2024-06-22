@@ -1,4 +1,5 @@
 ﻿l_english:
+ deviants_loyalty.8000.t: "A Coup? Or Aggressive Negotiations?"
  deviants_loyalty.8000.a.desc: "I'm waiting naked, on my throne for the court meeting to start, wondering where everybody is when a large group of my men-at-arms burst into the hall. They are fully armed and pointing their spears at me. Most have hidden their faces under their helmets with visors or scarves.\n\n"My greetings, [ROOT.GetCharacter.GetName], I'm here on behalf of multiple concerned parties to deliver demands," [deviants_loyalty_random_1.GetName] declares as he walks towards me. "They claim you have gone too far and a deviant whore like you are not fit to rule."\n\n"There is even a prize on your head, well on your body but it's only right that you are allowed to do a counter offer," [deviants_loyalty_random_1.GetFirstName] keeps talking and his gaze almost makes me move my hands to cover my pussy which is swollen and wet even now.\n\n"You see, some of the men here think you have not gone far enough being a whore and that you have been neglecting your most important subjects, the ones who ultimately guard your safety.""
  deviants_loyalty.8000.a: "This whore is at your service!"  
  deviants_loyalty.8000.a.tt: "The men strip and point their cocks at you."
@@ -36,7 +37,6 @@
  deviants_loyalty.8006.a.desc: ""Nobody else?" is exclaimed and the cocks stop coming before I collapse onto my throne only to be lifted up by strong hands. Everybody is looking around but there are only flaccid manhoods in the hall.\n\n"Let us swear then, redeem our oaths to our Whore and Lady," [deviants_loyalty_random_1.GetFirstName] exclaims and most of the men kneel down before me, except the two who are holding me up. One hand over their heart, and the other on their cock after it's jokingly suggested. As cum keeps spilling out of my womb and dripping out of my pussy, I spread my vulva on an impulse for all to see.\n\n"As long as [ROOT.GetCharacter.GetName] fulfills her duties and obligations to offer us her chastity in exchange for our service, we will guard her with our life," [deviants_loyalty_random_1.GetFirstName] leads the men to swear. I can't stop myself from giggling once again when I hear the twisted words that no longer promise to guard my chastity like when swearing to a proper lady.\n\n"And you, our new Whore and Lady, do you swear to keep your end of this oath?" [deviants_loyalty_random_1.GetFirstName] asks while holding my chin with his hand-he too has a flaccid cock but I'm not even sure if he cummed in or on the floor."
  deviants_loyalty.8006.a: "I swear!"  
  deviants_loyalty.8006.a.tt: "You swear to be a good Whore and Lady for your men-at-arms from now on."
-
  deviants_loyalty.8099.t: "Whore and Lady"
  deviants_loyalty.8099.a.desc: "While I sit on my throne, naked, a group of my men-at-arms comes to request my services as a whore. They are leering at my lustful pussy, like they know as well as I that denying it to be filled and stretched will only add to my stress.\n\nBut I'm the master of my own body and I will not let my perverted flower control my actions. It's my decision to indulge or deny the raw touch of my countless men who hunger to use my body for their pleasure.\n\nThough there is always the obligation to maintain their loyalty, yes, I have no other choice but to indulge. I have to fuck them, I have to keep fucking them all like a horny whore."
  deviants_loyalty.8099.a: "As you wish."  
@@ -69,7 +69,6 @@
  deviants_loyalty.8102.b: "Endure."  
  deviants_loyalty.8102.b.tt: "The men will be well rested and amused in the morning but you will be not."
 
-
  deviants_loyalty.8099.t: "Whore and Lady"
  deviants_loyalty.8099.a.desc: "While I sit on my throne, naked, a group of my men-at-arms comes to request my services as a whore. They are leering at my lustful pussy, like they know as well as I that denying it to be filled and stretched will only add to my stress.\n\nBut I'm the master of my own body and I will not let my perverted flower control my actions. It's my decision to indulge or deny the raw touch of my countless men who hunger to use my body for their pleasure.\n\nThough there is always the obligation to maintain their loyalty, yes, I have no other choice but to indulge. I have to fuck them, I have to keep fucking them all like a horny whore."
  deviants_loyalty.8099.a: "As you wish."  
@@ -78,10 +77,17 @@
  deviants_loyalty.8099.b.tt: "You pay a bonus to your men."
  deviants_loyalty.8099.c: "Refuse."  
  deviants_loyalty.8099.c.tt: "You try to make excuses but your refusal only annoys everyone."
- 
+
+ deviants_loyalty.8900.t: "Subject's Demand"
+ deviants_loyalty.8900.a.desc: "I'm sitting on my throne, naked, rubbing my hungry flower, when a large group of my men-at-arms burst into the hall. They are fully armed and pointing their spears at me. Most have hidden their faces under their helmets with visors or scarves.\n\n"My greetings, [ROOT.GetCharacter.GetName], I'm here on behalf of multiple concerned parties to deliver demands," [deviants_loyalty_random_1.GetName] declares as he walks towards me. "They claim you have gone too far and a deviant whore like you are not fit to rule."\n\n"Though we would claim you have not been a good enough whore," [deviants_loyalty_random_1.GetFirstName] keeps talking. "You agreed to service us as a whore but most think you have not been diligent enough. So we are mainly here to request that you show your sincerity of being a good whore to your most loyal subjects.""
+ deviants_loyalty.8900.a: "I will show my sincerity."  
+ deviants_loyalty.8900.a.tt: "You agree to show your sincerity to be a good whore."
+ deviants_loyalty.8900.b: "I will pay."  
+ deviants_loyalty.8900.b.tt: "You pay to compensate the men."
+ deviants_loyalty.8900.c: "I refuse."  
+ deviants_loyalty.8900.c.tt: "You will be burned by an angry mob for being a deviant witch whore among other things."
+
  deviants_loyalty.8901.t: "Deviant Whore"
  deviants_loyalty.8901.a.desc: "I'm bound naked before a large crowd, my subjects are cheering on my humiliation while I'm made to read a perverted declaration. On it, I promise to be a better whore for my knights and men-at-arms. Every time I stutter my pussy is slapped and the crowd cheers louder.\n\nBut still, my noble flower is blooming and leaking juices, and it's presented to a large crowd of witnesses. They will talk, nobody will have any doubts, I'm a perverted deviant."
  deviants_loyalty.8901.a: "I'm a good whore!"  
  deviants_loyalty.8901.a.tt: "You are not let go until you have read the announcement multiple times."
-
-

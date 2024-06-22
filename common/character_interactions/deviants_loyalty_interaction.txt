@@ -17,7 +17,7 @@ deviants_absorb_interaction = {
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
 			}
-			has_trait_xp = { trait = deviants_lesser_succubus value >= 50 }
+			has_trait_xp = { trait = deviants_lesser_succubus value >= 100 }
 		}
 	}
 	on_accept = {
@@ -25,14 +25,14 @@ deviants_absorb_interaction = {
 			add_character_modifier = deviants_buff
 			add_trait_xp = {
 				trait = deviants_lesser_succubus
-				value = -50
+				value = -100
 			}
 		}
 		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value = 5
+				value = 1
 			}
 		}
 	}

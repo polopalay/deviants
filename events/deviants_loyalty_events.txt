@@ -5,7 +5,7 @@ deviants_loyalty.8000 = {
 	title = deviants_loyalty.8000.t
 	desc = deviants_loyalty.8000.a.desc
 	theme = martial
-	cooldown = { years = 2 }
+	cooldown = { years = 1 }
 	right_portrait = {
 		character = root
 		animation = shock
@@ -34,13 +34,12 @@ deviants_loyalty.8000 = {
 		}
 	}
 	option = {
-		ai_chance = { base = 90 }
+		ai_chance = { base = 100 }
 		name = deviants_loyalty.8000.a
 		custom_tooltip = deviants_loyalty.8000.a.tt
 		trigger_event = deviants_loyalty.8001
 	}		
 	option = {
-		ai_chance = { base = 10 }
 		name = deviants_loyalty.8000.b
 		custom_tooltip = deviants_loyalty.8000.b.tt
 		remove_short_term_gold = massive_gold_value
@@ -229,7 +228,7 @@ deviants_loyalty.8099 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
-	#cooldown = { years = 1 }
+	cooldown = { years = 1 }
 	trigger = {
 		has_trait_xp = {
 			trait = deviants_succubus
@@ -260,7 +259,7 @@ deviants_loyalty.8099 = {
 			random_list = {
 				1 = { trigger_event = deviants_loyalty.8100 }
 				1 = { trigger_event = deviants_loyalty.8101 }
-				1 = { trigger_event = deviants_loyalty.8102 }
+				100 = { trigger_event = deviants_loyalty.8102 }
 			}	
 		}
 	}		
@@ -280,7 +279,7 @@ deviants_loyalty.8099 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value = -1
+				value = -5
 			}
 		}
 		stress_impact = {
@@ -322,10 +321,12 @@ deviants_loyalty.8100 = {
 	option = {
 		name = deviants_loyalty.8100.b
 		custom_tooltip = deviants_loyalty.8100.b.tt
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = loyalty
-			value = 1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
 		}
 		buy_sex_with_effect = {
 			CHARACTER = scope:deviants_loyalty_random_1
@@ -350,13 +351,16 @@ deviants_loyalty.8101 = {
 		animation = chancellor
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_loyalty.8101.a
 		custom_tooltip = deviants_loyalty.8101.a.tt
 		add_piety = minor_piety_loss
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = loyalty
-			value = 1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
 		}
 		buy_sex_with_effect = {
 			CHARACTER = scope:deviants_loyalty_random_1
@@ -366,20 +370,25 @@ deviants_loyalty.8101 = {
 	option = {
 		name = deviants_loyalty.8101.b
 		custom_tooltip = deviants_loyalty.8101.b.tt
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = loyalty
-			value = -1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = -1
+			}
 		}
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_loyalty.8101.c
 		custom_tooltip = deviants_loyalty.8101.c.tt
 		add_prestige = minor_prestige_loss
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = loyalty
-			value = 1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
 		}
 		buy_sex_with_effect = {
 			CHARACTER = scope:deviants_loyalty_random_1
@@ -402,7 +411,7 @@ deviants_loyalty.8102 = {
 		name = deviants_loyalty.8102.a
 		custom_tooltip = deviants_loyalty.8102.a.tt
 		buy_sex_with_effect = {
-			CHARACTER = scope:ddeviants_loyalty_random_1
+			CHARACTER = scope:deviants_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}		
@@ -510,3 +519,4 @@ deviants_loyalty.8901 = {
 		}
 	}		
 }
+
