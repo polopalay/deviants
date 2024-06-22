@@ -1,0 +1,519 @@
+namespace = deviants_loyalty
+
+deviants_loyalty.8000 = { 
+	type = character_event
+	title = deviants_loyalty.8000.t
+	desc = deviants_loyalty.8000.a.desc
+	theme = martial
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+		outfit_tags = { military_outfit }
+	}
+	trigger = {
+		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		any_knight = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+		NOT = { has_character_flag = maa_free_use_slut }
+	}
+	immediate = {
+			random_knight = {
+			save_scope_as = deviants_loyalty_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+			}
+	}
+	option = {
+		ai_chance = { base = 90 }
+		name = deviants_loyalty.8000.a
+		custom_tooltip = deviants_loyalty.8000.a.tt
+		trigger_event = deviants_loyalty.8001
+	}		
+	option = {
+		ai_chance = { base = 10 }
+		name = deviants_loyalty.8000.b
+		custom_tooltip = deviants_loyalty.8000.b.tt
+		remove_short_term_gold = massive_gold_value
+	}	
+	option = {
+		name = deviants_loyalty.8000.c
+		custom_tooltip = deviants_loyalty.8000.c.tt
+		death = { death_reason = death_vanished }	
+	}
+}
+deviants_loyalty.8001 = { 
+	type = character_event
+	title = deviants_loyalty.8001.t
+	desc = deviants_loyalty.8001.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+	}
+	option = {
+		name = deviants_loyalty.8001.a
+		custom_tooltip = deviants_loyalty.8001.a.tt
+		trigger_event = deviants_loyalty.8002
+	}		
+}
+#8002 fuck first guy
+deviants_loyalty.8002 = { 
+	type = character_event
+	title = deviants_loyalty.8002.t
+	desc = deviants_loyalty.8002.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	left_portrait = {
+		character = scope:deviants_randoman_1
+		animation = scheme
+	}
+	immediate = {
+		random_knight = {
+			limit = { is_adult = yes is_female = no }
+			save_scope_as = deviants_randoman_1
+		}
+	}
+	option = {
+		name = deviants_loyalty.8002.a
+		custom_tooltip = deviants_loyalty.8002.a.tt
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviants_randoman_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		trigger_event = deviants_loyalty.8003
+	}		
+}
+
+#8003 mating press on the throne by a disfigured man
+deviants_loyalty.8003 = { 
+	type = character_event
+	title = deviants_loyalty.8003.t
+	desc = deviants_loyalty.8003.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	left_portrait = {
+		character = scope:deviants_randoman_1
+		animation = scheme
+	}
+	immediate = {
+		random_knight = {
+			limit = { is_adult = yes is_female = no }
+			save_scope_as = deviants_randoman_1
+		}
+	}
+	option = {
+		name = deviants_loyalty.8003.a
+		custom_tooltip = deviants_loyalty.8003.a.tt
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviants_randoman_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		trigger_event = deviants_loyalty.8004
+	}		
+}
+
+#8004 
+deviants_loyalty.8004 = { 
+	type = character_event
+	title = deviants_loyalty.8004.t
+	desc = deviants_loyalty.8004.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+	}
+	option = {
+		name = deviants_loyalty.8004.a
+		custom_tooltip = deviants_loyalty.8004.a.tt
+		trigger_event = deviants_loyalty.8005
+	}		
+	
+}
+#8005 gangbang
+deviants_loyalty.8005 = { 
+	type = character_event
+	title = deviants_loyalty.8005.t
+	desc = deviants_loyalty.8005.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+	}
+	option = {
+		name = deviants_loyalty.8005.a
+		custom_tooltip = deviants_loyalty.8005.a.tt
+		every_knight = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 20
+			}
+			buy_sex_with_effect = {
+				CHARACTER = scope:deviants_randoman_1
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}	
+		trigger_event = deviants_loyalty.8006
+	}		
+}
+
+
+deviants_loyalty.8006 = { 
+	type = character_event
+	title = deviants_loyalty.8006.t
+	desc = deviants_loyalty.8006.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+	}
+	option = {
+		name = deviants_loyalty.8006.a
+		custom_tooltip = deviants_loyalty.8006.a.tt
+		add_character_flag = maa_free_use_slut
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+		}
+	}		
+}
+
+#8099 initial request event
+deviants_loyalty.8099 = { 
+	type = character_event
+	title = deviants_loyalty.8099.t
+	desc = deviants_loyalty.8099.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = chancellor
+	}
+	#cooldown = { years = 1 }
+	trigger = {
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value >= 1
+		}
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		any_knight = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+		has_character_flag = maa_free_use_slut
+	}
+	immediate = {
+		random_knight = {
+		save_scope_as = deviants_loyalty_random_1
+		limit = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+	}
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8099.a
+		custom_tooltip = deviants_loyalty.8099.a.tt
+		hidden_effect = {
+			random_list = {
+				1 = { trigger_event = deviants_loyalty.8100 }
+				1 = { trigger_event = deviants_loyalty.8101 }
+				1 = { trigger_event = deviants_loyalty.8102 }
+			}	
+		}
+	}		
+	option = {
+		name = deviants_loyalty.8099.b
+		custom_tooltip = deviants_loyalty.8099.b.tt
+		remove_short_term_gold = minor_gold_value
+		stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_gain
+		}
+	}
+	option = {
+		name = deviants_loyalty.8099.c
+		custom_tooltip = deviants_loyalty.8099.c.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = -1
+			}
+		}
+		stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_gain
+		}
+	}
+}
+deviants_loyalty.8100 = { 
+	type = character_event
+	title = deviants_loyalty.8100.t
+	desc = deviants_loyalty.8100.a.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = chancellor
+	}
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8100.a
+		custom_tooltip = deviants_loyalty.8100.a.tt
+		scope:deviants_loyalty_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 20
+			}
+		}
+		stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+		}
+	}		
+	option = {
+		name = deviants_loyalty.8100.b
+		custom_tooltip = deviants_loyalty.8100.b.tt
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = 1
+		}
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviants_loyalty_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+	}
+}
+
+
+#8101 gangbang on the throne, important foreign envoy insists seeing you
+deviants_loyalty.8101 = { 
+	type = character_event
+	title = deviants_loyalty.8101.t
+	desc = deviants_loyalty.8101.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = chancellor
+	}
+	option = {
+		name = deviants_loyalty.8101.a
+		custom_tooltip = deviants_loyalty.8101.a.tt
+		add_piety = minor_piety_loss
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = 1
+		}
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviants_loyalty_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+	}		
+	option = {
+		name = deviants_loyalty.8101.b
+		custom_tooltip = deviants_loyalty.8101.b.tt
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = -1
+		}
+	}
+	option = {
+		name = deviants_loyalty.8101.c
+		custom_tooltip = deviants_loyalty.8101.c.tt
+		add_prestige = minor_prestige_loss
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value = 1
+		}
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviants_loyalty_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+	}
+}
+#8102 bound and fucked the whole day in the barracks, then just left there, gagged while the men sleep
+deviants_loyalty.8102 = { 
+	type = character_event
+	title = deviants_loyalty.8102.t
+	desc = deviants_loyalty.8102.a.desc
+	theme = martial
+	right_portrait = {
+		character = root
+		animation = prisondungeon
+	}
+	option = {
+		name = deviants_loyalty.8102.a
+		custom_tooltip = deviants_loyalty.8102.a.tt
+		buy_sex_with_effect = {
+			CHARACTER = scope:ddeviants_loyalty_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+	}		
+	option = {
+		name = deviants_loyalty.8102.b
+		custom_tooltip = deviants_loyalty.8102.b.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+		}
+	}
+}
+
+deviants_loyalty.8900 = { 
+	type = character_event
+	title = deviants_loyalty.8900.t
+	desc = deviants_loyalty.8900.a.desc
+	theme = diplomacy
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+	}
+	trigger = {
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = loyalty
+			value < 1
+		}
+		any_knight = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+		has_character_flag = maa_free_use_slut
+	}
+	immediate = {
+		random_knight = {
+			save_scope_as = deviants_loyalty_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+			}
+		}
+	}
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8900.a
+		custom_tooltip = deviants_loyalty.8900.a.tt
+		trigger_event = deviants_loyalty.8901
+	}		
+	option = {
+		name = deviants_loyalty.8900.b
+		custom_tooltip = deviants_loyalty.8900.b.tt
+		remove_short_term_gold = medium_gold_value
+	}	
+	option = {
+		name = deviants_loyalty.8900.c
+		custom_tooltip = deviants_loyalty.8900.c.tt
+		death = {
+			death_reason = death_vanished
+		}	
+	}
+}
+
+deviants_loyalty.8901 = { 
+	type = character_event
+	title = deviants_loyalty.8901.t
+	desc = deviants_loyalty.8901.a.desc
+	theme = diplomacy
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:deviants_loyalty_random_1
+		animation = scheme
+	}
+	option = {
+		name = deviants_loyalty.8901.a
+		custom_tooltip = deviants_loyalty.8901.a.tt
+		add_prestige = medium_prestige_loss
+		add_piety = medium_piety_loss
+		stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyal
+				value = 1
+			}
+		}
+	}		
+}
+
