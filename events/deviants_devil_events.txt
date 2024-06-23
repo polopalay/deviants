@@ -81,10 +81,8 @@ deviants_devil.1410 = {
 	}
 	# ask gold from it instead
 	option = {
-		ai_chance = { base = 50 }
-		trigger = {
-			has_character_modifier = deviants_prostitute
-		}
+		ai_chance = { base = 100 }
+		trigger = { has_character_modifier = deviants_prostitute }
 		name = deviants_devil.1410.d
 		custom_tooltip = deviants_devil.1410.d.tt
 		trigger_event = deviants_devil.1414
@@ -192,6 +190,7 @@ deviants_devil.1414 = {
 		animation = personality_content
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_devil.1414.a
 		custom_tooltip = deviants_devil.1414.a.tt
 		add_gold = 5
@@ -199,7 +198,6 @@ deviants_devil.1414 = {
 	}	
 	# demand more gold
 	option = {
-		ai_chance = { base = 100 }
 		name = deviants_devil.1414.b
 		custom_tooltip = deviants_devil.1414.b.tt
 		trigger_event = deviants_devil.1416

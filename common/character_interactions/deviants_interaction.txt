@@ -147,10 +147,10 @@ deviants_prostitute_interaction = {
 			if = {
 				limit = { NOT = { scope:secondary_recipient = scope:recipient } }
 				random = {
-					chance = 5
+					chance = 1
 					modifier = { add = 1 scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-					modifier = { add = 2 scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-					modifier = { add = 2 scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
+					modifier = { add = 1 scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
+					modifier = { add = 1 scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
 					add_trait_xp = { trait = deviants_succubus track = corruption value = 1 }
 				}
 			}

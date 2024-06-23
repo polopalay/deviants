@@ -12,7 +12,7 @@ deviants_courtier_on_action = {
 		NOT = { has_trait = celibate }
 	}
 	random_events = {
-		chance_to_happen = 25
+		chance_to_happen = 50
 		50 = deviants_courtier.1440 # urge to expose at high submission
 		50 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
 	} 
