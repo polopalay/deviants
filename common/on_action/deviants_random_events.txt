@@ -1,76 +1,10 @@
 random_yearly_playable_pulse = {
 	on_actions = {
+		delay = { days = { 30 90 } }
+		deviants_devil_events
+		delay = { days = { 30 60 } }
+		deviants_courtier_events
+		delay = { days = { 30 60 } }
 		deviants_loyalty_events
 	}
 }
-random_yearly_playable_pulse = {
-	on_actions = {
-		deviants_courtier_events
-	}
-}
-random_yearly_playable_pulse = {
-	on_actions = {
-		deviants_devil_events
-	}
-}
-
-deviants_courtier_events = {
-	trigger = {
-		is_adult = yes
-		has_trait = deviants_succubus
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_landed = yes
-		is_female = yes
-		exists = capital_province
-		NOT = { has_trait = celibate }
-	}
-	random_events = {
-		chance_to_happen = 25
-		50 = deviants_courtier.1440 # urge to expose at high submission
-		50 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
-	} 
-}
-
-deviants_loyalty_events = {
-	trigger = {
-		is_adult = yes
-		has_trait = deviants_succubus
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_landed = yes
-		is_female = yes
-		exists = capital_province
-		NOT = { has_trait = celibate }
-	}
-	random_events = {
-		chance_to_happen = 50
-		50 = deviants_loyalty.8000 # start men at arms blackmail at max deviancy
-		50 = deviants_loyalty.8099 # basic men at arms event request
-		50 = deviants_loyalty.8900 # 0 loyalty punishment event
-	} 
-}
-
-deviants_devil_events = {
-	trigger = {
-		is_adult = yes
-		has_trait = deviants_succubus
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_landed = yes
-		is_female = yes
-		exists = capital_province
-		NOT = { has_trait = celibate }
-	}
-	random_events = {
-		chance_to_happen = 100
-		50 = deviants_devil.1410 # gremlin fuck
-	} 
-}
-

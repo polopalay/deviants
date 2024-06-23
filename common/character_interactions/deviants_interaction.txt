@@ -389,6 +389,7 @@ deviants_stop_prostitute_interaction = {
 			OR = {
 				scope:actor = scope:recipient
 				is_courtier_of = scope:actor
+				is_vassal_of = scope:actor
 			}
         	}
     	}

@@ -36,12 +36,6 @@
 				value = 1
 				template = eyeliner2
 			}
-			accessory = {
-				mode = add
-				gene = horns
-				template = succubus_horns
-				value = 1
-			}
 		}	
 	}
 }
