@@ -26,12 +26,8 @@ deviants_courtier.1440 = {
 		custom_tooltip = deviants_courtier.1440.a.tt
 		hidden_effect = {
 			random_list = {
-				50 = {
-					trigger_event = deviants_courtier.1441
-				}
-				50 = {
-					trigger_event = deviants_courtier.1442
-				}	
+				10 = { trigger_event = deviants_courtier.1441 }
+				10 = { trigger_event = deviants_courtier.1442 }	
 			}
 		}	
 	}		

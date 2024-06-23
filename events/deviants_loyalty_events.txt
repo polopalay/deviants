@@ -255,9 +255,9 @@ deviants_loyalty.8099 = {
 		custom_tooltip = deviants_loyalty.8099.a.tt
 		hidden_effect = {
 			random_list = {
-				1 = { trigger_event = deviants_loyalty.8100 }
-				1 = { trigger_event = deviants_loyalty.8101 }
-				100 = { trigger_event = deviants_loyalty.8102 }
+				10 = { trigger_event = deviants_loyalty.8100 }
+				10 = { trigger_event = deviants_loyalty.8101 }
+				10 = { trigger_event = deviants_loyalty.8102 }
 			}	
 		}
 	}		
