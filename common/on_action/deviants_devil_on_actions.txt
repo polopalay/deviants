@@ -1,4 +1,4 @@
-deviants_courtier_events = {
+deviants_devil_on_action = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_succubus
@@ -12,8 +12,8 @@ deviants_courtier_events = {
 		NOT = { has_trait = celibate }
 	}
 	random_events = {
-		chance_to_happen = 25
-		50 = deviants_courtier.1440 # urge to expose at high submission
-		50 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
+		chance_to_happen = 20
+		50 = deviants_devil.1410 # gremlin fuck
 	} 
 }
+

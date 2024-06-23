@@ -42,10 +42,16 @@ deviants_courtier.1440 = {
 			base = major_stress_impact_gain
 			lustful = medium_stress_impact_gain
 		}
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = daring
-			value = -1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+			add_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = -2
+			}
 		}
 	}
 }
@@ -68,10 +74,16 @@ deviants_courtier.1441 = {
 			lustful = minor_stress_impact_gain
 		}
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = daring
-			value = 1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = 2
+			}
 		}
 	}		
 }
@@ -94,10 +106,16 @@ deviants_courtier.1442 = {
 			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		add_trait_xp = {
-			trait = deviants_succubus
-			track = daring
-			value = 1
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = 2
+			}
 		}
 	}		
 }
@@ -384,7 +402,10 @@ deviants_courtier.1460 = {
 				track = daring
 				value = -1
 			}
-			
+			add_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = -2
+			}
 		}
 	}
 }
@@ -507,6 +528,10 @@ deviants_courtier.1461 = {
 				trait = deviants_succubus
 				track = power
 				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = 2
 			}
 			buy_sex_with_effect = {
 				CHARACTER = scope:deviants_courtier_random_1
@@ -762,6 +787,10 @@ deviants_courtier.1463 = {
 				trait = deviants_succubus
 				track = loyalty
 				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = 2
 			}
 		}
 	}		

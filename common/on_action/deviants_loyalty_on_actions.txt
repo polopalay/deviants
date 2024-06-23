@@ -1,4 +1,4 @@
-deviants_devil_events = {
+deviants_loyalty_on_action = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_succubus
@@ -12,8 +12,9 @@ deviants_devil_events = {
 		NOT = { has_trait = celibate }
 	}
 	random_events = {
-		chance_to_happen = 20
-		50 = deviants_devil.1410 # gremlin fuck
+		chance_to_happen = 50
+		50 = deviants_loyalty.8000 # start men at arms blackmail at max deviancy
+		50 = deviants_loyalty.8099 # basic men at arms event request
+		50 = deviants_loyalty.8900 # 0 loyalty punishment event
 	} 
 }
-

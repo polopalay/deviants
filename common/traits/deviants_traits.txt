@@ -28,33 +28,29 @@ deviants_succubus = {
 	tracks = {
 		power = {
 			33 = {
-				learning = 3
-			}
-
-			66 = {
-				learning = 3
 				attraction_opinion = 10
 			}
 
+			66 = {
+				general_opinion = 10
+			}
+
 			100 = {
-				learning = 4
 				attraction_opinion = 10
 				general_opinion = 10
 			}			
 		}
 		daring = {
 			25 = {
-				diplomacy = 2
+				travel_speed = 5
 			}
 			50 = {
-				diplomacy = 2
+				travel_speed = 5
 			}
 			75 = {
-				diplomacy = 3
 				travel_speed = 5
 			}
 			100 = {
-				diplomacy = 3
 				travel_speed = 5
 				travel_danger = -50
 			}
@@ -66,6 +62,7 @@ deviants_succubus = {
 				health = 1
 				stewardship = 5
 				intrigue = 5
+				learning = 5
 				hostile_scheme_resistance_add = 50
 			}
 
@@ -74,6 +71,7 @@ deviants_succubus = {
 				negate_health_penalty_add = 1
 				stewardship = 5
 				intrigue = 5
+				learning = 5
 				hostile_scheme_resistance_add = 50
 				legitimacy_baseline_add = 1
 				monthly_dynasty_prestige = 1
@@ -84,6 +82,7 @@ deviants_succubus = {
 			33 = {
 				martial = 3
 				prowess = 3
+				diplomacy = 3
 				opinion_of_male_rulers = 5
 				men_at_arms_maintenance = -0.1
 				knight_effectiveness_mult = 0.1
@@ -95,6 +94,7 @@ deviants_succubus = {
 			66 = {
 				martial = 3
 				prowess = 3
+				diplomacy = 3
 				opinion_of_male_rulers = 5
 				men_at_arms_maintenance = -0.2
 				knight_effectiveness_mult = 0.2
@@ -105,6 +105,7 @@ deviants_succubus = {
 			100 = {
 				martial = 4
 				prowess = 4
+				diplomacy = 4
 				opinion_of_male_rulers = 10
 				men_at_arms_maintenance = -0.2
 				knight_effectiveness_mult = 0.2
