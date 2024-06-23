@@ -21,7 +21,6 @@ deviants_loyalty.8000 = {
 		is_female = yes
 		age >= 18
 		any_knight = {
-			is_available_ai_adult = yes
 			age >= 18
 			is_female = no
 		}
@@ -239,7 +238,6 @@ deviants_loyalty.8099 = {
 		is_female = yes
 		age >= 18
 		any_knight = {
-			is_available_ai_adult = yes
 			age >= 18
 			is_female = no
 		}
@@ -456,7 +454,6 @@ deviants_loyalty.8900 = {
 			value < 1
 		}
 		any_knight = {
-			is_available_ai_adult = yes
 			age >= 18
 			is_female = no
 		}
