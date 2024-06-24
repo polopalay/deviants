@@ -12,8 +12,9 @@ deviants_devil_on_action = {
 		NOT = { has_trait = celibate }
 	}
 	random_events = {
-		chance_to_happen = 50
+		chance_to_happen = 75
 		50 = deviants_devil.1410 # gremlin fuck
+		10 = deviants_devil.1300 # special dream
 	} 
 }
 

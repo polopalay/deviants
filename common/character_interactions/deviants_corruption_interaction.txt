@@ -192,84 +192,42 @@ deviants_child_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			random_list = {
-				50 = {
-					if = {
-						limit = { patrilinear_marriage = yes }
-						create_character = {
-							age = 0
-							mother = scope:recipient
-							father = primary_spouse
-							dynasty_house = primary_spouse.house
-							culture = primary_spouse.culture
-							faith = primary_spouse.faith
-							gender = female
-						}
-					}
-					else = {
-						if = {
-							limit = { exists = primary_spouse }
-							create_character = {
-								age = 0
-								mother = scope:recipient
-								father = primary_spouse
-								dynasty_house = house
-								culture = culture
-								faith = faith
-								gender = female
-							}
-						}
-						else = {
-							create_character = {
-								age = 0
-								mother = scope:recipient
-								dynasty_house = house
-								culture = culture
-								faith = faith
-								gender = female
-							}
-						}
-					}
-				}
-				50 = {
-					if = {
-						limit = { patrilinear_marriage = yes }
-						create_character = {
-							age = 0
-							mother = scope:recipient
-							father = primary_spouse
-							dynasty_house = primary_spouse.house
-							culture = primary_spouse.culture
-							faith = primary_spouse.faith
-							gender = male
-						}
-					}
-					else = {
-						if = {
-							limit = { exists = primary_spouse }
-							create_character = {
-								age = 0
-								mother = scope:recipient
-								father = primary_spouse
-								dynasty_house = house
-								culture = culture
-								faith = faith
-								gender = male
-							}
-						}
-						else = {
-							create_character = {
-								age = 0
-								mother = scope:recipient
-								dynasty_house = house
-								culture = culture
-								faith = faith
-								gender = male
-							}
-						}
-					}
+			if = {
+				limit = { patrilinear_marriage = yes }
+				create_character = {
+					age = 0
+					mother = scope:recipient
+					father = primary_spouse
+					dynasty_house = primary_spouse.house
+					culture = primary_spouse.culture
+					faith = primary_spouse.faith
+					gender_female_chance = 50
 				}
 			}
+			else = {
+				if = {
+					limit = { exists = primary_spouse }
+						create_character = {
+							age = 0
+							mother = scope:recipient
+							father = primary_spouse
+							dynasty_house = house
+							culture = culture
+							faith = faith
+							gender_female_chance = 50
+						}
+					}
+					else = {
+						create_character = {
+							age = 0
+							mother = scope:recipient
+							dynasty_house = house
+							culture = culture
+							faith = faith
+							gender_female_chance = 50
+						}
+					}
+				}
 		}
 		scope:actor = {
 			add_trait_xp = {

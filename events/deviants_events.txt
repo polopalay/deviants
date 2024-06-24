@@ -1,0 +1,263 @@
+namespace = deviants_event
+
+#If repent your perversion, looking at your deranged body
+deviants_event.0800 = { 
+	type = character_event
+	title = deviants_event.0800.t
+	desc = deviants_event.0800.desc
+	theme = bloody_wedding_night
+	right_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}	
+	#punish pussy
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0800.a
+		custom_tooltip = deviants_event.0800.a.tt
+		trigger_event = deviants_event.0801
+	}	
+	#public shaming
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0800.b
+		custom_tooltip = deviants_event.0800.b.tt	
+		trigger_event = deviants_event.0900
+	}		
+	#just some minor acts of faith will do
+	option = {
+		name = deviants_event.0800.c
+		custom_tooltip = deviants_event.0800.c.tt	
+	}	
+}
+
+#0801 looking at your clit like it's cancer growth
+deviants_event.0801 = { 
+	type = character_event
+	title = deviants_event.0801.t
+	desc = deviants_event.0801.desc
+	theme = bloody_wedding_night
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+		outfit_tags = { no_clothes }
+	}	
+	#Punish your deviant knob
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0801.a
+		custom_tooltip = deviants_event.0801.a.tt
+		trigger_event = deviants_event.0802
+	}	
+	#Teach your horny flower a lesson
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0801.b
+		custom_tooltip = deviants_event.0801.b.tt	
+		trigger_event = deviants_event.0810
+	}		
+}
+
+#0802 clamp clit, you punishing it more for it daring to enjoy it
+deviants_event.0802 = { 
+	type = character_event
+	title = deviants_event.0802.t
+	desc = deviants_event.0802.desc
+	theme = bloody_wedding_night
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+		outfit_tags = { no_clothes }
+	}	
+	#no mercy
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0802.a
+		custom_tooltip = deviants_event.0802.a.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+	}	
+	#masturbate
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0802.b
+		custom_tooltip = deviants_event.0802.b.tt	
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+    #this is enough
+	option = {
+		name = deviants_event.0802.c
+		custom_tooltip = deviants_event.0802.c.tt	
+	}
+}
+
+#0810 punishing pussy, spank/insertion
+deviants_event.0810 = { 
+	type = character_event
+	title = deviants_event.0810.t
+	desc = deviants_event.0810.desc
+	theme = bloody_wedding_night
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+		outfit_tags = { no_clothes }
+	}	
+	#no mercy
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0810.a
+		custom_tooltip = deviants_event.0810.a.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+	}	
+	#masturbate
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0810.b
+		custom_tooltip = deviants_event.0810.b.tt	
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+    #this is enough
+	option = {
+		name = deviants_event.0810.c
+		custom_tooltip = deviants_event.0810.c.tt	
+	}
+}
+
+deviants_event.0900 = { 
+	type = character_event
+	title = deviants_event.0900.t
+	desc = deviants_event.0900.desc
+	theme = bloody_wedding_night
+	override_background = { reference = gallows }
+	right_portrait = {
+		character = root
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}	
+	#say nothing, get the usual pillory punishment
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_event.0900.a
+		custom_tooltip = deviants_event.0900.a.tt
+	}	
+	#admit being a deviant whore who loves sex
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			has_trait = deviants_succubus
+		}
+		name = deviants_event.0900.b
+		custom_tooltip = deviants_event.0900.b.tt	
+		trigger_event = deviants_event.0901
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+    	#admit being horse fucker who loves fucking horse cock
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			has_trait = deviants_succubus
+		}
+		name = deviants_event.0900.c
+		custom_tooltip = deviants_event.0900.c.tt	
+		trigger_event = deviants_event.0901
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}
+}
+#0901 fisting/washed/spanked with blessed water to clean your tainted pussy
+deviants_event.0901 = { 
+	type = character_event
+	title = deviants_event.0901.t
+	desc = deviants_event.0901.desc
+	theme = bloody_wedding_night
+	override_background = { reference = gallows }
+	right_portrait = {
+		character = root
+		animation = prisondungeon
+		outfit_tags = { no_clothes }
+	}	
+	#endure
+	option = {
+		name = deviants_event.0901.a
+		custom_tooltip = deviants_event.0901.a.tt
+	}	
+	#beg for more
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_event.0901.b
+		custom_tooltip = deviants_event.0901.b.tt	
+		trigger_event = deviants_event.0902
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+}
+#0902 put on a "pole of shame" pussy pole... covered in dirty things the crowd throws, for hours
+deviants_event.0902 = { 
+	type = character_event
+	title = deviants_event.0902.t
+	desc = deviants_event.0902.desc
+	theme = bloody_wedding_night
+	override_background = { reference = gallows }
+	right_portrait = {
+		character = root
+		animation = prisondungeon
+		outfit_tags = { no_clothes }
+	}	
+	#endure
+	option = {
+		name = deviants_event.0902.a
+		custom_tooltip = deviants_event.0902.a.tt
+	}	
+	#beg for more
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_event.0902.b
+		custom_tooltip = deviants_event.0902.b.tt	
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+}
+

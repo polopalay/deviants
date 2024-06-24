@@ -5,7 +5,7 @@ deviants_courtier.1440 = {
 	title = deviants_courtier.1440.t
 	desc = deviants_courtier.1440.a.desc
 	cooldown = { years = 1 }
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = personality_greedy
@@ -56,7 +56,7 @@ deviants_courtier.1441 = {
 	type = character_event
 	title = deviants_courtier.1441.t
 	desc = deviants_courtier.1441.a.desc
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = personality_greedy
@@ -88,7 +88,7 @@ deviants_courtier.1442 = {
 	type = character_event
 	title = deviants_courtier.1442.t
 	desc = deviants_courtier.1442.a.desc
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = personality_greedy
@@ -121,7 +121,7 @@ deviants_courtier.1460 = {
 	title = deviants_courtier.1460.t
 	desc = deviants_courtier.1460.a.desc
 	cooldown = { years = 2 }
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = personality_greedy
@@ -389,8 +389,8 @@ deviants_courtier.1460 = {
 		name = deviants_courtier.1460.x
 		custom_tooltip = deviants_courtier.1460.x.tt
 		stress_impact = {
-			base = major_stress_impact_gain
-			lustful = major_stress_impact_gain
+			base = major_stress_impact_loss
+			lustful = major_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -410,7 +410,7 @@ deviants_courtier.1461 = {
 	type = character_event
 	title = deviants_courtier.1461.t
 	desc = deviants_courtier.1461.a.desc
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = shame
@@ -541,7 +541,7 @@ deviants_courtier.1462 = {
 	type = character_event
 	title = deviants_courtier.1462.t
 	desc = deviants_courtier.1462.a.desc
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = shame
@@ -659,7 +659,7 @@ deviants_courtier.1463 = {
 	type = character_event
 	title = deviants_courtier.1463.t
 	desc = deviants_courtier.1463.a.desc
-	theme = diplomacy
+	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = throne_room_kneel_2
@@ -790,5 +790,271 @@ deviants_courtier.1463 = {
 			}
 		}
 	}		
+}
+
+#envoy with their soldiers, letter from your liege, telling you to reward them for their services
+deviants_courtier.7000 = { 
+	type = character_event
+	title = deviants_courtier.7000.t
+	desc = deviants_courtier.7000.a.desc
+	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = thinking 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+	trigger = { 
+		has_character_modifier = deviants_prostitute
+        	is_female = yes
+        	liege = {
+            		age >= 18
+            		is_ai = yes
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+			any_vassal = {
+				age >= 18
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = no
+			}
+        	}
+	}
+    	immediate = {
+		liege = {
+			save_scope_as = deviant_go_random_2
+			random_vassal = {
+				limit = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+    	# agree
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.7000.a
+		custom_tooltip = deviants_courtier.7000.a.tt
+		trigger_event = deviants_courtier.7001
+
+	}	
+	# pay
+	option = {
+		name = deviants_courtier.7000.b
+		custom_tooltip = deviants_courtier.7000.b.tt
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1 
+			gold = minor_gold_value
+		}
+	}	
+	# refuse
+	option = {
+		name = deviants_courtier.7000.c
+		custom_tooltip = deviants_courtier.7000.c.tt
+		add_piety = medium_piety_loss
+	}				
+}
+
+#7001 you arrive into the room as a whore and are told to present yourself, the envoy sitting on a chair, comments about the likeness, amused 
+deviants_courtier.7001 = { 
+	type = character_event
+	title = deviants_courtier.7001.t
+	desc = deviants_courtier.7001.a.desc
+	theme = friendly 
+	right_portrait = {
+		character = root
+		animation = chaplain 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+    	# agree
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.7001.a
+		custom_tooltip = deviants_courtier.7001.a.tt
+		trigger_event = deviants_courtier.7010
+	}	
+	# pay
+	option = {
+		name = deviants_courtier.7001.b
+		custom_tooltip = deviants_courtier.7001.b.tt
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1 
+			gold = medium_gold_value
+		}
+	}	
+	# refuse
+	option = {
+		name = deviants_courtier.7001.c
+		custom_tooltip = deviants_courtier.7001.c.tt
+		trigger_event = deviants_courtier.7020
+	}				
+}
+
+#7010 if admit being a dirty slut, spreading knees and pussy, he tells the men to fuck her 
+deviants_courtier.7010 = { 
+	type = character_event
+	title = deviants_courtier.7010.t
+	desc = deviants_courtier.7010.a.desc
+	theme = friendly 
+	right_portrait = {
+		character = root
+		animation = chaplain 
+		outfit_tags = { no_clothes }
+	}
+    	# ask
+	option = {
+		name = deviants_courtier.7010.a
+		custom_tooltip = deviants_courtier.7010.a.tt
+		trigger_event = deviants_courtier.7011
+	}				
+}
+
+#7011 anal only, taking turns
+deviants_courtier.7011 = { 
+	type = character_event
+	title = deviants_courtier.7011.t
+	desc = deviants_courtier.7011.a.desc
+	theme = friendly 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_1 
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		name = deviants_courtier.7011.a
+		custom_tooltip = deviants_courtier.7011.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = deviants_fuckedsilly
+			days = 30
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}				
+}
+
+#7020 IF refuse they want to humiliation fight duel you, one by one as foreplay
+deviants_courtier.7020 = { 
+	type = character_event
+	title = deviants_courtier.7020.t
+	desc = deviants_courtier.7020.a.desc
+	theme = war 
+	right_portrait = {
+		character = root
+		animation = angry 
+		outfit_tags = { no_clothes }
+	}
+    	# submit
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.7020.a
+		custom_tooltip = deviants_courtier.7020.a.tt
+		trigger_event = deviants_courtier.7021
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+		}
+	}		
+	# call scum
+	option = {
+		name = deviants_courtier.7020.b
+		custom_tooltip = deviants_courtier.7020.b.tt
+		trigger_event = deviants_courtier.7022
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_gain
+		}
+	}		
+}
+
+#7021 bondage anal only fuck post duels
+deviants_courtier.7021 = { 
+	type = character_event
+	title = deviants_courtier.7021.t
+	desc = deviants_courtier.7011.a.desc
+	theme = war 
+	right_portrait = {
+		character = root
+		animation = angry 
+		outfit_tags = { no_clothes }
+	}
+    	# ask
+	option = {
+		name = deviants_courtier.7021.a
+		custom_tooltip = deviants_courtier.7021.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = deviants_fuckedsilly
+			days = 30
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}	
+	}				
+}
+#7022 if call them scum, cheap cart slut
+deviants_courtier.7022 = { 
+	type = character_event
+	title = deviants_courtier.7022.t
+	desc = deviants_courtier.7022.a.desc
+	theme = default 
+	right_portrait = {
+		character = root
+		animation = angry 
+		outfit_tags = { no_clothes }
+	}
+    	# ask
+	option = {
+		name = deviants_courtier.7022.a
+		custom_tooltip = deviants_courtier.7022.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = deviants_fuckedsilly
+			days = 30
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}				
 }
 
