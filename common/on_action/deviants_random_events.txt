@@ -1,6 +1,6 @@
 quarterly_playable_pulse = {
 	random_on_action = {
-	 	chance_of_no_event = 1
+	 	chance_of_no_event = 2
 		1 = deviants_courtier_on_action
 		1 = deviants_devil_on_action
 		1 = deviants_loyalty_on_action

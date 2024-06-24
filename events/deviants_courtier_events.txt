@@ -1059,3 +1059,865 @@ deviants_courtier.7022 = {
 	}				
 }
 
+#5100 liege call you over 
+deviants_courtier.5100 = { 
+	type = character_event
+	title = deviants_courtier.5100.t
+	desc = deviants_courtier.5100.a.desc
+	override_background = { reference = council_chamber }
+	theme = diplomacy 
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking 
+	}
+    	trigger = { 
+		has_trait = deviants_succubus
+        	is_female = yes
+        	liege = {
+            		age >= 18
+            		is_ai = yes
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+			is_liege_or_above_of = root
+			any_vassal = {
+				is_female = no
+				age >= 18
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = no
+				count >= 3
+			}
+        	}
+	}
+    	immediate = {
+		liege = {
+			save_scope_as = deviant_go_random_1
+			random_vassal = {
+				limit = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+				}
+				save_scope_as = deviant_go_random_2
+			}
+			random_vassal = {
+				limit = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this  = scope:deviant_go_random_2 }
+				}
+				save_scope_as = deviant_go_random_3
+			}
+			random_vassal = {
+				limit = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this  = scope:deviant_go_random_2 }
+					NOT = { this  = scope:deviant_go_random_3 }
+				}
+				save_scope_as = deviant_go_random_4
+			}
+		}
+	}
+    	# secretly travel to your liege
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.5100.a
+		custom_tooltip = deviants_courtier.5100.a.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviants_courtier.5200
+				}
+				50 = {
+					trigger = { has_trait = deviants_strange_dildo }
+					trigger_event = deviants_courtier.5300
+				}
+                		50 = {
+					trigger_event = deviants_courtier.5400
+				}
+				50 = {
+					trigger = { has_trait = deviants_horse_fucker }
+					trigger_event = deviants_courtier.5500
+				}
+				50 = {
+					trigger_event = deviants_courtier.6000
+				}
+			}	
+		}
+	}	
+	# just pay the gold
+	option = {
+		name = deviants_courtier.5100.b
+		custom_tooltip = deviants_courtier.5100.b.tt
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = major_gold_value
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -10
+		}
+	}					
+}
+
+#5000 emissary from from your liege comes if don't have trait
+deviants_courtier.5200 = { 
+	type = character_event
+	title = deviants_courtier.5200.t
+	desc = deviants_courtier.5200.a.desc
+	override_background = { reference = courtyard }
+	theme = diplomacy 
+	lower_center_portrait = {
+		character = root
+		animation = throne_room_kneel_2 
+		outfit_tags = { no_clothes }
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = ecstasy 
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = ecstasy 
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_4
+		animation = ecstasy 
+	}
+    	# collect the coins with your mouth
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_courtier.5200.a
+		custom_tooltip = deviants_courtier.5200.a.tt
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		stress_impact = {
+			base = major_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = disgusted_opinion
+			opinion = -10
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}	
+	}	
+	# offer ass to have coins inserted
+	option = {
+		ai_chance = { base = 80 }
+		name = deviants_courtier.5200.b
+		custom_tooltip = deviants_courtier.5200.b.tt
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+		}
+		stress_impact = {
+			base = major_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = disgusted_opinion
+			opinion = -10
+			
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}	
+	}	
+	# refuse, get spanked by your owner
+	option = {
+		name = deviants_courtier.5200.c
+		custom_tooltip = deviants_courtier.5200.c.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = amused_opinion
+			opinion = 20
+		}
+	}					
+}
+# 5300 if has dildo, made to pose with your paintings while riding the dildo
+deviants_courtier.5300 = { 
+	type = character_event
+	title = deviants_courtier.5300.t
+	desc = deviants_courtier.5300.a.desc
+	theme = diplomacy 
+	lower_center_portrait = {
+		character = root
+		animation = throne_room_kneel_2 
+		outfit_tags = { no_clothes }
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = ecstasy 
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = ecstasy 
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_4
+		animation = ecstasy 
+	}
+    	# fuck dildo to please, to gain tiny gold
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.5300.a
+		custom_tooltip = deviants_courtier.5300.a.tt
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 15
+			}
+		}
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 15
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = amused_opinion
+			opinion = 10
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 2
+			}
+		}	
+	}	
+	# do bare minium
+	option = {
+		name = deviants_courtier.5300.b
+		custom_tooltip = deviants_courtier.5300.b.tt
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}	
+	}					
+}
+
+# 5400 naked duel his knights
+deviants_courtier.5400 = { 
+	type = character_event
+	title = deviants_courtier.5400.t
+	desc = deviants_courtier.5400.a.desc
+	override_background = { reference = courtyard }
+	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = aggressive_unarmed 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = aggressive_unarmed 
+		outfit_tags = { no_clothes }
+	}
+	lower_center_portrait = {
+		character = scope:deviant_go_random_1
+		animation = ecstasy 
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = ecstasy 
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_4
+		animation = ecstasy 
+	}
+    	# make a good show
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.5400.a
+		custom_tooltip = deviants_courtier.5400.a.tt
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = amused_opinion
+			opinion = 10
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+		}	
+	}	
+	# do bare minium
+	option = {
+		name = deviants_courtier.5400.b
+		custom_tooltip = deviants_courtier.5400.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = disappointed_opinion
+			opinion = -10
+			
+		}	
+	}					
+}
+# 5500 make you fuck horse if you have the trait
+deviants_courtier.5500 = { 
+	type = character_event
+	title = deviants_courtier.5500.t
+	desc = deviants_courtier.5500.a.desc
+	theme = diplomacy 
+	lower_center_portrait= {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = ecstasy 
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_3
+		animation = ecstasy 
+	}
+    	# fuck horse 
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.5500.a
+		custom_tooltip = deviants_courtier.5500.a.tt
+		trigger_event = deviants_courtier.5510
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = amused_opinion
+			opinion = 10
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = 1
+			}
+		}	
+	}	
+	# just pose
+	option = {
+		name = deviants_courtier.5500.b
+		custom_tooltip = deviants_courtier.5500.b.tt
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 5
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -10
+			
+		}
+	}					
+}
+# 5510 if agree to fuck horse
+deviants_courtier.5510 = { 
+	type = character_event
+	title = deviants_courtier.5510.t
+	desc = deviants_courtier.5510.a.desc
+	theme = diplomacy 
+	lower_center_portrait= {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = ecstasy 
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_3
+		animation = ecstasy 
+	}
+    	# faster/deeper as told, for tiny gold but gain stress
+	option = {
+		name = deviants_courtier.5510.a
+		custom_tooltip = deviants_courtier.5510.a.tt
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		stress_impact = {
+			base = major_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = amused_opinion
+			opinion = 10
+		}
+		add_trait_xp = {
+			trait = deviants_succubus
+			track = power
+			value = 1
+		}
+	}	
+	# pleasure yourself
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.5510.b
+		custom_tooltip = deviants_courtier.5510.b.tt
+		scope:deviant_go_random_3 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -10
+			
+		}
+	}					
+}
+
+#6000 called you over, to have you service another of his vassals
+deviants_courtier.6000 = { 
+	type = character_event
+	title = deviants_courtier.6000.t
+	desc = deviants_courtier.6000.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = chaplain 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = thinking 
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme 
+	}
+    	# agree
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6000.a
+		custom_tooltip = deviants_courtier.6000.a.tt
+		scope:deviant_go_random_2 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+			pay_short_term_gold = {
+				target = scope:deviant_go_random_1 
+				gold = minor_gold_value
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				25 = { trigger_event = deviants_courtier.6010 }
+				25 = { trigger_event = deviants_courtier.6020 }
+                		25 = { trigger_event = deviants_courtier.6030 }
+				25 = { trigger_event = deviants_courtier.6040 }
+			}	
+		}
+
+	}	
+	# refuse
+	option = {
+		name = deviants_courtier.6000.b
+		custom_tooltip = deviants_courtier.6000.b.tt
+		scope:deviant_go_random_1 = {
+			imprison = {
+				target = root
+				type = dungeon
+			}
+		}
+	}					
+}
+
+#6010 pussy slapping while bound
+deviants_courtier.6010 = { 
+	type = character_event
+	title = deviants_courtier.6010.t
+	desc = deviants_courtier.6010.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = aggressive_unarmed 
+	}
+    	# beg for more
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6010.a
+		custom_tooltip = deviants_courtier.6010.a.tt
+		trigger_event = deviants_courtier.6011
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}	
+	}	
+	# stay silent
+	option = {
+		name = deviants_courtier.6010.b
+		custom_tooltip = deviants_courtier.6010.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}					
+}
+#6011 if beg for more, getting fisted
+deviants_courtier.6011 = { 
+	type = character_event
+	title = deviants_courtier.6011.t
+	desc = deviants_courtier.6011.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = aggressive_unarmed 
+	}
+    	# act like a horny slut
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6011.a
+		custom_tooltip = deviants_courtier.6011.a.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}	
+	# endure
+	option = {
+		name = deviants_courtier.6011.b
+		custom_tooltip = deviants_courtier.6011.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}					
+}
+
+#6020 slap face with cock
+deviants_courtier.6020 = { 
+	type = character_event
+	title = deviants_courtier.6020.t
+	desc = deviants_courtier.6020.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+    	# suck
+	option = {
+		name = deviants_courtier.6020.a
+		custom_tooltip = deviants_courtier.6020.a.tt
+		trigger_event = deviants_courtier.6021
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = 1
+			}
+		}
+	}	
+	# keep mouth shut
+	option = {
+		name = deviants_courtier.6020.b
+		custom_tooltip = deviants_courtier.6020.b.tt
+		trigger_event = deviants_courtier.6022
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}					
+}
+#6021 if suck,
+deviants_courtier.6021 = { 
+	type = character_event
+	title = deviants_courtier.6021.t
+	desc = deviants_courtier.6021.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+    	# thank him for the meal
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6021.a
+		custom_tooltip = deviants_courtier.6021.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}	
+	# just leave
+	option = {
+		name = deviants_courtier.6021.b
+		custom_tooltip = deviants_courtier.6021.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}					
+}
+#6022 if keep mouth shut
+deviants_courtier.6022 = { 
+	type = character_event
+	title = deviants_courtier.6022.t
+	desc = deviants_courtier.6022.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+        # lick your face
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6022.a
+		custom_tooltip = deviants_courtier.6022.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = q
+			}
+		}
+	}	
+	# just leave
+	option = {
+		name = deviants_courtier.6022.b
+		custom_tooltip = deviants_courtier.6022.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}					
+}
+
+#6030 strangle anal
+deviants_courtier.6030 = { 
+	type = character_event
+	title = deviants_courtier.6030.t
+	desc = deviants_courtier.6030.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+    	# act horny/indulge as he cums
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6030.a
+		custom_tooltip = deviants_courtier.6030.a.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = corruption
+				value = 1
+			}
+		}
+	}	
+	# stay silent as he cums
+	option = {
+		name = deviants_courtier.6030.b
+		custom_tooltip = deviants_courtier.6030.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}					
+}
+
+#6040 pussy job him
+deviants_courtier.6040 = { 
+	type = character_event
+	title = deviants_courtier.6040.t
+	desc = deviants_courtier.6040.a.desc
+	override_background = { reference = bedchamber }
+	theme = diplomacy 
+    	# service him well to get him cum
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.6040.a
+		custom_tooltip = deviants_courtier.6040.a.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}	
+	# do the bare minimum to get him cum
+	option = {
+		name = deviants_courtier.6040.b
+		custom_tooltip = deviants_courtier.6040.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}					
+}
+
