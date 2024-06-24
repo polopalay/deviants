@@ -1,4 +1,4 @@
-random_yearly_playable_pulse = {
+quarterly_playable_pulse = {
 	random_on_action = {
 	 	chance_of_no_event = 1
 		1 = deviants_courtier_on_action

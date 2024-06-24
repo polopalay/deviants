@@ -5,7 +5,7 @@ deviants_loyalty.8000 = {
 	title = deviants_loyalty.8000.t
 	desc = deviants_loyalty.8000.a.desc
 	theme = court
-	cooldown = { years = 1 }
+	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = shock
@@ -435,7 +435,7 @@ deviants_loyalty.8900 = {
 	title = deviants_loyalty.8900.t
 	desc = deviants_loyalty.8900.a.desc
 	theme = court
-	cooldown = { years = 1 }
+	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = shock

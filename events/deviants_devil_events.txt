@@ -38,6 +38,7 @@ deviants_devil.1410 = {
 		}
 	}
 	theme = bloody_wedding_night
+	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = lunatic
@@ -1853,6 +1854,7 @@ deviants_devil.1300 = {
 		}
 	}
 	theme = bloody_wedding_night
+	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = shock

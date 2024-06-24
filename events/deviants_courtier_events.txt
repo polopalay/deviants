@@ -4,7 +4,7 @@ deviants_courtier.1440 = {
 	type = character_event
 	title = deviants_courtier.1440.t
 	desc = deviants_courtier.1440.a.desc
-	cooldown = { years = 1 }
+	cooldown = { years = 2 }
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -798,6 +798,7 @@ deviants_courtier.7000 = {
 	title = deviants_courtier.7000.t
 	desc = deviants_courtier.7000.a.desc
 	theme = diplomacy 
+	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = thinking 
