@@ -1352,9 +1352,9 @@ deviants_devil.5500 = {
 		ai_chance = { base = 80 }
 		name = deviants_devil.5500.b
 		custom_tooltip = deviants_devil.5500.b.tt	
+		add_prestige = medium_prestige_loss
 		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_loss
+			base = medium_stress_impact_loss
 		}
 	}
 	# 
@@ -1425,9 +1425,9 @@ deviants_devil.5501 = {
 		ai_chance = { base = 80 }
 		name = deviants_devil.5501.b
 		custom_tooltip = deviants_devil.5501.b.tt	
+		add_prestige = medium_prestige_loss
 		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_loss
+			base = medium_stress_impact_loss
 		}
 	}
 	# 
@@ -1504,9 +1504,9 @@ deviants_devil.5502 = {
 		ai_chance = { base = 80 }
 		name = deviants_devil.5502.b
 		custom_tooltip = deviants_devil.5502.b.tt	
+		add_prestige = medium_prestige_loss
 		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_loss
+			base = medium_stress_impact_loss
 		}
 	}
 	# 
@@ -1930,8 +1930,9 @@ deviants_devil.1300 = {
 	option = {
 		name = deviants_devil.1300.c
 		custom_tooltip = deviants_devil.1300.c.tt
+		add_piety = minor_piety_gain
 		stress_impact = {
-			base = massive_stress_impact_gain
+			base = minor_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1940,10 +1941,6 @@ deviants_devil.1300 = {
 				value = -1
 			}
 		}
-		add_character_modifier = {
-			modifier = deviants_fuckedsilly
-			days = 10
-		}	
 	}
 }
 #1301 win the fight
