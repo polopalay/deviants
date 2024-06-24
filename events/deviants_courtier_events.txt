@@ -1754,6 +1754,11 @@ deviants_courtier.6020 = {
 	desc = deviants_courtier.6020.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_1 
+		outfit_tags = { no_clothes }
+	}
     	# suck
 	option = {
 		name = deviants_courtier.6020.a
@@ -1792,6 +1797,11 @@ deviants_courtier.6021 = {
 	desc = deviants_courtier.6021.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = personality_greedy 
+		outfit_tags = { no_clothes }
+	}
     	# thank him for the meal
 	option = {
 		ai_chance = { base = 100 }
@@ -1822,6 +1832,11 @@ deviants_courtier.6022 = {
 	desc = deviants_courtier.6022.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_1 
+		outfit_tags = { no_clothes }
+	}
         # lick your face
 	option = {
 		ai_chance = { base = 100 }
@@ -1853,6 +1868,11 @@ deviants_courtier.6030 = {
 	desc = deviants_courtier.6030.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_1 
+		outfit_tags = { no_clothes }
+	}
     	# act horny/indulge as he cums
 	option = {
 		ai_chance = { base = 100 }
@@ -1888,6 +1908,11 @@ deviants_courtier.6040 = {
 	desc = deviants_courtier.6040.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_1 
+		outfit_tags = { no_clothes }
+	}
     	# service him well to get him cum
 	option = {
 		ai_chance = { base = 100 }
