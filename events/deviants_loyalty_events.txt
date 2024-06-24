@@ -300,6 +300,7 @@ deviants_loyalty.8100 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
+	cooldown = { years = 10 }
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8100.a
@@ -348,6 +349,7 @@ deviants_loyalty.8101 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
+	cooldown = { years = 10 }
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8101.a
@@ -412,7 +414,8 @@ deviants_loyalty.8102 = {
 			CHARACTER = scope:deviants_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
-	}		
+	}
+	cooldown = { years = 10 }
 	option = {
 		name = deviants_loyalty.8102.b
 		custom_tooltip = deviants_loyalty.8102.b.tt

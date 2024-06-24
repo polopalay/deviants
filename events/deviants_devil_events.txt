@@ -589,6 +589,7 @@ deviants_devil.5100 = {
 		character = root
 		animation = personality_content
 	}
+	cooldown = { years = 10 }
 	# promise to do better
 	option = {
 		name = deviants_devil.5100.a
@@ -667,6 +668,7 @@ deviants_devil.5110 = {
 		character = root
 		animation = drink
 	}
+	cooldown = { years = 10 }
 	# drink it all
 	option = {
 		ai_chance = { base = 10 }
@@ -755,6 +757,7 @@ deviants_devil.5120 = {
 		character = root
 		animation = disbelief
 	}
+	cooldown = { years = 10 }
 	# run faster
 	option = {
 		name = deviants_devil.5120.a
@@ -842,6 +845,7 @@ deviants_devil.5130 = {
 		character = root
 		animation = personality_bold
 	}
+	cooldown = { years = 10 }
 	# moan as you cum
 	option = {
 		ai_chance = { base = 10 }
@@ -925,6 +929,7 @@ deviants_devil.5140 = {
 		character = root
 		animation = personality_content
 	}
+	cooldown = { years = 10 }
 	# swallow as much as you can
 	option = {
 		ai_chance = { base = 10 }
@@ -1006,6 +1011,7 @@ deviants_devil.5150 = {
 		character = root
 		animation = personality_callous
 	}
+	cooldown = { years = 10 }
 	# act like a sex demon
 	option = {
 		ai_chance = { base = 10 }
@@ -1092,6 +1098,7 @@ deviants_devil.5160 = {
 		character = root
 		animation = personality_greedy
 	}
+	cooldown = { years = 10 }
 	# act like a sex demon
 	option = {
 		ai_chance = { base = 10 }
@@ -1854,7 +1861,7 @@ deviants_devil.1300 = {
 		}
 	}
 	theme = bloody_wedding_night
-	cooldown = { years = 2 }
+	cooldown = { years = 10 }
 	right_portrait = {
 		character = root
 		animation = shock

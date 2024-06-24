@@ -28,31 +28,31 @@ deviants_succubus = {
 	tracks = {
 		power = {
 			33 = {
-				attraction_opinion = 10
+				character_travel_speed = 5
 			}
 
 			66 = {
-				general_opinion = 10
+				character_travel_speed = 5
 			}
 
 			100 = {
-				attraction_opinion = 10
-				general_opinion = 10
+				character_travel_speed = 10
+				character_travel_safety = 10
 			}			
 		}
 		daring = {
 			25 = {
-				travel_speed = 5
+				attraction_opinion = 5
 			}
 			50 = {
-				travel_speed = 5
+				attraction_opinion = 5
 			}
 			75 = {
-				travel_speed = 5
+				attraction_opinion = 5
 			}
 			100 = {
-				travel_speed = 5
-				travel_danger = -50
+				attraction_opinion = 5
+				general_opinion = 10
 			}
 		}
 		corruption = {
