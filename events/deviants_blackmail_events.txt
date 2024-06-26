@@ -5,7 +5,6 @@ deviants_blackmail.1400 = {
 	type = character_event
 	title = deviants_blackmail.1400.t
 	desc = deviants_blackmail.1400.a.desc
-	cooldown = { years = 2 }
 	override_background = { reference = council_chamber }
 	theme = seduction 
 	right_portrait = {
@@ -129,7 +128,6 @@ deviants_blackmail.2000 = {
 	type = character_event
 	title = deviants_blackmail.2000.t
 	desc = deviants_blackmail.2000.a.desc
-	cooldown = { years = 2 }
 	override_background = { reference = feast }
 	theme = diplomacy 
 	right_portrait = {

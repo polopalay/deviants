@@ -5,7 +5,6 @@ deviants_loyalty.8000 = {
 	title = deviants_loyalty.8000.t
 	desc = deviants_loyalty.8000.a.desc
 	theme = court
-	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = shock
@@ -227,7 +226,6 @@ deviants_loyalty.8099 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
-	cooldown = { years = 2 }
 	trigger = {
 		has_trait_xp = {
 			trait = deviants_succubus
@@ -300,7 +298,6 @@ deviants_loyalty.8100 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
-	cooldown = { years = 10 }
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8100.a
@@ -349,7 +346,6 @@ deviants_loyalty.8101 = {
 		character = scope:deviants_loyalty_random_1
 		animation = chancellor
 	}
-	cooldown = { years = 10 }
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8101.a
@@ -415,7 +411,6 @@ deviants_loyalty.8102 = {
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
-	cooldown = { years = 10 }
 	option = {
 		name = deviants_loyalty.8102.b
 		custom_tooltip = deviants_loyalty.8102.b.tt
@@ -438,7 +433,6 @@ deviants_loyalty.8900 = {
 	title = deviants_loyalty.8900.t
 	desc = deviants_loyalty.8900.a.desc
 	theme = court
-	cooldown = { years = 2 }
 	right_portrait = {
 		character = root
 		animation = shock

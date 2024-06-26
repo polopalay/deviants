@@ -161,6 +161,8 @@ deviants_lesser_succubus = {
 			attraction_opinion = 10
 			health = 0.5
 			negate_health_penalty_add = 0.5
+			travel_speed = 5
+			character_travel_safety = 5
 		}
 		100 = {
 			stewardship = 5
@@ -172,6 +174,8 @@ deviants_lesser_succubus = {
 			attraction_opinion = 15
 			health = 1
 			negate_health_penalty_add = 1
+			travel_speed = 5
+			character_travel_safety = 5
 		}
 	}
 }
