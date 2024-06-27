@@ -13,7 +13,7 @@ deviants_blackmail_on_action = {
 	}
 	random_events = {
 		chance_to_happen = 50
-		50 = deviants_blackmail.1400 # courtier force marry if both can
+		100 = deviants_blackmail.1400 # courtier force marry if both can
 		50 = deviants_blackmail.2000 # basic NTR event start
 		50 = deviants_courtier.7000 # blackmail by your fellow vassal in the name of your liege
 		50 = deviants_courtier.5100 # liege call you over with a letter
