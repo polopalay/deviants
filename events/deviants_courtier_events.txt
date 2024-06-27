@@ -35,7 +35,6 @@ deviants_courtier.1440 = {
 		custom_tooltip = deviants_courtier.1400.b.tt
 		stress_impact = {
 			base = major_stress_impact_gain
-			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -66,7 +65,6 @@ deviants_courtier.1441 = {
 		add_piety = minor_piety_loss
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_gain
 		}
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		hidden_effect = {
@@ -97,8 +95,7 @@ deviants_courtier.1442 = {
 		custom_tooltip = deviants_courtier.1442.a.tt
 		add_piety = medium_piety_loss
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		hidden_effect = {
@@ -388,7 +385,6 @@ deviants_courtier.1460 = {
 		custom_tooltip = deviants_courtier.1460.x.tt
 		stress_impact = {
 			base = major_stress_impact_loss
-			lustful = major_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -422,7 +418,6 @@ deviants_courtier.1461 = {
 		custom_tooltip = deviants_courtier.1461.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
-			lustful = major_stress_impact_loss
 		}
 		every_court_position_holder = {
 			limit = { is_adult = yes is_female = no }
@@ -553,8 +548,7 @@ deviants_courtier.1462 = {
 		name = deviants_courtier.1462.a
 		custom_tooltip = deviants_courtier.1462.a.tt
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 		every_court_position_holder = {
 			limit = { is_adult = yes is_female = no }
@@ -672,7 +666,6 @@ deviants_courtier.1463 = {
 		custom_tooltip = deviants_courtier.1463.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
-			lustful = medium_stress_impact_loss
 		}
 		every_court_position_holder = {
 			add_opinion = {
@@ -840,6 +833,7 @@ deviants_courtier.7000 = {
     	# agree
 	option = {
 		ai_chance = { base = 100 }
+		add_prestige = minor_prestige_loss
 		name = deviants_courtier.7000.a
 		custom_tooltip = deviants_courtier.7000.a.tt
 		trigger_event = deviants_courtier.7001
@@ -881,6 +875,7 @@ deviants_courtier.7001 = {
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.7001.a
+		add_prestige = minor_prestige_loss
 		custom_tooltip = deviants_courtier.7001.a.tt
 		trigger_event = deviants_courtier.7010
 	}	
@@ -936,7 +931,6 @@ deviants_courtier.7011 = {
 		custom_tooltip = deviants_courtier.7011.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
-			lustful = minor_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
@@ -971,7 +965,6 @@ deviants_courtier.7020 = {
 		trigger_event = deviants_courtier.7021
 		stress_impact = {
 			base = minor_stress_impact_loss
-			lustful = minor_stress_impact_loss
 		}
 	}		
 	# call scum
@@ -981,7 +974,6 @@ deviants_courtier.7020 = {
 		trigger_event = deviants_courtier.7022
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_gain
 		}
 	}		
 }
@@ -1003,7 +995,6 @@ deviants_courtier.7021 = {
 		custom_tooltip = deviants_courtier.7021.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
-			lustful = minor_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
@@ -1035,7 +1026,6 @@ deviants_courtier.7022 = {
 		custom_tooltip = deviants_courtier.7022.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
-			lustful = minor_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
@@ -1208,9 +1198,9 @@ deviants_courtier.5200 = {
 				gold = tiny_gold_value
 			}
 		}
+		add_prestige = minor_prestige_loss
 		stress_impact = {
-			base = major_stress_impact_gain
-			lustful = minor_stress_impact_loss
+			base = major_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1218,11 +1208,6 @@ deviants_courtier.5200 = {
 			opinion = -10
 		}
 		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = 1
-			}
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -1241,9 +1226,9 @@ deviants_courtier.5200 = {
 				gold = minor_gold_value
 			}
 		}
+		add_prestige = minor_prestige_loss
 		stress_impact = {
-			base = major_stress_impact_gain
-			lustful = minor_stress_impact_loss
+			base = major_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1252,11 +1237,6 @@ deviants_courtier.5200 = {
 			
 		}
 		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = 1
-			}
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
@@ -1270,7 +1250,6 @@ deviants_courtier.5200 = {
 		custom_tooltip = deviants_courtier.5200.c.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1323,9 +1302,9 @@ deviants_courtier.5300 = {
 				gold = 15
 			}
 		}
+		add_prestige = minor_prestige_loss
 		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = minor_stress_impact_loss
+			base = medium_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1351,8 +1330,7 @@ deviants_courtier.5300 = {
 			}
 		}
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1412,7 +1390,6 @@ deviants_courtier.5400 = {
 		}
 		stress_impact = {
 			base = medium_stress_impact_gain
-			lustful = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1432,8 +1409,7 @@ deviants_courtier.5400 = {
 		name = deviants_courtier.5400.b
 		custom_tooltip = deviants_courtier.5400.b.tt
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1481,7 +1457,6 @@ deviants_courtier.5500 = {
 		}
 		stress_impact = {
 			base = medium_stress_impact_gain
-			lustful = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1507,8 +1482,7 @@ deviants_courtier.5500 = {
 			}
 		}
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1554,7 +1528,6 @@ deviants_courtier.5510 = {
 		}
 		stress_impact = {
 			base = major_stress_impact_gain
-			lustful = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1579,8 +1552,7 @@ deviants_courtier.5510 = {
 			}
 		}
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
+			base = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1690,7 +1662,6 @@ deviants_courtier.6010 = {
 		custom_tooltip = deviants_courtier.6010.b.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
 		}
 	}					
 }
@@ -1717,7 +1688,6 @@ deviants_courtier.6011 = {
 		custom_tooltip = deviants_courtier.6011.a.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1737,8 +1707,7 @@ deviants_courtier.6011 = {
 		name = deviants_courtier.6011.b
 		custom_tooltip = deviants_courtier.6011.b.tt
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+			base = minor_stress_impact_loss
 		}
 	}					
 }
@@ -1774,8 +1743,7 @@ deviants_courtier.6020 = {
 		custom_tooltip = deviants_courtier.6020.b.tt
 		trigger_event = deviants_courtier.6022
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+			base = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1816,8 +1784,7 @@ deviants_courtier.6021 = {
 		name = deviants_courtier.6021.b
 		custom_tooltip = deviants_courtier.6021.b.tt
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+			base = minor_stress_impact_loss
 		}
 	}					
 }
@@ -1842,7 +1809,7 @@ deviants_courtier.6022 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = q
+				value = 1
 			}
 		}
 	}	
@@ -1852,7 +1819,6 @@ deviants_courtier.6022 = {
 		custom_tooltip = deviants_courtier.6022.b.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
 		}
 	}					
 }
@@ -1876,7 +1842,6 @@ deviants_courtier.6030 = {
 		custom_tooltip = deviants_courtier.6030.a.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1891,8 +1856,7 @@ deviants_courtier.6030 = {
 		name = deviants_courtier.6030.b
 		custom_tooltip = deviants_courtier.6030.b.tt
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+			base = minor_stress_impact_loss
 		}
 	}					
 }
@@ -1916,7 +1880,6 @@ deviants_courtier.6040 = {
 		custom_tooltip = deviants_courtier.6040.a.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1936,8 +1899,7 @@ deviants_courtier.6040 = {
 		name = deviants_courtier.6040.b
 		custom_tooltip = deviants_courtier.6040.b.tt
 		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 	}					
 }

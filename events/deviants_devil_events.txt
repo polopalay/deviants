@@ -59,6 +59,7 @@ deviants_devil.1410 = {
 		}
 		name = deviants_devil.1410.a
 		custom_tooltip = deviants_devil.1410.a.tt
+		add_piety = medium_piety_loss
 		remove_short_term_gold = massive_gold_value
 		trigger_event = deviants_devil.1411
 	}			
@@ -70,6 +71,7 @@ deviants_devil.1410 = {
 		ai_chance = { base = 50 }
 		name = deviants_devil.1410.b
 		custom_tooltip = deviants_devil.1410.b.tt
+		add_piety = medium_piety_loss
 		trigger_event = deviants_devil.1412
 	}	
 	# stay still
@@ -77,12 +79,14 @@ deviants_devil.1410 = {
 		ai_chance = { base = 50 }
 		name = deviants_devil.1410.c
 		custom_tooltip = deviants_devil.1410.c.tt
+		add_piety = minor_piety_loss
 		trigger_event = deviants_devil.1413
 	}
 	# ask gold from it instead
 	option = {
 		ai_chance = { base = 100 }
 		trigger = { has_character_modifier = deviants_prostitute }
+		add_piety = major_piety_loss
 		name = deviants_devil.1410.d
 		custom_tooltip = deviants_devil.1410.d.tt
 		trigger_event = deviants_devil.1414
@@ -148,7 +152,7 @@ deviants_devil.1412 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = daring
+				track = corruption
 				value = 1
 			}
 		}
@@ -200,6 +204,7 @@ deviants_devil.1414 = {
 	# demand more gold
 	option = {
 		name = deviants_devil.1414.b
+		add_piety = major_piety_loss
 		custom_tooltip = deviants_devil.1414.b.tt
 		trigger_event = deviants_devil.1416
 	}			
@@ -250,18 +255,21 @@ deviants_devil.1416 = {
 	option = {
 		name = deviants_devil.1416.a
 		custom_tooltip = deviants_devil.1416.a.tt
+		add_piety = minor_piety_loss
 		add_gold = tiny_gold_value
 		trigger_event = deviants_devil.1417
 	}	
 	# if agree to fuck the biggest cock, longer you stay consious, the more you earn
 	option = {
 		name = deviants_devil.1416.b
+		add_piety = minor_piety_loss
 		custom_tooltip = deviants_devil.1416.b.tt
 		trigger_event = deviants_devil.1418
 	}
 	# if agree to a parade
 	option = {
 		name = deviants_devil.1416.c
+		medium_piety_loss = medium_piety_loss
 		custom_tooltip = deviants_devil.1416.c.tt
 		add_gold = medium_gold_value
 		trigger_event = deviants_devil.1419
@@ -294,11 +302,6 @@ deviants_devil.1417 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = 1
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
 				value = 1
 			}
 		}
@@ -396,7 +399,7 @@ deviants_devil.1418 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 		}
@@ -465,16 +468,6 @@ deviants_devil.1420 = {
 				track = corruption
 				value = 2
 			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = 1
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = 1
-			}
 		}
 	}	
 }
@@ -498,14 +491,7 @@ deviants_devil.1421 = {
 		}
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
-			days = 120
-		}
-		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = 1
-			}
+			days = 180
 		}
 	}		
 }
@@ -538,11 +524,6 @@ deviants_devil.1422 = {
 				track = corruption
 				value = 2
 			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value = 2
-			}
 		}
 	}		
 }
@@ -567,14 +548,7 @@ deviants_devil.1423 = {
 		}
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
-			days = 30
-		}
-		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = power
-				value = 1
-			}
+			days = 180
 		}
 	}		
 }
@@ -600,7 +574,7 @@ deviants_devil.5100 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = power
 				value = 1
 			}
 			trigger_event = deviants_devil.5500
@@ -683,7 +657,7 @@ deviants_devil.5110 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = power
 				value = 1
 			}
 			trigger_event = deviants_devil.5501
@@ -770,7 +744,7 @@ deviants_devil.5120 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 			trigger_event = deviants_devil.5500
@@ -857,7 +831,7 @@ deviants_devil.5130 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = power
 				value = 1
 			}
 			trigger_event = deviants_devil.5501
@@ -940,7 +914,7 @@ deviants_devil.5140 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 			trigger_event = deviants_devil.5501
@@ -1018,11 +992,6 @@ deviants_devil.5150 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = 1
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
 				value = 1
 			}
 		}
@@ -1104,11 +1073,6 @@ deviants_devil.5160 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = 1
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
 				value = 1
 			}
 		}
@@ -1193,11 +1157,6 @@ deviants_devil.5300 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = 1
-			}
 		}
 		trigger_event = deviants_devil.5301	
 	}		
@@ -1225,11 +1184,6 @@ deviants_devil.5301 = {
 			days = 30
 		}
 		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = 1
-			}
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -1264,11 +1218,6 @@ deviants_devil.5320 = {
 			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value = 1
-			}
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
@@ -1344,6 +1293,7 @@ deviants_devil.5500 = {
 	# go wash
 	option = {
 		name = deviants_devil.5500.a
+		add_piety = minor_piety_loss
 		custom_tooltip = deviants_devil.5500.a.tt	
 	}	
 	# 
@@ -1352,6 +1302,7 @@ deviants_devil.5500 = {
 		name = deviants_devil.5500.b
 		custom_tooltip = deviants_devil.5500.b.tt	
 		add_prestige = medium_prestige_loss
+		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
@@ -1417,6 +1368,7 @@ deviants_devil.5501 = {
 	# go wash
 	option = {
 		name = deviants_devil.5501.a
+		add_piety = minor_piety_loss
 		custom_tooltip = deviants_devil.5501.a.tt	
 	}	
 	# 
@@ -1425,6 +1377,7 @@ deviants_devil.5501 = {
 		name = deviants_devil.5501.b
 		custom_tooltip = deviants_devil.5501.b.tt	
 		add_prestige = medium_prestige_loss
+		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
@@ -1496,6 +1449,7 @@ deviants_devil.5502 = {
 	# go wash
 	option = {
 		name = deviants_devil.5502.a
+		add_piety = minor_piety_loss
 		custom_tooltip = deviants_devil.5502.a.tt	
 	}	
 	# 
@@ -1504,6 +1458,7 @@ deviants_devil.5502 = {
 		name = deviants_devil.5502.b
 		custom_tooltip = deviants_devil.5502.b.tt	
 		add_prestige = medium_prestige_loss
+		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}

@@ -350,7 +350,7 @@ deviants_loyalty.8101 = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8101.a
 		custom_tooltip = deviants_loyalty.8101.a.tt
-		add_piety = minor_piety_loss
+		add_piety = medium_piety_loss
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
