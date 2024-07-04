@@ -173,7 +173,7 @@ deviants_child_interaction = {
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { years = 2 }
+	#cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
 			is_female = yes
@@ -192,42 +192,30 @@ deviants_child_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			if = {
-				limit = { patrilinear_marriage = yes }
-				create_character = {
-					age = 0
-					mother = scope:recipient
-					father = primary_spouse
-					dynasty_house = primary_spouse.house
-					culture = primary_spouse.culture
-					faith = primary_spouse.faith
-					gender_female_chance = 50
-				}
+		if = {
+			limit = { patrilinear_marriage = yes }
+			create_character = {
+				age = 0
+				mother = scope:recipient
+				father = primary_spouse
+				dynasty_house = primary_spouse.house
+				culture = primary_spouse.culture
+				faith = primary_spouse.faith
+				gender_female_chance = 50
+				trait = deviants_blood
 			}
-			else = {
-				if = {
-					limit = { exists = primary_spouse }
-						create_character = {
-							age = 0
-							mother = scope:recipient
-							father = primary_spouse
-							dynasty_house = house
-							culture = culture
-							faith = faith
-							gender_female_chance = 50
-						}
-					}
-					else = {
-						create_character = {
-							age = 0
-							mother = scope:recipient
-							dynasty_house = house
-							culture = culture
-							faith = faith
-							gender_female_chance = 50
-						}
-					}
-				}
+		}
+		else = {
+			create_character = {
+				age = 0
+				mother = scope:recipient
+				father = primary_spouse
+				dynasty_house = house
+				culture = culture
+				faith = faith
+				gender_female_chance = 50
+				trait = deviants_blood
+			}
 		}
 		scope:actor = {
 			add_trait_xp = {

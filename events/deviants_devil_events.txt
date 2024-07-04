@@ -57,6 +57,7 @@ deviants_devil.1410 = {
 				value >= 100
 			}
 		}
+		ai_chance = { base = 100 }
 		name = deviants_devil.1410.a
 		custom_tooltip = deviants_devil.1410.a.tt
 		add_piety = medium_piety_loss
@@ -68,7 +69,7 @@ deviants_devil.1410 = {
 		trigger = {
 			has_trait = lustful
 		}
-		ai_chance = { base = 50 }
+		ai_chance = { base = 100 }
 		name = deviants_devil.1410.b
 		custom_tooltip = deviants_devil.1410.b.tt
 		add_piety = medium_piety_loss
@@ -76,7 +77,7 @@ deviants_devil.1410 = {
 	}	
 	# stay still
 	option = {
-		ai_chance = { base = 50 }
+		ai_chance = { base = 1 }
 		name = deviants_devil.1410.c
 		custom_tooltip = deviants_devil.1410.c.tt
 		add_piety = minor_piety_loss
@@ -84,7 +85,7 @@ deviants_devil.1410 = {
 	}
 	# ask gold from it instead
 	option = {
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		trigger = { has_character_modifier = deviants_prostitute }
 		add_piety = major_piety_loss
 		name = deviants_devil.1410.d
@@ -94,6 +95,7 @@ deviants_devil.1410 = {
 	# resist
 	option = {
 		name = deviants_devil.1410.e
+		ai_chance = { base = 0 }
 		custom_tooltip = deviants_devil.1410.e.tt
 		add_piety = minor_piety_gain
 		stress_impact = {
@@ -127,7 +129,7 @@ deviants_devil.1411 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = loyalty
-				value = 1
+				value = 2
 			}
 		}
 	}			
@@ -153,7 +155,7 @@ deviants_devil.1412 = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = 1
+				value = 2
 			}
 		}
 	}			

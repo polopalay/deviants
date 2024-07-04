@@ -18,6 +18,10 @@
  trait_track_deviants_lesser_succubus_desc: "She serves as a cheap prostitute, serving men in order to obtain their semen"
 
  trait_deviants_virgin: "Horny Virgin"
- deviants_virgin_desc: "[ROOT.GetCharacter.GetName] is a virgin, but only a virgin with demons"
- deviants_virgin_character_desc: "[ROOT.GetCharacter.GetName] is a virgin, but only a virgin with demons"
+ deviants_virgin_desc: "[ROOT.GetCharacter.GetName] is the devil's whore"
+ deviants_virgin_character_desc: "[ROOT.GetCharacter.GetName] is the devil's whore"
+
+ trait_deviants_blood: "Devil Blood"
+ deviants_blood_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
+ deviants_blood_character_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
 

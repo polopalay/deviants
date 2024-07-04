@@ -119,6 +119,7 @@ deviants_succubus = {
 			}			
 		}
 	}
+	shown_in_ruler_designer = no
 }
 
 deviants_lesser_succubus = {
@@ -178,6 +179,7 @@ deviants_lesser_succubus = {
 			character_travel_safety = 5
 		}
 	}
+	shown_in_ruler_designer = no
 }
 
 deviants_virgin = {
@@ -219,4 +221,41 @@ deviants_virgin = {
 	hard_casualty_modifier = -0.1
 	supply_duration = 0.1
 	supply_limit_mult = 0.1
+	shown_in_ruler_designer = no
+}
+
+deviants_blood = {
+	icon = blood.dds
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_blood_desc
+			}
+			desc = deviants_blood_character_desc
+		}
+	}
+
+	genetic = yes
+	physical = yes
+	good = yes	
+
+	birth = 0.1
+
+	diplomacy = 6
+	martial = 6
+	stewardship = 6
+	intrigue = 6	
+	learning = 6
+
+	monthly_lifestyle_xp_gain_mult = 0.6
+	hostile_scheme_resistance_add = 60
+
+	dread_decay_mult = -0.6
+	dread_baseline_add = 60
+	army_maintenance_mult = -0.6
+
+	shown_in_ruler_designer = no
 }
