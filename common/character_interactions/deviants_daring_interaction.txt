@@ -231,6 +231,7 @@ deviants_create_eyes = {
 			}
 		}
 	}
+	auto_accept = yes
 }
 
 deviants_nude_interaction = {
