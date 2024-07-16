@@ -11,9 +11,6 @@ morph_genes = {
 					textures = {
 						diffuse = "gfx/models/portraits/decals/brand.dds"
 					}
-					blend_modes = {				 
-						diffuse = replace
-					}
 					alpha_curve = {
 						{ 0  0 }
 						{ 1  1 }
@@ -27,11 +24,11 @@ morph_genes = {
 			girl = male
 		}
 	}
-	deviants_face = {
-		no_face = {
+	deviants_eyeliner = {
+		no_eyeliner = {
 			index = 0			
 		}
-		eyeliner1 = {
+		eyeliner_1 = {
 			index = 1
 			male = {
 				decal = {		
@@ -39,9 +36,6 @@ morph_genes = {
 					textures = {
 						diffuse = "gfx/models/portraits/decals/eyeliner1.dds"
 					}
-					blend_modes = {
-						diffuse = replace
-					}
 					alpha_curve = {
 						{ 0  0 }
 						{ 1  1 }
@@ -53,7 +47,7 @@ morph_genes = {
 			boy = male
 			girl = male
 		}	
-		eyeliner2 = {
+		eyeliner_2 = {
 			index = 2
 			male = {
 				decal = {		
@@ -61,9 +55,6 @@ morph_genes = {
 					textures = {
 						diffuse = "gfx/models/portraits/decals/eyeliner2.dds"
 					}
-					blend_modes = {
-						diffuse = replace
-					}
 					alpha_curve = {
 						{ 0  0 }
 						{ 1  1 }
@@ -75,6 +66,136 @@ morph_genes = {
 			boy = male
 			girl = male
 		}	
+	}
+	deviants_marking = {
+		no_marking = {
+			index = 0			
+		}
+		marking_1 = {
+			index = 1
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/marking1.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		marking_2 = {
+			index = 2
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/marking2.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		marking_3 = {
+			index = 3
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/marking3.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		marking_4 = {
+			index = 4
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/marking4.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+	}
+	deviants_tattoo = {
+		no_tattoo = {
+			index = 0			
+		}
+		tattoo = {
+			index = 1
+			male = {
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/tattoo.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+	}
+	deviants_bodypaint = {
+		no_bodypaint = {
+			index = 0			
+		}
+		bodypaint = {
+			index = 1
+			male = {
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/bodypaint.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
 	}
 }
 accessory_genes = {
@@ -90,8 +211,52 @@ accessory_genes = {
 			boy = male
 			girl = male
 		}
-		succubus_horns = {
+		horn_0 = {
+			index = 1
+			male = {
+				1 = empty
+			}
+			female = {
+				1 = female_horns_0
+			}
+			boy = male
+			girl = female
+		}
+		horn_1 = {
 			index = 2
+			male = {
+				1 = empty
+			}
+			female = {
+				1 = female_horns_1
+			}
+			boy = male
+			girl = female
+		}
+		horn_2 = {
+			index = 3
+			male = {
+				1 = empty
+			}
+			female = {
+				1 = female_horns_2
+			}
+			boy = male
+			girl = female
+		}
+		horn_3 = {
+			index = 4
+			male = {
+				1 = empty
+			}
+			female = {
+				1 = female_horns_3
+			}
+			boy = male
+			girl = female
+		}
+		horn_4 = {
+			index = 5
 			male = {
 				1 = empty
 			}
@@ -101,7 +266,6 @@ accessory_genes = {
 			boy = male
 			girl = female
 		}
-
 	}
 }
 

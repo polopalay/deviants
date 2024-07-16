@@ -1,3 +1,238 @@
+deviants_create_horn = {
+	icon = carn_rape_interaction
+	desc = deviants_create_horn.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = { trait = deviants_succubus track = daring value >= 1 }
+		}
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = deviants_horn0
+					has_character_flag = deviants_horn1
+					has_character_flag = deviants_horn2
+					has_character_flag = deviants_horn3
+					has_character_flag = deviants_horn4
+				}
+			}
+		}
+		flag = deviants_no_horn
+		localization = deviants_no_horn
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_horn0 } }
+		}
+		flag = deviants_horn0
+		localization = deviants_horn0
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_horn1 } }
+		}
+		flag = deviants_horn1
+		localization = deviants_horn1
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_horn2 } }
+		}
+		flag = deviants_horn2
+		localization = deviants_horn2
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_horn3 } }
+		}
+		flag = deviants_horn3
+		localization = deviants_horn3
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_horn4 } }
+		}
+		flag = deviants_horn4
+		localization = deviants_horn4
+	}
+	send_options_exclusive = yes
+	on_accept = {
+		if = {
+			limit = { scope:deviants_no_horn = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_horn0
+				remove_character_flag = deviants_horn1
+				remove_character_flag = deviants_horn2
+				remove_character_flag = deviants_horn3
+				remove_character_flag = deviants_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_horn0 = yes }
+			scope:recipient = {
+				add_character_flag = deviants_horn0
+				remove_character_flag = deviants_horn1
+				remove_character_flag = deviants_horn2
+				remove_character_flag = deviants_horn3
+				remove_character_flag = deviants_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_horn1 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_horn0
+				add_character_flag = deviants_horn1
+				remove_character_flag = deviants_horn2
+				remove_character_flag = deviants_horn3
+				remove_character_flag = deviants_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_horn2 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_horn0
+				remove_character_flag = deviants_horn1
+				add_character_flag = deviants_horn2
+				remove_character_flag = deviants_horn3
+				remove_character_flag = deviants_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_horn3 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_horn0
+				remove_character_flag = deviants_horn1
+				remove_character_flag = deviants_horn2
+				add_character_flag = deviants_horn3
+				remove_character_flag = deviants_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_horn4 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_horn0
+				remove_character_flag = deviants_horn1
+				remove_character_flag = deviants_horn2
+				remove_character_flag = deviants_horn3
+				add_character_flag = deviants_horn4
+			}
+		}
+		secope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+deviants_create_eyes = {
+	icon = temporal_condemnation_interaction
+	desc = deviants_create_eyes.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = { trait = deviants_succubus track = daring value >= 1 }
+		}
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = deviants_marking_1
+					has_character_flag = deviants_marking_2
+					has_character_flag = deviants_marking_3
+					has_character_flag = deviants_marking_4
+				}
+			}
+		}
+		flag = deviants_no_eyes
+		localization = deviants_no_eyes
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_1 } }
+		}
+		flag = deviants_marking_1
+		localization = deviants_marking_1
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_2 } }
+		}
+		flag = deviants_marking_2
+		localization = deviants_marking_2
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_3 } }
+		}
+		flag = deviants_marking_3
+		localization = deviants_marking_3
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_4 } }
+		}
+		flag = deviants_marking_4
+		localization = deviants_marking_4
+	}
+	send_options_exclusive = yes
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { scope:deviants_marking_1 = yes }
+				add_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+			else_if = {
+				limit = { scope:deviants_marking_2 = yes }
+				remove_character_flag = deviants_marking_1
+				add_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+			else_if = {
+				limit = { scope:deviants_marking_3 = yes }
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				add_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+			else_if = {
+				limit = { scope:deviants_marking_4 = yes }
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				add_character_flag = deviants_marking_4
+			}
+			else = {
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+		}
+	}
+}
+
 deviants_nude_interaction = {
 	icon = nude_inspect_interaction
 	desc = deviants_nude_interaction.desc

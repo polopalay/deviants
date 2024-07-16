@@ -1,5 +1,3 @@
-### What I changed in Blender to adapt WoW model
-# Scale 80
 pdxmesh = {
 	name = "female_horns_4_mesh"
 	file = "female_horns_4.mesh"

@@ -1,4 +1,4 @@
-﻿succubus_outfit = {
+﻿deviants_outfit = {
 	usage = game
 	succubus = {
 		traits = {
@@ -10,12 +10,6 @@
 				gene = deviants_body
 				value = 1
 				template = brand
-			}
-			accessory = {
-				mode = add
-				gene = horns
-				template = succubus_horns
-				value = 1
 			}
 		}	
 	}
@@ -31,11 +25,43 @@
 				template = brand
 			}
 			morph = {
-				mode = add
-				gene = deviants_face
+				mode = replace
+				gene = deviants_eyeliner
 				value = 1
-				template = eyeliner2
+				template = eyeliner_1
 			}
 		}	
+	}
+	deviants_virgin = {
+		traits = {
+			deviants_virgin
+		}
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_bodypaint
+				value = 1
+				template = bodypaint
+			}
+			morph = {
+				mode = add
+				gene = deviants_eyeliner
+				value = 1
+				template = eyeliner_2
+			}
+		}
+	}
+	deviants_blood = {
+		traits = {
+			deviants_blood
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_tattoo
+				value = 1
+				template = tattoo
+			}
+		}
 	}
 }

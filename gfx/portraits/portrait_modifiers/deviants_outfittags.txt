@@ -1,35 +1,4 @@
-﻿prostitute_markingtags = {
-	usage = game
-	prostitute_markingt = {
-		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = deviants_body
-				value = 1
-				template = brand
-			}
-			morph = {
-				mode = add
-				gene = deviants_face
-				value = 1
-				template = eyeliner1
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 10
-				NOR = {
-					has_trait = deviants_succubus
-					has_trait = deviants_lesser_succubus
-				}
-				has_character_modifier = deviants_prostitute
-			}
-		}
-	}
-}
-
-prostitute_outfittags = {
+﻿prostitute_outfittags = {
 	usage = game
     	fallback = unclothed_body
     	priority = 10
@@ -64,6 +33,12 @@ prostitute_outfittags = {
 			accessory = {
 				mode = add
 				gene = headgear_base
+			}
+			morph = {
+				mode = replace
+				gene = deviants_bodypaint
+				value = 1
+				template = bodypaint1
 			}
 		}	
 		weight = {
@@ -124,3 +99,167 @@ nude_clothes = {
 	}
 }
 
+horn_clothes = {
+    	usage = game
+    	priority = 10
+
+	horn0 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_0
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn0
+			}
+		}
+	}
+	horn1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_1
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn1
+			}
+		}
+	}
+	horn2 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_2
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn2
+			}
+		}
+	}
+	horn3 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_3
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn3
+			}
+		}
+	}
+	horn4 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_4
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn4
+			}
+		}
+	}
+}
+
+marking_clothes = {
+	usage = game
+	pirority = 10
+
+	marking1 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_1
+			}
+		}
+	}
+	marking2 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_2
+			}
+		}
+	}
+	marking3 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_3
+			}
+		}
+	}
+	marking4 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_4
+			}
+		}
+	}
+}
