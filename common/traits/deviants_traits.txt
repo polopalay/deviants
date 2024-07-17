@@ -12,6 +12,7 @@ deviants_succubus = {
 	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
+	add_commander_trait = yes
 
 	desc = {
 		first_valid = {
@@ -136,6 +137,7 @@ deviants_lesser_succubus = {
 	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
+	add_commander_trait = yes
 
 	opposites = { deviants_succubus deviants_virgin }
 
@@ -237,10 +239,7 @@ deviants_blood = {
 		}
 	}
 
-	genetic = yes
-	physical = yes
 	good = yes	
-
 	birth = 0.1
 
 	diplomacy = 6

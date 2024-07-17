@@ -11,6 +11,18 @@
 				value = 1
 				template = brand
 			}
+			color = {
+				mode = modify
+				gene = hair_color
+				x = -1.0
+				y = -1.0
+			}
+			color = {
+				gene = eye_color
+				mode = modify
+				x = -1.0
+				y = -1.0
+			}
 		}	
 	}
 	lesser_succubus = {
@@ -29,6 +41,18 @@
 				gene = deviants_eyeliner
 				value = 1
 				template = eyeliner_1
+			}
+			color = {
+				mode = modify
+				gene = hair_color
+				x = -1.0
+				y = -1.0
+			}
+			color = {
+				gene = eye_color
+				mode = modify
+				x = -1.0
+				y = -1.0
 			}
 		}	
 	}

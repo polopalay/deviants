@@ -147,7 +147,7 @@ deviants_add_courtier_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 12
-	ai_targets = { 
+	ai_targets = {
 		ai_recipients = guests
 		ai_recipients = dynasty
 		ai_recipients = family
@@ -192,29 +192,30 @@ deviants_child_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-		if = {
-			limit = { patrilinear_marriage = yes }
-			create_character = {
-				age = 0
-				mother = scope:recipient
-				father = primary_spouse
-				dynasty_house = primary_spouse.house
-				culture = primary_spouse.culture
-				faith = primary_spouse.faith
-				gender_female_chance = 50
-				trait = deviants_blood
+			if = {
+				limit = { patrilinear_marriage = yes }
+				create_character = {
+					age = 0
+					mother = scope:recipient
+					father = primary_spouse
+					dynasty_house = primary_spouse.house
+					culture = primary_spouse.culture
+					faith = primary_spouse.faith
+					gender_female_chance = 50
+					trait = deviants_blood
+				}
 			}
-		}
-		else = {
-			create_character = {
-				age = 0
-				mother = scope:recipient
-				father = primary_spouse
-				dynasty_house = house
-				culture = culture
-				faith = faith
-				gender_female_chance = 50
-				trait = deviants_blood
+			else = {
+				create_character = {
+					age = 0
+					mother = scope:recipient
+					father = primary_spouse
+					dynasty_house = house
+					culture = culture
+					faith = faith
+					gender_female_chance = 50
+					trait = deviants_blood
+				}
 			}
 		}
 		scope:actor = {

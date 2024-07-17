@@ -17,6 +17,7 @@
 	trait = lustful
 	trait = deviants_succubus
 	trait = education_learning_3
+	trait = deviants_succubus
 	sexuality = heterosexual
 
 	father = 7756
@@ -24,9 +25,12 @@
 
 	1046.3.1 = {
 		birth = yes
+	}
+	1064.1.1 = {
 		effect = {
-			add_character_flag = has_scripted_appearance
-		}	
+			add_character_modifier = deviants_prostitute
+			give_nickname = nick_the_wizard
+		}
 	}
 	1065.1.1 = {
 		effect = {
@@ -35,7 +39,6 @@
 			add_character_modifier = {
 				modifier = matilda_of_canossa_modifier
 			}
-			add_character_modifier = deviants_prostitute
 			create_alliance = {
 				target = character:11030
 				allied_through_owner = this
@@ -53,6 +56,37 @@
 	}
 }
 
+1733 = {
+	name = "Eudokia"
+	female = yes
+	dynasty = 630
+	disallow_random_traits = yes
+	martial = 4
+	diplomacy = 3
+	intrigue = 4
+	stewardship = 8
+	religion = "orthodox"
+	culture = "greek"
+	trait = humble
+	trait = content
+	trait = lustful
+	trait = education_stewardship_4
+	trait = deviants_succubus
+	father = 20528
+	1030.1.1 = {
+		birth = "1030.1.1"
+	}
+	1064.1.1 = {
+		effect = {
+			add_character_modifier = deviants_prostitute
+			give_nickname = nick_the_wicked
+		}
+	}
+	1096.1.1 = {
+		death = "1096.1.1"
+	}
+}
+
 367 = {
 	name = "Mathilde"
 	dna = 367_duchess_mathilde
@@ -65,9 +99,9 @@
 	stewardship = 8
 	religion = "catholic"
 	culture = "dutch"
-	trait = chaste
-	trait = zealous
+	trait = greedy
 	trait = ambitious
+	trait = lustful
 	trait = education_stewardship_3
 	trait = deviants_lesser_succubus
 	sexuality = heterosexual
@@ -79,42 +113,16 @@
 			add_character_flag = has_scripted_appearance
 		}	
 	}
-	1065.1.1 = {
-		employer = 7757
+	1064.1.1 = {
 		effect = {
 			add_character_modifier = deviants_prostitute
+			give_nickname = nick_the_lewd
 		}
+	}
+	1065.1.1 = {
+		employer = 7757
 	}
 	1083.11.2 = {
 		death = "1083.11.2"
 	}
 }
-
-765 = {
-	name = "S_wiE_tosL_awa"
-	dna = 765_princess_swietoslawa
-	female = yes
-	dynasty = 699
-	religion = "catholic"
-	culture = "polish"
-	father = 760
-	mother = 13501
-	trait = deviants_lesser_succubus
-	sexuality = heterosexual
-	1048.1.2 = {
-		birth = "1048.1.2"
-		effect = {
-			add_character_flag = has_scripted_appearance
-		}	
-	}
-	1065.1.1 = {
-		employer = 7757
-		effect = {
-			add_character_modifier = deviants_prostitute
-		}
-	}
-	1126.9.1 = {
-		death = "1126.9.1"
-	}
-}
-
