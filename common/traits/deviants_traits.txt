@@ -227,6 +227,7 @@ deviants_virgin = {
 
 deviants_blood = {
 	icon = blood.dds
+	category = fame
 	desc = {
 		first_valid = {
 			triggered_desc = {
