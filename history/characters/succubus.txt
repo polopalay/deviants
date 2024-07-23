@@ -30,6 +30,9 @@
 		effect = {
 			add_character_modifier = deviants_prostitute
 			give_nickname = nick_the_wizard
+			add_secret = { type = secret_deviant }
+			add_secret = { type = secret_witch }
+			add_secret = { type = secret_cannibal }
 		}
 	}
 	1065.1.1 = {
@@ -80,6 +83,9 @@
 		effect = {
 			add_character_modifier = deviants_prostitute
 			give_nickname = nick_the_wicked
+			add_secret = { type = secret_deviant }
+			add_secret = { type = secret_witch }
+			add_secret = { type = secret_cannibal }
 		}
 	}
 	1096.1.1 = {
@@ -117,6 +123,9 @@
 		effect = {
 			add_character_modifier = deviants_prostitute
 			give_nickname = nick_the_lewd
+			add_secret = { type = secret_deviant }
+			add_secret = { type = secret_witch }
+			add_secret = { type = secret_cannibal }
 		}
 	}
 	1065.1.1 = {

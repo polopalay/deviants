@@ -180,6 +180,13 @@ deviants_prostitute_interaction = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+	}
+	ai_targets = {
+		ai_recipients = realm_characters
+		max = 10
 	}
 	ai_will_do = {
 		base = 5

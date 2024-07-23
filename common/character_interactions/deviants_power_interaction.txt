@@ -44,7 +44,7 @@ deviants_weight_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 60
+	ai_frequency = 24
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
@@ -402,6 +402,8 @@ deviants_purify_interaction = {
 			remove_trait = physique_bad_2
 			remove_trait = physique_bad_3
 			remove_trait = inbred
+			add_trait = beauty_good_1 
+			remove_trait = beauty_good_1
 		}
 	}
 	auto_accept = yes

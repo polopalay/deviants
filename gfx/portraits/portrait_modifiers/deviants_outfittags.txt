@@ -1,15 +1,14 @@
 ﻿prostitute_outfittags = {
 	usage = game
-    	fallback = unclothed_body
-    	priority = 10
+    	priority = 9
 
 	prostitute_outfit = {
 		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = clothes
-				template = western_sickness
-			}
+			#accessory = {
+			#	mode = add
+			#	gene = clothes
+			#	template = western_sickness
+			#}
 			accessory = {
 				mode = add
 				gene = headgear
@@ -34,18 +33,11 @@
 				mode = add
 				gene = headgear_base
 			}
-			morph = {
-				mode = replace
-				gene = deviants_bodypaint
-				value = 1
-				template = bodypaint1
-			}
 		}	
 		weight = {
         		base = 0
             		modifier = {
             		    	add = 100
-				should_be_fully_naked_portrait_trigger = no
 				has_character_modifier = deviants_prostitute
         		}
         	}
@@ -54,7 +46,6 @@
 
 nude_clothes = {
     	usage = game
-    	fallback = unclothed_body
     	priority = 10
 
 	no_clothes = {
@@ -88,13 +79,22 @@ nude_clothes = {
 				gene = cloaks
 			}
 		} 
+		outfit_tags = { no_clothes }
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 1000
 				should_be_fully_naked_portrait_trigger = yes
 				is_female = yes
 			}
+			modifier = {
+                		add = 1000
+                		should_be_topless_portrait_trigger = yes
+            		}
+			modifier = {
+                		add = -1000
+            	    		should_show_nudity = no
+            		}
 		}
 	}
 }
