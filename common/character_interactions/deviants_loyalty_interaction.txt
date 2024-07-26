@@ -46,3 +46,78 @@ deviants_absorb_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
 }
+
+deviants_cultist_interaction = {
+	icon = ask_for_conversion_interaction
+	desc = deviants_cultist_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	common_interaction = yes
+	cooldown = { years = 1 }
+
+	is_shown = {
+		scope:actor = {
+			has_trait = deviants_succubus
+			is_ruler = yes
+		}
+		scope:recipient = {
+			is_ruler = yes
+			primary_title.tier >= tier_county
+		}
+	}
+	is_valid = {
+		scope:recipient = {
+			OR = {
+				has_trait = deviants_succubus
+				has_trait = deviants_lesser_succubus
+				AND = {
+					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 5 } }
+					primary_title.tier = tier_county
+				}
+				AND = {
+					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 10 } }
+					primary_title.tier = tier_duchy
+				}
+				AND = {
+					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 25 } }
+					primary_title.tier = tier_kingdom
+				}
+				AND = {
+					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 100 } }
+					primary_title.tier = tier_empire
+				}
+			}
+		}
+	}
+
+	send_option = {
+		flag = lilith	
+		localization = lilith
+	}
+
+	send_option = {
+		flag = satan	
+		localization = satan
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				scope:lilith = yes
+			}
+			scope:recipient = {
+				set_character_faith_with_conversion = faith:deviants_lilith
+			}
+		}
+		if = {
+			limit = {
+				scope:satan = yes
+			}
+			scope:recipient = {
+				set_character_faith_with_conversion = faith:deviants_satan
+			}
+		}
+	}
+
+	auto_accept = yes
+}

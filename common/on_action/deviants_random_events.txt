@@ -1,4 +1,16 @@
 quarterly_playable_pulse = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_succubus
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = celibate }
+	}
 	random_on_action = {
 	 	chance_of_no_event = 1
 		1 = deviants_courtier_on_action

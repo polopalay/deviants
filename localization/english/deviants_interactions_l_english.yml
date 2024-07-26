@@ -119,3 +119,9 @@
  deviants_marking_2: "Scratched eyes"
  deviants_marking_3: "Scratched eyes"
  deviants_marking_4: "Flower eyes"
+
+ deviants_cultist_interaction: "Create Cultist"
+ deviants_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
+ lilith: "Lilithism"
+ satan: "Satanism"
+

@@ -1,0 +1,86 @@
+﻿l_english:
+ deviants_religion: "Demonism"
+ deviants_religion_adj: "Demonic"
+ deviants_religion_adherent: "Demonian"
+ deviants_religion_adherent_plural: "Demonian"
+ deviants_religion_desc: "Demonism is a religion that worships demons. It is often associated with the worship of Satan, but not all demonists worship Satan."
+
+ deviants_satan: "Satanism"
+ deviants_satan_adj: "Satanic"
+ deviants_satan_adherent: "Satanian"
+ deviants_satan_adherent_plural: "Satanians"
+
+ deviants_lilith: "Lilithism"
+ deviants_lilith_adj: "Lilithic"
+ deviants_lilith_adherent: "Lilithian"
+ deviants_lilith_adherent_plural: "Lilithians"
+
+ deviants_high_god_name: "Satan"
+ deviants_high_god_name_2: "$deviants_high_god_name$" # Optional translation alt
+ deviants_high_god_name_3: "$deviants_high_god_name$" # Optional translation alt
+ deviants_high_god_name_possessive: "Satant's"
+ deviants_high_god_name_alternate: "The Lord"
+ deviants_high_god_name_alternate_possessive: "The Lord's"
+ deviants_good_god_1: "$deviants_health_god_name$"
+ deviants_good_god_2: "Lucifer"
+
+ deviants_devil_name: "God"
+ deviants_devil_name_possessive: "God's"
+ deviants_evil_god_1: "Jesus"
+ deviants_death_deity_name: "Death"
+ deviants_death_deity_name_possessive: "Death's"
+
+ deviants_house_of_worship: "temple"
+ deviants_house_of_worship_2: "$deviants_house_of_worship$" # Optional translation alt
+ deviants_house_of_worship_3: "$deviants_house_of_worship$" # Optional translation alt
+ deviants_house_of_worship_plural: "temples"
+ deviants_religious_symbol: "pentagram"
+ deviants_religious_symbol_2: "$deviants_religious_symbol$" # Optional translation alt
+ deviants_religious_symbol_3: "$deviants_religious_symbol$" # Optional translation alt
+ deviants_religious_text: "grimoires"
+ deviants_religious_text_2: "$deviants_religious_text$" # Optional translation alt
+ deviants_religious_text_3: "$deviants_religious_text$" # Optional translation alt
+ deviants_religious_head_title: "Demon King"
+ deviants_religious_head_title_name: "Demon Kingdom"
+ deviants_devotee_male: "warlock"
+ deviants_devotee_male_plural: "warlock"
+ deviants_devotee_female: "witch"
+ deviants_devotee_female_plural: "witches"
+ deviants_devotee_neuter: "cultist"
+ deviants_devotee_neuter_plural: "cultist"
+ deviants_priest_male: "dark priest"
+ deviants_priest_male_plural: "dark priests"
+ deviants_priest_alternate_plural: "dark clergy"
+ deviants_bishop: "high priest"
+ deviants_bishop_plural: "high priests"
+ deviants_positive_afterlife: "hell"
+ deviants_positive_afterlife_2: "the Pit" # Optional translation alt
+ deviants_positive_afterlife_3: "$deviants_high_god_name_possessive$ Kingdom" # Optional translation alt
+ deviants_negative_afterlife: "heaven"
+ deviants_negative_afterlife_2: "paradise " # Optional translation alt
+ deviants_negative_afterlife_3: "$deviants_devil_name_possessive$ Kingdom" # Optional translation alt
+ deviants_witchgodname_the_horned_god: "the Horned God"
+ deviants_witchgodname_the_horned_god_possessive: "the Horned God's"
+
+ deviants_creator_god_name: "$deviants_high_god_name$"
+ deviants_creator_god_name_possessive: "$deviants_high_god_name_possessive$"
+ deviants_health_god_name: "Beelzebub"
+ deviants_health_god_name_possessive: "Beelzebub's"
+ deviants_fertility_god_name: "Lilith"
+ deviants_fertility_god_name_possessive: "Lilith's"
+ deviants_wealth_god_name: "Mammon"
+ deviants_wealth_god_name_possessive: "Mammon's"
+ deviants_household_god_name: "Asmodeus"
+ deviants_household_god_name_possessive: "Asmodeus's"
+ deviants_fate_god_name: "Astaroth"
+ deviants_fate_god_name_possessive: "Astaroth's"
+ deviants_knowledge_god_name: "Belial"
+ deviants_knowledge_god_name_possessive: "Belial's"
+ deviants_war_god_name: "Abaddon"
+ deviants_war_god_name_possessive: "Abaddon's"
+ deviants_trickster_god_name: "Fortuna"
+ deviants_trickster_god_name_possessive: "Fortuna's"
+ deviants_night_god_name: "Hecate"
+ deviants_night_god_name_possessive: "Hecate's"
+ deviants_water_god_name: "Leviathan"
+ deviants_water_god_name_possessive: "Leviathan's"

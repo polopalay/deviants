@@ -1,0 +1,233 @@
+deviants_religion = {
+	family = rf_pagan
+	pagan_roots = no
+
+	doctrine = pagan_hostility_doctrine
+
+	#Main Group
+	doctrine = doctrine_spiritual_head
+	doctrine = doctrine_gender_equal
+	doctrine = doctrine_pluralism_righteous
+	doctrine = doctrine_theocracy_temporal
+
+	#Marriage
+	doctrine = doctrine_monogamy
+	doctrine = doctrine_divorce_approval
+	doctrine = doctrine_bastardry_none
+	doctrine = doctrine_consanguinity_unrestricted
+
+	#Crimes
+	doctrine = doctrine_homosexuality_accepted
+	doctrine = doctrine_adultery_men_accepted
+	doctrine = doctrine_adultery_women_accepted
+	doctrine = doctrine_kinslaying_accepted
+	doctrine = doctrine_deviancy_accepted
+	doctrine = doctrine_witchcraft_accepted
+
+	#Clerical Functions
+	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_gender_either
+	doctrine = doctrine_clerical_marriage_allowed
+	doctrine = doctrine_clerical_succession_temporal_appointment
+
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
+
+	#Funeral tradition
+	doctrine = doctrine_funeral_mummification
+
+	traits = {
+		virtues = { lustful deceitful callous sadistic vengeful }
+		sins = { chaste honest compassionate forgiving } 
+	}
+	custom_faith_icons = {
+		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
+	}
+
+	holy_order_maa = { deviants_lucifer deviants_beelzebub deviants_asmodeus deviants_delial deviants_mammon deviants_leviathan deviants_astaroth deviants_baphomet deviants_mephistopheles }
+	localization = {
+		HighGodName = deviants_high_god_name
+		HighGodName2 = deviants_high_god_name_2
+		HighGodNamePossessive = deviants_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = deviants_high_god_name_alternate
+		HighGodNameAlternatePossessive = deviants_high_god_name_alternate_possessive
+
+		CreatorName = deviants_creator_god_name
+		CreatorNamePossessive = deviants_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		HealthGodName = deviants_health_god_name
+		HealthGodNamePossessive = deviants_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
+		
+		FertilityGodName = deviants_fertility_god_name
+		FertilityGodNamePossessive = deviants_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_HE
+		FertilityGodHerHis = CHARACTER_HERHIS_HIS
+		FertilityGodHerHim = CHARACTER_HERHIM_HIM
+
+		WealthGodName = deviants_wealth_god_name
+		WealthGodNamePossessive = deviants_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		HouseholdGodName = deviants_household_god_name
+		HouseholdGodNamePossessive = deviants_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+		FateGodName = deviants_fate_god_name
+		FateGodNamePossessive = deviants_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
+
+		KnowledgeGodName = deviants_knowledge_god_name
+		KnowledgeGodNamePossessive = deviants_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		WarGodName = deviants_war_god_name
+		WarGodNamePossessive = deviants_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		TricksterGodName = deviants_trickster_god_name
+		TricksterGodNamePossessive = deviants_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		NightGodName = deviants_night_god_name
+		NightGodNamePossessive = deviants_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_HE
+		NightGodHerHis = CHARACTER_HERHIS_HIS
+		NightGodHerHim = CHARACTER_HERHIM_HIM
+
+		WaterGodName = deviants_water_god_name
+		WaterGodNamePossessive = deviants_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = deviants_high_god_name
+		PantheonTerm2 = deviants_high_god_name_2
+		PantheonTerm3 = deviants_high_god_name_3
+		PantheonTermHasHave = pantheon_term_has
+		GoodGodNames = {
+			deviants_high_god_name
+			deviants_high_god_name_alternate
+			deviants_good_god_1
+			deviants_good_god_2
+		}
+		DevilName = deviants_devil_name
+		DevilNamePossessive = deviants_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_HE
+		DevilHerHis = CHARACTER_HERHIS_HIS
+		DevilHerHis = CHARACTER_HERHIS_HIS
+		DevilHerselfHimself = CHARACTER_HIMSELF
+		EvilGodNames = {
+			deviants_devil_name
+			deviants_evil_god_1
+		}
+		HouseOfWorship = deviants_house_of_worship
+		HouseOfWorship2 = deviants_house_of_worship_2
+		HouseOfWorship3 = deviants_house_of_worship_3
+		HouseOfWorshipPlural = deviants_house_of_worship_plural
+		ReligiousSymbol = deviants_religious_symbol
+		ReligiousSymbol2 = deviants_religious_symbol_2
+		ReligiousSymbol3 = deviants_religious_symbol_3
+		ReligiousText = deviants_religious_text
+		ReligiousText2 = deviants_religious_text_2
+		ReligiousText3 = deviants_religious_text_3
+		ReligiousHeadName = deviants_religious_head_title
+		ReligiousHeadTitleName = deviants_religious_head_title_name
+		DevoteeMale = deviants_devotee_male
+		DevoteeMalePlural = deviants_devotee_male_plural
+		DevoteeFemale = deviants_devotee_female
+		DevoteeFemalePlural = deviants_devotee_female_plural
+		DevoteeNeuter = deviants_devotee_neuter
+		DevoteeNeuterPlural = deviants_devotee_neuter_plural
+		PriestMale = deviants_priest_male
+		PriestMalePlural = deviants_priest_male_plural
+		PriestFemale = deviants_priest_male
+		PriestFemalePlural = deviants_priest_male_plural
+		PriestNeuter = deviants_priest_male
+		PriestNeuterPlural = deviants_priest_male_plural
+		AltPriestTermPlural = deviants_priest_alternate_plural
+		BishopMale = deviants_bishop
+		BishopMalePlural = deviants_bishop_plural
+		BishopFemale = deviants_bishop
+		BishopFemalePlural = deviants_bishop_plural
+		BishopNeuter = deviants_bishop
+		BishopNeuterPlural = deviants_bishop_plural
+		DivineRealm = deviants_positive_afterlife
+		DivineRealm2 = deviants_positive_afterlife_2
+		DivineRealm3 = deviants_positive_afterlife_3
+		PositiveAfterLife = deviants_positive_afterlife
+		PositiveAfterLife2 = deviants_positive_afterlife_2
+		PositiveAfterLife3 = deviants_positive_afterlife_3
+		NegativeAfterLife = deviants_negative_afterlife
+		NegativeAfterLife2 = deviants_negative_afterlife_2
+		NegativeAfterLife3 = deviants_negative_afterlife_3
+		DeathDeityName = deviants_death_deity_name
+		DeathDeityNamePossessive = deviants_death_deity_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+		WitchGodName = deviants_witchgodname_the_horned_god
+		WitchGodNamePossessive = deviants_witchgodname_the_horned_god_possessive
+		WitchGodHerHis = CHARACTER_HERHIS_HIS
+		WitchGodSheHe = CHARACTER_SHEHE_HE
+		WitchGodHerHim = CHARACTER_HERHIM_HIM
+		WitchGodMistressMaster = master
+		WitchGodMotherFather = father
+
+		GHWName = ghw_crusade
+		GHWNamePlural = ghw_crusades
+
+	}
+
+	faiths = {
+		deviants_satan = {
+			color = { 139 0 0 }
+			icon = custom_faith_pentagram_inverted
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = alexandria
+			holy_site = antioch
+
+			doctrine = tenet_pursuit_of_power
+			doctrine = tenet_fp3_fedayeen
+			doctrine = tenet_ritual_cannibalism
+		}
+		deviants_lilith = {
+			color = { 255 182 193 }
+			icon = custom_faith_black_sheep
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = alexandria
+			holy_site = kent
+
+			doctrine = tenet_carnal_exaltation
+			doctrine = tenet_divine_marriage
+			doctrine = tenet_polyamory
+			doctrine = special_doctrine_naked_priests
+		}
+	}
+}
