@@ -215,7 +215,7 @@ deviants_religion = {
 			doctrine = tenet_ritual_cannibalism
 		}
 		deviants_lilith = {
-			color = { 255 182 193 }
+			color = { 238 115 221 }
 			icon = custom_faith_black_sheep
 
 			holy_site = jerusalem
@@ -227,7 +227,6 @@ deviants_religion = {
 			doctrine = tenet_carnal_exaltation
 			doctrine = tenet_divine_marriage
 			doctrine = tenet_polyamory
-			doctrine = special_doctrine_naked_priests
 		}
 	}
 }
