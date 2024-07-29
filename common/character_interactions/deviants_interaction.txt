@@ -201,15 +201,15 @@ deviants_prostitute_interaction = {
 		modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
 		modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_2 } }
 		modifier = { add = 20 scope:secondary_recipient = { has_trait = beauty_good_3 } }
-		modifier = { add = 5 scope:recipient = { has_character_flag = deviants_horn0 } }
-		modifier = { add = 5 scope:recipient = { has_character_flag = deviants_horn1 } }
-		modifier = { add = 5 scope:recipient = { has_character_flag = deviants_horn2 } }
-		modifier = { add = 5 scope:recipient = { has_character_flag = deviants_horn3 } }
-		modifier = { add = 5 scope:recipient = { has_character_flag = deviants_horn4 } }
-		modifier = { add = 5 scope:recipient = { has_character_modifier = deviants_marking_1 } }
-		modifier = { add = 5 scope:recipient = { has_character_modifier = deviants_marking_2 } }
-		modifier = { add = 5 scope:recipient = { has_character_modifier = deviants_marking_3 } }
-		modifier = { add = 5 scope:recipient = { has_character_modifier = deviants_marking_4 } }
+		modifier = { add = 10 scope:recipient = { has_character_flag = deviants_horn0 } }
+		modifier = { add = 10 scope:recipient = { has_character_flag = deviants_horn1 } }
+		modifier = { add = 10 scope:recipient = { has_character_flag = deviants_horn2 } }
+		modifier = { add = 10 scope:recipient = { has_character_flag = deviants_horn3 } }
+		modifier = { add = 10 scope:recipient = { has_character_flag = deviants_horn4 } }
+		modifier = { add = 10 scope:recipient = { has_character_modifier = deviants_marking_1 } }
+		modifier = { add = 10 scope:recipient = { has_character_modifier = deviants_marking_2 } }
+		modifier = { add = 10 scope:recipient = { has_character_modifier = deviants_marking_3 } }
+		modifier = { add = 10 scope:recipient = { has_character_modifier = deviants_marking_4 } }
 	}
 }
 

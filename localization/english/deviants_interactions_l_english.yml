@@ -125,3 +125,9 @@
  lilith: "Lilithism"
  satan: "Satanism"
 
+ deviants_give_resource_interaction: "Give resources"
+ deviants_give_resource_interaction.desc: "Give [recipient.GetShortUIName] a small amount of resources"
+ gr_gold: "Gold"
+ gr_prestige: "Prestige"
+ gr_piety: "Piety"
+ gr_dynasty_prestige: "Dynasty Prestige"

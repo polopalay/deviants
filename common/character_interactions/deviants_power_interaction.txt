@@ -19,6 +19,12 @@ deviants_weight_interaction = {
 				}
 			}
 		}
+		scope:recipient = {
+			OR = {
+				current_weight >= 25
+				current_weight <= -25
+			}
+		}
 	}
 	on_accept = {
 		scope:recipient = {
@@ -44,7 +50,7 @@ deviants_weight_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 24
+	ai_frequency = 12
 	ai_targets = { ai_recipients = self }
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }

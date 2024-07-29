@@ -47,8 +47,66 @@ deviants_absorb_interaction = {
 	ai_will_do = { base = 100 }
 }
 
+deviants_give_resource_interaction = {
+	icon = trade_interaction
+	desc = deviants_give_resource_interaction.desc
+    	category = interaction_category_vassal
+    	use_diplomatic_range = yes
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = { trait = deviants_succubus track = loyalty value >= 1 }
+		}
+	}
+	send_option = {
+		flag = gold	
+		localization = gr_gold
+	}
+	send_option = {
+		flag = prestige	
+		localization = gr_prestige
+	}
+	send_option = {
+		flag = piety	
+		localization = gr_piety
+	}
+	send_option = {
+		flag = dynasty_prestige	
+		localization = gr_dynasty_prestige
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = -1
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { scope:gold = yes }
+				add_gold = medium_gold_value
+			}
+			if = {
+				limit = { scope:prestige = yes }
+				add_prestige = medium_prestige_value
+			}
+			if = {
+				limit = { scope:piety = yes }
+				add_piety = medium_piety_value
+			}
+			if = {
+				limit = { scope:dynasty_prestige = yes }
+				add_dynasty_prestige = medium_dynasty_prestige_value
+			}
+		}
+	}
+}
+
 deviants_cultist_interaction = {
-	icon = ask_for_conversion_interaction
+	icon = take_vows_interaction
 	desc = deviants_cultist_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -61,25 +119,21 @@ deviants_cultist_interaction = {
 			is_ruler = yes
 		}
 		scope:recipient = {
-			is_ruler = yes
-			primary_title.tier >= tier_county
-		}
-	}
-	is_valid = {
-		scope:recipient = {
 			OR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
 				AND = {
-					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 5 } }
-					primary_title.tier = tier_county
+					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 2 } }
+					primary_title.tier < tier_county
 				}
 				AND = {
 					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 10 } }
-					primary_title.tier = tier_duchy
+					primary_title.tier = tier_county
 				}
 				AND = {
 					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 25 } }
+					primary_title.tier = tier_duchy
+				}
+				AND = {
+					scope:actor = { has_trait_xp = { trait = deviants_succubus track = loyalty value >= 50 } }
 					primary_title.tier = tier_kingdom
 				}
 				AND = {
@@ -115,6 +169,56 @@ deviants_cultist_interaction = {
 			}
 			scope:recipient = {
 				set_character_faith_with_conversion = faith:deviants_satan
+			}
+		}
+
+		if = {
+			limit = { scope:recipient.primary_title.tier = tier_county }
+			scope:actor = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = loyalty
+					value = -10
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:recipient.primary_title.tier = tier_duchy }
+			scope:actor = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = loyalty
+					value = -25
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:recipient.primary_title.tier = tier_kingdom }
+			scope:actor = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = loyalty
+					value = -50
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:recipient.primary_title.tier = tier_empire }
+			scope:actor = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = loyalty
+					value = -100
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = loyalty
+					value = -2
+				}
 			}
 		}
 	}

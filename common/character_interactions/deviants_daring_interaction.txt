@@ -1,5 +1,5 @@
 deviants_create_horn = {
-	icon = carn_rape_interaction
+	icon = devil
 	desc = deviants_create_horn.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes

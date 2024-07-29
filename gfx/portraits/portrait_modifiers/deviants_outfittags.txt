@@ -4,11 +4,11 @@
 
 	prostitute_outfit = {
 		dna_modifiers = {
-			#accessory = {
-			#	mode = add
-			#	gene = clothes
-			#	template = western_sickness
-			#}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = western_sickness
+			}
 			accessory = {
 				mode = add
 				gene = headgear
