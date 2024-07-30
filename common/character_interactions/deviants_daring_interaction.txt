@@ -237,7 +237,7 @@ deviants_create_eyes = {
 deviants_nude_interaction = {
 	icon = nude_inspect_interaction
 	desc = deviants_nude_interaction.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 1 }
 	is_shown = {
@@ -247,7 +247,7 @@ deviants_nude_interaction = {
 					has_trait_xp = {
 						trait = deviants_succubus
 						track = daring
-						value >= 10
+						value >= 2
 					} 
 				}
 				scope:recipient = {
@@ -299,7 +299,7 @@ deviants_nude_interaction = {
 				add_trait_xp = {
 					trait = deviants_succubus
 					track = daring
-					value = -10
+					value = -2
 				}
 			}
 			else = {
@@ -317,7 +317,7 @@ deviants_nude_interaction = {
 deviants_stop_nude_interaction = {
 	icon = dress_interaction
 	desc = deviants_stop_nude_interaction.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
 	auto_accept = yes
 	use_diplomatic_range = yes
 	ignores_pending_interaction_block = yes
@@ -426,7 +426,7 @@ deviants_rival_interaction = {
 deviants_hook_interaction = {
 	icon = fabricate_hook_interaction
 	desc = deviants_hook_interaction.desc
-    	category = interaction_category_hostile
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	cooldown = { years = 5 }
 	is_shown = {

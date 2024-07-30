@@ -308,9 +308,9 @@ deviants_create_succubus_interaction = {
 			add_secret = { type = secret_deviant }
 			add_secret = { type = secret_witch }
 			random_list = {
-				1 = { give_nickname = nick_the_lewd }
-				1 = { give_nickname = nick_the_lecher }
-				1 = { give_nickname = nick_the_bewitched }
+				1 = { give_nickname = nick_the_wicked }
+				1 = { give_nickname = nick_the_devil }
+				1 = { give_nickname = nick_the_witch }
 			}
 			add_trait = deviants_succubus
 			add_character_modifier = deviants_prostitute

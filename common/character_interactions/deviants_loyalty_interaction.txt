@@ -48,7 +48,7 @@ deviants_absorb_interaction = {
 }
 
 deviants_give_resource_interaction = {
-	icon = trade_interaction
+	icon = vassal_modify_vassal_contract_interaction
 	desc = deviants_give_resource_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
