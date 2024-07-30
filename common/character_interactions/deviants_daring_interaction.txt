@@ -362,7 +362,7 @@ deviants_befriend_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 5
+				value >= 10
 			} 
 		}
 	}
@@ -372,7 +372,7 @@ deviants_befriend_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -5
+				value = -10
 			}
 		}
 	}
@@ -395,7 +395,7 @@ deviants_rival_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 5
+				value >= 10
 			} 
 		}
 	}
@@ -412,7 +412,7 @@ deviants_rival_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -5
+				value = -10
 			}
 		}
 	}
@@ -435,7 +435,7 @@ deviants_hook_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 5
+				value >= 20
 			} 
 		}
 		scope:recipient = {
@@ -454,7 +454,7 @@ deviants_hook_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -5
+				value = -20
 			}
 		}
 	}
@@ -485,7 +485,7 @@ deviants_mind_break_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 25
+				value >= 50
 			} 
 		}
 		scope:recipient = {
@@ -504,11 +504,11 @@ deviants_mind_break_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -25
+				value = -50
 			}
 			add_trait_xp = {
 				trait = deviants_succubus
-				track = corruption
+				track = loyalty
 				value = 1
 			}
 		}

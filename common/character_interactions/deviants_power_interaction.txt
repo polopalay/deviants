@@ -331,7 +331,7 @@ deviants_purify_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value >= 5
+				value >= 10
 			}
 		}
 		scope:recipient = {
@@ -373,7 +373,7 @@ deviants_purify_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = power
-				value = -5
+				value = -10
 			}
 		}
 		scope:recipient = {
