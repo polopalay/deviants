@@ -263,3 +263,81 @@ marking_clothes = {
 		}
 	}
 }
+
+eyes_color_clothes = {
+	usage = game
+	priority = 10
+	white_eyes = {
+		dna_modifiers = {
+			color = {
+				gene = eye_color
+				mode = modify
+				x = -1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_white_eyes
+			}
+		}
+	}
+	red_eyes = {
+		dna_modifiers = {
+			color = {
+				gene = eye_color
+				mode = modify
+				x = 1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_red_eyes
+			}
+		}
+	}
+}
+
+hair_color_clothes = {
+ 	usage = game
+	priority = 10
+	white_hair = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = modify
+				x = -1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_white_hair
+			}
+		}
+	}
+	red_hair = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = modify
+				x = 1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_red_hair
+			}
+		}
+	}
+}

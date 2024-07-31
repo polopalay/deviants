@@ -101,7 +101,54 @@ deviants_makeup = {
 		flag = deviants_marking_4
 		localization = deviants_marking_4
 	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = deviants_white_eyes
+					has_character_flag = deviants_red_eyes
+				}
+			}
+		}
+		flag = deviants_default_eyes
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_white_eyes } }
+		}
+		flag = deviants_white_eyes
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_red_eyes } }
+		}
+		flag = deviants_red_eyes
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = deviants_white_hair
+					has_character_flag = deviants_red_hair
+				}
+			}
+		}
+		flag = deviants_default_hair
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_white_hair } }
+		}
+		flag = deviants_white_hair
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_red_hair } }
+		}
+		flag = deviants_red_hair
+	}
 	send_options_exclusive = yes
+
 	on_accept = {
 		if = {
 			limit = { scope:deviants_no_horn = yes }
@@ -208,6 +255,49 @@ deviants_makeup = {
 				remove_character_flag = deviants_marking_4
 			}
 		}
+		else_if = {
+			limit = { scope:deviants_white_eyes = yes }
+			scope:recipient = {
+				add_character_flag = deviants_white_eyes
+				remove_character_flag = deviants_red_eyes
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_red_eyes = yes }
+			scope:recipient = {
+				add_character_flag = deviants_red_eyes
+				remove_character_flag = deviants_white_eyes
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_default_hair = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_white_hair
+				remove_character_flag = deviants_red_hair
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_red_hair = yes }
+			scope:recipient = {
+				add_character_flag = deviants_red_hair
+				remove_character_flag = deviants_white_hair
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_white_hair = yes }
+			scope:recipient = {
+				add_character_flag = deviants_white_hair
+				remove_character_flag = deviants_red_hair
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_default_eyes = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_white_eyes
+				remove_character_flag = deviants_red_eyes
+			}
+		}
+
 		secope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus

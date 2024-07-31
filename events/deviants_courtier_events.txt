@@ -1083,6 +1083,7 @@ deviants_courtier.5100 = {
 			save_scope_as = deviant_go_random_1
 			random_vassal = {
 				limit = {
+					is_female = no
 					age >= 18
 					is_ai = yes
 					is_adult = yes
@@ -1093,6 +1094,7 @@ deviants_courtier.5100 = {
 			}
 			random_vassal = {
 				limit = {
+					is_female = no
 					age >= 18
 					is_ai = yes
 					is_adult = yes
@@ -1104,6 +1106,7 @@ deviants_courtier.5100 = {
 			}
 			random_vassal = {
 				limit = {
+					is_female = no
 					age >= 18
 					is_ai = yes
 					is_adult = yes

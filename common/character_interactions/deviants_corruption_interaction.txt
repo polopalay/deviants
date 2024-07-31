@@ -31,76 +31,6 @@ deviants_switch_body_interaction = {
 	auto_accept = yes
 }
 
-deviants_offer_devils_virgin = {
-	icon = chastity
-	desc = deviants_offer_devils_virgin.desc
-    	category = interaction_category_diplomacy
-	is_shown = {
-		scope:actor = {
-			is_female = yes
-			NOR = { 
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_virgin
-			}
-			has_trait = lustful
-			age <= 30
-		}
-		scope:recipient = {
-			has_trait = deviants_succubus 
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			add_trait = deviants_virgin
-			if = {
-				limit = { has_character_modifier = deviants_prostitute }
-				remove_character_modifier = deviants_prostitute
-			}
-			add_character_modifier = deviants_prostitute
-			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			add_secret = { 
-				type = secret_deviant
-			}
-			add_secret = { 
-				type = secret_witch
-			}
-		}
-	}
-
-	ai_accept = {
-		base = 50
-		modifier = {
-			add = 100
-			scope:recipient = { has_trait = deviants_lesser_succubus }
-		}
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = 1
-		}
-	}
-	ai_frequency = 12
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
-		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-	}
-	ai_targets = {
-		ai_recipients = realm_characters
-		max = 10
-	}
-	ai_potential = { 
-		primary_title.tier >= tier_county
-	}
-	ai_will_do = {
-		base = 5
-	}
-}
-
 deviants_add_courtier_interaction = {
 	icon = fascinate
 	desc = deviants_add_courtier_interaction.desc
@@ -156,7 +86,7 @@ deviants_add_courtier_interaction = {
 deviants_child_interaction = {
 	icon = pregnant
 	desc = deviants_child_interaction.desc
-    	category = interaction_category_vassal
+    	category = interaction_category_friendly
     	use_diplomatic_range = no
 	common_interaction = no
 	#cooldown = { years = 2 }

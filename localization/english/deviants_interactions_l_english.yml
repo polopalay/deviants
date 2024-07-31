@@ -55,9 +55,6 @@
  deviants_create_succubus_interaction: "Create Succubus"
  deviants_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
 
- deviants_offer_devils_virgin: "Offer devil's virgin"
- deviants_offer_devils_virgin.desc: "[actor.GetShortUIName] will become the devil's virgin"
-
  deviants_switch_body_interaction: "Switch"
  deviants_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
 
@@ -101,11 +98,17 @@
  deviants_horn2: "Tapered horns"
  deviants_horn3: "Curved horns"
  deviants_horn4: "Short horns"
- deviants_no_eyes: "No Eyes"
- deviants_marking_1: "Crying eyes"
- deviants_marking_2: "Scratched eyes"
- deviants_marking_3: "Scratched eyes"
- deviants_marking_4: "Flower eyes"
+ deviants_no_eyes: "No smokey Eyes"
+ deviants_marking_1: "Crying smokey eyes"
+ deviants_marking_2: "Scratched smokey eyes"
+ deviants_marking_3: "Scratched smokey eyes"
+ deviants_marking_4: "Flower smokey eyes"
+ deviants_default_eyes: "Default Eyes"
+ deviants_white_eyes: "White Eyes"
+ deviants_red_eyes: "Red Eyes"
+ deviants_default_hair: "Default Hair"
+ deviants_white_hair: "White Hair"
+ deviants_red_hair: "Red Hair"
 
  deviants_cultist_interaction: "Create Cultist"
  deviants_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"

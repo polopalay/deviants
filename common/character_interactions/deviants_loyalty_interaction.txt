@@ -52,7 +52,7 @@ deviants_give_resource_interaction = {
 	desc = deviants_give_resource_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
-	common_interaction = yes
+	common_interaction = no
 
 	is_shown = {
 		scope:actor = {
@@ -75,6 +75,7 @@ deviants_give_resource_interaction = {
 		flag = dynasty_prestige	
 		localization = gr_dynasty_prestige
 	}
+	send_options_exclusive = yes
 
 	on_accept = {
 		scope:actor = {
