@@ -1,5 +1,5 @@
 deviants_switch_body_interaction = {
-	icon = propose_best_friendship_interaction
+	icon = two_body
 	desc = deviants_switch_body_interaction.desc
     	category = interaction_category_diplomacy
 	interface_priority = 1
@@ -26,15 +26,13 @@ deviants_switch_body_interaction = {
 		}
 	}
 	on_accept = {
-		scope:actor = {
-			set_player_character = scope:recipient
-		}
+		scope:actor = { set_player_character = scope:recipient }
 	}
 	auto_accept = yes
 }
 
 deviants_offer_devils_virgin = {
-	icon = sub_chastity_rules_interaction
+	icon = chastity
 	desc = deviants_offer_devils_virgin.desc
     	category = interaction_category_diplomacy
 	is_shown = {
@@ -87,6 +85,13 @@ deviants_offer_devils_virgin = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+	}
+	ai_targets = {
+		ai_recipients = realm_characters
+		max = 10
 	}
 	ai_potential = { 
 		primary_title.tier >= tier_county
@@ -97,11 +102,11 @@ deviants_offer_devils_virgin = {
 }
 
 deviants_add_courtier_interaction = {
-	icon = invite_to_court_interaction
+	icon = fascinate
 	desc = deviants_add_courtier_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
-	common_interaction = yes
+	common_interaction = no
 	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -152,8 +157,8 @@ deviants_child_interaction = {
 	icon = pregnant
 	desc = deviants_child_interaction.desc
     	category = interaction_category_vassal
-    	use_diplomatic_range = yes
-	common_interaction = yes
+    	use_diplomatic_range = no
+	common_interaction = no
 	#cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
@@ -211,7 +216,7 @@ deviants_child_interaction = {
 }
 
 deviants_create_lesser_succubus_interaction = {
-	icon = temporal_condemnation_interaction
+	icon = lesser_devil
 	desc = deviants_create_lesser_succubus_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -223,6 +228,7 @@ deviants_create_lesser_succubus_interaction = {
 				is_vassal_of = scope:actor
 			}
 			is_female = yes
+			age >= 18
 			NOR = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -284,6 +290,7 @@ deviants_create_succubus_interaction = {
 	is_shown = {
 		scope:recipient = {
 			is_female = yes
+			age >= 18
 			NOR = { 
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus

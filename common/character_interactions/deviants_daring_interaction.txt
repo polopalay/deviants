@@ -1,6 +1,6 @@
-deviants_create_horn = {
-	icon = devil
-	desc = deviants_create_horn.desc
+deviants_makeup = {
+	icon = no_body_hair
+	desc = deviants_makeup.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
 
@@ -58,6 +58,48 @@ deviants_create_horn = {
 		}
 		flag = deviants_horn4
 		localization = deviants_horn4
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = deviants_marking_1
+					has_character_flag = deviants_marking_2
+					has_character_flag = deviants_marking_3
+					has_character_flag = deviants_marking_4
+				}
+			}
+		}
+		flag = deviants_no_eyes
+		localization = deviants_no_eyes
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_1 } }
+		}
+		flag = deviants_marking_1
+		localization = deviants_marking_1
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_2 } }
+		}
+		flag = deviants_marking_2
+		localization = deviants_marking_2
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_3 } }
+		}
+		flag = deviants_marking_3
+		localization = deviants_marking_3
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_4 } }
+		}
+		flag = deviants_marking_4
+		localization = deviants_marking_4
 	}
 	send_options_exclusive = yes
 	on_accept = {
@@ -121,6 +163,51 @@ deviants_create_horn = {
 				add_character_flag = deviants_horn4
 			}
 		}
+		else_if = {
+			limit = { scope:deviants_marking_1 = yes }
+			scope:recipient = {
+				add_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_marking_2 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_marking_1
+				add_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_marking_3 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				add_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_marking_4 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				add_character_flag = deviants_marking_4
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_no_eyes = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+			}
+		}
 		secope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -132,110 +219,8 @@ deviants_create_horn = {
 	auto_accept = yes
 }
 
-deviants_create_eyes = {
-	icon = temporal_condemnation_interaction
-	desc = deviants_create_eyes.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = { trait = deviants_succubus track = daring value >= 1 }
-		}
-	}
-	send_option = {
-		is_valid = {
-			scope:recipient = {
-				OR = {
-					has_character_flag = deviants_marking_1
-					has_character_flag = deviants_marking_2
-					has_character_flag = deviants_marking_3
-					has_character_flag = deviants_marking_4
-				}
-			}
-		}
-		flag = deviants_no_eyes
-		localization = deviants_no_eyes
-	}
-	send_option = {
-		is_valid = {
-			scope:recipient = { NOT = { has_character_flag = deviants_marking_1 } }
-		}
-		flag = deviants_marking_1
-		localization = deviants_marking_1
-	}
-	send_option = {
-		is_valid = {
-			scope:recipient = { NOT = { has_character_flag = deviants_marking_2 } }
-		}
-		flag = deviants_marking_2
-		localization = deviants_marking_2
-	}
-	send_option = {
-		is_valid = {
-			scope:recipient = { NOT = { has_character_flag = deviants_marking_3 } }
-		}
-		flag = deviants_marking_3
-		localization = deviants_marking_3
-	}
-	send_option = {
-		is_valid = {
-			scope:recipient = { NOT = { has_character_flag = deviants_marking_4 } }
-		}
-		flag = deviants_marking_4
-		localization = deviants_marking_4
-	}
-	send_options_exclusive = yes
-	on_accept = {
-		scope:recipient = {
-			if = {
-				limit = { scope:deviants_marking_1 = yes }
-				add_character_flag = deviants_marking_1
-				remove_character_flag = deviants_marking_2
-				remove_character_flag = deviants_marking_3
-				remove_character_flag = deviants_marking_4
-			}
-			else_if = {
-				limit = { scope:deviants_marking_2 = yes }
-				remove_character_flag = deviants_marking_1
-				add_character_flag = deviants_marking_2
-				remove_character_flag = deviants_marking_3
-				remove_character_flag = deviants_marking_4
-			}
-			else_if = {
-				limit = { scope:deviants_marking_3 = yes }
-				remove_character_flag = deviants_marking_1
-				remove_character_flag = deviants_marking_2
-				add_character_flag = deviants_marking_3
-				remove_character_flag = deviants_marking_4
-			}
-			else_if = {
-				limit = { scope:deviants_marking_4 = yes }
-				remove_character_flag = deviants_marking_1
-				remove_character_flag = deviants_marking_2
-				remove_character_flag = deviants_marking_3
-				add_character_flag = deviants_marking_4
-			}
-			else = {
-				remove_character_flag = deviants_marking_1
-				remove_character_flag = deviants_marking_2
-				remove_character_flag = deviants_marking_3
-				remove_character_flag = deviants_marking_4
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -1
-			}
-		}
-	}
-	auto_accept = yes
-}
-
 deviants_nude_interaction = {
-	icon = nude_inspect_interaction
+	icon = nude
 	desc = deviants_nude_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -315,7 +300,7 @@ deviants_nude_interaction = {
 }
 
 deviants_stop_nude_interaction = {
-	icon = dress_interaction
+	icon = dress
 	desc = deviants_stop_nude_interaction.desc
     	category = interaction_category_friendly
 	auto_accept = yes
@@ -327,7 +312,7 @@ deviants_stop_nude_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value >= 1
+				value >= 2
 			} 
 		}
 		scope:recipient = {
@@ -340,7 +325,7 @@ deviants_stop_nude_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring
-				value = -1
+				value = -2
 			}
 		}
 		scope:recipient = {
@@ -349,132 +334,8 @@ deviants_stop_nude_interaction = {
 	}
 }
 
-deviants_befriend_interaction = {
-	icon = synergise_friendship_interaction
-	desc = deviants_befriend_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
-			NOT = { has_relation_friend = scope:recipient } 
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 10
-			} 
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			set_relation_friend = scope:recipient
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -10
-			}
-		}
-	}
-	auto_accept = yes
-}
-
-deviants_rival_interaction = {
-	icon = icon_hostile
-	desc = deviants_rival_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
-			OR = {
-				has_relation_rival = scope:recipient
-				has_relation_nemesis = scope:recipient
-			}
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 10
-			} 
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_relation_nemesis = scope:recipient }
-				remove_relation_nemesis = scope:recipient
-			}
-			if = {
-				limit = { has_relation_rival = scope:recipient }
-				remove_relation_rival = scope:recipient
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -10
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = scripted_relations }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
-deviants_hook_interaction = {
-	icon = fabricate_hook_interaction
-	desc = deviants_hook_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 5 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 20
-			} 
-		}
-		scope:recipient = {
-			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			add_hook = {
-				target = scope:recipient
-				type = favor_hook
-			}
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -20
-			}
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			is_valid_construction_alchemy1_trigger = yes
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 60
-	ai_targets = {
-		ai_recipients = liege
-		ai_recipients = courtiers
-	}
-	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
-}
-
 deviants_mind_break_interaction = {
-	icon = mesmerize_interaction
+	icon = mesmerize
 	desc = deviants_mind_break_interaction.desc
     	category = interaction_category_hostile
     	use_diplomatic_range = yes

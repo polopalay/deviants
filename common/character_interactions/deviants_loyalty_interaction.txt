@@ -1,5 +1,5 @@
 deviants_absorb_interaction = {
-	icon = icon_shift_privileges
+	icon = drain_life
 	desc = deviants_absorb_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
@@ -48,9 +48,9 @@ deviants_absorb_interaction = {
 }
 
 deviants_give_resource_interaction = {
-	icon = vassal_modify_vassal_contract_interaction
+	icon = modify
 	desc = deviants_give_resource_interaction.desc
-    	category = interaction_category_vassal
+    	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	common_interaction = yes
 
@@ -106,11 +106,11 @@ deviants_give_resource_interaction = {
 }
 
 deviants_cultist_interaction = {
-	icon = take_vows_interaction
+	icon = take_vows
 	desc = deviants_cultist_interaction.desc
     	category = interaction_category_vassal
     	use_diplomatic_range = yes
-	common_interaction = yes
+	common_interaction = no
 	cooldown = { years = 1 }
 
 	is_shown = {

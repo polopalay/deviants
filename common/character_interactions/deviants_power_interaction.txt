@@ -1,5 +1,5 @@
 deviants_weight_interaction = {
-	icon = full_body_hair_interaction
+	icon = full_body_hair
 	desc = deviants_weight_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
@@ -57,7 +57,7 @@ deviants_weight_interaction = {
 }
 
 deavians_dealing_with_stress_interaction = {
-	icon = torment_interaction
+	icon = torment
 	desc = deavians_dealing_with_stress_interaction.desc
     	category = interaction_category_friendly
     	use_diplomatic_range = yes

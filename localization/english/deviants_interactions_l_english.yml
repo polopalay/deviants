@@ -64,16 +64,6 @@
  deviants_add_courtier_interaction: "Add to Court"
  deviants_add_courtier_interaction.desc: "Add [recipient.GetShortUIName] to your Court"
 
- deviants_befriend_interaction: "Befriend"
- deviants_befriend_interaction.desc: "Make [recipient.GetShortUIName] become your friend"
-
- deviants_hook_interaction: "Hook"
- deviants_hook_interaction.desc: "Create a hook with [recipient.GetShortUIName]"
-
-
- deviants_rival_interaction: "Stop Being Rival"
- deviants_rival_interaction.desc: "[recipient.GetShortUIName] stop being your rival"
-
  deviants_absorb_interaction: "Absorb"
  deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
 
@@ -103,17 +93,14 @@
  compassionate_callous_sadistic: "Compassionate/Callous/Sadistic"
  stubborn_fickle_eccentric: "Stubborn/Fickle/Eccentric"
 
- deviants_create_horn: "Create Horn"
- deviants_create_horn.desc: "Create a horn for [recipient.GetShortUIName]"
+ deviants_makeup: "Makeup"
+ deviants_makeup.desc: "Apply makeup to [recipient.GetShortUIName]"
  deviants_no_horn: "No Horn"
  deviants_horn0: "Long curved horns"
  deviants_horn1: "Twisted horns"
  deviants_horn2: "Tapered horns"
  deviants_horn3: "Curved horns"
  deviants_horn4: "Short horns"
-
- deviants_create_eyes: "Create Eyes"
- deviants_create_eyes.desc: "Create eyes for [recipient.GetShortUIName]"
  deviants_no_eyes: "No Eyes"
  deviants_marking_1: "Crying eyes"
  deviants_marking_2: "Scratched eyes"
