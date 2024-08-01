@@ -92,9 +92,9 @@ deviants_become_succubus = {
 		add_secret = { type = secret_deviant }
 		add_secret = { type = secret_witch }
 		random_list = {
-			1 = { give_nickname = nick_the_wicked }
-			1 = { give_nickname = nick_the_devil }
-			1 = { give_nickname = nick_the_witch }
+			1 = { give_nickname = nickname_the_bitch }
+			1 = { give_nickname = nickname_the_slut }
+			1 = { give_nickname = nickname_the_whore }
 		}
 		add_character_modifier = deviants_prostitute
 		set_immortal_age = 18

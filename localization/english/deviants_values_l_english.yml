@@ -3,3 +3,18 @@
  be_healed_opinion: "Healed by black magic"
  forced_into_prostitution_opinion: "Forced to become a prostitute"
  freed_from_prostitution_opinion: "Freed from the brothel"
+
+ nickname_the_bitch: "The Bitch"
+ nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is a horny bitch, willing to fuck without paying."
+ 
+ nickname_the_slut: "The Slut"
+ nickname_the_slut_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] openly declares a prostitute, much to the anger and amusement of customers."
+
+ nickname_the_whore: "The Whore"
+ nickname_the_whore_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] used to be a noble, but gave it all up to become a prostitute."
+
+ nickname_the_semen_tank: "The Semen Tank"
+ nickname_the_semen_tank_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] has a strong passion for semen."
+
+ nickname_the_penis_guillotine: "The Penis Guillotine"
+ nickname_the_penis_guillotine_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] makes love anywhere, anytime, with anyone."

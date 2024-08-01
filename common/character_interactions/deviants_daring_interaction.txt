@@ -309,6 +309,81 @@ deviants_makeup = {
 	auto_accept = yes
 }
 
+deviants_nickname = {
+	icon = rumor
+	desc = deviants_nickname.desc
+    	category = interaction_category_hostile
+    	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = { trait = deviants_succubus track = daring value >= 2 }
+		}
+		scope:recipient = {
+			has_character_modifier = deviants_prostitute	
+		}
+	}
+
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_bitch } } }
+		flag = nickname_the_bitch
+		locations = nickname_the_bitch
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_slut } } }
+		flag = nickname_the_slut
+		locations = nickname_the_slut
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_whore } } }
+		flag = nickname_the_whore
+		locations = nickname_the_whore
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_semen_tank } } }
+		flag = nickname_the_semen_tank
+		locations = nickname_the_semen_tank
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		flag = nickname_the_penis_guillotine
+		locations = nickname_the_penis_guillotine
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { scope:nickname_the_bitch = yes }
+				give_nickname = nickname_the_bitch
+			}
+			else_if = {
+				limit = { scope:nickname_the_slut = yes }
+				give_nickname = nickname_the_slut
+			}
+			else_if = {
+				limit = { scope:nickname_the_whore = yes }
+				give_nickname = nickname_the_whore
+			}
+			else_if = {
+				limit = { scope:nickname_the_semen_tank = yes }
+				give_nickname = nickname_the_semen_tank
+			}
+			else_if = {
+				limit = { scope:nickname_the_penis_guillotine = yes }
+				give_nickname = nickname_the_penis_guillotine
+			}
+		}
+		scope:actor = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -2
+			}
+		}
+	}
+}
+
 deviants_nude_interaction = {
 	icon = nude
 	desc = deviants_nude_interaction.desc
@@ -471,6 +546,11 @@ deviants_mind_break_interaction = {
 			if = {
 				limit = { has_trait = chaste }
 				remove_trait = chaste
+			}
+			random_list = {
+				1 = { give_nickname = nickname_the_bitch }
+				1 = { give_nickname = nickname_the_slut }
+				1 = { give_nickname = nickname_the_whore }
 			}
 			add_trait = lustful
 			add_trait = deviants_virgin

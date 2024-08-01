@@ -290,7 +290,11 @@ deviants_become_prostitute_interaction = {
 				}
 			}
 			add_character_modifier = deviants_prostitute
-			add_character_flag = blocked_from_leaving
+			random_list = {
+				1 = { give_nickname = nickname_the_bitch }
+				1 = { give_nickname = nickname_the_slut }
+				1 = { give_nickname = nickname_the_whore }
+			}
 			if = {
 				limit = { is_imprisoned_by = scope:actor }
 				release_from_prison = yes
