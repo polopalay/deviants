@@ -4,16 +4,35 @@
  deviants_religion_adherent: "Demonian"
  deviants_religion_adherent_plural: "Demonian"
  deviants_religion_desc: "Demonism is a religion that worships demons. It is often associated with the worship of Satan, but not all demonists worship Satan."
-
- deviants_satan: "Satanism"
- deviants_satan_adj: "Satanic"
- deviants_satan_adherent: "Satanian"
- deviants_satan_adherent_plural: "Satanians"
+ deviants_beelzebub: "Beelzebubism"
+ deviants_beelzebub_adj: "Beelzebubic"
+ deviants_beelzebub_adherent: "Beelzebubian"
+ deviants_beelzebub_adherent_plural: "Beelzebubians"
 
  deviants_lilith: "Lilithism"
  deviants_lilith_adj: "Lilithic"
  deviants_lilith_adherent: "Lilithian"
  deviants_lilith_adherent_plural: "Lilithians"
+
+ deviants_abaddon: "Abaddonism"
+ deviants_abaddon_adj: "Abaddonic"
+ deviants_abaddon_adherent: "Abaddonian"
+ deviants_abaddon_adherent_plural: "Abaddonians"
+
+ deviants_mammon: "Mammonism"
+ deviants_mammon_adj: "Mammonic"
+ deviants_mammon_adherent: "Mammonian"
+ deviants_mammon_adherent_plural: "Mammonians"
+
+ deviants_asmodeus: "Asmodeism"
+ deviants_asmodeus_adj: "Asmodeic"
+ deviants_asmodeus_adherent: "Asmodeian"
+ deviants_asmodeus_adherent_plural: "Asmodeians"
+
+ deviants_belial: "Belialism"
+ deviants_belial_adj: "Belialic"
+ deviants_belial_adherent: "Belialian"
+ deviants_belial_adherent_plural: "Belialians"
 
  deviants_high_god_name: "Satan"
  deviants_high_god_name_2: "$deviants_high_god_name$" # Optional translation alt

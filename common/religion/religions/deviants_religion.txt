@@ -41,7 +41,7 @@ deviants_religion = {
 		sins = { chaste honest compassionate forgiving } 
 	}
 	custom_faith_icons = {
-		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
+		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_dove custom_faith_ichthys custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
 	}
 
 	holy_order_maa = { deviants_lucifer deviants_beelzebub deviants_asmodeus deviants_delial deviants_mammon deviants_leviathan deviants_astaroth deviants_baphomet deviants_mephistopheles }
@@ -200,19 +200,21 @@ deviants_religion = {
 	}
 
 	faiths = {
-		deviants_satan = {
-			color = { 139 0 0 }
-			icon = custom_faith_pentagram_inverted
+		deviants_beelzebub = {
+			color = { 50 50 255 }
+			icon = custom_faith_10
 
 			holy_site = jerusalem
 			holy_site = rome
-			holy_site = cologne
 			holy_site = alexandria
 			holy_site = antioch
+			holy_site = constantinople
 
-			doctrine = tenet_pursuit_of_power
-			doctrine = tenet_fp3_fedayeen
-			doctrine = tenet_ritual_cannibalism
+			doctrine = tenet_communal_possessions
+			doctrine = tenet_communal_identity
+			doctrine = tenet_hedonistic
+
+			doctrine = doctrine_concubines
 		}
 		deviants_lilith = {
 			color = { 238 115 221 }
@@ -227,6 +229,76 @@ deviants_religion = {
 			doctrine = tenet_carnal_exaltation
 			doctrine = tenet_divine_marriage
 			doctrine = tenet_polyamory
+
+			doctrine = doctrine_polygamy
+			doctrine = doctrine_deviancy_virtuous
+		}
+		deviants_abaddon = {
+			color = { 139 0 0 }
+			icon = custom_faith_pentagram_inverted
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = alexandria
+			holy_site = antioch
+
+			doctrine = tenet_pursuit_of_power
+			doctrine = tenet_fp3_fedayeen
+			doctrine = tenet_ritual_cannibalism
+
+			doctrine = doctrine_concubines
+			doctrine = doctrine_funeral_cremation
+			doctrine = doctrine_pluralism_fundamentalist
+		}
+		deviants_mammon = {
+			color = { 255 215 0 }
+			icon = custom_faith_fp1_thors_hammer
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = kent
+			holy_site = constantinople
+
+			doctrine = tenet_aniconism
+			doctrine = tenet_communal_possessions
+			doctrine = tenet_tax_nonbelievers
+
+			doctrine = doctrine_funeral_sky_burial
+		}
+		deviants_asmodeus = {
+			color = { 255 0 0 }
+			icon = custom_faith_lamb
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = constantinople
+			holy_site = alexandria
+			holy_site = antioch
+
+			doctrine = tenet_sacred_childbirth
+			doctrine = tenet_divine_marriage
+			doctrine = tenet_reincarnation
+
+			doctrine = doctrine_pluralism_fundamentalist
+		}
+		deviants_belial = {
+			color = { 247 185 238 }
+			icon = custom_faith_eye_of_providence
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = antioch
+			holy_site = constantinople
+
+			doctrine = tenet_esotericism
+			doctrine = tenet_literalism
+			doctrine = tenet_astrology
+
+			doctrine = doctrine_witchcraft_virtuous
+			doctrine = doctrine_pluralism_pluralistic
 		}
 	}
 }
