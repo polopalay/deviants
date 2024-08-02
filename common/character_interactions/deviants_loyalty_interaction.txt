@@ -146,17 +146,40 @@ deviants_cultist_interaction = {
 	}
 
 	send_option = {
-		flag = lilith	
-		localization = lilith
+		flag = beelzebub	
+		localization = deviants_beelzebub
 	}
-
 	send_option = {
-		flag = satan	
-		localization = satan
+		flag = lilith	
+		localization = deviants_lilith
+	}
+	send_option = {
+		flag = abaddon	
+		localization = deviants_abaddon
+	}
+	send_option = {
+		flag = mammon
+		localization = deviants_mammon
+	}
+	send_option = {
+		flag = asmodeus
+		localization = deviants_asmodeus
+	}
+	send_option = {
+		flag = belial
+		localization = deviants_belial
 	}
 
 	on_accept = {
 		if = {
+			limit = {
+				scope:beelzebub = yes
+			}
+			scope:recipient = {
+				set_character_faith_with_conversion = faith:deviants_beelzebub
+			}
+		}
+		else_if = {
 			limit = {
 				scope:lilith = yes
 			}
@@ -164,12 +187,36 @@ deviants_cultist_interaction = {
 				set_character_faith_with_conversion = faith:deviants_lilith
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				scope:satan = yes
+				scope:abaddon = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:deviants_satan
+				set_character_faith_with_conversion = faith:deviants_abaddon
+			}
+		}
+		else_if = {
+			limit = {
+				scope:mammon = yes
+			}
+			scope:recipient = {
+				set_character_faith_with_conversion = faith:deviants_mammon
+			}
+		}
+		else_if = {
+			limit = {
+				scope:asmodeus = yes
+			}
+			scope:recipient = {
+				set_character_faith_with_conversion = faith:deviants_asmodeus
+			}
+		}
+		else_if = {
+			limit = {
+				scope:belial = yes
+			}
+			scope:recipient = {
+				set_character_faith_with_conversion = faith:deviants_belial
 			}
 		}
 

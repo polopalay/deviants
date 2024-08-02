@@ -1,9 +1,10 @@
 ﻿l_english:
- deviants_religion: "Demonism"
- deviants_religion_adj: "Demonic"
- deviants_religion_adherent: "Demonian"
- deviants_religion_adherent_plural: "Demonian"
- deviants_religion_desc: "Demonism is a religion that worships demons. It is often associated with the worship of Satan, but not all demonists worship Satan."
+ deviants_religion: "Satansim"
+ deviants_religion_adj: "Satanic"
+ deviants_religion_adherent: "Satanist"
+ deviants_religion_adherent_plural: "Satanists"
+ deviants_religion_desc: "Satansim is a religion that worships demons. It is often associated with the worship of Satan, but not all demonists worship Satan."
+
  deviants_beelzebub: "Beelzebubism"
  deviants_beelzebub_adj: "Beelzebubic"
  deviants_beelzebub_adherent: "Beelzebubian"
@@ -35,8 +36,8 @@
  deviants_belial_adherent_plural: "Belialians"
 
  deviants_high_god_name: "Satan"
- deviants_high_god_name_2: "$deviants_high_god_name$" # Optional translation alt
- deviants_high_god_name_3: "$deviants_high_god_name$" # Optional translation alt
+ deviants_high_god_name_2: "$deviants_high_god_name$"
+ deviants_high_god_name_3: "$deviants_high_god_name$"
  deviants_high_god_name_possessive: "Satant's"
  deviants_high_god_name_alternate: "The Lord"
  deviants_high_god_name_alternate_possessive: "The Lord's"
@@ -46,19 +47,20 @@
  deviants_devil_name: "God"
  deviants_devil_name_possessive: "God's"
  deviants_evil_god_1: "Jesus"
+
  deviants_death_deity_name: "Death"
  deviants_death_deity_name_possessive: "Death's"
 
  deviants_house_of_worship: "temple"
- deviants_house_of_worship_2: "$deviants_house_of_worship$" # Optional translation alt
- deviants_house_of_worship_3: "$deviants_house_of_worship$" # Optional translation alt
+ deviants_house_of_worship_2: "$deviants_house_of_worship$"
+ deviants_house_of_worship_3: "$deviants_house_of_worship$"
  deviants_house_of_worship_plural: "temples"
  deviants_religious_symbol: "pentagram"
- deviants_religious_symbol_2: "$deviants_religious_symbol$" # Optional translation alt
- deviants_religious_symbol_3: "$deviants_religious_symbol$" # Optional translation alt
+ deviants_religious_symbol_2: "$deviants_religious_symbol$"
+ deviants_religious_symbol_3: "$deviants_religious_symbol$"
  deviants_religious_text: "grimoires"
- deviants_religious_text_2: "$deviants_religious_text$" # Optional translation alt
- deviants_religious_text_3: "$deviants_religious_text$" # Optional translation alt
+ deviants_religious_text_2: "$deviants_religious_text$"
+ deviants_religious_text_3: "$deviants_religious_text$"
  deviants_religious_head_title: "Demon King"
  deviants_religious_head_title_name: "Demon Kingdom"
  deviants_devotee_male: "warlock"
@@ -73,11 +75,11 @@
  deviants_bishop: "high priest"
  deviants_bishop_plural: "high priests"
  deviants_positive_afterlife: "hell"
- deviants_positive_afterlife_2: "the Pit" # Optional translation alt
- deviants_positive_afterlife_3: "$deviants_high_god_name_possessive$ Kingdom" # Optional translation alt
+ deviants_positive_afterlife_2: "the Pit"
+ deviants_positive_afterlife_3: "$deviants_high_god_name_possessive$ Kingdom"
  deviants_negative_afterlife: "heaven"
- deviants_negative_afterlife_2: "paradise " # Optional translation alt
- deviants_negative_afterlife_3: "$deviants_devil_name_possessive$ Kingdom" # Optional translation alt
+ deviants_negative_afterlife_2: "paradise "
+ deviants_negative_afterlife_3: "$deviants_devil_name_possessive$ Kingdom"
  deviants_witchgodname_the_horned_god: "the Horned God"
  deviants_witchgodname_the_horned_god_possessive: "the Horned God's"
 

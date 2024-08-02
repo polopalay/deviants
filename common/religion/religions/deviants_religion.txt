@@ -196,7 +196,6 @@ deviants_religion = {
 
 		GHWName = ghw_crusade
 		GHWNamePlural = ghw_crusades
-
 	}
 
 	faiths = {
@@ -261,7 +260,7 @@ deviants_religion = {
 			holy_site = kent
 			holy_site = constantinople
 
-			doctrine = tenet_aniconism
+			doctrine = tenet_hedonistic
 			doctrine = tenet_communal_possessions
 			doctrine = tenet_tax_nonbelievers
 
