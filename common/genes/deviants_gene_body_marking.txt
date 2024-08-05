@@ -151,53 +151,6 @@ morph_genes = {
 		}
 	}
 
-	deviants_tattoo = {
-		no_tattoo = {
-			index = 0			
-		}
-		tattoo = {
-			index = 1
-			male = {
-				decal = {		
-					body_part = torso
-					textures = {
-						diffuse = "gfx/models/portraits/decals/tattoo/tattoo_02.dds"
-					}
-					priority = 10
-				}
-			
-			}
-			female = male
-			boy = male
-			girl = male
-		}
-	}
-
-	deviants_bodypaint = {
-		no_bodypaint = {
-			index = 0			
-		}
-		bodypaint = {
-			index = 1
-			male = {
-				decal = {		
-					body_part = torso
-					textures = {
-						diffuse = "gfx/models/portraits/decals/bodypaint.dds"
-					}
-					alpha_curve = {
-						{ 0  0 }
-						{ 1  1 }
-					}
-					priority = 10
-				}
-			}
-			female = male
-			boy = male
-			girl = male
-		}
-	}
-
 	deviants_pussy_cum = {
 		no_pussy_cum = {
 			index = 0			
