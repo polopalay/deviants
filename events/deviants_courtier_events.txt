@@ -1,5 +1,639 @@
 namespace = deviants_courtier
 
+#1304 vassal wants to bath with you
+deviants_courtier.1304 = { 
+	type = character_event
+	title = deviants_courtier.1304.t
+	desc = { 
+		first_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						is_female = yes
+					} 
+				}
+				desc = deviants_courtier.1304.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						is_female = no
+					} 
+				}
+				desc = deviants_courtier.1304.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+					scope:deviant_go_random_1 = {
+						is_female = yes
+					} 
+				}
+				desc = deviants_courtier.1304.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				}
+				desc = deviants_courtier.1304.d.desc
+			}
+		}
+	}
+	theme = dynasty 
+	right_portrait = {
+		character = root
+		animation = thinking  
+	}
+    	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = chaplain  
+	}
+	immediate = {
+		random_vassal = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+			}
+		}	
+	}	
+	# agree to a normal bath
+	option = {
+		name = deviants_courtier.1304.a
+		custom_tooltip = deviants_courtier.1304.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_gain
+			chaste = medium_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+			}
+		}
+	}	
+	# agree to bath if both female
+	option = {
+		ai_chance = { base = 100 }
+		trigger = {
+			is_female = yes
+			scope:deviant_go_random_1 = {
+				is_female = yes
+			}
+		}
+		name = deviants_courtier.1304.b
+		custom_tooltip = deviants_courtier.1304.b.tt
+		trigger_event = deviants_courtier.1360
+	}		
+	# agree to bath if you female and they male
+	option = {
+		ai_chance = { base = 100 }
+		trigger = {
+			is_female = yes
+			scope:deviant_go_random_1 = {
+				is_female = no
+			}
+		}
+		name = deviants_courtier.1304.c
+		custom_tooltip = deviants_courtier.1304.c.tt
+		trigger_event = deviants_courtier.1360
+	}	
+	# refuse
+	option = {
+		name = deviants_courtier.1304.e
+		custom_tooltip = deviants_courtier.1304.e.tt
+		add_piety = miniscule_piety_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}
+	}			
+}
+#1360 if agree, she sitting very close...
+deviants_courtier.1360 = { 
+	type = character_event
+	title = deviants_courtier.1360.t
+	desc = { 
+		first_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						is_female = yes
+					} 
+				}
+			desc = deviants_courtier.1360.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						is_female = no
+					} 
+				}
+			desc = deviants_courtier.1360.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+					scope:deviant_go_random_1 = {
+						is_female = yes
+					} 
+				}
+			desc = deviants_courtier.1360.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				}
+			desc = deviants_courtier.1360.d.desc
+			}
+		}
+	}
+	theme = friendly 
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = root
+		animation = personality_content  
+		outfit_tags = { no_clothes }
+	}
+    	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = flirtation_left  
+		outfit_tags = { no_clothes }
+	}
+	# spread legs, let her serve as female
+	option = {
+		ai_chance = { base = 100 }
+		trigger = {
+			is_female = yes
+			scope:deviant_go_random_1 = {
+				is_female = yes
+			}
+		}
+		name = deviants_courtier.1360.a
+		custom_tooltip = deviants_courtier.1360.a.tt
+		trigger_event = deviants_courtier.1361
+	}		
+	# spread legs
+	option = {
+		ai_chance = { base = 100 }
+		trigger = {
+			is_female = yes
+			scope:deviant_go_random_1 = {
+				is_female = no
+			}
+		}
+		name = deviants_courtier.1360.b
+		custom_tooltip = deviants_courtier.1360.b.tt
+		trigger_event = deviants_courtier.1370
+	}	
+	# just a normal path...
+	option = {
+		name = deviants_courtier.1360.d
+		custom_tooltip = deviants_courtier.1360.d.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}
+	}			
+}
+#1361 if let her serve
+deviants_courtier.1361 = { 
+	type = character_event
+	title = deviants_courtier.1361.t
+	desc = deviants_courtier.1361.a.desc
+	theme = friendly 
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = root
+		animation = personality_content 
+		outfit_tags = { no_clothes }
+	}
+   	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_kneel_2  
+		outfit_tags = { no_clothes }
+	}		
+	# just pledge
+	option = {
+		name = deviants_courtier.1361.a
+		custom_tooltip = deviants_courtier.1361.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+	# if lustful
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.1361.b
+		custom_tooltip = deviants_courtier.1361.b.tt
+		trigger_event = deviants_courtier.1362
+	}	
+	# if sadistic, time to take control
+	option = {
+		name = deviants_courtier.1361.c
+		custom_tooltip = deviants_courtier.1361.c.tt
+		trigger_event = deviants_courtier.1363
+	}					
+}
+#1362 if lustful, I know why you here, time for 69...
+deviants_courtier.1362 = { 
+	type = character_event
+	title = deviants_courtier.1362.t
+	desc = deviants_courtier.1362.a.desc
+	theme = friendly 
+	override_background = { reference = bath_house }		
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+   	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = personality_callous  
+		outfit_tags = { no_clothes }
+	}		
+	option = {
+		name = deviants_courtier.1362.a
+		custom_tooltip = deviants_courtier.1362.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 40
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}					
+}
+
+#1363 if sadistic, I will wash your pussy, with fist...
+deviants_courtier.1363 = { 
+	type = character_event
+	title = deviants_courtier.1363.t
+	desc = deviants_courtier.1363.a.desc
+	theme = friendly 
+	override_background = { reference = bath_house }		
+	right_portrait = {
+		character = root
+		animation = personality_coward
+		outfit_tags = { no_clothes }
+	}
+   	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = personality_honorable  
+		outfit_tags = { no_clothes }
+	}		
+	option = {
+		name = deviants_courtier.1363.a
+		custom_tooltip = deviants_courtier.1363.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 40
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}					
+}
+
+#1370 if female, spread your legs, let him serve
+deviants_courtier.1370 = { 
+	type = character_event
+	title = deviants_courtier.1370.t
+	desc = deviants_courtier.1370.a.desc
+	theme = friendly 
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = root
+		animation = personality_content 
+		outfit_tags = { no_clothes }
+	}
+    	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_kneel_2  
+		outfit_tags = { no_clothes }
+	}		
+	# pledge your felthy to me
+	option = {
+		name = deviants_courtier.1370.a
+		custom_tooltip = deviants_courtier.1370.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}		
+	# if lustful, I know why you here,
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_courtier.1370.b
+		custom_tooltip = deviants_courtier.1370.b.tt
+		trigger_event = deviants_courtier.1371
+	}	
+	# if sadistic, time to take control
+	option = {
+		name = deviants_courtier.1370.c
+		custom_tooltip = deviants_courtier.1370.c.tt
+		trigger_event = deviants_courtier.1372
+	}					
+}
+
+#1371 time for a pussy job
+deviants_courtier.1371 = { 
+	type = character_event
+	title = deviants_courtier.1371.t
+	desc = deviants_courtier.1371.a.desc
+	theme = friendly
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = root
+		animation = personality_coward
+		outfit_tags = { no_clothes }
+	}
+   	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = personality_honorable  
+		outfit_tags = { no_clothes }
+	}		
+	# 
+	option = {
+		name = deviants_courtier.1371.a
+		custom_tooltip = deviants_courtier.1371.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 40
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_character_flag = { flag = deviants_body_cum days = 10 }
+		}
+	}		
+	# slip it in at last moment
+	option = {
+		name = deviants_courtier.1371.b
+		custom_tooltip = deviants_courtier.1371.b.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviant_go_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 60
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
+		}
+	}	
+	# make him pay before cum
+	option = {
+		name = deviants_courtier.1371.c
+		custom_tooltip = deviants_courtier.1371.c.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+		}	
+	}		
+}
+#1372 if sadistic, time for a footjob, I will step on your cock
+deviants_courtier.1372 = { 
+	type = character_event
+	title = deviants_courtier.1372.t
+	desc = deviants_courtier.1372.a.desc
+	theme = friendly 
+	override_background = { reference = bath_house }		
+	right_portrait = {
+		character = root
+		animation = personality_content  
+		outfit_tags = { no_clothes }
+	}
+    	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = flirtation_left  
+		outfit_tags = { no_clothes }
+	}
+	# just tease
+	option = {
+		name = deviants_courtier.1372.a
+		custom_tooltip = deviants_courtier.1372.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_gain
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}	
+	#let him cum	
+	option = {
+		name = deviants_courtier.1372.b
+		custom_tooltip = deviants_courtier.1372.b.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 40
+			}
+			stress_impact = {
+				base = medium_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_character_flag = { flag = deviants_face_cum days = 10 }
+		}
+	}			
+}
+
 deviants_courtier.1440 = { 
 	type = character_event
 	title = deviants_courtier.1440.t
@@ -108,10 +742,13 @@ deviants_courtier.1442 = {
 				trait = deviants_lesser_succubus
 				value = 2
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}		
 }
 
+#1460 after a heated debate, as you sit naked on your throne, some vassls/advisors just surround you on your throne, demand to fuck their whore ruler... to adress their issues to your holes... as you made them hard...
 deviants_courtier.1460 = { 
 	type = character_event
 	title = deviants_courtier.1460.t
@@ -400,6 +1037,7 @@ deviants_courtier.1460 = {
 	}
 }
 
+#1461 side fuck while they keep debating, on the throne
 deviants_courtier.1461 = { 
 	type = character_event
 	title = deviants_courtier.1461.t
@@ -526,10 +1164,13 @@ deviants_courtier.1461 = {
 				CHARACTER = scope:deviants_courtier_random_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}		
 }
 
+#1462 footstool while being fucked
 deviants_courtier.1462 = { 
 	type = character_event
 	title = deviants_courtier.1462.t
@@ -647,6 +1288,7 @@ deviants_courtier.1462 = {
 	}		 
 }
 
+#1463 lickcum from floor after stool bukake
 deviants_courtier.1463 = { 
 	type = character_event
 	title = deviants_courtier.1463.t
@@ -779,6 +1421,8 @@ deviants_courtier.1463 = {
 				trait = deviants_lesser_succubus
 				value = 2
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}		
 }
@@ -1472,6 +2116,8 @@ deviants_courtier.5500 = {
 				track = corruption
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 20 }
+			add_character_flag = { flag = deviants_ass_cum days = 20 }
 		}	
 	}	
 	# just pose
@@ -1657,6 +2303,7 @@ deviants_courtier.6010 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 20 }
 		}	
 	}	
 	# stay silent
@@ -1703,6 +2350,7 @@ deviants_courtier.6011 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 		}
 	}	
 	# endure
@@ -1780,6 +2428,7 @@ deviants_courtier.6021 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum days = 15 }
 		}
 	}	
 	# just leave
@@ -1895,6 +2544,7 @@ deviants_courtier.6040 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 15 }
 		}
 	}	
 	# do the bare minimum to get him cum

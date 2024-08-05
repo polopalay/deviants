@@ -1,0 +1,297 @@
+nude_clothes = {
+    	usage = game
+    	priority = 10
+
+	no_clothes = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+			}
+			accessory = {
+				mode = add
+				gene = headgear_base
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+			}
+			accessory = {
+				mode = add
+				gene = secondary_headgears
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+			}
+		} 
+		outfit_tags = { no_clothes }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				should_be_fully_naked_portrait_trigger = yes
+				is_female = yes
+			}
+			modifier = {
+                		add = 1000
+                		should_be_topless_portrait_trigger = yes
+            		}
+			modifier = {
+                		add = -1000
+            	    		should_show_nudity = no
+            		}
+		}
+	}
+}
+
+horn_clothes = {
+    	usage = game
+    	priority = 10
+
+	horn0 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_0
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn0
+			}
+		}
+	}
+	horn1 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_1
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn1
+			}
+		}
+	}
+	horn2 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_2
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn2
+			}
+		}
+	}
+	horn3 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_3
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn3
+			}
+		}
+	}
+	horn4 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = horns
+				template = horn_4
+				value = 1
+			}
+		} 
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_horn4
+			}
+		}
+	}
+}
+
+marking_clothes = {
+	usage = game
+	pirority = 10
+
+	marking1 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_1
+			}
+		}
+	}
+	marking2 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_2
+			}
+		}
+	}
+	marking3 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_3
+			}
+		}
+	}
+	marking4 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_4
+			}
+		}
+	}
+}
+
+eyes_color_clothes = {
+	usage = game
+	priority = 10
+	white_eyes = {
+		dna_modifiers = {
+			color = {
+				gene = eye_color
+				mode = modify
+				x = -1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_white_eyes
+			}
+		}
+	}
+	red_eyes = {
+		dna_modifiers = {
+			color = {
+				gene = eye_color
+				mode = modify
+				x = 1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_red_eyes
+			}
+		}
+	}
+}
+
+hair_color_clothes = {
+ 	usage = game
+	priority = 10
+	white_hair = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = modify
+				x = -1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_white_hair
+			}
+		}
+	}
+	red_hair = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = modify
+				x = 1.0
+				y = -1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_red_hair
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@ deviants_switch_body_interaction = {
     	category = interaction_category_diplomacy
 	interface_priority = 1
 	common_interaction = yes
-    	use_diplomatic_range = yes
+    	use_diplomatic_range = no
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
@@ -44,7 +44,7 @@ deviants_add_courtier_interaction = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value >= 2
+				value >= 1
 			} 
 		}
 		scope:recipient = { 
@@ -61,7 +61,7 @@ deviants_add_courtier_interaction = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
-				value = -2
+				value = -1
 			}
 		}
 		scope:recipient = {
@@ -92,7 +92,7 @@ deviants_child_interaction = {
 	icon = pregnant
 	desc = deviants_child_interaction.desc
     	category = interaction_category_friendly
-    	use_diplomatic_range = no
+    	use_diplomatic_range = yes
 	common_interaction = no
 	#cooldown = { years = 2 }
 	is_shown = {

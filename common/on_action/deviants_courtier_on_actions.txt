@@ -1,7 +1,0 @@
-deviants_courtier_on_action = {
-	random_events = {
-		chance_to_happen = 50
-		50 = deviants_courtier.1440 # urge to expose at high submission
-		50 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
-	} 
-}

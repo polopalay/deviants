@@ -1,5 +1,621 @@
 namespace = deviants_blackmail
 
+#1100 he comes to you in private
+deviants_blackmail.1100 = { 
+	type = character_event
+	title = deviants_blackmail.1100.t
+	desc = deviants_blackmail.1100.a.desc
+	theme = memory_stewardship 
+	right_portrait = {
+		character = root
+		animation = disapproval 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+    	trigger = { 
+       		has_trait = deviants_succubus 
+        	is_female = yes
+        	any_vassal = {
+            		is_female = no
+            		age >= 18
+            		is_ai = yes
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+        	}
+	}
+    	immediate = {
+		random_vassal  = {
+			limit = {
+				age >= 18
+				is_female = no
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = no
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+    	# kneel before him for a discount
+	option = {
+		name = deviants_blackmail.1100.a
+		custom_tooltip = deviants_blackmail.1100.a.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
+		}
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = minor_gold_value
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -10
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+		ai_chance = { base = 100 }
+		trigger_event = deviants_blackmail.1120
+	}	
+	# just pay the gold
+	option = {
+		name = deviants_blackmail.1100.b
+		custom_tooltip = deviants_blackmail.1100.b.tt
+        	pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = medium_gold_value
+		}
+	}		
+	# ignore, get rumors spread... 
+	option = {
+		name = deviants_blackmail.1100.c
+		custom_tooltip = deviants_blackmail.1100.c.tt
+		add_piety = medium_piety_loss
+        	add_prestige = medium_prestige_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+        	hidden_effect = {
+            		add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+        	}
+	}
+}
+
+#1110 he cumming in
+deviants_blackmail.1110 = { 
+	type = character_event
+	title = deviants_blackmail.1110.t
+	desc = deviants_blackmail.1110.desc
+	theme = wedding_night_activity 
+    	trigger = { 
+        	is_female = yes
+	}
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+    	immediate = {
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviant_go_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		add_character_flag = { flag = deviants_pussy_cum days = 20 }
+	}
+    	#Go deal with the mess
+	option = {
+		name = deviants_blackmail.1110.a
+		custom_tooltip = deviants_blackmail.1110.a.tt
+	}				
+}
+
+#1120 humiliation event if you kneel
+deviants_blackmail.1120 = { 
+	type = character_event
+	title = deviants_blackmail.1120.t
+	desc = deviants_blackmail.1120.desc
+	theme = memory_stewardship 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+    	trigger = { 
+        	is_female = yes
+	}
+    	#endure
+	option = {
+		name = deviants_blackmail.1120.a
+		custom_tooltip = deviants_blackmail.1120.a.tt
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -10
+		}
+	}				
+}
+
+#1200 he comes to you in public, ass slap and grope, holding you still with the free hand, from your clothes, nobody else is seeing it... agree to pay, favor hook, or fuck in some semi public location
+deviants_blackmail.1200 = { 
+	type = character_event
+	title = deviants_blackmail.1200.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { has_trait = lustful }
+			desc = deviants_blackmail.1200.a.desc
+			}
+			triggered_desc = {
+				trigger = { has_trait = sadistic }
+			desc = deviants_blackmail.1200.b.desc
+			}
+		}
+	}
+	theme = party 
+	right_portrait = {
+		character = root
+		animation = disapproval 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+    	trigger = { 
+        	has_trait = deviants_blackmailvictim 
+		has_trait = deviants_mask
+        	is_female = yes
+        	has_trait_xp = {
+			trait = deviants_blackmailvictim
+			track = deviantblackmailfame
+			value >= 50
+		}
+        	any_vassal = {
+            		is_female = no
+            		age >= 18
+            		is_ai = yes
+            		is_adult = yes
+            		is_incapable = no
+	            	is_imprisoned = no
+        	}
+	}
+    	immediate = {
+		random_vassal  = {
+			limit = {
+				age >= 18
+				is_female = no
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = no
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+    	# let him keep groping you for a discount, some notice odd behavior even as he tries to avoid it
+	option = {
+		name = deviants_blackmail.1200.a
+		custom_tooltip = deviants_blackmail.1200.a.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
+		}
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = medium_gold_value
+		}
+		add_piety = minor_piety_loss
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -10
+		}
+		scope:deviant_go_random_1 = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+			}
+			add_piety = minor_piety_loss
+		}
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 1
+			}
+		}
+	}
+	# just pay the gold
+	option = {
+		name = deviants_blackmail.1200.b
+		custom_tooltip = deviants_blackmail.1200.b.tt
+        	pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = major_gold_value
+		}
+	}
+	# Command him to stop, get rumors spread... 
+	option = {
+		name = deviants_blackmail.1200.c
+		custom_tooltip = deviants_blackmail.1200.c.tt
+		add_piety = medium_piety_loss
+        	add_prestige = medium_prestige_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = deviant_vassaltrouble_modifier
+			days = 60
+		}
+        	hidden_effect = {
+            		add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+        	}
+	}
+	# agree to fuck
+	option = {
+		name = deviants_blackmail.1200.d
+		custom_tooltip = deviants_blackmail.1200.d.tt
+		trigger_event = deviants_blackmail.1201
+	}
+}
+
+#1201 doggy under the table, sadistic can't undertand why she has not executed him yet...
+deviants_blackmail.1201 = { 
+	type = character_event
+	title = deviants_blackmail.1201.t
+	desc = deviants_blackmail.1201.desc
+	theme = party 
+	right_portrait = {
+		character = root
+		animation = worry 
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = ecstasy
+	}
+    	# beg him to accept gold instead, so he cums on your clothes instead
+	option = {
+		name = deviants_blackmail.1201.a
+		custom_tooltip = deviants_blackmail.1201.a.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
+		}
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = massive_gold_value
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = dismissive_opinion
+			opinion = -20
+		}
+		scope:deviant_go_random_1 = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_character_flag = { flag = deviants_body_cum days = 20 }
+		}
+	}	
+	# just give the major hook, and he won't even cum and leaves
+	option = {
+		name = deviants_blackmail.1201.b
+		custom_tooltip = deviants_blackmail.1201.b.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_hook = {
+				type = liege_favour_strong_hook
+				target = root
+			}
+		}
+	}		
+	# refuse, he cum in
+	option = {
+		name = deviants_blackmail.1201.c
+		custom_tooltip = deviants_blackmail.1201.c.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = major_stress_impact_loss
+			sadistic = medium_stress_impact_gain
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = amused_opinion
+			opinion = 10
+		}
+		scope:deviant_go_random_1 = {
+			stress_impact = {
+				base = medium_stress_impact_loss
+				lustful = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
+			}
+		}
+		trigger_event = deviants_blackmail.1110
+		buy_sex_with_effect = {
+			CHARACTER = scope:deviant_go_random_1
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+        	hidden_effect = {
+            		add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_character_flag = { flag = deviants_pussy_cum days = 20 }
+        	}
+		ai_chance = { base = 100 }
+	}			
+}
+
+#1300 inviting to be party decoration or pay major gold or favor hook
+deviants_blackmail.1300 = { 
+	type = character_event
+	title = deviants_blackmail.1300.t
+	desc = deviants_blackmail.1300.desc
+	theme = memory_stewardship 
+	right_portrait = {
+		character = root
+		animation = disapproval 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+    	trigger = { 
+        	has_trait = deviants_succubus 
+        	any_vassal = {
+            		is_female = no
+            		age >= 18
+            		is_ai = yes
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+        	}
+	}
+    	immediate = {
+		random_vassal  = {
+			limit = {
+				age >= 18
+				is_female = no
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = no
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+    	# attend
+	option = {
+		name = deviants_blackmail.1300.a
+		custom_tooltip = deviants_blackmail.1300.a.tt
+		trigger_event = deviants_blackmail.1301
+		ai_chance = { base = 100 }
+	}	
+	# pay gold and apoligies on your knees for not attending the party...
+	option = {
+		name = deviants_blackmail.1300.b
+		custom_tooltip = deviants_blackmail.1300.b.tt
+        	pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = medium_gold_value
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_gain
+		}
+		reverse_add_opinion = {
+			target = scope:deviant_go_random_1
+			modifier = disgusted_opinion
+			opinion = -30
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+		}
+	}
+	# ignore, get rumors spread... 
+	option = {
+		name = deviants_blackmail.1300.c
+		custom_tooltip = deviants_blackmail.1300.c.tt
+		add_piety = medium_piety_loss
+        	add_prestige = medium_prestige_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+        	hidden_effect = {
+            		add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = -1
+			}
+        	}
+	}			
+}
+
+#1301 being party decor, look-alike head in the middle of a serving table, he claiming you gave permit
+deviants_blackmail.1301 = { 
+	type = character_event
+	title = deviants_blackmail.1301.t
+	desc = deviants_blackmail.1301.desc
+	theme = party 
+	lower_center_portrait = {
+		character = root
+		animation = worry 
+		outfit_tags = { no_clothes }
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = throne_room_applaud_1
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = throne_room_applaud_1
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_4
+		animation = throne_room_applaud_1
+	}
+    	immediate = {
+		if = {
+			limit = {
+				any_vassal = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this = scope:deviant_go_random_1 }
+				}
+			}
+			random_vassal  = {
+				limit = {
+					age >= 18
+					is_female = no
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this = scope:deviant_go_random_1 }
+				}
+				save_scope_as = deviant_go_random_2
+			}
+		}
+		if = {
+			limit = {
+				any_vassal = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this = scope:deviant_go_random_1 }
+					NOT = { this = scope:deviant_go_random_2 }
+				}
+			}
+			random_vassal  = {
+				limit = {
+					age >= 18
+					is_female = no
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this = scope:deviant_go_random_1 }
+					NOT = { this = scope:deviant_go_random_2 }
+				}
+				save_scope_as = deviant_go_random_3
+			}
+		}
+		if = {
+			limit = {
+				any_courtier_or_guest = {
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this = scope:deviant_go_random_1 }
+					NOT = { this = scope:deviant_go_random_2 }
+					NOT = { this = scope:deviant_go_random_3 }
+				}
+			}
+			random_courtier_or_guest = {
+				limit = {
+					age >= 18
+					is_female = no
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { this = scope:deviant_go_random_1 }
+					NOT = { this = scope:deviant_go_random_2 }
+					NOT = { this = scope:deviant_go_random_3 }
+				}
+				save_scope_as = deviant_go_random_4
+			}
+		}
+	}
+    	# endure
+	option = {
+		name = deviants_blackmail.1301.a
+		custom_tooltip = deviants_blackmail.1301.a.tt
+		add_piety = minor_piety_loss
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = medium_stress_impact_loss
+				sadistic = minor_stress_impact_gain
+			}
+			add_prestige = medium_prestige_gain
+			add_gold = minor_gold_value
+		}
+		hidden_effect = {
+            		add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
+			add_character_flag = { flag = deviants_ass_cum days = 20 }
+			add_character_flag = { flag = deviants_body_cum days = 20 }
+			add_character_flag = { flag = deviants_pussy_cum days = 20 }
+			add_character_flag = { flag = deviants_face_cum days = 20 }
+        	}
+	}			
+}
+
 #1400 if both unmarried, forcing you to marry him...  refusing drops by 20 exp? pay massive gold? and suck his cock
 deviants_blackmail.1400 = { 
 	type = character_event
@@ -338,6 +954,7 @@ deviants_blackmail.2010 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum days = 15 }
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -377,6 +994,7 @@ deviants_blackmail.2010 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum days = 15 }
         	}
 	}	
 	# I can't do this, get out... 
@@ -432,6 +1050,8 @@ deviants_blackmail.2010 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum days = 15 }
+			add_character_flag = { flag = deviants_body_cum days = 15 }
         	}	
 	}	
 }
@@ -480,6 +1100,7 @@ deviants_blackmail.2020 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -518,6 +1139,7 @@ deviants_blackmail.2020 = {
 				track = corruption
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
         	}
 	}	
 	# I can't do this, get out... 
@@ -582,6 +1204,7 @@ deviants_blackmail.2020 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
         	}	
 	}	
 }

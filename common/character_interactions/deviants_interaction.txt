@@ -14,16 +14,10 @@ deviants_prostitute_interaction = {
             		is_incapable = no
             		is_imprisoned = no
 			is_travelling = no
-			is_in_army = no
 			is_attracted_to_women = yes
 			NOT = { 
 				is_at_war_with = scope:recipient 
-				has_trait = chaste
-				has_trait = celibate
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
 				has_trait = lovers_pox
-				has_character_modifier = deviants_prostitute
 			}
         	}
         	scope:recipient = {
@@ -142,6 +136,10 @@ deviants_prostitute_interaction = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 			}
+			random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
+			random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
+			random = { chance = 25 add_character_flag = { flag = deviants_ass_cum days = 10 } }
+			random = { chance = 25 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
 		}
 		scope:recipient = {
 			if = {
@@ -160,6 +158,10 @@ deviants_prostitute_interaction = {
 				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
 				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
 				buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+				random = { chance = 50 add_character_flag = { flag = deviants_face_cum days = 10 } }
+				random = { chance = 50 add_character_flag = { flag = deviants_body_cum days = 10 } }
+				random = { chance = 50 add_character_flag = { flag = deviants_ass_cum days = 10 } }
+				random = { chance = 50 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				if = {
 					limit = { has_trait = deviants_succubus }

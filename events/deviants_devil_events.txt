@@ -1,5 +1,168 @@
 namespace = deviants_devil
 
+#1250 random sleep paralyzis butt fuck, 4 in total? 
+deviants_maskgo.1250 = { 
+	type = character_event
+	title = deviants_maskgo.1250.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1250.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1250.b.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1250.c.desc
+			}
+		}
+	}
+	theme = deviantsmaskgo
+	override_background = { reference = devianttentacleanal }
+	trigger = {
+		has_trait = deviants_mask
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		has_trait = deviants_demonanalslut
+		has_trait_xp = {
+			trait = deviants_demonanalslut
+			track = demonsubmissionslut
+			value < 100
+		}
+	}
+	# endure
+	option = {
+		name = deviants_maskgo.1250.a
+		custom_tooltip = deviants_maskgo.1250.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+					trait = deviants_demonanalslut
+					track = demonsubmissionslut
+					value = 5
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+	}			
+}
+
+#1251 random sleep paralyzis wet dream, vaginal
+deviants_maskgo.1251 = { 
+	type = character_event
+	title = deviants_maskgo.1251.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1251.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1251.b.desc
+			}
+		}
+	}
+	theme = deviantsmaskgo
+	override_background = { reference = devianttentaclevaginal }	
+	trigger = {
+		has_trait = deviants_mask
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		has_trait = deviants_demonanalslut
+		has_trait_xp = {
+			trait = deviants_demonanalslut
+			track = demonsubmissionslut
+			value < 100
+		}
+	}
+	# endure
+	option = {
+		name = deviants_maskgo.1251.a
+		custom_tooltip = deviants_maskgo.1251.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+					trait = deviants_demonanalslut
+					track = demonsubmissionslut
+					value = 5
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+	}			
+}
+#1252 past 40 exp, feel like you are being fucked in the middle of the court, poeple looking at you, have to stay calm, but you start to moan, lose piety, prestige...
+deviants_maskgo.1252 = { 
+	type = character_event
+	title = deviants_maskgo.1252.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1252.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviants_maskgo.1252.b.desc
+			}
+		}
+	}
+	theme = deviantsmaskgo
+	override_background = { reference = throne_room }
+	right_portrait = {
+		character = root
+		animation = shock
+	}	
+	trigger = {
+		has_trait = deviants_mask
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		has_trait = deviants_demonanalslut
+		has_trait_xp = {
+			trait = deviants_demonanalslut
+			track = demonsubmissionslut
+			value > 70
+		}
+		has_trait_xp = {
+			trait = deviants_demonanalslut
+			track = demonanalslutcorruption
+			value < 50
+		}
+	}
+	# endure
+	option = {
+		name = deviants_maskgo.1252.a
+		custom_tooltip = deviants_maskgo.1252.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+					trait = deviants_demonanalslut
+					track = demonsubmissionslut
+					value = 5
+			}
+			add_trait_xp = {
+					trait = deviants_demonanalslut
+					track = demonanalslutcorruption
+					value = 4
+			}
+		}
+		add_prestige = minor_prestige_loss
+		add_piety = minor_piety_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+	}			
+}
+
 deviants_devil.1410 = { 
 	type = character_event
 	title = deviants_devil.1410.t
@@ -157,6 +320,7 @@ deviants_devil.1412 = {
 				track = corruption
 				value = 2
 			}
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 		}
 	}			
 }
@@ -182,6 +346,7 @@ deviants_devil.1413 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
 	}			
 }
@@ -470,6 +635,7 @@ deviants_devil.1420 = {
 				track = corruption
 				value = 2
 			}
+			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
 	}	
 }
@@ -526,6 +692,7 @@ deviants_devil.1422 = {
 				track = corruption
 				value = 2
 			}
+			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
 	}		
 }
@@ -579,6 +746,7 @@ deviants_devil.5100 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_body_cum days = 20 }
 			trigger_event = deviants_devil.5500
 		}	
 	}	
@@ -662,6 +830,7 @@ deviants_devil.5110 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum days = 20 }
 			trigger_event = deviants_devil.5501
 		}	
 	}	
@@ -836,6 +1005,7 @@ deviants_devil.5130 = {
 				track = power
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum months = 1 }
 			trigger_event = deviants_devil.5501
 		}	
 	}	
@@ -919,6 +1089,7 @@ deviants_devil.5140 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum months = 1 }
 			trigger_event = deviants_devil.5501
 		}	
 	}	
@@ -996,6 +1167,7 @@ deviants_devil.5150 = {
 				track = corruption
 				value = 1
 			}
+			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
 		trigger_event = deviants_devil.5151
 	}	
@@ -1047,6 +1219,7 @@ deviants_devil.5151 = {
 			days = 30
 		}
 		hidden_effect = {
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 			trigger_event = deviants_devil.5501
 		}	
 	}		
@@ -1077,6 +1250,7 @@ deviants_devil.5160 = {
 				track = corruption
 				value = 1
 			}
+			add_character_flag = { flag = deviants_body_cum months = 1 }
 		}
 		trigger_event = deviants_devil.5161
 	}	
@@ -1159,6 +1333,8 @@ deviants_devil.5300 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_body_cum months = 1 }
+			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
 		trigger_event = deviants_devil.5301	
 	}		
@@ -1230,6 +1406,8 @@ deviants_devil.5320 = {
 				track = daring
 				value = 1
 			}
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			add_character_flag = { flag = deviants_ass_cum months = 1 }
 		}
 		trigger_event = deviants_devil.5321	
 	}		

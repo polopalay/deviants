@@ -12,10 +12,90 @@ quarterly_playable_pulse = {
 		NOT = { has_trait = celibate }
 	}
 	random_on_action = {
-	 	chance_of_no_event = 1
+	 	chance_of_no_event = 4
 		1 = deviants_courtier_on_action
 		1 = deviants_devil_on_action
 		1 = deviants_loyalty_on_action
 		1 = deviants_blackmail_on_action
+	}
+}
+
+random_yearly_playable_pulse = {
+	on_actions = {
+		delay = { days = { 45 75 } }
+		deviants_prostitution_on_action
+	}
+}
+
+deviants_blackmail_on_action = {
+	random_events = {
+		chance_to_happen = 50
+		1 = deviants_blackmail.1100 # basic blackmail in the council room during private meeting
+		1 = deviants_blackmail.1200 # groping you in public, demanding money or sex
+		1 = deviants_blackmail.1300 # invite to be party decor
+		1 = deviants_blackmail.1400 # courtier force marry if both can
+		1 = deviants_blackmail.2000 # basic NTR event start
+		1 = deviants_courtier.7000 # blackmail by your fellow vassal in the name of your liege
+		1 = deviants_courtier.5100 # liege call you over with a letter
+	} 
+}
+
+deviants_courtier_on_action = {
+	random_events = {
+		chance_to_happen = 50
+		1 = deviants_courtier.1304
+		1 = deviants_courtier.1440 # urge to expose at high submission
+		1 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
+	} 
+}
+
+deviants_devil_on_action = {
+	random_events = {
+		chance_to_happen = 50
+		1 = deviants_devil.1410 # gremlin fuck
+		1 = deviants_devil.1300 # special dream
+	} 
+}
+
+deviants_loyalty_on_action = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_succubus
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = celibate }
+	}
+	random_events = {
+		chance_to_happen = 50
+		1 = deviants_loyalty.8000 # start men at arms blackmail at max deviancy
+		1 = deviants_loyalty.8099 # basic men at arms event request
+		1 = deviants_loyalty.8900 # 0 loyalty punishment event
+	} 
+}
+
+deviants_prostitution_on_action = {
+	trigger = {
+		is_adult = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_female = yes
+		has_character_modifier = deviants_prostitute
+	}
+	random_events = {
+		chance_to_happen = 80
+		1 = deviants_prostitution.9000
+		1 = deviants_prostitution.9010
+		1 = deviants_prostitution.9030
+		1 = deviants_prostitution.9040
+		1 = deviants_prostitution.9200
+		1 = deviants_prostitution.9220
+		1 = deviants_prostitution.9230
 	}
 }

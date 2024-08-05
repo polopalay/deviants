@@ -44,299 +44,329 @@
 	}
 }
 
-nude_clothes = {
-    	usage = game
-    	priority = 10
-
-	no_clothes = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = clothes
-			}
-			accessory = {
-				mode = add
-				gene = headgear_base
-			}
-			accessory = {
-				mode = add
-				gene = headgear
-			}
-			accessory = {
-				mode = add
-				gene = secondary_headgears
-			}
-			accessory = {
-				mode = add
-				gene = additive_headgear
-			}
-			accessory = {
-				mode = add
-				gene = legwear
-			}
-			accessory = {
-				mode = add
-				gene = cloaks
-			}
-		} 
-		outfit_tags = { no_clothes }
-		weight = {
-			base = 0
-			modifier = {
-				add = 1000
-				should_be_fully_naked_portrait_trigger = yes
-				is_female = yes
-			}
-			modifier = {
-                		add = 1000
-                		should_be_topless_portrait_trigger = yes
-            		}
-			modifier = {
-                		add = -1000
-            	    		should_show_nudity = no
-            		}
-		}
-	}
-}
-
-horn_clothes = {
-    	usage = game
-    	priority = 10
-
-	horn0 = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = horns
-				template = horn_0
-				value = 1
-			}
-		} 
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_character_flag = deviants_horn0
-			}
-		}
-	}
-	horn1 = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = horns
-				template = horn_1
-				value = 1
-			}
-		} 
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_character_flag = deviants_horn1
-			}
-		}
-	}
-	horn2 = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = horns
-				template = horn_2
-				value = 1
-			}
-		} 
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_character_flag = deviants_horn2
-			}
-		}
-	}
-	horn3 = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = horns
-				template = horn_3
-				value = 1
-			}
-		} 
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_character_flag = deviants_horn3
-			}
-		}
-	}
-	horn4 = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = horns
-				template = horn_4
-				value = 1
-			}
-		} 
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				has_character_flag = deviants_horn4
-			}
-		}
-	}
-}
-
-marking_clothes = {
+fucked_pussy_outfittags = {
 	usage = game
 	pirority = 10
 
-	marking1 = {
+	fucked_pussy_outfit_0 = {
 		dna_modifiers = {
 			morph = {
-				mode = replace
-				gene = deviants_marking
-				value = 1
-				template = marking_1
-			}
+				mode = add
+				gene = deviants_pussy_cum
+				range = { 0 1 }
+				template = no_pussy_cum
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_marking_1
+				has_character_flag = deviants_pussy_cum
 			}
 		}
 	}
-	marking2 = {
+	fucked_pussy_outfit_1 = {
 		dna_modifiers = {
 			morph = {
-				mode = replace
-				gene = deviants_marking
-				value = 1
-				template = marking_2
-			}
+				mode = add
+				gene = deviants_pussy_cum
+				range = { 0 1 }
+				template = pussy_cum_1
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_marking_2
+				has_character_flag = deviants_pussy_cum
 			}
 		}
 	}
-	marking3 = {
+	fucked_pussy_outfit_2 = {
 		dna_modifiers = {
 			morph = {
-				mode = replace
-				gene = deviants_marking
-				value = 1
-				template = marking_3
-			}
+				mode = add
+				gene = deviants_pussy_cum
+				range = { 0 1 }
+				template = pussy_cum_2
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_marking_3
+				has_character_flag = deviants_pussy_cum
 			}
 		}
 	}
-	marking4 = {
+	fucked_pussy_outfit_3 = {
 		dna_modifiers = {
 			morph = {
-				mode = replace
-				gene = deviants_marking
-				value = 1
-				template = marking_4
-			}
+				mode = add
+				gene = deviants_pussy_cum
+				range = { 0 1 }
+				template = pussy_cum_3
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_marking_4
+				has_character_flag = deviants_pussy_cum
 			}
 		}
 	}
 }
 
-eyes_color_clothes = {
+fucked_ass_outfittags = {
 	usage = game
-	priority = 10
-	white_eyes = {
+	pirority = 10
+
+	fucked_ass_outfit_0 = {
 		dna_modifiers = {
-			color = {
-				gene = eye_color
-				mode = modify
-				x = -1.0
-				y = -1.0
-			}
+			morph = {
+				mode = add
+				gene = deviants_ass_cum
+				range = { 0 1 }
+				template = no_ass_cum
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_white_eyes
+				has_character_flag = deviants_ass_cum
 			}
 		}
 	}
-	red_eyes = {
+	fucked_ass_outfit_1 = {
 		dna_modifiers = {
-			color = {
-				gene = eye_color
-				mode = modify
-				x = 1.0
-				y = -1.0
-			}
+			morph = {
+				mode = add
+				gene = deviants_ass_cum
+				range = { 0 1 }
+				template = ass_cum_1
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_red_eyes
+				has_character_flag = deviants_ass_cum
+			}
+		}
+	}
+	fucked_ass_outfit_2 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_ass_cum
+				range = { 0 1 }
+				template = ass_cum_2
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_ass_cum
+			}
+		}
+	}
+	fucked_ass_outfit_3 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_ass_cum
+				range = { 0 1 }
+				template = ass_cum_3
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_ass_cum
 			}
 		}
 	}
 }
 
-hair_color_clothes = {
- 	usage = game
-	priority = 10
-	white_hair = {
+fucked_body_outfittags = {
+	usage = game
+	pirority = 10
+	fucked_body_outfit_0 = {
 		dna_modifiers = {
-			color = {
-				gene = hair_color
-				mode = modify
-				x = -1.0
-				y = -1.0
-			}
+			morph = {
+				mode = add
+				gene = deviants_body_cum
+				range = { 0 1 }
+				template = body_cum_1
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_white_hair
+				has_character_flag = deviants_body_cum
 			}
 		}
 	}
-	red_hair = {
+	fucked_body_outfit_1 = {
 		dna_modifiers = {
-			color = {
-				gene = hair_color
-				mode = modify
-				x = 1.0
-				y = -1.0
-			}
+			morph = {
+				mode = add
+				gene = deviants_body_cum
+				range = { 0 1 }
+				template = body_cum_1
+			}	
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = deviants_red_hair
+				has_character_flag = deviants_body_cum
+			}
+		}
+	}
+	fucked_body_outfit_2 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_body_cum
+				range = { 0 1 }
+				template = body_cum_2
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_body_cum
+			}
+		}
+	}
+	fucked_body_outfit_3 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_body_cum
+				range = { 0 1 }
+				template = body_cum_3
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_body_cum
+			}
+		}
+	}
+	fucked_body_outfit_4 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_body_cum
+				range = { 0 1 }
+				template = body_cum_4
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_body_cum
+			}
+		}
+	}
+}
+
+fucked_face_outfittags = {
+	usage = game
+	pirority = 10
+	fucked_face_outfit_0 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_face_cum
+				range = { 0 1 }
+				template = no_face_cum
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_face_cum
+			}
+		}
+	}
+	fucked_face_outfit_1 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_face_cum
+				range = { 0 1 }
+				template = face_cum_1
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_face_cum
+			}
+		}
+	}
+	fucked_face_outfit_2 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_face_cum
+				range = { 0 1 }
+				template = face_cum_2
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_face_cum
+			}
+		}
+	}
+	fucked_face_outfit_3 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_face_cum
+				range = { 0 1 }
+				template = face_cum_3
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_face_cum
+			}
+		}
+	}
+	fucked_face_outfit_4 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_face_cum
+				range = { 0 1 }
+				template = face_cum_4
+			}	
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_face_cum
 			}
 		}
 	}

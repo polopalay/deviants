@@ -38,7 +38,7 @@
 		}
 		dna_modifiers = {
 			morph = {
-				mode = replace
+				mode = add
 				gene = deviants_bodypaint
 				value = 1
 				template = bodypaint
