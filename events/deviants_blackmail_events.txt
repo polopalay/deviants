@@ -161,18 +161,7 @@ deviants_blackmail.1120 = {
 deviants_blackmail.1200 = { 
 	type = character_event
 	title = deviants_blackmail.1200.t
-	desc = { 
-		random_valid = {
-			triggered_desc = {
-				trigger = { has_trait = lustful }
-			desc = deviants_blackmail.1200.a.desc
-			}
-			triggered_desc = {
-				trigger = { has_trait = sadistic }
-			desc = deviants_blackmail.1200.b.desc
-			}
-		}
-	}
+	desc = deviants_blackmail.1200.desc
 	theme = party 
 	right_portrait = {
 		character = root
@@ -183,14 +172,8 @@ deviants_blackmail.1200 = {
 		animation = scheme
 	}
     	trigger = { 
-        	has_trait = deviants_blackmailvictim 
-		has_trait = deviants_mask
+        	has_trait = deviants_succubus 
         	is_female = yes
-        	has_trait_xp = {
-			trait = deviants_blackmailvictim
-			track = deviantblackmailfame
-			value >= 50
-		}
         	any_vassal = {
             		is_female = no
             		age >= 18

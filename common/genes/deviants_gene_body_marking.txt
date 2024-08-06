@@ -25,50 +25,6 @@ morph_genes = {
 		}
 	}
 
-	deviants_eyeliner = {
-		no_eyeliner = {
-			index = 0			
-		}
-		eyeliner_1 = {
-			index = 1
-			male = {
-				decal = {		
-					body_part = head
-					textures = {
-						diffuse = "gfx/models/portraits/decals/eyeliner1.dds"
-					}
-					alpha_curve = {
-						{ 0  0 }
-						{ 1  1 }
-					}
-					priority = 10
-				}
-			}
-			female = male
-			boy = male
-			girl = male
-		}	
-		eyeliner_2 = {
-			index = 2
-			male = {
-				decal = {		
-					body_part = head
-					textures = {
-						diffuse = "gfx/models/portraits/decals/eyeliner2.dds"
-					}
-					alpha_curve = {
-						{ 0  0 }
-						{ 1  1 }
-					}
-					priority = 10
-				}
-			}
-			female = male
-			boy = male
-			girl = male
-		}	
-	}
-
 	deviants_marking = {
 		no_marking = {
 			index = 0			
@@ -149,6 +105,44 @@ morph_genes = {
 			boy = male
 			girl = male
 		}
+		marking_5 = {
+			index = 5
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/eyeliner1.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}	
+		marking_6 = {
+			index = 6
+			male = {
+				decal = {		
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/eyeliner2.dds"
+					}
+					alpha_curve = {
+						{ 0  0 }
+						{ 1  1 }
+					}
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}	
 	}
 
 	deviants_pussy_cum = {

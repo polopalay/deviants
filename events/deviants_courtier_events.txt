@@ -648,11 +648,7 @@ deviants_courtier.1440 = {
 		is_female = yes
 		age >= 18
 		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-		OR = {
-			has_trait = deviants_succubus
-			has_trait = deviants_lesser_succubus
-			has_trait = deviants_virgin
-		}
+		has_character_modifier = deviants_prostitute
 	}
 	option = {
 		name = deviants_courtier.1440.a
@@ -763,11 +759,6 @@ deviants_courtier.1460 = {
 		is_female = yes
 		age >= 18
 		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		OR = {
-			has_trait = deviants_succubus
-			has_trait = deviants_lesser_succubus
-			has_trait = deviants_virgin
-		}
 		OR = {
 			AND = {
 				exists = cp:councillor_chancellor
@@ -1774,14 +1765,12 @@ deviants_courtier.5100 = {
 					trigger_event = deviants_courtier.5200
 				}
 				50 = {
-					trigger = { has_trait = deviants_strange_dildo }
 					trigger_event = deviants_courtier.5300
 				}
                 		50 = {
 					trigger_event = deviants_courtier.5400
 				}
 				50 = {
-					trigger = { has_trait = deviants_horse_fucker }
 					trigger_event = deviants_courtier.5500
 				}
 				50 = {

@@ -216,6 +216,40 @@ marking_clothes = {
 			}
 		}
 	}
+	marking5 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_5
+			}
+		}
+	}
+	marking6 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = deviants_marking
+				value = 1
+				template = marking_6
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = deviants_marking_6
+			}
+		}
+	}
 }
 
 eyes_color_clothes = {

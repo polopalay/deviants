@@ -3,18 +3,6 @@
 	succubus = {
 		traits = {
 			deviants_succubus
-		}
-		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = deviants_body
-				value = 1
-				template = brand
-			}
-		}	
-	}
-	lesser_succubus = {
-		traits = {
 			deviants_lesser_succubus
 		}
 		dna_modifiers = {
@@ -24,44 +12,6 @@
 				value = 1
 				template = brand
 			}
-			morph = {
-				mode = replace
-				gene = deviants_eyeliner
-				value = 1
-				template = eyeliner_1
-			}
 		}	
-	}
-	deviants_virgin = {
-		traits = {
-			deviants_virgin
-		}
-		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = deviants_bodypaint
-				value = 1
-				template = bodypaint
-			}
-			morph = {
-				mode = add
-				gene = deviants_eyeliner
-				value = 1
-				template = eyeliner_2
-			}
-		}
-	}
-	deviants_blood = {
-		traits = {
-			deviants_blood
-		}
-		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = deviants_tattoo
-				value = 1
-				template = tattoo
-			}
-		}
 	}
 }

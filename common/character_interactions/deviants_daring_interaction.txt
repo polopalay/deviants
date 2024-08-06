@@ -103,6 +103,20 @@ deviants_makeup = {
 	}
 	send_option = {
 		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_5 } }
+		}
+		flag = deviants_marking_5
+		localization = deviants_marking_5
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_flag = deviants_marking_6 } }
+		}
+		flag = deviants_marking_6
+		localization = deviants_marking_6
+	}
+	send_option = {
+		is_valid = {
 			scope:recipient = {
 				OR = {
 					has_character_flag = deviants_white_eyes
@@ -217,6 +231,8 @@ deviants_makeup = {
 				remove_character_flag = deviants_marking_2
 				remove_character_flag = deviants_marking_3
 				remove_character_flag = deviants_marking_4
+				remove_character_flag = deviants_marking_5
+				remove_character_flag = deviants_marking_6
 			}
 		}
 		else_if = {
@@ -226,6 +242,8 @@ deviants_makeup = {
 				add_character_flag = deviants_marking_2
 				remove_character_flag = deviants_marking_3
 				remove_character_flag = deviants_marking_4
+				remove_character_flag = deviants_marking_5
+				remove_character_flag = deviants_marking_6
 			}
 		}
 		else_if = {
@@ -235,6 +253,8 @@ deviants_makeup = {
 				remove_character_flag = deviants_marking_2
 				add_character_flag = deviants_marking_3
 				remove_character_flag = deviants_marking_4
+				remove_character_flag = deviants_marking_5
+				remove_character_flag = deviants_marking_6
 			}
 		}
 		else_if = {
@@ -244,6 +264,30 @@ deviants_makeup = {
 				remove_character_flag = deviants_marking_2
 				remove_character_flag = deviants_marking_3
 				add_character_flag = deviants_marking_4
+				remove_character_flag = deviants_marking_5
+				remove_character_flag = deviants_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_marking_5 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+				add_character_flag = deviants_marking_5
+				remove_character_flag = deviants_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:deviants_marking_6 = yes }
+			scope:recipient = {
+				remove_character_flag = deviants_marking_1
+				remove_character_flag = deviants_marking_2
+				remove_character_flag = deviants_marking_3
+				remove_character_flag = deviants_marking_4
+				remove_character_flag = deviants_marking_5
+				add_character_flag = deviants_marking_6
 			}
 		}
 		else_if = {
@@ -253,6 +297,8 @@ deviants_makeup = {
 				remove_character_flag = deviants_marking_2
 				remove_character_flag = deviants_marking_3
 				remove_character_flag = deviants_marking_4
+				remove_character_flag = deviants_marking_5
+				remove_character_flag = deviants_marking_6
 			}
 		}
 		else_if = {

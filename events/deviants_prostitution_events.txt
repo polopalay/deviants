@@ -528,7 +528,6 @@ deviants_prostitution.9030 = {
 	title = deviants_prostitution.9030.t
     	desc = deviants_prostitution.9030.a.desc
 	theme = seduction
-	override_background = { reference = deviantgoorgy }
 	right_portrait = {
 		character = root
 		animation = thinking
