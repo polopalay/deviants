@@ -9,8 +9,6 @@ deviants_spawn_death_korp = {
 			track = loyalty
 			value >= 100
 		} 
-	}
-	is_valid = {
 		is_valid_construction_alchemy3_trigger = yes
 	}
 	effect = {
@@ -45,8 +43,6 @@ deviants_demon_generals = {
 			track = loyalty
 			value >= 100
 		} 
-	}
-	is_valid = {
 		is_valid_construction_alchemy3_trigger = yes
 	}
 	effect = {

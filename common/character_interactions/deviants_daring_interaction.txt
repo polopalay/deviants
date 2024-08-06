@@ -560,6 +560,14 @@ deviants_mind_break_interaction = {
 				track = daring
 				value >= 50
 			} 
+			OR = {
+				is_valid_construction_alchemy2_trigger = yes
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = corruption
+					value >= 100
+				}
+			}
 		}
 		scope:recipient = {
 			is_female = yes

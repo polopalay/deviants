@@ -176,10 +176,6 @@ deviants_create_lesser_succubus_interaction = {
 				track = corruption
 				value >= 25
 			} 
-		}
-	}
-	is_valid = {
-		scope:actor = {
 			is_valid_construction_alchemy3_trigger = yes
 		}
 	}
