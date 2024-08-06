@@ -11,11 +11,11 @@ deviants_weight_interaction = {
 				has_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value >= 1
+					value >= 2
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 2
+					value >= 4
 				}
 			}
 		}
@@ -37,14 +37,14 @@ deviants_weight_interaction = {
 				add_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value = -1
+					value = -2
 				}
 			}
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -2
+					value = -4
 				}
 			}
 		}
@@ -67,11 +67,11 @@ deavians_dealing_with_stress_interaction = {
 				has_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value >= 2
+					value >= 5
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 4
+					value >= 10
 				}
 			}
 		}
@@ -99,14 +99,14 @@ deavians_dealing_with_stress_interaction = {
 				add_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value = -2
+					value = -5
 				}
 			}
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -4
+					value = -10
 				}
 			}
 		}
@@ -170,11 +170,11 @@ deviants_heal_interaction = {
 				has_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value >= 2
+					value >= 5
 				}
 				has_trait_xp = {
 					trait = deviants_lesser_succubus
-					value >= 4
+					value >= 10
 				}
 			}
 		}
@@ -232,14 +232,14 @@ deviants_heal_interaction = {
 				add_trait_xp = {
 					trait = deviants_succubus
 					track = power
-					value = -2
+					value = -5
 				}
 			}
 			if = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = {
 					trait = deviants_lesser_succubus
-					value = -4
+					value = -10
 				}
 			}
 		}

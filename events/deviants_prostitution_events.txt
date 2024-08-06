@@ -12,6 +12,7 @@ deviants_prostitution.9000 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9000.a
 		custom_tooltip = deviants_prostitution.9000.a.tt
 		hidden_effect = {
@@ -118,6 +119,7 @@ deviants_prostitution.9010 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9010.a
 		custom_tooltip = deviants_prostitution.9010.a.tt
 		hidden_effect = {
@@ -533,6 +535,7 @@ deviants_prostitution.9030 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9030.a
 		custom_tooltip = deviants_prostitution.9030.a.tt
 		hidden_effect = {
@@ -787,6 +790,7 @@ deviants_prostitution.9040 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9040.a
 		custom_tooltip = deviants_prostitution.9040.a.tt
 		hidden_effect = {
@@ -988,6 +992,7 @@ deviants_prostitution.9200 = {
 	}
 	# agree
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9200.a
 		custom_tooltip = deviants_prostitution.9200.a.tt
 		hidden_effect = {
@@ -1040,6 +1045,7 @@ deviants_prostitution.9202 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9202.a
 		custom_tooltip = deviants_prostitution.9202.a.tt	
 		duel = {
@@ -1077,6 +1083,7 @@ deviants_prostitution.9202 = {
 	}	
 	# 
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9202.b
 		custom_tooltip = deviants_prostitution.9202.b.tt	
 		duel = {
@@ -1114,6 +1121,7 @@ deviants_prostitution.9202 = {
 	}	
 	# anal ride him right there...
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9202.c
 		custom_tooltip = deviants_prostitution.9202.c.tt	
 		duel = {
@@ -1326,6 +1334,7 @@ deviants_prostitution.9220 = {
 	}
 	# agree
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9220.a
 		custom_tooltip = deviants_prostitution.9220.a.tt
 		hidden_effect = {
@@ -1443,6 +1452,7 @@ deviants_prostitution.9230 = {
 	}
 	# agree
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9230.a
 		custom_tooltip = deviants_prostitution.9230.a.tt
 		hidden_effect = {
@@ -1491,6 +1501,7 @@ deviants_prostitution.9232 = {
 	}
 	# work hard
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_prostitution.9232.a
 		custom_tooltip = deviants_prostitution.9232.a.tt	
 		trigger_event = deviants_prostitution.9233
@@ -1549,15 +1560,6 @@ deviants_prostitution.9234 = {
 		name = deviants_prostitution.9234.a
 		custom_tooltip = deviants_prostitution.9234.a.tt	
 		hidden_effect = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = 1
-			}
-			add_trait_xp = {
-				trait = deviants_lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = deviants_body_cum = days = 10 }
 		}
 		add_gold = 1

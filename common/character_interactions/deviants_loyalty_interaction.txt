@@ -90,15 +90,15 @@ deviants_give_resource_interaction = {
 				limit = { scope:gold = yes }
 				add_gold = medium_gold_value
 			}
-			if = {
+			else_if = {
 				limit = { scope:prestige = yes }
 				add_prestige = medium_prestige_value
 			}
-			if = {
+			else_if = {
 				limit = { scope:piety = yes }
 				add_piety = medium_piety_value
 			}
-			if = {
+			else_if = {
 				limit = { scope:dynasty_prestige = yes }
 				add_dynasty_prestige = medium_dynasty_prestige_value
 			}
