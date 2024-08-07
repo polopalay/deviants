@@ -333,14 +333,7 @@ deviants_purify_interaction = {
 				track = power
 				value >= 10
 			}
-			OR = {
-				is_valid_construction_alchemy2_trigger = yes
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = corruption
-					value >= 100
-				}
-			}
+			is_valid_construction_alchemy2_trigger = yes
 		}
 		scope:recipient = {
 			OR = {

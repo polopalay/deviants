@@ -38,17 +38,31 @@ is_valid_construction_brothel3_trigger = {
 }
 
 is_valid_construction_alchemy1_trigger = {
-	any_held_title = {
-		any_county_province = {
-			has_building_or_higher = deviants_alchemy1 
+	OR = {
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_alchemy1 
+			}
+		}
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = corruption
+			value >= 50
 		}
 	}
 }
 
 is_valid_construction_alchemy2_trigger = {
-	any_held_title = {
-		any_county_province = {
-			has_building_or_higher = deviants_alchemy2 
+	OR = {
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_alchemy2 
+			}
+		}
+		has_trait_xp = {
+			trait = deviants_succubus
+			track = corruption
+			value >= 100
 		}
 	}
 }

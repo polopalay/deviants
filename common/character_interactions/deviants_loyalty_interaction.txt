@@ -118,14 +118,7 @@ deviants_cultist_interaction = {
 		scope:actor = {
 			has_trait = deviants_succubus
 			is_ruler = yes
-			OR = {
-				is_valid_construction_alchemy1_trigger = yes
-				has_trait_xp = {
-					trait = deviants_succubus
-					track = corruption
-					value >= 50
-				}
-			}
+			is_valid_construction_alchemy1_trigger = yes
 		}
 		scope:recipient = {
 			OR = {
