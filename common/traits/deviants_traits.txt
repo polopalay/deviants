@@ -205,12 +205,12 @@ deviants_virgin = {
 
 	attraction_opinion = 25
 	fertility = 1
-	diplomacy = 5
-	martial = 5
-	stewardship = 5
-	intrigue = 5
-	learning = 5
-	prowess = 5
+	diplomacy = 6
+	martial = 6
+	stewardship = 6
+	intrigue = 6
+	learning = 6
+	prowess = 6
 	movement_speed = 0.1
 	retreat_losses = -0.1
 	embarkation_cost_mult = -0.1
@@ -238,7 +238,6 @@ deviants_blood = {
 		}
 	}
 
-	good = yes	
 	birth = 0.1
 
 	diplomacy = 6

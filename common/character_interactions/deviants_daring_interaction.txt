@@ -388,6 +388,11 @@ deviants_nickname = {
 		locations = nickname_the_whore
 	}
 	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_whore } } }
+		flag = nickname_the_wench
+		locations = nickname_the_wench
+	}
+	send_option = {
 		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_semen_tank } } }
 		flag = nickname_the_semen_tank
 		locations = nickname_the_semen_tank
@@ -396,6 +401,26 @@ deviants_nickname = {
 		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
 		flag = nickname_the_penis_guillotine
 		locations = nickname_the_penis_guillotine
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		flag = nickname_the_sex_machine
+		locations = nickname_the_sex_machine
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		flag = nickname_the_ladycow
+		locations = nickname_the_ladycow
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		flag = nickname_the_dildo
+		locations = nickname_the_dildo
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		flag = nickname_the_exhibitionist
+		locations = nickname_the_exhibitionist
 	}
 
 	on_accept = {
@@ -413,12 +438,32 @@ deviants_nickname = {
 				give_nickname = nickname_the_whore
 			}
 			else_if = {
+				limit = { scope:nickname_the_wench = yes }
+				give_nickname = nickname_the_wench
+			}
+			else_if = {
 				limit = { scope:nickname_the_semen_tank = yes }
 				give_nickname = nickname_the_semen_tank
 			}
 			else_if = {
 				limit = { scope:nickname_the_penis_guillotine = yes }
 				give_nickname = nickname_the_penis_guillotine
+			}
+			else_if = {
+				limit = { scope:nickname_the_sex_machine = yes }
+				give_nickname = nickname_the_sex_machine
+			}
+			else_if = {
+				limit = { scope:nickname_the_ladycow = yes }
+				give_nickname = nickname_the_ladycow
+			}
+			else_if = {
+				limit = { scope:nickname_the_dildo = yes }
+				give_nickname = nickname_the_dildo
+			}
+			else_if = {
+				limit = { scope:nickname_the_exhibitionist = yes }
+				give_nickname = nickname_the_exhibitionist
 			}
 		}
 		scope:actor = {
@@ -599,6 +644,7 @@ deviants_mind_break_interaction = {
 				1 = { give_nickname = nickname_the_bitch }
 				1 = { give_nickname = nickname_the_slut }
 				1 = { give_nickname = nickname_the_whore }
+				1 = { give_nickname = nickname_the_wench }
 			}
 			add_trait = lustful
 			add_trait = deviants_virgin

@@ -1,6 +1,10 @@
 nickname_the_bitch = { is_bad = yes }
 nickname_the_slut = { is_bad = yes }
 nickname_the_whore = { is_bad = yes }
+nickname_the_wench = { is_bad = yes }
 nickname_the_semen_tank = { is_bad = yes }
 nickname_the_penis_guillotine = { is_bad = yes }
 nickname_the_sex_machine = { is_bad = yes }
+nickname_the_ladycow = {}
+nickname_the_dildo = { is_bad = yes }
+nickname_the_exhibitionist = { is_bad = yes }

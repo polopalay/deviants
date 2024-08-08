@@ -781,8 +781,7 @@ deviants_prostitution.9040 = {
 	type = character_event
 	title = deviants_prostitution.9040.t
     	desc = deviants_prostitution.9040.a.desc
-	theme = realm
-	override_background = { reference = deviantgoorgy }
+	theme = seduction
 	right_portrait = {
 		character = root
 		animation = thinking

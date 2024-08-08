@@ -81,6 +81,7 @@ deviants_add_courtier_interaction = {
 					1 = { give_nickname = nickname_the_bitch }
 					1 = { give_nickname = nickname_the_slut }
 					1 = { give_nickname = nickname_the_whore }
+					1 = { give_nickname = nickname_the_wench }
 				}
 			}
 		}
@@ -191,6 +192,7 @@ deviants_create_lesser_succubus_interaction = {
 				1 = { give_nickname = nickname_the_bitch }
 				1 = { give_nickname = nickname_the_slut }
 				1 = { give_nickname = nickname_the_whore }
+				1 = { give_nickname = nickname_the_wench }
 			}
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
@@ -243,6 +245,7 @@ deviants_create_succubus_interaction = {
 				1 = { give_nickname = nickname_the_bitch }
 				1 = { give_nickname = nickname_the_slut }
 				1 = { give_nickname = nickname_the_whore }
+				1 = { give_nickname = nickname_the_wench }
 			}
 			add_trait = deviants_succubus
 			add_character_modifier = deviants_prostitute

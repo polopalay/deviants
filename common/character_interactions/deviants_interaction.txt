@@ -136,10 +136,12 @@ deviants_prostitute_interaction = {
 				limit = { has_trait = deviants_lesser_succubus }
 				add_trait_xp = { trait = deviants_lesser_succubus value = 2 }
 			}
-			random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
-			random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
-			random = { chance = 25 add_character_flag = { flag = deviants_ass_cum days = 10 } }
-			random = { chance = 25 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
+			hidden_effect = {
+				random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_ass_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
+			}
 		}
 		scope:recipient = {
 			if = {
@@ -154,14 +156,13 @@ deviants_prostitute_interaction = {
 			}
 			random = {
 				chance = 10
-				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-				modifier = { add = 5 scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
 				buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
-				random = { chance = 50 add_character_flag = { flag = deviants_face_cum days = 10 } }
-				random = { chance = 50 add_character_flag = { flag = deviants_body_cum days = 10 } }
-				random = { chance = 50 add_character_flag = { flag = deviants_ass_cum days = 10 } }
-				random = { chance = 50 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
+				hidden_effect = {
+					random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
+					random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
+					random = { chance = 25 add_character_flag = { flag = deviants_ass_cum days = 10 } }
+					random = { chance = 25 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
+				}
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 1 }
 				if = {
 					limit = { has_trait = deviants_succubus }
@@ -296,6 +297,7 @@ deviants_become_prostitute_interaction = {
 				1 = { give_nickname = nickname_the_bitch }
 				1 = { give_nickname = nickname_the_slut }
 				1 = { give_nickname = nickname_the_whore }
+				1 = { give_nickname = nickname_the_wench }
 			}
 			if = {
 				limit = { is_imprisoned_by = scope:actor }
