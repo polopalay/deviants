@@ -2066,6 +2066,7 @@ deviants_devil.1310 = {
 		name = deviants_devil.1310.a
 		custom_tooltip = deviants_devil.1310.a.tt
 		hidden_effect = {
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
@@ -2083,6 +2084,10 @@ deviants_devil.1310 = {
 	option = {
 		name = deviants_devil.1310.b
 		custom_tooltip = deviants_devil.1310.b.tt
+		hidden_effect = {
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			add_character_flag = { flag = deviants_body_cum months = 1 }
+		}
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
 			days = 30
@@ -2264,6 +2269,7 @@ deviants_devil.1320 = {
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
+			add_character_flag = { flag = deviants_ass_cum months = 1 }
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = corruption

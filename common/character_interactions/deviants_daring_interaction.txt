@@ -388,7 +388,7 @@ deviants_nickname = {
 		locations = nickname_the_whore
 	}
 	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_whore } } }
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_wench } } }
 		flag = nickname_the_wench
 		locations = nickname_the_wench
 	}
@@ -403,24 +403,24 @@ deviants_nickname = {
 		locations = nickname_the_penis_guillotine
 	}
 	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
-		flag = nickname_the_sex_machine
-		locations = nickname_the_sex_machine
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_ladycow } } }
 		flag = nickname_the_ladycow
 		locations = nickname_the_ladycow
 	}
 	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_dildo } } }
 		flag = nickname_the_dildo
 		locations = nickname_the_dildo
 	}
 	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_exhibitionist } } }
 		flag = nickname_the_exhibitionist
 		locations = nickname_the_exhibitionist
+	}
+	send_option = {
+		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_sex_machine } } }
+		flag = nickname_the_sex_machine
+		locations = nickname_the_sex_machine
 	}
 
 	on_accept = {
