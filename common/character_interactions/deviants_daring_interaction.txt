@@ -67,6 +67,8 @@ deviants_makeup = {
 					has_character_flag = deviants_marking_2
 					has_character_flag = deviants_marking_3
 					has_character_flag = deviants_marking_4
+					has_character_flag = deviants_marking_5
+					has_character_flag = deviants_marking_6
 				}
 			}
 		}
