@@ -262,7 +262,7 @@ deviants_prostitution.9013 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -284,7 +284,7 @@ deviants_prostitution.9014 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -317,7 +317,7 @@ deviants_prostitution.9015 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -339,7 +339,7 @@ deviants_prostitution.9016 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -441,7 +441,7 @@ deviants_prostitution.9021 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -463,7 +463,7 @@ deviants_prostitution.9022 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -495,7 +495,7 @@ deviants_prostitution.9023 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -517,7 +517,7 @@ deviants_prostitution.9024 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -577,7 +577,7 @@ deviants_prostitution.9031 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -694,7 +694,7 @@ deviants_prostitution.9033 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -717,7 +717,7 @@ deviants_prostitution.9034 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -749,7 +749,7 @@ deviants_prostitution.9035 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -771,7 +771,7 @@ deviants_prostitution.9036 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 	}	
 }
@@ -1194,7 +1194,7 @@ deviants_prostitution.9203 = {
 				value = 2
 			}
 			add_character_flag = { flag = deviants_face_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = 2
 	}	
@@ -1293,7 +1293,7 @@ deviants_prostitution.9207 = {
 				value = 2
 			}
 			add_character_flag = { flag = deviants_face_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = 2
 	}	
@@ -1373,7 +1373,7 @@ deviants_prostitution.9221 = {
 				trait = deviants_lesser_succubus
 				value = 2
 			}
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = 1
 	}	
@@ -1538,7 +1538,7 @@ deviants_prostitution.9233 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = minor_gold_value
 	}	
@@ -1558,7 +1558,7 @@ deviants_prostitution.9234 = {
 		name = deviants_prostitution.9234.a
 		custom_tooltip = deviants_prostitution.9234.a.tt	
 		hidden_effect = {
-			add_character_flag = { flag = deviants_body_cum = days = 10 }
+			add_character_flag = { flag = deviants_body_cum  days = 10 }
 		}
 		add_gold = 1
 		stress_impact = {

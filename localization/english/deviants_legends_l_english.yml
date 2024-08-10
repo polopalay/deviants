@@ -1,0 +1,4 @@
+﻿l_english:
+ legend_sexual: "Sexual Legend"
+ legend_sexual_name: "The Sexual Legend of [ROOT.Legend.GetOwner.GetNameNoTooltip]"
+ legend_sexual_desc: "[ROOT.Legend.GetOwner.GetTitledFirstNameNoTooltip] is renowned for [ROOT.Legend.GetOwner.GetHerHis] sexual deeds."

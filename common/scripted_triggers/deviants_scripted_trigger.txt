@@ -5,11 +5,6 @@ is_valid_prostitute_trigger = {
 	is_travelling = no
 	is_in_army = no
 	has_character_modifier = deviants_prostitute 
-	OR = {
-		has_trait = deviants_succubus
-		has_trait = deviants_lesser_succubus
-		age < 40
-	}
 	NOT = { has_character_modifier = deviants_fuckedsilly }
 }
 

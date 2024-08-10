@@ -1,0 +1,18 @@
+sex_machine = {
+	portrait_animation = personality_greedy
+
+	properties = { }
+
+	chapters = {
+		opening = legend_chapter_opening_generic
+		promise = legend_chapter_motivation_generic
+		oath = legend_chapter_discovery_generic
+		conclusion = legend_chapter_conclusion_generic
+	}
+
+	impact = {
+		owner_modifier = {
+			attraction_opinion = 25
+		}
+	}
+}

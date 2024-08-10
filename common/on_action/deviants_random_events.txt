@@ -2,7 +2,7 @@ quarterly_playable_pulse = {
 	trigger = {
 		is_adult = yes
 		has_character_modifier = deviants_prostitute
-		is_incapable = no
+		has_trait = deviants_succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -10,74 +10,28 @@ quarterly_playable_pulse = {
 		is_female = yes
 	}
 	random_on_action = {
-		20 = deviants_courtier_on_action
-		20 = deviants_devil_on_action
-		20 = deviants_loyalty_on_action
-		20 = deviants_blackmail_on_action
-		20 = deviants_prostitution_on_action
+		100 = deviants_devil_on_action
 	}
 }
 
-deviants_blackmail_on_action = {
+on_trigger_court_events = {
 	trigger = {
-		has_trait = deviants_succubus
+		is_available = yes
 	}
 	random_events = {
-		chance_to_happen = 50
-		100 = deviants_blackmail.1100 # basic blackmail in the council room during private meeting
-		100 = deviants_blackmail.1200 # groping you in public, demanding money or sex
-		100 = deviants_blackmail.1300 # invite to be party decor
-		100 = deviants_blackmail.1400 # courtier force marry if both can
-		100 = deviants_blackmail.2000 # basic NTR event start
-		100 = deviants_courtier.7000 # blackmail by your fellow vassal in the name of your liege
-		100 = deviants_courtier.5100 # liege call you over with a letter
-	} 
-}
-
-deviants_courtier_on_action = {
-	trigger = {
-		has_trait = deviants_succubus
+		200 = deviants_courtier.1440 # urge to expose at high submission
+		200 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
+		200 = deviants_loyalty.8000 # start men at arms blackmail at max deviancy
+		200 = deviants_loyalty.8099 # basic men at arms event request
+		200 = deviants_loyalty.8900 # 0 loyalty punishment event
 	}
-	random_events = {
-		chance_to_happen = 50
-		50 = deviants_courtier.1304 # vassal wants to bath with you
-		50 = deviants_courtier.1440 # urge to expose at high submission
-		50 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
-	} 
 }
 
 deviants_devil_on_action = {
-	trigger = {
-		has_trait = deviants_succubus
-	}
 	random_events = {
-		chance_to_happen = 50
+		chance_to_happen = 10
 		50 = deviants_devil.1410 # gremlin fuck
 		50 = deviants_devil.1300 # special dream
+		50 = deviants_courtier.1304 # vassal wants to bath with you
 	} 
-}
-
-deviants_loyalty_on_action = {
-	trigger = {
-		has_trait = deviants_succubus
-	}
-	random_events = {
-		chance_to_happen = 50
-		50 = deviants_loyalty.8000 # start men at arms blackmail at max deviancy
-		50 = deviants_loyalty.8099 # basic men at arms event request
-		50 = deviants_loyalty.8900 # 0 loyalty punishment event
-	} 
-}
-
-deviants_prostitution_on_action = {
-	random_events = {
-		chance_to_happen = 50
-		50 = deviants_prostitution.9000 # coming of age male
-		50 = deviants_prostitution.9010 # a married couple
-		50 = deviants_prostitution.9030 # older man
-		50 = deviants_prostitution.9040 # noble woman
-		50 = deviants_prostitution.9200 # decide to be a nude waitress
-		50 = deviants_prostitution.9220 # only decoration aviable
-		50 = deviants_prostitution.9230 # rich merchant
-	}
 }

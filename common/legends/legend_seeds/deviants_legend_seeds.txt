@@ -1,0 +1,24 @@
+sex_machine = {
+	type = sexual
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = sex_machine_legend
+		}
+		OR = {
+			culture = { has_cultural_pillar = heritage_west_germanic }
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+	is_valid = {
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancestral_glory
+	chronicle_properties = {
+		ancestor = character:159835 # "Arthur"
+		title = title:k_england
+	}
+}
+
