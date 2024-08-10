@@ -14,24 +14,10 @@ quarterly_playable_pulse = {
 	}
 }
 
-on_trigger_court_events = {
-	trigger = {
-		is_available = yes
-	}
-	random_events = {
-		200 = deviants_courtier.1440 # urge to expose at high submission
-		200 = deviants_courtier.1460 # high deviancy, vassals want to fuck since you were doing naked court again
-		200 = deviants_loyalty.8000 # start men at arms blackmail at max deviancy
-		200 = deviants_loyalty.8099 # basic men at arms event request
-		200 = deviants_loyalty.8900 # 0 loyalty punishment event
-	}
-}
-
 deviants_devil_on_action = {
 	random_events = {
 		chance_to_happen = 10
 		50 = deviants_devil.1410 # gremlin fuck
 		50 = deviants_devil.1300 # special dream
-		50 = deviants_courtier.1304 # vassal wants to bath with you
 	} 
 }

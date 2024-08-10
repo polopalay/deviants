@@ -154,8 +154,13 @@ deviants_devil.1412 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_succubus
 				track = corruption
-				value = 2
+				value = 1
 			}
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 		}

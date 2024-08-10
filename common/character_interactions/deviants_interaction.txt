@@ -77,80 +77,38 @@ deviants_prostitute_interaction = {
 						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
 					}
 				}
+				random = {
+					chance = 10
+					modifier = { add = 10 has_trait = generous }
+					modifier = { add = -10 has_trait = greedy }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_2 } }
+					modifier = { add = 20 scope:secondary_recipient = { has_trait = beauty_good_3 } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = beauty_bad_1 } }
+					modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
+					modifier = { add = -20 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
+				}
 			}
     		}
 		scope:secondary_recipient = {
-			if = {
-				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 8 }
-			}
-			else_if = {
-				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 10 }
-			}
-			else = {
-				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
+			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+			hidden_effect = {
+				random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_ass_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
 			}
 			if = {
-				limit = { scope:actor = { target_is_liege_or_above = scope:secondary_recipient } }
-				hidden_effect = {
-					trigger_event = deviants_courtier.5100
-				}
-			}
-			else_if = {
-				limit = { scope:actor = { is_vassal_or_below_of = scope:secondary_recipient.liege } }
-				hidden_effect = {
-					scope:actor = {
-						save_scope_as = deviant_go_random_1
-						liege = { save_scope_as = deviant_go_random_2 }
-					}
-					trigger_event = deviants_courtier.7000
-				}
-			}
-			else_if = {
-				limit = { scope:actor = is_vassal_or_below_of = scope:recipient scope:recipient = scope:secondary_recipient }
-				hidden_effect = {
-					scope:actor = { save_scope_as = deviant_go_random_1 }
-					random_list = {
-						50 = { trigger_event = deviants_blackmail.1200 } # groping you in public, demanding money or sex
-						50 = { trigger_event = deviants_blackmail.1300 } # invite to be party decor
-					}
-				}
-			}
-			else_if = {
-				limit = { scope:actor = { age <= 20 is_female = no } }
-				hidden_effect = {
-					trigger_event = deviants_prostitution.9000
-				}
-			}
-			else_if = {
-				limit = { scope:actor = { age <= 20 is_female = no } }
-				hidden_effect = {
-					trigger_event = deviants_prostitution.9030
-				}
-			}
-			else_if = {
-				limit = { scope:actor = { is_female = yes } }
-				hidden_effect = {
-					trigger_event = deviants_prostitution.9040
-				}
-			}
-			else_if = {
-				limit = { scope:actor = { is_married = yes } }
-				hidden_effect = {
-					trigger_event = deviants_prostitution.9010
-				}
-			}
-			else = {
+				limit = { has_trait = deviants_succubus }
 				random_list = {
-					50 = { trigger_event = deviants_prostitution.9200 } # decide to be a nude waitress
-					50 = { trigger_event = deviants_prostitution.9220 } # only decoration aviable
-					50 = { trigger_event = deviants_prostitution.9230 } # rich merchant
+					50 = { add_trait_xp = { trait = deviants_succubus track = power value = 1 } }
+					50 = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } }
 				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = { trait = deviants_lesser_succubus value = 1 }
 			}
 		}
 	}

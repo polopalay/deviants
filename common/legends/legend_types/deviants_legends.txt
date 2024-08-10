@@ -490,12 +490,33 @@ sexual = {
 	}
 	
 	on_yearly = {
-		scope:legend = { save_scope_as = promoted_legend }
-		trigger_event = {
-			on_action = legend_ongoing_events
-		}
-		trigger_event = {
-			on_action = legend_changing_events
+		scope:legend = { 
+			save_scope_as = promoted_legend
+			if = {
+				limit = { has_legend_chronicle = semen_tank }
+				if = {
+					limit = { has_legend_chapter = opening }
+					legend_owner = { trigger_event = deviants_blackmail.1100 }
+				}
+				else_if = {
+					limit = { has_legend_chapter = mind_break }
+					legend_owner = { trigger_event = deviants_blackmail.1200 }
+				}
+				else_if = {
+					limit = { has_legend_chapter = toy }
+					legend_owner = { trigger_event = deviants_blackmail.1300 }
+				}
+				else_if = {
+					limit = { has_legend_chapter = conclusion }
+					legend_owner = {
+						if = {
+							limit = { is_married = no }
+							trigger_event = deviants_blackmail.1400
+						}
+						else = { trigger_event = deviants_blackmail.2000 }
+					}
+				}
+			}
 		}
 	}
 }

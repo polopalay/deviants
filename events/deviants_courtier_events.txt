@@ -634,6 +634,7 @@ deviants_courtier.1372 = {
 	}			
 }
 
+#1440 urge to expose
 deviants_courtier.1440 = { 
 	type = character_event
 	title = deviants_courtier.1440.t

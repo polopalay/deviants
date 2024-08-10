@@ -1,13 +1,85 @@
+semen_tank = {
+	portrait_animation = personality_greedy
+
+	properties = {}
+	chapters = {
+		opening = legend_chapter_opening_semen_tank
+		mind_break = legend_chapter_mind_break
+		toy = legend_chapter_toy
+		conclusion = legend_chapter_conclusion_semen_tank
+	}
+
+	impact = {
+		owner_modifier = {
+			attraction_opinion = 25
+		}
+	}
+}
+
 sex_machine = {
 	portrait_animation = personality_greedy
 
-	properties = { }
-
+	properties = {}
 	chapters = {
-		opening = legend_chapter_opening_generic
-		promise = legend_chapter_motivation_generic
-		oath = legend_chapter_discovery_generic
-		conclusion = legend_chapter_conclusion_generic
+		opening = legend_chapter_opening_sex_machine
+		bitch = legend_chapter_bitch
+		machine = legend_chapter_machine
+		conclusion = legend_chapter_conclusion_sex_machine
+	}
+
+	impact = {
+		owner_modifier = {
+			attraction_opinion = 25
+		}
+	}
+}
+
+ladycow = {
+	portrait_animation = personality_greedy
+
+	properties = {}
+	chapters = {
+		opening = legend_chapter_opening_ladycow
+		promise = legend_chapter_promise
+		oath = legend_chapter_oath
+		conclusion = legend_chapter_conclusion_ladycow
+	}
+
+	impact = {
+		owner_modifier = {
+			attraction_opinion = 25
+		}
+	}
+}
+ 
+penis_guillotine = {
+	portrait_animation = personality_greedy
+
+	properties = {}
+	chapters = {
+		opening = legend_chapter_opening_penis_guillotine
+		cutter = legend_chapter_cutter
+		guillotine = legend_chapter_guillotine
+		expose = legend_chapter_expose
+		conclusion = legend_chapter_conclusion_penis_guillotine
+	}
+
+	impact = {
+		owner_modifier = {
+			attraction_opinion = 25
+		}
+	}
+}
+
+exhibitionist = {
+	portrait_animation = personality_greedy
+
+	properties = {}
+	chapters = {
+		opening = legend_chapter_opening_exhibitionist
+		naked_lady = legend_chapter_naked_lady
+		naked_court = legend_chapter_naked_court
+		conclusion = legend_chapter_conclusion_exhibitionist
 	}
 
 	impact = {

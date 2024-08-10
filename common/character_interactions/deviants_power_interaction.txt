@@ -130,7 +130,7 @@ deavians_dealing_with_stress_interaction = {
 			remove_trait = comfort_eater
 			remove_trait = inappetetic
 	    		stress_impact = {
-				base = -300
+				base = massive_stress_impact_loss
 			}
 		}
 	}
