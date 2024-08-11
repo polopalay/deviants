@@ -15,7 +15,6 @@ deviants_loyalty.8000 = {
 		outfit_tags = { military_outfit }
 	}
 	trigger = {
-		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		is_ruler = yes
 		is_female = yes
 		age >= 18
@@ -23,7 +22,10 @@ deviants_loyalty.8000 = {
 			age >= 18
 			is_female = no
 		}
-		NOT = { has_character_modifier = deviants_slave }
+		NOR = { 
+			has_nickname = nickname_the_ladycow
+			has_character_modifier = deviants_slave
+		}
 	}
 	immediate = {
 		random_knight = {
@@ -57,6 +59,7 @@ deviants_loyalty.8001 = {
 	right_portrait = {
 		character = root
 		animation = personality_greedy
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1
@@ -78,6 +81,7 @@ deviants_loyalty.8002 = {
 	right_portrait = {
 		character = root
 		animation = personality_greedy
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_randoman_1
@@ -109,6 +113,7 @@ deviants_loyalty.8003 = {
 	right_portrait = {
 		character = root
 		animation = personality_greedy
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_randoman_1
@@ -140,6 +145,7 @@ deviants_loyalty.8004 = {
 	right_portrait = {
 		character = root
 		animation = shame
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1
@@ -162,6 +168,7 @@ deviants_loyalty.8005 = {
 	right_portrait = {
 		character = root
 		animation = throne_room_kneel_2
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1
@@ -193,6 +200,7 @@ deviants_loyalty.8006 = {
 	right_portrait = {
 		character = root
 		animation = shame
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1
@@ -212,6 +220,10 @@ deviants_loyalty.8006 = {
 			add_character_flag = { flag = deviants_body_cum months = 1 }
 			add_character_flag = { flag = deviants_ass_cum months = 1 }
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			every_knight = {
+				limit = { is_ruler = yes is_female = no age >16 }
+				start_promote_lew_legend = yes
+			}
 		}
 	}		
 }
@@ -243,7 +255,10 @@ deviants_loyalty.8099 = {
 			age >= 18
 			is_female = no
 		}
-		has_character_modifier = deviants_slave
+		OR = {
+			has_character_modifier = deviants_slave
+			has_nickname = nickname_the_ladycow
+		}
 	}
 	immediate = {
 		random_knight = {
@@ -268,8 +283,8 @@ deviants_loyalty.8099 = {
 		custom_tooltip = deviants_loyalty.8099.b.tt
 		remove_short_term_gold = minor_gold_value
 		stress_impact = {
-				base = minor_stress_impact_gain
-				lustful = medium_stress_impact_gain
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 	}
 	option = {
@@ -297,6 +312,7 @@ deviants_loyalty.8100 = {
 	right_portrait = {
 		character = root
 		animation = shame
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1
@@ -312,6 +328,7 @@ deviants_loyalty.8100 = {
 				modifier = amused_opinion
 				opinion = 20
 			}
+			start_promote_lew_legend = yes
 		}
 		stress_impact = {
 				base = medium_stress_impact_gain
@@ -347,6 +364,7 @@ deviants_loyalty.8101 = {
 	right_portrait = {
 		character = root
 		animation = shame
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1
@@ -373,6 +391,9 @@ deviants_loyalty.8101 = {
 	option = {
 		name = deviants_loyalty.8101.b
 		custom_tooltip = deviants_loyalty.8101.b.tt
+		scope:deviants_loyalty_random_1 = {
+			start_promote_lew_legend = yes
+		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -410,6 +431,7 @@ deviants_loyalty.8102 = {
 	right_portrait = {
 		character = root
 		animation = prisondungeon
+		outfit_tags = { no_clothes }
 	}
 	option = {
 		name = deviants_loyalty.8102.a
@@ -417,6 +439,9 @@ deviants_loyalty.8102 = {
 		buy_sex_with_effect = {
 			CHARACTER = scope:deviants_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		scope:deviants_loyalty_random_1 = {
+			start_promote_lew_legend = yes
 		}
 	}
 	option = {
@@ -434,6 +459,402 @@ deviants_loyalty.8102 = {
 			}
 		}
 	}
+}
+
+#8200 first time greeting new recruits
+deviants_loyalty.8200 = { 
+	type = character_event
+	title = deviants_loyalty.8200.t
+	desc = deviants_loyalty.8200.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	trigger = {
+		is_ruler = yes
+		is_female = yes
+		age >= 18
+		any_knight = {
+			age >= 18
+			is_female = no
+		}
+		OR = {
+			has_nickname = nickname_the_ladycow
+			has_character_modifier = deviants_slave
+		}
+	}
+	right_portrait = {
+		character = root
+		animation = chaplain
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	immediate = {
+		random_knight = {
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# fine
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8200.a
+		custom_tooltip = deviants_loyalty.8200.a.tt
+		add_legitimacy = minor_legitimacy_loss
+		trigger_event = deviants_loyalty.8201
+	}		
+	# refuse
+	option = {
+		name = deviants_loyalty.8200.b
+		custom_tooltip = deviants_loyalty.8200.b.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -20
+			}
+		}
+		if = {
+			limit = { has_character_modifier = deviants_slave }
+			remove_character_modifier = deviants_slave
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = -5
+			}
+		}		
+	}	
+}
+#8201 presenting pussy on the stage
+deviants_loyalty.8201 = { 
+	type = character_event
+	title = deviants_loyalty.8201.t
+	desc = deviants_loyalty.8201.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = aggressive_sword
+	}
+	# constraint
+	option = {
+		ai_chance = { base = 50 }
+		name = deviants_loyalty.8201.a
+		custom_tooltip = deviants_loyalty.8201.a.tt
+		stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+		}
+	}
+	# outburst
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8201.b
+		custom_tooltip = deviants_loyalty.8201.b.tt	
+		trigger_event = deviants_loyalty.8202	
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		add_legitimacy = medium_legitimacy_loss
+		hidden_effect = {
+			add_character_flag = { flag = deviants_face_cum months = 1 }
+			add_character_flag = { flag = deviants_body_cum months = 1 }
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			add_character_flag = { flag = deviants_ass_cum months = 1 }
+		}
+	}	
+}
+#8202 knight shows how you just let him stick it in, in case it was not clear
+deviants_loyalty.8202 = { 
+	type = character_event
+	title = deviants_loyalty.8202.t
+	desc = deviants_loyalty.8202.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_ecstasy
+	}
+	# proceed
+	option = {
+		ai_chance = { base = 50 }
+		name = deviants_loyalty.8202.a
+		custom_tooltip = deviants_loyalty.8202.a.tt
+		stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+		}
+	}		
+	# harder
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8202.b
+		custom_tooltip = deviants_loyalty.8202.b.tt	
+		trigger_event = deviants_loyalty.8203	
+		add_legitimacy = minor_legitimacy_loss
+		hidden_effect = {
+			add_character_flag = { flag = deviants_face_cum months = 1 }
+			add_character_flag = { flag = deviants_body_cum months = 1 }
+			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			add_character_flag = { flag = deviants_ass_cum months = 1 }
+		}
+	}	
+	# enough
+	option = {
+		name = deviants_loyalty.8202.c
+		custom_tooltip = deviants_loyalty.8202.c.tt		
+		stress_impact = {
+			base = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = -2
+			}
+		}
+	}
+}
+#8203 if ask for harder, hard anal carry fuck to cum
+deviants_loyalty.8203 = { 
+	type = character_event
+	title = deviants_loyalty.8203.t
+	desc = deviants_loyalty.8203.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = aggressive_sword
+	}
+	# proceed
+	option = {
+		name = deviants_loyalty.8203.a
+		custom_tooltip = deviants_loyalty.8203.a.tt
+		trigger_event = deviants_loyalty.8204
+		add_legitimacy = minor_legitimacy_loss
+	}		
+}
+#8204 time to swear oaths, everybody strip, first guy coming to insert and swear and grope
+deviants_loyalty.8204 = { 
+	type = character_event
+	title = deviants_loyalty.8204.t
+	desc = deviants_loyalty.8204.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_ecstasy
+	}
+	# 
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8204.a
+		custom_tooltip = deviants_loyalty.8204.a.tt
+		trigger_event = deviants_loyalty.8205
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}		
+	# 
+	option = {
+		ai_chance = { base = 50 }
+		name = deviants_loyalty.8204.b
+		custom_tooltip = deviants_loyalty.8204.b.tt
+		trigger_event = deviants_loyalty.8207
+	}
+}
+#8205 if just stand there, after ten guys
+deviants_loyalty.8205 = { 
+	type = character_event
+	title = deviants_loyalty.8205.t
+	desc = deviants_loyalty.8205.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_disgust
+	}
+	# 
+	option = {
+		name = deviants_loyalty.8205.a
+		custom_tooltip = deviants_loyalty.8205.a.tt
+		trigger_event = deviants_loyalty.8206
+		hidden_effect = {
+			add_character_flag = { flag = deviants_face_cum months = 3 }
+			add_character_flag = { flag = deviants_body_cum months = 3 }
+			add_character_flag = { flag = deviants_pussy_cum months = 3 }
+			add_character_flag = { flag = deviants_ass_cum months = 3 }
+			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+		}
+	}		
+}
+#8206 if just endure, end in pussy throbbing hard
+deviants_loyalty.8206 = { 
+	type = character_event
+	title = deviants_loyalty.8206.t
+	desc = deviants_loyalty.8206.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_disgust
+	}
+	# 
+	option = {
+		name = deviants_loyalty.8206.a
+		custom_tooltip = deviants_loyalty.8206.a.tt
+		if = {
+			limit = { NOT = { has_nickname = nickname_the_ladycow } }
+			give_nickname = nickname_the_ladycow
+			remove_character_modifier = deviants_slave
+		}
+	}		
+}
+#8207 if shaking hip, fucking him on the stage
+deviants_loyalty.8207 = { 
+	type = character_event
+	title = deviants_loyalty.8207.t
+	desc = deviants_loyalty.8207.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_disgust
+	}
+
+	# 
+	option = {
+		name = deviants_loyalty.8207.a
+		custom_tooltip = deviants_loyalty.8207.a.tt
+		trigger_event = deviants_loyalty.8208
+	}		
+	# 
+	option = {
+		ai_chance = { base = 100 }
+		name = deviants_loyalty.8207.b
+		custom_tooltip = deviants_loyalty.8207.b.tt
+		trigger_event = deviants_loyalty.8209
+	}
+}
+#8208 if shake and cum end, they annoyed for being forced to enter the cum hole, some just leave rather than do it
+deviants_loyalty.8208 = { 
+	type = character_event
+	title = deviants_loyalty.8208.t
+	desc = deviants_loyalty.8208.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_disgust
+	}
+	# 
+	option = {
+		name = deviants_loyalty.8208.a
+		custom_tooltip = deviants_loyalty.8208.a.tt
+		hidden_effect = {
+			add_character_flag = { flag = deviants_face_cum months = 3 }
+			add_character_flag = { flag = deviants_body_cum months = 3 }
+			add_character_flag = { flag = deviants_pussy_cum months = 3 }
+			add_character_flag = { flag = deviants_ass_cum months = 3 }
+			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+		}
+	}		
+}
+#8209 if won't let them cum
+deviants_loyalty.8209 = { 
+	type = character_event
+	title = deviants_loyalty.8209.t
+	desc = deviants_loyalty.8209.a.desc
+	theme = realm
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = map_disgust
+	}
+	# 
+	option = {
+		name = deviants_loyalty.8209.a
+		custom_tooltip = deviants_loyalty.8209.a.tt
+		hidden_effect = {
+			add_character_flag = { flag = deviants_face_cum months = 3 }
+			add_character_flag = { flag = deviants_body_cum months = 3 }
+			add_character_flag = { flag = deviants_pussy_cum months = 3 }
+			add_character_flag = { flag = deviants_ass_cum months = 3 }
+			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 1
+			}
+		}
+	}		
 }
 
 deviants_loyalty.8900 = {
@@ -462,7 +883,10 @@ deviants_loyalty.8900 = {
 			age >= 18
 			is_female = no
 		}
-		has_character_modifier = deviants_slave
+		OR = {
+			has_nickname = nickname_the_ladycow
+			has_character_modifier = deviants_slave
+		}
 	}
 	immediate = {
 		random_knight = {
@@ -498,6 +922,7 @@ deviants_loyalty.8901 = {
 	right_portrait = {
 		character = root
 		animation = shame
+		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviants_loyalty_random_1

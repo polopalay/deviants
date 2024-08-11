@@ -77,11 +77,9 @@ deviants_add_courtier_interaction = {
 					}
 				}
 				add_character_modifier = deviants_prostitute
-				random_list = {
-					1 = { give_nickname = nickname_the_bitch }
-					1 = { give_nickname = nickname_the_slut }
-					1 = { give_nickname = nickname_the_whore }
-					1 = { give_nickname = nickname_the_wench }
+				if = {
+					limit = { have_devil_nicknames_trigger = no }
+					give_prostitution_nickname = yes
 				}
 			}
 		}
@@ -188,11 +186,9 @@ deviants_create_lesser_succubus_interaction = {
 			add_secret = { 
 				type = secret_witch
 			}
-			random_list = {
-				1 = { give_nickname = nickname_the_bitch }
-				1 = { give_nickname = nickname_the_slut }
-				1 = { give_nickname = nickname_the_whore }
-				1 = { give_nickname = nickname_the_wench }
+			if = {
+				limit = { have_devil_nicknames_trigger = no }
+				give_prostitution_nickname = yes
 			}
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
@@ -241,11 +237,9 @@ deviants_create_succubus_interaction = {
 		scope:recipient = {
 			add_secret = { type = secret_deviant }
 			add_secret = { type = secret_witch }
-			random_list = {
-				1 = { give_nickname = nickname_the_bitch }
-				1 = { give_nickname = nickname_the_slut }
-				1 = { give_nickname = nickname_the_whore }
-				1 = { give_nickname = nickname_the_wench }
+			if = {
+				limit = { have_devil_nicknames_trigger = no }
+				give_prostitution_nickname = yes
 			}
 			add_trait = deviants_succubus
 			add_character_modifier = deviants_prostitute

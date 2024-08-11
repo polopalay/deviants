@@ -46,3 +46,44 @@ deviants_death_korps  = {
 	high_maintenance_cost = { gold = 0 }
 }
 
+deviants_zombie = {
+	icon = skirmishers
+	type = skirmishers 
+	can_recruit = { always = no }
+
+	pursuit = 8
+	screen = 5
+	damage = 8
+	toughness = 5
+
+	counters = {
+		pikemen = 1
+	}
+
+	stack = 100
+	can_recruit = { have_witch_forest_trigger = yes }
+	buy_cost = { gold = 0 }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 0 }
+}
+
+deviants_skeleton = {
+	icon = skirmishers
+	type = skirmishers 
+	can_recruit = { always = no }
+
+	pursuit = 8
+	screen = 0
+	damage = 8
+	toughness = 0
+
+	counters = {
+		pikemen = 1
+	}
+
+	stack = 100
+	can_recruit = { have_witch_forest_trigger = yes }
+	buy_cost = { gold = 0 }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 0 }
+}

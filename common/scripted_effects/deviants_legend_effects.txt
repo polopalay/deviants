@@ -18,6 +18,15 @@ give_building_witch_forest = {
 	}
 }
 
+give_prostitution_nickname = {
+	random_list = {
+		1 = { give_nickname = nickname_the_bitch }
+		1 = { give_nickname = nickname_the_slut }
+		1 = { give_nickname = nickname_the_whore }
+		1 = { give_nickname = nickname_the_wench }
+	}
+}
+
 start_promote_lew_legend = {
 	if = {
 		limit = { 

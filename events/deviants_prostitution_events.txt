@@ -1540,6 +1540,10 @@ deviants_prostitution.9233 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
+		if = {
+			limit = { NOT = { has_nickname = nickname_the_sex_machine } }
+			give_nickname = nickname_the_sex_machine
+		}
 		add_gold = minor_gold_value
 	}	
 }

@@ -103,6 +103,3 @@
  gr_prestige: "Prestige"
  gr_piety: "Piety"
  gr_dynasty_prestige: "Dynasty Prestige"
-
- deviants_nickname: "Nickname"
- deviants_nickname.desc: "Give [recipient.GetShortUIName] a nickname"

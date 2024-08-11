@@ -153,7 +153,10 @@ sexual = {
 				on_complete = {
 					scope:protagonist = { 
 						lost_level_of_fame_piety = yes
-						random = { chance = 25 give_building_witch_forest = yes }
+						if = {
+							limit = { have_devil_building_trigger = no }
+							random = { chance = 25 give_building_witch_forest = yes }
+						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = corruption
@@ -249,7 +252,10 @@ sexual = {
 				on_complete = {
 					scope:protagonist = { 
 						lost_level_of_fame_piety = yes
-						random = { chance = 50 give_building_witch_forest = yes }
+						if = {
+							limit = { have_devil_building_trigger = no }
+							random = { chance = 50 give_building_witch_forest = yes }
+						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = corruption
@@ -366,7 +372,10 @@ sexual = {
 				on_complete = {
 					scope:protagonist = { 
 						lost_level_of_fame_piety = yes
-						give_building_witch_forest = yes
+						if = {
+							limit = { have_devil_building_trigger = no }
+							give_building_witch_forest = yes
+						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = corruption
@@ -424,7 +433,31 @@ sexual = {
 		if = {
 			limit = { scope:legend = { has_legend_chronicle = semen_tank } }
 			trigger_event = { 
-				on_action = legend_sexual_ongoing_events 
+				on_action = legend_semen_tank_ongoing_events 
+			}
+		}
+		else_if = {
+			limit = { scope:legend = { has_legend_chronicle = sex_machine } }
+			trigger_event = { 
+				on_action = legend_sex_machine_ongoing_events 
+			}
+		}
+		else_if = {
+			limit = { scope:legend = { has_legend_chronicle = ladycow } }
+			trigger_event = { 
+				on_action = legend_ladycow_ongoing_events 
+			}
+		}
+		else_if = {
+			limit = { scope:legend = { has_legend_chronicle = penis_guillotine } }
+			trigger_event = { 
+				on_action = legend_penis_guillotine_ongoing_events 
+			}
+		}
+		else_if = {
+			limit = { scope:legend = { has_legend_chronicle = exhibitionist } }
+			trigger_event = { 
+				on_action = legend_penis_exhibitionist_ongoing_events 
 			}
 		}
 	}

@@ -93,6 +93,21 @@ deviants_prostitute_interaction = {
     		}
 		scope:secondary_recipient = {
 			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+			if = {
+				limit = { scope:recipient = { is_valid_construction_brothel3_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
+			}
+			else_if = {
+				limit = { scope:recipient = { is_valid_construction_brothel2_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 8 }
+			}
+			else_if = {
+				limit = { scope:recipient = { is_valid_construction_brothel1_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 10 }
+			}
+			else = {
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
+			}
 			hidden_effect = {
 				random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
 				random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
@@ -230,11 +245,9 @@ deviants_become_prostitute_interaction = {
 				}
 			}
 			add_character_modifier = deviants_prostitute
-			random_list = {
-				1 = { give_nickname = nickname_the_bitch }
-				1 = { give_nickname = nickname_the_slut }
-				1 = { give_nickname = nickname_the_whore }
-				1 = { give_nickname = nickname_the_wench }
+			if = {
+				limit = { have_devil_nicknames_trigger = no }
+				give_prostitution_nickname = yes
 			}
 			if = {
 				limit = { is_imprisoned_by = scope:actor }

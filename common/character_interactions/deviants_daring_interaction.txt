@@ -357,127 +357,6 @@ deviants_makeup = {
 	auto_accept = yes
 }
 
-deviants_nickname = {
-	icon = rumor
-	desc = deviants_nickname.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
-	common_interaction = no
-	auto_accept = yes
-
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = { trait = deviants_succubus track = daring value >= 2 }
-		}
-		scope:recipient = {
-			has_character_modifier = deviants_prostitute	
-		}
-	}
-
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_bitch } } }
-		flag = nickname_the_bitch
-		locations = nickname_the_bitch
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_slut } } }
-		flag = nickname_the_slut
-		locations = nickname_the_slut
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_whore } } }
-		flag = nickname_the_whore
-		locations = nickname_the_whore
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_wench } } }
-		flag = nickname_the_wench
-		locations = nickname_the_wench
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_semen_tank } } }
-		flag = nickname_the_semen_tank
-		locations = nickname_the_semen_tank
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_penis_guillotine } } }
-		flag = nickname_the_penis_guillotine
-		locations = nickname_the_penis_guillotine
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_ladycow } } }
-		flag = nickname_the_ladycow
-		locations = nickname_the_ladycow
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_dildo } } }
-		flag = nickname_the_dildo
-		locations = nickname_the_dildo
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_exhibitionist } } }
-		flag = nickname_the_exhibitionist
-		locations = nickname_the_exhibitionist
-	}
-	send_option = {
-		is_valid = { scope:recipient = { NOT = { has_nickname = nickname_the_sex_machine } } }
-		flag = nickname_the_sex_machine
-		locations = nickname_the_sex_machine
-	}
-
-	on_accept = {
-		scope:recipient = {
-			if = {
-				limit = { scope:nickname_the_bitch = yes }
-				give_nickname = nickname_the_bitch
-			}
-			else_if = {
-				limit = { scope:nickname_the_slut = yes }
-				give_nickname = nickname_the_slut
-			}
-			else_if = {
-				limit = { scope:nickname_the_whore = yes }
-				give_nickname = nickname_the_whore
-			}
-			else_if = {
-				limit = { scope:nickname_the_wench = yes }
-				give_nickname = nickname_the_wench
-			}
-			else_if = {
-				limit = { scope:nickname_the_semen_tank = yes }
-				give_nickname = nickname_the_semen_tank
-			}
-			else_if = {
-				limit = { scope:nickname_the_penis_guillotine = yes }
-				give_nickname = nickname_the_penis_guillotine
-			}
-			else_if = {
-				limit = { scope:nickname_the_sex_machine = yes }
-				give_nickname = nickname_the_sex_machine
-			}
-			else_if = {
-				limit = { scope:nickname_the_ladycow = yes }
-				give_nickname = nickname_the_ladycow
-			}
-			else_if = {
-				limit = { scope:nickname_the_dildo = yes }
-				give_nickname = nickname_the_dildo
-			}
-			else_if = {
-				limit = { scope:nickname_the_exhibitionist = yes }
-				give_nickname = nickname_the_exhibitionist
-			}
-		}
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -2
-			}
-		}
-	}
-}
-
 deviants_nude_interaction = {
 	icon = nude
 	desc = deviants_nude_interaction.desc
@@ -642,11 +521,9 @@ deviants_mind_break_interaction = {
 				limit = { has_trait = chaste }
 				remove_trait = chaste
 			}
-			random_list = {
-				1 = { give_nickname = nickname_the_bitch }
-				1 = { give_nickname = nickname_the_slut }
-				1 = { give_nickname = nickname_the_whore }
-				1 = { give_nickname = nickname_the_wench }
+			if = {
+				limit = { have_devil_nicknames_trigger = no }
+				give_prostitution_nickname = yes
 			}
 			add_trait = lustful
 			add_trait = deviants_virgin

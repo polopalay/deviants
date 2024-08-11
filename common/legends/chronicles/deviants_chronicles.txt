@@ -35,7 +35,7 @@ sex_machine = {
 }
 
 ladycow = {
-	portrait_animation = personality_greedy
+	portrait_animation = shame
 
 	properties = {}
 	chapters = {
