@@ -36,3 +36,143 @@ start_promote_lew_legend = {
 		set_promoted_legend = scope:promoted_legend
 	}
 }
+
+mind_break_personality = {
+	if = {
+		limit = { has_trait = lustful }
+		remove_trait = chaste
+	}
+	else_if = {
+		limit = { has_trait = chaste }
+		remove_trait = chaste
+	}
+	else_if = {
+		limit = { has_trait = shy }
+		remove_trait = shy
+	}
+	else_if = {
+		limit = { has_trait = zealous }
+		remove_trait = zealous
+	}
+	else_if = {
+		limit = { has_trait = humble }
+		remove_trait = humble
+	}
+	else_if = {
+		limit = { has_trait = wrathful }
+		remove_trait = wrathful
+	}
+	else_if = {
+		limit = { has_trait = gregarious }
+		remove_trait = gregarious
+	}
+	else_if = {
+		limit = { has_trait = calm }
+		remove_trait = calm
+	}
+	else_if = {
+		limit = { has_trait = content }
+		remove_trait = content
+	}
+	else_if = {
+		limit = { has_trait = arrogant }
+		remove_trait = arrogant
+	}
+	else_if = {
+		limit = { has_trait = cynical }
+		remove_trait = cynical
+	}
+	else_if = {
+		limit = { has_trait = vengeful }
+		remove_trait = vengeful
+	}
+	else_if = {
+		limit = { has_trait = generous }
+		remove_trait = generous
+	}
+	else_if = {
+		limit = { has_trait = just }
+		remove_trait = just
+	}
+	else_if = {
+		limit = { has_trait = honest }
+		remove_trait = honest
+	}
+	else_if = {
+		limit = { has_trait = patient }
+		remove_trait = patient
+	}
+	else_if = {
+		limit = { has_trait = temperate }
+		remove_trait = temperate
+	}
+	else_if = {
+		limit = { has_trait = forgiving }
+		remove_trait = forgiving
+	}
+	else_if = {
+		limit = { has_trait = diligent }
+		remove_trait = diligent
+	}
+	else_if = {
+		limit = { has_trait = brave }
+		remove_trait = brave
+	}
+	else_if = {
+		limit = { has_trait = trusting }
+		remove_trait = trusting
+	}
+	else_if = {
+		limit = { has_trait = compassionate }
+		remove_trait = compassionate
+	}
+	else_if = {
+		limit = { has_trait = callous }
+		remove_trait = callous
+	}
+	else_if = {
+		limit = { has_trait = impatient }
+		remove_trait = impatient
+	}
+	else_if = {
+		limit = { has_trait = gluttonous }
+		remove_trait = gluttonous
+	}
+	else_if = {
+		limit = { has_trait = lazy }
+		remove_trait = lazy
+	}
+	else_if = {
+		limit = { has_trait = deceitful }
+		remove_trait = deceitful
+	}
+	else_if = {
+		limit = { has_trait = craven }
+		remove_trait = craven
+	}
+	else_if = {
+		limit = { has_trait = arbitrary }
+		remove_trait = arbitrary
+	}
+	else_if = {
+		limit = { has_trait = stubborn }
+		remove_trait = stubborn
+	}
+	else_if = {
+		limit = { has_trait = fickle }
+		remove_trait = fickle
+	}
+	else_if = {
+		limit = { has_trait = paranoid }
+		remove_trait = paranoid
+	}
+	else_if = {
+		limit = { has_trait = ambitious }
+		remove_trait = ambitious
+	}
+	else_if = {
+		limit = { has_trait = greedy }
+		remove_trait = greedy
+	}
+	add_trait = lustful
+}

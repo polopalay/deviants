@@ -190,6 +190,7 @@ deviants_create_lesser_succubus_interaction = {
 				limit = { have_devil_nicknames_trigger = no }
 				give_prostitution_nickname = yes
 			}
+			mind_break_personality = yes
 			add_trait = deviants_lesser_succubus
 			add_character_modifier = deviants_prostitute
 		}
@@ -237,6 +238,7 @@ deviants_create_succubus_interaction = {
 		scope:recipient = {
 			add_secret = { type = secret_deviant }
 			add_secret = { type = secret_witch }
+			mind_break_personality = yes
 			if = {
 				limit = { have_devil_nicknames_trigger = no }
 				give_prostitution_nickname = yes
