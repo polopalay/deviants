@@ -69,3 +69,23 @@ is_valid_construction_alchemy3_trigger = {
 		}
 	}
 }
+
+have_devil_nicknames_trigger = {
+	OR = {
+		has_nickname = nickname_the_semen_tank
+		has_nickname = nickname_the_penis_guillotine
+		has_nickname = nickname_the_sex_machine
+		has_nickname = nickname_the_ladycow
+		has_nickname = nickname_the_exhibitionist
+	}
+}
+
+have_devil_building_trigger = {
+	OR = {
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_witch_forest 
+			}
+		}
+	}
+}

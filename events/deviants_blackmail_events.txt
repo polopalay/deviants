@@ -1,6 +1,6 @@
 namespace = deviants_blackmail
 
-#1100 he comes to you in private
+# he comes to you in private
 deviants_blackmail.1100 = { 
 	type = character_event
 	title = deviants_blackmail.1100.t
@@ -64,8 +64,8 @@ deviants_blackmail.1100 = {
 				value = 1
 			}
 		}
+		trigger_event = deviants_blackmail.1110
 		ai_chance = { base = 100 }
-		trigger_event = deviants_blackmail.1120
 	}	
 	# just pay the gold
 	option = {
@@ -75,6 +75,7 @@ deviants_blackmail.1100 = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
 		}
+		trigger_event = deviants_blackmail.1120
 	}		
 	# ignore, get rumors spread... 
 	option = {
@@ -124,6 +125,7 @@ deviants_blackmail.1110 = {
 	option = {
 		name = deviants_blackmail.1110.a
 		custom_tooltip = deviants_blackmail.1110.a.tt
+		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
 	}				
 }
 
@@ -585,6 +587,10 @@ deviants_blackmail.1301 = {
 			add_prestige = medium_prestige_gain
 			add_gold = minor_gold_value
 		}
+		if = {
+			limit = { NOT = { has_nickname = nickname_the_semen_tank } }
+			give_nickname = nickname_the_semen_tank
+		}
 		hidden_effect = {
             		add_trait_xp = {
 				trait = deviants_succubus
@@ -698,6 +704,7 @@ deviants_blackmail.1400 = {
 			opinion = -30
 		}
 	}	
+	# beg to be his sex toy instead
 	option = {
 		name = deviants_blackmail.1400.d
 		custom_tooltip = deviants_blackmail.1400.d.tt
@@ -705,6 +712,7 @@ deviants_blackmail.1400 = {
 			reason = lover_shared_deviancy
 			target = scope:deviant_go_random_1
 		}
+		trigger_event = deviants_blackmail.1110
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = disgusted_opinion

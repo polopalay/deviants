@@ -1,51 +1,40 @@
 deviants_witch_forest = {
+	asset = {
+		type = pdxmesh
+		name = "tree_leaf_01_a_mesh"
+	}
+
 	type_icon = "icon_witch_forest.dds"
 	construction_time = very_slow_construction_time
-
-	can_construct_potential = {
-		building_requirement_tribal = no
+	asset = {
+		type = pdxmesh
+		name = "fp4_legendary_desert_hunting_lodge_01_a_mesh"
 	}
 	
 	can_construct = {
-		custom_description = {
-			text = holy_site_building_trigger
-			barony = {
-				is_holy_site_of = scope:holder.faith
-			}
-		}
-	}
-
-	is_enabled = {
-		custom_description = {
-			text = holy_site_building_trigger
-			barony = {
-				is_holy_site_of = scope:holder.faith
-			}
-		}
+		has_trait = deviants_succubus
 	}
 
 	cost_gold = 1000
 
 	character_modifier = {
-		monthly_piety = 0.25
-		monthly_dynasty_prestige_mult = 0.05
-		holy_order_hire_cost_mult = -0.15
-		clergy_opinion = 5
-		monthly_county_control_growth_factor = 0.05
+		parochial_opinion = 5
+		court_grandeur_baseline_add = 4
 	}
 	
 	county_modifier = {
 		tax_mult = 0.2
 		development_growth_factor = 0.2
-		development_growth = 0.15
+		development_growth = 0.2
 	}
 	
 	province_modifier = {
 		monthly_income = 2
 	}
+
 	ai_value = {
 		base = 100
-		modifier = { # Fill all building slots before going for special buildings
+		modifier = {
 			factor = 0
 			free_building_slots > 0
 		}

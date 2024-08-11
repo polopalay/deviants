@@ -34,20 +34,19 @@ sexual = {
 				}
 				send_interface_message_legend_notification_effect = yes
 			}
-			else = { # If it's a high level one we send a toast
+			else = {
 				send_interface_toast_legend_notification_effect = yes
 			}
 		}
 	}
 	
 	on_legend_stop_promote = {
-		# If you were asked money to promote a legend and you drop it you get called out
 		if = {
 			limit = {
 				scope:legend = {
 					is_target_in_variable_list = {
 						name = accepted_promote_legend_var
-						target = root #former promoter
+						target = root
 					}
 				}
 			}
@@ -59,12 +58,13 @@ sexual = {
 	}
 
 	is_valid_protagonist = {
-		age >= 16
+		age >= 18
+		has_trait = deviants_succubus
 	}
 
 	ai_protagonist_weight = {
 		base = 0
-				if = { # More likely to choose yourself
+		if = {
 			limit = {
 				this = scope:creator
 			}
@@ -104,9 +104,7 @@ sexual = {
 		famed = {
 			spread_chance = {
 				if = {
-					limit = {
-						exists = scope:legend.legend_owner
-					}
+					limit = { exists = scope:legend.legend_owner }
 					value = spread_chance_legends_default_value
 					multiply = spread_chance_legends_mult_value
 				}
@@ -143,79 +141,54 @@ sexual = {
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 5
 					development_growth_factor = 0.01
 				}
 				owner_modifier = {
-					monthly_dynasty_prestige = 0.1
-					monthly_dynasty_prestige_mult = 0.05
+					attraction_opinion = 10
 				}
 				promoter_modifier = {
-					monthly_dynasty_prestige = 0.01
-					stewardship = 1
+					learning = 1
 				}
 				
-				# Effect run when a legend is completed
-				# root = the owner
 				on_complete = {
-					promoted_legend ?= { save_scope_as = promoted_legend } #For the ending event loc
-					scope:protagonist = { save_scope_as = legend_protagonist }
+					scope:protagonist = { 
+						lost_level_of_fame_piety = yes
+						random = { chance = 25 give_building_witch_forest = yes }
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = corruption
+							value = 25
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = loyalty
+							value = 25
+						}
+						save_scope_as = legend_protagonist
+					}
+					promoted_legend ?= { save_scope_as = promoted_legend }
 					remove_legend_notification_variables_effect = yes
-					if = {
-						limit = {
-							exists = scope:title
-							scope:title.tier < tier_duchy
-						}
-						scope:title.duchy = { save_scope_as = title_claim }
-					}
-					else_if = {
-						limit = {
-							exists = scope:title
-						}
-						scope:title = { save_scope_as = title_claim }
-					}
-					give_legendary_building_legitimizing_tooltip_effect = yes
-					legend_ending_rewards_legitimizing_effect = yes
-					legend_ending_rewards_famed_legitimizing_effect = yes
-					legend_ending_achievements_effect = yes
 					trigger_event = story_event_legends.0002
-					
-					#balancing_legend_global_var_effect = yes # Left for testing purposes
 				}
 			}
 			ai_chance = {
-				# root = character with the legend seed
 				create = {
 					value = legitimizing_legend_create_ai
 				}
 
-				# root = character who can promote
-				# scope:legend = the legend to promote
 				promote = {
 					value = base_legend_promote_ai
 					if = {
-						limit = {
-							ai_has_economical_boom_personality = yes
-						}
+						limit = { ai_has_economical_boom_personality = yes }
 						multiply = 1.2
 					}
 				}
 				
-				# root = character who can take a legend
-				# scope:legend = the legend to take ownership
 				take_unowned = 100
 
-				# root = legend owner
-				# scope:legend = the legend
-				upgrade = {
-					value = 1000 # Always upgrade when you can
-				}
+				upgrade = { value = 1000 }
 
-				# root = legend owner
-				# scope:legend = the legend
-				complete = {
-					value = base_legend_complete_ai
-				}
+				complete = { value = base_legend_complete_ai }
 			}
 		}
 		
@@ -264,81 +237,64 @@ sexual = {
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 10
 					development_growth_factor = 0.02
 				}
 				owner_modifier = {
-					monthly_dynasty_prestige = 0.25
-					monthly_dynasty_prestige_mult = 0.1
+					attraction_opinion = 20
 				}
 				promoter_modifier = {
-					monthly_dynasty_prestige = 0.04
-					stewardship = 2
+					learning = 2
 				}
 				
-				# Effect run when a legend is completed
-				# root = the owner
 				on_complete = {
-					promoted_legend ?= { save_scope_as = promoted_legend } #For the ending event loc
-					scope:protagonist = { save_scope_as = legend_protagonist }
+					scope:protagonist = { 
+						lost_level_of_fame_piety = yes
+						random = { chance = 50 give_building_witch_forest = yes }
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = corruption
+							value = 50
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = loyalty
+							value = 50
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = power
+							value = 50
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = daring
+							value = 50
+						}
+						save_scope_as = legend_protagonist
+					}
+					promoted_legend ?= { save_scope_as = promoted_legend }
 					remove_legend_notification_variables_effect = yes
-					custom_tooltip = {
-						text = unlock_legendary_integration_d_tt
-						add_character_flag = legendary_integration_d
-					}
-					if = {
-						limit = {
-							exists = scope:title
-							scope:title.tier < tier_kingdom
-						}
-						scope:title.kingdom = { save_scope_as = title_claim }
-					}
-					else_if = {
-						limit = {
-							exists = scope:title
-						}
-						scope:title = { save_scope_as = title_claim }
-					}
-					give_legendary_building_legitimizing_tooltip_effect = yes
-					legend_ending_rewards_legitimizing_effect = yes
-					legend_ending_rewards_illustrious_legitimizing_effect = yes
-					legend_ending_achievements_effect = yes
 					trigger_event = story_event_legends.0002
-					
-					#balancing_legend_global_var_effect = yes # Left for testing purposes
 				}
 			}
 			ai_chance = {
-				# root = character with the legend seed
 				create = {
 					value = legitimizing_legend_create_ai
 					add = illustrious_legend_create_ai
 				}
 
-				# root = character who can promote
-				# scope:legend = the legend to promote
 				promote = {
 					value = base_legend_promote_ai
 					if = {
-						limit = {
-							ai_has_economical_boom_personality = yes
-						}
+						limit = { ai_has_economical_boom_personality = yes }
 						multiply = 1.2
 					}
 				}
 				
-				# root = character who can take a legend
-				# scope:legend = the legend to take ownership
 				take_unowned = 100
 
-				# root = legend owner
-				# scope:legend = the legend
-				upgrade = {
-					value = 1000 # Always upgrade when you can
-				}
+				upgrade = { value = 1000 }
 
-				# root = legend owner
-				# scope:legend = the legend
 				complete = {
 					value = base_legend_complete_ai
 				}
@@ -398,90 +354,64 @@ sexual = {
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 20
-					development_growth_factor = 0.06
+					development_growth_factor = 0.05
 				}
 				owner_modifier = {
-					monthly_dynasty_prestige = 0.5
-					monthly_dynasty_prestige_mult = 0.2
+					attraction_opinion = 50
 				}
 				promoter_modifier = {
-					monthly_dynasty_prestige = 0.1
-					stewardship = 4
+					learning = 5
 				}
-				# Effect run when a legend is completed
-				# root = the owner
+				
 				on_complete = {
-					promoted_legend ?= { save_scope_as = promoted_legend } #For the ending event loc
-					scope:protagonist = { save_scope_as = legend_protagonist }
+					scope:protagonist = { 
+						lost_level_of_fame_piety = yes
+						give_building_witch_forest = yes
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = corruption
+							value = 100
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = loyalty
+							value = 100
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = power
+							value = 100
+						}
+						add_trait_xp = {
+							trait = deviants_succubus
+							track = daring
+							value = 100
+						}
+						save_scope_as = legend_protagonist
+					}
+					promoted_legend ?= { save_scope_as = promoted_legend }
 					remove_legend_notification_variables_effect = yes
-					custom_tooltip = {
-						text = unlock_legendary_integration_k_tt
-						add_character_flag = legendary_integration_k
-					}
-					if = {
-						limit = {
-							exists = scope:title
-							scope:title.tier < tier_empire
-						}
-						scope:title.empire = { save_scope_as = title_claim }
-					}
-					else_if = {
-						limit = {
-							exists = scope:title
-						}
-						scope:title = { save_scope_as = title_claim }
-					}
-					if = {
-						limit = {
-							exists = scope:culture
-						}
-						set_variable = {
-							name = legendary_culture
-							value = scope:culture
-						}
-						scope:culture = { save_scope_as = legendary_culture }
-					}
-					give_legendary_building_mythical_legitimizing_tooltip_effect = yes
-					legend_ending_rewards_legitimizing_effect = yes
-					legend_ending_rewards_mythical_legitimizing_effect = yes
-					legend_ending_achievements_effect = yes
 					trigger_event = story_event_legends.0002
-					
-					#balancing_legend_global_var_effect = yes # Left for testing purposes
 				}
 			}
 			ai_chance = {
-				# root = character with the legend seed
 				create = {
 					value = legitimizing_legend_create_ai
 					add = mythical_legend_create_ai
 				}
 
-				# root = character who can promote
-				# scope:legend = the legend to promote
 				promote = {
 					value = base_legend_promote_ai
 					if = {
-						limit = {
-							ai_has_economical_boom_personality = yes
-						}
+						limit = { ai_has_economical_boom_personality = yes }
 						multiply = 1.2
 					}
 				}
 				
-				# root = character who can take a legend
-				# scope:legend = the legend to take ownership
 				take_unowned = 100
 
-				# root = legend owner
-				# scope:legend = the legend
-				upgrade = {
-					value = 1000 # Always upgrade when you can
-				}
+				upgrade = { value = 1000 }
 
-				# root = legend owner
-				# scope:legend = the legend
 				complete = {
 					value = base_legend_complete_ai
 				}
@@ -490,32 +420,11 @@ sexual = {
 	}
 	
 	on_yearly = {
-		scope:legend = { 
-			save_scope_as = promoted_legend
-			if = {
-				limit = { has_legend_chronicle = semen_tank }
-				if = {
-					limit = { has_legend_chapter = opening }
-					legend_owner = { trigger_event = deviants_blackmail.1100 }
-				}
-				else_if = {
-					limit = { has_legend_chapter = mind_break }
-					legend_owner = { trigger_event = deviants_blackmail.1200 }
-				}
-				else_if = {
-					limit = { has_legend_chapter = toy }
-					legend_owner = { trigger_event = deviants_blackmail.1300 }
-				}
-				else_if = {
-					limit = { has_legend_chapter = conclusion }
-					legend_owner = {
-						if = {
-							limit = { is_married = no }
-							trigger_event = deviants_blackmail.1400
-						}
-						else = { trigger_event = deviants_blackmail.2000 }
-					}
-				}
+		scope:legend = { save_scope_as = promoted_legend }
+		if = {
+			limit = { scope:legend = { has_legend_chronicle = semen_tank } }
+			trigger_event = { 
+				on_action = legend_sexual_ongoing_events 
 			}
 		}
 	}

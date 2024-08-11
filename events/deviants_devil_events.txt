@@ -2218,6 +2218,26 @@ deviants_devil.1319 = {
 	option = {
 		name = deviants_devil.1319.a
 		custom_tooltip = deviants_devil.1319.a.tt
+		if = {
+			limit = { 
+				NOR = { 
+					has_personal_legend_seed = sexual 
+					promoted_legend.legend_type = legend_type:sexual
+					have_devil_nicknames_trigger = yes
+					have_devil_building_trigger = yes
+				} 
+			}
+			random = {
+				chance = 10
+				random_list = {
+					50 = { create_legend_seed = { type = sexual quality = famed chronicle = semen_tank } }
+					50 = { create_legend_seed = { type = sexual quality = famed chronicle = sex_machine } }
+					50 = { create_legend_seed = { type = sexual quality = famed chronicle = ladycow } }
+					50 = { create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine } }
+					50 = { create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist } }
+				}
+			}
+		}
 	}	
 	# this is wrong, go repent
 	option = {
