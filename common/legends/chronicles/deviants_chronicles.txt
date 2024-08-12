@@ -8,12 +8,6 @@ semen_tank = {
 		toy = legend_chapter_toy
 		conclusion = legend_chapter_conclusion_semen_tank
 	}
-
-	impact = {
-		owner_modifier = {
-			attraction_opinion = 25
-		}
-	}
 }
 
 sex_machine = {
@@ -26,12 +20,6 @@ sex_machine = {
 		machine = legend_chapter_machine
 		conclusion = legend_chapter_conclusion_sex_machine
 	}
-
-	impact = {
-		owner_modifier = {
-			attraction_opinion = 25
-		}
-	}
 }
 
 ladycow = {
@@ -43,12 +31,6 @@ ladycow = {
 		promise = legend_chapter_promise
 		oath = legend_chapter_oath
 		conclusion = legend_chapter_conclusion_ladycow
-	}
-
-	impact = {
-		owner_modifier = {
-			attraction_opinion = 25
-		}
 	}
 }
  
@@ -63,12 +45,6 @@ penis_guillotine = {
 		expose = legend_chapter_expose
 		conclusion = legend_chapter_conclusion_penis_guillotine
 	}
-
-	impact = {
-		owner_modifier = {
-			attraction_opinion = 25
-		}
-	}
 }
 
 exhibitionist = {
@@ -80,11 +56,5 @@ exhibitionist = {
 		naked_lady = legend_chapter_naked_lady
 		naked_court = legend_chapter_naked_court
 		conclusion = legend_chapter_conclusion_exhibitionist
-	}
-
-	impact = {
-		owner_modifier = {
-			attraction_opinion = 25
-		}
 	}
 }

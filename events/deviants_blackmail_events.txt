@@ -704,6 +704,16 @@ deviants_blackmail.1400 = {
 			opinion = -30
 		}
 	}	
+	# ignore, get rumors spread... 
+	option = {
+		name = deviants_blackmail.1400.c
+		custom_tooltip = deviants_blackmail.1400.c.tt
+		add_piety = massive_piety_loss
+        	add_prestige = massive_prestige_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+	}
 	# beg to be his sex toy instead
 	option = {
 		name = deviants_blackmail.1400.d
@@ -719,16 +729,6 @@ deviants_blackmail.1400 = {
 			opinion = -50
 		}
 	}	
-	# ignore, get rumors spread... 
-	option = {
-		name = deviants_blackmail.1400.c
-		custom_tooltip = deviants_blackmail.1400.c.tt
-		add_piety = massive_piety_loss
-        	add_prestige = massive_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
-		}
-	}			
 }
 #2000 if you have spouse, getting groped while spouse in the feast, to make him stop, pay or go fuck or major hook
 deviants_blackmail.2000 = { 
