@@ -975,7 +975,7 @@ deviants_courtier.1463 = {
 
 	option = {
 		if = {
-			limit = { NOT = { has_nickname = nickname_the_semen_tank } }
+			limit = { NOT = { has_nickname = nickname_the_exhibitionist } }
 			give_nickname = nickname_the_exhibitionist
 		}
 		name = deviants_courtier.1463.a

@@ -2229,6 +2229,22 @@ deviants_devil.1319 = {
 			}
 			random = {
 				chance = 50
+				modifier = {
+					add = 25
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = corruption
+						value >= 50
+					}
+				}
+				modifier = {
+					add = 25
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = corruption
+						value >= 100
+					}
+				}
 				random_list = {
 					20 = { create_legend_seed = { type = sexual quality = famed chronicle = semen_tank } }
 					20 = { create_legend_seed = { type = sexual quality = famed chronicle = sex_machine } }
