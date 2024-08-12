@@ -783,7 +783,7 @@ deviants_courtier.1460 = {
 				is_available_ai_adult = yes
 				age >= 18
 			}
-			save_scope_as = deviants_courtier_random_1
+			save_scope_as = deviant_go_random_1
 		}
 	}
 	option = {
@@ -867,7 +867,7 @@ deviants_courtier.1461 = {
 		animation = shame
 	}
 	left_portrait = {
-		character = scope:deviants_courtier_random_1
+		character = scope:deviant_go_random_1
 		animation = personality_cynical
 	}
 	option = {
@@ -908,7 +908,7 @@ deviants_courtier.1461 = {
 				value = 2
 			}
 			buy_sex_with_effect = {
-				CHARACTER = scope:deviants_courtier_random_1
+				CHARACTER = scope:deviant_go_random_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
@@ -928,7 +928,7 @@ deviants_courtier.1462 = {
 		animation = shame
 	}
 	left_portrait = {
-		character = scope:deviants_courtier_random_1
+		character = scope:deviant_go_random_1
 		animation = personality_cynical
 	}
 
@@ -969,7 +969,7 @@ deviants_courtier.1463 = {
 		animation = throne_room_kneel_2
 	}
 	left_portrait = {
-		character = scope:deviants_courtier_random_1
+		character = scope:deviant_go_random_1
 		animation = personality_cynical
 	}
 

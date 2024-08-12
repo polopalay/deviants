@@ -58,3 +58,13 @@ exhibitionist = {
 		conclusion = legend_chapter_conclusion_exhibitionist
 	}
 }
+
+#philosopher_stone = {
+#	portrait_animation = personality_greedy
+#	chapters = {
+#		opening = legend_chapter_opening_exhibitionist
+#		ten = legend_chapter_naked_lady
+#		naked_court = legend_chapter_naked_court
+#		conclusion = legend_chapter_conclusion_exhibitionist
+#	}
+#}

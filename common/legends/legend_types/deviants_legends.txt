@@ -160,12 +160,12 @@ sexual = {
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = corruption
-							value = 25
+							value = 5
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = loyalty
-							value = 25
+							value = 5
 						}
 						save_scope_as = legend_protagonist
 					}
@@ -259,22 +259,22 @@ sexual = {
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = corruption
-							value = 50
+							value = 10
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = loyalty
-							value = 50
+							value = 10
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = power
-							value = 50
+							value = 10
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = daring
-							value = 50
+							value = 10
 						}
 						save_scope_as = legend_protagonist
 					}
@@ -379,22 +379,22 @@ sexual = {
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = corruption
-							value = 100
+							value = 25
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = loyalty
-							value = 100
+							value = 25
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = power
-							value = 100
+							value = 25
 						}
 						add_trait_xp = {
 							trait = deviants_succubus
 							track = daring
-							value = 100
+							value = 25
 						}
 						save_scope_as = legend_protagonist
 					}
