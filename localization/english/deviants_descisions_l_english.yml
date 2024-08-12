@@ -13,3 +13,40 @@
  deviants_demon_generals.desc: "Turn all your knights into demon generals"
  deviants_demon_generals.c: "Summon"
  deviants_demon_generals.t: "Turn all your knights into demon generals"
+
+ deviants_start_ritual_decision: "Start ritual of Philosopher's Stone"
+ deviants_start_ritual_decision.d: "$legend_chapter_rital_start_philosopher_stone$"
+ deviants_start_ritual_decision.t: "The secret of the folk song has been revealed, let's start the ritual"
+ deviants_start_ritual_decision.c: "Start Ritual"
+ deviants_start_ritual_decision.e: "The secret of the folk song has been revealed, let's start the ritual"
+
+ deviants_tensoul_decision: "Sacrifice 10 souls"
+ deviants_tensoul_decision.d: "$legend_chapter_tensoul_philosopher_stone$"
+ deviants_tensoul_decision.t: "First Ritual, 10 Mortal Lives"
+ deviants_tensoul_decision.c: "Sacrifice 10 souls"
+ deviants_tensoul_decision.e: "First Ritual, 10 Mortal Lives"
+
+ deviants_vassal_decision: "Sacrifice a vassal"
+ deviants_vassal_decision.d: "$legend_chapter_vassal_philosopher_stone$"
+ deviants_vassal_decision.t: "Second Ritual, Vassal's Blood"
+ deviants_vassal_decision.c: "Sacrifice a vassal"
+ deviants_vassal_decision.e: "Second Ritual, Vassal's Blood"
+
+ deviants_homologus_decision: "Sacrifice another witch"
+ deviants_homologus_decision.d: "$legend_chapter_homologous_philosopher_stone$"
+ deviants_homologus_decision.t: "Third Ritual, Witch's Blood"
+ deviants_homologus_decision.c: "Sacrifice another witch"
+ deviants_homologus_decision.e: "Third Ritual, Witch's Blood"
+
+ deviants_family_decision: "Sacrifice a family member"
+ deviants_family_decision.d: "$legend_chapter_family_philosopher_stone$"
+ deviants_family_decision.t: "Fourth Ritual, Family Blood"
+ deviants_family_decision.c: "Sacrifice a family member"
+ deviants_family_decision.e: "Fourth Ritual, Family Blood"
+
+ decisions_ritual_complete: "Ritual of Philosopher's Stone"
+ decisions_ritual_complete.d: "$legend_chapter_rital_complete_philosopher_stone$"
+ decisions_ritual_complete.t: "Complete the ritual of Philosopher's Stone"
+ decisions_ritual_complete.c: "Complete Ritual"
+ decisions_ritual_complete.e: "Complete the ritual of Philosopher's Stone"
+

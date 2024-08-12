@@ -3,6 +3,10 @@
  legend_sexual_name: "The Sexual Legend of [ROOT.Legend.GetOwner.GetNameNoTooltip]"
  legend_sexual_desc: "[ROOT.Legend.GetOwner.GetTitledFirstNameNoTooltip] is renowned for [ROOT.Legend.GetOwner.GetHerHis] sexual deeds."
 
+ legend_witchcraft: "Witchcraft Legend"
+ legend_witchcraft_name: "The Witchcraft Legend of [ROOT.Legend.GetOwner.GetNameNoTooltip]"
+ legend_witchcraft_desc: "[ROOT.Legend.GetOwner.GetTitledFirstNameNoTooltip] is renowned for [ROOT.Legend.GetOwner.GetHerHis] creepy rituals."
+
  legend_chronicle_semen_tank: "The Semen Tank"
  legend_chronicle_semen_tank_desc: "The Legend of the Immortal Semen Tank"
  legend_chapter_opening_semen_tank: "People told each other about a beautiful, virtuous female lord of [ROOT.Legend.GetProtagonist.GetTitleAsNameNoTooltip|U]. But after a series of events, she became a lustful whore."
@@ -38,3 +42,14 @@
  legend_chapter_naked_lady: "It all started when [ROOT.Legend.GetProtagonist.GetNameNoTooltip|U] often bathed with the vassals, [ROOT.Legend.GetProtagonist.GetNameNoTooltip|U] seemed to become horny when naked. Bathing together was not enough to satisfy [ROOT.Legend.GetProtagonist.GetHerHis|U]."
  legend_chapter_naked_court: "One day, [ROOT.Legend.GetProtagonist.GetNameNoTooltip|U] stripped off [ROOT.Legend.GetProtagonist.GetHerHis|U] clothes right in front of [ROOT.Legend.GetProtagonist.GetHerHis|U] courtiers and started masturbating. The courtiers' angry, lustful, and surprised eyes made [ROOT.Legend.GetProtagonist.GetHerHis|U] even hornier. Gradually [ROOT.Legend.GetProtagonist.GetNameNoTooltip|U] became addicted to nudity. One day, the courtiers proposed to have sex with [ROOT.Legend.GetProtagonist.GetHerHis|U] right in the court. And then having sex with the courtiers in meetings became more frequent."
  legend_chapter_conclusion_exhibitionist: "[ROOT.Legend.GetProtagonist.GetNameNoTooltip|U] burned all [ROOT.Legend.GetProtagonist.GetHerHis|U] clothes and was naked all the time. Now the kingdom's subjects know [ROOT.Legend.GetProtagonist.GetHerHis|U] by the nickname: The Exhibitionist"
+
+ legend_chronicle_philosopher_stone: "The Philosopher's Stone"
+ legend_chronicle_philosopher_stone_desc: "The Legend of Philosopher's Stone"
+ legend_chapter_opening_philosopher_stone: "In the heart of a forest, dark and wild,\nWhere shadows dance and whispers beguile,\nThe trees stand tall, twisted with age,\nA place where witches craft their dark stage. "
+ legend_chapter_rital_start_philosopher_stone: "Legends speak of the witches' lair,\nWhere cursed winds stir the midnight air,\nAnd in the depths of that haunted wood,\nRituals grim are understood.\n\nThe earth is soaked with the blood of men,\nSacrificed in the witches' den,\nFor a secret rite, obscure and dire,\nTo summon forth a power higher."
+ legend_chapter_tensoul_philosopher_stone: "Ten souls must feed the ancient flame,\nTen lives extinguished, without name,\nTo fuel the spell, to seal the fate,\nOf those who tread the witches' gate."
+ legend_chapter_vassal_philosopher_stone: "A loyal servant must fall first,\nTheir blood must quench the dark one's thirst,\nA blade of trust turned cold and cruel,\nA life cut short by a master's rule."
+ legend_chapter_homologous_philosopher_stone: "Next, a witch must face her end,\nA sister's bond, too frail to mend,\nWith spell and curse, her life is torn,\nTo power the night and the coming morn."
+ legend_chapter_family_philosopher_stone: "Then comes the hardest cut of all,\nA loved one must take the final fall,\nA heart betrayed, a bond undone,\nFor the ritual must claim its one."
+ legend_chapter_rital_complete_philosopher_stone: "As the rite concludes, the forest screams,\nA nightmare born from twisted dreams,\nThe ground is littered with the dead,\nThe witches’ eyes are burning red.\n\nIn the center, where all paths meet,\nLies the Philosopher's Stone, complete,\nA crimson jewel, with death’s own glow,\nAmidst the corpses, laid low."
+ legend_chapter_conclusion_philosopher_stone: "Praise to the Stone, the witches cry,\nA token of power from those who die,\nWith blood and soul, the ritual done,\nThe witches' reign has just begun.\n\nFor the Stone is might, the Stone is law,\nIn its dark glow, all witches draw,\nA power eternal, pure and deep,\nThe world shall tremble, and mortals weep.  "

@@ -1,0 +1,274 @@
+deviants_start_ritual_decision = {
+	desc = deviants_start_ritual_decision.d
+	selection_tooltip = deviants_start_ritual_decision.t
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	confirm_text = deviants_start_ritual_decision.c
+	is_shown = {
+		promoted_legend = {
+			legend_type = legend_type:witchcraft
+			legend_property:ritual_start = flag:false
+			legend_property:tensoul = flag:false
+			legend_property:vassal = flag:false
+			legend_property:homologus = flag:false
+			legend_property:family = flag:false
+			legend_property:rital_complete = flag:false
+			legend_owner = root
+			OR = {
+				legend_quality = famed
+				legend_quality = illustrious
+				legend_quality = mythical
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			has_trait = witch
+			any_secret = { secret_type = secret_witch }
+		}
+		promoted_legend = {
+			OR = {
+				legend_quality = famed
+				legend_quality = illustrious
+				legend_quality = mythical
+			}
+		}
+	}
+	effect = {
+		promoted_legend = {
+			set_legend_property = {
+				name = ritual_start
+				target = flag:true
+			}
+		}
+		remove_short_term_gold = 100
+	}
+}
+
+deviants_tensoul_decision = {
+	desc = deviants_tensoul_decision.d
+	selection_tooltip = deviants_tensoul_decision.t
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	confirm_text = deviants_tensoul_decision.c
+	is_shown = {
+		promoted_legend = {
+			legend_type = legend_type:witchcraft
+			legend_property:ritual_start = flag:true
+			legend_property:tensoul = flag:false
+			legend_property:vassal = flag:false
+			legend_property:homologus = flag:false
+			legend_property:family = flag:false
+			legend_property:rital_complete = flag:false
+			legend_owner = root
+		}
+	}
+	is_valid = {
+		any_prisoner = {
+			count >= 10
+		}
+		promoted_legend = {
+			OR = {
+				legend_quality = illustrious
+				legend_quality = mythical
+			}
+		}
+	}
+	effect = {
+		promoted_legend = {
+			set_legend_property = {
+				name = tensoul
+				target = flag:true
+			}
+		}
+		every_prisoner = {
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
+	}
+}
+
+deviants_vassal_decision = {
+	desc = deviants_vassal_decision.d
+	selection_tooltip = deviants_vassal_decision.t
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	confirm_text = deviants_vassal_decision.c
+	is_shown = {
+		promoted_legend = {
+			legend_type = legend_type:witchcraft
+			legend_property:ritual_start = flag:true
+			legend_property:tensoul = flag:true
+			legend_property:vassal = flag:false
+			legend_property:homologus = flag:false
+			legend_property:family = flag:false
+			legend_property:rital_complete = flag:false
+			legend_owner = root
+		}
+	}
+	is_valid = {
+		any_prisoner = {
+			count >= 1
+			is_vassal_of = root
+		}
+		promoted_legend = {
+			OR = {
+				legend_quality = illustrious
+				legend_quality = mythical
+			}
+		}
+	}
+	effect = {
+		random_prisoner = {
+			limit = { is_vassal_of = root }
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
+		promoted_legend = {
+			set_legend_property = {
+				name = vassal
+				target = flag:true
+			}
+		}
+	}
+}
+
+deviants_homologus_decision = {
+	desc = deviants_homologus_decision.d
+	selection_tooltip = deviants_homologus_decision.t
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	confirm_text = deviants_homologus_decision.c
+	is_shown = {
+		promoted_legend = {
+			legend_type = legend_type:witchcraft
+			legend_property:ritual_start = flag:true
+			legend_property:tensoul = flag:true
+			legend_property:vassal = flag:true
+			legend_property:homologus = flag:false
+			legend_property:family = flag:false
+			legend_property:rital_complete = flag:false
+			legend_owner = root
+		}
+	}
+	is_valid = {
+		any_prisoner = {
+			count >= 1
+			OR = {
+				has_trait = witch
+				any_secret = { secret_type = secret_witch }
+			}
+		}
+		promoted_legend = {
+			legend_quality = mythical
+		}
+	}
+	effect = {
+		random_prisoner = {
+			limit = { 
+				OR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
+			}
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
+		promoted_legend = {
+			set_legend_property = {
+				name = homologus
+				target = flag:true
+			}
+		}
+	}
+}
+
+deviants_family_decision = {
+	desc = deviants_family_decision.d
+	selection_tooltip = deviants_family_decision.t
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	confirm_text = deviants_family_decision.c
+	is_shown = {
+		promoted_legend = {
+			legend_type = legend_type:witchcraft
+			legend_property:ritual_start = flag:true
+			legend_property:tensoul = flag:true
+			legend_property:vassal = flag:true
+			legend_property:homologus = flag:true
+			legend_property:family = flag:false
+			legend_property:rital_complete = flag:false
+			legend_owner = root
+		}
+	}
+	is_valid = {
+		any_prisoner = {
+			count >= 1
+			is_close_family_of = root
+		}
+		promoted_legend = {
+			legend_quality = mythical
+		}
+	}
+	effect = {
+		random_prisoner = {
+			limit = { is_close_family_of = root }
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
+		promoted_legend = {
+			set_legend_property = {
+				name = family
+				target = flag:true
+			}
+		}
+	}
+}
+
+decisions_ritual_complete = {
+	desc = decisions_ritual_complete.d
+	selection_tooltip = decisions_ritual_complete.t
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	confirm_text = decisions_ritual_complete.c
+	is_shown = {
+		promoted_legend = {
+			legend_type = legend_type:witchcraft
+			legend_property:ritual_start = flag:true
+			legend_property:tensoul = flag:true
+			legend_property:vassal = flag:true
+			legend_property:homologus = flag:true
+			legend_property:family = flag:true
+			legend_property:rital_complete = flag:false
+			legend_owner = root
+		}
+	}
+	is_valid = {
+		promoted_legend = {
+			legend_quality = mythical
+		}
+	}
+	effect = {
+		promoted_legend = {
+			set_legend_property = {
+				name = rital_complete
+				target = flag:true
+			}
+		}
+		set_global_variable = {
+			name = deviants_philosopher_stone
+			value = yes
+		}
+		create_artifact = {
+			name = deviants_philosopher_stone
+			description = deviants_philosopher_stone.d
+			type = magic_creation
+			visuals = rock
+			modifier = deviants_philosopher_stone_modifier
+			creator = root
+			rarity = illustrious
+		}
+	}
+}

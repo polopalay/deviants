@@ -59,12 +59,25 @@ exhibitionist = {
 	}
 }
 
-#philosopher_stone = {
-#	portrait_animation = personality_greedy
-#	chapters = {
-#		opening = legend_chapter_opening_exhibitionist
-#		ten = legend_chapter_naked_lady
-#		naked_court = legend_chapter_naked_court
-#		conclusion = legend_chapter_conclusion_exhibitionist
-#	}
-#}
+philosopher_stone = {
+	portrait_animation = personality_callous
+
+	properties = {
+		ritual_start = flag
+		tensoul = flag
+		vassal = flag
+		homologus = flag
+		family = flag
+		rital_complete = flag
+	}
+	chapters = {
+		opening = legend_chapter_opening_philosopher_stone
+		ritual_start = legend_chapter_rital_start_philosopher_stone
+		tensoul = legend_chapter_tensoul_philosopher_stone
+		vassal = legend_chapter_vassal_philosopher_stone
+		homologus = legend_chapter_homologous_philosopher_stone
+		family = legend_chapter_family_philosopher_stone
+		rital_complete = legend_chapter_rital_complete_philosopher_stone
+		conclusion = legend_chapter_conclusion_philosopher_stone
+	}
+}

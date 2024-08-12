@@ -2238,6 +2238,50 @@ deviants_devil.1319 = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_personal_legend_seed = witchcraft 
+					promoted_legend.legend_type = legend_type:witchcraft
+					has_global_variable = deviants_philosopher_stone
+				}
+				have_devil_nicknames_trigger = yes
+				have_devil_building_trigger = yes
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 15
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = corruption
+						value >= 50
+					}
+				}
+				modifier = {
+					add = 25
+					has_trait_xp = {
+						trait = deviants_succubus
+						track = corruption
+						value >= 100
+					}
+				}
+
+				create_legend_seed = {
+					type = witchcraft 
+					quality = famed 
+					chronicle = philosopher_stone
+					properties = {
+						ritual_start = flag:false
+						tensoul = flag:false
+						vassal = flag:false
+						homologus = flag:false
+						family = flag:false
+						rital_complete = flag:false
+					}
+				}
+			}
+		}
 	}	
 	# this is wrong, go repent
 	option = {

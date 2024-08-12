@@ -1,4 +1,14 @@
 legend_semen_tank_ongoing_events = {
+	trigger = {
+		is_adult = yes
+		has_character_modifier = deviants_prostitute
+		has_trait = deviants_succubus
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+	}
 	random_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
@@ -12,6 +22,16 @@ legend_semen_tank_ongoing_events = {
 }
 
 legend_sex_machine_ongoing_events = {
+	trigger = {
+		is_adult = yes
+		has_character_modifier = deviants_prostitute
+		has_trait = deviants_succubus
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+	}
 	random_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
@@ -27,6 +47,16 @@ legend_sex_machine_ongoing_events = {
 }
 
 legend_ladycow_ongoing_events = {
+	trigger = {
+		is_adult = yes
+		has_character_modifier = deviants_prostitute
+		has_trait = deviants_succubus
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+	}
 	random_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
@@ -39,6 +69,16 @@ legend_ladycow_ongoing_events = {
 }
 
 legend_penis_guillotine_ongoing_events = {
+	trigger = {
+		is_adult = yes
+		has_character_modifier = deviants_prostitute
+		has_trait = deviants_succubus
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+	}
 	random_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
@@ -50,6 +90,16 @@ legend_penis_guillotine_ongoing_events = {
 }
 
 legend_penis_exhibitionist_ongoing_events = {
+	trigger = {
+		is_adult = yes
+		has_character_modifier = deviants_prostitute
+		has_trait = deviants_succubus
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+	}
 	random_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }

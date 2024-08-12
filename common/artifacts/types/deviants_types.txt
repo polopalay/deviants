@@ -1,0 +1,4 @@
+magic_creation = {
+	slot = miscellaneous
+	can_reforge = yes
+}
