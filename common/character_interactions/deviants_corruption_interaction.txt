@@ -116,6 +116,7 @@ deviants_child_interaction = {
 				limit = { patrilinear_marriage = yes }
 				create_character = {
 					age = 0
+					location = primary_spouse.capital_province
 					mother = scope:recipient
 					father = primary_spouse
 					dynasty_house = primary_spouse.house
@@ -128,6 +129,7 @@ deviants_child_interaction = {
 			else = {
 				create_character = {
 					age = 0
+					location = capital_province
 					mother = scope:recipient
 					father = primary_spouse
 					dynasty_house = house

@@ -40,23 +40,8 @@
  deviants_switch_body_interaction: "Switch"
  deviants_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
 
- deviants_become_prostitute_interaction: "Become Prostitution"
- deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"
-
- deviants_stop_prostitute_interaction: "Stop Being A Prostitution"
- deviants_stop_prostitute_interaction.desc: "[recipient.GetShortUIName] Stop Working As Prostitute"
-
- deviants_heal_interaction: "Healing"
- deviants_heal_interaction.desc: "Heals all types of diseases and wounds"
-
- deviants_become_succubus: "Become Succubus"
- deviants_become_succubus.desc: "[recipient.GetShortUIName] will become a Succubus"
-
  deviants_create_succubus_interaction: "Create Succubus"
  deviants_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
-
- deviants_switch_body_interaction: "Switch"
- deviants_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
 
  deviants_add_courtier_interaction: "Add to Court"
  deviants_add_courtier_interaction.desc: "Add [recipient.GetShortUIName] to your Court"

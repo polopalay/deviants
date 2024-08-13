@@ -252,10 +252,6 @@ deviants_blackmail.1200 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 		}
-		add_character_modifier = {
-			modifier = deviant_vassaltrouble_modifier
-			days = 60
-		}
         	hidden_effect = {
             		add_trait_xp = {
 				trait = deviants_succubus

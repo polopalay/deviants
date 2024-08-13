@@ -42,6 +42,7 @@ deviants_start_ritual_decision = {
 		}
 		remove_short_term_gold = 100
 	}
+	ai_check_interval = 0
 }
 
 deviants_tensoul_decision = {
@@ -86,6 +87,7 @@ deviants_tensoul_decision = {
 			}
 		}
 	}
+	ai_check_interval = 0
 }
 
 deviants_vassal_decision = {
@@ -132,6 +134,7 @@ deviants_vassal_decision = {
 			}
 		}
 	}
+	ai_check_interval = 0
 }
 
 deviants_homologus_decision = {
@@ -183,6 +186,7 @@ deviants_homologus_decision = {
 			}
 		}
 	}
+	ai_check_interval = 0
 }
 
 deviants_family_decision = {
@@ -226,6 +230,7 @@ deviants_family_decision = {
 			}
 		}
 	}
+	ai_check_interval = 0
 }
 
 decisions_ritual_complete = {
@@ -271,4 +276,5 @@ decisions_ritual_complete = {
 			rarity = illustrious
 		}
 	}
+	ai_check_interval = 0
 }
