@@ -49,12 +49,12 @@ deviants_death_korps  = {
 deviants_zombie = {
 	icon = skirmishers
 	type = skirmishers 
-	can_recruit = { always = no }
+	can_recruit = { have_devil_building_trigger = yes }
 
-	pursuit = 8
-	screen = 5
-	damage = 8
-	toughness = 5
+	pursuit = 4
+	screen = 4
+	damage = 4
+	toughness = 4
 
 	counters = {
 		pikemen = 1
@@ -70,7 +70,7 @@ deviants_zombie = {
 deviants_skeleton = {
 	icon = skirmishers
 	type = skirmishers 
-	can_recruit = { always = no }
+	can_recruit = { have_devil_building_trigger = yes }
 
 	pursuit = 8
 	screen = 0

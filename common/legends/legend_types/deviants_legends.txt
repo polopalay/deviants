@@ -395,31 +395,31 @@ sexual = {
 	on_yearly = {
 		scope:legend = { save_scope_as = promoted_legend }
 		if = {
-			limit = { scope:legend = { has_legend_chronicle = semen_tank protagonist = scope:root } }
+			limit = { scope:legend = { has_legend_chronicle = semen_tank protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_semen_tank_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = sex_machine protagonist = scope:root } }
+			limit = { scope:legend = { has_legend_chronicle = sex_machine protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_sex_machine_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = ladycow protagonist = scope:root } }
+			limit = { scope:legend = { has_legend_chronicle = ladycow protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_ladycow_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = penis_guillotine protagonist = scope:root } }
+			limit = { scope:legend = { has_legend_chronicle = penis_guillotine protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_penis_guillotine_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = exhibitionist protagonist = scope:root } }
+			limit = { scope:legend = { has_legend_chronicle = exhibitionist protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_penis_exhibitionist_ongoing_events 
 			}

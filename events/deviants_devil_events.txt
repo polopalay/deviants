@@ -3,6 +3,7 @@ namespace = deviants_devil
 deviants_devil.1410 = { 
 	type = character_event
 	title = deviants_devil.1410.t
+	cooldown = { years = 5 }
 	desc = { 
 		first_valid = {
 			triggered_desc = {
@@ -1805,6 +1806,7 @@ deviants_devil.5703 = {
 deviants_devil.1300 = { 
 	type = character_event
 	title = deviants_devil.1300.t
+	cooldown = { years = 5 }
 	desc = { 
 		random_valid = {
 			triggered_desc = {
@@ -2256,7 +2258,7 @@ deviants_devil.1319 = {
 		}
 		else_if = {
 			limit = {
-				NOR = {
+				NOT = {
 					has_personal_legend_seed = witchcraft 
 					promoted_legend.legend_type = legend_type:witchcraft
 					has_global_variable = deviants_philosopher_stone
