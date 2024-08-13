@@ -2232,27 +2232,50 @@ deviants_devil.1319 = {
 			random = {
 				chance = 50
 				modifier = {
-					add = 25
-					has_trait_xp = {
-						trait = deviants_succubus
-						track = corruption
-						value >= 50
-					}
-				}
-				modifier = {
-					add = 25
-					has_trait_xp = {
-						trait = deviants_succubus
-						track = corruption
-						value >= 100
-					}
+					add = 50
+					has_character_flag = deviants_white_hair
+					has_character_flag = deviants_white_eyes
 				}
 				random_list = {
-					20 = { create_legend_seed = { type = sexual quality = famed chronicle = semen_tank } }
-					20 = { create_legend_seed = { type = sexual quality = famed chronicle = sex_machine } }
-					20 = { create_legend_seed = { type = sexual quality = famed chronicle = ladycow } }
-					20 = { create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine } }
-					20 = { create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist } }
+					20 = { 
+						modifier = {
+							add = 80
+							has_character_flag = deviants_horn1
+							has_character_flag = deviants_marking_1
+						}
+						create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
+					}
+					20 = { 
+						modifier = {
+							add = 80
+							has_character_flag = deviants_horn2
+							has_character_flag = deviants_marking_2
+						}
+						create_legend_seed = { type = sexual quality = famed chronicle = sex_machine }
+					}
+					20 = { 
+						modifier = {
+							add = 80
+							has_character_flag = deviants_horn3
+							has_character_flag = deviants_marking_3
+						}
+						create_legend_seed = { type = sexual quality = famed chronicle = ladycow }
+					}
+					20 = { 
+						modifier = {
+							add = 80
+							has_character_flag = deviants_horn4
+							has_character_flag = deviants_marking_4
+						}
+						create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
+					}
+					20 = { 
+						modifier = {
+							add = 80
+							has_character_flag = deviants_marking_5
+						}
+						create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
+					}
 				}
 			}
 		}
@@ -2269,20 +2292,13 @@ deviants_devil.1319 = {
 			random = {
 				chance = 10
 				modifier = {
+				has_character_flag = deviants_marking_6
 					add = 15
-					has_trait_xp = {
-						trait = deviants_succubus
-						track = corruption
-						value >= 50
-					}
 				}
 				modifier = {
 					add = 25
-					has_trait_xp = {
-						trait = deviants_succubus
-						track = corruption
-						value >= 100
-					}
+					has_character_flag = deviants_red_hair
+					has_character_flag = deviants_red_eyes
 				}
 
 				create_legend_seed = {
