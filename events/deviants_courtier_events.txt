@@ -1115,7 +1115,7 @@ deviants_courtier.7001 = {
     	# agree
 	option = {
 		ai_chance = { base = 100 }
-		deviant_go_random_1 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
 		name = deviants_courtier.7001.a
 		add_prestige = minor_prestige_loss
 		custom_tooltip = deviants_courtier.7001.a.tt
@@ -1133,7 +1133,7 @@ deviants_courtier.7001 = {
 	# refuse
 	option = {
 		name = deviants_courtier.7001.c
-		deviant_go_random_1 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
 		custom_tooltip = deviants_courtier.7001.c.tt
 		trigger_event = deviants_courtier.7020
 	}				
@@ -1459,9 +1459,9 @@ deviants_courtier.5200 = {
 				value = 1
 			}
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
-		deviant_go_random_3 = { start_promote_lew_legend = yes }
-		deviant_go_random_4 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
 	}	
 	# offer ass to have coins inserted
 	option = {
@@ -1491,9 +1491,9 @@ deviants_courtier.5200 = {
 				value = 1
 			}
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
-		deviant_go_random_3 = { start_promote_lew_legend = yes }
-		deviant_go_random_4 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
 	}	
 	# refuse, get spanked by your owner
 	option = {
@@ -1569,9 +1569,9 @@ deviants_courtier.5300 = {
 				value = 2
 			}
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
-		deviant_go_random_3 = { start_promote_lew_legend = yes }
-		deviant_go_random_4 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
 	}	
 	# do bare minium
 	option = {
@@ -1657,9 +1657,9 @@ deviants_courtier.5400 = {
 				value = 1
 			}
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
-		deviant_go_random_3 = { start_promote_lew_legend = yes }
-		deviant_go_random_4 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
 	}	
 	# do bare minium
 	option = {
@@ -1749,9 +1749,9 @@ deviants_courtier.5500 = {
 			opinion = -10
 			
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
-		deviant_go_random_3 = { start_promote_lew_legend = yes }
-		deviant_go_random_4 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
 	}					
 }
 # 5510 if agree to fuck horse
@@ -1969,7 +1969,7 @@ deviants_courtier.6011 = {
 			}
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}	
 	# endure
 	option = {
@@ -2048,7 +2048,7 @@ deviants_courtier.6021 = {
 			}
 			add_character_flag = { flag = deviants_face_cum days = 15 }
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}	
 	# just leave
 	option = {
@@ -2083,7 +2083,7 @@ deviants_courtier.6022 = {
 				value = 1
 			}
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}	
 	# just leave
 	option = {
@@ -2122,7 +2122,7 @@ deviants_courtier.6030 = {
 				value = 1
 			}
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}	
 	# stay silent as he cums
 	option = {
@@ -2167,7 +2167,7 @@ deviants_courtier.6040 = {
 			}
 			add_character_flag = { flag = deviants_pussy_cum days = 15 }
 		}
-		deviant_go_random_2 = { start_promote_lew_legend = yes }
+		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}	
 	# do the bare minimum to get him cum
 	option = {

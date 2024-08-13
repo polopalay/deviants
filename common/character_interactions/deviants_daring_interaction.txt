@@ -346,7 +346,7 @@ deviants_makeup = {
 			}
 		}
 
-		secope:actor = {
+		scope:actor = {
 			add_trait_xp = {
 				trait = deviants_succubus
 				track = daring

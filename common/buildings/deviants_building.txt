@@ -8,9 +8,6 @@ deviants_brothel1 = {
 
 	can_construct = {
 		is_capital_barony = yes
-		scope:holder = {
-			has_trait = deviants_succubus
-		}
 	}
 	is_enabled = {
 		scope:holder = {
@@ -47,9 +44,6 @@ deviants_brothel2 = {
 
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
-		scope:holder = {
-			has_trait = deviants_succubus
-		}
 	}
 	is_enabled = {
 		scope:holder = {
@@ -84,9 +78,6 @@ deviants_brothel3 = {
 
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
-		scope:holder = {
-			has_trait = deviants_succubus
-		}
 	}
 	is_enabled = {
 		scope:holder = {
@@ -123,9 +114,6 @@ deviants_alchemy1 = {
 
 	can_construct = {
 		is_capital_barony = yes
-		scope:holder = {
-			has_trait = deviants_succubus
-		}
 	}
 	is_enabled = {
 		scope:holder = {
@@ -163,9 +151,6 @@ deviants_alchemy2 = {
 
 	can_construct = {
 		is_capital_barony = yes
-		scope:holder = {
-			has_trait = deviants_succubus
-		}
 	}
 	is_enabled = {
 		scope:holder = {
@@ -201,9 +186,6 @@ deviants_alchemy3 = {
 
 	can_construct = {
 		is_capital_barony = yes
-		scope:holder = {
-			has_trait = deviants_succubus
-		}
 	}
 	is_enabled = {
 		scope:holder = {

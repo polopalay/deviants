@@ -60,7 +60,7 @@ sexual = {
 	}
 
 	ai_protagonist_weight = {
-		base = 0
+		value = 0
 		if = {
 			limit = { this = scope:creator }
 			add = 40
@@ -395,31 +395,31 @@ sexual = {
 	on_yearly = {
 		scope:legend = { save_scope_as = promoted_legend }
 		if = {
-			limit = { scope:legend = { has_legend_chronicle = semen_tank protagonist = legend_owner } }
+			limit = { scope:legend = { has_legend_chronicle = semen_tank legend_protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_semen_tank_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = sex_machine protagonist = legend_owner } }
+			limit = { scope:legend = { has_legend_chronicle = sex_machine legend_protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_sex_machine_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = ladycow protagonist = legend_owner } }
+			limit = { scope:legend = { has_legend_chronicle = ladycow legend_protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_ladycow_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = penis_guillotine protagonist = legend_owner } }
+			limit = { scope:legend = { has_legend_chronicle = penis_guillotine legend_protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_penis_guillotine_ongoing_events 
 			}
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = exhibitionist protagonist = legend_owner } }
+			limit = { scope:legend = { has_legend_chronicle = exhibitionist legend_protagonist = legend_owner } }
 			trigger_event = { 
 				on_action = legend_penis_exhibitionist_ongoing_events 
 			}
@@ -489,7 +489,7 @@ witchcraft = {
 	}
 
 	ai_protagonist_weight = {
-		base = 0
+		value = 0
 		if = {
 			limit = { this = scope:creator }
 			add = 50

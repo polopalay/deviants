@@ -66,14 +66,14 @@ deviants_prostitute_interaction = {
 				if = {
 					limit = { scope:secondary_recipient = scope:recipient }
 					if = {
-						limit = { has_character_modifier deviants_prostitute }
+						limit = { has_character_modifier = deviants_prostitute }
 						pay_short_term_gold = { target = scope:secondary_recipient gold = 5 } 
 					}
 				}
 				else = {
 					pay_short_term_gold = { target = scope:recipient gold = 2 }
 					if = {
-						limit = { has_character_modifier deviants_prostitute }
+						limit = { has_character_modifier = deviants_prostitute }
 						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
 					}
 				}
@@ -249,9 +249,6 @@ deviants_become_prostitute_interaction = {
 					scope:recipient = {
 						is_spouse_of = scope:actor
 						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
-					}
-					every_spouse = {
-						divorce = scope:recipient
 					}
 				}
 			}

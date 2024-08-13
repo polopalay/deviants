@@ -61,7 +61,6 @@ deviants_zombie = {
 	}
 
 	stack = 100
-	can_recruit = { have_witch_forest_trigger = yes }
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
@@ -82,7 +81,6 @@ deviants_skeleton = {
 	}
 
 	stack = 100
-	can_recruit = { have_witch_forest_trigger = yes }
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }

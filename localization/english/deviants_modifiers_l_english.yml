@@ -1,6 +1,6 @@
 ﻿l_english:
  deviants_prostitute: "Prostitute"
- deviants_prostitute_desc: "[ROOT.GetCharacter.GetName] is in the business of sexually serving clients for coin."
+ deviants_prostitute_desc: "This character is in the business of sexually serving clients for coin."
 
  deviants_slave: "Slave"
  deviants_slave_desc: "This character is the property of another person, recognized by law to be less than a human being."

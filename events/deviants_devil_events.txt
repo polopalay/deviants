@@ -279,7 +279,7 @@ deviants_devil.1416 = {
 	# if agree to a parade
 	option = {
 		name = deviants_devil.1416.c
-		medium_piety_loss = medium_piety_loss
+		add_piety = medium_piety_loss
 		custom_tooltip = deviants_devil.1416.c.tt
 		add_gold = medium_gold_value
 		trigger_event = deviants_devil.1419

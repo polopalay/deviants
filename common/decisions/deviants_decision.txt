@@ -13,6 +13,7 @@ deviants_spawn_death_korp = {
 	}
 	effect = {
 		spawn_army = {
+			name = deviants_death_korps
 			men_at_arms = {
 				type = deviants_death_korps
 				stacks = 10
@@ -20,7 +21,6 @@ deviants_spawn_death_korp = {
 			location = capital_province
 			inheritable = yes
 			uses_supply = 10
-			name = deviants_death_korps
 		}
 		add_trait_xp = {
 			trait = deviants_succubus
@@ -50,11 +50,6 @@ deviants_demon_generals = {
 			limit = { is_knight = yes }
 			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
 			add_character_modifier = { modifier = deviants_generals years = 13 }
-			#add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier 
-			root = {
-				add_trait_xp = { trait = deviants_succubus track = power value = 1 }
-				add_character_modifier = deviants_fuckedsilly months = 1
-			}
 		}
 		add_character_modifier = { modifier = deviants_generals years = 13 }
 		add_trait_xp = {

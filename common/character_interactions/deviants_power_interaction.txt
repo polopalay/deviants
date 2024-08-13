@@ -144,11 +144,11 @@ deavians_dealing_with_stress_interaction = {
 	ai_will_do = { 
 		base = 10
 		modifier = {
-			base = 10
+			add = 10
 			scope:recipient = scope:actor
 		}
 		modifier = {
-			base = 5
+			add = 5
 			scope:recipient = {
 				is_child_of = scope:actor
 			}
@@ -308,11 +308,11 @@ deviants_heal_interaction = {
 	ai_will_do = { 
 		base = 50
 		modifier = {
-			base = 50
+			add = 50
 			scope:recipient = scope:actor
 		}
 		modifier = {
-			base = 30
+			add = 30
 			scope:recipient = {
 				is_child_of = scope:actor
 			}
@@ -418,11 +418,11 @@ deviants_purify_interaction = {
 	ai_will_do = { 
 		base = 0
 		modifier = {
-			base = 50
+			add = 50
 			scope:recipient = scope:actor
 		}
 		modifier = {
-			base = 25
+			add = 25
 			scope:recipient = {
 				is_child_of = scope:actor
 			}

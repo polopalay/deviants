@@ -143,7 +143,7 @@ deviants_lesser_succubus = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = deviants_lesser_succubusdesc
+				desc = deviants_lesser_succubus_desc
 			}
 			desc = deviants_lesser_succubus_character_desc
 		}
@@ -160,7 +160,7 @@ deviants_lesser_succubus = {
 			attraction_opinion = 10
 			health = 0.5
 			negate_health_penalty_add = 0.5
-			travel_speed = 5
+			character_travel_speed = 5
 			character_travel_safety = 5
 			hostile_scheme_resistance_add = 50
 		}
@@ -174,7 +174,7 @@ deviants_lesser_succubus = {
 			attraction_opinion = 15
 			health = 1
 			negate_health_penalty_add = 1
-			travel_speed = 5
+			character_travel_speed = 5
 			character_travel_safety = 5
 			hostile_scheme_resistance_add = 50
 		}
