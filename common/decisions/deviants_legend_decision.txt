@@ -12,7 +12,7 @@ deviants_start_ritual_decision = {
 			legend_property:homologus = flag:false
 			legend_property:family = flag:false
 			legend_property:rital_complete = flag:false
-			legend_owner = root
+			legend_protagonist = root
 			OR = {
 				legend_quality = famed
 				legend_quality = illustrious
@@ -59,7 +59,7 @@ deviants_tensoul_decision = {
 			legend_property:homologus = flag:false
 			legend_property:family = flag:false
 			legend_property:rital_complete = flag:false
-			legend_owner = root
+			legend_protagonist = root
 		}
 	}
 	is_valid = {
@@ -104,7 +104,7 @@ deviants_vassal_decision = {
 			legend_property:homologus = flag:false
 			legend_property:family = flag:false
 			legend_property:rital_complete = flag:false
-			legend_owner = root
+			legend_protagonist = root
 		}
 	}
 	is_valid = {
@@ -151,7 +151,7 @@ deviants_homologus_decision = {
 			legend_property:homologus = flag:false
 			legend_property:family = flag:false
 			legend_property:rital_complete = flag:false
-			legend_owner = root
+			legend_protagonist = root
 		}
 	}
 	is_valid = {
@@ -203,7 +203,7 @@ deviants_family_decision = {
 			legend_property:homologus = flag:true
 			legend_property:family = flag:false
 			legend_property:rital_complete = flag:false
-			legend_owner = root
+			legend_protagonist = root
 		}
 	}
 	is_valid = {
@@ -247,7 +247,7 @@ decisions_ritual_complete = {
 			legend_property:homologus = flag:true
 			legend_property:family = flag:true
 			legend_property:rital_complete = flag:false
-			legend_owner = root
+			legend_protagonist = root
 		}
 	}
 	is_valid = {

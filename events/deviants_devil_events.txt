@@ -2232,16 +2232,25 @@ deviants_devil.1319 = {
 				NOR = { 
 					has_personal_legend_seed = sexual 
 					promoted_legend.legend_type = legend_type:sexual
-					have_devil_nicknames_trigger = yes
-					have_devil_building_trigger = yes
 				} 
 			}
 			random = {
-				chance = 50
+				chance = 25
 				modifier = {
-					add = 50
+					add = 25
 					has_character_flag = deviants_white_hair
 					has_character_flag = deviants_white_eyes
+				}
+				modifier = {
+					add = -15
+					OR = {
+						has_character_flag = deviants_red_hair
+						has_character_flag = deviants_red_eyes
+					}
+				}
+				modifier = {
+					add = -20
+					have_devil_nicknames_trigger = yes
 				}
 				random_list = {
 					20 = { 
@@ -2286,26 +2295,35 @@ deviants_devil.1319 = {
 				}
 			}
 		}
-		else_if = {
+		if = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_personal_legend_seed = witchcraft 
 					promoted_legend.legend_type = legend_type:witchcraft
 					has_global_variable = deviants_philosopher_stone
 				}
-				have_devil_nicknames_trigger = yes
-				have_devil_building_trigger = yes
 			}
 			random = {
 				chance = 10
 				modifier = {
-					has_character_flag = deviants_marking_6
 					add = 15
+					has_character_flag = deviants_red_hair
+					has_character_flag = deviants_red_eyes
 				}
 				modifier = {
 					add = 25
-					has_character_flag = deviants_red_hair
-					has_character_flag = deviants_red_eyes
+					has_character_flag = deviants_marking_6
+				}
+				modifier = {
+					add = -25
+					NOT = {
+						has_character_flag = deviants_white_hair
+						has_character_flag = deviants_white_eyes
+					}
+				}
+				modifier = {
+					add = -20
+					has_global_variable = deviants_philosopher_stone
 				}
 
 				create_legend_seed = {

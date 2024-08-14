@@ -391,34 +391,30 @@ sexual = {
 	on_yearly = {
 		scope:legend = { save_scope_as = promoted_legend }
 		if = {
-			limit = { scope:legend = { has_legend_chronicle = semen_tank legend_protagonist = legend_owner } }
-			trigger_event = { 
-				on_action = legend_semen_tank_ongoing_events 
-			}
+			limit = { scope:legend = { has_legend_chronicle = semen_tank legend_protagonist = legend_owner root = legend_owner } }
+			trigger_event = { on_action = legend_semen_tank_ongoing_events }
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = sex_machine legend_protagonist = legend_owner } }
-			trigger_event = { 
-				on_action = legend_sex_machine_ongoing_events 
-			}
+			limit = { scope:legend = { has_legend_chronicle = sex_machine legend_protagonist = legend_owner root = legend_owner } }
+			trigger_event = { on_action = legend_sex_machine_ongoing_events }
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = ladycow legend_protagonist = legend_owner } }
-			trigger_event = { 
-				on_action = legend_ladycow_ongoing_events 
-			}
+			limit = { scope:legend = { has_legend_chronicle = ladycow legend_protagonist = legend_owner root = legend_owner } }
+			trigger_event = { on_action = legend_ladycow_ongoing_events }
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = penis_guillotine legend_protagonist = legend_owner } }
-			trigger_event = { 
-				on_action = legend_penis_guillotine_ongoing_events 
-			}
+			limit = { scope:legend = { has_legend_chronicle = penis_guillotine legend_protagonist = legend_owner root = legend_owner } }
+			trigger_event = { on_action = legend_penis_guillotine_ongoing_events }
 		}
 		else_if = {
-			limit = { scope:legend = { has_legend_chronicle = exhibitionist legend_protagonist = legend_owner } }
-			trigger_event = { 
-				on_action = legend_penis_exhibitionist_ongoing_events 
-			}
+			limit = { scope:legend = { has_legend_chronicle = exhibitionist legend_protagonist = legend_owner root = legend_owner } }
+			trigger_event = { on_action = legend_penis_exhibitionist_ongoing_events }
+		}
+		trigger_event = {
+			on_action = legend_ongoing_events
+		}
+		trigger_event = {
+			on_action = legend_changing_events
 		}
 	}
 }
@@ -754,6 +750,9 @@ witchcraft = {
 		scope:legend = { save_scope_as = promoted_legend }
 		trigger_event = {
 			on_action = legend_ongoing_events
+		}
+		trigger_event = {
+			on_action = legend_changing_events
 		}
 	}
 }
