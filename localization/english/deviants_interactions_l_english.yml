@@ -49,8 +49,8 @@
  deviants_absorb_interaction: "Absorb"
  deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
 
- deviants_makeup: "Makeup"
- deviants_makeup.desc: "Apply makeup to [recipient.GetShortUIName]"
+ deviants_makeup_interaction: "Makeup"
+ deviants_makeup_interaction.desc: "Apply makeup to [recipient.GetShortUIName]"
  deviants_no_horn: "No Horn"
  deviants_horn0: "Long curved horns"
  deviants_horn1: "Twisted horns"
@@ -77,3 +77,6 @@
  deviants_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
  lilith: "Lilithism"
  satan: "Satanism"
+
+ deviants_honor_interaction: "Remove the disgraceful Trait"
+ deviants_honor_interaction.desc: "Remove the disgraceful Trait from [recipient.GetShortUIName]"
