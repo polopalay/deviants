@@ -4,7 +4,7 @@ deviants_switch_body_interaction = {
     	category = interaction_category_diplomacy
 	interface_priority = 1
 	common_interaction = yes
-    	use_diplomatic_range = no
+    	use_diplomatic_range = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 

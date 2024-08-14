@@ -491,8 +491,14 @@ deviants_honor_interaction = {
 			remove_trait = murderer
 		}
 		scope:actor = {
-			add_trait_xp = { trait = deviants_succubus track = daring value = 5 }
-			add_trait_xp = { trait = deviants_lesser_succubus value = 10 }
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = { trait = deviants_succubus track = daring value = -5 }
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = { trait = deviants_lesser_succubus value = -10 }
+			}
 		}
 	}
 }
