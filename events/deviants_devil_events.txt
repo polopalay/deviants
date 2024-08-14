@@ -189,6 +189,11 @@ deviants_devil.1413 = {
 				track = power
 				value = 1
 			}
+			add_trait_xp = {
+				trait = deviants_succubus
+				track = daring
+				value = 1
+			}
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
 	}			
@@ -219,6 +224,7 @@ deviants_devil.1414 = {
 		trigger_event = deviants_devil.1416
 	}			
 }
+
 #1415 if only pleasure him, he riding you around while fucking
 deviants_devil.1415 = { 
 	type = character_event
@@ -2293,7 +2299,7 @@ deviants_devil.1319 = {
 			random = {
 				chance = 10
 				modifier = {
-				has_character_flag = deviants_marking_6
+					has_character_flag = deviants_marking_6
 					add = 15
 				}
 				modifier = {

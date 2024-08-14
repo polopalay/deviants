@@ -1,3 +1,61 @@
+deviants_weight_interaction = {
+	icon = full_body_hair
+	desc = deviants_weight_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_succubus
+					track = daring
+					value >= 2
+				}
+				has_trait_xp = {
+					trait = deviants_lesser_succubus
+					value >= 4
+				}
+			}
+		}
+		scope:recipient = {
+			OR = {
+				current_weight >= 25
+				current_weight <= -25
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			change_current_weight = -200
+			change_current_weight = 100
+		}
+		scope:actor = {
+			if = {
+				limit = { has_trait = deviants_succubus }
+				add_trait_xp = {
+					trait = deviants_succubus
+					track = daring
+					value = -2
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = {
+					trait = deviants_lesser_succubus
+					value = -4
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
 deviants_makeup = {
 	icon = no_body_hair
 	desc = deviants_makeup.desc
