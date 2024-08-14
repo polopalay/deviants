@@ -2227,117 +2227,50 @@ deviants_devil.1319 = {
 		ai_chance = { base = 100 }
 		name = deviants_devil.1319.a
 		custom_tooltip = deviants_devil.1319.a.tt
-		if = {
-			limit = { 
-				NOR = { 
-					has_personal_legend_seed = sexual 
-					promoted_legend.legend_type = legend_type:sexual
-				} 
-			}
-			random = {
-				chance = 25
-				modifier = {
-					add = 25
-					has_character_flag = deviants_white_hair
-					has_character_flag = deviants_white_eyes
+		random = {
+			chance = 25
+			modifier = { add = 25 has_character_flag = deviants_white_hair has_character_flag = deviants_white_eyes }
+			modifier = { add = -20 have_devil_nicknames_trigger = yes } 
+			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual } }
+			random_list = {
+				20 = { 
+					modifier = { add = 80 has_character_flag = deviants_horn1 has_character_flag = deviants_marking_1 }
+					create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
 				}
-				modifier = {
-					add = -15
-					OR = {
-						has_character_flag = deviants_red_hair
-						has_character_flag = deviants_red_eyes
-					}
+				20 = { 
+					modifier = { add = 80 has_character_flag = deviants_horn2 has_character_flag = deviants_marking_2 }
+					create_legend_seed = { type = sexual quality = famed chronicle = sex_machine }
 				}
-				modifier = {
-					add = -20
-					have_devil_nicknames_trigger = yes
+				20 = { 
+					modifier = { add = 80 has_character_flag = deviants_horn3 has_character_flag = deviants_marking_3 }
+					create_legend_seed = { type = sexual quality = famed chronicle = ladycow }
 				}
-				random_list = {
-					20 = { 
-						modifier = {
-							add = 80
-							has_character_flag = deviants_horn1
-							has_character_flag = deviants_marking_1
-						}
-						create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
-					}
-					20 = { 
-						modifier = {
-							add = 80
-							has_character_flag = deviants_horn2
-							has_character_flag = deviants_marking_2
-						}
-						create_legend_seed = { type = sexual quality = famed chronicle = sex_machine }
-					}
-					20 = { 
-						modifier = {
-							add = 80
-							has_character_flag = deviants_horn3
-							has_character_flag = deviants_marking_3
-						}
-						create_legend_seed = { type = sexual quality = famed chronicle = ladycow }
-					}
-					20 = { 
-						modifier = {
-							add = 80
-							has_character_flag = deviants_horn4
-							has_character_flag = deviants_marking_4
-						}
-						create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
-					}
-					20 = { 
-						modifier = {
-							add = 80
-							has_character_flag = deviants_marking_5
-						}
-						create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
-					}
+				20 = { 
+					modifier = { add = 80 has_character_flag = deviants_horn4 has_character_flag = deviants_marking_4 }
+					create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
+				}
+				20 = { 
+					modifier = { add = 80 has_character_flag = deviants_marking_5 }
+					create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
 				}
 			}
 		}
-		if = {
-			limit = {
-				NOR = {
-					has_personal_legend_seed = witchcraft 
-					promoted_legend.legend_type = legend_type:witchcraft
-					has_global_variable = deviants_philosopher_stone
-				}
-			}
-			random = {
-				chance = 10
-				modifier = {
-					add = 15
-					has_character_flag = deviants_red_hair
-					has_character_flag = deviants_red_eyes
-				}
-				modifier = {
-					add = 25
-					has_character_flag = deviants_marking_6
-				}
-				modifier = {
-					add = -25
-					NOT = {
-						has_character_flag = deviants_white_hair
-						has_character_flag = deviants_white_eyes
-					}
-				}
-				modifier = {
-					add = -20
-					has_global_variable = deviants_philosopher_stone
-				}
+		random = {
+			chance = 10
+			modifier = { add = 15 has_character_flag = deviants_red_hair has_character_flag = deviants_red_eyes has_character_flag = deviants_marking_6 }
+			modifier = { add = -100 OR = { 	has_personal_legend_seed = witchcraft promoted_legend.legend_type = legend_type:witchcraft } }
 
-				create_legend_seed = {
-					type = witchcraft 
-					quality = famed 
-					chronicle = philosopher_stone
-					properties = {
-						ritual_start = flag:false
-						tensoul = flag:false
-						vassal = flag:false
-						homologus = flag:false
-						family = flag:false
-						rital_complete = flag:false
-					}
+			create_legend_seed = {
+				type = witchcraft 
+				quality = famed 
+				chronicle = philosopher_stone
+				properties = {
+					ritual_start = flag:false
+					tensoul = flag:false
+					vassal = flag:false
+					homologus = flag:false
+					family = flag:false
+					rital_complete = flag:false
 				}
 			}
 		}

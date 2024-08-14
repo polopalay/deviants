@@ -262,10 +262,6 @@ decisions_ritual_complete = {
 				target = flag:true
 			}
 		}
-		set_global_variable = {
-			name = deviants_philosopher_stone
-			value = yes
-		}
 		create_artifact = {
 			name = deviants_philosopher_stone
 			description = deviants_philosopher_stone.d
