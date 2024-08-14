@@ -445,7 +445,6 @@ deviants_honor_interaction = {
     	category = interaction_category_friendly
     	use_diplomatic_range = yes
 	is_shown = {
-		NOT = { scope:recipient = scope:actor }
 		scope:actor = { 
 			OR = {
 				has_trait_xp = {
