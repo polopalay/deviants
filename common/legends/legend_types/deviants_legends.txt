@@ -159,7 +159,7 @@ sexual = {
 
 				upgrade = { value = 1000 }
 
-				complete = { value = base_legend_complete_ai }
+				complete = { value = 0 }
 			}
 		}
 		
@@ -267,9 +267,7 @@ sexual = {
 
 				upgrade = { value = 1000 }
 
-				complete = {
-					value = base_legend_complete_ai
-				}
+				complete = { value = 0 }
 			}
 		}
 		
@@ -385,9 +383,7 @@ sexual = {
 
 				upgrade = { value = 1000 }
 
-				complete = {
-					value = base_legend_complete_ai
-				}
+				complete = { value = base_legend_complete_ai }
 			}
 		}
 	}

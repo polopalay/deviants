@@ -1,5 +1,5 @@
 semen_tank = {
-	portrait_animation = personality_greedy
+	portrait_animation = shame
 
 	properties = {}
 	chapters = {
@@ -11,7 +11,7 @@ semen_tank = {
 }
 
 sex_machine = {
-	portrait_animation = personality_greedy
+	portrait_animation = flirtation_left
 
 	properties = {}
 	chapters = {
@@ -23,7 +23,7 @@ sex_machine = {
 }
 
 ladycow = {
-	portrait_animation = shame
+	portrait_animation = prisondungeon
 
 	properties = {}
 	chapters = {
@@ -48,7 +48,7 @@ penis_guillotine = {
 }
 
 exhibitionist = {
-	portrait_animation = personality_greedy
+	portrait_animation = war_over_tie
 
 	properties = {}
 	chapters = {
