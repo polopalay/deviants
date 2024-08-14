@@ -47,65 +47,6 @@ deviants_absorb_interaction = {
 	ai_will_do = { base = 100 }
 }
 
-deviants_give_resource_interaction = {
-	icon = modify
-	desc = deviants_give_resource_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	common_interaction = no
-
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = { trait = deviants_succubus track = loyalty value >= 1 }
-		}
-	}
-	send_option = {
-		flag = gold	
-		localization = gr_gold
-	}
-	send_option = {
-		flag = prestige	
-		localization = gr_prestige
-	}
-	send_option = {
-		flag = piety	
-		localization = gr_piety
-	}
-	send_option = {
-		flag = dynasty_prestige	
-		localization = gr_dynasty_prestige
-	}
-	send_options_exclusive = yes
-
-	on_accept = {
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = loyalty
-				value = -1
-			}
-		}
-		scope:recipient = {
-			if = {
-				limit = { scope:gold = yes }
-				add_gold = medium_gold_value
-			}
-			else_if = {
-				limit = { scope:prestige = yes }
-				add_prestige = medium_prestige_value
-			}
-			else_if = {
-				limit = { scope:piety = yes }
-				add_piety = medium_piety_value
-			}
-			else_if = {
-				limit = { scope:dynasty_prestige = yes }
-				add_dynasty_prestige = medium_dynasty_prestige_value
-			}
-		}
-	}
-}
-
 deviants_cultist_interaction = {
 	icon = take_vows
 	desc = deviants_cultist_interaction.desc

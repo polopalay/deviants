@@ -2218,6 +2218,7 @@ deviants_devil.1319 = {
 	}
 	# it is, what it is
 	option = {
+		ai_chance = { base = 100 }
 		name = deviants_devil.1319.a
 		custom_tooltip = deviants_devil.1319.a.tt
 		if = {
@@ -2319,7 +2320,6 @@ deviants_devil.1319 = {
 	}	
 	# this is wrong, go repent
 	option = {
-		ai_chance = { base = 100 }
 		name = deviants_devil.1319.b
 		custom_tooltip = deviants_devil.1319.b.tt
 		stress_impact = {

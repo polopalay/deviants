@@ -11,10 +11,6 @@ deviants_witch_forest = {
 		name = "fp4_legendary_desert_hunting_lodge_01_a_mesh"
 	}
 	
-	can_construct = {
-		has_trait = deviants_succubus
-	}
-
 	cost_gold = 1000
 
 	character_modifier = {

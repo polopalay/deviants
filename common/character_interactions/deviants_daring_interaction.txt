@@ -163,6 +163,18 @@ deviants_makeup = {
 		}
 		flag = deviants_red_hair
 	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+		}
+		flag = naked
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+		}
+		flag = dress
+	}
 	send_options_exclusive = yes
 
 	on_accept = {
@@ -345,6 +357,18 @@ deviants_makeup = {
 				remove_character_flag = deviants_red_eyes
 			}
 		}
+		else_if = {
+			limit = { scope:naked = yes }
+			scope:recipient = {
+				add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+		}
+		else_if = {
+			limit = { scope:dress = yes }
+			scope:recipient = {
+				remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+		}
 
 		scope:actor = {
 			add_trait_xp = {
@@ -355,121 +379,6 @@ deviants_makeup = {
 		}
 	}
 	auto_accept = yes
-}
-
-deviants_nude_interaction = {
-	icon = nude
-	desc = deviants_nude_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	is_shown = {
-		OR = {
-			AND = {
-				scope:actor = {
-					has_trait_xp = {
-						trait = deviants_succubus
-						track = daring
-						value >= 2
-					} 
-				}
-				scope:recipient = {
-					is_adult = yes
-					is_female = yes
-					NOR = {
-						has_trait = deviants_succubus
-						has_trait=deviants_lesser_succubus
-					}
-					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-				}
-			}
-			AND = {
-				scope:actor = {
-					has_trait_xp = {
-						trait = deviants_succubus
-						track = daring
-						value >= 1
-					} 
-				}
-				scope:recipient = {
-					is_adult = yes
-					is_female = yes
-					OR = {
-						has_trait = deviants_succubus
-						has_trait=deviants_lesser_succubus
-						has_trait = deviants_virgin
-					}
-					NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-				}
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		}
-		scope:actor = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOR = {
-							has_trait = deviants_succubus
-							has_trait = deviants_lesser_succubus
-							has_trait = deviants_virgin
-						}
-					}
-				}
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = daring
-					value = -2
-				}
-			}
-			else = {
-				add_trait_xp = {
-					trait = deviants_succubus
-					track = daring
-					value = -1
-				}
-			}
-		}
-	}
-	auto_accept = yes
-}
-
-deviants_stop_nude_interaction = {
-	icon = dress
-	desc = deviants_stop_nude_interaction.desc
-    	category = interaction_category_friendly
-	auto_accept = yes
-	use_diplomatic_range = yes
-	ignores_pending_interaction_block = yes
-
-	is_shown = {
-		scope:actor = {
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value >= 2
-			} 
-		}
-		scope:recipient = {
-			has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		}
-	}
-
-	on_accept = {
-		scope:actor = {
-			add_trait_xp = {
-				trait = deviants_succubus
-				track = daring
-				value = -2
-			}
-		}
-		scope:recipient = {
-			remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		}
-	}
 }
 
 deviants_mind_break_interaction = {

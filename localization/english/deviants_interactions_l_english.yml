@@ -49,12 +49,6 @@
  deviants_absorb_interaction: "Absorb"
  deviants_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
 
- deviants_nude_interaction: "Naked"
- deviants_nude_interaction.desc: "Sexual art includes artistic nudity"
-
- deviants_stop_nude_interaction: "Wear"
- deviants_stop_nude_interaction.desc: "The pinnacle of eroticism is dressed as nude"
-
  deviants_makeup: "Makeup"
  deviants_makeup.desc: "Apply makeup to [recipient.GetShortUIName]"
  deviants_no_horn: "No Horn"
@@ -76,15 +70,10 @@
  deviants_default_hair: "Default Hair"
  deviants_white_hair: "White Hair"
  deviants_red_hair: "Red Hair"
+ naked: "Naked"
+ dress: "Dress"
 
  deviants_cultist_interaction: "Create Cultist"
  deviants_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
  lilith: "Lilithism"
  satan: "Satanism"
-
- deviants_give_resource_interaction: "Give resources"
- deviants_give_resource_interaction.desc: "Give [recipient.GetShortUIName] a small amount of resources"
- gr_gold: "Gold"
- gr_prestige: "Prestige"
- gr_piety: "Piety"
- gr_dynasty_prestige: "Dynasty Prestige"

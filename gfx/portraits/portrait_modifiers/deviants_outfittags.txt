@@ -1,6 +1,6 @@
 ﻿fucked_pussy_outfittags = {
 	usage = game
-	pirority = 10
+	priority = 10
 
 	fucked_pussy_outfit_0 = {
 		dna_modifiers = {
@@ -74,7 +74,7 @@
 
 fucked_ass_outfittags = {
 	usage = game
-	pirority = 10
+	priority = 10
 
 	fucked_ass_outfit_0 = {
 		dna_modifiers = {
@@ -148,7 +148,7 @@ fucked_ass_outfittags = {
 
 fucked_body_outfittags = {
 	usage = game
-	pirority = 10
+	priority = 10
 	fucked_body_outfit_0 = {
 		dna_modifiers = {
 			morph = {
@@ -238,7 +238,7 @@ fucked_body_outfittags = {
 
 fucked_face_outfittags = {
 	usage = game
-	pirority = 10
+	priority = 10
 	fucked_face_outfit_0 = {
 		dna_modifiers = {
 			morph = {

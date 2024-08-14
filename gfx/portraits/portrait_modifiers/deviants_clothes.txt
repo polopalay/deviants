@@ -146,7 +146,7 @@ horn_clothes = {
 
 marking_clothes = {
 	usage = game
-	pirority = 10
+	priority = 10
 
 	marking1 = {
 		dna_modifiers = {
