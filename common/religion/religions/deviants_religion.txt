@@ -240,7 +240,7 @@ deviants_religion = {
 			holy_site = rome
 			holy_site = cologne
 			holy_site = alexandria
-			holy_site = antioch
+			holy_site = constantinople
 
 			doctrine = tenet_pursuit_of_power
 			doctrine = tenet_fp3_fedayeen
