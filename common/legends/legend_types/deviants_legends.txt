@@ -410,12 +410,6 @@ sexual = {
 			limit = { scope:legend = { has_legend_chronicle = exhibitionist legend_protagonist = legend_owner root = legend_owner } }
 			trigger_event = { on_action = legend_penis_exhibitionist_ongoing_events }
 		}
-		trigger_event = {
-			on_action = legend_ongoing_events
-		}
-		trigger_event = {
-			on_action = legend_changing_events
-		}
 	}
 }
 
