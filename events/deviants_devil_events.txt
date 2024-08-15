@@ -2229,35 +2229,41 @@ deviants_devil.1319 = {
 		custom_tooltip = deviants_devil.1319.a.tt
 		random = {
 			chance = 25
-			modifier = { add = 25 has_character_flag = deviants_white_hair has_character_flag = deviants_white_eyes }
+			modifier = { add = 25 has_character_flag = deviants_marking_5 }
 			modifier = { add = -20 have_devil_nicknames_trigger = yes } 
 			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual } }
 			random_list = {
 				20 = { 
-					modifier = { add = 80 has_character_flag = deviants_horn1 has_character_flag = deviants_marking_1 }
+					modifier = { add = 20 has_character_flag = deviants_marking_1 }
+					modifier = { add = 20 has_character_flag = deviants_horn1 }
 					create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
 				}
 				20 = { 
-					modifier = { add = 80 has_character_flag = deviants_horn2 has_character_flag = deviants_marking_2 }
+					modifier = { add = 20 has_character_flag = deviants_horn2 }
+					modifier = { add = 20 has_character_flag = deviants_marking_2 }
+					modifier = { add = 80 has_character_modifier = deviants_prostitute }
 					create_legend_seed = { type = sexual quality = famed chronicle = sex_machine }
 				}
 				20 = { 
-					modifier = { add = 80 has_character_flag = deviants_horn3 has_character_flag = deviants_marking_3 }
+					modifier = { add = 20 has_character_flag = deviants_horn3 }
+					modifier = { add = 20 has_character_flag = deviants_marking_3 }
 					create_legend_seed = { type = sexual quality = famed chronicle = ladycow }
 				}
 				20 = { 
-					modifier = { add = 80 has_character_flag = deviants_horn4 has_character_flag = deviants_marking_4 }
+					modifier = { add = 40 has_character_flag = deviants_horn4 }
+					modifier = { add = 40 has_character_flag = deviants_marking_4 }
+					modifier = { add = 80 has_character_modifier = deviants_prostitute }
 					create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
 				}
 				20 = { 
-					modifier = { add = 80 has_character_flag = deviants_marking_5 }
+					modifier = { add = 180 has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 					create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
 				}
 			}
 		}
 		random = {
 			chance = 10
-			modifier = { add = 15 has_character_flag = deviants_red_hair has_character_flag = deviants_red_eyes has_character_flag = deviants_marking_6 }
+			modifier = { add = 15  has_character_flag = deviants_marking_6 }
 			modifier = { add = -100 OR = { 	has_personal_legend_seed = witchcraft promoted_legend.legend_type = legend_type:witchcraft } }
 
 			create_legend_seed = {
