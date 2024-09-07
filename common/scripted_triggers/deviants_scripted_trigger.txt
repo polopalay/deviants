@@ -5,7 +5,10 @@ is_valid_prostitute_trigger = {
 	is_travelling = no
 	is_in_army = no
 	has_character_modifier = deviants_prostitute 
-	NOT = { has_character_modifier = deviants_fuckedsilly }
+	NOT = { 
+		has_character_modifier = deviants_fuckedsilly
+		root = scope:actor
+	}
 }
 
 is_valid_construction_brothel1_trigger = {

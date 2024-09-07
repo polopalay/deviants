@@ -19,7 +19,7 @@ def move_image_with_background(input_image_path, output_image_path, x_shift, y_s
 
     new_img.save(output_image_path)
 
-move_image_with_background('womb_14.dds', 'womb_14.png', 0, -22)
+move_image_with_background('womb_2.dds', 'womb_11.png', 0, -40)
 # move_image_with_background('womb_16.dds', 'womb_16.png', 0, -32)
 # move_image_with_background('womb_15.dds', 'womb_15.png', 0, -32)
 # n = 14
