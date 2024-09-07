@@ -203,23 +203,8 @@ deviants_virgin = {
 		}
 	}
 
-	attraction_opinion = 100
+	attraction_opinion = 25
 	fertility = 1
-	diplomacy = -1
-	martial = -1
-	stewardship = -1
-	intrigue = -1
-	learning = -1
-	prowess = -1
-	movement_speed = -0.1
-	retreat_losses = 0.1
-	embarkation_cost_mult = 0.1
-	naval_movement_speed_mult = -0.1
-	siege_phase_time = 0.1
-	siege_morale_loss = -0.1
-	hard_casualty_modifier = 0.1
-	supply_duration = -0.1
-	supply_limit_mult = -0.1
 	shown_in_ruler_designer = no
 }
 
