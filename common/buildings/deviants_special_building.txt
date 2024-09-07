@@ -1,15 +1,11 @@
 deviants_witch_forest = {
 	asset = {
 		type = pdxmesh
-		name = "tree_leaf_01_a_mesh"
+		name = "fp4_legendary_desert_hunting_lodge_01_a_mesh"
 	}
 
 	type_icon = "icon_witch_forest.dds"
 	construction_time = very_slow_construction_time
-	asset = {
-		type = pdxmesh
-		name = "fp4_legendary_desert_hunting_lodge_01_a_mesh"
-	}
 	
 	cost_gold = 1000
 
@@ -38,3 +34,41 @@ deviants_witch_forest = {
 	
 	type = special
 }
+
+deviants_soul_forge = {
+	asset = {
+		type = pdxmesh
+		name = "fp4_legendary_western_watchtower_01_a_mesh"
+	}
+
+	type_icon = "icon_smeltworks.dds"
+	construction_time = very_slow_construction_time
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		parochial_opinion = 5
+		court_grandeur_baseline_add = 4
+	}
+	
+	county_modifier = {
+		tax_mult = 0.1
+		supply_limit = 2000
+		hostile_raid_time = 0.25
+	}
+	
+	province_modifier = {
+		fort_level = 2
+	}
+
+	ai_value = {
+		base = 100
+		modifier = {
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+	
+	type = special
+}
+

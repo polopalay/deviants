@@ -66,6 +66,13 @@ deviants_makeup_interaction = {
 		scope:actor = {
 			has_trait_xp = { trait = deviants_succubus track = daring value >= 1 }
 		}
+		scope:recipient = {
+			OR = {
+				this = scope:actor
+				is_vassal_of = scope:actor
+				is_courtier_of = scope:actor
+			}
+		}
 	}
 	send_option = {
 		is_valid = {
@@ -480,7 +487,6 @@ deviants_honor_interaction = {
 			remove_trait = witch
 			remove_trait = deviant
 			remove_trait = cannibal
-			remove_trait = deviant
 			remove_trait = adulterer
 			remove_trait = sodomite
 			remove_trait = incestuous

@@ -1,16 +1,350 @@
 ﻿deviants_outfit = {
 	usage = game
-	succubus = {
+	succubus_1 = {
 		traits = {
 			deviants_succubus
-			deviants_lesser_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value < 50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 33
+			}
 		}
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_body
+				gene = deviants_womb
 				value = 1
-				template = brand
+				template = womb_9
+			}
+		}	
+	}
+	succubus_2 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >= 50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value < 100
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 33
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_8
+			}
+		}	
+	}
+	succubus_3 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 100
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 33
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_5
+			}
+		}	
+	}
+	succubus_4 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value < 50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value >= 33
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 66
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_2
+			}
+		}	
+	}
+	succubus_5 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value < 50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value >= 66
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 100
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_5
+			}
+		}	
+	}
+	succubus_6 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value < 50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 100
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_12
+			}
+		}	
+	}
+	succubus_7 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >=50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value >= 33
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 66
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_10
+			}
+		}	
+	}
+	succubus_8 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value >=50
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value >= 66
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 100
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_11
+			}
+		}	
+	}
+	succubus_9 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 100
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value >= 33
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 66
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_15
+			}
+		}	
+	}
+	succubus_10 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 100
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value >= 66
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value < 100
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_16
+			}
+		}	
+	}
+	succubus_9 = {
+		traits = {
+			deviants_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = power
+				value = 100
+			}
+			has_trait_xp = {
+				trait = deviants_succubus
+				track = loyalty
+				value = 100
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_6
+			}
+		}	
+	}
+	lesser_succubus_1 = {
+		traits = {
+			deviants_lesser_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_lesser_succubus
+				value < 50
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_4
+			}
+		}	
+	}
+	lesser_succubus_2 = {
+		traits = {
+			deviants_lesser_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_lesser_succubus
+				value < 50
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_7
 			}
 		}	
 	}

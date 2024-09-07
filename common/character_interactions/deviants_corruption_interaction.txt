@@ -98,11 +98,8 @@ deviants_child_interaction = {
 		scope:actor = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = deviants_succubus
-				track = corruption
-				value >= 5
-			} 
+			has_trait_xp = { trait = deviants_succubus track = corruption value >= 5 } 
+			have_soul_forge_trigger = yes
 		}
 		scope:recipient = {
 			is_adult = yes

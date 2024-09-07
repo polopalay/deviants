@@ -2228,9 +2228,9 @@ deviants_devil.1319 = {
 		name = deviants_devil.1319.a
 		custom_tooltip = deviants_devil.1319.a.tt
 		random = {
-			chance = 25
-			modifier = { add = 25 has_character_flag = deviants_marking_5 }
-			modifier = { add = -20 have_devil_nicknames_trigger = yes } 
+			chance = 50
+			modifier = { add = 50 has_character_flag = deviants_marking_5 }
+			modifier = { add = -90 have_devil_nicknames_trigger = yes } 
 			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual } }
 			random_list = {
 				20 = { 

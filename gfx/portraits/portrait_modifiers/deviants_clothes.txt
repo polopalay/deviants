@@ -53,6 +53,33 @@ nude_clothes = {
 	}
 }
 
+prostitute_clothes = {
+    	usage = game
+    	priority = 10
+
+	prostitute0 = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_1
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_modifier = deviants_prostitute
+				NOR = {
+					has_trait = deviants_succubus
+					has_trait = deviants_lesser_succubus
+				}
+			}
+		}
+	}
+}
+
 horn_clothes = {
     	usage = game
     	priority = 10

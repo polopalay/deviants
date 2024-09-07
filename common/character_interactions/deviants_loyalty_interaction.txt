@@ -11,6 +11,7 @@ deviants_absorb_interaction = {
 			is_ruler = yes
 			NOT = { is_at_war_with = scope:recipient }
 			has_trait_xp = { trait = deviants_succubus track = loyalty value < 100 }
+			have_soul_forge_trigger = yes
 		}
 		scope:recipient = {
 			OR = {

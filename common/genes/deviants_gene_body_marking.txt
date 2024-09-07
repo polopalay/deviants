@@ -1,19 +1,255 @@
 morph_genes = {
-	deviants_body = {
-		no_body = {
+	deviants_womb = {
+		no_womb = {
 			index = 0			
 		}
-		brand = {
+		womb_1 = {
 			index = 1
 			male = {	
 				decal = {		
 					body_part = torso
 					textures = {
-						diffuse = "gfx/models/portraits/decals/brand.dds"
+						diffuse = "gfx/models/portraits/decals/womb/womb_1.dds"
 					}
-					alpha_curve = {
-						{ 0  0 }
-						{ 1  1 }
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_2 = {
+			index = 2
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_2.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_3 = {
+			index = 3
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_3.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_4 = {
+			index = 4
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_4.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_5 = {
+			index = 5
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_5.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_6 = {
+			index = 6
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_6.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_7 = {
+			index = 7
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_7.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_8 = {
+			index = 8
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_8.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_9 = {
+			index = 9
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_9.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_10 = {
+			index = 10
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_10.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_11 = {
+			index = 11
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_11.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_12 = {
+			index = 12
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_12.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_13 = {
+			index = 13
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_13.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_14 = {
+			index = 14
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_14.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_15 = {
+			index = 15
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_15.dds"
+					}
+					decal_apply_order = post_skin_color
+					priority = 10
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+		womb_16 = {
+			index = 16
+			male = {	
+				decal = {		
+					body_part = torso
+					textures = {
+						diffuse = "gfx/models/portraits/decals/womb/womb_16.dds"
 					}
 					decal_apply_order = post_skin_color
 					priority = 10

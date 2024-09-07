@@ -34,3 +34,8 @@
  building_deviants_witch_forest_desc: "People have been telling each other about a haunted forest where witches go naked and perform magical rituals. Hundreds of people have gone missing here, and many mysterious phenomena have been discovered around this forest"
  building_type_deviants_witch_forest: "Witch's Forest"
  building_type_deviants_witch_forest_desc: "The woods are filled with human and animal corpses, which may be the remains of sacrificial ceremonies"
+
+ building_deviants_soul_forge: "Soul Forge"
+ building_deviants_soul_forge_desc: "The succubus can use the souls of the dead to create powerful magic items"
+ building_type_deviants_soul_forge: "Soul Forge"
+ building_type_deviants_soul_forge_desc: "The succubus can use the souls of the dead to create powerful magic items"

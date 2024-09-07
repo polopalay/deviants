@@ -21,19 +21,13 @@ deviants_prostitute_interaction = {
 			}
         	}
         	scope:recipient = {
-			has_character_modifier = deviants_prostitute
-        	}
-    	}
-
-	is_valid = {
-		scope:recipient = {
 			OR = {
 				is_valid_prostitute_trigger = yes
 				any_courtier = { is_valid_prostitute_trigger = yes }
 				any_vassal = { is_valid_prostitute_trigger = yes }
 			}
-		}
-	}
+        	}
+    	}
 
 	populate_recipient_list = {
 		scope:recipient = {

@@ -88,11 +88,24 @@ have_witch_forest_trigger = {
 	}
 }
 
+have_soul_forge_trigger = {
+	any_held_title = {
+		any_county_province = {
+			has_building_or_higher = deviants_soul_forge 
+		}
+	}
+}
+
 have_devil_building_trigger = {
 	OR = {
 		any_held_title = {
 			any_county_province = {
 				has_building_or_higher = deviants_witch_forest 
+			}
+		}
+		any_held_title = {
+			any_county_province = {
+				has_building_or_higher = deviants_soul_forge 
 			}
 		}
 	}

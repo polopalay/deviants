@@ -124,7 +124,12 @@ sexual = {
 					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
-						random = { chance = 25 give_building_witch_forest = yes }
+						random = { chance = 25 
+							random_list = {
+								1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
+								1 = { modifier = { add = -1 have_soul_forge_trigger = yes } give_building_soul_forge = yes }
+							}
+						}
 					}
 					add_trait_xp = {
 						trait = deviants_succubus
@@ -221,7 +226,12 @@ sexual = {
 					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
-						random = { chance = 50 give_building_witch_forest = yes }
+						random = { chance = 50 
+							random_list = {
+								1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
+								1 = { modifier = { add = -1 have_soul_forge_trigger = yes } give_building_soul_forge = yes }
+							}
+						}
 					}
 					add_trait_xp = {
 						trait = deviants_succubus
@@ -337,7 +347,10 @@ sexual = {
 					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
-						give_building_witch_forest = yes
+						random_list = {
+							1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
+							1 = { modifier = { add = -1 have_soul_forge_trigger = yes } give_building_soul_forge = yes }
+						}
 					}
 					add_trait_xp = {
 						trait = deviants_succubus
