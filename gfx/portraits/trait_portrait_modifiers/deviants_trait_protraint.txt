@@ -7,7 +7,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
@@ -32,12 +32,12 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value >= 50
 			}
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value < 100
 			}
 			has_trait_xp = {
@@ -62,7 +62,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
@@ -87,7 +87,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
@@ -117,7 +117,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
@@ -147,7 +147,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
@@ -172,7 +172,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value >=50
 			}
 			has_trait_xp = {
@@ -202,7 +202,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value >=50
 			}
 			has_trait_xp = {
@@ -232,7 +232,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
@@ -262,7 +262,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
@@ -285,14 +285,14 @@
 			}
 		}	
 	}
-	succubus_9 = {
+	succubus_11 = {
 		traits = {
 			deviants_succubus
 		}
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
-				track = power
+				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
@@ -307,6 +307,25 @@
 				gene = deviants_womb
 				value = 1
 				template = womb_6
+			}
+		}	
+	}
+	lesser_succubus_1 = {
+		traits = {
+			deviants_lesser_succubus
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_lesser_succubus
+				value = 0
+			}
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_13
 			}
 		}	
 	}
@@ -336,7 +355,7 @@
 		trigger = {
 			has_trait_xp = {
 				trait = deviants_lesser_succubus
-				value < 50
+				value >= 50
 			}
 		}
 		dna_modifiers = {
@@ -345,6 +364,19 @@
 				gene = deviants_womb
 				value = 1
 				template = womb_7
+			}
+		}	
+	}
+	virgin = {
+		traits = {
+			deviants_virgin
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = deviants_womb
+				value = 1
+				template = womb_14
 			}
 		}	
 	}
