@@ -80,3 +80,9 @@
 
  deviants_honor_interaction: "Remove the disgraceful Trait"
  deviants_honor_interaction.desc: "Remove the disgraceful Trait from [recipient.GetShortUIName]"
+
+ deviants_start_contraception_interaction: "Start Contraception"
+ deviants_start_contraception_interaction.desc: "Start Contraception for [recipient.GetShortUIName]"
+
+ deviants_stop_contraception_interaction: "Stop Contraception"
+ deviants_stop_contraception_interaction.desc: "Stop Contraception for [recipient.GetShortUIName]"

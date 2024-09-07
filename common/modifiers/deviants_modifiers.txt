@@ -58,3 +58,8 @@ deviants_philosopher_stone_modifier = {
 	men_at_arms_maintenance = -0.1
 	mercenary_hire_cost_mult = -0.1
 }
+
+deviants_contraception = {
+	icon = fertility_negative
+	fertility = -2
+}

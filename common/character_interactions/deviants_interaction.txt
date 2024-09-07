@@ -412,3 +412,45 @@ deviants_stop_prostitute_interaction = {
 		}
 	}
 }
+
+deviants_start_contraception_interaction = {
+	icon = chastity
+	desc = deviants_start_contraception_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_valid = {
+		scope:actor = scope:recipient
+		scope:actor = { 
+			has_trait = deviants_virgin
+			NOT = { has_character_modifier = deviants_contraception }
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_character_modifier = deviants_contraception
+		}
+	}
+}
+
+deviants_stop_contraception_interaction = {
+	icon = chastity
+	desc = deviants_stop_contraception_interaction.desc
+    	category = interaction_category_friendly
+    	use_diplomatic_range = yes
+
+	is_valid = {
+		scope:actor = scope:recipient
+		scope:actor = { 
+			has_trait = deviants_virgin
+			has_character_modifier = deviants_contraception
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			remove_character_modifier = deviants_contraception
+		}
+	}
+}
