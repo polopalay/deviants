@@ -282,7 +282,7 @@ deviants_offer_prostitute_interaction = {
 		modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
 		modifier = { add = -20 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
 		opinion_modifier = {
-			opinion_target = scope:actor
+			opinion_target = scope:secondary_recipient
 			who = scope:recipient
 			multiplier = 1
 		}
