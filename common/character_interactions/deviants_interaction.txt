@@ -217,7 +217,7 @@ deviants_offer_prostitute_interaction = {
 					pay_short_term_gold = { target = scope:secondary_recipient gold = 5 } 
 				}
 				else = {
-					pay_short_term_gold = { target = scope:recipient gold = 2 }
+					pay_short_term_gold = { target = scope:actor gold = 2 }
 					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
 				}
 				random = {
@@ -235,7 +235,7 @@ deviants_offer_prostitute_interaction = {
 			}
     		}
 		scope:secondary_recipient = {
-			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+			buy_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 			if = {
 				limit = { scope:actor = { is_valid_construction_brothel3_trigger = yes } }
 				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
