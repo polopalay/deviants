@@ -271,7 +271,22 @@ deviants_offer_prostitute_interaction = {
 		}
 	}
 
-	auto_accept = { always = yes }
+	ai_accept = {
+		base = 5
+		modifier = { add = 15 scope:recipient = { has_trait = lustful } }
+		modifier = { add = 15 scope:recipient = { has_trait = rakish } }
+		modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
+		modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_2 } }
+		modifier = { add = 20 scope:secondary_recipient = { has_trait = beauty_good_3 } }
+		modifier = { add = -5 scope:secondary_recipient = { has_trait = beauty_bad_1 } }
+		modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
+		modifier = { add = -20 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
 	ai_potential = { always = yes }
 	ai_frequency = 2
 	ai_targets = {

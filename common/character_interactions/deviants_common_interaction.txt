@@ -28,7 +28,7 @@ deviants_switch_body_interaction = {
 	on_accept = {
 		scope:actor = { set_player_character = scope:recipient }
 	}
-	auto_accept = yes
+	auto_accept = { always = yes }
 }
 
 deviants_start_contraception_interaction = {
@@ -61,6 +61,7 @@ deviants_start_contraception_interaction = {
 			add_character_modifier = deviants_contraception
 		}
 	}
+	auto_accept = { always = yes }
 }
 
 deviants_stop_contraception_interaction = {
@@ -93,4 +94,5 @@ deviants_stop_contraception_interaction = {
 			remove_character_modifier = deviants_contraception
 		}
 	}
+	auto_accept = { always = yes }
 }
