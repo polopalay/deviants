@@ -4,6 +4,11 @@
  recipient_secondary_deviants_prostitute_interaction: "Choose one"
  exits_prostitution: "There exists any whore who is still strong enough to serve you"
 
+ deviants_offer_prostitute_interaction: "Offer Prostituting"
+ deviants_offer_prostitute_interaction.desc: "Offer [recipient.GetShortUIName] sexual services"
+ recipient_secondary_deviants_offer_prostitute_interaction: "Choose one"
+ exits_prostitution: "There exists any whore who is still strong enough to serve you"
+
  deviants_become_prostitute_interaction: "Become Prostitution"
  deviants_become_prostitute_interaction.desc: "Make [recipient.GetShortUIName] Become Prostitute"
 

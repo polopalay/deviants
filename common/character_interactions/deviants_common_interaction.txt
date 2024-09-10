@@ -44,6 +44,8 @@ deviants_start_contraception_interaction = {
 				is_vassal_of = scope:actor
 				is_courtier_of = scope:actor
 			}
+			has_character_modifier = deviants_prostitute
+			NOT = { has_character_modifier = deviants_contraception }
 		}
 		scope:actor = { 
 			OR = {
@@ -51,12 +53,11 @@ deviants_start_contraception_interaction = {
 				has_trait = deviants_lesser_succubus
 				has_trait = deviants_virgin
 			}
-			NOT = { has_character_modifier = deviants_contraception }
 		}
 	}
 
 	on_accept = {
-		scope:actor = {
+		scope:recipient = {
 			add_character_modifier = deviants_contraception
 		}
 	}
@@ -75,6 +76,8 @@ deviants_stop_contraception_interaction = {
 				is_vassal_of = scope:actor
 				is_courtier_of = scope:actor
 			}
+			has_character_modifier = deviants_prostitute
+			has_character_modifier = deviants_contraception
 		}
 		scope:actor = { 
 			OR = {
@@ -82,12 +85,11 @@ deviants_stop_contraception_interaction = {
 				has_trait = deviants_lesser_succubus
 				has_trait = deviants_virgin
 			}
-			has_character_modifier = deviants_contraception
 		}
 	}
 
 	on_accept = {
-		scope:actor = {
+		scope:recipient = {
 			remove_character_modifier = deviants_contraception
 		}
 	}
