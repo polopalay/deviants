@@ -38,7 +38,13 @@ deviants_start_contraception_interaction = {
     	use_diplomatic_range = yes
 
 	is_shown = {
-		scope:actor = scope:recipient
+		scope:recipient = {
+			OR = {
+				scope:actor = scope:recipient
+				is_vassal_of = scope:actor
+				is_courtier_of = scope:actor
+			}
+		}
 		scope:actor = { 
 			OR = {
 				has_trait = deviants_succubus
@@ -63,7 +69,13 @@ deviants_stop_contraception_interaction = {
     	use_diplomatic_range = yes
 
 	is_shown = {
-		scope:actor = scope:recipient
+		scope:recipient = {
+			OR = {
+				scope:actor = scope:recipient
+				is_vassal_of = scope:actor
+				is_courtier_of = scope:actor
+			}
+		}
 		scope:actor = { 
 			OR = {
 				has_trait = deviants_succubus
