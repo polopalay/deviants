@@ -1,4 +1,4 @@
-﻿fucked_pussy_outfittags = {
+fucked_pussy_outfittags = {
 	usage = game
 	priority = 10
 

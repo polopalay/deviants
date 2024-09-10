@@ -61,5 +61,5 @@ deviants_philosopher_stone_modifier = {
 
 deviants_contraception = {
 	icon = fertility_negative
-	fertility = -2
+	fertility = -20
 }

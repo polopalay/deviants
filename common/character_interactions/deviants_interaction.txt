@@ -153,6 +153,144 @@ deviants_prostitute_interaction = {
 	}
 }
 
+deviants_offer_prostitute_interaction = {
+	icon = lover
+	desc = deviants_offer_prostitute_interaction.desc
+    	category = interaction_category_diplomacy
+	ignores_pending_interaction_block = no
+    	use_diplomatic_range = yes
+	common_interaction = yes
+	cooldown = { months = 2 }
+
+    	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+        	scope:recipient = {
+            		is_adult = yes
+            		is_incapable = no
+            		is_imprisoned = no
+			is_travelling = no
+			is_attracted_to_women = yes
+			NOT = { 
+				is_at_war_with = scope:actor 
+				has_trait = lovers_pox
+			}
+        	}
+        	scope:actor = {
+			OR = {
+				is_valid_prostitute_trigger = yes
+				any_courtier = { is_valid_prostitute_trigger = yes }
+				any_vassal = { is_valid_prostitute_trigger = yes }
+			}
+        	}
+    	}
+
+	populate_recipient_list = {
+		scope:actor = {
+			if = {
+				limit = { is_valid_prostitute_trigger = yes }
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = { is_valid_prostitute_trigger = yes }
+				add_to_list = characters
+			}
+			every_vassal = {
+				limit = { is_valid_prostitute_trigger = yes }
+				add_to_list = characters
+			}
+		}
+	}
+
+    	on_accept = {
+        	scope:recipient = {
+			add_opinion = {
+				target = scope:secondary_recipient
+				modifier = have_sex_opinion
+			}
+			stress_impact = { base = massive_stress_impact_loss }
+			if = {
+				limit = { 
+					scope:secondary_recipient = { has_character_modifier = deviants_prostitute }
+				}
+				if = {
+					limit = { scope:secondary_recipient = scope:recipient }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 5 } 
+				}
+				else = {
+					pay_short_term_gold = { target = scope:recipient gold = 2 }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
+				}
+				random = {
+					chance = 10
+					modifier = { add = 10 has_trait = generous }
+					modifier = { add = -10 has_trait = greedy }
+					modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
+					modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_2 } }
+					modifier = { add = 20 scope:secondary_recipient = { has_trait = beauty_good_3 } }
+					modifier = { add = -5 scope:secondary_recipient = { has_trait = beauty_bad_1 } }
+					modifier = { add = -10 scope:secondary_recipient = { has_trait = beauty_bad_2 } }
+					modifier = { add = -20 scope:secondary_recipient = { has_trait = beauty_bad_3 } }
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
+				}
+			}
+    		}
+		scope:secondary_recipient = {
+			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+			if = {
+				limit = { scope:actor = { is_valid_construction_brothel3_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 6 }
+			}
+			else_if = {
+				limit = { scope:actor = { is_valid_construction_brothel2_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 8 }
+			}
+			else_if = {
+				limit = { scope:actor = { is_valid_construction_brothel1_trigger = yes } }
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 10 }
+			}
+			else = {
+				add_character_modifier = { modifier = deviants_fuckedsilly months = 12 }
+			}
+			hidden_effect = {
+				random = { chance = 25 add_character_flag = { flag = deviants_face_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_body_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_ass_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = deviants_pussy_cum days = 10 } }
+			}
+			if = {
+				limit = { has_trait = deviants_succubus }
+				random_list = {
+					50 = { add_trait_xp = { trait = deviants_succubus track = power value = 1 } }
+					50 = { add_trait_xp = { trait = deviants_succubus track = daring value = 1 } }
+				}
+			}
+			if = {
+				limit = { has_trait = deviants_lesser_succubus }
+				add_trait_xp = { trait = deviants_lesser_succubus value = 1 }
+			}
+		}
+	}
+
+	auto_accept = { always = yes }
+	ai_potential = { always = yes }
+	ai_frequency = 2
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+	}
+	ai_targets = {
+		ai_recipients = realm_characters
+		max = 10
+	}
+	ai_will_do = {
+		base = 50
+	}
+}
+
 deviants_become_prostitute_interaction = {
 	icon = start_prostitution
 	extra_icon = hook_icon
@@ -409,48 +547,6 @@ deviants_stop_prostitute_interaction = {
 				}
 				age > 40
 			}
-		}
-	}
-}
-
-deviants_start_contraception_interaction = {
-	icon = chastity
-	desc = deviants_start_contraception_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-
-	is_shown = {
-		scope:actor = scope:recipient
-		scope:actor = { 
-			has_trait = deviants_virgin
-			NOT = { has_character_modifier = deviants_contraception }
-		}
-	}
-
-	on_accept = {
-		scope:actor = {
-			add_character_modifier = deviants_contraception
-		}
-	}
-}
-
-deviants_stop_contraception_interaction = {
-	icon = chastity
-	desc = deviants_stop_contraception_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
-
-	is_shown = {
-		scope:actor = scope:recipient
-		scope:actor = { 
-			has_trait = deviants_virgin
-			has_character_modifier = deviants_contraception
-		}
-	}
-
-	on_accept = {
-		scope:actor = {
-			remove_character_modifier = deviants_contraception
 		}
 	}
 }

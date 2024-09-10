@@ -1,4 +1,4 @@
-﻿deviants_outfit = {
+deviants_outfit = {
 	usage = game
 	succubus_1 = {
 		traits = {
