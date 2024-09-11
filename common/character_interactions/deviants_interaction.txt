@@ -25,6 +25,7 @@ deviants_prostitute_interaction = {
 				is_valid_prostitute_trigger = yes
 				any_courtier = { is_valid_prostitute_trigger = yes }
 				any_vassal = { is_valid_prostitute_trigger = yes }
+				any_prisoner = { is_valid_prostitute_trigger = yes is_courtier_of = scope:recipient }
 			}
         	}
     	}
@@ -41,6 +42,10 @@ deviants_prostitute_interaction = {
 			}
 			every_vassal = {
 				limit = { is_valid_prostitute_trigger = yes }
+				add_to_list = characters
+			}
+			every_prisoner = {
+				limit = { is_valid_prostitute_trigger = yes is_courtier_of = scope:recipient }
 				add_to_list = characters
 			}
 		}
@@ -170,7 +175,7 @@ deviants_offer_prostitute_interaction = {
             		is_imprisoned = no
 			is_travelling = no
 			is_attracted_to_women = yes
-			NOT = { 
+			NOT = {
 				is_at_war_with = scope:actor 
 				has_trait = lovers_pox
 			}
@@ -180,6 +185,7 @@ deviants_offer_prostitute_interaction = {
 				is_valid_prostitute_trigger = yes
 				any_courtier = { is_valid_prostitute_trigger = yes }
 				any_vassal = { is_valid_prostitute_trigger = yes }
+				any_prisoner = { is_valid_prostitute_trigger = yes is_courtier_of = scope:actor }
 			}
         	}
     	}
@@ -196,6 +202,10 @@ deviants_offer_prostitute_interaction = {
 			}
 			every_vassal = {
 				limit = { is_valid_prostitute_trigger = yes }
+				add_to_list = characters
+			}
+			every_prisoner = {
+				limit = { is_valid_prostitute_trigger = yes is_courtier_of = scope:actor }
 				add_to_list = characters
 			}
 		}
