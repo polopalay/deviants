@@ -8,7 +8,7 @@ deviants_spawn_death_korp = {
 			trait = deviants_succubus
 			track = loyalty
 			value >= 100
-		} 
+		}
 		is_valid_construction_alchemy3_trigger = yes
 	}
 	effect = {
@@ -42,7 +42,7 @@ deviants_demon_generals = {
 			trait = deviants_succubus
 			track = loyalty
 			value >= 100
-		} 
+		}
 		is_valid_construction_alchemy3_trigger = yes
 	}
 	effect = {
@@ -68,12 +68,12 @@ deviants_become_succubus = {
 	confirm_text = deviants_become_succubus.c
 	selection_tooltip = deviants_become_succubus.t
 
-	is_shown = { 
+	is_shown = {
 		is_ai = no
 		is_ruler = yes
 		is_female = yes
 		age >= 18
-		NOR = { 
+		NOR = {
 			has_trait = deviants_succubus
 			has_trait = deviants_lesser_succubus
 			has_trait = deviants_virgin

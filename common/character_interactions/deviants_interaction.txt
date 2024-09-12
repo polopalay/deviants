@@ -1,34 +1,34 @@
 deviants_prostitute_interaction = {
 	icon = lover
 	desc = deviants_prostitute_interaction.desc
-    	category = interaction_category_diplomacy
+	category = interaction_category_diplomacy
 	ignores_pending_interaction_block = no
-    	use_diplomatic_range = yes
+	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { months = 2 }
 
-    	is_shown = {
+	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-        	scope:actor = {
-            		is_adult = yes
-            		is_incapable = no
-            		is_imprisoned = no
+		scope:actor = {
+			is_adult = yes
+			is_incapable = no
+			is_imprisoned = no
 			is_travelling = no
 			is_attracted_to_women = yes
-			NOT = { 
-				is_at_war_with = scope:recipient 
+			NOT = {
+				is_at_war_with = scope:recipient
 				has_trait = lovers_pox
 			}
-        	}
-        	scope:recipient = {
+		}
+		scope:recipient = {
 			OR = {
 				is_valid_prostitute_trigger = yes
 				any_courtier = { is_valid_prostitute_trigger = yes }
 				any_vassal = { is_valid_prostitute_trigger = yes }
 				any_prisoner = { is_valid_prostitute_trigger = yes is_courtier_of = scope:recipient }
 			}
-        	}
-    	}
+		}
+	}
 
 	populate_recipient_list = {
 		scope:recipient = {
@@ -51,29 +51,29 @@ deviants_prostitute_interaction = {
 		}
 	}
 
-    	on_accept = {
-        	scope:actor = {
+	on_accept = {
+		scope:actor = {
 			add_opinion = {
 				target = scope:secondary_recipient
 				modifier = have_sex_opinion
 			}
 			stress_impact = { base = massive_stress_impact_loss }
 			if = {
-				limit = { 
+				limit = {
 					scope:secondary_recipient = { has_character_modifier = deviants_prostitute }
 				}
 				if = {
 					limit = { scope:secondary_recipient = scope:recipient }
 					if = {
 						limit = { has_character_modifier = deviants_prostitute }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 5 } 
+						pay_short_term_gold = { target = scope:secondary_recipient gold = 5 }
 					}
 				}
 				else = {
 					pay_short_term_gold = { target = scope:recipient gold = 2 }
 					if = {
 						limit = { has_character_modifier = deviants_prostitute }
-						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
+						pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
 					}
 				}
 				random = {
@@ -89,7 +89,7 @@ deviants_prostitute_interaction = {
 					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
 				}
 			}
-    		}
+		}
 		scope:secondary_recipient = {
 			buy_sex_with_effect = { CHARACTER = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 			if = {
@@ -161,34 +161,34 @@ deviants_prostitute_interaction = {
 deviants_offer_prostitute_interaction = {
 	icon = lover
 	desc = deviants_offer_prostitute_interaction.desc
-    	category = interaction_category_diplomacy
+	category = interaction_category_diplomacy
 	ignores_pending_interaction_block = no
-    	use_diplomatic_range = yes
+	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { months = 2 }
 
-    	is_shown = {
+	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-        	scope:recipient = {
-            		is_adult = yes
-            		is_incapable = no
-            		is_imprisoned = no
+		scope:recipient = {
+			is_adult = yes
+			is_incapable = no
+			is_imprisoned = no
 			is_travelling = no
 			is_attracted_to_women = yes
 			NOT = {
-				is_at_war_with = scope:actor 
+				is_at_war_with = scope:actor
 				has_trait = lovers_pox
 			}
-        	}
-        	scope:actor = {
+		}
+		scope:actor = {
 			OR = {
 				is_valid_prostitute_trigger = yes
 				any_courtier = { is_valid_prostitute_trigger = yes }
 				any_vassal = { is_valid_prostitute_trigger = yes }
 				any_prisoner = { is_valid_prostitute_trigger = yes is_courtier_of = scope:actor }
 			}
-        	}
-    	}
+		}
+	}
 
 	populate_recipient_list = {
 		scope:actor = {
@@ -211,24 +211,24 @@ deviants_offer_prostitute_interaction = {
 		}
 	}
 
-    	on_accept = {
-        	scope:recipient = {
+	on_accept = {
+		scope:recipient = {
 			add_opinion = {
 				target = scope:secondary_recipient
 				modifier = have_sex_opinion
 			}
 			stress_impact = { base = massive_stress_impact_loss }
 			if = {
-				limit = { 
+				limit = {
 					scope:secondary_recipient = { has_character_modifier = deviants_prostitute }
 				}
 				if = {
 					limit = { scope:secondary_recipient = scope:recipient }
-					pay_short_term_gold = { target = scope:secondary_recipient gold = 5 } 
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 5 }
 				}
 				else = {
 					pay_short_term_gold = { target = scope:actor gold = 2 }
-					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 } 
+					pay_short_term_gold = { target = scope:secondary_recipient gold = 3 }
 				}
 				random = {
 					chance = 10
@@ -243,7 +243,7 @@ deviants_offer_prostitute_interaction = {
 					pay_short_term_gold = { target = scope:secondary_recipient gold = 1 }
 				}
 			}
-    		}
+		}
 		scope:secondary_recipient = {
 			buy_sex_with_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 			if = {
@@ -320,20 +320,20 @@ deviants_become_prostitute_interaction = {
 	icon = start_prostitution
 	extra_icon = hook_icon
 	desc = deviants_become_prostitute_interaction.desc
-    	category = interaction_category_diplomacy
-    	use_diplomatic_range = yes
+	category = interaction_category_diplomacy
+	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { months = 1 }
 
-    	is_shown = {
-        	scope:actor = {
-            		is_adult = yes
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
 			is_landed = yes
 			has_trait = deviants_succubus
 			NOT = { is_at_war_with = scope:recipient }
-        	}
-        	scope:recipient = {
-            		is_adult = yes
+		}
+		scope:recipient = {
+			is_adult = yes
 			is_female = yes
 			NOT = { has_character_modifier = deviants_prostitute }
 			OR = {
@@ -345,8 +345,8 @@ deviants_become_prostitute_interaction = {
 					is_imprisoned_by = scope:actor
 				}
 			}
-        	}
-    	}
+		}
+	}
 
 	is_valid = {
 		scope:recipient = {
@@ -358,7 +358,7 @@ deviants_become_prostitute_interaction = {
 						any_vassal = {
 							has_character_modifier = deviants_prostitute
 							count < 2
-						}	
+						}
 					}
 				}
 				AND = {
@@ -370,18 +370,18 @@ deviants_become_prostitute_interaction = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
 							count < 3
-						}	
+						}
 					}
 				}
 			}
 		}
 	}
 
-    	on_accept = {
+	on_accept = {
 		scope:recipient = {
 			if = {
-				limit = { 
-					NOT = { scope:actor = scope:recipient } 
+				limit = {
+					NOT = { scope:actor = scope:recipient }
 					NOR = {
 						has_trait = deviants_succubus
 						has_trait = deviants_lesser_succubus
@@ -401,19 +401,11 @@ deviants_become_prostitute_interaction = {
 				limit = { is_imprisoned_by = scope:actor }
 				release_from_prison = yes
 			}
-			if = {
-				limit = {
-					scope:recipient = {
-						is_spouse_of = scope:actor
-						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
-					}
-				}
-			}
 		}
 		scope:actor = {
 			if = {
-				limit = { 
-					NOT = { is_liege_or_above_of = scope:recipient } 
+				limit = {
+					NOT = { is_liege_or_above_of = scope:recipient }
 					NOT = { scope:recipient = scope:actor }
 				}
 				add_courtier = scope:recipient
@@ -426,7 +418,7 @@ deviants_become_prostitute_interaction = {
 				use_hook = scope:recipient
 			}
 		}
-    	}
+	}
 
 	auto_accept = {
 		OR = {
@@ -447,7 +439,7 @@ deviants_become_prostitute_interaction = {
 				has_usable_hook = scope:recipient
 			}
 		}
-		flag = hook	
+		flag = hook
 		localization = GENERIC_SPEND_A_HOOK
 	}
 	send_options_exclusive = no
@@ -490,8 +482,8 @@ deviants_become_prostitute_interaction = {
 	}
 
 	ai_frequency = 12
-	ai_targets = { 
-		ai_recipients = courtiers 
+	ai_targets = {
+		ai_recipients = courtiers
 		ai_recipients = prisoners
 		ai_recipients = vassals
 		ai_recipients = self
@@ -509,20 +501,20 @@ deviants_become_prostitute_interaction = {
 deviants_stop_prostitute_interaction = {
 	icon = stop_prostitution
 	desc = deviants_stop_prostitute_interaction.desc
-    	category = interaction_category_diplomacy
-    	use_diplomatic_range = yes
+	category = interaction_category_diplomacy
+	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { months = 1 }
 
-    	is_shown = {
-        	scope:actor = {
-            		is_adult = yes
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
 			is_landed = yes
 			has_trait = deviants_succubus
 			NOT = { is_at_war_with = scope:recipient }
-        	}
-        	scope:recipient = {
-            		is_adult = yes
+		}
+		scope:recipient = {
+			is_adult = yes
 			is_female = yes
 			has_character_modifier = deviants_prostitute
 			OR = {
@@ -530,14 +522,14 @@ deviants_stop_prostitute_interaction = {
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
 			}
-        	}
-    	}
+		}
+	}
 
 
-    	on_accept = {
+	on_accept = {
 		if = {
-			limit = { 
-				NOT = { scope:actor = scope:recipient } 
+			limit = {
+				NOT = { scope:actor = scope:recipient }
 				NOR = {
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
@@ -551,22 +543,22 @@ deviants_stop_prostitute_interaction = {
 			}
 			remove_character_modifier = deviants_prostitute
 		}
-    	}
+	}
 
 	auto_accept = yes
 
 	ai_frequency = 12
-	ai_targets = { 
-		ai_recipients = courtiers 
+	ai_targets = {
+		ai_recipients = courtiers
 		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { 
-		base = 0 
+	ai_will_do = {
+		base = 0
 		modifier = {
 			add = 100
 			scope:recipient = {
-				NOR = { 
+				NOR = {
 					has_trait = deviants_succubus
 					has_trait = deviants_lesser_succubus
 				}

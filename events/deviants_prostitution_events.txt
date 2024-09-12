@@ -1,10 +1,10 @@
 namespace = deviants_prostitution
 
 #9000 inn slut, coming of age male
-deviants_prostitution.9000 = { 
+deviants_prostitution.9000 = {
 	type = character_event
 	title = deviants_prostitution.9000.t
-    	desc = deviants_prostitution.9000.a.desc
+	desc = deviants_prostitution.9000.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -20,19 +20,19 @@ deviants_prostitution.9000 = {
 				1 = { trigger_event = deviants_prostitution.9001 }
 				1 = { trigger_event = deviants_prostitution.9002 }
 				1 = { trigger_event = deviants_prostitution.9003 }
-			}	
+			}
 		}
-	}	
+	}
 	option = {
 		name = deviants_prostitution.9000.b
 		custom_tooltip = deviants_prostitution.9000.b.tt
 	}
 }
 #9001
-deviants_prostitution.9001 = { 
+deviants_prostitution.9001 = {
 	type = character_event
 	title = deviants_prostitution.9001.t
-    	desc = deviants_prostitution.9001.a.desc
+	desc = deviants_prostitution.9001.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -46,14 +46,14 @@ deviants_prostitution.9001 = {
 		hidden_effect = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
-	}	
+	}
 }
 
 #9002
-deviants_prostitution.9002 = { 
+deviants_prostitution.9002 = {
 	type = character_event
 	title = deviants_prostitution.9002.t
-    	desc = deviants_prostitution.9002.a.desc
+	desc = deviants_prostitution.9002.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -71,13 +71,13 @@ deviants_prostitution.9002 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
-	}	
+	}
 }
 #9003
-deviants_prostitution.9003 = { 
+deviants_prostitution.9003 = {
 	type = character_event
 	title = deviants_prostitution.9003.t
-    	desc = deviants_prostitution.9003.a.desc
+	desc = deviants_prostitution.9003.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -104,14 +104,14 @@ deviants_prostitution.9003 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
-	}	
+	}
 }
 
 #9010 The Inn Whore - A Married Couple
-deviants_prostitution.9010 = { 
+deviants_prostitution.9010 = {
 	type = character_event
 	title = deviants_prostitution.9010.t
-    	desc = deviants_prostitution.9010.a.desc
+	desc = deviants_prostitution.9010.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -127,9 +127,9 @@ deviants_prostitution.9010 = {
 				1 = { trigger_event = deviants_prostitution.9011 }
 				1 = { trigger_event = deviants_prostitution.9012 }
 				1 = { trigger_event = deviants_prostitution.9020 }
-			}	
+			}
 		}
-	}	
+	}
 	option = {
 		name = deviants_prostitution.9010.b
 		custom_tooltip = deviants_prostitution.9010.b.tt
@@ -137,10 +137,10 @@ deviants_prostitution.9010 = {
 }
 
 #9011 33% chance, just happens normally
-deviants_prostitution.9011 = { 
+deviants_prostitution.9011 = {
 	type = character_event
 	title = deviants_prostitution.9011.t
-    	desc = deviants_prostitution.9011.a.desc
+	desc = deviants_prostitution.9011.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -162,13 +162,13 @@ deviants_prostitution.9011 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 #9012 33% chance, timid wife
-deviants_prostitution.9012 = { 
+deviants_prostitution.9012 = {
 	type = character_event
 	title = deviants_prostitution.9012.t
-    	desc = deviants_prostitution.9012.a.desc
+	desc = deviants_prostitution.9012.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -186,24 +186,24 @@ deviants_prostitution.9012 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = { text = deviants_prostitution.9012.aw.tt }
-				hidden_effect = { trigger_event = deviants_prostitution.9013	}	
+				hidden_effect = { trigger_event = deviants_prostitution.9013	}
 			}
 			# Failure, not good enough
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
-				custom_tooltip = { text = deviants_prostitution.9012.al.tt }	
-				hidden_effect = { trigger_event = deviants_prostitution.9014	}				
+				custom_tooltip = { text = deviants_prostitution.9012.al.tt }
+				hidden_effect = { trigger_event = deviants_prostitution.9014	}
 			}
 		}
-	}	
+	}
 	# focus on wife and try to figure out what to do via observation skills
 	option = {
 		name = deviants_prostitution.9012.b
@@ -215,30 +215,30 @@ deviants_prostitution.9012 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = { text = deviants_prostitution.9012.bw.tt }
-				hidden_effect = { trigger_event = deviants_prostitution.9015	}	
+				hidden_effect = { trigger_event = deviants_prostitution.9015	}
 			}
 			# Failure, not good enough
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
-				custom_tooltip = { text = deviants_prostitution.9012.bl.tt }	
-				hidden_effect = { trigger_event = deviants_prostitution.9016 }				
+				custom_tooltip = { text = deviants_prostitution.9012.bl.tt }
+				hidden_effect = { trigger_event = deviants_prostitution.9016 }
 			}
 		}
-	}	
+	}
 }
 #9013 if win diplo challenge
-deviants_prostitution.9013 = { 
+deviants_prostitution.9013 = {
 	type = character_event
 	title = deviants_prostitution.9013.t
-    	desc = deviants_prostitution.9013.a.desc
+	desc = deviants_prostitution.9013.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -264,13 +264,13 @@ deviants_prostitution.9013 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9014 if lose diplo challenge
-deviants_prostitution.9014 = { 
+deviants_prostitution.9014 = {
 	type = character_event
 	title = deviants_prostitution.9014.t
-    	desc = deviants_prostitution.9014.a.desc
+	desc = deviants_prostitution.9014.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -286,20 +286,20 @@ deviants_prostitution.9014 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9015 if win intrigue challenge
-deviants_prostitution.9015 = { 
+deviants_prostitution.9015 = {
 	type = character_event
 	title = deviants_prostitution.9015.t
-    	desc = deviants_prostitution.9015.a.desc
+	desc = deviants_prostitution.9015.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
 		animation = chess_cocky
 		outfit_tags = { no_clothes }
 	}
-	# 
+	#
 	option = {
 		name = deviants_prostitution.9015.a
 		custom_tooltip = deviants_prostitution.9015.a.tt
@@ -319,13 +319,13 @@ deviants_prostitution.9015 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9016 if lose intrigue challenge
-deviants_prostitution.9016 = { 
+deviants_prostitution.9016 = {
 	type = character_event
 	title = deviants_prostitution.9016.t
-    	desc = deviants_prostitution.9016.a.desc
+	desc = deviants_prostitution.9016.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -341,13 +341,13 @@ deviants_prostitution.9016 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9020 33% chance, submissive husband
-deviants_prostitution.9020 = { 
+deviants_prostitution.9020 = {
 	type = character_event
 	title = deviants_prostitution.9020.t
-    	desc = deviants_prostitution.9020.a.desc
+	desc = deviants_prostitution.9020.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -365,24 +365,24 @@ deviants_prostitution.9020 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = { text = deviants_prostitution.9020.aw.tt }
-				hidden_effect = { trigger_event = deviants_prostitution.9021 }	
+				hidden_effect = { trigger_event = deviants_prostitution.9021 }
 			}
 			# Failure, not good enough
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
-				custom_tooltip = { text = deviants_prostitution.9020.al.tt }	
-				hidden_effect = { trigger_event = deviants_prostitution.9022 }				
+				custom_tooltip = { text = deviants_prostitution.9020.al.tt }
+				hidden_effect = { trigger_event = deviants_prostitution.9022 }
 			}
 		}
-	}	
+	}
 	# focus on wife and try to figure out what to do via observation skills
 	option = {
 		name = deviants_prostitution.9020.b
@@ -394,30 +394,30 @@ deviants_prostitution.9020 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = { text = deviants_prostitution.9020.bw.tt }
-				hidden_effect = { trigger_event = deviants_prostitution.9023 }	
+				hidden_effect = { trigger_event = deviants_prostitution.9023 }
 			}
 			# Failure, not good enough
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
-				custom_tooltip = { text = deviants_prostitution.9020.bl.tt }	
-				hidden_effect = { trigger_event = deviants_prostitution.9024 }				
+				custom_tooltip = { text = deviants_prostitution.9020.bl.tt }
+				hidden_effect = { trigger_event = deviants_prostitution.9024 }
 			}
 		}
-	}	
+	}
 }
 #9021 if win diplo challenge
-deviants_prostitution.9021 = { 
+deviants_prostitution.9021 = {
 	type = character_event
 	title = deviants_prostitution.9021.t
-    	desc = deviants_prostitution.9021.a.desc
+	desc = deviants_prostitution.9021.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -443,13 +443,13 @@ deviants_prostitution.9021 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9022 if lose diplo challenge
-deviants_prostitution.9022 = { 
+deviants_prostitution.9022 = {
 	type = character_event
 	title = deviants_prostitution.9022.t
-    	desc = deviants_prostitution.9022.a.desc
+	desc = deviants_prostitution.9022.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -465,13 +465,13 @@ deviants_prostitution.9022 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9023 if win intrigue challenge
-deviants_prostitution.9023 = { 
+deviants_prostitution.9023 = {
 	type = character_event
 	title = deviants_prostitution.9023.t
-    	desc = deviants_prostitution.9023.a.desc
+	desc = deviants_prostitution.9023.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -497,13 +497,13 @@ deviants_prostitution.9023 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9024 if lose intrigue challenge
-deviants_prostitution.9024 = { 
+deviants_prostitution.9024 = {
 	type = character_event
 	title = deviants_prostitution.9024.t
-    	desc = deviants_prostitution.9024.a.desc
+	desc = deviants_prostitution.9024.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -519,14 +519,14 @@ deviants_prostitution.9024 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 
 #9030 older man
-deviants_prostitution.9030 = { 
+deviants_prostitution.9030 = {
 	type = character_event
 	title = deviants_prostitution.9030.t
-    	desc = deviants_prostitution.9030.a.desc
+	desc = deviants_prostitution.9030.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -541,19 +541,19 @@ deviants_prostitution.9030 = {
 			random_list = {
 				1 = { trigger_event = deviants_prostitution.9031 }
 				1 = { trigger_event = deviants_prostitution.9032 }
-			}	
+			}
 		}
-	}	
+	}
 	option = {
 		name = deviants_prostitution.9030.b
 		custom_tooltip = deviants_prostitution.9030.b.tt
 	}
 }
 #9031 50% chance, just happens normally
-deviants_prostitution.9031 = { 
+deviants_prostitution.9031 = {
 	type = character_event
 	title = deviants_prostitution.9031.t
-    	desc = deviants_prostitution.9031.a.desc
+	desc = deviants_prostitution.9031.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -579,13 +579,13 @@ deviants_prostitution.9031 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9032 50% chance, wants to pretend that you are the daughter
-deviants_prostitution.9032 = { 
+deviants_prostitution.9032 = {
 	type = character_event
 	title = deviants_prostitution.9032.t
-    	desc = deviants_prostitution.9032.a.desc
+	desc = deviants_prostitution.9032.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -598,79 +598,79 @@ deviants_prostitution.9032 = {
 		duel = {
 			skill = diplomacy
 			value = 10
-			# Success: 
+			# Success:
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9032.aw.tt
 				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9033	
-				}	
+					trigger_event = deviants_prostitution.9033
+				}
 			}
 			# Failure, not good enough
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9032.al.tt
-				}	
+				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9034	
-				}				
+					trigger_event = deviants_prostitution.9034
+				}
 			}
 		}
-	}	
-	# 
+	}
+	#
 	option = {
 		name = deviants_prostitution.9032.b
 		custom_tooltip = deviants_prostitution.9032.b.tt
 		duel = {
 			skill = intrigue
 			value = 10
-			# Success: 
+			# Success:
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9032.bw.tt
 				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9035	
-				}	
+					trigger_event = deviants_prostitution.9035
+				}
 			}
 			# Failure, not good enough
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9032.bl.tt
-				}	
+				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9036	
-				}				
+					trigger_event = deviants_prostitution.9036
+				}
 			}
 		}
-	}	
+	}
 }
 #9033 if win diplo
-deviants_prostitution.9033 = { 
+deviants_prostitution.9033 = {
 	type = character_event
 	title = deviants_prostitution.9033.t
-    	desc = deviants_prostitution.9033.a.desc
+	desc = deviants_prostitution.9033.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -696,13 +696,13 @@ deviants_prostitution.9033 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9034 if lose diplo
-deviants_prostitution.9034 = { 
+deviants_prostitution.9034 = {
 	type = character_event
 	title = deviants_prostitution.9034.t
-    	desc = deviants_prostitution.9034.a.desc
+	desc = deviants_prostitution.9034.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -719,13 +719,13 @@ deviants_prostitution.9034 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9035 if win intrigue
-deviants_prostitution.9035 = { 
+deviants_prostitution.9035 = {
 	type = character_event
 	title = deviants_prostitution.9035.t
-    	desc = deviants_prostitution.9035.a.desc
+	desc = deviants_prostitution.9035.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -751,13 +751,13 @@ deviants_prostitution.9035 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 #9036 if lose intrigue
-deviants_prostitution.9036 = { 
+deviants_prostitution.9036 = {
 	type = character_event
 	title = deviants_prostitution.9036.t
-    	desc = deviants_prostitution.9036.a.desc
+	desc = deviants_prostitution.9036.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -773,14 +773,14 @@ deviants_prostitution.9036 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 }
 
 #noble woman
-deviants_prostitution.9040 = { 
+deviants_prostitution.9040 = {
 	type = character_event
 	title = deviants_prostitution.9040.t
-    	desc = deviants_prostitution.9040.a.desc
+	desc = deviants_prostitution.9040.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -799,9 +799,9 @@ deviants_prostitution.9040 = {
 				1 = { trigger_event = deviants_prostitution.9044 }
 				1 = { trigger_event = deviants_prostitution.9045 }
 				1 = { trigger_event = deviants_prostitution.9046 }
-			}	
+			}
 		}
-	}	
+	}
 	#
 	option = {
 		name = deviants_prostitution.9040.b
@@ -809,10 +809,10 @@ deviants_prostitution.9040 = {
 	}
 }
 
-deviants_prostitution.9041 = { 
+deviants_prostitution.9041 = {
 	type = character_event
 	title = deviants_prostitution.9041.t
-    	desc = deviants_prostitution.9041.a.desc
+	desc = deviants_prostitution.9041.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -834,13 +834,13 @@ deviants_prostitution.9041 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 
-deviants_prostitution.9042 = { 
+deviants_prostitution.9042 = {
 	type = character_event
 	title = deviants_prostitution.9042.t
-    	desc = deviants_prostitution.9042.a.desc
+	desc = deviants_prostitution.9042.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -862,13 +862,13 @@ deviants_prostitution.9042 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 
-deviants_prostitution.9043 = { 
+deviants_prostitution.9043 = {
 	type = character_event
 	title = deviants_prostitution.9043.t
-    	desc = deviants_prostitution.9043.a.desc
+	desc = deviants_prostitution.9043.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -890,13 +890,13 @@ deviants_prostitution.9043 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 #she brought her collection
-deviants_prostitution.9044 = { 
+deviants_prostitution.9044 = {
 	type = character_event
 	title = deviants_prostitution.9044.t
-    	desc = deviants_prostitution.9044.a.desc
+	desc = deviants_prostitution.9044.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -918,13 +918,13 @@ deviants_prostitution.9044 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 
-deviants_prostitution.9045 = { 
+deviants_prostitution.9045 = {
 	type = character_event
 	title = deviants_prostitution.9045.t
-    	desc = deviants_prostitution.9045.a.desc
+	desc = deviants_prostitution.9045.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -946,13 +946,13 @@ deviants_prostitution.9045 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 
-deviants_prostitution.9046 = { 
+deviants_prostitution.9046 = {
 	type = character_event
 	title = deviants_prostitution.9046.t
-    	desc = deviants_prostitution.9046.a.desc
+	desc = deviants_prostitution.9046.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -974,14 +974,14 @@ deviants_prostitution.9046 = {
 				value = 2
 			}
 		}
-	}	
+	}
 }
 
 #9200 decide to be a nude waitress
-deviants_prostitution.9200 = { 
+deviants_prostitution.9200 = {
 	type = character_event
 	title = deviants_prostitution.9200.t
-    	desc = deviants_prostitution.9200.a.desc
+	desc = deviants_prostitution.9200.a.desc
 	theme = realm
 	right_portrait = {
 		character = root
@@ -997,20 +997,20 @@ deviants_prostitution.9200 = {
 			random_list = {
 				1 = { trigger_event = deviants_prostitution.9201 }
 				1 = { trigger_event = deviants_prostitution.9202 }
-			}	
+			}
 		}
-	}	
-	# 
+	}
+	#
 	option = {
 		name = deviants_prostitution.9200.b
 		custom_tooltip = deviants_prostitution.9200.b.tt
 	}
 }
 #50% basic, random tip chance
-deviants_prostitution.9201 = { 
+deviants_prostitution.9201 = {
 	type = character_event
 	title = deviants_prostitution.9201.t
-    	desc = deviants_prostitution.9201.a.desc
+	desc = deviants_prostitution.9201.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1029,13 +1029,13 @@ deviants_prostitution.9201 = {
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
-	}	
+	}
 }
 #50% being proposed
-deviants_prostitution.9202 = { 
+deviants_prostitution.9202 = {
 	type = character_event
 	title = deviants_prostitution.9202.t
-    	desc = deviants_prostitution.9202.a.desc
+	desc = deviants_prostitution.9202.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1045,7 +1045,7 @@ deviants_prostitution.9202 = {
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_prostitution.9202.a
-		custom_tooltip = deviants_prostitution.9202.a.tt	
+		custom_tooltip = deviants_prostitution.9202.a.tt
 		duel = {
 			skill = intrigue
 			value = 10
@@ -1053,37 +1053,37 @@ deviants_prostitution.9202 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9202.aw.tt
 				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9203	
-				}	
+					trigger_event = deviants_prostitution.9203
+				}
 			}
 			# Failure,
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9202.al.tt
-				}	
+				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9204	
-				}				
+					trigger_event = deviants_prostitution.9204
+				}
 			}
 		}
-	}	
-	# 
+	}
+	#
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_prostitution.9202.b
-		custom_tooltip = deviants_prostitution.9202.b.tt	
+		custom_tooltip = deviants_prostitution.9202.b.tt
 		duel = {
 			skill = diplomacy
 			value = 10
@@ -1091,37 +1091,37 @@ deviants_prostitution.9202 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9202.bw.tt
 				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9205	
-				}	
+					trigger_event = deviants_prostitution.9205
+				}
 			}
 			# Failure,
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9202.bl.tt
-				}	
+				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9206	
-				}				
+					trigger_event = deviants_prostitution.9206
+				}
 			}
 		}
-	}	
+	}
 	# anal ride him right there...
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_prostitution.9202.c
-		custom_tooltip = deviants_prostitution.9202.c.tt	
+		custom_tooltip = deviants_prostitution.9202.c.tt
 		duel = {
 			skill = prowess
 			value = 10
@@ -1129,36 +1129,36 @@ deviants_prostitution.9202 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9202.cw.tt
 				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9207	
-				}	
+					trigger_event = deviants_prostitution.9207
+				}
 			}
 			# Failure,
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					 	multiplier = -3.5
-						min = -49
+					multiplier = -3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_prostitution.9202.cl.tt
-				}	
+				}
 				hidden_effect = {
-					trigger_event = deviants_prostitution.9208	
-				}				
+					trigger_event = deviants_prostitution.9208
+				}
 			}
 		}
-	}	
-	# 
+	}
+	#
 	option = {
 		name = deviants_prostitution.9202.d
-		custom_tooltip = deviants_prostitution.9202.d.tt	
+		custom_tooltip = deviants_prostitution.9202.d.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1167,13 +1167,13 @@ deviants_prostitution.9202 = {
 			}
 		}
 		add_gold = 1
-	}	
+	}
 }
 #9203 seduce pay win
-deviants_prostitution.9203 = { 
+deviants_prostitution.9203 = {
 	type = character_event
 	title = deviants_prostitution.9203.t
-    	desc = deviants_prostitution.9203.a.desc
+	desc = deviants_prostitution.9203.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1182,7 +1182,7 @@ deviants_prostitution.9203 = {
 	}
 	option = {
 		name = deviants_prostitution.9203.a
-		custom_tooltip = deviants_prostitution.9203.a.tt	
+		custom_tooltip = deviants_prostitution.9203.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1197,13 +1197,13 @@ deviants_prostitution.9203 = {
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = 2
-	}	
+	}
 }
 #9204 seduce pay lose
-deviants_prostitution.9204 = { 
+deviants_prostitution.9204 = {
 	type = character_event
 	title = deviants_prostitution.9204.t
-    	desc = deviants_prostitution.9204.a.desc
+	desc = deviants_prostitution.9204.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1212,18 +1212,18 @@ deviants_prostitution.9204 = {
 	}
 	option = {
 		name = deviants_prostitution.9204.a
-		custom_tooltip = deviants_prostitution.9204.a.tt	
+		custom_tooltip = deviants_prostitution.9204.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
 		add_gold = 1
-	}	
+	}
 }
 #9205 suck right there win
-deviants_prostitution.9205 = { 
+deviants_prostitution.9205 = {
 	type = character_event
 	title = deviants_prostitution.9205.t
-    	desc = deviants_prostitution.9205.a.desc
+	desc = deviants_prostitution.9205.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1232,7 +1232,7 @@ deviants_prostitution.9205 = {
 	}
 	option = {
 		name = deviants_prostitution.9205.a
-		custom_tooltip = deviants_prostitution.9205.a.tt	
+		custom_tooltip = deviants_prostitution.9205.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1246,13 +1246,13 @@ deviants_prostitution.9205 = {
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
 		add_gold = 2
-	}	
+	}
 }
 #9206 suck right there lose
-deviants_prostitution.9206 = { 
+deviants_prostitution.9206 = {
 	type = character_event
 	title = deviants_prostitution.9206.t
-    	desc = deviants_prostitution.9206.a.desc
+	desc = deviants_prostitution.9206.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1261,18 +1261,18 @@ deviants_prostitution.9206 = {
 	}
 	option = {
 		name = deviants_prostitution.9206.a
-		custom_tooltip = deviants_prostitution.9206.a.tt	
+		custom_tooltip = deviants_prostitution.9206.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
 		add_gold = 1
-	}	
+	}
 }
 #9207 anal ride right there on his lap win
-deviants_prostitution.9207 = { 
+deviants_prostitution.9207 = {
 	type = character_event
 	title = deviants_prostitution.9207.t
-    	desc = deviants_prostitution.9207.a.desc
+	desc = deviants_prostitution.9207.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1281,7 +1281,7 @@ deviants_prostitution.9207 = {
 	}
 	option = {
 		name = deviants_prostitution.9207.a
-		custom_tooltip = deviants_prostitution.9207.a.tt	
+		custom_tooltip = deviants_prostitution.9207.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1296,13 +1296,13 @@ deviants_prostitution.9207 = {
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = 2
-	}	
+	}
 }
 #9208 can't take it, get vaginal fucked, right there lose
-deviants_prostitution.9208 = { 
+deviants_prostitution.9208 = {
 	type = character_event
 	title = deviants_prostitution.9208.t
-    	desc = deviants_prostitution.9208.a.desc
+	desc = deviants_prostitution.9208.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1311,19 +1311,19 @@ deviants_prostitution.9208 = {
 	}
 	option = {
 		name = deviants_prostitution.9208.a
-		custom_tooltip = deviants_prostitution.9208.a.tt	
+		custom_tooltip = deviants_prostitution.9208.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
 		add_gold = 1
-	}	
+	}
 }
 
 #9220 only decoration aviable
-deviants_prostitution.9220 = { 
+deviants_prostitution.9220 = {
 	type = character_event
 	title = deviants_prostitution.9220.t
-    	desc = deviants_prostitution.9220.a.desc
+	desc = deviants_prostitution.9220.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1340,20 +1340,20 @@ deviants_prostitution.9220 = {
 				10 = { trigger_event = deviants_prostitution.9221 }
 				10 = { trigger_event = deviants_prostitution.9222 }
 				10 = { trigger_event = deviants_prostitution.9223 }
-			}	
+			}
 		}
-	}	
-	# 
+	}
+	#
 	option = {
 		name = deviants_prostitution.9220.b
 		custom_tooltip = deviants_prostitution.9220.b.tt
 	}
 }
 #9221 variant one, Relaxation Longue Decoration, the dildo box
-deviants_prostitution.9221 = { 
+deviants_prostitution.9221 = {
 	type = character_event
 	title = deviants_prostitution.9221.t
-    	desc = deviants_prostitution.9221.a.desc
+	desc = deviants_prostitution.9221.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1362,7 +1362,7 @@ deviants_prostitution.9221 = {
 	}
 	option = {
 		name = deviants_prostitution.9221.a
-		custom_tooltip = deviants_prostitution.9221.a.tt	
+		custom_tooltip = deviants_prostitution.9221.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1376,13 +1376,13 @@ deviants_prostitution.9221 = {
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
 		add_gold = 1
-	}	
+	}
 }
 #9222 variant two, Art Exhibit Decoration, the painting
-deviants_prostitution.9222 = { 
+deviants_prostitution.9222 = {
 	type = character_event
 	title = deviants_prostitution.9222.t
-    	desc = deviants_prostitution.9222.a.desc
+	desc = deviants_prostitution.9222.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1391,7 +1391,7 @@ deviants_prostitution.9222 = {
 	}
 	option = {
 		name = deviants_prostitution.9222.a
-		custom_tooltip = deviants_prostitution.9222.a.tt	
+		custom_tooltip = deviants_prostitution.9222.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1404,13 +1404,13 @@ deviants_prostitution.9222 = {
 			}
 		}
 		add_gold = 1
-	}	
+	}
 }
 #9223 variant three, front door handle
-deviants_prostitution.9223 = { 
+deviants_prostitution.9223 = {
 	type = character_event
 	title = deviants_prostitution.9223.t
-    	desc = deviants_prostitution.9223.a.desc
+	desc = deviants_prostitution.9223.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1419,7 +1419,7 @@ deviants_prostitution.9223 = {
 	}
 	option = {
 		name = deviants_prostitution.9223.a
-		custom_tooltip = deviants_prostitution.9223.a.tt	
+		custom_tooltip = deviants_prostitution.9223.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1432,16 +1432,16 @@ deviants_prostitution.9223 = {
 			}
 		}
 		add_gold = 1
-	}	
+	}
 }
 
 
 
 #9230 rich merchant
-deviants_prostitution.9230 = { 
+deviants_prostitution.9230 = {
 	type = character_event
 	title = deviants_prostitution.9230.t
-    	desc = deviants_prostitution.9230.a.desc
+	desc = deviants_prostitution.9230.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1456,18 +1456,18 @@ deviants_prostitution.9230 = {
 		hidden_effect = {
 			trigger_event = deviants_prostitution.9231
 		}
-	}	
-	# 
+	}
+	#
 	option = {
 		name = deviants_prostitution.9230.b
 		custom_tooltip = deviants_prostitution.9230.b.tt
 	}
 }
 #9231  merchant inspecting a line of women
-deviants_prostitution.9231 = { 
+deviants_prostitution.9231 = {
 	type = character_event
 	title = deviants_prostitution.9231.t
-    	desc = deviants_prostitution.9231.a.desc
+	desc = deviants_prostitution.9231.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1476,21 +1476,21 @@ deviants_prostitution.9231 = {
 	}
 	option = {
 		name = deviants_prostitution.9231.a
-		custom_tooltip = deviants_prostitution.9231.a.tt	
+		custom_tooltip = deviants_prostitution.9231.a.tt
 		hidden_effect = {
 			random_list = {
 				10 = { trigger_event = deviants_prostitution.9232 }
 				10 = { trigger_event = deviants_prostitution.9232 }
 				10 = { trigger_event = deviants_prostitution.9232 }
-			}	
+			}
 		}
-	}	
+	}
 }
 #9232 dildo fucking competition
-deviants_prostitution.9232 = { 
+deviants_prostitution.9232 = {
 	type = character_event
 	title = deviants_prostitution.9232.t
-    	desc = deviants_prostitution.9232.a.desc
+	desc = deviants_prostitution.9232.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1501,21 +1501,21 @@ deviants_prostitution.9232 = {
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_prostitution.9232.a
-		custom_tooltip = deviants_prostitution.9232.a.tt	
+		custom_tooltip = deviants_prostitution.9232.a.tt
 		trigger_event = deviants_prostitution.9233
-	}	
+	}
 	# don't try
 	option = {
 		name = deviants_prostitution.9233.a
-		custom_tooltip = deviants_prostitution.9233.a.tt	
+		custom_tooltip = deviants_prostitution.9233.a.tt
 		trigger_event = deviants_prostitution.9234
-	}	
+	}
 }
 #9233 if work hard
-deviants_prostitution.9233 = { 
+deviants_prostitution.9233 = {
 	type = character_event
 	title = deviants_prostitution.9233.t
-    	desc = deviants_prostitution.9233.a.desc
+	desc = deviants_prostitution.9233.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1524,7 +1524,7 @@ deviants_prostitution.9233 = {
 	}
 	option = {
 		name = deviants_prostitution.9233.a
-		custom_tooltip = deviants_prostitution.9233.a.tt	
+		custom_tooltip = deviants_prostitution.9233.a.tt
 		hidden_effect = {
 			add_trait_xp = {
 				trait = deviants_succubus
@@ -1545,13 +1545,13 @@ deviants_prostitution.9233 = {
 			give_nickname = nickname_the_sex_machine
 		}
 		add_gold = minor_gold_value
-	}	
+	}
 }
 #9234 if won't try
-deviants_prostitution.9234 = { 
+deviants_prostitution.9234 = {
 	type = character_event
 	title = deviants_prostitution.9234.t
-    	desc = deviants_prostitution.9234.a.desc
+	desc = deviants_prostitution.9234.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1560,7 +1560,7 @@ deviants_prostitution.9234 = {
 	}
 	option = {
 		name = deviants_prostitution.9234.a
-		custom_tooltip = deviants_prostitution.9234.a.tt	
+		custom_tooltip = deviants_prostitution.9234.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = deviants_body_cum  days = 10 }
 		}
@@ -1569,6 +1569,6 @@ deviants_prostitution.9234 = {
 			base = minor_stress_impact_gain
 			lustful = minor_stress_impact_gain
 		}
-	}	
+	}
 }
 

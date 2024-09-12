@@ -37,7 +37,7 @@ deviants_succubus = {
 			100 = {
 				character_travel_speed = 10
 				character_travel_safety = 10
-			}			
+			}
 		}
 		daring = {
 			25 = {
@@ -75,7 +75,7 @@ deviants_succubus = {
 				legitimacy_baseline_add = 1
 				monthly_dynasty_prestige = 1
 				monthly_prestige = 1
-			}			
+			}
 		}
 		loyalty = {
 			33 = {
@@ -87,7 +87,7 @@ deviants_succubus = {
 				knight_effectiveness_mult = 0.1
 				long_reign_bonus_mult = 0.1
 				monthly_piety = 0.1
-    				stress_gain_mult = -0.1
+				stress_gain_mult = -0.1
 			}
 
 			66 = {
@@ -112,10 +112,10 @@ deviants_succubus = {
 				monthly_piety = 0.3
 				no_water_crossing_penalty = yes
 				supply_duration = 0.5
-    				stress_gain_mult = -0.5
+				stress_gain_mult = -0.5
 				movement_speed = 1
 				naval_movement_speed_mult = 1
-			}			
+			}
 		}
 	}
 	shown_in_ruler_designer = no
@@ -230,7 +230,7 @@ deviants_blood = {
 	diplomacy = 6
 	martial = 6
 	stewardship = 6
-	intrigue = 6	
+	intrigue = 6
 	learning = 6
 
 	monthly_lifestyle_xp_gain_mult = 0.6

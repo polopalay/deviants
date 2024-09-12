@@ -1,8 +1,8 @@
 deavians_dealing_with_stress_interaction = {
 	icon = torment
 	desc = deavians_dealing_with_stress_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 	is_shown = {
 		scope:actor = {
 			OR = {
@@ -71,19 +71,19 @@ deavians_dealing_with_stress_interaction = {
 			remove_trait = contrite
 			remove_trait = comfort_eater
 			remove_trait = inappetetic
-	    		stress_impact = {
+			stress_impact = {
 				base = massive_stress_impact_loss
 			}
 		}
 	}
 	auto_accept = yes
 	ai_frequency = 1
-	ai_targets = { 
-		ai_recipients = self 
+	ai_targets = {
+		ai_recipients = self
 		ai_recipients = children
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { 
+	ai_will_do = {
 		base = 10
 		modifier = {
 			add = 10
@@ -102,8 +102,8 @@ deavians_dealing_with_stress_interaction = {
 deviants_heal_interaction = {
 	icon = healing
 	desc = deviants_heal_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 	common_interaction = yes
 
 	is_shown = {
@@ -136,7 +136,7 @@ deviants_heal_interaction = {
 				has_trait = blind
 				has_trait = sickly
 				has_trait = infirm
-				has_trait = incapable 
+				has_trait = incapable
 				has_trait = leper
 				has_trait = dysentery
 				has_trait = ergotism
@@ -144,17 +144,17 @@ deviants_heal_interaction = {
 				has_trait = wounded_2
 				has_trait = wounded_3
 
-				has_trait = ill 
-				has_trait = pneumonic 
-				has_trait = gout_ridden 
-				has_trait = typhus 
-				has_trait = consumption 
-				has_trait = cancer 
-				has_trait = great_pox 
-				has_trait = smallpox 
-				has_trait = bubonic_plague 
-				has_trait = lovers_pox 
-				has_trait = great_pox 
+				has_trait = ill
+				has_trait = pneumonic
+				has_trait = gout_ridden
+				has_trait = typhus
+				has_trait = consumption
+				has_trait = cancer
+				has_trait = great_pox
+				has_trait = smallpox
+				has_trait = bubonic_plague
+				has_trait = lovers_pox
+				has_trait = great_pox
 				has_trait = possessed_genetic
 				has_trait = bubonic_plague
 				has_trait = measles
@@ -202,7 +202,7 @@ deviants_heal_interaction = {
 			remove_trait = blind
 			remove_trait = sickly
 			remove_trait = infirm
-			remove_trait = incapable 
+			remove_trait = incapable
 			remove_trait = leper
 			remove_trait = wounded_1
 			remove_trait = wounded_2
@@ -227,12 +227,12 @@ deviants_heal_interaction = {
 	}
 	auto_accept = yes
 	ai_frequency = 1
-	ai_targets = { 
-		ai_recipients = self 
+	ai_targets = {
+		ai_recipients = self
 		ai_recipients = children
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { 
+	ai_will_do = {
 		base = 50
 		modifier = {
 			add = 50
@@ -250,8 +250,8 @@ deviants_heal_interaction = {
 deviants_purify_interaction = {
 	icon = dna_icon
 	desc = deviants_purify_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 
 	is_shown = {
 		scope:actor = {
@@ -331,18 +331,18 @@ deviants_purify_interaction = {
 			remove_trait = physique_bad_2
 			remove_trait = physique_bad_3
 			remove_trait = inbred
-			add_trait = beauty_good_1 
+			add_trait = beauty_good_1
 			remove_trait = beauty_good_1
 		}
 	}
 	auto_accept = yes
 	ai_frequency = 1
-	ai_targets = { 
-		ai_recipients = self 
+	ai_targets = {
+		ai_recipients = self
 		ai_recipients = children
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { 
+	ai_will_do = {
 		base = 0
 		modifier = {
 			add = 50

@@ -52,13 +52,13 @@ buy_sex_with_effect = {
 				}
 			}
 		}
-		
+
 		#STD transmission
 		risk_of_std_from_effect = { PARTNER = $CHARACTER$ }
 		hidden_effect = {
 			$CHARACTER$ = { risk_of_std_from_effect = { PARTNER = scope:had_sex_root_character } }
 		}
-	
+
 		#Incestuous Relations
 		give_incest_secret_or_nothing_with_target_effect = { CHARACTER = $CHARACTER$ }
 		hidden_effect = {

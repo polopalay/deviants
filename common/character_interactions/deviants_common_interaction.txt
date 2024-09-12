@@ -1,13 +1,13 @@
 deviants_switch_body_interaction = {
 	icon = two_body
 	desc = deviants_switch_body_interaction.desc
-    	category = interaction_category_diplomacy
+	category = interaction_category_diplomacy
 	interface_priority = 1
 	common_interaction = yes
-    	use_diplomatic_range = yes
+	use_diplomatic_range = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
+		scope:actor = {
 			is_ai = no
 			OR = {
 				has_trait = deviants_succubus
@@ -15,7 +15,7 @@ deviants_switch_body_interaction = {
 				has_trait = deviants_virgin
 			}
 		}
-		scope:recipient = { 
+		scope:recipient = {
 			is_ruler = yes
 			primary_title.tier >= tier_county
 			OR = {
@@ -34,8 +34,8 @@ deviants_switch_body_interaction = {
 deviants_start_contraception_interaction = {
 	icon = chastity
 	desc = deviants_start_contraception_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 
 	is_shown = {
 		scope:recipient = {
@@ -47,7 +47,7 @@ deviants_start_contraception_interaction = {
 			has_character_modifier = deviants_prostitute
 			NOT = { has_character_modifier = deviants_contraception }
 		}
-		scope:actor = { 
+		scope:actor = {
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
@@ -67,8 +67,8 @@ deviants_start_contraception_interaction = {
 deviants_stop_contraception_interaction = {
 	icon = chastity
 	desc = deviants_stop_contraception_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 
 	is_shown = {
 		scope:recipient = {
@@ -80,7 +80,7 @@ deviants_stop_contraception_interaction = {
 			has_character_modifier = deviants_prostitute
 			has_character_modifier = deviants_contraception
 		}
-		scope:actor = { 
+		scope:actor = {
 			OR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus

@@ -22,7 +22,7 @@ deviants_loyalty.8000 = {
 			age >= 18
 			is_female = no
 		}
-		NOR = { 
+		NOR = {
 			has_nickname = nickname_the_ladycow
 			has_character_modifier = deviants_slave
 		}
@@ -38,20 +38,20 @@ deviants_loyalty.8000 = {
 		name = deviants_loyalty.8000.a
 		custom_tooltip = deviants_loyalty.8000.a.tt
 		trigger_event = deviants_loyalty.8001
-	}		
+	}
 	option = {
 		name = deviants_loyalty.8000.b
 		custom_tooltip = deviants_loyalty.8000.b.tt
 		remove_short_term_gold = massive_gold_value
-	}	
+	}
 	option = {
 		name = deviants_loyalty.8000.c
 		custom_tooltip = deviants_loyalty.8000.c.tt
-		death = { death_reason = death_vanished }	
+		death = { death_reason = death_vanished }
 	}
 }
 
-deviants_loyalty.8001 = { 
+deviants_loyalty.8001 = {
 	type = character_event
 	title = deviants_loyalty.8001.t
 	desc = deviants_loyalty.8001.a.desc
@@ -69,7 +69,7 @@ deviants_loyalty.8001 = {
 		name = deviants_loyalty.8001.a
 		custom_tooltip = deviants_loyalty.8001.a.tt
 		trigger_event = deviants_loyalty.8002
-	}		
+	}
 }
 
 #8002 fuck first guy
@@ -101,11 +101,11 @@ deviants_loyalty.8002 = {
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		trigger_event = deviants_loyalty.8003
-	}		
+	}
 }
 
 #8003 mating press on the throne by a disfigured man
-deviants_loyalty.8003 = { 
+deviants_loyalty.8003 = {
 	type = character_event
 	title = deviants_loyalty.8003.t
 	desc = deviants_loyalty.8003.a.desc
@@ -133,11 +133,11 @@ deviants_loyalty.8003 = {
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		trigger_event = deviants_loyalty.8004
-	}		
+	}
 }
 
-#8004 
-deviants_loyalty.8004 = { 
+#8004
+deviants_loyalty.8004 = {
 	type = character_event
 	title = deviants_loyalty.8004.t
 	desc = deviants_loyalty.8004.a.desc
@@ -155,12 +155,12 @@ deviants_loyalty.8004 = {
 		name = deviants_loyalty.8004.a
 		custom_tooltip = deviants_loyalty.8004.a.tt
 		trigger_event = deviants_loyalty.8005
-	}		
-	
+	}
+
 }
 
 #8005 gangbang
-deviants_loyalty.8005 = { 
+deviants_loyalty.8005 = {
 	type = character_event
 	title = deviants_loyalty.8005.t
 	desc = deviants_loyalty.8005.a.desc
@@ -187,9 +187,9 @@ deviants_loyalty.8005 = {
 				CHARACTER = scope:deviants_randoman_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
-		}	
+		}
 		trigger_event = deviants_loyalty.8006
-	}		
+	}
 }
 
 deviants_loyalty.8006 = {
@@ -225,7 +225,7 @@ deviants_loyalty.8006 = {
 				start_promote_lew_legend = yes
 			}
 		}
-	}		
+	}
 }
 
 #8099 initial request event
@@ -275,9 +275,9 @@ deviants_loyalty.8099 = {
 				10 = { trigger_event = deviants_loyalty.8100 }
 				10 = { trigger_event = deviants_loyalty.8101 }
 				10 = { trigger_event = deviants_loyalty.8102 }
-			}	
+			}
 		}
-	}		
+	}
 	option = {
 		name = deviants_loyalty.8099.b
 		custom_tooltip = deviants_loyalty.8099.b.tt
@@ -298,13 +298,13 @@ deviants_loyalty.8099 = {
 			}
 		}
 		stress_impact = {
-				base = minor_stress_impact_gain
-				lustful = medium_stress_impact_gain
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 	}
 }
 
-deviants_loyalty.8100 = { 
+deviants_loyalty.8100 = {
 	type = character_event
 	title = deviants_loyalty.8100.t
 	desc = deviants_loyalty.8100.a.desc
@@ -331,10 +331,10 @@ deviants_loyalty.8100 = {
 			start_promote_lew_legend = yes
 		}
 		stress_impact = {
-				base = medium_stress_impact_gain
-				lustful = medium_stress_impact_gain
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
-	}		
+	}
 	option = {
 		name = deviants_loyalty.8100.b
 		custom_tooltip = deviants_loyalty.8100.b.tt
@@ -356,7 +356,7 @@ deviants_loyalty.8100 = {
 
 
 #8101 gangbang on the throne, important foreign envoy insists seeing you
-deviants_loyalty.8101 = { 
+deviants_loyalty.8101 = {
 	type = character_event
 	title = deviants_loyalty.8101.t
 	desc = deviants_loyalty.8101.a.desc
@@ -387,7 +387,7 @@ deviants_loyalty.8101 = {
 			CHARACTER = scope:deviants_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
-	}		
+	}
 	option = {
 		name = deviants_loyalty.8101.b
 		custom_tooltip = deviants_loyalty.8101.b.tt
@@ -423,7 +423,7 @@ deviants_loyalty.8101 = {
 }
 
 #8102 bound and fucked the whole day in the barracks, then just left there, gagged while the men sleep
-deviants_loyalty.8102 = { 
+deviants_loyalty.8102 = {
 	type = character_event
 	title = deviants_loyalty.8102.t
 	desc = deviants_loyalty.8102.a.desc
@@ -462,7 +462,7 @@ deviants_loyalty.8102 = {
 }
 
 #8200 first time greeting new recruits
-deviants_loyalty.8200 = { 
+deviants_loyalty.8200 = {
 	type = character_event
 	title = deviants_loyalty.8200.t
 	desc = deviants_loyalty.8200.a.desc
@@ -506,7 +506,7 @@ deviants_loyalty.8200 = {
 		custom_tooltip = deviants_loyalty.8200.a.tt
 		add_legitimacy = minor_legitimacy_loss
 		trigger_event = deviants_loyalty.8201
-	}		
+	}
 	# refuse
 	option = {
 		name = deviants_loyalty.8200.b
@@ -528,11 +528,11 @@ deviants_loyalty.8200 = {
 				track = loyalty
 				value = -5
 			}
-		}		
-	}	
+		}
+	}
 }
 #8201 presenting pussy on the stage
-deviants_loyalty.8201 = { 
+deviants_loyalty.8201 = {
 	type = character_event
 	title = deviants_loyalty.8201.t
 	desc = deviants_loyalty.8201.a.desc
@@ -553,8 +553,8 @@ deviants_loyalty.8201 = {
 		name = deviants_loyalty.8201.a
 		custom_tooltip = deviants_loyalty.8201.a.tt
 		stress_impact = {
-				base = medium_stress_impact_gain
-				lustful = medium_stress_impact_gain
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -568,8 +568,8 @@ deviants_loyalty.8201 = {
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8201.b
-		custom_tooltip = deviants_loyalty.8201.b.tt	
-		trigger_event = deviants_loyalty.8202	
+		custom_tooltip = deviants_loyalty.8201.b.tt
+		trigger_event = deviants_loyalty.8202
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = medium_stress_impact_loss
@@ -581,10 +581,10 @@ deviants_loyalty.8201 = {
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 			add_character_flag = { flag = deviants_ass_cum months = 1 }
 		}
-	}	
+	}
 }
 #8202 knight shows how you just let him stick it in, in case it was not clear
-deviants_loyalty.8202 = { 
+deviants_loyalty.8202 = {
 	type = character_event
 	title = deviants_loyalty.8202.t
 	desc = deviants_loyalty.8202.a.desc
@@ -605,8 +605,8 @@ deviants_loyalty.8202 = {
 		name = deviants_loyalty.8202.a
 		custom_tooltip = deviants_loyalty.8202.a.tt
 		stress_impact = {
-				base = medium_stress_impact_gain
-				lustful = medium_stress_impact_gain
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -615,13 +615,13 @@ deviants_loyalty.8202 = {
 				value = 1
 			}
 		}
-	}		
+	}
 	# harder
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8202.b
-		custom_tooltip = deviants_loyalty.8202.b.tt	
-		trigger_event = deviants_loyalty.8203	
+		custom_tooltip = deviants_loyalty.8202.b.tt
+		trigger_event = deviants_loyalty.8203
 		add_legitimacy = minor_legitimacy_loss
 		hidden_effect = {
 			add_character_flag = { flag = deviants_face_cum months = 1 }
@@ -629,11 +629,11 @@ deviants_loyalty.8202 = {
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 			add_character_flag = { flag = deviants_ass_cum months = 1 }
 		}
-	}	
+	}
 	# enough
 	option = {
 		name = deviants_loyalty.8202.c
-		custom_tooltip = deviants_loyalty.8202.c.tt		
+		custom_tooltip = deviants_loyalty.8202.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
@@ -647,7 +647,7 @@ deviants_loyalty.8202 = {
 	}
 }
 #8203 if ask for harder, hard anal carry fuck to cum
-deviants_loyalty.8203 = { 
+deviants_loyalty.8203 = {
 	type = character_event
 	title = deviants_loyalty.8203.t
 	desc = deviants_loyalty.8203.a.desc
@@ -668,10 +668,10 @@ deviants_loyalty.8203 = {
 		custom_tooltip = deviants_loyalty.8203.a.tt
 		trigger_event = deviants_loyalty.8204
 		add_legitimacy = minor_legitimacy_loss
-	}		
+	}
 }
 #8204 time to swear oaths, everybody strip, first guy coming to insert and swear and grope
-deviants_loyalty.8204 = { 
+deviants_loyalty.8204 = {
 	type = character_event
 	title = deviants_loyalty.8204.t
 	desc = deviants_loyalty.8204.a.desc
@@ -686,7 +686,7 @@ deviants_loyalty.8204 = {
 		character = scope:deviant_go_random_1
 		animation = map_ecstasy
 	}
-	# 
+	#
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8204.a
@@ -696,8 +696,8 @@ deviants_loyalty.8204 = {
 			base = minor_stress_impact_gain
 			lustful = medium_stress_impact_gain
 		}
-	}		
-	# 
+	}
+	#
 	option = {
 		ai_chance = { base = 50 }
 		name = deviants_loyalty.8204.b
@@ -706,7 +706,7 @@ deviants_loyalty.8204 = {
 	}
 }
 #8205 if just stand there, after ten guys
-deviants_loyalty.8205 = { 
+deviants_loyalty.8205 = {
 	type = character_event
 	title = deviants_loyalty.8205.t
 	desc = deviants_loyalty.8205.a.desc
@@ -721,7 +721,7 @@ deviants_loyalty.8205 = {
 		character = scope:deviant_go_random_1
 		animation = map_disgust
 	}
-	# 
+	#
 	option = {
 		name = deviants_loyalty.8205.a
 		custom_tooltip = deviants_loyalty.8205.a.tt
@@ -733,10 +733,10 @@ deviants_loyalty.8205 = {
 			add_character_flag = { flag = deviants_ass_cum months = 3 }
 			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
 		}
-	}		
+	}
 }
 #8206 if just endure, end in pussy throbbing hard
-deviants_loyalty.8206 = { 
+deviants_loyalty.8206 = {
 	type = character_event
 	title = deviants_loyalty.8206.t
 	desc = deviants_loyalty.8206.a.desc
@@ -751,7 +751,7 @@ deviants_loyalty.8206 = {
 		character = scope:deviant_go_random_1
 		animation = map_disgust
 	}
-	# 
+	#
 	option = {
 		name = deviants_loyalty.8206.a
 		custom_tooltip = deviants_loyalty.8206.a.tt
@@ -760,10 +760,10 @@ deviants_loyalty.8206 = {
 			give_nickname = nickname_the_ladycow
 			remove_character_modifier = deviants_slave
 		}
-	}		
+	}
 }
 #8207 if shaking hip, fucking him on the stage
-deviants_loyalty.8207 = { 
+deviants_loyalty.8207 = {
 	type = character_event
 	title = deviants_loyalty.8207.t
 	desc = deviants_loyalty.8207.a.desc
@@ -779,13 +779,13 @@ deviants_loyalty.8207 = {
 		animation = map_disgust
 	}
 
-	# 
+	#
 	option = {
 		name = deviants_loyalty.8207.a
 		custom_tooltip = deviants_loyalty.8207.a.tt
 		trigger_event = deviants_loyalty.8208
-	}		
-	# 
+	}
+	#
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_loyalty.8207.b
@@ -794,7 +794,7 @@ deviants_loyalty.8207 = {
 	}
 }
 #8208 if shake and cum end, they annoyed for being forced to enter the cum hole, some just leave rather than do it
-deviants_loyalty.8208 = { 
+deviants_loyalty.8208 = {
 	type = character_event
 	title = deviants_loyalty.8208.t
 	desc = deviants_loyalty.8208.a.desc
@@ -809,7 +809,7 @@ deviants_loyalty.8208 = {
 		character = scope:deviant_go_random_1
 		animation = map_disgust
 	}
-	# 
+	#
 	option = {
 		name = deviants_loyalty.8208.a
 		custom_tooltip = deviants_loyalty.8208.a.tt
@@ -820,10 +820,10 @@ deviants_loyalty.8208 = {
 			add_character_flag = { flag = deviants_ass_cum months = 3 }
 			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
 		}
-	}		
+	}
 }
 #8209 if won't let them cum
-deviants_loyalty.8209 = { 
+deviants_loyalty.8209 = {
 	type = character_event
 	title = deviants_loyalty.8209.t
 	desc = deviants_loyalty.8209.a.desc
@@ -838,7 +838,7 @@ deviants_loyalty.8209 = {
 		character = scope:deviant_go_random_1
 		animation = map_disgust
 	}
-	# 
+	#
 	option = {
 		name = deviants_loyalty.8209.a
 		custom_tooltip = deviants_loyalty.8209.a.tt
@@ -854,7 +854,7 @@ deviants_loyalty.8209 = {
 				value = 1
 			}
 		}
-	}		
+	}
 }
 
 deviants_loyalty.8900 = {
@@ -899,18 +899,18 @@ deviants_loyalty.8900 = {
 		name = deviants_loyalty.8900.a
 		custom_tooltip = deviants_loyalty.8900.a.tt
 		trigger_event = deviants_loyalty.8901
-	}		
+	}
 	option = {
 		name = deviants_loyalty.8900.b
 		custom_tooltip = deviants_loyalty.8900.b.tt
 		remove_short_term_gold = medium_gold_value
-	}	
+	}
 	option = {
 		name = deviants_loyalty.8900.c
 		custom_tooltip = deviants_loyalty.8900.c.tt
 		death = {
 			death_reason = death_vanished
-		}	
+		}
 	}
 }
 
@@ -934,8 +934,8 @@ deviants_loyalty.8901 = {
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
-				base = medium_stress_impact_gain
-				lustful = medium_stress_impact_gain
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -946,6 +946,6 @@ deviants_loyalty.8901 = {
 			add_character_flag = { flag = deviants_ass_cum days = 10 }
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
-	}		
+	}
 }
 

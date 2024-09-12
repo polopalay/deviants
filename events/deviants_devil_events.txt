@@ -1,39 +1,39 @@
 namespace = deviants_devil
 
-deviants_devil.1410 = { 
+deviants_devil.1410 = {
 	type = character_event
 	title = deviants_devil.1410.t
 	cooldown = { years = 5 }
-	desc = { 
+	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					has_trait_xp = {
 						trait = deviants_succubus
 						track = corruption
 						value >= 100
 					}
-		 		}
+				}
 				desc = deviants_devil.1410.a.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					has_trait_xp = {
 						trait = deviants_succubus
 						track = corruption
 						value < 50
 					}
-		 		}
+				}
 				desc = deviants_devil.1410.b.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					has_trait_xp = {
 						trait = deviants_succubus
 						track = corruption
 						value >= 50
 					}
-		 		}
+				}
 				desc = deviants_devil.1410.c.desc
 			}
 		}
@@ -51,7 +51,7 @@ deviants_devil.1410 = {
 	}
 	# pay gold
 	option = {
-		trigger = { 
+		trigger = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
@@ -64,7 +64,7 @@ deviants_devil.1410 = {
 		add_piety = medium_piety_loss
 		remove_short_term_gold = massive_gold_value
 		trigger_event = deviants_devil.1411
-	}			
+	}
 	# beg for sex
 	option = {
 		trigger = {
@@ -75,7 +75,7 @@ deviants_devil.1410 = {
 		custom_tooltip = deviants_devil.1410.b.tt
 		add_piety = medium_piety_loss
 		trigger_event = deviants_devil.1412
-	}	
+	}
 	# stay still
 	option = {
 		ai_chance = { base = 1 }
@@ -114,7 +114,7 @@ deviants_devil.1410 = {
 }
 
 #1411 if pay gold, tongue kiss until pass out
-deviants_devil.1411 = { 
+deviants_devil.1411 = {
 	type = character_event
 	title = deviants_devil.1411.t
 	desc = deviants_devil.1411.a.desc
@@ -133,10 +133,10 @@ deviants_devil.1411 = {
 				value = 2
 			}
 		}
-	}			
+	}
 }
 #1412 if beg for sex, brutal strangle fuck to pass out, stress loss, gain corruption
-deviants_devil.1412 = { 
+deviants_devil.1412 = {
 	type = character_event
 	title = deviants_devil.1412.t
 	desc = deviants_devil.1412.a.desc
@@ -165,10 +165,10 @@ deviants_devil.1412 = {
 			}
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 		}
-	}			
+	}
 }
-#1413 if stay still, creepy lick fuck 
-deviants_devil.1413 = { 
+#1413 if stay still, creepy lick fuck
+deviants_devil.1413 = {
 	type = character_event
 	title = deviants_devil.1413.t
 	desc = deviants_devil.1413.a.desc
@@ -196,11 +196,11 @@ deviants_devil.1413 = {
 			}
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 		}
-	}			
+	}
 }
 
 #1414 if ask gold from it instead
-deviants_devil.1414 = { 
+deviants_devil.1414 = {
 	type = character_event
 	title = deviants_devil.1414.t
 	desc = deviants_devil.1414.a.desc
@@ -215,18 +215,18 @@ deviants_devil.1414 = {
 		custom_tooltip = deviants_devil.1414.a.tt
 		add_gold = 5
 		trigger_event = deviants_devil.1415
-	}	
+	}
 	# demand more gold
 	option = {
 		name = deviants_devil.1414.b
 		add_piety = major_piety_loss
 		custom_tooltip = deviants_devil.1414.b.tt
 		trigger_event = deviants_devil.1416
-	}			
+	}
 }
 
 #1415 if only pleasure him, he riding you around while fucking
-deviants_devil.1415 = { 
+deviants_devil.1415 = {
 	type = character_event
 	title = deviants_devil.1415.t
 	desc = deviants_devil.1415.a.desc
@@ -254,11 +254,11 @@ deviants_devil.1415 = {
 				value = 1
 			}
 		}
-	}			
+	}
 }
 
 #1416 if demand more gold, more demons appear, they surround you
-deviants_devil.1416 = { 
+deviants_devil.1416 = {
 	type = character_event
 	title = deviants_devil.1416.t
 	desc = deviants_devil.1416.a.desc
@@ -274,7 +274,7 @@ deviants_devil.1416 = {
 		add_piety = minor_piety_loss
 		add_gold = tiny_gold_value
 		trigger_event = deviants_devil.1417
-	}	
+	}
 	# if agree to fuck the biggest cock, longer you stay consious, the more you earn
 	option = {
 		name = deviants_devil.1416.b
@@ -289,11 +289,11 @@ deviants_devil.1416 = {
 		custom_tooltip = deviants_devil.1416.c.tt
 		add_gold = medium_gold_value
 		trigger_event = deviants_devil.1419
-	}		
+	}
 }
 
 #1417 if agree to stuff every hole
-deviants_devil.1417 = { 
+deviants_devil.1417 = {
 	type = character_event
 	title = deviants_devil.1417.t
 	desc = deviants_devil.1417.a.desc
@@ -321,7 +321,7 @@ deviants_devil.1417 = {
 				value = 1
 			}
 		}
-	}		
+	}
 	# see how long you can endure
 	option = {
 		name = deviants_devil.1417.b
@@ -333,31 +333,31 @@ deviants_devil.1417 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.1417.bwin.tt
-			    }
+				}
 				trigger_event = deviants_devil.1420
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.1417.blose.tt
-				}	
+				}
 				trigger_event = deviants_devil.1421
 			}
 		}
-	}	
+	}
 }
 #1418 if cowgirl the one with the biggets cock, the longer you can endure, the more tips you get
-deviants_devil.1418 = { 
+deviants_devil.1418 = {
 	type = character_event
 	title = deviants_devil.1418.t
 	desc = deviants_devil.1418.a.desc
@@ -377,33 +377,33 @@ deviants_devil.1418 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.1418.awin.tt
-			   }
+				}
 				trigger_event = deviants_devil.1422
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.1418.alose.tt
-				}	
+				}
 				trigger_event = deviants_devil.1423
 			}
 		}
-	}	
+	}
 	#just pass out to guard your fragile mind
 	option = {
 		name = deviants_devil.1418.b
 		custom_tooltip = deviants_devil.1418.b.tt
-		add_gold = 2	
+		add_gold = 2
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = medium_stress_impact_loss
@@ -419,10 +419,10 @@ deviants_devil.1418 = {
 				value = 1
 			}
 		}
-	}	
+	}
 }
 #1419 if agree to go on a parade, being paraded along a corridor by demons
-deviants_devil.1419 = { 
+deviants_devil.1419 = {
 	type = character_event
 	title = deviants_devil.1419.t
 	desc = deviants_devil.1419.a.desc
@@ -439,7 +439,7 @@ deviants_devil.1419 = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			random_list = {
 				10 = { trigger_event = deviants_devil.5100 }
 				10 = { trigger_event = deviants_devil.5110 }
@@ -451,12 +451,12 @@ deviants_devil.1419 = {
 				10 = { trigger_event = deviants_devil.5300 }
 				10 = { trigger_event = deviants_devil.5320 }
 			}
-		}	
-	}		
+		}
+	}
 }
 
 #1420 if endure the orgy, become a cumdump
-deviants_devil.1420 = { 
+deviants_devil.1420 = {
 	type = character_event
 	title = deviants_devil.1420.t
 	desc = deviants_devil.1420.a.desc
@@ -486,10 +486,10 @@ deviants_devil.1420 = {
 			}
 			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
-	}	
+	}
 }
 #1421 if fail the orgy, they insult and humiliate you
-deviants_devil.1421 = { 
+deviants_devil.1421 = {
 	type = character_event
 	title = deviants_devil.1421.t
 	desc = deviants_devil.1421.a.desc
@@ -510,10 +510,10 @@ deviants_devil.1421 = {
 			modifier = deviants_fuckedsilly
 			days = 180
 		}
-	}		
+	}
 }
 #1422 if manage to get the big cock cum
-deviants_devil.1422 = { 
+deviants_devil.1422 = {
 	type = character_event
 	title = deviants_devil.1422.t
 	desc = deviants_devil.1422.a.desc
@@ -543,10 +543,10 @@ deviants_devil.1422 = {
 			}
 			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
-	}		
+	}
 }
 #1423 if fail to make the big cock cum, calling you liar
-deviants_devil.1423 = { 
+deviants_devil.1423 = {
 	type = character_event
 	title = deviants_devil.1423.t
 	desc = deviants_devil.1423.a.desc
@@ -559,7 +559,7 @@ deviants_devil.1423 = {
 	option = {
 		name = deviants_devil.1423.a
 		custom_tooltip = deviants_devil.1423.a.tt
-		add_gold = 10	
+		add_gold = 10
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
@@ -568,10 +568,10 @@ deviants_devil.1423 = {
 			modifier = deviants_fuckedsilly
 			days = 180
 		}
-	}		
+	}
 }
 #5100 getting spanked for lacking dicipline/diligence/other?, ass pussy and breasts
-deviants_devil.5100 = { 
+deviants_devil.5100 = {
 	type = character_event
 	title = deviants_devil.5100.t
 	desc = deviants_devil.5100.a.desc
@@ -597,8 +597,8 @@ deviants_devil.5100 = {
 			}
 			add_character_flag = { flag = deviants_body_cum days = 20 }
 			trigger_event = deviants_devil.5500
-		}	
-	}	
+		}
+	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
@@ -607,7 +607,7 @@ deviants_devil.5100 = {
 		hidden_effect = {
 			trigger_event = deviants_devil.5502
 		}
-	}	
+	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
@@ -625,10 +625,10 @@ deviants_devil.5100 = {
 			}
 		}
 		trigger_event = deviants_devil.5101
-	}	
+	}
 }
 #5101 if refuse, dropped to the ground and stepped on, to teach you your place
-deviants_devil.5101 = { 
+deviants_devil.5101 = {
 	type = character_event
 	title = deviants_devil.5101.t
 	desc = deviants_devil.5101.a.desc
@@ -646,11 +646,11 @@ deviants_devil.5101 = {
 			days = 30
 		}
 		trigger_event = deviants_devil.5500
-	}		
+	}
 }
 
 #5110 being fed buckets of cum that makes you dizzy, bc you look thirsty
-deviants_devil.5110 = { 
+deviants_devil.5110 = {
 	type = character_event
 	title = deviants_devil.5110.t
 	desc = deviants_devil.5110.a.desc
@@ -681,8 +681,8 @@ deviants_devil.5110 = {
 			}
 			add_character_flag = { flag = deviants_face_cum days = 20 }
 			trigger_event = deviants_devil.5501
-		}	
-	}	
+		}
+	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
@@ -696,7 +696,7 @@ deviants_devil.5110 = {
 			}
 			trigger_event = deviants_devil.5502
 		}
-	}	
+	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
@@ -714,10 +714,10 @@ deviants_devil.5110 = {
 			}
 		}
 		trigger_event = deviants_devil.5111
-	}	
+	}
 }
 #5111 if resist, body covered and rubbed with cum, to make you more beautiful and diligent
-deviants_devil.5111 = { 
+deviants_devil.5111 = {
 	type = character_event
 	title = deviants_devil.5111.t
 	desc = deviants_devil.5111.a.desc
@@ -735,11 +735,11 @@ deviants_devil.5111 = {
 			days = 30
 		}
 		trigger_event = deviants_devil.5501
-	}		
+	}
 }
 
 #5120 getting fisted to run around, bc you being too slow
-deviants_devil.5120 = { 
+deviants_devil.5120 = {
 	type = character_event
 	title = deviants_devil.5120.t
 	desc = deviants_devil.5120.a.desc
@@ -768,8 +768,8 @@ deviants_devil.5120 = {
 				value = 1
 			}
 			trigger_event = deviants_devil.5500
-		}	
-	}	
+		}
+	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
@@ -782,8 +782,8 @@ deviants_devil.5120 = {
 				value = 1
 			}
 			trigger_event = deviants_devil.5502
-		}	
-	}	
+		}
+	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
@@ -801,10 +801,10 @@ deviants_devil.5120 = {
 			}
 		}
 		trigger_event = deviants_devil.5121
-	}	
+	}
 }
-#5121 if resist, pussy spread open by demon hands to cool your hot pussy... 
-deviants_devil.5121 = { 
+#5121 if resist, pussy spread open by demon hands to cool your hot pussy...
+deviants_devil.5121 = {
 	type = character_event
 	title = deviants_devil.5121.t
 	desc = deviants_devil.5121.a.desc
@@ -822,11 +822,11 @@ deviants_devil.5121 = {
 			days = 30
 		}
 		trigger_event = deviants_devil.5501
-	}		
+	}
 }
 
 #5130 hard strangle doggy bucket on head, the demons betting on how fast you squirt from anal, another demon is sitting on the bucket
-deviants_devil.5130 = { 
+deviants_devil.5130 = {
 	type = character_event
 	title = deviants_devil.5130.t
 	desc = deviants_devil.5130.a.desc
@@ -856,8 +856,8 @@ deviants_devil.5130 = {
 			}
 			add_character_flag = { flag = deviants_face_cum months = 1 }
 			trigger_event = deviants_devil.5501
-		}	
-	}	
+		}
+	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
@@ -865,8 +865,8 @@ deviants_devil.5130 = {
 		custom_tooltip = deviants_devil.5130.b.tt
 		hidden_effect = {
 			trigger_event = deviants_devil.5502
-		}	
-	}	
+		}
+	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
@@ -884,11 +884,11 @@ deviants_devil.5130 = {
 			}
 		}
 		trigger_event = deviants_devil.5131
-	}	
+	}
 }
 
 #5131 if struggle, actual being forced to cum by orgy fuck, insults, berating, etc
-deviants_devil.5131 = { 
+deviants_devil.5131 = {
 	type = character_event
 	title = deviants_devil.5131.t
 	desc = deviants_devil.5131.a.desc
@@ -906,11 +906,11 @@ deviants_devil.5131 = {
 			days = 60
 		}
 		trigger_event = deviants_devil.5501
-	}		
+	}
 }
 
 #5140 head to a bucket of cum, being stepped on, taking a break, feeding/rewarding Mc with a cum bucket, head in
-deviants_devil.5140 = { 
+deviants_devil.5140 = {
 	type = character_event
 	title = deviants_devil.5140.t
 	desc = deviants_devil.5140.a.desc
@@ -940,15 +940,15 @@ deviants_devil.5140 = {
 			}
 			add_character_flag = { flag = deviants_face_cum months = 1 }
 			trigger_event = deviants_devil.5501
-		}	
-	}	
+		}
+	}
 	# indifferent, you pass out, straight to wake up event
 	option = {
 		ai_chance = { base = 10 }
 		name = deviants_devil.5140.b
 		custom_tooltip = deviants_devil.5140.b.tt
 		trigger_event = deviants_devil.5502
-	}	
+	}
 	# struggle to breathe
 	option = {
 		ai_chance = { base = 10 }
@@ -966,11 +966,11 @@ deviants_devil.5140 = {
 			}
 		}
 		trigger_event = deviants_devil.5141
-	}	
+	}
 }
 
 #5141 they show mercy and feed the seed to bloat your belly instead
-deviants_devil.5141 = { 
+deviants_devil.5141 = {
 	type = character_event
 	title = deviants_devil.5141.t
 	desc = deviants_devil.5141.a.desc
@@ -988,11 +988,11 @@ deviants_devil.5141 = {
 			days = 60
 		}
 		trigger_event = deviants_devil.5501
-	}		
+	}
 }
 
 #5150 punishing your soldiers for interrupting the parade, making them analfuck you... if you don't cum in her ass, we will find your mistress and turn her into a demon fuck toy
-deviants_devil.5150 = { 
+deviants_devil.5150 = {
 	type = character_event
 	title = deviants_devil.5150.t
 	desc = deviants_devil.5150.a.desc
@@ -1019,8 +1019,8 @@ deviants_devil.5150 = {
 			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
 		trigger_event = deviants_devil.5151
-	}	
-	# indifferent, 
+	}
+	# indifferent,
 	option = {
 		ai_chance = { base = 10 }
 		name = deviants_devil.5150.b
@@ -1028,7 +1028,7 @@ deviants_devil.5150 = {
 		hidden_effect = {
 			trigger_event = deviants_devil.5502
 		}
-	}	
+	}
 	# struggle, too much, to wake up event
 	option = {
 		ai_chance = { base = 10 }
@@ -1046,11 +1046,11 @@ deviants_devil.5150 = {
 			}
 		}
 		trigger_event = deviants_devil.5500
-	}	
+	}
 }
 
-#5151 if act like a sex demon 
-deviants_devil.5151 = { 
+#5151 if act like a sex demon
+deviants_devil.5151 = {
 	type = character_event
 	title = deviants_devil.5151.t
 	desc = deviants_devil.5151.a.desc
@@ -1070,12 +1070,12 @@ deviants_devil.5151 = {
 		hidden_effect = {
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 			trigger_event = deviants_devil.5501
-		}	
-	}		
+		}
+	}
 }
 
 #5160 anal fucking a bucket on head a terrified servant held by demons while trying to get him to insult you... if you don't this witch is going to steal your soul...
-deviants_devil.5160 = { 
+deviants_devil.5160 = {
 	type = character_event
 	title = deviants_devil.5160.t
 	desc = deviants_devil.5160.a.desc
@@ -1102,7 +1102,7 @@ deviants_devil.5160 = {
 			add_character_flag = { flag = deviants_body_cum months = 1 }
 		}
 		trigger_event = deviants_devil.5161
-	}	
+	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
@@ -1111,7 +1111,7 @@ deviants_devil.5160 = {
 		hidden_effect = {
 			trigger_event = deviants_devil.5502
 		}
-	}	
+	}
 	# struggle, too much, to wake up event
 	option = {
 		ai_chance = { base = 10 }
@@ -1129,10 +1129,10 @@ deviants_devil.5160 = {
 			}
 		}
 		trigger_event = deviants_devil.5500
-	}	
+	}
 }
 #5161 if act like a sex demon
-deviants_devil.5161 = { 
+deviants_devil.5161 = {
 	type = character_event
 	title = deviants_devil.5161.t
 	desc = deviants_devil.5161.a.desc
@@ -1149,12 +1149,12 @@ deviants_devil.5161 = {
 			modifier = deviants_fuckedsilly
 			days = 30
 		}
-		trigger_event = deviants_devil.5501	
-	}		
+		trigger_event = deviants_devil.5501
+	}
 }
 
 #5300 dildo show, servants, courtriers and soldiers in the audience... if they get hard, they get to live? so work hard...
-deviants_devil.5300 = { 
+deviants_devil.5300 = {
 	type = character_event
 	title = deviants_devil.5300.t
 	desc = deviants_devil.5300.a.desc
@@ -1185,11 +1185,11 @@ deviants_devil.5300 = {
 			add_character_flag = { flag = deviants_body_cum months = 1 }
 			add_character_flag = { flag = deviants_face_cum months = 1 }
 		}
-		trigger_event = deviants_devil.5301	
-	}		
+		trigger_event = deviants_devil.5301
+	}
 }
 #5301 you make them hard. as a reward, they get all to fuck your ass
-deviants_devil.5301 = { 
+deviants_devil.5301 = {
 	type = character_event
 	title = deviants_devil.5301.t
 	desc = deviants_devil.5301.a.desc
@@ -1222,12 +1222,12 @@ deviants_devil.5301 = {
 				value = 1
 			}
 		}
-		trigger_event = deviants_devil.5501	
-	}		
+		trigger_event = deviants_devil.5501
+	}
 }
 
 #5320 the parade visting common prisoners, you are there to enetrain them tonight, bc they so sad
-deviants_devil.5320 = { 
+deviants_devil.5320 = {
 	type = character_event
 	title = deviants_devil.5320.t
 	desc = deviants_devil.5320.a.desc
@@ -1258,11 +1258,11 @@ deviants_devil.5320 = {
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 			add_character_flag = { flag = deviants_ass_cum months = 1 }
 		}
-		trigger_event = deviants_devil.5321	
-	}		
+		trigger_event = deviants_devil.5321
+	}
 }
 #5321 getting fucked by prisoners like they are posessed demons
-deviants_devil.5321 = { 
+deviants_devil.5321 = {
 	type = character_event
 	title = deviants_devil.5321.t
 	desc = deviants_devil.5321.a.desc
@@ -1271,7 +1271,7 @@ deviants_devil.5321 = {
 		character = root
 		animation = personality_greedy
 	}
-	# 
+	#
 	option = {
 		name = deviants_devil.5321.a
 		custom_tooltip = deviants_devil.5321.a.tt
@@ -1283,17 +1283,17 @@ deviants_devil.5321 = {
 			modifier = deviants_fuckedsilly
 			days = 30
 		}
-		trigger_event = deviants_devil.5501	
-	}		
+		trigger_event = deviants_devil.5501
+	}
 }
 
 ### wake up events
 
 #5500 generic variant event,
-deviants_devil.5500 = { 
+deviants_devil.5500 = {
 	type = character_event
 	title = deviants_devil.5500.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -1323,23 +1323,23 @@ deviants_devil.5500 = {
 	option = {
 		name = deviants_devil.5500.a
 		add_piety = minor_piety_loss
-		custom_tooltip = deviants_devil.5500.a.tt	
-	}	
-	# 
+		custom_tooltip = deviants_devil.5500.a.tt
+	}
+	#
 	option = {
 		ai_chance = { base = 80 }
 		name = deviants_devil.5500.b
-		custom_tooltip = deviants_devil.5500.b.tt	
+		custom_tooltip = deviants_devil.5500.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
 	}
-	# 
+	#
 	option = {
 		name = deviants_devil.5500.c
-		custom_tooltip = deviants_devil.5500.c.tt	
+		custom_tooltip = deviants_devil.5500.c.tt
 		remove_short_term_gold = minor_gold_value
 		add_piety = minor_piety_gain
 	}
@@ -1348,27 +1348,27 @@ deviants_devil.5500 = {
 			random_list = {
 				10 = {
 					trigger_event = {
-							id = deviants_devil.5700
-							days = 1 
+						id = deviants_devil.5700
+						days = 1
 					}
 				}
 				10 = {
 					trigger_event = {
-							id = deviants_devil.5703
-							days = 1 
+						id = deviants_devil.5703
+						days = 1
 					}
 				}
 				20 = { }
 			}
-		}	
+		}
 	}
 }
 
 #5501 wake up covered in cum, almost glued to the ground
-deviants_devil.5501 = { 
+deviants_devil.5501 = {
 	type = character_event
 	title = deviants_devil.5501.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -1398,23 +1398,23 @@ deviants_devil.5501 = {
 	option = {
 		name = deviants_devil.5501.a
 		add_piety = minor_piety_loss
-		custom_tooltip = deviants_devil.5501.a.tt	
-	}	
-	# 
+		custom_tooltip = deviants_devil.5501.a.tt
+	}
+	#
 	option = {
 		ai_chance = { base = 80 }
 		name = deviants_devil.5501.b
-		custom_tooltip = deviants_devil.5501.b.tt	
+		custom_tooltip = deviants_devil.5501.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
 	}
-	# 
+	#
 	option = {
 		name = deviants_devil.5501.c
-		custom_tooltip = deviants_devil.5501.c.tt	
+		custom_tooltip = deviants_devil.5501.c.tt
 		remove_short_term_gold = minor_gold_value
 		add_piety = minor_piety_gain
 	}
@@ -1423,33 +1423,33 @@ deviants_devil.5501 = {
 			random_list = {
 				10 = {
 					trigger_event = {
-							id = deviants_devil.5701
-							days = 1 
+						id = deviants_devil.5701
+						days = 1
 					}
 				}
 				10 = {
 					trigger_event = {
-							id = deviants_devil.5702
-							days = 1 
+						id = deviants_devil.5702
+						days = 1
 					}
 				}
 				10 = {
 					trigger_event = {
-							id = deviants_devil.5703
-							days = 1 
+						id = deviants_devil.5703
+						days = 1
 					}
 				}
 				10 = { }
 			}
-		}	
+		}
 	}
 }
 
 #5502 wake up, indiffrent humiliation wake up
-deviants_devil.5502 = { 
+deviants_devil.5502 = {
 	type = character_event
 	title = deviants_devil.5502.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -1479,23 +1479,23 @@ deviants_devil.5502 = {
 	option = {
 		name = deviants_devil.5502.a
 		add_piety = minor_piety_loss
-		custom_tooltip = deviants_devil.5502.a.tt	
-	}	
-	# 
+		custom_tooltip = deviants_devil.5502.a.tt
+	}
+	#
 	option = {
 		ai_chance = { base = 80 }
 		name = deviants_devil.5502.b
-		custom_tooltip = deviants_devil.5502.b.tt	
+		custom_tooltip = deviants_devil.5502.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
 	}
-	# 
+	#
 	option = {
 		name = deviants_devil.5502.c
-		custom_tooltip = deviants_devil.5502.c.tt	
+		custom_tooltip = deviants_devil.5502.c.tt
 		remove_short_term_gold = minor_gold_value
 		add_piety = minor_piety_gain
 	}
@@ -1503,7 +1503,7 @@ deviants_devil.5502 = {
 
 #post parade events
 #5700 large group of courtiesr, servants and guards insist that demons kidnapped them last night into hekk and forced them to watch a carnal show, demand you to get professinals to close the gate to hell that is somewhere in the castle...
-deviants_devil.5700 = { 
+deviants_devil.5700 = {
 	type = character_event
 	title = deviants_devil.5700.t
 	desc = deviants_devil.5700.a.desc
@@ -1511,18 +1511,18 @@ deviants_devil.5700 = {
 	right_portrait = {
 		character = root
 		animation = thinking
-	}	
+	}
 	# hire professioansl
 	option = {
 		name = deviants_devil.5700.a
-		custom_tooltip = deviants_devil.5700.a.tt	
+		custom_tooltip = deviants_devil.5700.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = minor_piety_gain
-	}	
+	}
 	# claim peronally closing the demon gates
 	option = {
 		name = deviants_devil.5700.b
-		custom_tooltip = deviants_devil.5700.b.tt	
+		custom_tooltip = deviants_devil.5700.b.tt
 		duel = {
 			skill = diplomacy
 			value = high_skill_rating
@@ -1530,25 +1530,25 @@ deviants_devil.5700 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.5700.bwin.tt
-			   }
+				}
 				add_piety = medium_piety_gain
 				add_prestige = medium_prestige_gain
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.5700.blose.tt
-				}	
+				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
 				stress_impact = {
@@ -1560,21 +1560,21 @@ deviants_devil.5700 = {
 	# hunt down the cultists who opened the portal, and hang them
 	option = {
 		name = deviants_devil.5700.c
-		custom_tooltip = deviants_devil.5700.c.tt	
+		custom_tooltip = deviants_devil.5700.c.tt
 		add_dread = medium_dread_gain
 		add_prestige = minor_prestige_gain
 	}
 	# refuse, this is nonsense get hated on
 	option = {
 		name = deviants_devil.5700.d
-		custom_tooltip = deviants_devil.5700.d.tt	
+		custom_tooltip = deviants_devil.5700.d.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #5701 courtiers demand you to deal with the female succubus ghost, some even claim she stole their seed by making them cum by hearing the howls...
-deviants_devil.5701 = { 
+deviants_devil.5701 = {
 	type = character_event
 	title = deviants_devil.5701.t
 	desc = deviants_devil.5701.a.desc
@@ -1582,18 +1582,18 @@ deviants_devil.5701 = {
 	right_portrait = {
 		character = root
 		animation = thinking
-	}	
+	}
 	# hire professioansl
 	option = {
 		name = deviants_devil.5701.a
-		custom_tooltip = deviants_devil.5701.a.tt	
+		custom_tooltip = deviants_devil.5701.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = minor_piety_gain
-	}	
+	}
 	# tell your soldiers to hunt down the ghost
 	option = {
 		name = deviants_devil.5701.b
-		custom_tooltip = deviants_devil.5701.b.tt	
+		custom_tooltip = deviants_devil.5701.b.tt
 		duel = {
 			skill = martial
 			value = decent_skill_rating
@@ -1601,24 +1601,24 @@ deviants_devil.5701 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.5701.bwin.tt
-			   }
+				}
 				add_prestige = medium_prestige_gain
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.5701.blose.tt
-				}	
+				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
 				stress_impact = {
@@ -1630,7 +1630,7 @@ deviants_devil.5701 = {
 	# say you hunted it down personally and won... diplo check on results
 	option = {
 		name = deviants_devil.5701.c
-		custom_tooltip = deviants_devil.5701.c.tt	
+		custom_tooltip = deviants_devil.5701.c.tt
 		duel = {
 			skill = diplomacy
 			value = high_skill_rating
@@ -1638,25 +1638,25 @@ deviants_devil.5701 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.5701.cwin.tt
-			   }
+				}
 				add_piety = medium_piety_gain
 				add_prestige = medium_prestige_gain
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.5701.close.tt
-				}	
+				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
 				stress_impact = {
@@ -1668,14 +1668,14 @@ deviants_devil.5701 = {
 	# refuse, this is nonsense get hated on
 	option = {
 		name = deviants_devil.5701.d
-		custom_tooltip = deviants_devil.5701.d.tt	
+		custom_tooltip = deviants_devil.5701.d.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #5702 courtiers/servants claiming to having been posessed and that the castle is cursed
-deviants_devil.5702 = { 
+deviants_devil.5702 = {
 	type = character_event
 	title = deviants_devil.5702.t
 	desc = deviants_devil.5702.a.desc
@@ -1683,18 +1683,18 @@ deviants_devil.5702 = {
 	right_portrait = {
 		character = root
 		animation = thinking
-	}	
+	}
 	# hire professioansl
 	option = {
 		name = deviants_devil.5702.a
-		custom_tooltip = deviants_devil.5702.a.tt	
+		custom_tooltip = deviants_devil.5702.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = minor_piety_gain
-	}	
+	}
 	# tell your soldiers to find the cultists and witches
 	option = {
 		name = deviants_devil.5702.b
-		custom_tooltip = deviants_devil.5702.b.tt	
+		custom_tooltip = deviants_devil.5702.b.tt
 		duel = {
 			skill = martial
 			value = decent_skill_rating
@@ -1702,24 +1702,24 @@ deviants_devil.5702 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.5702.bwin.tt
-			   }
+				}
 				add_prestige = medium_prestige_gain
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.5702.blose.tt
-				}	
+				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
 				stress_impact = {
@@ -1731,7 +1731,7 @@ deviants_devil.5702 = {
 	# say you hunted the demons, witches and cultists down personally and won... diplo check on results
 	option = {
 		name = deviants_devil.5702.c
-		custom_tooltip = deviants_devil.5702.c.tt	
+		custom_tooltip = deviants_devil.5702.c.tt
 		duel = {
 			skill = diplomacy
 			value = high_skill_rating
@@ -1739,25 +1739,25 @@ deviants_devil.5702 = {
 			40 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.5702.cwin.tt
-			   }
+				}
 				add_piety = medium_piety_gain
 				add_prestige = medium_prestige_gain
-			}   
+			}
 			# Failure, lose
 			60 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.5702.close.tt
-				}	
+				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
 				stress_impact = {
@@ -1769,14 +1769,14 @@ deviants_devil.5702 = {
 	# refuse, this is nonsense get hated on
 	option = {
 		name = deviants_devil.5702.d
-		custom_tooltip = deviants_devil.5702.d.tt	
+		custom_tooltip = deviants_devil.5702.d.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #5703 claiming the prisoners did some dark ritual with demons last night, asking you to execute them all
-deviants_devil.5703 = { 
+deviants_devil.5703 = {
 	type = character_event
 	title = deviants_devil.5703.t
 	desc = deviants_devil.5703.a.desc
@@ -1784,36 +1784,36 @@ deviants_devil.5703 = {
 	right_portrait = {
 		character = root
 		animation = thinking
-	}	
+	}
 	# hire professioansl
 	option = {
 		name = deviants_devil.5703.a
-		custom_tooltip = deviants_devil.5703.a.tt	
+		custom_tooltip = deviants_devil.5703.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = major_piety_gain
-	}	
+	}
 	# excetute all
 	option = {
 		name = deviants_devil.5703.b
-		custom_tooltip = deviants_devil.5703.b.tt	
+		custom_tooltip = deviants_devil.5703.b.tt
 		add_dread = medium_dread_gain
 		add_prestige = minor_prestige_gain
 	}
 	# refuse, this is nonsense get hated on
 	option = {
 		name = deviants_devil.5703.c
-		custom_tooltip = deviants_devil.5703.c.tt	
+		custom_tooltip = deviants_devil.5703.c.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #1300 initial thing comes to you, manifests in different ways, varinants
-deviants_devil.1300 = { 
+deviants_devil.1300 = {
 	type = character_event
 	title = deviants_devil.1300.t
 	cooldown = { years = 5 }
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -1842,7 +1842,7 @@ deviants_devil.1300 = {
 		character = root
 		animation = shock
 		outfit_tags = { no_clothes }
-	}	
+	}
 	trigger = {
 		has_trait = deviants_succubus
 		is_ruler = yes
@@ -1862,8 +1862,8 @@ deviants_devil.1300 = {
 			}
 		}
 		trigger_event = deviants_devil.1303
-	}	
-	# fight it	
+	}
+	# fight it
 	option = {
 		name = deviants_devil.1300.b
 		custom_tooltip = deviants_devil.1300.b.tt
@@ -1874,8 +1874,8 @@ deviants_devil.1300 = {
 			20 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = 3.5
-						min = -49
+					multiplier = 3.5
+					min = -49
 				}
 				custom_tooltip = {
 					text = deviants_devil.1300.bwin.tt
@@ -1889,15 +1889,15 @@ deviants_devil.1300 = {
 			80 = {
 				compare_modifier = {
 					value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-				}	
+					multiplier = -3.5
+					min = -49
+				}
 				custom_tooltip = {
 					text = deviants_devil.1300.blose.tt
-				}	
+				}
 				stress_impact = {
 					base = massive_stress_impact_gain
-				}	
+				}
 				hidden_effect = {
 					add_trait_xp = {
 						trait = deviants_succubus
@@ -1908,7 +1908,7 @@ deviants_devil.1300 = {
 				trigger_event = deviants_devil.1302
 			}
 		}
-	}		
+	}
 	# escape, by any means
 	option = {
 		name = deviants_devil.1300.c
@@ -1927,7 +1927,7 @@ deviants_devil.1300 = {
 	}
 }
 #1301 win the fight
-deviants_devil.1301 = { 
+deviants_devil.1301 = {
 	type = character_event
 	title = deviants_devil.1301.t
 	desc = deviants_devil.1301.a.desc
@@ -1936,8 +1936,8 @@ deviants_devil.1301 = {
 		character = root
 		animation = ecstasy
 		outfit_tags = { no_clothes }
-	}	
-	# 
+	}
+	#
 	option = {
 		name = deviants_devil.1301.a
 		custom_tooltip = deviants_devil.1301.a.tt
@@ -1950,14 +1950,14 @@ deviants_devil.1301 = {
 				track = power
 				value = 10
 			}
-		}	
-	}	
+		}
+	}
 }
 #1302 lose fight, variant on being humiliated
-deviants_devil.1302 = { 
+deviants_devil.1302 = {
 	type = character_event
 	title = deviants_devil.1302.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -1986,14 +1986,14 @@ deviants_devil.1302 = {
 		character = root
 		animation = shame
 		outfit_tags = { no_clothes }
-	}	
+	}
 	#submit
 	option = {
 		name = deviants_devil.1302.a
 		custom_tooltip = deviants_devil.1302.a.tt
 		trigger_event = deviants_devil.1303
-	}	
-	#resist 
+	}
+	#resist
 	option = {
 		name = deviants_devil.1302.b
 		custom_tooltip = deviants_devil.1302.b.tt
@@ -2010,11 +2010,11 @@ deviants_devil.1302 = {
 		add_character_modifier = {
 			modifier = deviants_fuckedsilly
 			days = 90
-		}	
-	}		
+		}
+	}
 }
 #1303 you submitting before the demon
-deviants_devil.1303 = { 
+deviants_devil.1303 = {
 	type = character_event
 	title = deviants_devil.1303.t
 	desc = deviants_devil.1303.a.desc
@@ -2023,27 +2023,27 @@ deviants_devil.1303 = {
 		character = root
 		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
-	}	
+	}
 	# offer ass
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_devil.1303.a
 		custom_tooltip = deviants_devil.1303.a.tt
 		trigger_event = deviants_devil.1320
-	}	
+	}
 	# willingly mount with pussy
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_devil.1303.b
 		custom_tooltip = deviants_devil.1303.b.tt
 		trigger_event = deviants_devil.1310
-	}		
+	}
 }
 #1310 serve with your pussy
-deviants_devil.1310 = { 
+deviants_devil.1310 = {
 	type = character_event
 	title = deviants_devil.1310.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -2072,7 +2072,7 @@ deviants_devil.1310 = {
 		character = root
 		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
-	}	
+	}
 	# accept seed
 	option = {
 		ai_chance = { base = 100 }
@@ -2092,7 +2092,7 @@ deviants_devil.1310 = {
 			}
 		}
 		trigger_event = deviants_devil.1315
-	}	
+	}
 	# pull out
 	option = {
 		name = deviants_devil.1310.b
@@ -2105,13 +2105,13 @@ deviants_devil.1310 = {
 			modifier = deviants_fuckedsilly
 			days = 30
 		}
-	}		
+	}
 }
 #1315 come to your senses, vaginal fucking random servant on top, using the dildo as a condom.
-deviants_devil.1315 = { 
+deviants_devil.1315 = {
 	type = character_event
 	title = deviants_devil.1315.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -2140,7 +2140,7 @@ deviants_devil.1315 = {
 		character = root
 		animation = shock
 		outfit_tags = { no_clothes }
-	}	
+	}
 	# escape, before he comes to his senses
 	option = {
 		name = deviants_devil.1315.a
@@ -2148,7 +2148,7 @@ deviants_devil.1315 = {
 		stress_impact = {
 			lustful = medium_stress_impact_gain
 		}
-	}	
+	}
 	# keep going, the man seems docile enough to let you cum... but he will definately tell others about it
 	option = {
 		ai_chance = { base = 100 }
@@ -2170,20 +2170,20 @@ deviants_devil.1315 = {
 				value = 2
 			}
 		}
-	}	
+	}
 	after =	{
 		trigger_event = {
-				id = deviants_devil.1319
-				days = 1 
+			id = deviants_devil.1319
+			days = 1
 		}
 	}
 }
 
 #1319 half-dream event about birthing things
-deviants_devil.1319 = { 
+deviants_devil.1319 = {
 	type = character_event
 	title = deviants_devil.1319.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -2212,7 +2212,7 @@ deviants_devil.1319 = {
 		character = root
 		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
-	}	
+	}
 	immediate = {
 		hidden_effect = {
 			add_trait_xp = {
@@ -2230,32 +2230,32 @@ deviants_devil.1319 = {
 		random = {
 			chance = 50
 			modifier = { add = 50 has_character_flag = deviants_marking_5 }
-			modifier = { add = -90 have_devil_nicknames_trigger = yes } 
+			modifier = { add = -90 have_devil_nicknames_trigger = yes }
 			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual } }
 			random_list = {
-				20 = { 
+				20 = {
 					modifier = { add = 20 has_character_flag = deviants_marking_1 }
 					modifier = { add = 20 has_character_flag = deviants_horn1 }
 					create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
 				}
-				20 = { 
+				20 = {
 					modifier = { add = 20 has_character_flag = deviants_horn2 }
 					modifier = { add = 20 has_character_flag = deviants_marking_2 }
 					modifier = { add = 80 has_character_modifier = deviants_prostitute }
 					create_legend_seed = { type = sexual quality = famed chronicle = sex_machine }
 				}
-				20 = { 
+				20 = {
 					modifier = { add = 20 has_character_flag = deviants_horn3 }
 					modifier = { add = 20 has_character_flag = deviants_marking_3 }
 					create_legend_seed = { type = sexual quality = famed chronicle = ladycow }
 				}
-				20 = { 
+				20 = {
 					modifier = { add = 40 has_character_flag = deviants_horn4 }
 					modifier = { add = 40 has_character_flag = deviants_marking_4 }
 					modifier = { add = 80 has_character_modifier = deviants_prostitute }
 					create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
 				}
-				20 = { 
+				20 = {
 					modifier = { add = 180 has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 					create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
 				}
@@ -2267,8 +2267,8 @@ deviants_devil.1319 = {
 			modifier = { add = -100 OR = { 	has_personal_legend_seed = witchcraft promoted_legend.legend_type = legend_type:witchcraft } }
 
 			create_legend_seed = {
-				type = witchcraft 
-				quality = famed 
+				type = witchcraft
+				quality = famed
 				chronicle = philosopher_stone
 				properties = {
 					ritual_start = flag:false
@@ -2280,7 +2280,7 @@ deviants_devil.1319 = {
 				}
 			}
 		}
-	}	
+	}
 	# this is wrong, go repent
 	option = {
 		name = deviants_devil.1319.b
@@ -2289,13 +2289,13 @@ deviants_devil.1319 = {
 			base = medium_stress_impact_gain
 		}
 		trigger_event = deviants_event.0800
-	}			
+	}
 }
 #1320 they fuck your ass
-deviants_devil.1320 = { 
+deviants_devil.1320 = {
 	type = character_event
 	title = deviants_devil.1320.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -2324,7 +2324,7 @@ deviants_devil.1320 = {
 		character = root
 		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
-	}	
+	}
 	# embrace
 	option = {
 		ai_chance = { base = 100 }
@@ -2353,7 +2353,7 @@ deviants_devil.1320 = {
 			}
 		}
 		trigger_event = deviants_devil.1325
-	}	
+	}
 	# endure
 	option = {
 		name = deviants_devil.1320.b
@@ -2365,13 +2365,13 @@ deviants_devil.1320 = {
 				value = 1
 			}
 		}
-	}			
+	}
 }
 #1325 come to your senses, anal fucked by random servant against the floor
-deviants_devil.1325 = { 
+deviants_devil.1325 = {
 	type = character_event
 	title = deviants_devil.1325.t
-	desc = { 
+	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
@@ -2392,7 +2392,7 @@ deviants_devil.1325 = {
 		character = root
 		animation = shame
 		outfit_tags = { no_clothes }
-	}	
+	}
 	# embrace
 	option = {
 		ai_chance = { base = 100 }
@@ -2419,7 +2419,7 @@ deviants_devil.1325 = {
 				value = 1
 			}
 		}
-	}	
+	}
 	# resist
 	option = {
 		name = deviants_devil.1325.b
@@ -2428,12 +2428,12 @@ deviants_devil.1325 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 		}
-	}		
+	}
 	# lay still...
 	option = {
 		name = deviants_devil.1325.c
 		custom_tooltip = deviants_devil.1325.c.tt
-	}	
+	}
 	# repent later
 	option = {
 		name = deviants_devil.1325.d

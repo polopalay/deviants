@@ -1,54 +1,54 @@
 namespace = deviants_courtier
 
 #1304 vassal wants to bath with you
-deviants_courtier.1304 = { 
+deviants_courtier.1304 = {
 	type = character_event
 	title = deviants_courtier.1304.t
-	desc = { 
+	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_female = yes
 					scope:deviant_go_random_1 = {
 						is_female = yes
-					} 
+					}
 				}
 				desc = deviants_courtier.1304.a.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_female = yes
 					scope:deviant_go_random_1 = {
 						is_female = no
-					} 
+					}
 				}
 				desc = deviants_courtier.1304.b.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_female = no
 					scope:deviant_go_random_1 = {
 						is_female = yes
-					} 
+					}
 				}
 				desc = deviants_courtier.1304.c.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_ruler = yes
 				}
 				desc = deviants_courtier.1304.d.desc
 			}
 		}
 	}
-	theme = dynasty 
+	theme = dynasty
 	right_portrait = {
 		character = root
-		animation = thinking  
+		animation = thinking
 	}
-    	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = chaplain  
+		animation = chaplain
 	}
 	immediate = {
 		random_vassal = {
@@ -57,8 +57,8 @@ deviants_courtier.1304 = {
 				is_available_ai_adult = yes
 				age >= 18
 			}
-		}	
-	}	
+		}
+	}
 	# agree to a normal bath
 	option = {
 		name = deviants_courtier.1304.a
@@ -79,7 +79,7 @@ deviants_courtier.1304 = {
 				lustful = minor_stress_impact_loss
 			}
 		}
-	}	
+	}
 	# agree to bath if both female
 	option = {
 		ai_chance = { base = 100 }
@@ -95,7 +95,7 @@ deviants_courtier.1304 = {
 		name = deviants_courtier.1304.b
 		custom_tooltip = deviants_courtier.1304.b.tt
 		trigger_event = deviants_courtier.1360
-	}		
+	}
 	# agree to bath if you female and they male
 	option = {
 		ai_chance = { base = 100 }
@@ -111,7 +111,7 @@ deviants_courtier.1304 = {
 		name = deviants_courtier.1304.c
 		custom_tooltip = deviants_courtier.1304.c.tt
 		trigger_event = deviants_courtier.1360
-	}	
+	}
 	# refuse
 	option = {
 		name = deviants_courtier.1304.e
@@ -127,59 +127,59 @@ deviants_courtier.1304 = {
 				opinion = -10
 			}
 		}
-	}			
+	}
 }
 #1360 if agree, she sitting very close...
-deviants_courtier.1360 = { 
+deviants_courtier.1360 = {
 	type = character_event
 	title = deviants_courtier.1360.t
-	desc = { 
+	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_female = yes
 					scope:deviant_go_random_1 = {
 						is_female = yes
-					} 
+					}
 				}
-			desc = deviants_courtier.1360.a.desc
+				desc = deviants_courtier.1360.a.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_female = yes
 					scope:deviant_go_random_1 = {
 						is_female = no
-					} 
+					}
 				}
-			desc = deviants_courtier.1360.b.desc
+				desc = deviants_courtier.1360.b.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_female = no
 					scope:deviant_go_random_1 = {
 						is_female = yes
-					} 
+					}
 				}
-			desc = deviants_courtier.1360.c.desc
+				desc = deviants_courtier.1360.c.desc
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					is_ruler = yes
 				}
-			desc = deviants_courtier.1360.d.desc
+				desc = deviants_courtier.1360.d.desc
 			}
 		}
 	}
-	theme = friendly 
+	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
 		character = root
-		animation = personality_content  
+		animation = personality_content
 		outfit_tags = { no_clothes }
 	}
-    	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = flirtation_left  
+		animation = flirtation_left
 		outfit_tags = { no_clothes }
 	}
 	# spread legs, let her serve as female
@@ -194,7 +194,7 @@ deviants_courtier.1360 = {
 		name = deviants_courtier.1360.a
 		custom_tooltip = deviants_courtier.1360.a.tt
 		trigger_event = deviants_courtier.1361
-	}		
+	}
 	# spread legs
 	option = {
 		ai_chance = { base = 100 }
@@ -207,7 +207,7 @@ deviants_courtier.1360 = {
 		name = deviants_courtier.1360.b
 		custom_tooltip = deviants_courtier.1360.b.tt
 		trigger_event = deviants_courtier.1370
-	}	
+	}
 	# just a normal path...
 	option = {
 		name = deviants_courtier.1360.d
@@ -223,25 +223,25 @@ deviants_courtier.1360 = {
 				opinion = -10
 			}
 		}
-	}			
+	}
 }
 #1361 if let her serve
-deviants_courtier.1361 = { 
+deviants_courtier.1361 = {
 	type = character_event
 	title = deviants_courtier.1361.t
 	desc = deviants_courtier.1361.a.desc
-	theme = friendly 
+	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
 		character = root
-		animation = personality_content 
+		animation = personality_content
 		outfit_tags = { no_clothes }
 	}
-   	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = throne_room_kneel_2  
+		animation = throne_room_kneel_2
 		outfit_tags = { no_clothes }
-	}		
+	}
 	# just pledge
 	option = {
 		name = deviants_courtier.1361.a
@@ -271,38 +271,38 @@ deviants_courtier.1361 = {
 				value = 1
 			}
 		}
-	}		
+	}
 	# if lustful
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.1361.b
 		custom_tooltip = deviants_courtier.1361.b.tt
 		trigger_event = deviants_courtier.1362
-	}	
+	}
 	# if sadistic, time to take control
 	option = {
 		name = deviants_courtier.1361.c
 		custom_tooltip = deviants_courtier.1361.c.tt
 		trigger_event = deviants_courtier.1363
-	}					
+	}
 }
 #1362 if lustful, I know why you here, time for 69...
-deviants_courtier.1362 = { 
+deviants_courtier.1362 = {
 	type = character_event
 	title = deviants_courtier.1362.t
 	desc = deviants_courtier.1362.a.desc
-	theme = friendly 
-	override_background = { reference = bath_house }		
+	theme = friendly
+	override_background = { reference = bath_house }
 	right_portrait = {
 		character = root
 		animation = personality_greedy
 		outfit_tags = { no_clothes }
 	}
-   	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = personality_callous  
+		animation = personality_callous
 		outfit_tags = { no_clothes }
-	}		
+	}
 	option = {
 		name = deviants_courtier.1362.a
 		custom_tooltip = deviants_courtier.1362.a.tt
@@ -331,26 +331,26 @@ deviants_courtier.1362 = {
 				value = 1
 			}
 		}
-	}					
+	}
 }
 
 #1363 if sadistic, I will wash your pussy, with fist...
-deviants_courtier.1363 = { 
+deviants_courtier.1363 = {
 	type = character_event
 	title = deviants_courtier.1363.t
 	desc = deviants_courtier.1363.a.desc
-	theme = friendly 
-	override_background = { reference = bath_house }		
+	theme = friendly
+	override_background = { reference = bath_house }
 	right_portrait = {
 		character = root
 		animation = personality_coward
 		outfit_tags = { no_clothes }
 	}
-   	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = personality_honorable  
+		animation = personality_honorable
 		outfit_tags = { no_clothes }
-	}		
+	}
 	option = {
 		name = deviants_courtier.1363.a
 		custom_tooltip = deviants_courtier.1363.a.tt
@@ -379,26 +379,26 @@ deviants_courtier.1363 = {
 				value = 1
 			}
 		}
-	}					
+	}
 }
 
 #1370 if female, spread your legs, let him serve
-deviants_courtier.1370 = { 
+deviants_courtier.1370 = {
 	type = character_event
 	title = deviants_courtier.1370.t
 	desc = deviants_courtier.1370.a.desc
-	theme = friendly 
+	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
 		character = root
-		animation = personality_content 
+		animation = personality_content
 		outfit_tags = { no_clothes }
 	}
-    	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = throne_room_kneel_2  
+		animation = throne_room_kneel_2
 		outfit_tags = { no_clothes }
-	}		
+	}
 	# pledge your felthy to me
 	option = {
 		name = deviants_courtier.1370.a
@@ -428,24 +428,24 @@ deviants_courtier.1370 = {
 				value = 1
 			}
 		}
-	}		
+	}
 	# if lustful, I know why you here,
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.1370.b
 		custom_tooltip = deviants_courtier.1370.b.tt
 		trigger_event = deviants_courtier.1371
-	}	
+	}
 	# if sadistic, time to take control
 	option = {
 		name = deviants_courtier.1370.c
 		custom_tooltip = deviants_courtier.1370.c.tt
 		trigger_event = deviants_courtier.1372
-	}					
+	}
 }
 
 #1371 time for a pussy job
-deviants_courtier.1371 = { 
+deviants_courtier.1371 = {
 	type = character_event
 	title = deviants_courtier.1371.t
 	desc = deviants_courtier.1371.a.desc
@@ -456,12 +456,12 @@ deviants_courtier.1371 = {
 		animation = personality_coward
 		outfit_tags = { no_clothes }
 	}
-   	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = personality_honorable  
+		animation = personality_honorable
 		outfit_tags = { no_clothes }
-	}		
-	# 
+	}
+	#
 	option = {
 		name = deviants_courtier.1371.a
 		custom_tooltip = deviants_courtier.1371.a.tt
@@ -491,7 +491,7 @@ deviants_courtier.1371 = {
 			}
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}		
+	}
 	# slip it in at last moment
 	option = {
 		name = deviants_courtier.1371.b
@@ -527,7 +527,7 @@ deviants_courtier.1371 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}	
+	}
 	# make him pay before cum
 	option = {
 		name = deviants_courtier.1371.c
@@ -556,24 +556,24 @@ deviants_courtier.1371 = {
 				value = 1
 			}
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
-		}	
-	}		
+		}
+	}
 }
 #1372 if sadistic, time for a footjob, I will step on your cock
-deviants_courtier.1372 = { 
+deviants_courtier.1372 = {
 	type = character_event
 	title = deviants_courtier.1372.t
 	desc = deviants_courtier.1372.a.desc
-	theme = friendly 
-	override_background = { reference = bath_house }		
+	theme = friendly
+	override_background = { reference = bath_house }
 	right_portrait = {
 		character = root
-		animation = personality_content  
+		animation = personality_content
 		outfit_tags = { no_clothes }
 	}
-    	left_portrait = {
+	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = flirtation_left  
+		animation = flirtation_left
 		outfit_tags = { no_clothes }
 	}
 	# just tease
@@ -605,8 +605,8 @@ deviants_courtier.1372 = {
 				value = 1
 			}
 		}
-	}	
-	#let him cum	
+	}
+	#let him cum
 	option = {
 		name = deviants_courtier.1372.b
 		custom_tooltip = deviants_courtier.1372.b.tt
@@ -637,11 +637,11 @@ deviants_courtier.1372 = {
 			}
 			add_character_flag = { flag = deviants_face_cum days = 10 }
 		}
-	}			
+	}
 }
 
 #1440 urge to expose
-deviants_courtier.1440 = { 
+deviants_courtier.1440 = {
 	type = character_event
 	title = deviants_courtier.1440.t
 	desc = deviants_courtier.1440.a.desc
@@ -663,14 +663,14 @@ deviants_courtier.1440 = {
 		hidden_effect = {
 			random_list = {
 				10 = { trigger_event = deviants_courtier.1441 }
-				10 = { trigger_event = deviants_courtier.1442 }	
+				10 = { trigger_event = deviants_courtier.1442 }
 			}
 		}
 		every_councillor = {
 			limit = { is_ruler = yes }
 			start_promote_lew_legend = yes
 		}
-	}		
+	}
 	option = {
 		name = deviants_courtier.1400.b
 		custom_tooltip = deviants_courtier.1400.b.tt
@@ -691,7 +691,7 @@ deviants_courtier.1440 = {
 	}
 }
 
-deviants_courtier.1441 = { 
+deviants_courtier.1441 = {
 	type = character_event
 	title = deviants_courtier.1441.t
 	desc = deviants_courtier.1441.a.desc
@@ -719,10 +719,10 @@ deviants_courtier.1441 = {
 				value = 2
 			}
 		}
-	}		
+	}
 }
 
-deviants_courtier.1442 = { 
+deviants_courtier.1442 = {
 	type = character_event
 	title = deviants_courtier.1442.t
 	desc = deviants_courtier.1442.a.desc
@@ -752,11 +752,11 @@ deviants_courtier.1442 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}		
+	}
 }
 
 #1460 after a heated debate, as you sit naked on your throne, some vassls/advisors just surround you on your throne, demand to fuck their whore ruler... to adress their issues to your holes... as you made them hard...
-deviants_courtier.1460 = { 
+deviants_courtier.1460 = {
 	type = character_event
 	title = deviants_courtier.1460.t
 	desc = deviants_courtier.1460.a.desc
@@ -793,10 +793,10 @@ deviants_courtier.1460 = {
 		hidden_effect = {
 			random_list = {
 				10 = { trigger_event = deviants_courtier.1461 }
-				10 = { trigger_event = deviants_courtier.1462 }	
+				10 = { trigger_event = deviants_courtier.1462 }
 			}
 		}
-	}		
+	}
 	option = {
 		ai_chance = { base = 50 }
 		name = deviants_courtier.1460.b
@@ -832,7 +832,7 @@ deviants_courtier.1460 = {
 		hidden_effect = {
 			random_list = {
 				10 = { trigger_event = deviants_courtier.1461 }
-				10 = { trigger_event = deviants_courtier.1462 }	
+				10 = { trigger_event = deviants_courtier.1462 }
 			}
 		}
 	}
@@ -857,7 +857,7 @@ deviants_courtier.1460 = {
 }
 
 #1461 side fuck while they keep debating, on the throne
-deviants_courtier.1461 = { 
+deviants_courtier.1461 = {
 	type = character_event
 	title = deviants_courtier.1461.t
 	desc = deviants_courtier.1461.a.desc
@@ -914,11 +914,11 @@ deviants_courtier.1461 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}		
+	}
 }
 
 #1462 footstool while being fucked
-deviants_courtier.1462 = { 
+deviants_courtier.1462 = {
 	type = character_event
 	title = deviants_courtier.1462.t
 	desc = deviants_courtier.1462.a.desc
@@ -955,11 +955,11 @@ deviants_courtier.1462 = {
 			}
 		}
 		trigger_event = deviants_courtier.1463
-	}		 
+	}
 }
 
 #1463 lickcum from floor after stool bukake
-deviants_courtier.1463 = { 
+deviants_courtier.1463 = {
 	type = character_event
 	title = deviants_courtier.1463.t
 	desc = deviants_courtier.1463.a.desc
@@ -1021,32 +1021,32 @@ deviants_courtier.1463 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 10 }
 			add_character_flag = { flag = deviants_body_cum days = 10 }
 		}
-	}		
+	}
 }
 
 #envoy with their soldiers, letter from your liege, telling you to reward them for their services
-deviants_courtier.7000 = { 
+deviants_courtier.7000 = {
 	type = character_event
 	title = deviants_courtier.7000.t
 	desc = deviants_courtier.7000.a.desc
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = thinking 
+		animation = thinking
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
-	trigger = { 
+	trigger = {
 		has_character_modifier = deviants_prostitute
-        	is_female = yes
-        	liege = {
-            		age >= 18
-            		is_ai = yes
-            		is_adult = yes
-            		is_incapable = no
-            		is_imprisoned = no
+		is_female = yes
+		liege = {
+			age >= 18
+			is_ai = yes
+			is_adult = yes
+			is_incapable = no
+			is_imprisoned = no
 			any_vassal = {
 				age >= 18
 				is_ai = yes
@@ -1054,9 +1054,9 @@ deviants_courtier.7000 = {
 				is_incapable = no
 				is_imprisoned = no
 			}
-        	}
+		}
 	}
-    	immediate = {
+	immediate = {
 		liege = {
 			save_scope_as = deviant_go_random_2
 			random_vassal = {
@@ -1071,7 +1071,7 @@ deviants_courtier.7000 = {
 			}
 		}
 	}
-    	# agree
+	# agree
 	option = {
 		ai_chance = { base = 100 }
 		add_prestige = minor_prestige_loss
@@ -1079,40 +1079,40 @@ deviants_courtier.7000 = {
 		custom_tooltip = deviants_courtier.7000.a.tt
 		trigger_event = deviants_courtier.7001
 
-	}	
+	}
 	# pay
 	option = {
 		name = deviants_courtier.7000.b
 		custom_tooltip = deviants_courtier.7000.b.tt
 		pay_short_term_gold = {
-			target = scope:deviant_go_random_1 
+			target = scope:deviant_go_random_1
 			gold = minor_gold_value
 		}
-	}	
+	}
 	# refuse
 	option = {
 		name = deviants_courtier.7000.c
 		custom_tooltip = deviants_courtier.7000.c.tt
 		add_piety = medium_piety_loss
-	}				
+	}
 }
 
-#7001 you arrive into the room as a whore and are told to present yourself, the envoy sitting on a chair, comments about the likeness, amused 
-deviants_courtier.7001 = { 
+#7001 you arrive into the room as a whore and are told to present yourself, the envoy sitting on a chair, comments about the likeness, amused
+deviants_courtier.7001 = {
 	type = character_event
 	title = deviants_courtier.7001.t
 	desc = deviants_courtier.7001.a.desc
-	theme = friendly 
+	theme = friendly
 	right_portrait = {
 		character = root
-		animation = chaplain 
+		animation = chaplain
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
-    	# agree
+	# agree
 	option = {
 		ai_chance = { base = 100 }
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
@@ -1120,53 +1120,53 @@ deviants_courtier.7001 = {
 		add_prestige = minor_prestige_loss
 		custom_tooltip = deviants_courtier.7001.a.tt
 		trigger_event = deviants_courtier.7010
-	}	
+	}
 	# pay
 	option = {
 		name = deviants_courtier.7001.b
 		custom_tooltip = deviants_courtier.7001.b.tt
 		pay_short_term_gold = {
-			target = scope:deviant_go_random_1 
+			target = scope:deviant_go_random_1
 			gold = medium_gold_value
 		}
-	}	
+	}
 	# refuse
 	option = {
 		name = deviants_courtier.7001.c
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
 		custom_tooltip = deviants_courtier.7001.c.tt
 		trigger_event = deviants_courtier.7020
-	}				
+	}
 }
 
-#7010 if admit being a dirty slut, spreading knees and pussy, he tells the men to fuck her 
-deviants_courtier.7010 = { 
+#7010 if admit being a dirty slut, spreading knees and pussy, he tells the men to fuck her
+deviants_courtier.7010 = {
 	type = character_event
 	title = deviants_courtier.7010.t
 	desc = deviants_courtier.7010.a.desc
-	theme = friendly 
+	theme = friendly
 	right_portrait = {
 		character = root
-		animation = chaplain 
+		animation = chaplain
 		outfit_tags = { no_clothes }
 	}
-    	# ask
+	# ask
 	option = {
 		name = deviants_courtier.7010.a
 		custom_tooltip = deviants_courtier.7010.a.tt
 		trigger_event = deviants_courtier.7011
-	}				
+	}
 }
 
 #7011 anal only, taking turns
-deviants_courtier.7011 = { 
+deviants_courtier.7011 = {
 	type = character_event
 	title = deviants_courtier.7011.t
 	desc = deviants_courtier.7011.a.desc
-	theme = friendly 
+	theme = friendly
 	right_portrait = {
 		character = root
-		animation = throne_room_kneel_1 
+		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -1187,21 +1187,21 @@ deviants_courtier.7011 = {
 				value = 1
 			}
 		}
-	}				
+	}
 }
 
 #7020 IF refuse they want to humiliation fight duel you, one by one as foreplay
-deviants_courtier.7020 = { 
+deviants_courtier.7020 = {
 	type = character_event
 	title = deviants_courtier.7020.t
 	desc = deviants_courtier.7020.a.desc
-	theme = war 
+	theme = war
 	right_portrait = {
 		character = root
-		animation = angry 
+		animation = angry
 		outfit_tags = { no_clothes }
 	}
-    	# submit
+	# submit
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.7020.a
@@ -1210,7 +1210,7 @@ deviants_courtier.7020 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
-	}		
+	}
 	# call scum
 	option = {
 		name = deviants_courtier.7020.b
@@ -1219,21 +1219,21 @@ deviants_courtier.7020 = {
 		stress_impact = {
 			base = minor_stress_impact_gain
 		}
-	}		
+	}
 }
 
 #7021 bondage anal only fuck post duels
-deviants_courtier.7021 = { 
+deviants_courtier.7021 = {
 	type = character_event
 	title = deviants_courtier.7021.t
 	desc = deviants_courtier.7011.a.desc
-	theme = war 
+	theme = war
 	right_portrait = {
 		character = root
-		animation = angry 
+		animation = angry
 		outfit_tags = { no_clothes }
 	}
-    	# ask
+	# ask
 	option = {
 		name = deviants_courtier.7021.a
 		custom_tooltip = deviants_courtier.7021.a.tt
@@ -1250,21 +1250,21 @@ deviants_courtier.7021 = {
 				track = power
 				value = 1
 			}
-		}	
-	}				
+		}
+	}
 }
 #7022 if call them scum, cheap cart slut
-deviants_courtier.7022 = { 
+deviants_courtier.7022 = {
 	type = character_event
 	title = deviants_courtier.7022.t
 	desc = deviants_courtier.7022.a.desc
-	theme = default 
+	theme = default
 	right_portrait = {
 		character = root
-		animation = angry 
+		animation = angry
 		outfit_tags = { no_clothes }
 	}
-    	# ask
+	# ask
 	option = {
 		name = deviants_courtier.7022.a
 		custom_tooltip = deviants_courtier.7022.a.tt
@@ -1287,29 +1287,29 @@ deviants_courtier.7022 = {
 				value = 1
 			}
 		}
-	}				
+	}
 }
 
-#5100 liege call you over 
-deviants_courtier.5100 = { 
+#5100 liege call you over
+deviants_courtier.5100 = {
 	type = character_event
 	title = deviants_courtier.5100.t
 	desc = deviants_courtier.5100.a.desc
 	override_background = { reference = council_chamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = thinking 
+		animation = thinking
 	}
-    	trigger = { 
+	trigger = {
 		has_trait = deviants_succubus
-        	is_female = yes
-        	liege = {
-            		age >= 18
-            		is_ai = yes
-            		is_adult = yes
-            		is_incapable = no
-            		is_imprisoned = no
+		is_female = yes
+		liege = {
+			age >= 18
+			is_ai = yes
+			is_adult = yes
+			is_incapable = no
+			is_imprisoned = no
 			is_liege_or_above_of = root
 			any_vassal = {
 				is_female = no
@@ -1320,9 +1320,9 @@ deviants_courtier.5100 = {
 				is_imprisoned = no
 				count >= 3
 			}
-        	}
+		}
 	}
-    	immediate = {
+	immediate = {
 		liege = {
 			save_scope_as = deviant_go_random_1
 			random_vassal = {
@@ -1363,7 +1363,7 @@ deviants_courtier.5100 = {
 			}
 		}
 	}
-    	# secretly travel to your liege
+	# secretly travel to your liege
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.5100.a
@@ -1376,7 +1376,7 @@ deviants_courtier.5100 = {
 				50 = {
 					trigger_event = deviants_courtier.5300
 				}
-                		50 = {
+				50 = {
 					trigger_event = deviants_courtier.5400
 				}
 				50 = {
@@ -1385,9 +1385,9 @@ deviants_courtier.5100 = {
 				50 = {
 					trigger_event = deviants_courtier.6000
 				}
-			}	
+			}
 		}
-	}	
+	}
 	# just pay the gold
 	option = {
 		name = deviants_courtier.5100.b
@@ -1401,38 +1401,38 @@ deviants_courtier.5100 = {
 			modifier = dismissive_opinion
 			opinion = -10
 		}
-	}					
+	}
 }
 
 #5000 emissary from from your liege comes if don't have trait
-deviants_courtier.5200 = { 
+deviants_courtier.5200 = {
 	type = character_event
 	title = deviants_courtier.5200.t
 	desc = deviants_courtier.5200.a.desc
 	override_background = { reference = courtyard }
-	theme = diplomacy 
+	theme = diplomacy
 	lower_center_portrait = {
 		character = root
-		animation = throne_room_kneel_2 
+		animation = throne_room_kneel_2
 		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_left_portrait = {
 		character = scope:deviant_go_random_3
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_right_portrait = {
 		character = scope:deviant_go_random_4
-		animation = ecstasy 
+		animation = ecstasy
 	}
-    	# collect the coins with your mouth
+	# collect the coins with your mouth
 	option = {
 		ai_chance = { base = 80 }
 		name = deviants_courtier.5200.a
@@ -1462,7 +1462,7 @@ deviants_courtier.5200 = {
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# offer ass to have coins inserted
 	option = {
 		ai_chance = { base = 80 }
@@ -1482,7 +1482,7 @@ deviants_courtier.5200 = {
 			target = scope:deviant_go_random_1
 			modifier = disgusted_opinion
 			opinion = -10
-			
+
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1494,7 +1494,7 @@ deviants_courtier.5200 = {
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# refuse, get spanked by your owner
 	option = {
 		name = deviants_courtier.5200.c
@@ -1507,36 +1507,36 @@ deviants_courtier.5200 = {
 			modifier = amused_opinion
 			opinion = 20
 		}
-	}					
+	}
 }
 # 5300 if has dildo, made to pose with your paintings while riding the dildo
-deviants_courtier.5300 = { 
+deviants_courtier.5300 = {
 	type = character_event
 	title = deviants_courtier.5300.t
 	desc = deviants_courtier.5300.a.desc
-	theme = diplomacy 
+	theme = diplomacy
 	lower_center_portrait = {
 		character = root
-		animation = throne_room_kneel_2 
+		animation = throne_room_kneel_2
 		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_left_portrait = {
 		character = scope:deviant_go_random_3
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_right_portrait = {
 		character = scope:deviant_go_random_4
-		animation = ecstasy 
+		animation = ecstasy
 	}
-    	# fuck dildo to please, to gain tiny gold
+	# fuck dildo to please, to gain tiny gold
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.5300.a
@@ -1572,7 +1572,7 @@ deviants_courtier.5300 = {
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# do bare minium
 	option = {
 		name = deviants_courtier.5300.b
@@ -1592,40 +1592,40 @@ deviants_courtier.5300 = {
 				track = daring
 				value = 1
 			}
-		}	
-	}					
+		}
+	}
 }
 
 # 5400 naked duel his knights
-deviants_courtier.5400 = { 
+deviants_courtier.5400 = {
 	type = character_event
 	title = deviants_courtier.5400.t
 	desc = deviants_courtier.5400.a.desc
 	override_background = { reference = courtyard }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = aggressive_unarmed 
+		animation = aggressive_unarmed
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = aggressive_unarmed 
+		animation = aggressive_unarmed
 		outfit_tags = { no_clothes }
 	}
 	lower_center_portrait = {
 		character = scope:deviant_go_random_1
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_left_portrait = {
 		character = scope:deviant_go_random_3
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_right_portrait = {
 		character = scope:deviant_go_random_4
-		animation = ecstasy 
+		animation = ecstasy
 	}
-    	# make a good show
+	# make a good show
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.5400.a
@@ -1660,7 +1660,7 @@ deviants_courtier.5400 = {
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# do bare minium
 	option = {
 		name = deviants_courtier.5400.b
@@ -1672,29 +1672,29 @@ deviants_courtier.5400 = {
 			target = scope:deviant_go_random_1
 			modifier = disappointed_opinion
 			opinion = -10
-			
-		}	
-	}					
+
+		}
+	}
 }
 # 5500 make you fuck horse if you have the trait
-deviants_courtier.5500 = { 
+deviants_courtier.5500 = {
 	type = character_event
 	title = deviants_courtier.5500.t
 	desc = deviants_courtier.5500.a.desc
-	theme = diplomacy 
+	theme = diplomacy
 	lower_center_portrait= {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
 	lower_left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_right_portrait = {
 		character = scope:deviant_go_random_3
-		animation = ecstasy 
+		animation = ecstasy
 	}
-    	# fuck horse 
+	# fuck horse
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.5500.a
@@ -1728,8 +1728,8 @@ deviants_courtier.5500 = {
 			}
 			add_character_flag = { flag = deviants_pussy_cum days = 20 }
 			add_character_flag = { flag = deviants_ass_cum days = 20 }
-		}	
-	}	
+		}
+	}
 	# just pose
 	option = {
 		name = deviants_courtier.5500.b
@@ -1747,32 +1747,32 @@ deviants_courtier.5500 = {
 			target = scope:deviant_go_random_1
 			modifier = dismissive_opinion
 			opinion = -10
-			
+
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_3 = { start_promote_lew_legend = yes }
 		scope:deviant_go_random_4 = { start_promote_lew_legend = yes }
-	}					
+	}
 }
 # 5510 if agree to fuck horse
-deviants_courtier.5510 = { 
+deviants_courtier.5510 = {
 	type = character_event
 	title = deviants_courtier.5510.t
 	desc = deviants_courtier.5510.a.desc
-	theme = diplomacy 
+	theme = diplomacy
 	lower_center_portrait= {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
 	lower_left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = ecstasy 
+		animation = ecstasy
 	}
 	lower_right_portrait = {
 		character = scope:deviant_go_random_3
-		animation = ecstasy 
+		animation = ecstasy
 	}
-    	# faster/deeper as told, for tiny gold but gain stress
+	# faster/deeper as told, for tiny gold but gain stress
 	option = {
 		name = deviants_courtier.5510.a
 		custom_tooltip = deviants_courtier.5510.a.tt
@@ -1805,7 +1805,7 @@ deviants_courtier.5510 = {
 			limit = { NOT = { has_nickname = nickname_the_sex_machine } }
 			give_nickname = nickname_the_sex_machine
 		}
-	}	
+	}
 	# pleasure yourself
 	option = {
 		ai_chance = { base = 100 }
@@ -1824,32 +1824,32 @@ deviants_courtier.5510 = {
 			target = scope:deviant_go_random_1
 			modifier = dismissive_opinion
 			opinion = -10
-			
+
 		}
-	}					
+	}
 }
 
 #6000 called you over, to have you service another of his vassals
-deviants_courtier.6000 = { 
+deviants_courtier.6000 = {
 	type = character_event
 	title = deviants_courtier.6000.t
 	desc = deviants_courtier.6000.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = chaplain 
+		animation = chaplain
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = thinking 
+		animation = thinking
 	}
 	lower_right_portrait = {
 		character = scope:deviant_go_random_1
-		animation = scheme 
+		animation = scheme
 	}
-    	# agree
+	# agree
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6000.a
@@ -1860,7 +1860,7 @@ deviants_courtier.6000 = {
 				gold = tiny_gold_value
 			}
 			pay_short_term_gold = {
-				target = scope:deviant_go_random_1 
+				target = scope:deviant_go_random_1
 				gold = minor_gold_value
 			}
 		}
@@ -1868,12 +1868,12 @@ deviants_courtier.6000 = {
 			random_list = {
 				25 = { trigger_event = deviants_courtier.6010 }
 				25 = { trigger_event = deviants_courtier.6020 }
-                		25 = { trigger_event = deviants_courtier.6030 }
+				25 = { trigger_event = deviants_courtier.6030 }
 				25 = { trigger_event = deviants_courtier.6040 }
-			}	
+			}
 		}
 
-	}	
+	}
 	# refuse
 	option = {
 		name = deviants_courtier.6000.b
@@ -1884,26 +1884,26 @@ deviants_courtier.6000 = {
 				type = dungeon
 			}
 		}
-	}					
+	}
 }
 
 #6010 pussy slapping while bound
-deviants_courtier.6010 = { 
+deviants_courtier.6010 = {
 	type = character_event
 	title = deviants_courtier.6010.t
 	desc = deviants_courtier.6010.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = prisondungeon 
+		animation = prisondungeon
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = aggressive_unarmed 
+		animation = aggressive_unarmed
 	}
-    	# beg for more
+	# beg for more
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6010.a
@@ -1922,7 +1922,7 @@ deviants_courtier.6010 = {
 			}
 			add_character_flag = { flag = deviants_pussy_cum days = 20 }
 		}
-	}	
+	}
 	# stay silent
 	option = {
 		name = deviants_courtier.6010.b
@@ -1930,25 +1930,25 @@ deviants_courtier.6010 = {
 		stress_impact = {
 			base = minor_stress_impact_gain
 		}
-	}					
+	}
 }
 #6011 if beg for more, getting fisted
-deviants_courtier.6011 = { 
+deviants_courtier.6011 = {
 	type = character_event
 	title = deviants_courtier.6011.t
 	desc = deviants_courtier.6011.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = prisondungeon 
+		animation = prisondungeon
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
 		character = scope:deviant_go_random_2
-		animation = aggressive_unarmed 
+		animation = aggressive_unarmed
 	}
-    	# act like a horny slut
+	# act like a horny slut
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6011.a
@@ -1970,7 +1970,7 @@ deviants_courtier.6011 = {
 			add_character_flag = { flag = deviants_pussy_cum months = 1 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# endure
 	option = {
 		name = deviants_courtier.6011.b
@@ -1978,22 +1978,22 @@ deviants_courtier.6011 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
-	}					
+	}
 }
 
 #6020 slap face with cock
-deviants_courtier.6020 = { 
+deviants_courtier.6020 = {
 	type = character_event
 	title = deviants_courtier.6020.t
 	desc = deviants_courtier.6020.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = throne_room_kneel_1 
+		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
 	}
-    	# suck
+	# suck
 	option = {
 		name = deviants_courtier.6020.a
 		custom_tooltip = deviants_courtier.6020.a.tt
@@ -2005,7 +2005,7 @@ deviants_courtier.6020 = {
 				value = 1
 			}
 		}
-	}	
+	}
 	# keep mouth shut
 	option = {
 		name = deviants_courtier.6020.b
@@ -2021,21 +2021,21 @@ deviants_courtier.6020 = {
 				value = 1
 			}
 		}
-	}					
+	}
 }
 #6021 if suck,
-deviants_courtier.6021 = { 
+deviants_courtier.6021 = {
 	type = character_event
 	title = deviants_courtier.6021.t
 	desc = deviants_courtier.6021.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = personality_greedy 
+		animation = personality_greedy
 		outfit_tags = { no_clothes }
 	}
-    	# thank him for the meal
+	# thank him for the meal
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6021.a
@@ -2049,7 +2049,7 @@ deviants_courtier.6021 = {
 			add_character_flag = { flag = deviants_face_cum days = 15 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# just leave
 	option = {
 		name = deviants_courtier.6021.b
@@ -2057,21 +2057,21 @@ deviants_courtier.6021 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
-	}					
+	}
 }
 #6022 if keep mouth shut
-deviants_courtier.6022 = { 
+deviants_courtier.6022 = {
 	type = character_event
 	title = deviants_courtier.6022.t
 	desc = deviants_courtier.6022.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = throne_room_kneel_1 
+		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
 	}
-        # lick your face
+	# lick your face
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6022.a
@@ -2084,7 +2084,7 @@ deviants_courtier.6022 = {
 			}
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# just leave
 	option = {
 		name = deviants_courtier.6022.b
@@ -2092,22 +2092,22 @@ deviants_courtier.6022 = {
 		stress_impact = {
 			base = minor_stress_impact_gain
 		}
-	}					
+	}
 }
 
 #6030 strangle anal
-deviants_courtier.6030 = { 
+deviants_courtier.6030 = {
 	type = character_event
 	title = deviants_courtier.6030.t
 	desc = deviants_courtier.6030.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = throne_room_kneel_1 
+		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
 	}
-    	# act horny/indulge as he cums
+	# act horny/indulge as he cums
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6030.a
@@ -2123,7 +2123,7 @@ deviants_courtier.6030 = {
 			}
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# stay silent as he cums
 	option = {
 		name = deviants_courtier.6030.b
@@ -2131,22 +2131,22 @@ deviants_courtier.6030 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
-	}					
+	}
 }
 
 #6040 pussy job him
-deviants_courtier.6040 = { 
+deviants_courtier.6040 = {
 	type = character_event
 	title = deviants_courtier.6040.t
 	desc = deviants_courtier.6040.a.desc
 	override_background = { reference = bedchamber }
-	theme = diplomacy 
+	theme = diplomacy
 	right_portrait = {
 		character = root
-		animation = throne_room_kneel_1 
+		animation = throne_room_kneel_1
 		outfit_tags = { no_clothes }
 	}
-    	# service him well to get him cum
+	# service him well to get him cum
 	option = {
 		ai_chance = { base = 100 }
 		name = deviants_courtier.6040.a
@@ -2168,7 +2168,7 @@ deviants_courtier.6040 = {
 			add_character_flag = { flag = deviants_pussy_cum days = 15 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
-	}	
+	}
 	# do the bare minimum to get him cum
 	option = {
 		name = deviants_courtier.6040.b
@@ -2176,6 +2176,6 @@ deviants_courtier.6040 = {
 		stress_impact = {
 			lustful = medium_stress_impact_loss
 		}
-	}					
+	}
 }
 

@@ -1,6 +1,6 @@
 deviants_dark_amry = {
 	icon = skirmishers
-	type = skirmishers 
+	type = skirmishers
 
 	pursuit = 40
 	screen = 40
@@ -24,7 +24,7 @@ deviants_dark_amry = {
 
 deviants_death_korps  = {
 	icon = heavy_infantry
-	type = heavy_infantry 
+	type = heavy_infantry
 	can_recruit = { always = no }
 
 	pursuit = 100
@@ -48,7 +48,7 @@ deviants_death_korps  = {
 
 deviants_zombie = {
 	icon = skirmishers
-	type = skirmishers 
+	type = skirmishers
 	can_recruit = { have_devil_building_trigger = yes }
 
 	pursuit = 4
@@ -68,7 +68,7 @@ deviants_zombie = {
 
 deviants_skeleton = {
 	icon = skirmishers
-	type = skirmishers 
+	type = skirmishers
 	can_recruit = { have_devil_building_trigger = yes }
 
 	pursuit = 8

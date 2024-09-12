@@ -33,7 +33,7 @@ ladycow = {
 		conclusion = legend_chapter_conclusion_ladycow
 	}
 }
- 
+
 penis_guillotine = {
 	portrait_animation = personality_greedy
 

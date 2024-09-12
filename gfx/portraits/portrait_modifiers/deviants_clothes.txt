@@ -1,6 +1,6 @@
 prostitute_clothes = {
-    	usage = game
-    	priority = 10
+	usage = game
+	priority = 10
 
 	prostitute0 = {
 		dna_modifiers = {
@@ -10,7 +10,7 @@ prostitute_clothes = {
 				value = 1
 				template = womb_1
 			}
-		}	
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -27,8 +27,8 @@ prostitute_clothes = {
 }
 
 horn_clothes = {
-    	usage = game
-    	priority = 10
+	usage = game
+	priority = 10
 
 	horn0 = {
 		dna_modifiers = {
@@ -38,7 +38,7 @@ horn_clothes = {
 				template = horn_0
 				value = 1
 			}
-		} 
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -55,7 +55,7 @@ horn_clothes = {
 				template = horn_1
 				value = 1
 			}
-		} 
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -72,7 +72,7 @@ horn_clothes = {
 				template = horn_2
 				value = 1
 			}
-		} 
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -89,7 +89,7 @@ horn_clothes = {
 				template = horn_3
 				value = 1
 			}
-		} 
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -106,7 +106,7 @@ horn_clothes = {
 				template = horn_4
 				value = 1
 			}
-		} 
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -265,7 +265,7 @@ eyes_color_clothes = {
 }
 
 hair_color_clothes = {
- 	usage = game
+	usage = game
 	priority = 10
 	white_hair = {
 		dna_modifiers = {

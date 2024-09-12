@@ -19,5 +19,5 @@ deviants_devil_on_action = {
 		chance_to_happen = 10
 		50 = deviants_devil.1410 # gremlin fuck
 		25 = deviants_devil.1300 # special dream
-	} 
+	}
 }

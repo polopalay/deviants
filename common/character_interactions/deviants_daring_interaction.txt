@@ -1,8 +1,8 @@
 deviants_weight_interaction = {
 	icon = full_body_hair
 	desc = deviants_weight_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 	cooldown = { years = 1 }
 
 	is_shown = {
@@ -59,8 +59,8 @@ deviants_weight_interaction = {
 deviants_makeup_interaction = {
 	icon = no_body_hair
 	desc = deviants_makeup_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 
 	is_shown = {
 		scope:actor = {
@@ -449,10 +449,10 @@ deviants_makeup_interaction = {
 deviants_honor_interaction = {
 	icon = rumor
 	desc = deviants_honor_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 	is_shown = {
-		scope:actor = { 
+		scope:actor = {
 			OR = {
 				has_trait_xp = {
 					trait = deviants_succubus
@@ -512,17 +512,17 @@ deviants_honor_interaction = {
 deviants_mind_break_interaction = {
 	icon = mesmerize
 	desc = deviants_mind_break_interaction.desc
-    	category = interaction_category_hostile
-    	use_diplomatic_range = yes
+	category = interaction_category_hostile
+	use_diplomatic_range = yes
 	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
+		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = daring
 				value >= 50
-			} 
+			}
 			is_valid_construction_alchemy2_trigger = yes
 		}
 		scope:recipient = {

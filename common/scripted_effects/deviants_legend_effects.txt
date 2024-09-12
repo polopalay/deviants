@@ -58,7 +58,7 @@ give_prostitution_nickname = {
 
 start_promote_lew_legend = {
 	if = {
-		limit = { 
+		limit = {
 			NOT = { promoted_legend = scope:promoted_legend }
 			is_ruler = yes
 		}

@@ -6,20 +6,20 @@ deviants_witch_forest = {
 
 	type_icon = "icon_witch_forest.dds"
 	construction_time = very_slow_construction_time
-	
+
 	cost_gold = 1000
 
 	character_modifier = {
 		parochial_opinion = 5
 		court_grandeur_baseline_add = 4
 	}
-	
+
 	county_modifier = {
 		tax_mult = 0.2
 		development_growth_factor = 0.2
 		development_growth = 0.2
 	}
-	
+
 	province_modifier = {
 		monthly_income = 2
 	}
@@ -31,7 +31,7 @@ deviants_witch_forest = {
 			free_building_slots > 0
 		}
 	}
-	
+
 	type = special
 }
 
@@ -43,20 +43,20 @@ deviants_soul_forge = {
 
 	type_icon = "icon_smeltworks.dds"
 	construction_time = very_slow_construction_time
-	
+
 	cost_gold = 1000
 
 	character_modifier = {
 		parochial_opinion = 5
 		court_grandeur_baseline_add = 4
 	}
-	
+
 	county_modifier = {
 		tax_mult = 0.1
 		supply_limit = 2000
 		hostile_raid_time = 0.25
 	}
-	
+
 	province_modifier = {
 		fort_level = 2
 	}
@@ -68,7 +68,7 @@ deviants_soul_forge = {
 			free_building_slots > 0
 		}
 	}
-	
+
 	type = special
 }
 

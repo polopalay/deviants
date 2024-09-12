@@ -23,7 +23,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_9
 			}
-		}	
+		}
 	}
 	succubus_2 = {
 		traits = {
@@ -53,7 +53,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_8
 			}
-		}	
+		}
 	}
 	succubus_3 = {
 		traits = {
@@ -78,7 +78,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_5
 			}
-		}	
+		}
 	}
 	succubus_4 = {
 		traits = {
@@ -108,7 +108,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_2
 			}
-		}	
+		}
 	}
 	succubus_5 = {
 		traits = {
@@ -138,7 +138,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_5
 			}
-		}	
+		}
 	}
 	succubus_6 = {
 		traits = {
@@ -163,7 +163,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_12
 			}
-		}	
+		}
 	}
 	succubus_7 = {
 		traits = {
@@ -193,7 +193,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_10
 			}
-		}	
+		}
 	}
 	succubus_8 = {
 		traits = {
@@ -223,7 +223,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_11
 			}
-		}	
+		}
 	}
 	succubus_9 = {
 		traits = {
@@ -253,7 +253,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_15
 			}
-		}	
+		}
 	}
 	succubus_10 = {
 		traits = {
@@ -283,7 +283,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_16
 			}
-		}	
+		}
 	}
 	succubus_11 = {
 		traits = {
@@ -308,7 +308,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_6
 			}
-		}	
+		}
 	}
 	lesser_succubus_1 = {
 		traits = {
@@ -327,7 +327,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_13
 			}
-		}	
+		}
 	}
 	lesser_succubus_1 = {
 		traits = {
@@ -346,7 +346,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_4
 			}
-		}	
+		}
 	}
 	lesser_succubus_2 = {
 		traits = {
@@ -365,7 +365,7 @@ deviants_outfit = {
 				value = 1
 				template = womb_7
 			}
-		}	
+		}
 	}
 	virgin = {
 		traits = {
@@ -378,6 +378,6 @@ deviants_outfit = {
 				value = 1
 				template = womb_14
 			}
-		}	
+		}
 	}
 }

@@ -168,7 +168,7 @@ deviants_homologus_decision = {
 	}
 	effect = {
 		random_prisoner = {
-			limit = { 
+			limit = {
 				OR = {
 					has_trait = witch
 					any_secret = { secret_type = secret_witch }

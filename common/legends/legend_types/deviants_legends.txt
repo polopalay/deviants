@@ -36,7 +36,7 @@ sexual = {
 			}
 		}
 	}
-	
+
 	on_legend_stop_promote = {
 		if = {
 			limit = {
@@ -94,12 +94,12 @@ sexual = {
 				round = no
 				gold = famed_legend_owner_cost
 			}
-			
+
 			promoter_cost = {
 				round = no
 				gold = famed_legend_promoter_cost
 			}
-			
+
 			upgrade_cost = {
 				gold = legend_upgrade_cost
 				prestige = legend_prestige_cost
@@ -119,12 +119,12 @@ sexual = {
 				promoter_modifier = {
 					learning = 1
 				}
-				
+
 				on_complete = {
 					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
-						random = { chance = 25 
+						random = { chance = 25
 							random_list = {
 								1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
 								1 = { modifier = { add = -1 have_soul_forge_trigger = yes } give_building_soul_forge = yes }
@@ -159,7 +159,7 @@ sexual = {
 						multiply = 1.2
 					}
 				}
-				
+
 				take_unowned = 100
 
 				upgrade = { value = 1000 }
@@ -167,7 +167,7 @@ sexual = {
 				complete = { value = 0 }
 			}
 		}
-		
+
 		illustrious = {
 			spread_chance = {
 				if = {
@@ -183,7 +183,7 @@ sexual = {
 			}
 
 			max_provinces = 300
-			
+
 			creation_cost = {
 				gold = {
 					value = legend_base_cost
@@ -196,12 +196,12 @@ sexual = {
 				round = no
 				gold = illustrious_legend_owner_cost
 			}
-			
+
 			promoter_cost = {
 				round = no
 				gold = illustrious_legend_promoter_cost
 			}
-			
+
 			upgrade_cost = {
 				gold = legend_upgrade_cost
 				prestige = legend_prestige_cost
@@ -221,12 +221,12 @@ sexual = {
 				promoter_modifier = {
 					learning = 2
 				}
-				
+
 				on_complete = {
 					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
-						random = { chance = 50 
+						random = { chance = 50
 							random_list = {
 								1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
 								1 = { modifier = { add = -1 have_soul_forge_trigger = yes } give_building_soul_forge = yes }
@@ -272,7 +272,7 @@ sexual = {
 						multiply = 1.2
 					}
 				}
-				
+
 				take_unowned = 100
 
 				upgrade = { value = 1000 }
@@ -280,7 +280,7 @@ sexual = {
 				complete = { value = 0 }
 			}
 		}
-		
+
 		mythical = {
 			spread_chance = {
 				if = {
@@ -296,7 +296,7 @@ sexual = {
 			}
 
 			max_provinces = 500
-			
+
 			creation_cost = {
 				gold = {
 					value = legend_base_cost
@@ -312,7 +312,7 @@ sexual = {
 				round = no
 				gold = mythical_legend_owner_cost
 			}
-			
+
 			promoter_cost = {
 				round = no
 				gold = mythical_legend_promoter_cost
@@ -342,7 +342,7 @@ sexual = {
 				promoter_modifier = {
 					learning = 5
 				}
-				
+
 				on_complete = {
 					lost_level_of_fame_piety = yes
 					if = {
@@ -391,7 +391,7 @@ sexual = {
 						multiply = 1.2
 					}
 				}
-				
+
 				take_unowned = 100
 
 				upgrade = { value = 1000 }
@@ -400,7 +400,7 @@ sexual = {
 			}
 		}
 	}
-	
+
 	on_yearly = {
 		scope:legend = { save_scope_as = promoted_legend }
 		if = {
@@ -464,7 +464,7 @@ witchcraft = {
 			}
 		}
 	}
-	
+
 	on_legend_stop_promote = {
 		if = {
 			limit = {
@@ -518,12 +518,12 @@ witchcraft = {
 				round = no
 				gold = famed_legend_owner_cost
 			}
-			
+
 			promoter_cost = {
 				round = no
 				gold = famed_legend_promoter_cost
 			}
-			
+
 			upgrade_cost = {
 				gold = legend_upgrade_cost
 				prestige = legend_prestige_cost
@@ -543,7 +543,7 @@ witchcraft = {
 				promoter_modifier = {
 					learning = 1
 				}
-				
+
 				on_complete = {
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					promoted_legend ?= { save_scope_as = promoted_legend }
@@ -564,7 +564,7 @@ witchcraft = {
 						multiply = 1.2
 					}
 				}
-				
+
 				take_unowned = 100
 
 				upgrade = { value = 1000 }
@@ -572,7 +572,7 @@ witchcraft = {
 				complete = { value = base_legend_complete_ai }
 			}
 		}
-		
+
 		illustrious = {
 			spread_chance = {
 				if = {
@@ -588,7 +588,7 @@ witchcraft = {
 			}
 
 			max_provinces = 300
-			
+
 			creation_cost = {
 				gold = {
 					value = legend_base_cost
@@ -601,12 +601,12 @@ witchcraft = {
 				round = no
 				gold = illustrious_legend_owner_cost
 			}
-			
+
 			promoter_cost = {
 				round = no
 				gold = illustrious_legend_promoter_cost
 			}
-			
+
 			upgrade_cost = {
 				gold = legend_upgrade_cost
 				prestige = legend_prestige_cost
@@ -626,7 +626,7 @@ witchcraft = {
 				promoter_modifier = {
 					learning = 2
 				}
-				
+
 				on_complete = {
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					promoted_legend ?= { save_scope_as = promoted_legend }
@@ -648,7 +648,7 @@ witchcraft = {
 						multiply = 1.2
 					}
 				}
-				
+
 				take_unowned = 100
 
 				upgrade = { value = 1000 }
@@ -658,7 +658,7 @@ witchcraft = {
 				}
 			}
 		}
-		
+
 		mythical = {
 			spread_chance = {
 				if = {
@@ -674,7 +674,7 @@ witchcraft = {
 			}
 
 			max_provinces = 500
-			
+
 			creation_cost = {
 				gold = {
 					value = legend_base_cost
@@ -690,7 +690,7 @@ witchcraft = {
 				round = no
 				gold = mythical_legend_owner_cost
 			}
-			
+
 			promoter_cost = {
 				round = no
 				gold = mythical_legend_promoter_cost
@@ -720,7 +720,7 @@ witchcraft = {
 				promoter_modifier = {
 					learning = 5
 				}
-				
+
 				on_complete = {
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					promoted_legend ?= { save_scope_as = promoted_legend }
@@ -742,7 +742,7 @@ witchcraft = {
 						multiply = 1.2
 					}
 				}
-				
+
 				take_unowned = 100
 
 				upgrade = { value = 1000 }

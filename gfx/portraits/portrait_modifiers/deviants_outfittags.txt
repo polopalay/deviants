@@ -9,7 +9,7 @@ fucked_pussy_outfittags = {
 				gene = deviants_pussy_cum
 				range = { 0 1 }
 				template = no_pussy_cum
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -26,7 +26,7 @@ fucked_pussy_outfittags = {
 				gene = deviants_pussy_cum
 				range = { 0 1 }
 				template = pussy_cum_1
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -43,7 +43,7 @@ fucked_pussy_outfittags = {
 				gene = deviants_pussy_cum
 				range = { 0 1 }
 				template = pussy_cum_2
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -60,7 +60,7 @@ fucked_pussy_outfittags = {
 				gene = deviants_pussy_cum
 				range = { 0 1 }
 				template = pussy_cum_3
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -83,7 +83,7 @@ fucked_ass_outfittags = {
 				gene = deviants_ass_cum
 				range = { 0 1 }
 				template = no_ass_cum
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -100,7 +100,7 @@ fucked_ass_outfittags = {
 				gene = deviants_ass_cum
 				range = { 0 1 }
 				template = ass_cum_1
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -117,7 +117,7 @@ fucked_ass_outfittags = {
 				gene = deviants_ass_cum
 				range = { 0 1 }
 				template = ass_cum_2
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -134,7 +134,7 @@ fucked_ass_outfittags = {
 				gene = deviants_ass_cum
 				range = { 0 1 }
 				template = ass_cum_3
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -156,7 +156,7 @@ fucked_body_outfittags = {
 				gene = deviants_body_cum
 				range = { 0 1 }
 				template = body_cum_1
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -173,7 +173,7 @@ fucked_body_outfittags = {
 				gene = deviants_body_cum
 				range = { 0 1 }
 				template = body_cum_1
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -190,7 +190,7 @@ fucked_body_outfittags = {
 				gene = deviants_body_cum
 				range = { 0 1 }
 				template = body_cum_2
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -207,7 +207,7 @@ fucked_body_outfittags = {
 				gene = deviants_body_cum
 				range = { 0 1 }
 				template = body_cum_3
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -224,7 +224,7 @@ fucked_body_outfittags = {
 				gene = deviants_body_cum
 				range = { 0 1 }
 				template = body_cum_4
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -246,7 +246,7 @@ fucked_face_outfittags = {
 				gene = deviants_face_cum
 				range = { 0 1 }
 				template = no_face_cum
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -263,7 +263,7 @@ fucked_face_outfittags = {
 				gene = deviants_face_cum
 				range = { 0 1 }
 				template = face_cum_1
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -280,7 +280,7 @@ fucked_face_outfittags = {
 				gene = deviants_face_cum
 				range = { 0 1 }
 				template = face_cum_2
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -297,7 +297,7 @@ fucked_face_outfittags = {
 				gene = deviants_face_cum
 				range = { 0 1 }
 				template = face_cum_3
-			}	
+			}
 		}
 		weight = {
 			base = 0
@@ -314,7 +314,7 @@ fucked_face_outfittags = {
 				gene = deviants_face_cum
 				range = { 0 1 }
 				template = face_cum_4
-			}	
+			}
 		}
 		weight = {
 			base = 0

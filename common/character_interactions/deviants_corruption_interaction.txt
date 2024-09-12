@@ -1,13 +1,13 @@
 deviants_switch_body_interaction = {
 	icon = two_body
 	desc = deviants_switch_body_interaction.desc
-    	category = interaction_category_diplomacy
+	category = interaction_category_diplomacy
 	interface_priority = 1
 	common_interaction = yes
-    	use_diplomatic_range = yes
+	use_diplomatic_range = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
+		scope:actor = {
 			is_ai = no
 			OR = {
 				has_trait = deviants_succubus
@@ -15,7 +15,7 @@ deviants_switch_body_interaction = {
 				has_trait = deviants_virgin
 			}
 		}
-		scope:recipient = { 
+		scope:recipient = {
 			is_ruler = yes
 			primary_title.tier >= tier_county
 			OR = {
@@ -34,20 +34,20 @@ deviants_switch_body_interaction = {
 deviants_add_courtier_interaction = {
 	icon = fascinate
 	desc = deviants_add_courtier_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
+	category = interaction_category_vassal
+	use_diplomatic_range = yes
 	common_interaction = no
 	cooldown = { years = 1 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		scope:actor = { 
+		scope:actor = {
 			has_trait_xp = {
 				trait = deviants_succubus
 				track = corruption
 				value >= 1
-			} 
+			}
 		}
-		scope:recipient = { 
+		scope:recipient = {
 			OR = {
 				is_courtier = yes
 				NOT = { exists = scope:recipient.liege }
@@ -66,9 +66,9 @@ deviants_add_courtier_interaction = {
 		}
 		scope:recipient = {
 			if = {
-				limit = { 
+				limit = {
 					is_female = yes
-					age >= 16 
+					age >= 16
 					scope:actor = {
 						any_courtier = {
 							has_character_modifier = deviants_prostitute
@@ -90,15 +90,15 @@ deviants_add_courtier_interaction = {
 deviants_child_interaction = {
 	icon = pregnant
 	desc = deviants_child_interaction.desc
-    	category = interaction_category_friendly
-    	use_diplomatic_range = yes
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
 	common_interaction = no
 	#cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = { trait = deviants_succubus track = corruption value >= 5 } 
+			has_trait_xp = { trait = deviants_succubus track = corruption value >= 5 }
 			have_soul_forge_trigger = yes
 		}
 		scope:recipient = {
@@ -151,8 +151,8 @@ deviants_child_interaction = {
 deviants_create_lesser_succubus_interaction = {
 	icon = lesser_devil
 	desc = deviants_create_lesser_succubus_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
+	category = interaction_category_vassal
+	use_diplomatic_range = yes
 	cooldown = { years = 10 }
 	is_shown = {
 		scope:recipient = {
@@ -162,7 +162,7 @@ deviants_create_lesser_succubus_interaction = {
 			}
 			is_female = yes
 			age >= 18
-			NOR = { 
+			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
 				has_trait = deviants_virgin
@@ -173,16 +173,16 @@ deviants_create_lesser_succubus_interaction = {
 				trait = deviants_succubus
 				track = corruption
 				value >= 25
-			} 
+			}
 			is_valid_construction_alchemy3_trigger = yes
 		}
 	}
 	on_accept = {
 		scope:recipient = {
-			add_secret = { 
+			add_secret = {
 				type = secret_deviant
 			}
-			add_secret = { 
+			add_secret = {
 				type = secret_witch
 			}
 			if = {
@@ -207,14 +207,14 @@ deviants_create_lesser_succubus_interaction = {
 deviants_create_succubus_interaction = {
 	icon = devil
 	desc = deviants_create_succubus_interaction.desc
-    	category = interaction_category_vassal
-    	use_diplomatic_range = yes
+	category = interaction_category_vassal
+	use_diplomatic_range = yes
 	cooldown = { years = 50 }
 	is_shown = {
 		scope:recipient = {
 			is_female = yes
 			age >= 18
-			NOR = { 
+			NOR = {
 				has_trait = deviants_succubus
 				has_trait = deviants_lesser_succubus
 				has_trait = deviants_virgin
@@ -225,7 +225,7 @@ deviants_create_succubus_interaction = {
 				trait = deviants_succubus
 				track = corruption
 				value >= 100
-			} 
+			}
 		}
 	}
 	is_valid = {
