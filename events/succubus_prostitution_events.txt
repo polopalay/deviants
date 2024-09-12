@@ -64,8 +64,8 @@ succubus_prostitution.9002 = {
 		name = succubus_prostitution.9002.a
 		custom_tooltip = succubus_prostitution.9002.a.tt
 		add_gold = 1
-		stresuccubus_impact = {
-			lustful = minor_stresuccubus_impact_loss
+		stress_impact = {
+			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
@@ -88,18 +88,14 @@ succubus_prostitution.9003 = {
 		name = succubus_prostitution.9003.a
 		custom_tooltip = succubus_prostitution.9003.a.tt
 		add_gold = 10
-		stresuccubus_impact = {
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
 				track = power
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 4
 			}
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
@@ -156,10 +152,6 @@ succubus_prostitution.9011 = {
 				trait = succubus
 				track = power
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 		}
 	}
@@ -255,10 +247,6 @@ succubus_prostitution.9013 = {
 				track = power
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
@@ -309,10 +297,6 @@ succubus_prostitution.9015 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
@@ -434,10 +418,6 @@ succubus_prostitution.9021 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
@@ -487,10 +467,6 @@ succubus_prostitution.9023 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
@@ -569,10 +545,6 @@ succubus_prostitution.9031 = {
 				trait = succubus
 				track = power
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
@@ -687,10 +659,6 @@ succubus_prostitution.9033 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
@@ -741,10 +709,6 @@ succubus_prostitution.9035 = {
 				trait = succubus
 				track = power
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
@@ -829,10 +793,6 @@ succubus_prostitution.9041 = {
 				track = power
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 		}
 	}
 }
@@ -856,10 +816,6 @@ succubus_prostitution.9042 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 		}
 	}
@@ -885,10 +841,6 @@ succubus_prostitution.9043 = {
 				track = power
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 		}
 	}
 }
@@ -912,10 +864,6 @@ succubus_prostitution.9044 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 		}
 	}
@@ -941,10 +889,6 @@ succubus_prostitution.9045 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 		}
 	}
 }
@@ -968,10 +912,6 @@ succubus_prostitution.9046 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 		}
 	}
@@ -1189,10 +1129,6 @@ succubus_prostitution.9203 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
@@ -1239,10 +1175,6 @@ succubus_prostitution.9205 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 		}
 		add_gold = 2
@@ -1287,10 +1219,6 @@ succubus_prostitution.9207 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 			add_character_flag = { flag = succubus_body_cum days = 10 }
@@ -1369,10 +1297,6 @@ succubus_prostitution.9221 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
 		add_gold = 1
@@ -1398,10 +1322,6 @@ succubus_prostitution.9222 = {
 				track = daring
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 		}
 		add_gold = 1
 	}
@@ -1425,10 +1345,6 @@ succubus_prostitution.9223 = {
 				trait = succubus
 				track = daring
 				value = 1
-			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
 			}
 		}
 		add_gold = 1
@@ -1531,10 +1447,6 @@ succubus_prostitution.9233 = {
 				track = power
 				value = 1
 			}
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = 2
-			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_face_cum days = 10 }
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
@@ -1565,9 +1477,9 @@ succubus_prostitution.9234 = {
 			add_character_flag = { flag = succubus_body_cum  days = 10 }
 		}
 		add_gold = 1
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_gain
 		}
 	}
 }

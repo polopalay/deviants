@@ -3,5 +3,5 @@ tags={
 	"Decisions"
 	"Events"
 }
-name="Deviants"
+name="Succubus System"
 supported_version="1.12.*"

@@ -1,6 +1,6 @@
-deavians_dealing_with_stresuccubus_interaction = {
+deavians_dealing_with_stress_interaction = {
 	icon = torment
-	desc = deavians_dealing_with_stresuccubus_interaction.desc
+	desc = deavians_dealing_with_stress_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	is_shown = {
@@ -30,7 +30,7 @@ deavians_dealing_with_stresuccubus_interaction = {
 				has_trait = contrite
 				has_trait = comfort_eater
 				has_trait = inappetetic
-				stresuccubus_level >= 1
+				stress_level >= 1
 			}
 		}
 	}
@@ -71,8 +71,8 @@ deavians_dealing_with_stresuccubus_interaction = {
 			remove_trait = contrite
 			remove_trait = comfort_eater
 			remove_trait = inappetetic
-			stresuccubus_impact = {
-				base = massive_stresuccubus_impact_loss
+			stress_impact = {
+				base = massive_stress_impact_loss
 			}
 		}
 	}

@@ -96,7 +96,7 @@ succubus_loyalty.8002 = {
 	option = {
 		name = succubus_loyalty.8002.a
 		custom_tooltip = succubus_loyalty.8002.a.tt
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:succubus_randoman_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -128,7 +128,7 @@ succubus_loyalty.8003 = {
 	option = {
 		name = succubus_loyalty.8003.a
 		custom_tooltip = succubus_loyalty.8003.a.tt
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:succubus_randoman_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -183,7 +183,7 @@ succubus_loyalty.8005 = {
 				modifier = amused_opinion
 				opinion = 20
 			}
-			buy_sex_with_effect = {
+			had_sex_with_effect = {
 				CHARACTER = scope:succubus_randoman_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
@@ -282,9 +282,9 @@ succubus_loyalty.8099 = {
 		name = succubus_loyalty.8099.b
 		custom_tooltip = succubus_loyalty.8099.b.tt
 		remove_short_term_gold = minor_gold_value
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 	}
 	option = {
@@ -297,9 +297,9 @@ succubus_loyalty.8099 = {
 				value = -5
 			}
 		}
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 	}
 }
@@ -330,9 +330,9 @@ succubus_loyalty.8100 = {
 			}
 			start_promote_lew_legend = yes
 		}
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 	}
 	option = {
@@ -347,7 +347,7 @@ succubus_loyalty.8100 = {
 				value = 1
 			}
 		}
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -383,7 +383,7 @@ succubus_loyalty.8101 = {
 			}
 			add_character_flag = { flag = succubus_asuccubus_cum days = 15 }
 		}
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -415,7 +415,7 @@ succubus_loyalty.8101 = {
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 15 }
 		}
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -436,7 +436,7 @@ succubus_loyalty.8102 = {
 	option = {
 		name = succubus_loyalty.8102.a
 		custom_tooltip = succubus_loyalty.8102.a.tt
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -447,9 +447,9 @@ succubus_loyalty.8102 = {
 	option = {
 		name = succubus_loyalty.8102.b
 		custom_tooltip = succubus_loyalty.8102.b.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -552,9 +552,9 @@ succubus_loyalty.8201 = {
 		ai_chance = { base = 50 }
 		name = succubus_loyalty.8201.a
 		custom_tooltip = succubus_loyalty.8201.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -570,9 +570,9 @@ succubus_loyalty.8201 = {
 		name = succubus_loyalty.8201.b
 		custom_tooltip = succubus_loyalty.8201.b.tt
 		trigger_event = succubus_loyalty.8202
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		add_legitimacy = medium_legitimacy_loss
 		hidden_effect = {
@@ -604,9 +604,9 @@ succubus_loyalty.8202 = {
 		ai_chance = { base = 50 }
 		name = succubus_loyalty.8202.a
 		custom_tooltip = succubus_loyalty.8202.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -634,8 +634,8 @@ succubus_loyalty.8202 = {
 	option = {
 		name = succubus_loyalty.8202.c
 		custom_tooltip = succubus_loyalty.8202.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -692,9 +692,9 @@ succubus_loyalty.8204 = {
 		name = succubus_loyalty.8204.a
 		custom_tooltip = succubus_loyalty.8204.a.tt
 		trigger_event = succubus_loyalty.8205
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 	}
 	#
@@ -933,9 +933,9 @@ succubus_loyalty.8901 = {
 		custom_tooltip = succubus_loyalty.8901.a.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {

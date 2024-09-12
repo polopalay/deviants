@@ -75,8 +75,8 @@ succubus_event.0802 = {
 		ai_chance = { base = 80 }
 		name = succubus_event.0802.a
 		custom_tooltip = succubus_event.0802.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 	}
 	#masturbate
@@ -84,8 +84,8 @@ succubus_event.0802 = {
 		ai_chance = { base = 80 }
 		name = succubus_event.0802.b
 		custom_tooltip = succubus_event.0802.b.tt
-		stresuccubus_impact = {
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -118,8 +118,8 @@ succubus_event.0810 = {
 		ai_chance = { base = 80 }
 		name = succubus_event.0810.a
 		custom_tooltip = succubus_event.0810.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 	}
 	#masturbate
@@ -127,8 +127,8 @@ succubus_event.0810 = {
 		ai_chance = { base = 80 }
 		name = succubus_event.0810.b
 		custom_tooltip = succubus_event.0810.b.tt
-		stresuccubus_impact = {
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {

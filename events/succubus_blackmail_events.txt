@@ -43,10 +43,10 @@ succubus_blackmail.1100 = {
 	option = {
 		name = succubus_blackmail.1100.a
 		custom_tooltip = succubus_blackmail.1100.a.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
-			sadistic = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
 		}
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
@@ -83,8 +83,8 @@ succubus_blackmail.1100 = {
 		custom_tooltip = succubus_blackmail.1100.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -115,7 +115,7 @@ succubus_blackmail.1110 = {
 		animation = scheme
 	}
 	immediate = {
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -202,10 +202,10 @@ succubus_blackmail.1200 = {
 	option = {
 		name = succubus_blackmail.1200.a
 		custom_tooltip = succubus_blackmail.1200.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
-			sadistic = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
 		}
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
@@ -218,10 +218,10 @@ succubus_blackmail.1200 = {
 			opinion = -10
 		}
 		scope:deviant_go_random_1 = {
-			stresuccubus_impact = {
-				base = minor_stresuccubus_impact_loss
-				lustful = minor_stresuccubus_impact_loss
-				sadistic = minor_stresuccubus_impact_loss
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
 			}
 			add_piety = minor_piety_loss
 		}
@@ -249,8 +249,8 @@ succubus_blackmail.1200 = {
 		custom_tooltip = succubus_blackmail.1200.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -287,10 +287,10 @@ succubus_blackmail.1201 = {
 	option = {
 		name = succubus_blackmail.1201.a
 		custom_tooltip = succubus_blackmail.1201.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
-			sadistic = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
 		}
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
@@ -302,10 +302,10 @@ succubus_blackmail.1201 = {
 			opinion = -20
 		}
 		scope:deviant_go_random_1 = {
-			stresuccubus_impact = {
-				base = minor_stresuccubus_impact_loss
-				lustful = minor_stresuccubus_impact_loss
-				sadistic = minor_stresuccubus_impact_loss
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+				sadistic = minor_stress_impact_loss
 			}
 		}
 		hidden_effect = {
@@ -321,10 +321,10 @@ succubus_blackmail.1201 = {
 	option = {
 		name = succubus_blackmail.1201.b
 		custom_tooltip = succubus_blackmail.1201.b.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = minor_stresuccubus_impact_gain
-			sadistic = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
 		}
 		scope:deviant_go_random_1 = {
 			add_hook = {
@@ -337,10 +337,10 @@ succubus_blackmail.1201 = {
 	option = {
 		name = succubus_blackmail.1201.c
 		custom_tooltip = succubus_blackmail.1201.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_loss
-			sadistic = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = major_stress_impact_loss
+			sadistic = medium_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -348,14 +348,14 @@ succubus_blackmail.1201 = {
 			opinion = 10
 		}
 		scope:deviant_go_random_1 = {
-			stresuccubus_impact = {
-				base = medium_stresuccubus_impact_loss
-				lustful = medium_stresuccubus_impact_loss
-				sadistic = medium_stresuccubus_impact_loss
+			stress_impact = {
+				base = medium_stress_impact_loss
+				lustful = medium_stress_impact_loss
+				sadistic = medium_stress_impact_loss
 			}
 		}
 		trigger_event = succubus_blackmail.1110
-		buy_sex_with_effect = {
+		had_sex_with_effect = {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -424,10 +424,10 @@ succubus_blackmail.1300 = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
 		}
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
-			sadistic = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -448,8 +448,8 @@ succubus_blackmail.1300 = {
 		custom_tooltip = succubus_blackmail.1300.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -575,10 +575,10 @@ succubus_blackmail.1301 = {
 		add_piety = minor_piety_loss
 		add_prestige = minor_prestige_loss
 		scope:deviant_go_random_1 = {
-			stresuccubus_impact = {
-				base = minor_stresuccubus_impact_loss
-				lustful = medium_stresuccubus_impact_loss
-				sadistic = minor_stresuccubus_impact_gain
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = medium_stress_impact_loss
+				sadistic = minor_stress_impact_gain
 			}
 			add_prestige = medium_prestige_gain
 			add_gold = minor_gold_value
@@ -688,10 +688,10 @@ succubus_blackmail.1400 = {
 			gold = massive_gold_value
 		}
 		marry_matrilineal = scope:deviant_go_random_1
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_loss
-			sadistic = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = major_stress_impact_loss
+			sadistic = medium_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -705,8 +705,8 @@ succubus_blackmail.1400 = {
 		custom_tooltip = succubus_blackmail.1400.c.tt
 		add_piety = massive_piety_loss
 		add_prestige = massive_prestige_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 	}
 	# beg to be his sex toy instead
@@ -808,9 +808,9 @@ succubus_blackmail.2000 = {
 			modifier = amused_opinion
 			opinion = 10
 		}
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = minor_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -844,8 +844,8 @@ succubus_blackmail.2000 = {
 		custom_tooltip = succubus_blackmail.2000.c.tt
 		add_piety = massive_piety_loss
 		add_prestige = massive_prestige_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -860,10 +860,10 @@ succubus_blackmail.2000 = {
 		ai_chance = { base = 80 }
 		name = succubus_blackmail.2000.d
 		custom_tooltip = succubus_blackmail.2000.d.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
-			sadistic = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
 		}
 		add_piety = medium_piety_loss
 		reverse_add_opinion = {
@@ -877,10 +877,10 @@ succubus_blackmail.2000 = {
 			opinion = -20
 		}
 		scope:deviant_go_random_1 = {
-			stresuccubus_impact = {
-				base = minor_stresuccubus_impact_loss
-				lustful = medium_stresuccubus_impact_loss
-				chaste = minor_stresuccubus_impact_gain
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = medium_stress_impact_loss
+				chaste = minor_stress_impact_gain
 			}
 		}
 		hidden_effect = {
@@ -918,10 +918,10 @@ succubus_blackmail.2010 = {
 		name = succubus_blackmail.2010.a
 		custom_tooltip = succubus_blackmail.2010.a.tt
 		add_prestige = minor_prestige_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = minor_stresuccubus_impact_loss
-			sadistic = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+			sadistic = minor_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -954,9 +954,9 @@ succubus_blackmail.2010 = {
 		name = succubus_blackmail.2010.b
 		custom_tooltip = succubus_blackmail.2010.b.tt
 		add_piety = medium_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = major_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -987,8 +987,8 @@ succubus_blackmail.2010 = {
 		name = succubus_blackmail.2010.c
 		custom_tooltip = succubus_blackmail.2010.c.tt
 		add_piety = minor_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1008,10 +1008,10 @@ succubus_blackmail.2010 = {
 		ai_chance = { base = 80 }
 		name = succubus_blackmail.2010.d
 		custom_tooltip = succubus_blackmail.2010.d.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_loss
-			sadistic = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = major_stress_impact_loss
+			sadistic = medium_stress_impact_loss
 		}
 		add_prestige = minor_prestige_loss
 		reverse_add_opinion = {
@@ -1066,8 +1066,8 @@ succubus_blackmail.2020 = {
 		name = succubus_blackmail.2020.a
 		custom_tooltip = succubus_blackmail.2020.a.tt
 		trigger_event = succubus_blackmail.1110
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1099,9 +1099,9 @@ succubus_blackmail.2020 = {
 		name = succubus_blackmail.2020.b
 		custom_tooltip = succubus_blackmail.2020.b.tt
 		add_piety = medium_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = major_stress_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1132,8 +1132,8 @@ succubus_blackmail.2020 = {
 		name = succubus_blackmail.2020.c
 		custom_tooltip = succubus_blackmail.2020.c.tt
 		add_piety = major_piety_loss
-		stresuccubus_impact = {
-			base = major_stresuccubus_impact_gain
+		stress_impact = {
+			base = major_stress_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1155,10 +1155,10 @@ succubus_blackmail.2020 = {
 		ai_chance = { base = 80 }
 		name = succubus_blackmail.2020.d
 		custom_tooltip = succubus_blackmail.2020.d.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_loss
-			sadistic = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = major_stress_impact_loss
+			sadistic = medium_stress_impact_loss
 		}
 		add_prestige = minor_prestige_loss
 		reverse_add_opinion = {
@@ -1172,10 +1172,10 @@ succubus_blackmail.2020 = {
 			opinion = 40
 		}
 		scope:deviant_go_random_1 = {
-			stresuccubus_impact = {
-				base = minor_stresuccubus_impact_loss
-				lustful = medium_stresuccubus_impact_loss
-				chaste = minor_stresuccubus_impact_gain
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = medium_stress_impact_loss
+				chaste = minor_stress_impact_gain
 			}
 		}
 		hidden_effect = {

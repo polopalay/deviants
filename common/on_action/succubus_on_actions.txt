@@ -1,7 +1,10 @@
 quarterly_playable_pulse = {
 	trigger = {
 		is_adult = yes
-		has_trait = succubus
+		OR = {
+			has_trait = succubus
+			has_trait = lesser_succubus
+		}
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no

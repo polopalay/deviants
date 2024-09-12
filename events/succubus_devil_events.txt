@@ -44,7 +44,10 @@ succubus_devil.1410 = {
 		animation = lunatic
 	}
 	trigger = {
-		has_trait = succubus
+		OR = {
+			has_trait = succubus
+			has_trait = lesser_succubus
+		}
 		is_ruler = yes
 		is_female = yes
 		age >= 18
@@ -98,9 +101,9 @@ succubus_devil.1410 = {
 		ai_chance = { base = 0 }
 		custom_tooltip = succubus_devil.1410.e.tt
 		add_piety = minor_piety_gain
-		stresuccubus_impact = {
-			base = major_stresuccubus_impact_gain
-			lustful = major_stresuccubus_impact_gain
+		stress_impact = {
+			base = major_stress_impact_gain
+			lustful = major_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -131,6 +134,10 @@ succubus_devil.1411 = {
 				track = loyalty
 				value = 2
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
+			}
 		}
 	}
 }
@@ -147,9 +154,9 @@ succubus_devil.1412 = {
 	option = {
 		name = succubus_devil.1412.a
 		custom_tooltip = succubus_devil.1412.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = massive_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = massive_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -161,6 +168,10 @@ succubus_devil.1412 = {
 				trait = succubus
 				track = corruption
 				value = 1
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_pussy_cum months = 1 }
 		}
@@ -179,8 +190,8 @@ succubus_devil.1413 = {
 	option = {
 		name = succubus_devil.1413.a
 		custom_tooltip = succubus_devil.1413.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -192,6 +203,10 @@ succubus_devil.1413 = {
 				trait = succubus
 				track = daring
 				value = 5
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 		}
@@ -237,9 +252,9 @@ succubus_devil.1415 = {
 	option = {
 		name = succubus_devil.1415.a
 		custom_tooltip = succubus_devil.1415.a.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		add_piety = minor_piety_loss
 		add_character_modifier = {
@@ -261,6 +276,10 @@ succubus_devil.1415 = {
 				trait = succubus
 				track = power
 				value = 1
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 		}
 	}
@@ -315,9 +334,9 @@ succubus_devil.1417 = {
 	option = {
 		name = succubus_devil.1417.a
 		custom_tooltip = succubus_devil.1417.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -328,6 +347,10 @@ succubus_devil.1417 = {
 				trait = succubus
 				track = power
 				value = 2
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 		}
 	}
@@ -413,9 +436,9 @@ succubus_devil.1418 = {
 		name = succubus_devil.1418.b
 		custom_tooltip = succubus_devil.1418.b.tt
 		add_gold = 2
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -426,6 +449,10 @@ succubus_devil.1418 = {
 				trait = succubus
 				track = daring
 				value = 2
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 		}
 	}
@@ -444,9 +471,9 @@ succubus_devil.1419 = {
 	option = {
 		name = succubus_devil.1419.a
 		custom_tooltip = succubus_devil.1419.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			random_list = {
@@ -479,9 +506,9 @@ succubus_devil.1420 = {
 		name = succubus_devil.1420.a
 		custom_tooltip = succubus_devil.1420.a.tt
 		add_gold = minor_gold_value
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -492,6 +519,10 @@ succubus_devil.1420 = {
 				trait = succubus
 				track = corruption
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
 			}
 			add_character_flag = { flag = succubus_face_cum months = 1 }
 		}
@@ -511,9 +542,9 @@ succubus_devil.1421 = {
 	option = {
 		name = succubus_devil.1421.a
 		custom_tooltip = succubus_devil.1421.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -536,9 +567,9 @@ succubus_devil.1422 = {
 		name = succubus_devil.1422.a
 		custom_tooltip = succubus_devil.1422.a.tt
 		add_gold = medium_gold_value
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -549,6 +580,10 @@ succubus_devil.1422 = {
 				trait = succubus
 				track = corruption
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
 			}
 			add_character_flag = { flag = succubus_face_cum months = 1 }
 		}
@@ -569,9 +604,9 @@ succubus_devil.1423 = {
 		name = succubus_devil.1423.a
 		custom_tooltip = succubus_devil.1423.a.tt
 		add_gold = 10
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -594,15 +629,19 @@ succubus_devil.5100 = {
 		name = succubus_devil.5100.a
 		ai_chance = { base = 10 }
 		custom_tooltip = succubus_devil.5100.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
 				track = power
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_body_cum days = 20 }
 			trigger_event = succubus_devil.5500
@@ -622,9 +661,9 @@ succubus_devil.5100 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5100.c
 		custom_tooltip = succubus_devil.5100.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -674,9 +713,9 @@ succubus_devil.5110 = {
 		name = succubus_devil.5110.a
 		custom_tooltip = succubus_devil.5110.a.tt
 		add_gold = tiny_gold_value
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -687,6 +726,10 @@ succubus_devil.5110 = {
 				trait = succubus
 				track = power
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_face_cum days = 20 }
 			trigger_event = succubus_devil.5501
@@ -703,6 +746,10 @@ succubus_devil.5110 = {
 				track = daring
 				value = 4
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
+			}
 			trigger_event = succubus_devil.5502
 		}
 	}
@@ -711,15 +758,19 @@ succubus_devil.5110 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5110.c
 		custom_tooltip = succubus_devil.5110.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
 				track = corruption
 				value = -1
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 		}
 		trigger_event = succubus_devil.5111
@@ -762,9 +813,9 @@ succubus_devil.5120 = {
 		name = succubus_devil.5120.a
 		custom_tooltip = succubus_devil.5120.a.tt
 		ai_chance = { base = 10 }
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -775,6 +826,10 @@ succubus_devil.5120 = {
 				trait = succubus
 				track = daring
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			trigger_event = succubus_devil.5500
 		}
@@ -790,6 +845,10 @@ succubus_devil.5120 = {
 				track = power
 				value = 4
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
+			}
 			trigger_event = succubus_devil.5502
 		}
 	}
@@ -798,9 +857,9 @@ succubus_devil.5120 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5120.c
 		custom_tooltip = succubus_devil.5120.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -849,9 +908,9 @@ succubus_devil.5130 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5130.a
 		custom_tooltip = succubus_devil.5130.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -862,6 +921,10 @@ succubus_devil.5130 = {
 				trait = succubus
 				track = power
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_face_cum months = 1 }
 			trigger_event = succubus_devil.5501
@@ -881,9 +944,9 @@ succubus_devil.5130 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5130.c
 		custom_tooltip = succubus_devil.5130.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -933,9 +996,9 @@ succubus_devil.5140 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5140.a
 		custom_tooltip = succubus_devil.5140.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -946,6 +1009,10 @@ succubus_devil.5140 = {
 				trait = succubus
 				track = daring
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_face_cum months = 1 }
 			trigger_event = succubus_devil.5501
@@ -963,9 +1030,9 @@ succubus_devil.5140 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5140.c
 		custom_tooltip = succubus_devil.5140.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1015,15 +1082,19 @@ succubus_devil.5150 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5150.a
 		custom_tooltip = succubus_devil.5150.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
 				track = corruption
 				value = 1
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_face_cum months = 1 }
 		}
@@ -1043,9 +1114,9 @@ succubus_devil.5150 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5150.c
 		custom_tooltip = succubus_devil.5150.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1098,15 +1169,19 @@ succubus_devil.5160 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5160.a
 		custom_tooltip = succubus_devil.5160.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
 				track = corruption
 				value = 1
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 			add_character_flag = { flag = succubus_body_cum months = 1 }
 		}
@@ -1126,9 +1201,9 @@ succubus_devil.5160 = {
 		ai_chance = { base = 10 }
 		name = succubus_devil.5160.c
 		custom_tooltip = succubus_devil.5160.c.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1176,9 +1251,9 @@ succubus_devil.5300 = {
 	option = {
 		name = succubus_devil.5300.a
 		custom_tooltip = succubus_devil.5300.a.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_loss
-			lustful = minor_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1190,6 +1265,10 @@ succubus_devil.5300 = {
 				trait = succubus
 				track = daring
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
 			}
 			add_character_flag = { flag = succubus_body_cum months = 1 }
 			add_character_flag = { flag = succubus_face_cum months = 1 }
@@ -1211,9 +1290,9 @@ succubus_devil.5301 = {
 	option = {
 		name = succubus_devil.5301.a
 		custom_tooltip = succubus_devil.5301.a.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_loss
-			lustful = minor_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -1229,6 +1308,10 @@ succubus_devil.5301 = {
 				trait = succubus
 				track = daring
 				value = 4
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
 			}
 		}
 		trigger_event = succubus_devil.5501
@@ -1249,9 +1332,9 @@ succubus_devil.5320 = {
 	option = {
 		name = succubus_devil.5320.a
 		custom_tooltip = succubus_devil.5320.a.tt
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_loss
-			lustful = minor_stresuccubus_impact_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1263,6 +1346,10 @@ succubus_devil.5320 = {
 				trait = succubus
 				track = daring
 				value = 5
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 25
 			}
 			add_character_flag = { flag = succubus_pussy_cum months = 1 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
@@ -1284,9 +1371,9 @@ succubus_devil.5321 = {
 	option = {
 		name = succubus_devil.5321.a
 		custom_tooltip = succubus_devil.5321.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		add_character_modifier = {
 			modifier = succubus_fuckedsilly
@@ -1341,8 +1428,8 @@ succubus_devil.5500 = {
 		custom_tooltip = succubus_devil.5500.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
 		}
 	}
 	#
@@ -1416,8 +1503,8 @@ succubus_devil.5501 = {
 		custom_tooltip = succubus_devil.5501.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
 		}
 	}
 	#
@@ -1497,8 +1584,8 @@ succubus_devil.5502 = {
 		custom_tooltip = succubus_devil.5502.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
 		}
 	}
 	#
@@ -1560,8 +1647,8 @@ succubus_devil.5700 = {
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
-				stresuccubus_impact = {
-					base = medium_stresuccubus_impact_gain
+				stress_impact = {
+					base = medium_stress_impact_gain
 				}
 			}
 		}
@@ -1630,8 +1717,8 @@ succubus_devil.5701 = {
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
-				stresuccubus_impact = {
-					base = medium_stresuccubus_impact_gain
+				stress_impact = {
+					base = medium_stress_impact_gain
 				}
 			}
 		}
@@ -1668,8 +1755,8 @@ succubus_devil.5701 = {
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
-				stresuccubus_impact = {
-					base = medium_stresuccubus_impact_gain
+				stress_impact = {
+					base = medium_stress_impact_gain
 				}
 			}
 		}
@@ -1731,8 +1818,8 @@ succubus_devil.5702 = {
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
-				stresuccubus_impact = {
-					base = medium_stresuccubus_impact_gain
+				stress_impact = {
+					base = medium_stress_impact_gain
 				}
 			}
 		}
@@ -1769,8 +1856,8 @@ succubus_devil.5702 = {
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
-				stresuccubus_impact = {
-					base = medium_stresuccubus_impact_gain
+				stress_impact = {
+					base = medium_stress_impact_gain
 				}
 			}
 		}
@@ -1853,7 +1940,10 @@ succubus_devil.1300 = {
 		outfit_tags = { no_clothes }
 	}
 	trigger = {
-		has_trait = succubus
+		OR = {
+			has_trait = succubus
+			has_trait = lesser_succubus
+		}
 		is_ruler = yes
 		is_female = yes
 		age >= 18
@@ -1868,6 +1958,10 @@ succubus_devil.1300 = {
 				trait = succubus
 				track = power
 				value = 5
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 		}
 		trigger_event = succubus_devil.1303
@@ -1889,8 +1983,8 @@ succubus_devil.1300 = {
 				custom_tooltip = {
 					text = succubus_devil.1300.bwin.tt
 				}
-				stresuccubus_impact = {
-					base = medium_stresuccubus_impact_loss
+				stress_impact = {
+					base = medium_stress_impact_loss
 				}
 				trigger_event = succubus_devil.1301
 			}
@@ -1904,8 +1998,8 @@ succubus_devil.1300 = {
 				custom_tooltip = {
 					text = succubus_devil.1300.blose.tt
 				}
-				stresuccubus_impact = {
-					base = massive_stresuccubus_impact_gain
+				stress_impact = {
+					base = massive_stress_impact_gain
 				}
 				hidden_effect = {
 					add_trait_xp = {
@@ -1923,8 +2017,8 @@ succubus_devil.1300 = {
 		name = succubus_devil.1300.c
 		custom_tooltip = succubus_devil.1300.c.tt
 		add_piety = minor_piety_gain
-		stresuccubus_impact = {
-			base = minor_stresuccubus_impact_gain
+		stress_impact = {
+			base = minor_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1950,14 +2044,18 @@ succubus_devil.1301 = {
 	option = {
 		name = succubus_devil.1301.a
 		custom_tooltip = succubus_devil.1301.a.tt
-		stresuccubus_impact = {
-			base = massive_stresuccubus_impact_loss
+		stress_impact = {
+			base = massive_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
 				track = power
 				value = 20
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 40
 			}
 		}
 	}
@@ -2006,8 +2104,8 @@ succubus_devil.1302 = {
 	option = {
 		name = succubus_devil.1302.b
 		custom_tooltip = succubus_devil.1302.b.tt
-		stresuccubus_impact = {
-			base = massive_stresuccubus_impact_gain
+		stress_impact = {
+			base = massive_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -2099,6 +2197,10 @@ succubus_devil.1310 = {
 				track = power
 				value = 10
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
+			}
 		}
 		trigger_event = succubus_devil.1315
 	}
@@ -2154,8 +2256,8 @@ succubus_devil.1315 = {
 	option = {
 		name = succubus_devil.1315.a
 		custom_tooltip = succubus_devil.1315.a.tt
-		stresuccubus_impact = {
-			lustful = medium_stresuccubus_impact_gain
+		stress_impact = {
+			lustful = medium_stress_impact_gain
 		}
 	}
 	# keep going, the man seems docile enough to let you cum... but he will definately tell others about it
@@ -2164,8 +2266,8 @@ succubus_devil.1315 = {
 		name = succubus_devil.1315.b
 		custom_tooltip = succubus_devil.1315.b.tt
 		add_piety = minor_piety_loss
-		stresuccubus_impact = {
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -2177,6 +2279,10 @@ succubus_devil.1315 = {
 				trait = succubus
 				track = power
 				value = 10
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
 			}
 		}
 	}
@@ -2229,6 +2335,10 @@ succubus_devil.1319 = {
 				track = corruption
 				value = 1
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
+			}
 		}
 	}
 	# it is, what it is
@@ -2240,7 +2350,7 @@ succubus_devil.1319 = {
 			chance = 50
 			modifier = { add = 50 has_character_flag = succubus_marking_5 }
 			modifier = { add = -25 have_devil_nicknames_trigger = yes }
-			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual } }
+			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual NOT = { has_trait = succubus } } }
 			random_list = {
 				20 = {
 					modifier = { add = 40 has_character_flag = succubus_marking_1 }
@@ -2271,7 +2381,7 @@ succubus_devil.1319 = {
 		random = {
 			chance = 10
 			modifier = { add = 15  has_character_flag = succubus_marking_6 }
-			modifier = { add = -100 OR = { 	has_personal_legend_seed = witchcraft promoted_legend.legend_type = legend_type:witchcraft } }
+			modifier = { add = -100 OR = { 	has_personal_legend_seed = witchcraft promoted_legend.legend_type = legend_type:witchcraft NOT = { has_trait = succubus } } }
 
 			create_legend_seed = {
 				type = witchcraft
@@ -2292,8 +2402,8 @@ succubus_devil.1319 = {
 	option = {
 		name = succubus_devil.1319.b
 		custom_tooltip = succubus_devil.1319.b.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 		trigger_event = succubus_event.0800
 	}
@@ -2337,9 +2447,9 @@ succubus_devil.1320 = {
 		ai_chance = { base = 100 }
 		name = succubus_devil.1320.a
 		custom_tooltip = succubus_devil.1320.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
@@ -2358,6 +2468,10 @@ succubus_devil.1320 = {
 				track = power
 				value = 5
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
+			}
 		}
 		trigger_event = succubus_devil.1325
 	}
@@ -2370,6 +2484,10 @@ succubus_devil.1320 = {
 				trait = succubus
 				track = power
 				value = 1
+			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 10
 			}
 		}
 	}
@@ -2405,9 +2523,9 @@ succubus_devil.1325 = {
 		ai_chance = { base = 100 }
 		name = succubus_devil.1325.a
 		custom_tooltip = succubus_devil.1325.a.tt
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_loss
-			lustful = medium_stresuccubus_impact_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -2425,6 +2543,10 @@ succubus_devil.1325 = {
 				track = corruption
 				value = 5
 			}
+			add_trait_xp = {
+				trait = lesser_succubus
+				value = 20
+			}
 		}
 	}
 	# resist
@@ -2432,8 +2554,8 @@ succubus_devil.1325 = {
 		name = succubus_devil.1325.b
 		custom_tooltip = succubus_devil.1325.b.tt
 		add_piety = minor_piety_loss
-		stresuccubus_impact = {
-			base = medium_stresuccubus_impact_gain
+		stress_impact = {
+			base = medium_stress_impact_gain
 		}
 	}
 	# lay still...
