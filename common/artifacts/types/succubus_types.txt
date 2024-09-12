@@ -1,4 +1,4 @@
-magic_creation = {
+succubus_magic_creation = {
 	slot = miscellaneous
 	can_reforge = yes
 }

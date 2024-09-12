@@ -1,9 +1,9 @@
-namespace = deviants_courtier
+namespace = succubus_courtier
 
 #1304 vassal wants to bath with you
-deviants_courtier.1304 = {
+succubus_courtier.1304 = {
 	type = character_event
-	title = deviants_courtier.1304.t
+	title = succubus_courtier.1304.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -13,7 +13,7 @@ deviants_courtier.1304 = {
 						is_female = yes
 					}
 				}
-				desc = deviants_courtier.1304.a.desc
+				desc = succubus_courtier.1304.a.desc
 			}
 			triggered_desc = {
 				trigger = {
@@ -22,7 +22,7 @@ deviants_courtier.1304 = {
 						is_female = no
 					}
 				}
-				desc = deviants_courtier.1304.b.desc
+				desc = succubus_courtier.1304.b.desc
 			}
 			triggered_desc = {
 				trigger = {
@@ -31,13 +31,13 @@ deviants_courtier.1304 = {
 						is_female = yes
 					}
 				}
-				desc = deviants_courtier.1304.c.desc
+				desc = succubus_courtier.1304.c.desc
 			}
 			triggered_desc = {
 				trigger = {
 					is_ruler = yes
 				}
-				desc = deviants_courtier.1304.d.desc
+				desc = succubus_courtier.1304.d.desc
 			}
 		}
 	}
@@ -61,12 +61,12 @@ deviants_courtier.1304 = {
 	}
 	# agree to a normal bath
 	option = {
-		name = deviants_courtier.1304.a
-		custom_tooltip = deviants_courtier.1304.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lustful = minor_stress_impact_gain
-			chaste = medium_stress_impact_gain
+		name = succubus_courtier.1304.a
+		custom_tooltip = succubus_courtier.1304.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
+			lustful = minor_stresuccubus_impact_gain
+			chaste = medium_stresuccubus_impact_gain
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -74,9 +74,9 @@ deviants_courtier.1304 = {
 				modifier = grateful_opinion
 				opinion = 20
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
 			}
 		}
 	}
@@ -92,9 +92,9 @@ deviants_courtier.1304 = {
 		scope:deviant_go_random_1 = {
 			start_promote_lew_legend = yes
 		}
-		name = deviants_courtier.1304.b
-		custom_tooltip = deviants_courtier.1304.b.tt
-		trigger_event = deviants_courtier.1360
+		name = succubus_courtier.1304.b
+		custom_tooltip = succubus_courtier.1304.b.tt
+		trigger_event = succubus_courtier.1360
 	}
 	# agree to bath if you female and they male
 	option = {
@@ -108,17 +108,17 @@ deviants_courtier.1304 = {
 		scope:deviant_go_random_1 = {
 			start_promote_lew_legend = yes
 		}
-		name = deviants_courtier.1304.c
-		custom_tooltip = deviants_courtier.1304.c.tt
-		trigger_event = deviants_courtier.1360
+		name = succubus_courtier.1304.c
+		custom_tooltip = succubus_courtier.1304.c.tt
+		trigger_event = succubus_courtier.1360
 	}
 	# refuse
 	option = {
-		name = deviants_courtier.1304.e
-		custom_tooltip = deviants_courtier.1304.e.tt
+		name = succubus_courtier.1304.e
+		custom_tooltip = succubus_courtier.1304.e.tt
 		add_piety = miniscule_piety_gain
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -130,9 +130,9 @@ deviants_courtier.1304 = {
 	}
 }
 #1360 if agree, she sitting very close...
-deviants_courtier.1360 = {
+succubus_courtier.1360 = {
 	type = character_event
-	title = deviants_courtier.1360.t
+	title = succubus_courtier.1360.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -142,7 +142,7 @@ deviants_courtier.1360 = {
 						is_female = yes
 					}
 				}
-				desc = deviants_courtier.1360.a.desc
+				desc = succubus_courtier.1360.a.desc
 			}
 			triggered_desc = {
 				trigger = {
@@ -151,7 +151,7 @@ deviants_courtier.1360 = {
 						is_female = no
 					}
 				}
-				desc = deviants_courtier.1360.b.desc
+				desc = succubus_courtier.1360.b.desc
 			}
 			triggered_desc = {
 				trigger = {
@@ -160,13 +160,13 @@ deviants_courtier.1360 = {
 						is_female = yes
 					}
 				}
-				desc = deviants_courtier.1360.c.desc
+				desc = succubus_courtier.1360.c.desc
 			}
 			triggered_desc = {
 				trigger = {
 					is_ruler = yes
 				}
-				desc = deviants_courtier.1360.d.desc
+				desc = succubus_courtier.1360.d.desc
 			}
 		}
 	}
@@ -191,9 +191,9 @@ deviants_courtier.1360 = {
 				is_female = yes
 			}
 		}
-		name = deviants_courtier.1360.a
-		custom_tooltip = deviants_courtier.1360.a.tt
-		trigger_event = deviants_courtier.1361
+		name = succubus_courtier.1360.a
+		custom_tooltip = succubus_courtier.1360.a.tt
+		trigger_event = succubus_courtier.1361
 	}
 	# spread legs
 	option = {
@@ -204,17 +204,17 @@ deviants_courtier.1360 = {
 				is_female = no
 			}
 		}
-		name = deviants_courtier.1360.b
-		custom_tooltip = deviants_courtier.1360.b.tt
-		trigger_event = deviants_courtier.1370
+		name = succubus_courtier.1360.b
+		custom_tooltip = succubus_courtier.1360.b.tt
+		trigger_event = succubus_courtier.1370
 	}
 	# just a normal path...
 	option = {
-		name = deviants_courtier.1360.d
-		custom_tooltip = deviants_courtier.1360.d.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lustful = minor_stress_impact_gain
+		name = succubus_courtier.1360.d
+		custom_tooltip = succubus_courtier.1360.d.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
+			lustful = minor_stresuccubus_impact_gain
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -226,10 +226,10 @@ deviants_courtier.1360 = {
 	}
 }
 #1361 if let her serve
-deviants_courtier.1361 = {
+succubus_courtier.1361 = {
 	type = character_event
-	title = deviants_courtier.1361.t
-	desc = deviants_courtier.1361.a.desc
+	title = succubus_courtier.1361.t
+	desc = succubus_courtier.1361.a.desc
 	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
@@ -244,11 +244,11 @@ deviants_courtier.1361 = {
 	}
 	# just pledge
 	option = {
-		name = deviants_courtier.1361.a
-		custom_tooltip = deviants_courtier.1361.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.1361.a
+		custom_tooltip = succubus_courtier.1361.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -256,17 +256,17 @@ deviants_courtier.1361 = {
 				modifier = grateful_opinion
 				opinion = 20
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -275,22 +275,22 @@ deviants_courtier.1361 = {
 	# if lustful
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.1361.b
-		custom_tooltip = deviants_courtier.1361.b.tt
-		trigger_event = deviants_courtier.1362
+		name = succubus_courtier.1361.b
+		custom_tooltip = succubus_courtier.1361.b.tt
+		trigger_event = succubus_courtier.1362
 	}
 	# if sadistic, time to take control
 	option = {
-		name = deviants_courtier.1361.c
-		custom_tooltip = deviants_courtier.1361.c.tt
-		trigger_event = deviants_courtier.1363
+		name = succubus_courtier.1361.c
+		custom_tooltip = succubus_courtier.1361.c.tt
+		trigger_event = succubus_courtier.1363
 	}
 }
 #1362 if lustful, I know why you here, time for 69...
-deviants_courtier.1362 = {
+succubus_courtier.1362 = {
 	type = character_event
-	title = deviants_courtier.1362.t
-	desc = deviants_courtier.1362.a.desc
+	title = succubus_courtier.1362.t
+	desc = succubus_courtier.1362.a.desc
 	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
@@ -304,11 +304,11 @@ deviants_courtier.1362 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = deviants_courtier.1362.a
-		custom_tooltip = deviants_courtier.1362.a.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.1362.a
+		custom_tooltip = succubus_courtier.1362.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -316,17 +316,17 @@ deviants_courtier.1362 = {
 				modifier = grateful_opinion
 				opinion = 40
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -335,10 +335,10 @@ deviants_courtier.1362 = {
 }
 
 #1363 if sadistic, I will wash your pussy, with fist...
-deviants_courtier.1363 = {
+succubus_courtier.1363 = {
 	type = character_event
-	title = deviants_courtier.1363.t
-	desc = deviants_courtier.1363.a.desc
+	title = succubus_courtier.1363.t
+	desc = succubus_courtier.1363.a.desc
 	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
@@ -352,11 +352,11 @@ deviants_courtier.1363 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = deviants_courtier.1363.a
-		custom_tooltip = deviants_courtier.1363.a.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
-			sadistic = medium_stress_impact_loss
+		name = succubus_courtier.1363.a
+		custom_tooltip = succubus_courtier.1363.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -364,17 +364,17 @@ deviants_courtier.1363 = {
 				modifier = confusion_opinion
 				opinion = 40
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -383,10 +383,10 @@ deviants_courtier.1363 = {
 }
 
 #1370 if female, spread your legs, let him serve
-deviants_courtier.1370 = {
+succubus_courtier.1370 = {
 	type = character_event
-	title = deviants_courtier.1370.t
-	desc = deviants_courtier.1370.a.desc
+	title = succubus_courtier.1370.t
+	desc = succubus_courtier.1370.a.desc
 	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
@@ -401,11 +401,11 @@ deviants_courtier.1370 = {
 	}
 	# pledge your felthy to me
 	option = {
-		name = deviants_courtier.1370.a
-		custom_tooltip = deviants_courtier.1370.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.1370.a
+		custom_tooltip = succubus_courtier.1370.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -413,17 +413,17 @@ deviants_courtier.1370 = {
 				modifier = grateful_opinion
 				opinion = 20
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -432,23 +432,23 @@ deviants_courtier.1370 = {
 	# if lustful, I know why you here,
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.1370.b
-		custom_tooltip = deviants_courtier.1370.b.tt
-		trigger_event = deviants_courtier.1371
+		name = succubus_courtier.1370.b
+		custom_tooltip = succubus_courtier.1370.b.tt
+		trigger_event = succubus_courtier.1371
 	}
 	# if sadistic, time to take control
 	option = {
-		name = deviants_courtier.1370.c
-		custom_tooltip = deviants_courtier.1370.c.tt
-		trigger_event = deviants_courtier.1372
+		name = succubus_courtier.1370.c
+		custom_tooltip = succubus_courtier.1370.c.tt
+		trigger_event = succubus_courtier.1372
 	}
 }
 
 #1371 time for a pussy job
-deviants_courtier.1371 = {
+succubus_courtier.1371 = {
 	type = character_event
-	title = deviants_courtier.1371.t
-	desc = deviants_courtier.1371.a.desc
+	title = succubus_courtier.1371.t
+	desc = succubus_courtier.1371.a.desc
 	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
@@ -463,11 +463,11 @@ deviants_courtier.1371 = {
 	}
 	#
 	option = {
-		name = deviants_courtier.1371.a
-		custom_tooltip = deviants_courtier.1371.a.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.1371.a
+		custom_tooltip = succubus_courtier.1371.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -475,30 +475,30 @@ deviants_courtier.1371 = {
 				modifier = grateful_opinion
 				opinion = 40
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_body_cum days = 10 }
+			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
 	}
 	# slip it in at last moment
 	option = {
-		name = deviants_courtier.1371.b
-		custom_tooltip = deviants_courtier.1371.b.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.1371.b
+		custom_tooltip = succubus_courtier.1371.b.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		buy_sex_with_effect = {
 			CHARACTER = scope:deviant_go_random_1
@@ -510,60 +510,60 @@ deviants_courtier.1371 = {
 				modifier = grateful_opinion
 				opinion = 60
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
 	}
 	# make him pay before cum
 	option = {
-		name = deviants_courtier.1371.c
-		custom_tooltip = deviants_courtier.1371.c.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.1371.c
+		custom_tooltip = succubus_courtier.1371.c.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			pay_short_term_gold = {
 				target = root
 				gold = minor_gold_value
 			}
-			stress_impact = {
-				base = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 		}
 	}
 }
 #1372 if sadistic, time for a footjob, I will step on your cock
-deviants_courtier.1372 = {
+succubus_courtier.1372 = {
 	type = character_event
-	title = deviants_courtier.1372.t
-	desc = deviants_courtier.1372.a.desc
+	title = succubus_courtier.1372.t
+	desc = succubus_courtier.1372.a.desc
 	theme = friendly
 	override_background = { reference = bath_house }
 	right_portrait = {
@@ -578,11 +578,11 @@ deviants_courtier.1372 = {
 	}
 	# just tease
 	option = {
-		name = deviants_courtier.1372.a
-		custom_tooltip = deviants_courtier.1372.a.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
-			sadistic = medium_stress_impact_loss
+		name = succubus_courtier.1372.a
+		custom_tooltip = succubus_courtier.1372.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_loss
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -590,17 +590,17 @@ deviants_courtier.1372 = {
 				modifier = grateful_opinion
 				opinion = 20
 			}
-			stress_impact = {
-				base = minor_stress_impact_gain
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_gain
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_gain
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_gain
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -608,12 +608,12 @@ deviants_courtier.1372 = {
 	}
 	#let him cum
 	option = {
-		name = deviants_courtier.1372.b
-		custom_tooltip = deviants_courtier.1372.b.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lustful = medium_stress_impact_loss
-			sadistic = medium_stress_impact_gain
+		name = succubus_courtier.1372.b
+		custom_tooltip = succubus_courtier.1372.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_gain
 		}
 		scope:deviant_go_random_1 = {
 			add_opinion = {
@@ -621,30 +621,30 @@ deviants_courtier.1372 = {
 				modifier = grateful_opinion
 				opinion = 40
 			}
-			stress_impact = {
-				base = medium_stress_impact_loss
-				sadistic = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				chaste = medium_stress_impact_gain
-				shy = medium_stress_impact_gain
+			stresuccubus_impact = {
+				base = medium_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				chaste = medium_stresuccubus_impact_gain
+				shy = medium_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_face_cum days = 10 }
+			add_character_flag = { flag = succubus_face_cum days = 10 }
 		}
 	}
 }
 
 #1440 urge to expose
-deviants_courtier.1440 = {
+succubus_courtier.1440 = {
 	type = character_event
-	title = deviants_courtier.1440.t
-	desc = deviants_courtier.1440.a.desc
+	title = succubus_courtier.1440.t
+	desc = succubus_courtier.1440.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -655,15 +655,14 @@ deviants_courtier.1440 = {
 		is_female = yes
 		age >= 18
 		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-		has_character_modifier = deviants_prostitute
 	}
 	option = {
-		name = deviants_courtier.1440.a
-		custom_tooltip = deviants_courtier.1440.a.tt
+		name = succubus_courtier.1440.a
+		custom_tooltip = succubus_courtier.1440.a.tt
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = deviants_courtier.1441 }
-				10 = { trigger_event = deviants_courtier.1442 }
+				10 = { trigger_event = succubus_courtier.1441 }
+				10 = { trigger_event = succubus_courtier.1442 }
 			}
 		}
 		every_councillor = {
@@ -672,94 +671,94 @@ deviants_courtier.1440 = {
 		}
 	}
 	option = {
-		name = deviants_courtier.1400.b
-		custom_tooltip = deviants_courtier.1400.b.tt
-		stress_impact = {
-			base = major_stress_impact_gain
+		name = succubus_courtier.1400.b
+		custom_tooltip = succubus_courtier.1400.b.tt
+		stresuccubus_impact = {
+			base = major_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = -1
 			}
 			add_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = -2
 			}
 		}
 	}
 }
 
-deviants_courtier.1441 = {
+succubus_courtier.1441 = {
 	type = character_event
-	title = deviants_courtier.1441.t
-	desc = deviants_courtier.1441.a.desc
+	title = succubus_courtier.1441.t
+	desc = succubus_courtier.1441.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = personality_greedy
 	}
 	option = {
-		name = deviants_courtier.1441.a
-		custom_tooltip = deviants_courtier.1441.a.tt
+		name = succubus_courtier.1441.a
+		custom_tooltip = succubus_courtier.1441.a.tt
 		add_piety = minor_piety_loss
-		stress_impact = {
-			base = minor_stress_impact_gain
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = 2
 			}
 		}
 	}
 }
 
-deviants_courtier.1442 = {
+succubus_courtier.1442 = {
 	type = character_event
-	title = deviants_courtier.1442.t
-	desc = deviants_courtier.1442.a.desc
+	title = succubus_courtier.1442.t
+	desc = succubus_courtier.1442.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
 		animation = personality_greedy
 	}
 	option = {
-		name = deviants_courtier.1442.a
-		custom_tooltip = deviants_courtier.1442.a.tt
+		name = succubus_courtier.1442.a
+		custom_tooltip = succubus_courtier.1442.a.tt
 		add_piety = medium_piety_loss
-		stress_impact = {
-			base = minor_stress_impact_loss
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = 2
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
 	}
 }
 
 #1460 after a heated debate, as you sit naked on your throne, some vassls/advisors just surround you on your throne, demand to fuck their whore ruler... to adress their issues to your holes... as you made them hard...
-deviants_courtier.1460 = {
+succubus_courtier.1460 = {
 	type = character_event
-	title = deviants_courtier.1460.t
-	desc = deviants_courtier.1460.a.desc
+	title = succubus_courtier.1460.t
+	desc = succubus_courtier.1460.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -788,19 +787,19 @@ deviants_courtier.1460 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.1460.a
-		custom_tooltip = deviants_courtier.1460.a.tt
+		name = succubus_courtier.1460.a
+		custom_tooltip = succubus_courtier.1460.a.tt
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = deviants_courtier.1461 }
-				10 = { trigger_event = deviants_courtier.1462 }
+				10 = { trigger_event = succubus_courtier.1461 }
+				10 = { trigger_event = succubus_courtier.1462 }
 			}
 		}
 	}
 	option = {
 		ai_chance = { base = 50 }
-		name = deviants_courtier.1460.b
-		custom_tooltip = deviants_courtier.1460.b.tt
+		name = succubus_courtier.1460.b
+		custom_tooltip = succubus_courtier.1460.b.tt
 		every_court_position_holder = {
 			limit = { is_adult = yes is_female = no }
 			add_opinion = {
@@ -831,25 +830,25 @@ deviants_courtier.1460 = {
 		}
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = deviants_courtier.1461 }
-				10 = { trigger_event = deviants_courtier.1462 }
+				10 = { trigger_event = succubus_courtier.1461 }
+				10 = { trigger_event = succubus_courtier.1462 }
 			}
 		}
 	}
 	option = {
-		name = deviants_courtier.1460.x
-		custom_tooltip = deviants_courtier.1460.x.tt
-		stress_impact = {
-			base = major_stress_impact_loss
+		name = succubus_courtier.1460.x
+		custom_tooltip = succubus_courtier.1460.x.tt
+		stresuccubus_impact = {
+			base = major_stresuccubus_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = -1
 			}
 			add_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = -2
 			}
 		}
@@ -857,10 +856,10 @@ deviants_courtier.1460 = {
 }
 
 #1461 side fuck while they keep debating, on the throne
-deviants_courtier.1461 = {
+succubus_courtier.1461 = {
 	type = character_event
-	title = deviants_courtier.1461.t
-	desc = deviants_courtier.1461.a.desc
+	title = succubus_courtier.1461.t
+	desc = succubus_courtier.1461.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -871,10 +870,10 @@ deviants_courtier.1461 = {
 		animation = personality_cynical
 	}
 	option = {
-		name = deviants_courtier.1461.a
-		custom_tooltip = deviants_courtier.1461.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.1461.a
+		custom_tooltip = succubus_courtier.1461.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		every_court_position_holder = {
 			limit = { is_adult = yes is_female = no }
@@ -894,34 +893,34 @@ deviants_courtier.1461 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = 2
 			}
 			buy_sex_with_effect = {
 				CHARACTER = scope:deviant_go_random_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
 	}
 }
 
 #1462 footstool while being fucked
-deviants_courtier.1462 = {
+succubus_courtier.1462 = {
 	type = character_event
-	title = deviants_courtier.1462.t
-	desc = deviants_courtier.1462.a.desc
+	title = succubus_courtier.1462.t
+	desc = succubus_courtier.1462.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -933,10 +932,10 @@ deviants_courtier.1462 = {
 	}
 
 	option = {
-		name = deviants_courtier.1462.a
-		custom_tooltip = deviants_courtier.1462.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.1462.a
+		custom_tooltip = succubus_courtier.1462.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		every_court_position_holder = {
 			limit = { is_adult = yes is_female = no }
@@ -954,15 +953,15 @@ deviants_courtier.1462 = {
 				opinion = -10
 			}
 		}
-		trigger_event = deviants_courtier.1463
+		trigger_event = succubus_courtier.1463
 	}
 }
 
 #1463 lickcum from floor after stool bukake
-deviants_courtier.1463 = {
+succubus_courtier.1463 = {
 	type = character_event
-	title = deviants_courtier.1463.t
-	desc = deviants_courtier.1463.a.desc
+	title = succubus_courtier.1463.t
+	desc = succubus_courtier.1463.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -978,10 +977,10 @@ deviants_courtier.1463 = {
 			limit = { NOT = { has_nickname = nickname_the_exhibitionist } }
 			give_nickname = nickname_the_exhibitionist
 		}
-		name = deviants_courtier.1463.a
-		custom_tooltip = deviants_courtier.1463.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.1463.a
+		custom_tooltip = succubus_courtier.1463.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		every_court_position_holder = {
 			add_opinion = {
@@ -1000,35 +999,35 @@ deviants_courtier.1463 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = 2
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
-			add_character_flag = { flag = deviants_body_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}
 	}
 }
 
 #envoy with their soldiers, letter from your liege, telling you to reward them for their services
-deviants_courtier.7000 = {
+succubus_courtier.7000 = {
 	type = character_event
-	title = deviants_courtier.7000.t
-	desc = deviants_courtier.7000.a.desc
+	title = succubus_courtier.7000.t
+	desc = succubus_courtier.7000.a.desc
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -1039,7 +1038,6 @@ deviants_courtier.7000 = {
 		animation = scheme
 	}
 	trigger = {
-		has_character_modifier = deviants_prostitute
 		is_female = yes
 		liege = {
 			age >= 18
@@ -1075,15 +1073,15 @@ deviants_courtier.7000 = {
 	option = {
 		ai_chance = { base = 100 }
 		add_prestige = minor_prestige_loss
-		name = deviants_courtier.7000.a
-		custom_tooltip = deviants_courtier.7000.a.tt
-		trigger_event = deviants_courtier.7001
+		name = succubus_courtier.7000.a
+		custom_tooltip = succubus_courtier.7000.a.tt
+		trigger_event = succubus_courtier.7001
 
 	}
 	# pay
 	option = {
-		name = deviants_courtier.7000.b
-		custom_tooltip = deviants_courtier.7000.b.tt
+		name = succubus_courtier.7000.b
+		custom_tooltip = succubus_courtier.7000.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = minor_gold_value
@@ -1091,17 +1089,17 @@ deviants_courtier.7000 = {
 	}
 	# refuse
 	option = {
-		name = deviants_courtier.7000.c
-		custom_tooltip = deviants_courtier.7000.c.tt
+		name = succubus_courtier.7000.c
+		custom_tooltip = succubus_courtier.7000.c.tt
 		add_piety = medium_piety_loss
 	}
 }
 
 #7001 you arrive into the room as a whore and are told to present yourself, the envoy sitting on a chair, comments about the likeness, amused
-deviants_courtier.7001 = {
+succubus_courtier.7001 = {
 	type = character_event
-	title = deviants_courtier.7001.t
-	desc = deviants_courtier.7001.a.desc
+	title = succubus_courtier.7001.t
+	desc = succubus_courtier.7001.a.desc
 	theme = friendly
 	right_portrait = {
 		character = root
@@ -1116,15 +1114,15 @@ deviants_courtier.7001 = {
 	option = {
 		ai_chance = { base = 100 }
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
-		name = deviants_courtier.7001.a
+		name = succubus_courtier.7001.a
 		add_prestige = minor_prestige_loss
-		custom_tooltip = deviants_courtier.7001.a.tt
-		trigger_event = deviants_courtier.7010
+		custom_tooltip = succubus_courtier.7001.a.tt
+		trigger_event = succubus_courtier.7010
 	}
 	# pay
 	option = {
-		name = deviants_courtier.7001.b
-		custom_tooltip = deviants_courtier.7001.b.tt
+		name = succubus_courtier.7001.b
+		custom_tooltip = succubus_courtier.7001.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
@@ -1132,18 +1130,18 @@ deviants_courtier.7001 = {
 	}
 	# refuse
 	option = {
-		name = deviants_courtier.7001.c
+		name = succubus_courtier.7001.c
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
-		custom_tooltip = deviants_courtier.7001.c.tt
-		trigger_event = deviants_courtier.7020
+		custom_tooltip = succubus_courtier.7001.c.tt
+		trigger_event = succubus_courtier.7020
 	}
 }
 
 #7010 if admit being a dirty slut, spreading knees and pussy, he tells the men to fuck her
-deviants_courtier.7010 = {
+succubus_courtier.7010 = {
 	type = character_event
-	title = deviants_courtier.7010.t
-	desc = deviants_courtier.7010.a.desc
+	title = succubus_courtier.7010.t
+	desc = succubus_courtier.7010.a.desc
 	theme = friendly
 	right_portrait = {
 		character = root
@@ -1152,17 +1150,17 @@ deviants_courtier.7010 = {
 	}
 	# ask
 	option = {
-		name = deviants_courtier.7010.a
-		custom_tooltip = deviants_courtier.7010.a.tt
-		trigger_event = deviants_courtier.7011
+		name = succubus_courtier.7010.a
+		custom_tooltip = succubus_courtier.7010.a.tt
+		trigger_event = succubus_courtier.7011
 	}
 }
 
 #7011 anal only, taking turns
-deviants_courtier.7011 = {
+succubus_courtier.7011 = {
 	type = character_event
-	title = deviants_courtier.7011.t
-	desc = deviants_courtier.7011.a.desc
+	title = succubus_courtier.7011.t
+	desc = succubus_courtier.7011.a.desc
 	theme = friendly
 	right_portrait = {
 		character = root
@@ -1171,18 +1169,18 @@ deviants_courtier.7011 = {
 	}
 	option = {
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
-		name = deviants_courtier.7011.a
-		custom_tooltip = deviants_courtier.7011.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.7011.a
+		custom_tooltip = succubus_courtier.7011.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		add_character_modifier = {
-			modifier = deviants_fuckedsilly
+			modifier = succubus_fuckedsilly
 			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -1191,10 +1189,10 @@ deviants_courtier.7011 = {
 }
 
 #7020 IF refuse they want to humiliation fight duel you, one by one as foreplay
-deviants_courtier.7020 = {
+succubus_courtier.7020 = {
 	type = character_event
-	title = deviants_courtier.7020.t
-	desc = deviants_courtier.7020.a.desc
+	title = succubus_courtier.7020.t
+	desc = succubus_courtier.7020.a.desc
 	theme = war
 	right_portrait = {
 		character = root
@@ -1204,29 +1202,29 @@ deviants_courtier.7020 = {
 	# submit
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.7020.a
-		custom_tooltip = deviants_courtier.7020.a.tt
-		trigger_event = deviants_courtier.7021
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.7020.a
+		custom_tooltip = succubus_courtier.7020.a.tt
+		trigger_event = succubus_courtier.7021
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 	}
 	# call scum
 	option = {
-		name = deviants_courtier.7020.b
-		custom_tooltip = deviants_courtier.7020.b.tt
-		trigger_event = deviants_courtier.7022
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.7020.b
+		custom_tooltip = succubus_courtier.7020.b.tt
+		trigger_event = succubus_courtier.7022
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 	}
 }
 
 #7021 bondage anal only fuck post duels
-deviants_courtier.7021 = {
+succubus_courtier.7021 = {
 	type = character_event
-	title = deviants_courtier.7021.t
-	desc = deviants_courtier.7011.a.desc
+	title = succubus_courtier.7021.t
+	desc = succubus_courtier.7011.a.desc
 	theme = war
 	right_portrait = {
 		character = root
@@ -1235,18 +1233,18 @@ deviants_courtier.7021 = {
 	}
 	# ask
 	option = {
-		name = deviants_courtier.7021.a
-		custom_tooltip = deviants_courtier.7021.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.7021.a
+		custom_tooltip = succubus_courtier.7021.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		add_character_modifier = {
-			modifier = deviants_fuckedsilly
+			modifier = succubus_fuckedsilly
 			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -1254,10 +1252,10 @@ deviants_courtier.7021 = {
 	}
 }
 #7022 if call them scum, cheap cart slut
-deviants_courtier.7022 = {
+succubus_courtier.7022 = {
 	type = character_event
-	title = deviants_courtier.7022.t
-	desc = deviants_courtier.7022.a.desc
+	title = succubus_courtier.7022.t
+	desc = succubus_courtier.7022.a.desc
 	theme = default
 	right_portrait = {
 		character = root
@@ -1266,23 +1264,23 @@ deviants_courtier.7022 = {
 	}
 	# ask
 	option = {
-		name = deviants_courtier.7022.a
-		custom_tooltip = deviants_courtier.7022.a.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.7022.a
+		custom_tooltip = succubus_courtier.7022.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		add_character_modifier = {
-			modifier = deviants_fuckedsilly
+			modifier = succubus_fuckedsilly
 			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -1291,10 +1289,10 @@ deviants_courtier.7022 = {
 }
 
 #5100 liege call you over
-deviants_courtier.5100 = {
+succubus_courtier.5100 = {
 	type = character_event
-	title = deviants_courtier.5100.t
-	desc = deviants_courtier.5100.a.desc
+	title = succubus_courtier.5100.t
+	desc = succubus_courtier.5100.a.desc
 	override_background = { reference = council_chamber }
 	theme = diplomacy
 	right_portrait = {
@@ -1302,7 +1300,7 @@ deviants_courtier.5100 = {
 		animation = thinking
 	}
 	trigger = {
-		has_trait = deviants_succubus
+		has_trait = succubus
 		is_female = yes
 		liege = {
 			age >= 18
@@ -1366,32 +1364,32 @@ deviants_courtier.5100 = {
 	# secretly travel to your liege
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.5100.a
-		custom_tooltip = deviants_courtier.5100.a.tt
+		name = succubus_courtier.5100.a
+		custom_tooltip = succubus_courtier.5100.a.tt
 		hidden_effect = {
 			random_list = {
 				50 = {
-					trigger_event = deviants_courtier.5200
+					trigger_event = succubus_courtier.5200
 				}
 				50 = {
-					trigger_event = deviants_courtier.5300
+					trigger_event = succubus_courtier.5300
 				}
 				50 = {
-					trigger_event = deviants_courtier.5400
+					trigger_event = succubus_courtier.5400
 				}
 				50 = {
-					trigger_event = deviants_courtier.5500
+					trigger_event = succubus_courtier.5500
 				}
 				50 = {
-					trigger_event = deviants_courtier.6000
+					trigger_event = succubus_courtier.6000
 				}
 			}
 		}
 	}
 	# just pay the gold
 	option = {
-		name = deviants_courtier.5100.b
-		custom_tooltip = deviants_courtier.5100.b.tt
+		name = succubus_courtier.5100.b
+		custom_tooltip = succubus_courtier.5100.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = major_gold_value
@@ -1405,10 +1403,10 @@ deviants_courtier.5100 = {
 }
 
 #5000 emissary from from your liege comes if don't have trait
-deviants_courtier.5200 = {
+succubus_courtier.5200 = {
 	type = character_event
-	title = deviants_courtier.5200.t
-	desc = deviants_courtier.5200.a.desc
+	title = succubus_courtier.5200.t
+	desc = succubus_courtier.5200.a.desc
 	override_background = { reference = courtyard }
 	theme = diplomacy
 	lower_center_portrait = {
@@ -1435,8 +1433,8 @@ deviants_courtier.5200 = {
 	# collect the coins with your mouth
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_courtier.5200.a
-		custom_tooltip = deviants_courtier.5200.a.tt
+		name = succubus_courtier.5200.a
+		custom_tooltip = succubus_courtier.5200.a.tt
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
@@ -1444,8 +1442,8 @@ deviants_courtier.5200 = {
 			}
 		}
 		add_prestige = minor_prestige_loss
-		stress_impact = {
-			base = major_stress_impact_loss
+		stresuccubus_impact = {
+			base = major_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1454,7 +1452,7 @@ deviants_courtier.5200 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -1466,8 +1464,8 @@ deviants_courtier.5200 = {
 	# offer ass to have coins inserted
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_courtier.5200.b
-		custom_tooltip = deviants_courtier.5200.b.tt
+		name = succubus_courtier.5200.b
+		custom_tooltip = succubus_courtier.5200.b.tt
 		scope:deviant_go_random_3 = {
 			pay_short_term_gold = {
 				target = root
@@ -1475,8 +1473,8 @@ deviants_courtier.5200 = {
 			}
 		}
 		add_prestige = minor_prestige_loss
-		stress_impact = {
-			base = major_stress_impact_loss
+		stresuccubus_impact = {
+			base = major_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1486,7 +1484,7 @@ deviants_courtier.5200 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -1497,10 +1495,10 @@ deviants_courtier.5200 = {
 	}
 	# refuse, get spanked by your owner
 	option = {
-		name = deviants_courtier.5200.c
-		custom_tooltip = deviants_courtier.5200.c.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.5200.c
+		custom_tooltip = succubus_courtier.5200.c.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1510,10 +1508,10 @@ deviants_courtier.5200 = {
 	}
 }
 # 5300 if has dildo, made to pose with your paintings while riding the dildo
-deviants_courtier.5300 = {
+succubus_courtier.5300 = {
 	type = character_event
-	title = deviants_courtier.5300.t
-	desc = deviants_courtier.5300.a.desc
+	title = succubus_courtier.5300.t
+	desc = succubus_courtier.5300.a.desc
 	theme = diplomacy
 	lower_center_portrait = {
 		character = root
@@ -1539,8 +1537,8 @@ deviants_courtier.5300 = {
 	# fuck dildo to please, to gain tiny gold
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.5300.a
-		custom_tooltip = deviants_courtier.5300.a.tt
+		name = succubus_courtier.5300.a
+		custom_tooltip = succubus_courtier.5300.a.tt
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
@@ -1554,8 +1552,8 @@ deviants_courtier.5300 = {
 			}
 		}
 		add_prestige = minor_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_loss
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1564,7 +1562,7 @@ deviants_courtier.5300 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 2
 			}
@@ -1575,20 +1573,20 @@ deviants_courtier.5300 = {
 	}
 	# do bare minium
 	option = {
-		name = deviants_courtier.5300.b
-		custom_tooltip = deviants_courtier.5300.b.tt
+		name = succubus_courtier.5300.b
+		custom_tooltip = succubus_courtier.5300.b.tt
 		scope:deviant_go_random_3 = {
 			pay_short_term_gold = {
 				target = root
 				gold = tiny_gold_value
 			}
 		}
-		stress_impact = {
-			base = minor_stress_impact_loss
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -1597,10 +1595,10 @@ deviants_courtier.5300 = {
 }
 
 # 5400 naked duel his knights
-deviants_courtier.5400 = {
+succubus_courtier.5400 = {
 	type = character_event
-	title = deviants_courtier.5400.t
-	desc = deviants_courtier.5400.a.desc
+	title = succubus_courtier.5400.t
+	desc = succubus_courtier.5400.a.desc
 	override_background = { reference = courtyard }
 	theme = diplomacy
 	right_portrait = {
@@ -1628,8 +1626,8 @@ deviants_courtier.5400 = {
 	# make a good show
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.5400.a
-		custom_tooltip = deviants_courtier.5400.a.tt
+		name = succubus_courtier.5400.a
+		custom_tooltip = succubus_courtier.5400.a.tt
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
@@ -1642,8 +1640,8 @@ deviants_courtier.5400 = {
 				gold = tiny_gold_value
 			}
 		}
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1652,7 +1650,7 @@ deviants_courtier.5400 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
@@ -1663,10 +1661,10 @@ deviants_courtier.5400 = {
 	}
 	# do bare minium
 	option = {
-		name = deviants_courtier.5400.b
-		custom_tooltip = deviants_courtier.5400.b.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.5400.b
+		custom_tooltip = succubus_courtier.5400.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1677,10 +1675,10 @@ deviants_courtier.5400 = {
 	}
 }
 # 5500 make you fuck horse if you have the trait
-deviants_courtier.5500 = {
+succubus_courtier.5500 = {
 	type = character_event
-	title = deviants_courtier.5500.t
-	desc = deviants_courtier.5500.a.desc
+	title = succubus_courtier.5500.t
+	desc = succubus_courtier.5500.a.desc
 	theme = diplomacy
 	lower_center_portrait= {
 		character = scope:deviant_go_random_1
@@ -1697,9 +1695,9 @@ deviants_courtier.5500 = {
 	# fuck horse
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.5500.a
-		custom_tooltip = deviants_courtier.5500.a.tt
-		trigger_event = deviants_courtier.5510
+		name = succubus_courtier.5500.a
+		custom_tooltip = succubus_courtier.5500.a.tt
+		trigger_event = succubus_courtier.5510
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
@@ -1712,8 +1710,8 @@ deviants_courtier.5500 = {
 				gold = tiny_gold_value
 			}
 		}
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1722,26 +1720,26 @@ deviants_courtier.5500 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 20 }
-			add_character_flag = { flag = deviants_ass_cum days = 20 }
+			add_character_flag = { flag = succubus_pussy_cum days = 20 }
+			add_character_flag = { flag = succubus_asuccubus_cum days = 20 }
 		}
 	}
 	# just pose
 	option = {
-		name = deviants_courtier.5500.b
-		custom_tooltip = deviants_courtier.5500.b.tt
+		name = succubus_courtier.5500.b
+		custom_tooltip = succubus_courtier.5500.b.tt
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
 				gold = 5
 			}
 		}
-		stress_impact = {
-			base = minor_stress_impact_loss
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1755,10 +1753,10 @@ deviants_courtier.5500 = {
 	}
 }
 # 5510 if agree to fuck horse
-deviants_courtier.5510 = {
+succubus_courtier.5510 = {
 	type = character_event
-	title = deviants_courtier.5510.t
-	desc = deviants_courtier.5510.a.desc
+	title = succubus_courtier.5510.t
+	desc = succubus_courtier.5510.a.desc
 	theme = diplomacy
 	lower_center_portrait= {
 		character = scope:deviant_go_random_1
@@ -1774,8 +1772,8 @@ deviants_courtier.5510 = {
 	}
 	# faster/deeper as told, for tiny gold but gain stress
 	option = {
-		name = deviants_courtier.5510.a
-		custom_tooltip = deviants_courtier.5510.a.tt
+		name = succubus_courtier.5510.a
+		custom_tooltip = succubus_courtier.5510.a.tt
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
@@ -1788,8 +1786,8 @@ deviants_courtier.5510 = {
 				gold = tiny_gold_value
 			}
 		}
-		stress_impact = {
-			base = major_stress_impact_gain
+		stresuccubus_impact = {
+			base = major_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1797,7 +1795,7 @@ deviants_courtier.5510 = {
 			opinion = 10
 		}
 		add_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = power
 			value = 1
 		}
@@ -1809,16 +1807,16 @@ deviants_courtier.5510 = {
 	# pleasure yourself
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.5510.b
-		custom_tooltip = deviants_courtier.5510.b.tt
+		name = succubus_courtier.5510.b
+		custom_tooltip = succubus_courtier.5510.b.tt
 		scope:deviant_go_random_3 = {
 			pay_short_term_gold = {
 				target = root
 				gold = tiny_gold_value
 			}
 		}
-		stress_impact = {
-			base = minor_stress_impact_loss
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1830,10 +1828,10 @@ deviants_courtier.5510 = {
 }
 
 #6000 called you over, to have you service another of his vassals
-deviants_courtier.6000 = {
+succubus_courtier.6000 = {
 	type = character_event
-	title = deviants_courtier.6000.t
-	desc = deviants_courtier.6000.a.desc
+	title = succubus_courtier.6000.t
+	desc = succubus_courtier.6000.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -1852,8 +1850,8 @@ deviants_courtier.6000 = {
 	# agree
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6000.a
-		custom_tooltip = deviants_courtier.6000.a.tt
+		name = succubus_courtier.6000.a
+		custom_tooltip = succubus_courtier.6000.a.tt
 		scope:deviant_go_random_2 = {
 			pay_short_term_gold = {
 				target = root
@@ -1866,18 +1864,18 @@ deviants_courtier.6000 = {
 		}
 		hidden_effect = {
 			random_list = {
-				25 = { trigger_event = deviants_courtier.6010 }
-				25 = { trigger_event = deviants_courtier.6020 }
-				25 = { trigger_event = deviants_courtier.6030 }
-				25 = { trigger_event = deviants_courtier.6040 }
+				25 = { trigger_event = succubus_courtier.6010 }
+				25 = { trigger_event = succubus_courtier.6020 }
+				25 = { trigger_event = succubus_courtier.6030 }
+				25 = { trigger_event = succubus_courtier.6040 }
 			}
 		}
 
 	}
 	# refuse
 	option = {
-		name = deviants_courtier.6000.b
-		custom_tooltip = deviants_courtier.6000.b.tt
+		name = succubus_courtier.6000.b
+		custom_tooltip = succubus_courtier.6000.b.tt
 		scope:deviant_go_random_1 = {
 			imprison = {
 				target = root
@@ -1888,10 +1886,10 @@ deviants_courtier.6000 = {
 }
 
 #6010 pussy slapping while bound
-deviants_courtier.6010 = {
+succubus_courtier.6010 = {
 	type = character_event
-	title = deviants_courtier.6010.t
-	desc = deviants_courtier.6010.a.desc
+	title = succubus_courtier.6010.t
+	desc = succubus_courtier.6010.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -1906,37 +1904,37 @@ deviants_courtier.6010 = {
 	# beg for more
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6010.a
-		custom_tooltip = deviants_courtier.6010.a.tt
-		trigger_event = deviants_courtier.6011
+		name = succubus_courtier.6010.a
+		custom_tooltip = succubus_courtier.6010.a.tt
+		trigger_event = succubus_courtier.6011
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 20 }
+			add_character_flag = { flag = succubus_pussy_cum days = 20 }
 		}
 	}
 	# stay silent
 	option = {
-		name = deviants_courtier.6010.b
-		custom_tooltip = deviants_courtier.6010.b.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.6010.b
+		custom_tooltip = succubus_courtier.6010.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 	}
 }
 #6011 if beg for more, getting fisted
-deviants_courtier.6011 = {
+succubus_courtier.6011 = {
 	type = character_event
-	title = deviants_courtier.6011.t
-	desc = deviants_courtier.6011.a.desc
+	title = succubus_courtier.6011.t
+	desc = succubus_courtier.6011.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -1951,41 +1949,41 @@ deviants_courtier.6011 = {
 	# act like a horny slut
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6011.a
-		custom_tooltip = deviants_courtier.6011.a.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.6011.a
+		custom_tooltip = succubus_courtier.6011.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}
 	# endure
 	option = {
-		name = deviants_courtier.6011.b
-		custom_tooltip = deviants_courtier.6011.b.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.6011.b
+		custom_tooltip = succubus_courtier.6011.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 	}
 }
 
 #6020 slap face with cock
-deviants_courtier.6020 = {
+succubus_courtier.6020 = {
 	type = character_event
-	title = deviants_courtier.6020.t
-	desc = deviants_courtier.6020.a.desc
+	title = succubus_courtier.6020.t
+	desc = succubus_courtier.6020.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -1995,12 +1993,12 @@ deviants_courtier.6020 = {
 	}
 	# suck
 	option = {
-		name = deviants_courtier.6020.a
-		custom_tooltip = deviants_courtier.6020.a.tt
-		trigger_event = deviants_courtier.6021
+		name = succubus_courtier.6020.a
+		custom_tooltip = succubus_courtier.6020.a.tt
+		trigger_event = succubus_courtier.6021
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 1
 			}
@@ -2008,15 +2006,15 @@ deviants_courtier.6020 = {
 	}
 	# keep mouth shut
 	option = {
-		name = deviants_courtier.6020.b
-		custom_tooltip = deviants_courtier.6020.b.tt
-		trigger_event = deviants_courtier.6022
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.6020.b
+		custom_tooltip = succubus_courtier.6020.b.tt
+		trigger_event = succubus_courtier.6022
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -2024,10 +2022,10 @@ deviants_courtier.6020 = {
 	}
 }
 #6021 if suck,
-deviants_courtier.6021 = {
+succubus_courtier.6021 = {
 	type = character_event
-	title = deviants_courtier.6021.t
-	desc = deviants_courtier.6021.a.desc
+	title = succubus_courtier.6021.t
+	desc = succubus_courtier.6021.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -2038,32 +2036,32 @@ deviants_courtier.6021 = {
 	# thank him for the meal
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6021.a
-		custom_tooltip = deviants_courtier.6021.a.tt
+		name = succubus_courtier.6021.a
+		custom_tooltip = succubus_courtier.6021.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_face_cum days = 15 }
+			add_character_flag = { flag = succubus_face_cum days = 15 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}
 	# just leave
 	option = {
-		name = deviants_courtier.6021.b
-		custom_tooltip = deviants_courtier.6021.b.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.6021.b
+		custom_tooltip = succubus_courtier.6021.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 	}
 }
 #6022 if keep mouth shut
-deviants_courtier.6022 = {
+succubus_courtier.6022 = {
 	type = character_event
-	title = deviants_courtier.6022.t
-	desc = deviants_courtier.6022.a.desc
+	title = succubus_courtier.6022.t
+	desc = succubus_courtier.6022.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -2074,11 +2072,11 @@ deviants_courtier.6022 = {
 	# lick your face
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6022.a
-		custom_tooltip = deviants_courtier.6022.a.tt
+		name = succubus_courtier.6022.a
+		custom_tooltip = succubus_courtier.6022.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -2087,19 +2085,19 @@ deviants_courtier.6022 = {
 	}
 	# just leave
 	option = {
-		name = deviants_courtier.6022.b
-		custom_tooltip = deviants_courtier.6022.b.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.6022.b
+		custom_tooltip = succubus_courtier.6022.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 	}
 }
 
 #6030 strangle anal
-deviants_courtier.6030 = {
+succubus_courtier.6030 = {
 	type = character_event
-	title = deviants_courtier.6030.t
-	desc = deviants_courtier.6030.a.desc
+	title = succubus_courtier.6030.t
+	desc = succubus_courtier.6030.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -2110,14 +2108,14 @@ deviants_courtier.6030 = {
 	# act horny/indulge as he cums
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6030.a
-		custom_tooltip = deviants_courtier.6030.a.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.6030.a
+		custom_tooltip = succubus_courtier.6030.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 1
 			}
@@ -2126,19 +2124,19 @@ deviants_courtier.6030 = {
 	}
 	# stay silent as he cums
 	option = {
-		name = deviants_courtier.6030.b
-		custom_tooltip = deviants_courtier.6030.b.tt
-		stress_impact = {
-			base = minor_stress_impact_loss
+		name = succubus_courtier.6030.b
+		custom_tooltip = succubus_courtier.6030.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
 		}
 	}
 }
 
 #6040 pussy job him
-deviants_courtier.6040 = {
+succubus_courtier.6040 = {
 	type = character_event
-	title = deviants_courtier.6040.t
-	desc = deviants_courtier.6040.a.desc
+	title = succubus_courtier.6040.t
+	desc = succubus_courtier.6040.a.desc
 	override_background = { reference = bedchamber }
 	theme = diplomacy
 	right_portrait = {
@@ -2149,32 +2147,32 @@ deviants_courtier.6040 = {
 	# service him well to get him cum
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_courtier.6040.a
-		custom_tooltip = deviants_courtier.6040.a.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
+		name = succubus_courtier.6040.a
+		custom_tooltip = succubus_courtier.6040.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 15 }
+			add_character_flag = { flag = succubus_pussy_cum days = 15 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}
 	# do the bare minimum to get him cum
 	option = {
-		name = deviants_courtier.6040.b
-		custom_tooltip = deviants_courtier.6040.b.tt
-		stress_impact = {
-			lustful = medium_stress_impact_loss
+		name = succubus_courtier.6040.b
+		custom_tooltip = succubus_courtier.6040.b.tt
+		stresuccubus_impact = {
+			lustful = medium_stresuccubus_impact_loss
 		}
 	}
 }

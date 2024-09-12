@@ -1,4 +1,4 @@
-deviants_dark_amry = {
+succubus_dark_amry = {
 	icon = skirmishers
 	type = skirmishers
 
@@ -15,14 +15,14 @@ deviants_dark_amry = {
 
 	stack = 100
 	max_sub_regiments = 5
-	can_recruit = { has_trait = deviants_succubus }
+	can_recruit = { has_trait = succubus }
 	buy_cost = { gold = 150 }
 	low_maintenance_cost = { gold = 0.2 }
 	high_maintenance_cost = { gold = 0.5 }
 	ai_quality = { value = 80 }
 }
 
-deviants_death_korps  = {
+succubus_death_korps  = {
 	icon = heavy_infantry
 	type = heavy_infantry
 	can_recruit = { always = no }
@@ -46,7 +46,7 @@ deviants_death_korps  = {
 	high_maintenance_cost = { gold = 0 }
 }
 
-deviants_zombie = {
+succubus_zombie = {
 	icon = skirmishers
 	type = skirmishers
 	can_recruit = { have_devil_building_trigger = yes }
@@ -66,7 +66,7 @@ deviants_zombie = {
 	high_maintenance_cost = { gold = 0 }
 }
 
-deviants_skeleton = {
+succubus_skeleton = {
 	icon = skirmishers
 	type = skirmishers
 	can_recruit = { have_devil_building_trigger = yes }

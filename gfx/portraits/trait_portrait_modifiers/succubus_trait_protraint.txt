@@ -1,17 +1,17 @@
-deviants_outfit = {
+succubus_outfit = {
 	usage = game
 	succubus_1 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 33
 			}
@@ -19,7 +19,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_9
 			}
@@ -27,21 +27,21 @@ deviants_outfit = {
 	}
 	succubus_2 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value >= 50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value < 100
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 33
 			}
@@ -49,7 +49,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_8
 			}
@@ -57,16 +57,16 @@ deviants_outfit = {
 	}
 	succubus_3 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 33
 			}
@@ -74,7 +74,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_5
 			}
@@ -82,21 +82,21 @@ deviants_outfit = {
 	}
 	succubus_4 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value >= 33
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 66
 			}
@@ -104,7 +104,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_2
 			}
@@ -112,21 +112,21 @@ deviants_outfit = {
 	}
 	succubus_5 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value >= 66
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 100
 			}
@@ -134,7 +134,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_5
 			}
@@ -142,16 +142,16 @@ deviants_outfit = {
 	}
 	succubus_6 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 100
 			}
@@ -159,7 +159,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_12
 			}
@@ -167,21 +167,21 @@ deviants_outfit = {
 	}
 	succubus_7 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value >=50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value >= 33
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 66
 			}
@@ -189,7 +189,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_10
 			}
@@ -197,21 +197,21 @@ deviants_outfit = {
 	}
 	succubus_8 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value >=50
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value >= 66
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 100
 			}
@@ -219,7 +219,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_11
 			}
@@ -227,21 +227,21 @@ deviants_outfit = {
 	}
 	succubus_9 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value >= 33
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 66
 			}
@@ -249,7 +249,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_15
 			}
@@ -257,21 +257,21 @@ deviants_outfit = {
 	}
 	succubus_10 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value >= 66
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value < 100
 			}
@@ -279,7 +279,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_16
 			}
@@ -287,16 +287,16 @@ deviants_outfit = {
 	}
 	succubus_11 = {
 		traits = {
-			deviants_succubus
+			succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 100
 			}
@@ -304,7 +304,7 @@ deviants_outfit = {
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_6
 			}
@@ -312,18 +312,18 @@ deviants_outfit = {
 	}
 	lesser_succubus_1 = {
 		traits = {
-			deviants_lesser_succubus
+			lesser_succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value = 0
 			}
 		}
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_13
 			}
@@ -331,18 +331,18 @@ deviants_outfit = {
 	}
 	lesser_succubus_1 = {
 		traits = {
-			deviants_lesser_succubus
+			lesser_succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value < 50
 			}
 		}
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_4
 			}
@@ -350,18 +350,18 @@ deviants_outfit = {
 	}
 	lesser_succubus_2 = {
 		traits = {
-			deviants_lesser_succubus
+			lesser_succubus
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = deviants_lesser_succubus
+				trait = lesser_succubus
 				value >= 50
 			}
 		}
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_7
 			}
@@ -369,12 +369,12 @@ deviants_outfit = {
 	}
 	virgin = {
 		traits = {
-			deviants_virgin
+			deviant_virgin
 		}
 		dna_modifiers = {
 			morph = {
 				mode = add
-				gene = deviants_womb
+				gene = succubus_womb
 				value = 1
 				template = womb_14
 			}

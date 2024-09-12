@@ -1,16 +1,7 @@
-is_valid_prostitute_trigger = {
-	is_adult = yes
-	is_female = yes
-	is_travelling = no
-	is_in_army = no
-	has_character_modifier = deviants_prostitute
-	NOT = { has_character_modifier = deviants_fuckedsilly }
-}
-
 is_valid_construction_brothel1_trigger = {
 	any_held_title = {
 		any_county_province = {
-			has_building_or_higher = deviants_brothel1
+			has_building_or_higher = succubus_brothel1
 		}
 	}
 }
@@ -18,7 +9,7 @@ is_valid_construction_brothel1_trigger = {
 is_valid_construction_brothel2_trigger = {
 	any_held_title = {
 		any_county_province = {
-			has_building_or_higher = deviants_brothel2
+			has_building_or_higher = succubus_brothel2
 		}
 	}
 }
@@ -26,7 +17,7 @@ is_valid_construction_brothel2_trigger = {
 is_valid_construction_brothel3_trigger = {
 	any_held_title = {
 		any_county_province = {
-			has_building_or_higher = deviants_brothel3
+			has_building_or_higher = succubus_brothel3
 		}
 	}
 }
@@ -35,11 +26,11 @@ is_valid_construction_alchemy1_trigger = {
 	OR = {
 		any_held_title = {
 			any_county_province = {
-				has_building_or_higher = deviants_alchemy1
+				has_building_or_higher = succubus_alchemy1
 			}
 		}
 		has_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = corruption
 			value >= 50
 		}
@@ -50,11 +41,11 @@ is_valid_construction_alchemy2_trigger = {
 	OR = {
 		any_held_title = {
 			any_county_province = {
-				has_building_or_higher = deviants_alchemy2
+				has_building_or_higher = succubus_alchemy2
 			}
 		}
 		has_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = corruption
 			value >= 100
 		}
@@ -64,7 +55,7 @@ is_valid_construction_alchemy2_trigger = {
 is_valid_construction_alchemy3_trigger = {
 	any_held_title = {
 		any_county_province = {
-			has_building_or_higher = deviants_alchemy3
+			has_building_or_higher = succubus_alchemy3
 		}
 	}
 }
@@ -82,7 +73,7 @@ have_devil_nicknames_trigger = {
 have_witch_forest_trigger = {
 	any_held_title = {
 		any_county_province = {
-			has_building_or_higher = deviants_witch_forest
+			has_building_or_higher = succubus_witch_forest
 		}
 	}
 }
@@ -90,7 +81,7 @@ have_witch_forest_trigger = {
 have_soul_forge_trigger = {
 	any_held_title = {
 		any_county_province = {
-			has_building_or_higher = deviants_soul_forge
+			has_building_or_higher = succubus_soul_forge
 		}
 	}
 }
@@ -99,12 +90,12 @@ have_devil_building_trigger = {
 	OR = {
 		any_held_title = {
 			any_county_province = {
-				has_building_or_higher = deviants_witch_forest
+				has_building_or_higher = succubus_witch_forest
 			}
 		}
 		any_held_title = {
 			any_county_province = {
-				has_building_or_higher = deviants_soul_forge
+				has_building_or_higher = succubus_soul_forge
 			}
 		}
 	}

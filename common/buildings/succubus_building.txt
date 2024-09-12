@@ -1,14 +1,14 @@
-deviants_brothel1 = {
+succubus_brothel1 = {
 	type_icon = "icon_brothel.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_1_cost }
 	type = duchy_capital
 
-	next_building = deviants_brothel2
+	next_building = succubus_brothel2
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = deviants_succubus
+			has_trait = succubus
 		}
 	}
 
@@ -31,17 +31,17 @@ deviants_brothel1 = {
 	ai_value = { base = 100 }
 }
 
-deviants_brothel2 = {
+succubus_brothel2 = {
 	type_icon = "icon_brothel.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_2_cost }
 	type = duchy_capital
 
-	next_building = deviants_brothel3
+	next_building = succubus_brothel3
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = deviants_succubus
+			has_trait = succubus
 		}
 	}
 
@@ -64,7 +64,7 @@ deviants_brothel2 = {
 	ai_value = { base = 100 }
 }
 
-deviants_brothel3 = {
+succubus_brothel3 = {
 	type_icon = "icon_brothel.dds"
 	construction_time = cheap_building_tier_2_cost
 	cost = { gold = cheap_building_tier_3_cost }
@@ -72,7 +72,7 @@ deviants_brothel3 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = deviants_succubus
+			has_trait = succubus
 		}
 	}
 
@@ -95,17 +95,17 @@ deviants_brothel3 = {
 	ai_value = { base = 100 }
 }
 
-deviants_alchemy1 = {
+succubus_alchemy1 = {
 	type_icon = "icon_alchemy.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_1_cost }
 	type = duchy_capital
 
-	next_building = deviants_alchemy2
+	next_building = succubus_alchemy2
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = deviants_succubus
+			has_trait = succubus
 		}
 	}
 
@@ -129,17 +129,17 @@ deviants_alchemy1 = {
 	ai_value = { base = 80 }
 }
 
-deviants_alchemy2 = {
+succubus_alchemy2 = {
 	type_icon = "icon_alchemy.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_2_cost }
 	type = duchy_capital
 
-	next_building = deviants_alchemy3
+	next_building = succubus_alchemy3
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = deviants_succubus
+			has_trait = succubus
 		}
 	}
 
@@ -163,7 +163,7 @@ deviants_alchemy2 = {
 	ai_value = { base = 80 }
 }
 
-deviants_alchemy3 = {
+succubus_alchemy3 = {
 	type_icon = "icon_alchemy.dds"
 	construction_time = quick_construction_time
 	cost = { gold = cheap_building_tier_3_cost }
@@ -171,7 +171,7 @@ deviants_alchemy3 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = deviants_succubus
+			has_trait = succubus
 		}
 	}
 

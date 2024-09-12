@@ -1,4 +1,4 @@
-deviants_religion = {
+succubus_religion = {
 	family = rf_pagan
 	pagan_roots = no
 
@@ -44,150 +44,150 @@ deviants_religion = {
 		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_dove custom_faith_ichthys custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
 	}
 
-	holy_order_maa = { deviants_dark_amry }
+	holy_order_maa = { succubus_dark_amry }
 	localization = {
-		HighGodName = deviants_high_god_name
-		HighGodName2 = deviants_high_god_name_2
-		HighGodNamePossessive = deviants_high_god_name_possessive
+		HighGodName = succubus_high_god_name
+		HighGodName2 = succubus_high_god_name_2
+		HighGodNamePossessive = succubus_high_god_name_possessive
 		HighGodNameSheHe = CHARACTER_SHEHE_HE
 		HighGodHerselfHimself = CHARACTER_HIMSELF
 		HighGodHerHis = CHARACTER_HERHIS_HIS
-		HighGodNameAlternate = deviants_high_god_name_alternate
-		HighGodNameAlternatePossessive = deviants_high_god_name_alternate_possessive
+		HighGodNameAlternate = succubus_high_god_name_alternate
+		HighGodNameAlternatePossessive = succubus_high_god_name_alternate_possessive
 
-		CreatorName = deviants_creator_god_name
-		CreatorNamePossessive = deviants_creator_god_name_possessive
+		CreatorName = succubus_creator_god_name
+		CreatorNamePossessive = succubus_creator_god_name_possessive
 		CreatorSheHe = CHARACTER_SHEHE_HE
 		CreatorHerHis = CHARACTER_HERHIS_HIS
 		CreatorHerHim = CHARACTER_HERHIM_HIM
 
-		HealthGodName = deviants_health_god_name
-		HealthGodNamePossessive = deviants_health_god_name_possessive
+		HealthGodName = succubus_health_god_name
+		HealthGodNamePossessive = succubus_health_god_name_possessive
 		HealthGodSheHe = CHARACTER_SHEHE_HE
 		HealthGodHerHis = CHARACTER_HERHIS_HIS
 		HealthGodHerHim = CHARACTER_HERHIM_HIM
 
-		FertilityGodName = deviants_fertility_god_name
-		FertilityGodNamePossessive = deviants_fertility_god_name_possessive
+		FertilityGodName = succubus_fertility_god_name
+		FertilityGodNamePossessive = succubus_fertility_god_name_possessive
 		FertilityGodSheHe = CHARACTER_SHEHE_HE
 		FertilityGodHerHis = CHARACTER_HERHIS_HIS
 		FertilityGodHerHim = CHARACTER_HERHIM_HIM
 
-		WealthGodName = deviants_wealth_god_name
-		WealthGodNamePossessive = deviants_wealth_god_name_possessive
+		WealthGodName = succubus_wealth_god_name
+		WealthGodNamePossessive = succubus_wealth_god_name_possessive
 		WealthGodSheHe = CHARACTER_SHEHE_HE
 		WealthGodHerHis = CHARACTER_HERHIS_HIS
 		WealthGodHerHim = CHARACTER_HERHIM_HIM
 
-		HouseholdGodName = deviants_household_god_name
-		HouseholdGodNamePossessive = deviants_household_god_name_possessive
+		HouseholdGodName = succubus_household_god_name
+		HouseholdGodNamePossessive = succubus_household_god_name_possessive
 		HouseholdGodSheHe = CHARACTER_SHEHE_HE
 		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
 		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
 
-		FateGodName = deviants_fate_god_name
-		FateGodNamePossessive = deviants_fate_god_name_possessive
+		FateGodName = succubus_fate_god_name
+		FateGodNamePossessive = succubus_fate_god_name_possessive
 		FateGodSheHe = CHARACTER_SHEHE_HE
 		FateGodHerHis = CHARACTER_HERHIS_HIS
 		FateGodHerHim = CHARACTER_HERHIM_HIM
 
-		KnowledgeGodName = deviants_knowledge_god_name
-		KnowledgeGodNamePossessive = deviants_knowledge_god_name_possessive
+		KnowledgeGodName = succubus_knowledge_god_name
+		KnowledgeGodNamePossessive = succubus_knowledge_god_name_possessive
 		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
 		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
 		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
-		WarGodName = deviants_war_god_name
-		WarGodNamePossessive = deviants_war_god_name_possessive
+		WarGodName = succubus_war_god_name
+		WarGodNamePossessive = succubus_war_god_name_possessive
 		WarGodSheHe = CHARACTER_SHEHE_HE
 		WarGodHerHis = CHARACTER_HERHIS_HIS
 		WarGodHerHim = CHARACTER_HERHIM_HIM
 
-		TricksterGodName = deviants_trickster_god_name
-		TricksterGodNamePossessive = deviants_trickster_god_name_possessive
+		TricksterGodName = succubus_trickster_god_name
+		TricksterGodNamePossessive = succubus_trickster_god_name_possessive
 		TricksterGodSheHe = CHARACTER_SHEHE_HE
 		TricksterGodHerHis = CHARACTER_HERHIS_HIS
 		TricksterGodHerHim = CHARACTER_HERHIM_HIM
 
-		NightGodName = deviants_night_god_name
-		NightGodNamePossessive = deviants_night_god_name_possessive
+		NightGodName = succubus_night_god_name
+		NightGodNamePossessive = succubus_night_god_name_possessive
 		NightGodSheHe = CHARACTER_SHEHE_HE
 		NightGodHerHis = CHARACTER_HERHIS_HIS
 		NightGodHerHim = CHARACTER_HERHIM_HIM
 
-		WaterGodName = deviants_water_god_name
-		WaterGodNamePossessive = deviants_water_god_name_possessive
+		WaterGodName = succubus_water_god_name
+		WaterGodNamePossessive = succubus_water_god_name_possessive
 		WaterGodSheHe = CHARACTER_SHEHE_HE
 		WaterGodHerHis = CHARACTER_HERHIS_HIS
 		WaterGodHerHim = CHARACTER_HERHIM_HIM
 
-		PantheonTerm = deviants_high_god_name
-		PantheonTerm2 = deviants_high_god_name_2
-		PantheonTerm3 = deviants_high_god_name_3
+		PantheonTerm = succubus_high_god_name
+		PantheonTerm2 = succubus_high_god_name_2
+		PantheonTerm3 = succubus_high_god_name_3
 		PantheonTermHasHave = pantheon_term_has
 		GoodGodNames = {
-			deviants_high_god_name
-			deviants_high_god_name_alternate
-			deviants_good_god_1
-			deviants_good_god_2
+			succubus_high_god_name
+			succubus_high_god_name_alternate
+			succubus_good_god_1
+			succubus_good_god_2
 		}
-		DevilName = deviants_devil_name
-		DevilNamePossessive = deviants_devil_name_possessive
+		DevilName = succubus_devil_name
+		DevilNamePossessive = succubus_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_HE
 		DevilHerHis = CHARACTER_HERHIS_HIS
 		DevilHerHis = CHARACTER_HERHIS_HIS
 		DevilHerselfHimself = CHARACTER_HIMSELF
 		EvilGodNames = {
-			deviants_devil_name
-			deviants_evil_god_1
+			succubus_devil_name
+			succubus_evil_god_1
 		}
-		HouseOfWorship = deviants_house_of_worship
-		HouseOfWorship2 = deviants_house_of_worship_2
-		HouseOfWorship3 = deviants_house_of_worship_3
-		HouseOfWorshipPlural = deviants_house_of_worship_plural
-		ReligiousSymbol = deviants_religious_symbol
-		ReligiousSymbol2 = deviants_religious_symbol_2
-		ReligiousSymbol3 = deviants_religious_symbol_3
-		ReligiousText = deviants_religious_text
-		ReligiousText2 = deviants_religious_text_2
-		ReligiousText3 = deviants_religious_text_3
-		ReligiousHeadName = deviants_religious_head_title
-		ReligiousHeadTitleName = deviants_religious_head_title_name
-		DevoteeMale = deviants_devotee_male
-		DevoteeMalePlural = deviants_devotee_male_plural
-		DevoteeFemale = deviants_devotee_female
-		DevoteeFemalePlural = deviants_devotee_female_plural
-		DevoteeNeuter = deviants_devotee_neuter
-		DevoteeNeuterPlural = deviants_devotee_neuter_plural
-		PriestMale = deviants_priest_male
-		PriestMalePlural = deviants_priest_male_plural
-		PriestFemale = deviants_priest_male
-		PriestFemalePlural = deviants_priest_male_plural
-		PriestNeuter = deviants_priest_male
-		PriestNeuterPlural = deviants_priest_male_plural
-		AltPriestTermPlural = deviants_priest_alternate_plural
-		BishopMale = deviants_bishop
-		BishopMalePlural = deviants_bishop_plural
-		BishopFemale = deviants_bishop
-		BishopFemalePlural = deviants_bishop_plural
-		BishopNeuter = deviants_bishop
-		BishopNeuterPlural = deviants_bishop_plural
-		DivineRealm = deviants_positive_afterlife
-		DivineRealm2 = deviants_positive_afterlife_2
-		DivineRealm3 = deviants_positive_afterlife_3
-		PositiveAfterLife = deviants_positive_afterlife
-		PositiveAfterLife2 = deviants_positive_afterlife_2
-		PositiveAfterLife3 = deviants_positive_afterlife_3
-		NegativeAfterLife = deviants_negative_afterlife
-		NegativeAfterLife2 = deviants_negative_afterlife_2
-		NegativeAfterLife3 = deviants_negative_afterlife_3
-		DeathDeityName = deviants_death_deity_name
-		DeathDeityNamePossessive = deviants_death_deity_name_possessive
+		HouseOfWorship = succubus_house_of_worship
+		HouseOfWorship2 = succubus_house_of_worship_2
+		HouseOfWorship3 = succubus_house_of_worship_3
+		HouseOfWorshipPlural = succubus_house_of_worship_plural
+		ReligiousSymbol = succubus_religious_symbol
+		ReligiousSymbol2 = succubus_religious_symbol_2
+		ReligiousSymbol3 = succubus_religious_symbol_3
+		ReligiousText = succubus_religious_text
+		ReligiousText2 = succubus_religious_text_2
+		ReligiousText3 = succubus_religious_text_3
+		ReligiousHeadName = succubus_religious_head_title
+		ReligiousHeadTitleName = succubus_religious_head_title_name
+		DevoteeMale = succubus_devotee_male
+		DevoteeMalePlural = succubus_devotee_male_plural
+		DevoteeFemale = succubus_devotee_female
+		DevoteeFemalePlural = succubus_devotee_female_plural
+		DevoteeNeuter = succubus_devotee_neuter
+		DevoteeNeuterPlural = succubus_devotee_neuter_plural
+		PriestMale = succubus_priest_male
+		PriestMalePlural = succubus_priest_male_plural
+		PriestFemale = succubus_priest_male
+		PriestFemalePlural = succubus_priest_male_plural
+		PriestNeuter = succubus_priest_male
+		PriestNeuterPlural = succubus_priest_male_plural
+		AltPriestTermPlural = succubus_priest_alternate_plural
+		BishopMale = succubus_bishop
+		BishopMalePlural = succubus_bishop_plural
+		BishopFemale = succubus_bishop
+		BishopFemalePlural = succubus_bishop_plural
+		BishopNeuter = succubus_bishop
+		BishopNeuterPlural = succubus_bishop_plural
+		DivineRealm = succubus_positive_afterlife
+		DivineRealm2 = succubus_positive_afterlife_2
+		DivineRealm3 = succubus_positive_afterlife_3
+		PositiveAfterLife = succubus_positive_afterlife
+		PositiveAfterLife2 = succubus_positive_afterlife_2
+		PositiveAfterLife3 = succubus_positive_afterlife_3
+		NegativeAfterLife = succubus_negative_afterlife
+		NegativeAfterLife2 = succubus_negative_afterlife_2
+		NegativeAfterLife3 = succubus_negative_afterlife_3
+		DeathDeityName = succubus_death_deity_name
+		DeathDeityNamePossessive = succubus_death_deity_name_possessive
 		DeathDeitySheHe = CHARACTER_SHEHE_HE
 		DeathDeityHerHis = CHARACTER_HERHIS_HIS
 		DeathDeityHerHim = CHARACTER_HERHIM_HIM
-		WitchGodName = deviants_witchgodname_the_horned_god
-		WitchGodNamePossessive = deviants_witchgodname_the_horned_god_possessive
+		WitchGodName = succubus_witchgodname_the_horned_god
+		WitchGodNamePossessive = succubus_witchgodname_the_horned_god_possessive
 		WitchGodHerHis = CHARACTER_HERHIS_HIS
 		WitchGodSheHe = CHARACTER_SHEHE_HE
 		WitchGodHerHim = CHARACTER_HERHIM_HIM
@@ -199,7 +199,7 @@ deviants_religion = {
 	}
 
 	faiths = {
-		deviants_beelzebub = {
+		succubus_beelzebub = {
 			color = { 50 50 255 }
 			icon = custom_faith_10
 
@@ -215,7 +215,7 @@ deviants_religion = {
 
 			doctrine = doctrine_concubines
 		}
-		deviants_lilith = {
+		succubus_lilith = {
 			color = { 238 115 221 }
 			icon = custom_faith_black_sheep
 
@@ -232,7 +232,7 @@ deviants_religion = {
 			doctrine = doctrine_polygamy
 			doctrine = doctrine_deviancy_virtuous
 		}
-		deviants_abaddon = {
+		succubus_abaddon = {
 			color = { 139 0 0 }
 			icon = custom_faith_pentagram_inverted
 
@@ -250,7 +250,7 @@ deviants_religion = {
 			doctrine = doctrine_funeral_cremation
 			doctrine = doctrine_pluralism_fundamentalist
 		}
-		deviants_mammon = {
+		succubus_mammon = {
 			color = { 255 215 0 }
 			icon = custom_faith_fp1_thors_hammer
 
@@ -266,7 +266,7 @@ deviants_religion = {
 
 			doctrine = doctrine_funeral_sky_burial
 		}
-		deviants_asmodeus = {
+		succubus_asmodeus = {
 			color = { 255 0 0 }
 			icon = custom_faith_lamb
 
@@ -282,7 +282,7 @@ deviants_religion = {
 
 			doctrine = doctrine_pluralism_fundamentalist
 		}
-		deviants_belial = {
+		succubus_belial = {
 			color = { 247 185 238 }
 			icon = custom_faith_eye_of_providence
 

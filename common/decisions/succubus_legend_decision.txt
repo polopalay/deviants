@@ -1,8 +1,8 @@
-deviants_start_ritual_decision = {
-	desc = deviants_start_ritual_decision.d
-	selection_tooltip = deviants_start_ritual_decision.t
+succubus_start_ritual_decision = {
+	desc = succubus_start_ritual_decision.d
+	selection_tooltip = succubus_start_ritual_decision.t
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	confirm_text = deviants_start_ritual_decision.c
+	confirm_text = succubus_start_ritual_decision.c
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -45,11 +45,11 @@ deviants_start_ritual_decision = {
 	ai_check_interval = 0
 }
 
-deviants_tensoul_decision = {
-	desc = deviants_tensoul_decision.d
-	selection_tooltip = deviants_tensoul_decision.t
+succubus_tensoul_decision = {
+	desc = succubus_tensoul_decision.d
+	selection_tooltip = succubus_tensoul_decision.t
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	confirm_text = deviants_tensoul_decision.c
+	confirm_text = succubus_tensoul_decision.c
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -90,11 +90,11 @@ deviants_tensoul_decision = {
 	ai_check_interval = 0
 }
 
-deviants_vassal_decision = {
-	desc = deviants_vassal_decision.d
-	selection_tooltip = deviants_vassal_decision.t
+succubus_vassal_decision = {
+	desc = succubus_vassal_decision.d
+	selection_tooltip = succubus_vassal_decision.t
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	confirm_text = deviants_vassal_decision.c
+	confirm_text = succubus_vassal_decision.c
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -137,11 +137,11 @@ deviants_vassal_decision = {
 	ai_check_interval = 0
 }
 
-deviants_homologus_decision = {
-	desc = deviants_homologus_decision.d
-	selection_tooltip = deviants_homologus_decision.t
+succubus_homologus_decision = {
+	desc = succubus_homologus_decision.d
+	selection_tooltip = succubus_homologus_decision.t
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	confirm_text = deviants_homologus_decision.c
+	confirm_text = succubus_homologus_decision.c
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -189,11 +189,11 @@ deviants_homologus_decision = {
 	ai_check_interval = 0
 }
 
-deviants_family_decision = {
-	desc = deviants_family_decision.d
-	selection_tooltip = deviants_family_decision.t
+succubus_family_decision = {
+	desc = succubus_family_decision.d
+	selection_tooltip = succubus_family_decision.t
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	confirm_text = deviants_family_decision.c
+	confirm_text = succubus_family_decision.c
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -263,11 +263,11 @@ decisions_ritual_complete = {
 			}
 		}
 		create_artifact = {
-			name = deviants_philosopher_stone
-			description = deviants_philosopher_stone.d
-			type = magic_creation
+			name = succubus_philosopher_stone
+			description = succubus_philosopher_stone.d
+			type = succubus_magic_creation
 			visuals = rock
-			modifier = deviants_philosopher_stone_modifier
+			modifier = succubus_philosopher_stone_modifier
 			creator = root
 			rarity = illustrious
 		}

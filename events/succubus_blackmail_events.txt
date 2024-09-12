@@ -1,10 +1,10 @@
-namespace = deviants_blackmail
+namespace = succubus_blackmail
 
 # he comes to you in private
-deviants_blackmail.1100 = {
+succubus_blackmail.1100 = {
 	type = character_event
-	title = deviants_blackmail.1100.t
-	desc = deviants_blackmail.1100.a.desc
+	title = succubus_blackmail.1100.t
+	desc = succubus_blackmail.1100.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -15,7 +15,7 @@ deviants_blackmail.1100 = {
 		animation = scheme
 	}
 	trigger = {
-		has_trait = deviants_succubus
+		has_trait = succubus
 		is_female = yes
 		any_vassal = {
 			is_female = no
@@ -41,12 +41,12 @@ deviants_blackmail.1100 = {
 	}
 	# kneel before him for a discount
 	option = {
-		name = deviants_blackmail.1100.a
-		custom_tooltip = deviants_blackmail.1100.a.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
-			sadistic = minor_stress_impact_gain
+		name = succubus_blackmail.1100.a
+		custom_tooltip = succubus_blackmail.1100.a.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_loss
+			sadistic = minor_stresuccubus_impact_gain
 		}
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
@@ -59,36 +59,36 @@ deviants_blackmail.1100 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 		}
-		trigger_event = deviants_blackmail.1110
+		trigger_event = succubus_blackmail.1110
 		ai_chance = { base = 100 }
 	}
 	# just pay the gold
 	option = {
-		name = deviants_blackmail.1100.b
-		custom_tooltip = deviants_blackmail.1100.b.tt
+		name = succubus_blackmail.1100.b
+		custom_tooltip = succubus_blackmail.1100.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
 		}
-		trigger_event = deviants_blackmail.1120
+		trigger_event = succubus_blackmail.1120
 	}
 	# ignore, get rumors spread...
 	option = {
-		name = deviants_blackmail.1100.c
-		custom_tooltip = deviants_blackmail.1100.c.tt
+		name = succubus_blackmail.1100.c
+		custom_tooltip = succubus_blackmail.1100.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = -1
 			}
@@ -97,10 +97,10 @@ deviants_blackmail.1100 = {
 }
 
 #1110 he cumming in
-deviants_blackmail.1110 = {
+succubus_blackmail.1110 = {
 	type = character_event
-	title = deviants_blackmail.1110.t
-	desc = deviants_blackmail.1110.desc
+	title = succubus_blackmail.1110.t
+	desc = succubus_blackmail.1110.desc
 	theme = wedding_night_activity
 	trigger = {
 		is_female = yes
@@ -119,21 +119,21 @@ deviants_blackmail.1110 = {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
-		add_character_flag = { flag = deviants_pussy_cum days = 20 }
+		add_character_flag = { flag = succubus_pussy_cum days = 20 }
 	}
 	#Go deal with the mess
 	option = {
-		name = deviants_blackmail.1110.a
-		custom_tooltip = deviants_blackmail.1110.a.tt
+		name = succubus_blackmail.1110.a
+		custom_tooltip = succubus_blackmail.1110.a.tt
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
 	}
 }
 
 #1120 humiliation event if you kneel
-deviants_blackmail.1120 = {
+succubus_blackmail.1120 = {
 	type = character_event
-	title = deviants_blackmail.1120.t
-	desc = deviants_blackmail.1120.desc
+	title = succubus_blackmail.1120.t
+	desc = succubus_blackmail.1120.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -149,8 +149,8 @@ deviants_blackmail.1120 = {
 	}
 	#endure
 	option = {
-		name = deviants_blackmail.1120.a
-		custom_tooltip = deviants_blackmail.1120.a.tt
+		name = succubus_blackmail.1120.a
+		custom_tooltip = succubus_blackmail.1120.a.tt
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = dismissive_opinion
@@ -160,10 +160,10 @@ deviants_blackmail.1120 = {
 }
 
 #1200 he comes to you in public, ass slap and grope, holding you still with the free hand, from your clothes, nobody else is seeing it... agree to pay, favor hook, or fuck in some semi public location
-deviants_blackmail.1200 = {
+succubus_blackmail.1200 = {
 	type = character_event
-	title = deviants_blackmail.1200.t
-	desc = deviants_blackmail.1200.desc
+	title = succubus_blackmail.1200.t
+	desc = succubus_blackmail.1200.desc
 	theme = party
 	right_portrait = {
 		character = root
@@ -174,7 +174,7 @@ deviants_blackmail.1200 = {
 		animation = scheme
 	}
 	trigger = {
-		has_trait = deviants_succubus
+		has_trait = succubus
 		is_female = yes
 		any_vassal = {
 			is_female = no
@@ -200,12 +200,12 @@ deviants_blackmail.1200 = {
 	}
 	# let him keep groping you for a discount, some notice odd behavior even as he tries to avoid it
 	option = {
-		name = deviants_blackmail.1200.a
-		custom_tooltip = deviants_blackmail.1200.a.tt
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_loss
-			sadistic = minor_stress_impact_gain
+		name = succubus_blackmail.1200.a
+		custom_tooltip = succubus_blackmail.1200.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_loss
+			sadistic = minor_stresuccubus_impact_gain
 		}
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
@@ -218,17 +218,17 @@ deviants_blackmail.1200 = {
 			opinion = -10
 		}
 		scope:deviant_go_random_1 = {
-			stress_impact = {
-				base = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
 			}
 			add_piety = minor_piety_loss
 		}
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
@@ -236,8 +236,8 @@ deviants_blackmail.1200 = {
 	}
 	# just pay the gold
 	option = {
-		name = deviants_blackmail.1200.b
-		custom_tooltip = deviants_blackmail.1200.b.tt
+		name = succubus_blackmail.1200.b
+		custom_tooltip = succubus_blackmail.1200.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = major_gold_value
@@ -245,16 +245,16 @@ deviants_blackmail.1200 = {
 	}
 	# Command him to stop, get rumors spread...
 	option = {
-		name = deviants_blackmail.1200.c
-		custom_tooltip = deviants_blackmail.1200.c.tt
+		name = succubus_blackmail.1200.c
+		custom_tooltip = succubus_blackmail.1200.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = -1
 			}
@@ -262,17 +262,17 @@ deviants_blackmail.1200 = {
 	}
 	# agree to fuck
 	option = {
-		name = deviants_blackmail.1200.d
-		custom_tooltip = deviants_blackmail.1200.d.tt
-		trigger_event = deviants_blackmail.1201
+		name = succubus_blackmail.1200.d
+		custom_tooltip = succubus_blackmail.1200.d.tt
+		trigger_event = succubus_blackmail.1201
 	}
 }
 
 #1201 doggy under the table, sadistic can't undertand why she has not executed him yet...
-deviants_blackmail.1201 = {
+succubus_blackmail.1201 = {
 	type = character_event
-	title = deviants_blackmail.1201.t
-	desc = deviants_blackmail.1201.desc
+	title = succubus_blackmail.1201.t
+	desc = succubus_blackmail.1201.desc
 	theme = party
 	right_portrait = {
 		character = root
@@ -285,12 +285,12 @@ deviants_blackmail.1201 = {
 	}
 	# beg him to accept gold instead, so he cums on your clothes instead
 	option = {
-		name = deviants_blackmail.1201.a
-		custom_tooltip = deviants_blackmail.1201.a.tt
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_loss
-			sadistic = minor_stress_impact_gain
+		name = succubus_blackmail.1201.a
+		custom_tooltip = succubus_blackmail.1201.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_loss
+			sadistic = minor_stresuccubus_impact_gain
 		}
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
@@ -302,29 +302,29 @@ deviants_blackmail.1201 = {
 			opinion = -20
 		}
 		scope:deviant_go_random_1 = {
-			stress_impact = {
-				base = minor_stress_impact_loss
-				lustful = minor_stress_impact_loss
-				sadistic = minor_stress_impact_loss
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				lustful = minor_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_loss
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_body_cum days = 20 }
+			add_character_flag = { flag = succubus_body_cum days = 20 }
 		}
 	}
 	# just give the major hook, and he won't even cum and leaves
 	option = {
-		name = deviants_blackmail.1201.b
-		custom_tooltip = deviants_blackmail.1201.b.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = minor_stress_impact_gain
-			sadistic = minor_stress_impact_gain
+		name = succubus_blackmail.1201.b
+		custom_tooltip = succubus_blackmail.1201.b.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = minor_stresuccubus_impact_gain
+			sadistic = minor_stresuccubus_impact_gain
 		}
 		scope:deviant_go_random_1 = {
 			add_hook = {
@@ -335,12 +335,12 @@ deviants_blackmail.1201 = {
 	}
 	# refuse, he cum in
 	option = {
-		name = deviants_blackmail.1201.c
-		custom_tooltip = deviants_blackmail.1201.c.tt
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = major_stress_impact_loss
-			sadistic = medium_stress_impact_gain
+		name = succubus_blackmail.1201.c
+		custom_tooltip = succubus_blackmail.1201.c.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = major_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -348,34 +348,34 @@ deviants_blackmail.1201 = {
 			opinion = 10
 		}
 		scope:deviant_go_random_1 = {
-			stress_impact = {
-				base = medium_stress_impact_loss
-				lustful = medium_stress_impact_loss
-				sadistic = medium_stress_impact_loss
+			stresuccubus_impact = {
+				base = medium_stresuccubus_impact_loss
+				lustful = medium_stresuccubus_impact_loss
+				sadistic = medium_stresuccubus_impact_loss
 			}
 		}
-		trigger_event = deviants_blackmail.1110
+		trigger_event = succubus_blackmail.1110
 		buy_sex_with_effect = {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 20 }
+			add_character_flag = { flag = succubus_pussy_cum days = 20 }
 		}
 		ai_chance = { base = 100 }
 	}
 }
 
 #1300 inviting to be party decoration or pay major gold or favor hook
-deviants_blackmail.1300 = {
+succubus_blackmail.1300 = {
 	type = character_event
-	title = deviants_blackmail.1300.t
-	desc = deviants_blackmail.1300.desc
+	title = succubus_blackmail.1300.t
+	desc = succubus_blackmail.1300.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -386,7 +386,7 @@ deviants_blackmail.1300 = {
 		animation = scheme
 	}
 	trigger = {
-		has_trait = deviants_succubus
+		has_trait = succubus
 		any_vassal = {
 			is_female = no
 			age >= 18
@@ -411,23 +411,23 @@ deviants_blackmail.1300 = {
 	}
 	# attend
 	option = {
-		name = deviants_blackmail.1300.a
-		custom_tooltip = deviants_blackmail.1300.a.tt
-		trigger_event = deviants_blackmail.1301
+		name = succubus_blackmail.1300.a
+		custom_tooltip = succubus_blackmail.1300.a.tt
+		trigger_event = succubus_blackmail.1301
 		ai_chance = { base = 100 }
 	}
 	# pay gold and apoligies on your knees for not attending the party...
 	option = {
-		name = deviants_blackmail.1300.b
-		custom_tooltip = deviants_blackmail.1300.b.tt
+		name = succubus_blackmail.1300.b
+		custom_tooltip = succubus_blackmail.1300.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
 		}
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_loss
-			sadistic = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -436,7 +436,7 @@ deviants_blackmail.1300 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -444,16 +444,16 @@ deviants_blackmail.1300 = {
 	}
 	# ignore, get rumors spread...
 	option = {
-		name = deviants_blackmail.1300.c
-		custom_tooltip = deviants_blackmail.1300.c.tt
+		name = succubus_blackmail.1300.c
+		custom_tooltip = succubus_blackmail.1300.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = -1
 			}
@@ -462,10 +462,10 @@ deviants_blackmail.1300 = {
 }
 
 #1301 being party decor, look-alike head in the middle of a serving table, he claiming you gave permit
-deviants_blackmail.1301 = {
+succubus_blackmail.1301 = {
 	type = character_event
-	title = deviants_blackmail.1301.t
-	desc = deviants_blackmail.1301.desc
+	title = succubus_blackmail.1301.t
+	desc = succubus_blackmail.1301.desc
 	theme = party
 	lower_center_portrait = {
 		character = root
@@ -570,15 +570,15 @@ deviants_blackmail.1301 = {
 	}
 	# endure
 	option = {
-		name = deviants_blackmail.1301.a
-		custom_tooltip = deviants_blackmail.1301.a.tt
+		name = succubus_blackmail.1301.a
+		custom_tooltip = succubus_blackmail.1301.a.tt
 		add_piety = minor_piety_loss
 		add_prestige = minor_prestige_loss
 		scope:deviant_go_random_1 = {
-			stress_impact = {
-				base = minor_stress_impact_loss
-				lustful = medium_stress_impact_loss
-				sadistic = minor_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				lustful = medium_stresuccubus_impact_loss
+				sadistic = minor_stresuccubus_impact_gain
 			}
 			add_prestige = medium_prestige_gain
 			add_gold = minor_gold_value
@@ -589,23 +589,23 @@ deviants_blackmail.1301 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_ass_cum days = 20 }
-			add_character_flag = { flag = deviants_body_cum days = 20 }
-			add_character_flag = { flag = deviants_pussy_cum days = 20 }
-			add_character_flag = { flag = deviants_face_cum days = 20 }
+			add_character_flag = { flag = succubus_asuccubus_cum days = 20 }
+			add_character_flag = { flag = succubus_body_cum days = 20 }
+			add_character_flag = { flag = succubus_pussy_cum days = 20 }
+			add_character_flag = { flag = succubus_face_cum days = 20 }
 		}
 	}
 }
 
 #1400 if both unmarried, forcing you to marry him...  refusing drops by 20 exp? pay massive gold? and suck his cock
-deviants_blackmail.1400 = {
+succubus_blackmail.1400 = {
 	type = character_event
-	title = deviants_blackmail.1400.t
-	desc = deviants_blackmail.1400.a.desc
+	title = succubus_blackmail.1400.t
+	desc = succubus_blackmail.1400.a.desc
 	override_background = { reference = council_chamber }
 	theme = seduction
 	right_portrait = {
@@ -617,7 +617,6 @@ deviants_blackmail.1400 = {
 		animation = scheme
 	}
 	trigger = {
-		has_character_modifier = deviants_slave
 		is_female = yes
 		is_married = no
 		can_marry_trigger = yes
@@ -670,8 +669,8 @@ deviants_blackmail.1400 = {
 	# agree to marry
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_blackmail.1400.a
-		custom_tooltip = deviants_blackmail.1400.a.tt
+		name = succubus_blackmail.1400.a
+		custom_tooltip = succubus_blackmail.1400.a.tt
 		marry = scope:deviant_go_random_1
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -682,17 +681,17 @@ deviants_blackmail.1400 = {
 	}
 	# pay gold and beg on your knees to marry matrilinearily
 	option = {
-		name = deviants_blackmail.1400.b
-		custom_tooltip = deviants_blackmail.1400.b.tt
+		name = succubus_blackmail.1400.b
+		custom_tooltip = succubus_blackmail.1400.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = massive_gold_value
 		}
 		marry_matrilineal = scope:deviant_go_random_1
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = major_stress_impact_loss
-			sadistic = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = major_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -702,23 +701,23 @@ deviants_blackmail.1400 = {
 	}
 	# ignore, get rumors spread...
 	option = {
-		name = deviants_blackmail.1400.c
-		custom_tooltip = deviants_blackmail.1400.c.tt
+		name = succubus_blackmail.1400.c
+		custom_tooltip = succubus_blackmail.1400.c.tt
 		add_piety = massive_piety_loss
 		add_prestige = massive_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 	}
 	# beg to be his sex toy instead
 	option = {
-		name = deviants_blackmail.1400.d
-		custom_tooltip = deviants_blackmail.1400.d.tt
+		name = succubus_blackmail.1400.d
+		custom_tooltip = succubus_blackmail.1400.d.tt
 		set_relation_lover = {
 			reason = lover_shared_deviancy
 			target = scope:deviant_go_random_1
 		}
-		trigger_event = deviants_blackmail.1110
+		trigger_event = succubus_blackmail.1110
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = disgusted_opinion
@@ -727,10 +726,10 @@ deviants_blackmail.1400 = {
 	}
 }
 #2000 if you have spouse, getting groped while spouse in the feast, to make him stop, pay or go fuck or major hook
-deviants_blackmail.2000 = {
+succubus_blackmail.2000 = {
 	type = character_event
-	title = deviants_blackmail.2000.t
-	desc = deviants_blackmail.2000.a.desc
+	title = succubus_blackmail.2000.t
+	desc = succubus_blackmail.2000.a.desc
 	override_background = { reference = feast }
 	theme = diplomacy
 	right_portrait = {
@@ -746,7 +745,6 @@ deviants_blackmail.2000 = {
 		animation = scheme
 	}
 	trigger = {
-		has_character_modifier = deviants_slave
 		is_female = yes
 		is_married = yes
 		primary_spouse = {
@@ -803,16 +801,16 @@ deviants_blackmail.2000 = {
 	# let him grope, while you are talking to your spouse
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2000.a
-		custom_tooltip = deviants_blackmail.2000.a.tt
+		name = succubus_blackmail.2000.a
+		custom_tooltip = succubus_blackmail.2000.a.tt
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = amused_opinion
 			opinion = 10
 		}
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = minor_stress_impact_loss
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = minor_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -821,7 +819,7 @@ deviants_blackmail.2000 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 1
 			}
@@ -831,27 +829,27 @@ deviants_blackmail.2000 = {
 	# agree to go do sex in the council chamber
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2000.b
-		custom_tooltip = deviants_blackmail.2000.b.tt
+		name = succubus_blackmail.2000.b
+		custom_tooltip = succubus_blackmail.2000.b.tt
 		hidden_effect = {
 			random_list = {
-				50 = { trigger_event = deviants_blackmail.2010 }
-				50 = { trigger_event = deviants_blackmail.2020 }
+				50 = { trigger_event = succubus_blackmail.2010 }
+				50 = { trigger_event = succubus_blackmail.2020 }
 			}
 		}
 	}
 	# Get up and leave.
 	option = {
-		name = deviants_blackmail.2000.c
-		custom_tooltip = deviants_blackmail.2000.c.tt
+		name = succubus_blackmail.2000.c
+		custom_tooltip = succubus_blackmail.2000.c.tt
 		add_piety = massive_piety_loss
 		add_prestige = massive_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = -2
 			}
@@ -860,12 +858,12 @@ deviants_blackmail.2000 = {
 	# grope him back... until he cums
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2000.d
-		custom_tooltip = deviants_blackmail.2000.d.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_loss
-			sadistic = medium_stress_impact_loss
+		name = succubus_blackmail.2000.d
+		custom_tooltip = succubus_blackmail.2000.d.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_loss
 		}
 		add_piety = medium_piety_loss
 		reverse_add_opinion = {
@@ -879,15 +877,15 @@ deviants_blackmail.2000 = {
 			opinion = -20
 		}
 		scope:deviant_go_random_1 = {
-			stress_impact = {
-				base = minor_stress_impact_loss
-				lustful = medium_stress_impact_loss
-				chaste = minor_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				lustful = medium_stresuccubus_impact_loss
+				chaste = minor_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
@@ -896,10 +894,10 @@ deviants_blackmail.2000 = {
 }
 
 #2010 if went to fuck, he visible and you sucking his cock while spouse follows to the office room, he sitting on your chair, you under it doing the deed, he gripping your hair with one hand, spuse wnats him to leave with him... not proper to sit there...
-deviants_blackmail.2010 = {
+succubus_blackmail.2010 = {
 	type = character_event
-	title = deviants_blackmail.2010.t
-	desc = deviants_blackmail.2010.a.desc
+	title = succubus_blackmail.2010.t
+	desc = succubus_blackmail.2010.a.desc
 	override_background = { reference = council_chamber }
 	theme = diplomacy
 	right_portrait = {
@@ -917,13 +915,13 @@ deviants_blackmail.2010 = {
 	# suck as fast as you can
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2010.a
-		custom_tooltip = deviants_blackmail.2010.a.tt
+		name = succubus_blackmail.2010.a
+		custom_tooltip = succubus_blackmail.2010.a.tt
 		add_prestige = minor_prestige_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = minor_stress_impact_loss
-			sadistic = minor_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = minor_stresuccubus_impact_loss
+			sadistic = minor_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -932,16 +930,16 @@ deviants_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = deviants_face_cum days = 15 }
+			add_character_flag = { flag = succubus_face_cum days = 15 }
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -953,12 +951,12 @@ deviants_blackmail.2010 = {
 	# tell the husband it's fine and keep sucking...
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2010.b
-		custom_tooltip = deviants_blackmail.2010.b.tt
+		name = succubus_blackmail.2010.b
+		custom_tooltip = succubus_blackmail.2010.b.tt
 		add_piety = medium_piety_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = major_stress_impact_loss
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = major_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -972,25 +970,25 @@ deviants_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = deviants_face_cum days = 15 }
+			add_character_flag = { flag = succubus_face_cum days = 15 }
 		}
 	}
 	# I can't do this, get out...
 	option = {
-		name = deviants_blackmail.2010.c
-		custom_tooltip = deviants_blackmail.2010.c.tt
+		name = succubus_blackmail.2010.c
+		custom_tooltip = succubus_blackmail.2010.c.tt
 		add_piety = minor_piety_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -999,7 +997,7 @@ deviants_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = -1
 			}
@@ -1008,12 +1006,12 @@ deviants_blackmail.2010 = {
 	# take your time and keep sucking after he cums
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2010.d
-		custom_tooltip = deviants_blackmail.2010.d.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = major_stress_impact_loss
-			sadistic = medium_stress_impact_loss
+		name = succubus_blackmail.2010.d
+		custom_tooltip = succubus_blackmail.2010.d.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = major_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_loss
 		}
 		add_prestige = minor_prestige_loss
 		reverse_add_opinion = {
@@ -1028,25 +1026,25 @@ deviants_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_face_cum days = 15 }
-			add_character_flag = { flag = deviants_body_cum days = 15 }
+			add_character_flag = { flag = succubus_face_cum days = 15 }
+			add_character_flag = { flag = succubus_body_cum days = 15 }
 		}
 	}
 }
 #2020 if went to fuck, you speaking to spouse while being fucked against the door...
-deviants_blackmail.2020 = {
+succubus_blackmail.2020 = {
 	type = character_event
-	title = deviants_blackmail.2020.t
-	desc = deviants_blackmail.2020.a.desc
+	title = succubus_blackmail.2020.t
+	desc = succubus_blackmail.2020.a.desc
 	override_background = { reference = council_chamber }
 	theme = diplomacy
 	left_portrait = {
@@ -1065,11 +1063,11 @@ deviants_blackmail.2020 = {
 	# let him cum in...
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2020.a
-		custom_tooltip = deviants_blackmail.2020.a.tt
-		trigger_event = deviants_blackmail.1110
-		stress_impact = {
-			base = medium_stress_impact_gain
+		name = succubus_blackmail.2020.a
+		custom_tooltip = succubus_blackmail.2020.a.tt
+		trigger_event = succubus_blackmail.1110
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -1078,16 +1076,16 @@ deviants_blackmail.2020 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1098,12 +1096,12 @@ deviants_blackmail.2020 = {
 	}
 	# tell the husband how you are being fucked against the door, and you love it
 	option = {
-		name = deviants_blackmail.2020.b
-		custom_tooltip = deviants_blackmail.2020.b.tt
+		name = succubus_blackmail.2020.b
+		custom_tooltip = succubus_blackmail.2020.b.tt
 		add_piety = medium_piety_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = major_stress_impact_loss
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = major_stresuccubus_impact_loss
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1117,25 +1115,25 @@ deviants_blackmail.2020 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 		}
 	}
 	# I can't do this, get out...
 	option = {
-		name = deviants_blackmail.2020.c
-		custom_tooltip = deviants_blackmail.2020.c.tt
+		name = succubus_blackmail.2020.c
+		custom_tooltip = succubus_blackmail.2020.c.tt
 		add_piety = major_piety_loss
-		stress_impact = {
-			base = major_stress_impact_gain
+		stresuccubus_impact = {
+			base = major_stresuccubus_impact_gain
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1145,7 +1143,7 @@ deviants_blackmail.2020 = {
 		scope:deviant_go_random_1 = {
 			hidden_effect = {
 				add_trait_xp = {
-					trait = deviants_succubus
+					trait = succubus
 					track = corruption
 					value = -1
 				}
@@ -1155,12 +1153,12 @@ deviants_blackmail.2020 = {
 	# talk to your husband as much as possible to keep him there as you fuck, and slip the cock in your ass
 	option = {
 		ai_chance = { base = 80 }
-		name = deviants_blackmail.2020.d
-		custom_tooltip = deviants_blackmail.2020.d.tt
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = major_stress_impact_loss
-			sadistic = medium_stress_impact_loss
+		name = succubus_blackmail.2020.d
+		custom_tooltip = succubus_blackmail.2020.d.tt
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = major_stresuccubus_impact_loss
+			sadistic = medium_stresuccubus_impact_loss
 		}
 		add_prestige = minor_prestige_loss
 		reverse_add_opinion = {
@@ -1174,24 +1172,24 @@ deviants_blackmail.2020 = {
 			opinion = 40
 		}
 		scope:deviant_go_random_1 = {
-			stress_impact = {
-				base = minor_stress_impact_loss
-				lustful = medium_stress_impact_loss
-				chaste = minor_stress_impact_gain
+			stresuccubus_impact = {
+				base = minor_stresuccubus_impact_loss
+				lustful = medium_stresuccubus_impact_loss
+				chaste = minor_stresuccubus_impact_gain
 			}
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 		}
 	}
 }

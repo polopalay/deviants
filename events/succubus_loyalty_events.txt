@@ -1,16 +1,16 @@
-namespace = deviants_loyalty
+namespace = succubus_loyalty
 
-deviants_loyalty.8000 = {
+succubus_loyalty.8000 = {
 	type = character_event
-	title = deviants_loyalty.8000.t
-	desc = deviants_loyalty.8000.a.desc
+	title = succubus_loyalty.8000.t
+	desc = succubus_loyalty.8000.a.desc
 	theme = court
 	right_portrait = {
 		character = root
 		animation = shock
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 		outfit_tags = { military_outfit }
 	}
@@ -24,37 +24,37 @@ deviants_loyalty.8000 = {
 		}
 		NOR = {
 			has_nickname = nickname_the_ladycow
-			has_character_modifier = deviants_slave
+			has_character_flag = slave
 		}
 	}
 	immediate = {
 		random_knight = {
-			save_scope_as = deviants_loyalty_random_1
+			save_scope_as = succubus_loyalty_random_1
 			limit = { is_adult = yes is_female = no }
 		}
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8000.a
-		custom_tooltip = deviants_loyalty.8000.a.tt
-		trigger_event = deviants_loyalty.8001
+		name = succubus_loyalty.8000.a
+		custom_tooltip = succubus_loyalty.8000.a.tt
+		trigger_event = succubus_loyalty.8001
 	}
 	option = {
-		name = deviants_loyalty.8000.b
-		custom_tooltip = deviants_loyalty.8000.b.tt
+		name = succubus_loyalty.8000.b
+		custom_tooltip = succubus_loyalty.8000.b.tt
 		remove_short_term_gold = massive_gold_value
 	}
 	option = {
-		name = deviants_loyalty.8000.c
-		custom_tooltip = deviants_loyalty.8000.c.tt
+		name = succubus_loyalty.8000.c
+		custom_tooltip = succubus_loyalty.8000.c.tt
 		death = { death_reason = death_vanished }
 	}
 }
 
-deviants_loyalty.8001 = {
+succubus_loyalty.8001 = {
 	type = character_event
-	title = deviants_loyalty.8001.t
-	desc = deviants_loyalty.8001.a.desc
+	title = succubus_loyalty.8001.t
+	desc = succubus_loyalty.8001.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -62,21 +62,21 @@ deviants_loyalty.8001 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 	}
 	option = {
-		name = deviants_loyalty.8001.a
-		custom_tooltip = deviants_loyalty.8001.a.tt
-		trigger_event = deviants_loyalty.8002
+		name = succubus_loyalty.8001.a
+		custom_tooltip = succubus_loyalty.8001.a.tt
+		trigger_event = succubus_loyalty.8002
 	}
 }
 
 #8002 fuck first guy
-deviants_loyalty.8002 = {
+succubus_loyalty.8002 = {
 	type = character_event
-	title = deviants_loyalty.8002.t
-	desc = deviants_loyalty.8002.a.desc
+	title = succubus_loyalty.8002.t
+	desc = succubus_loyalty.8002.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -84,31 +84,31 @@ deviants_loyalty.8002 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_randoman_1
+		character = scope:succubus_randoman_1
 		animation = scheme
 	}
 	immediate = {
 		random_knight = {
 			limit = { is_adult = yes is_female = no }
-			save_scope_as = deviants_randoman_1
+			save_scope_as = succubus_randoman_1
 		}
 	}
 	option = {
-		name = deviants_loyalty.8002.a
-		custom_tooltip = deviants_loyalty.8002.a.tt
+		name = succubus_loyalty.8002.a
+		custom_tooltip = succubus_loyalty.8002.a.tt
 		buy_sex_with_effect = {
-			CHARACTER = scope:deviants_randoman_1
+			CHARACTER = scope:succubus_randoman_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
-		trigger_event = deviants_loyalty.8003
+		trigger_event = succubus_loyalty.8003
 	}
 }
 
 #8003 mating press on the throne by a disfigured man
-deviants_loyalty.8003 = {
+succubus_loyalty.8003 = {
 	type = character_event
-	title = deviants_loyalty.8003.t
-	desc = deviants_loyalty.8003.a.desc
+	title = succubus_loyalty.8003.t
+	desc = succubus_loyalty.8003.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -116,31 +116,31 @@ deviants_loyalty.8003 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_randoman_1
+		character = scope:succubus_randoman_1
 		animation = scheme
 	}
 	immediate = {
 		random_knight = {
 			limit = { is_adult = yes is_female = no }
-			save_scope_as = deviants_randoman_1
+			save_scope_as = succubus_randoman_1
 		}
 	}
 	option = {
-		name = deviants_loyalty.8003.a
-		custom_tooltip = deviants_loyalty.8003.a.tt
+		name = succubus_loyalty.8003.a
+		custom_tooltip = succubus_loyalty.8003.a.tt
 		buy_sex_with_effect = {
-			CHARACTER = scope:deviants_randoman_1
+			CHARACTER = scope:succubus_randoman_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
-		trigger_event = deviants_loyalty.8004
+		trigger_event = succubus_loyalty.8004
 	}
 }
 
 #8004
-deviants_loyalty.8004 = {
+succubus_loyalty.8004 = {
 	type = character_event
-	title = deviants_loyalty.8004.t
-	desc = deviants_loyalty.8004.a.desc
+	title = succubus_loyalty.8004.t
+	desc = succubus_loyalty.8004.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -148,22 +148,22 @@ deviants_loyalty.8004 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 	}
 	option = {
-		name = deviants_loyalty.8004.a
-		custom_tooltip = deviants_loyalty.8004.a.tt
-		trigger_event = deviants_loyalty.8005
+		name = succubus_loyalty.8004.a
+		custom_tooltip = succubus_loyalty.8004.a.tt
+		trigger_event = succubus_loyalty.8005
 	}
 
 }
 
 #8005 gangbang
-deviants_loyalty.8005 = {
+succubus_loyalty.8005 = {
 	type = character_event
-	title = deviants_loyalty.8005.t
-	desc = deviants_loyalty.8005.a.desc
+	title = succubus_loyalty.8005.t
+	desc = succubus_loyalty.8005.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -171,12 +171,12 @@ deviants_loyalty.8005 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 	}
 	option = {
-		name = deviants_loyalty.8005.a
-		custom_tooltip = deviants_loyalty.8005.a.tt
+		name = succubus_loyalty.8005.a
+		custom_tooltip = succubus_loyalty.8005.a.tt
 		every_knight = {
 			add_opinion = {
 				target = root
@@ -184,18 +184,18 @@ deviants_loyalty.8005 = {
 				opinion = 20
 			}
 			buy_sex_with_effect = {
-				CHARACTER = scope:deviants_randoman_1
+				CHARACTER = scope:succubus_randoman_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
 		}
-		trigger_event = deviants_loyalty.8006
+		trigger_event = succubus_loyalty.8006
 	}
 }
 
-deviants_loyalty.8006 = {
+succubus_loyalty.8006 = {
 	type = character_event
-	title = deviants_loyalty.8006.t
-	desc = deviants_loyalty.8006.a.desc
+	title = succubus_loyalty.8006.t
+	desc = succubus_loyalty.8006.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -203,23 +203,23 @@ deviants_loyalty.8006 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 	}
 	option = {
-		name = deviants_loyalty.8006.a
-		custom_tooltip = deviants_loyalty.8006.a.tt
-		add_character_modifier = deviants_slave
+		name = succubus_loyalty.8006.a
+		custom_tooltip = succubus_loyalty.8006.a.tt
+		add_character_flag = slave
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
-			add_character_flag = { flag = deviants_face_cum months = 1 }
-			add_character_flag = { flag = deviants_body_cum months = 1 }
-			add_character_flag = { flag = deviants_ass_cum months = 1 }
-			add_character_flag = { flag = deviants_pussy_cum months = 1 }
+			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = succubus_body_cum months = 1 }
+			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
 			every_knight = {
 				limit = { is_ruler = yes is_female = no age >16 }
 				start_promote_lew_legend = yes
@@ -229,22 +229,22 @@ deviants_loyalty.8006 = {
 }
 
 #8099 initial request event
-deviants_loyalty.8099 = {
+succubus_loyalty.8099 = {
 	type = character_event
-	title = deviants_loyalty.8099.t
-	desc = deviants_loyalty.8099.a.desc
+	title = succubus_loyalty.8099.t
+	desc = succubus_loyalty.8099.a.desc
 	theme = court
 	right_portrait = {
 		character = root
 		animation = shame
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = chancellor
 	}
 	trigger = {
 		has_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = loyalty
 			value >= 1
 		}
@@ -256,58 +256,58 @@ deviants_loyalty.8099 = {
 			is_female = no
 		}
 		OR = {
-			has_character_modifier = deviants_slave
+			has_character_flag = slave
 			has_nickname = nickname_the_ladycow
 		}
 	}
 	immediate = {
 		random_knight = {
-			save_scope_as = deviants_loyalty_random_1
+			save_scope_as = succubus_loyalty_random_1
 			limit = { is_adult = yes is_female = no }
 		}
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8099.a
-		custom_tooltip = deviants_loyalty.8099.a.tt
+		name = succubus_loyalty.8099.a
+		custom_tooltip = succubus_loyalty.8099.a.tt
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = deviants_loyalty.8100 }
-				10 = { trigger_event = deviants_loyalty.8101 }
-				10 = { trigger_event = deviants_loyalty.8102 }
+				10 = { trigger_event = succubus_loyalty.8100 }
+				10 = { trigger_event = succubus_loyalty.8101 }
+				10 = { trigger_event = succubus_loyalty.8102 }
 			}
 		}
 	}
 	option = {
-		name = deviants_loyalty.8099.b
-		custom_tooltip = deviants_loyalty.8099.b.tt
+		name = succubus_loyalty.8099.b
+		custom_tooltip = succubus_loyalty.8099.b.tt
 		remove_short_term_gold = minor_gold_value
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 	}
 	option = {
-		name = deviants_loyalty.8099.c
-		custom_tooltip = deviants_loyalty.8099.c.tt
+		name = succubus_loyalty.8099.c
+		custom_tooltip = succubus_loyalty.8099.c.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = -5
 			}
 		}
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 	}
 }
 
-deviants_loyalty.8100 = {
+succubus_loyalty.8100 = {
 	type = character_event
-	title = deviants_loyalty.8100.t
-	desc = deviants_loyalty.8100.a.desc
+	title = succubus_loyalty.8100.t
+	desc = succubus_loyalty.8100.a.desc
 	theme = realm
 	right_portrait = {
 		character = root
@@ -315,14 +315,14 @@ deviants_loyalty.8100 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = chancellor
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8100.a
-		custom_tooltip = deviants_loyalty.8100.a.tt
-		scope:deviants_loyalty_random_1 = {
+		name = succubus_loyalty.8100.a
+		custom_tooltip = succubus_loyalty.8100.a.tt
+		scope:succubus_loyalty_random_1 = {
 			add_opinion = {
 				target = root
 				modifier = amused_opinion
@@ -330,25 +330,25 @@ deviants_loyalty.8100 = {
 			}
 			start_promote_lew_legend = yes
 		}
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 	}
 	option = {
-		name = deviants_loyalty.8100.b
-		custom_tooltip = deviants_loyalty.8100.b.tt
-		add_character_flag = { flag = deviants_ass_cum days = 15 }
-		add_character_flag = { flag = deviants_pussy_cum days = 15 }
+		name = succubus_loyalty.8100.b
+		custom_tooltip = succubus_loyalty.8100.b.tt
+		add_character_flag = { flag = succubus_asuccubus_cum days = 15 }
+		add_character_flag = { flag = succubus_pussy_cum days = 15 }
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
 		}
 		buy_sex_with_effect = {
-			CHARACTER = scope:deviants_loyalty_random_1
+			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
@@ -356,10 +356,10 @@ deviants_loyalty.8100 = {
 
 
 #8101 gangbang on the throne, important foreign envoy insists seeing you
-deviants_loyalty.8101 = {
+succubus_loyalty.8101 = {
 	type = character_event
-	title = deviants_loyalty.8101.t
-	desc = deviants_loyalty.8101.a.desc
+	title = succubus_loyalty.8101.t
+	desc = succubus_loyalty.8101.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -367,36 +367,36 @@ deviants_loyalty.8101 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = chancellor
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8101.a
-		custom_tooltip = deviants_loyalty.8101.a.tt
+		name = succubus_loyalty.8101.a
+		custom_tooltip = succubus_loyalty.8101.a.tt
 		add_piety = medium_piety_loss
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
-			add_character_flag = { flag = deviants_ass_cum days = 15 }
+			add_character_flag = { flag = succubus_asuccubus_cum days = 15 }
 		}
 		buy_sex_with_effect = {
-			CHARACTER = scope:deviants_loyalty_random_1
+			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
 	option = {
-		name = deviants_loyalty.8101.b
-		custom_tooltip = deviants_loyalty.8101.b.tt
-		scope:deviants_loyalty_random_1 = {
+		name = succubus_loyalty.8101.b
+		custom_tooltip = succubus_loyalty.8101.b.tt
+		scope:succubus_loyalty_random_1 = {
 			start_promote_lew_legend = yes
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = -1
 			}
@@ -404,29 +404,29 @@ deviants_loyalty.8101 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8101.c
-		custom_tooltip = deviants_loyalty.8101.c.tt
+		name = succubus_loyalty.8101.c
+		custom_tooltip = succubus_loyalty.8101.c.tt
 		add_prestige = minor_prestige_loss
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
-			add_character_flag = { flag = deviants_pussy_cum days = 15 }
+			add_character_flag = { flag = succubus_pussy_cum days = 15 }
 		}
 		buy_sex_with_effect = {
-			CHARACTER = scope:deviants_loyalty_random_1
+			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
 }
 
 #8102 bound and fucked the whole day in the barracks, then just left there, gagged while the men sleep
-deviants_loyalty.8102 = {
+succubus_loyalty.8102 = {
 	type = character_event
-	title = deviants_loyalty.8102.t
-	desc = deviants_loyalty.8102.a.desc
+	title = succubus_loyalty.8102.t
+	desc = succubus_loyalty.8102.a.desc
 	theme = martial
 	right_portrait = {
 		character = root
@@ -434,26 +434,26 @@ deviants_loyalty.8102 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = deviants_loyalty.8102.a
-		custom_tooltip = deviants_loyalty.8102.a.tt
+		name = succubus_loyalty.8102.a
+		custom_tooltip = succubus_loyalty.8102.a.tt
 		buy_sex_with_effect = {
-			CHARACTER = scope:deviants_loyalty_random_1
+			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
-		scope:deviants_loyalty_random_1 = {
+		scope:succubus_loyalty_random_1 = {
 			start_promote_lew_legend = yes
 		}
 	}
 	option = {
-		name = deviants_loyalty.8102.b
-		custom_tooltip = deviants_loyalty.8102.b.tt
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		name = succubus_loyalty.8102.b
+		custom_tooltip = succubus_loyalty.8102.b.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
@@ -462,10 +462,10 @@ deviants_loyalty.8102 = {
 }
 
 #8200 first time greeting new recruits
-deviants_loyalty.8200 = {
+succubus_loyalty.8200 = {
 	type = character_event
-	title = deviants_loyalty.8200.t
-	desc = deviants_loyalty.8200.a.desc
+	title = succubus_loyalty.8200.t
+	desc = succubus_loyalty.8200.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	trigger = {
@@ -478,7 +478,7 @@ deviants_loyalty.8200 = {
 		}
 		OR = {
 			has_nickname = nickname_the_ladycow
-			has_character_modifier = deviants_slave
+			has_character_flag = slave
 		}
 	}
 	right_portrait = {
@@ -502,15 +502,15 @@ deviants_loyalty.8200 = {
 	# fine
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8200.a
-		custom_tooltip = deviants_loyalty.8200.a.tt
+		name = succubus_loyalty.8200.a
+		custom_tooltip = succubus_loyalty.8200.a.tt
 		add_legitimacy = minor_legitimacy_loss
-		trigger_event = deviants_loyalty.8201
+		trigger_event = succubus_loyalty.8201
 	}
 	# refuse
 	option = {
-		name = deviants_loyalty.8200.b
-		custom_tooltip = deviants_loyalty.8200.b.tt
+		name = succubus_loyalty.8200.b
+		custom_tooltip = succubus_loyalty.8200.b.tt
 		scope:deviant_go_random_1 = {
 			add_opinion = {
 				target = root
@@ -519,12 +519,12 @@ deviants_loyalty.8200 = {
 			}
 		}
 		if = {
-			limit = { has_character_modifier = deviants_slave }
-			remove_character_modifier = deviants_slave
+			limit = { has_character_flag = slave }
+			remove_character_flag = slave
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = -5
 			}
@@ -532,10 +532,10 @@ deviants_loyalty.8200 = {
 	}
 }
 #8201 presenting pussy on the stage
-deviants_loyalty.8201 = {
+succubus_loyalty.8201 = {
 	type = character_event
-	title = deviants_loyalty.8201.t
-	desc = deviants_loyalty.8201.a.desc
+	title = succubus_loyalty.8201.t
+	desc = succubus_loyalty.8201.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -550,15 +550,15 @@ deviants_loyalty.8201 = {
 	# constraint
 	option = {
 		ai_chance = { base = 50 }
-		name = deviants_loyalty.8201.a
-		custom_tooltip = deviants_loyalty.8201.a.tt
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		name = succubus_loyalty.8201.a
+		custom_tooltip = succubus_loyalty.8201.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
@@ -567,27 +567,27 @@ deviants_loyalty.8201 = {
 	# outburst
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8201.b
-		custom_tooltip = deviants_loyalty.8201.b.tt
-		trigger_event = deviants_loyalty.8202
-		stress_impact = {
-			base = minor_stress_impact_loss
-			lustful = medium_stress_impact_loss
+		name = succubus_loyalty.8201.b
+		custom_tooltip = succubus_loyalty.8201.b.tt
+		trigger_event = succubus_loyalty.8202
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_loss
+			lustful = medium_stresuccubus_impact_loss
 		}
 		add_legitimacy = medium_legitimacy_loss
 		hidden_effect = {
-			add_character_flag = { flag = deviants_face_cum months = 1 }
-			add_character_flag = { flag = deviants_body_cum months = 1 }
-			add_character_flag = { flag = deviants_pussy_cum months = 1 }
-			add_character_flag = { flag = deviants_ass_cum months = 1 }
+			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = succubus_body_cum months = 1 }
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
 		}
 	}
 }
 #8202 knight shows how you just let him stick it in, in case it was not clear
-deviants_loyalty.8202 = {
+succubus_loyalty.8202 = {
 	type = character_event
-	title = deviants_loyalty.8202.t
-	desc = deviants_loyalty.8202.a.desc
+	title = succubus_loyalty.8202.t
+	desc = succubus_loyalty.8202.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -602,15 +602,15 @@ deviants_loyalty.8202 = {
 	# proceed
 	option = {
 		ai_chance = { base = 50 }
-		name = deviants_loyalty.8202.a
-		custom_tooltip = deviants_loyalty.8202.a.tt
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		name = succubus_loyalty.8202.a
+		custom_tooltip = succubus_loyalty.8202.a.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
@@ -619,27 +619,27 @@ deviants_loyalty.8202 = {
 	# harder
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8202.b
-		custom_tooltip = deviants_loyalty.8202.b.tt
-		trigger_event = deviants_loyalty.8203
+		name = succubus_loyalty.8202.b
+		custom_tooltip = succubus_loyalty.8202.b.tt
+		trigger_event = succubus_loyalty.8203
 		add_legitimacy = minor_legitimacy_loss
 		hidden_effect = {
-			add_character_flag = { flag = deviants_face_cum months = 1 }
-			add_character_flag = { flag = deviants_body_cum months = 1 }
-			add_character_flag = { flag = deviants_pussy_cum months = 1 }
-			add_character_flag = { flag = deviants_ass_cum months = 1 }
+			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = succubus_body_cum months = 1 }
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
 		}
 	}
 	# enough
 	option = {
-		name = deviants_loyalty.8202.c
-		custom_tooltip = deviants_loyalty.8202.c.tt
-		stress_impact = {
-			base = medium_stress_impact_loss
+		name = succubus_loyalty.8202.c
+		custom_tooltip = succubus_loyalty.8202.c.tt
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = -2
 			}
@@ -647,10 +647,10 @@ deviants_loyalty.8202 = {
 	}
 }
 #8203 if ask for harder, hard anal carry fuck to cum
-deviants_loyalty.8203 = {
+succubus_loyalty.8203 = {
 	type = character_event
-	title = deviants_loyalty.8203.t
-	desc = deviants_loyalty.8203.a.desc
+	title = succubus_loyalty.8203.t
+	desc = succubus_loyalty.8203.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -664,17 +664,17 @@ deviants_loyalty.8203 = {
 	}
 	# proceed
 	option = {
-		name = deviants_loyalty.8203.a
-		custom_tooltip = deviants_loyalty.8203.a.tt
-		trigger_event = deviants_loyalty.8204
+		name = succubus_loyalty.8203.a
+		custom_tooltip = succubus_loyalty.8203.a.tt
+		trigger_event = succubus_loyalty.8204
 		add_legitimacy = minor_legitimacy_loss
 	}
 }
 #8204 time to swear oaths, everybody strip, first guy coming to insert and swear and grope
-deviants_loyalty.8204 = {
+succubus_loyalty.8204 = {
 	type = character_event
-	title = deviants_loyalty.8204.t
-	desc = deviants_loyalty.8204.a.desc
+	title = succubus_loyalty.8204.t
+	desc = succubus_loyalty.8204.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -689,27 +689,27 @@ deviants_loyalty.8204 = {
 	#
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8204.a
-		custom_tooltip = deviants_loyalty.8204.a.tt
-		trigger_event = deviants_loyalty.8205
-		stress_impact = {
-			base = minor_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		name = succubus_loyalty.8204.a
+		custom_tooltip = succubus_loyalty.8204.a.tt
+		trigger_event = succubus_loyalty.8205
+		stresuccubus_impact = {
+			base = minor_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 	}
 	#
 	option = {
 		ai_chance = { base = 50 }
-		name = deviants_loyalty.8204.b
-		custom_tooltip = deviants_loyalty.8204.b.tt
-		trigger_event = deviants_loyalty.8207
+		name = succubus_loyalty.8204.b
+		custom_tooltip = succubus_loyalty.8204.b.tt
+		trigger_event = succubus_loyalty.8207
 	}
 }
 #8205 if just stand there, after ten guys
-deviants_loyalty.8205 = {
+succubus_loyalty.8205 = {
 	type = character_event
-	title = deviants_loyalty.8205.t
-	desc = deviants_loyalty.8205.a.desc
+	title = succubus_loyalty.8205.t
+	desc = succubus_loyalty.8205.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -723,23 +723,23 @@ deviants_loyalty.8205 = {
 	}
 	#
 	option = {
-		name = deviants_loyalty.8205.a
-		custom_tooltip = deviants_loyalty.8205.a.tt
-		trigger_event = deviants_loyalty.8206
+		name = succubus_loyalty.8205.a
+		custom_tooltip = succubus_loyalty.8205.a.tt
+		trigger_event = succubus_loyalty.8206
 		hidden_effect = {
-			add_character_flag = { flag = deviants_face_cum months = 3 }
-			add_character_flag = { flag = deviants_body_cum months = 3 }
-			add_character_flag = { flag = deviants_pussy_cum months = 3 }
-			add_character_flag = { flag = deviants_ass_cum months = 3 }
-			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+			add_character_flag = { flag = succubus_face_cum months = 3 }
+			add_character_flag = { flag = succubus_body_cum months = 3 }
+			add_character_flag = { flag = succubus_pussy_cum months = 3 }
+			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
+			add_character_modifier = { modifier = succubus_fuckedsilly months = 3 }
 		}
 	}
 }
 #8206 if just endure, end in pussy throbbing hard
-deviants_loyalty.8206 = {
+succubus_loyalty.8206 = {
 	type = character_event
-	title = deviants_loyalty.8206.t
-	desc = deviants_loyalty.8206.a.desc
+	title = succubus_loyalty.8206.t
+	desc = succubus_loyalty.8206.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -753,20 +753,20 @@ deviants_loyalty.8206 = {
 	}
 	#
 	option = {
-		name = deviants_loyalty.8206.a
-		custom_tooltip = deviants_loyalty.8206.a.tt
+		name = succubus_loyalty.8206.a
+		custom_tooltip = succubus_loyalty.8206.a.tt
 		if = {
 			limit = { NOT = { has_nickname = nickname_the_ladycow } }
 			give_nickname = nickname_the_ladycow
-			remove_character_modifier = deviants_slave
+			remove_character_flag = slave
 		}
 	}
 }
 #8207 if shaking hip, fucking him on the stage
-deviants_loyalty.8207 = {
+succubus_loyalty.8207 = {
 	type = character_event
-	title = deviants_loyalty.8207.t
-	desc = deviants_loyalty.8207.a.desc
+	title = succubus_loyalty.8207.t
+	desc = succubus_loyalty.8207.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -781,23 +781,23 @@ deviants_loyalty.8207 = {
 
 	#
 	option = {
-		name = deviants_loyalty.8207.a
-		custom_tooltip = deviants_loyalty.8207.a.tt
-		trigger_event = deviants_loyalty.8208
+		name = succubus_loyalty.8207.a
+		custom_tooltip = succubus_loyalty.8207.a.tt
+		trigger_event = succubus_loyalty.8208
 	}
 	#
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8207.b
-		custom_tooltip = deviants_loyalty.8207.b.tt
-		trigger_event = deviants_loyalty.8209
+		name = succubus_loyalty.8207.b
+		custom_tooltip = succubus_loyalty.8207.b.tt
+		trigger_event = succubus_loyalty.8209
 	}
 }
 #8208 if shake and cum end, they annoyed for being forced to enter the cum hole, some just leave rather than do it
-deviants_loyalty.8208 = {
+succubus_loyalty.8208 = {
 	type = character_event
-	title = deviants_loyalty.8208.t
-	desc = deviants_loyalty.8208.a.desc
+	title = succubus_loyalty.8208.t
+	desc = succubus_loyalty.8208.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -811,22 +811,22 @@ deviants_loyalty.8208 = {
 	}
 	#
 	option = {
-		name = deviants_loyalty.8208.a
-		custom_tooltip = deviants_loyalty.8208.a.tt
+		name = succubus_loyalty.8208.a
+		custom_tooltip = succubus_loyalty.8208.a.tt
 		hidden_effect = {
-			add_character_flag = { flag = deviants_face_cum months = 3 }
-			add_character_flag = { flag = deviants_body_cum months = 3 }
-			add_character_flag = { flag = deviants_pussy_cum months = 3 }
-			add_character_flag = { flag = deviants_ass_cum months = 3 }
-			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+			add_character_flag = { flag = succubus_face_cum months = 3 }
+			add_character_flag = { flag = succubus_body_cum months = 3 }
+			add_character_flag = { flag = succubus_pussy_cum months = 3 }
+			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
+			add_character_modifier = { modifier = succubus_fuckedsilly months = 3 }
 		}
 	}
 }
 #8209 if won't let them cum
-deviants_loyalty.8209 = {
+succubus_loyalty.8209 = {
 	type = character_event
-	title = deviants_loyalty.8209.t
-	desc = deviants_loyalty.8209.a.desc
+	title = succubus_loyalty.8209.t
+	desc = succubus_loyalty.8209.a.desc
 	theme = realm
 	override_background = { reference = army_camp }
 	right_portrait = {
@@ -840,16 +840,16 @@ deviants_loyalty.8209 = {
 	}
 	#
 	option = {
-		name = deviants_loyalty.8209.a
-		custom_tooltip = deviants_loyalty.8209.a.tt
+		name = succubus_loyalty.8209.a
+		custom_tooltip = succubus_loyalty.8209.a.tt
 		hidden_effect = {
-			add_character_flag = { flag = deviants_face_cum months = 3 }
-			add_character_flag = { flag = deviants_body_cum months = 3 }
-			add_character_flag = { flag = deviants_pussy_cum months = 3 }
-			add_character_flag = { flag = deviants_ass_cum months = 3 }
-			add_character_modifier = { modifier = deviants_fuckedsilly months = 3 }
+			add_character_flag = { flag = succubus_face_cum months = 3 }
+			add_character_flag = { flag = succubus_body_cum months = 3 }
+			add_character_flag = { flag = succubus_pussy_cum months = 3 }
+			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
+			add_character_modifier = { modifier = succubus_fuckedsilly months = 3 }
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyalty
 				value = 1
 			}
@@ -857,17 +857,17 @@ deviants_loyalty.8209 = {
 	}
 }
 
-deviants_loyalty.8900 = {
+succubus_loyalty.8900 = {
 	type = character_event
-	title = deviants_loyalty.8900.t
-	desc = deviants_loyalty.8900.a.desc
+	title = succubus_loyalty.8900.t
+	desc = succubus_loyalty.8900.a.desc
 	theme = court
 	right_portrait = {
 		character = root
 		animation = shock
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 	}
 	trigger = {
@@ -875,7 +875,7 @@ deviants_loyalty.8900 = {
 		is_female = yes
 		age >= 18
 		has_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = loyalty
 			value < 1
 		}
@@ -885,39 +885,39 @@ deviants_loyalty.8900 = {
 		}
 		OR = {
 			has_nickname = nickname_the_ladycow
-			has_character_modifier = deviants_slave
+			has_character_flag = slave
 		}
 	}
 	immediate = {
 		random_knight = {
-			save_scope_as = deviants_loyalty_random_1
+			save_scope_as = succubus_loyalty_random_1
 			limit = { is_adult = yes is_female = no }
 		}
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = deviants_loyalty.8900.a
-		custom_tooltip = deviants_loyalty.8900.a.tt
-		trigger_event = deviants_loyalty.8901
+		name = succubus_loyalty.8900.a
+		custom_tooltip = succubus_loyalty.8900.a.tt
+		trigger_event = succubus_loyalty.8901
 	}
 	option = {
-		name = deviants_loyalty.8900.b
-		custom_tooltip = deviants_loyalty.8900.b.tt
+		name = succubus_loyalty.8900.b
+		custom_tooltip = succubus_loyalty.8900.b.tt
 		remove_short_term_gold = medium_gold_value
 	}
 	option = {
-		name = deviants_loyalty.8900.c
-		custom_tooltip = deviants_loyalty.8900.c.tt
+		name = succubus_loyalty.8900.c
+		custom_tooltip = succubus_loyalty.8900.c.tt
 		death = {
 			death_reason = death_vanished
 		}
 	}
 }
 
-deviants_loyalty.8901 = {
+succubus_loyalty.8901 = {
 	type = character_event
-	title = deviants_loyalty.8901.t
-	desc = deviants_loyalty.8901.a.desc
+	title = succubus_loyalty.8901.t
+	desc = succubus_loyalty.8901.a.desc
 	theme = court
 	right_portrait = {
 		character = root
@@ -925,26 +925,26 @@ deviants_loyalty.8901 = {
 		outfit_tags = { no_clothes }
 	}
 	left_portrait = {
-		character = scope:deviants_loyalty_random_1
+		character = scope:succubus_loyalty_random_1
 		animation = scheme
 	}
 	option = {
-		name = deviants_loyalty.8901.a
-		custom_tooltip = deviants_loyalty.8901.a.tt
+		name = succubus_loyalty.8901.a
+		custom_tooltip = succubus_loyalty.8901.a.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
-		stress_impact = {
-			base = medium_stress_impact_gain
-			lustful = medium_stress_impact_gain
+		stresuccubus_impact = {
+			base = medium_stresuccubus_impact_gain
+			lustful = medium_stresuccubus_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = loyal
 				value = 1
 			}
-			add_character_flag = { flag = deviants_ass_cum days = 10 }
-			add_character_flag = { flag = deviants_pussy_cum days = 10 }
+			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 		}
 	}
 }

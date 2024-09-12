@@ -1,11 +1,11 @@
-deviants_spawn_death_korp = {
-	desc = deviants_spawn_death_korp.desc
-	selection_tooltip = deviants_spawn_death_korp.t
+succubus_spawn_death_korp = {
+	desc = succubus_spawn_death_korp.desc
+	selection_tooltip = succubus_spawn_death_korp.t
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
-	confirm_text = deviants_spawn_death_korp.c
+	confirm_text = succubus_spawn_death_korp.c
 	is_shown = {
 		has_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = loyalty
 			value >= 100
 		}
@@ -13,9 +13,9 @@ deviants_spawn_death_korp = {
 	}
 	effect = {
 		spawn_army = {
-			name = deviants_death_korps
+			name = succubus_death_korps
 			men_at_arms = {
-				type = deviants_death_korps
+				type = succubus_death_korps
 				stacks = 10
 			}
 			location = capital_province
@@ -23,7 +23,7 @@ deviants_spawn_death_korp = {
 			uses_supply = 10
 		}
 		add_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = loyalty
 			value = -100
 		}
@@ -32,14 +32,14 @@ deviants_spawn_death_korp = {
 	ai_will_do = { base = 5 }
 }
 
-deviants_demon_generals = {
-	desc = deviants_demon_generals.desc
+succubus_demon_generals = {
+	desc = succubus_demon_generals.desc
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	confirm_text = deviants_demon_generals.c
-	selection_tooltip = deviants_demon_generals.t
+	confirm_text = succubus_demon_generals.c
+	selection_tooltip = succubus_demon_generals.t
 	is_shown = {
 		has_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = loyalty
 			value >= 100
 		}
@@ -49,11 +49,11 @@ deviants_demon_generals = {
 		every_courtier = {
 			limit = { is_knight = yes }
 			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
-			add_character_modifier = { modifier = deviants_generals years = 13 }
+			add_character_modifier = { modifier = succubus_generals years = 13 }
 		}
-		add_character_modifier = { modifier = deviants_generals years = 13 }
+		add_character_modifier = { modifier = succubus_generals years = 13 }
 		add_trait_xp = {
-			trait = deviants_succubus
+			trait = succubus
 			track = loyalty
 			value = -100
 		}
@@ -62,11 +62,11 @@ deviants_demon_generals = {
 	ai_will_do = { base = 10 }
 }
 
-deviants_become_succubus = {
+succubus_become_succubus = {
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	desc = deviants_become_succubus.desc
-	confirm_text = deviants_become_succubus.c
-	selection_tooltip = deviants_become_succubus.t
+	desc = succubus_become_succubus.desc
+	confirm_text = succubus_become_succubus.c
+	selection_tooltip = succubus_become_succubus.t
 
 	is_shown = {
 		is_ai = no
@@ -74,9 +74,9 @@ deviants_become_succubus = {
 		is_female = yes
 		age >= 18
 		NOR = {
-			has_trait = deviants_succubus
-			has_trait = deviants_lesser_succubus
-			has_trait = deviants_virgin
+			has_trait = succubus
+			has_trait = lesser_succubus
+			has_trait = deviant_virgin
 		}
 	}
 	effect = {
@@ -86,10 +86,9 @@ deviants_become_succubus = {
 			limit = { have_devil_nicknames_trigger = no }
 			give_prostitution_nickname = yes
 		}
-		add_character_modifier = deviants_prostitute
 		mind_break_personality = yes
 		set_immortal_age = 18
-		add_trait = deviants_succubus
+		add_trait = succubus
 	}
 	ai_check_interval = 0
 }

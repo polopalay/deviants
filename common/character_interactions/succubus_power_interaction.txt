@@ -1,18 +1,18 @@
-deavians_dealing_with_stress_interaction = {
+deavians_dealing_with_stresuccubus_interaction = {
 	icon = torment
-	desc = deavians_dealing_with_stress_interaction.desc
+	desc = deavians_dealing_with_stresuccubus_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	is_shown = {
 		scope:actor = {
 			OR = {
 				has_trait_xp = {
-					trait = deviants_succubus
+					trait = succubus
 					track = power
 					value >= 5
 				}
 				has_trait_xp = {
-					trait = deviants_lesser_succubus
+					trait = lesser_succubus
 					value >= 10
 				}
 			}
@@ -30,24 +30,24 @@ deavians_dealing_with_stress_interaction = {
 				has_trait = contrite
 				has_trait = comfort_eater
 				has_trait = inappetetic
-				stress_level >= 1
+				stresuccubus_level >= 1
 			}
 		}
 	}
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = deviants_succubus }
+				limit = { has_trait = succubus }
 				add_trait_xp = {
-					trait = deviants_succubus
+					trait = succubus
 					track = power
 					value = -5
 				}
 			}
 			if = {
-				limit = { has_trait = deviants_lesser_succubus }
+				limit = { has_trait = lesser_succubus }
 				add_trait_xp = {
-					trait = deviants_lesser_succubus
+					trait = lesser_succubus
 					value = -10
 				}
 			}
@@ -71,8 +71,8 @@ deavians_dealing_with_stress_interaction = {
 			remove_trait = contrite
 			remove_trait = comfort_eater
 			remove_trait = inappetetic
-			stress_impact = {
-				base = massive_stress_impact_loss
+			stresuccubus_impact = {
+				base = massive_stresuccubus_impact_loss
 			}
 		}
 	}
@@ -99,9 +99,9 @@ deavians_dealing_with_stress_interaction = {
 
 }
 
-deviants_heal_interaction = {
+succubus_heal_interaction = {
 	icon = healing
-	desc = deviants_heal_interaction.desc
+	desc = succubus_heal_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = yes
@@ -110,12 +110,12 @@ deviants_heal_interaction = {
 		scope:actor = {
 			OR = {
 				has_trait_xp = {
-					trait = deviants_succubus
+					trait = succubus
 					track = power
 					value >= 5
 				}
 				has_trait_xp = {
-					trait = deviants_lesser_succubus
+					trait = lesser_succubus
 					value >= 10
 				}
 			}
@@ -164,17 +164,17 @@ deviants_heal_interaction = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = deviants_succubus }
+				limit = { has_trait = succubus }
 				add_trait_xp = {
-					trait = deviants_succubus
+					trait = succubus
 					track = power
 					value = -5
 				}
 			}
 			if = {
-				limit = { has_trait = deviants_lesser_succubus }
+				limit = { has_trait = lesser_succubus }
 				add_trait_xp = {
-					trait = deviants_lesser_succubus
+					trait = lesser_succubus
 					value = -10
 				}
 			}
@@ -247,16 +247,16 @@ deviants_heal_interaction = {
 	}
 }
 
-deviants_purify_interaction = {
+succubus_purify_interaction = {
 	icon = dna_icon
-	desc = deviants_purify_interaction.desc
+	desc = succubus_purify_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 
 	is_shown = {
 		scope:actor = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value >= 10
 			}
@@ -294,7 +294,7 @@ deviants_purify_interaction = {
 	on_accept = {
 		scope:actor = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = power
 				value = -10
 			}

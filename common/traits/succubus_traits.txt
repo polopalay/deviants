@@ -1,4 +1,4 @@
-deviants_succubus = {
+succubus = {
 	category = health
 	icon = succubus.dds
 	minimum_age = 18
@@ -16,13 +16,13 @@ deviants_succubus = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { NOT = { exists = this } }
-				desc = deviants_succubus_desc
+				desc = succubus_desc
 			}
-			desc = deviants_succubus_character_desc
+			desc = succubus_character_desc
 		}
 	}
 
-	opposites = { deviants_lesser_succubus deviants_virgin }
+	opposites = { lesser_succubus deviant_virgin }
 
 	tracks = {
 		power = {
@@ -84,10 +84,10 @@ deviants_succubus = {
 				diplomacy = 3
 				opinion_of_male_rulers = 5
 				men_at_arms_maintenance = -0.1
-				knight_effectiveness_mult = 0.1
+				knight_effectivenesuccubus_mult = 0.1
 				long_reign_bonus_mult = 0.1
 				monthly_piety = 0.1
-				stress_gain_mult = -0.1
+				stresuccubus_gain_mult = -0.1
 			}
 
 			66 = {
@@ -96,7 +96,7 @@ deviants_succubus = {
 				diplomacy = 3
 				opinion_of_male_rulers = 5
 				men_at_arms_maintenance = -0.2
-				knight_effectiveness_mult = 0.2
+				knight_effectivenesuccubus_mult = 0.2
 				long_reign_bonus_mult = 0.2
 				monthly_piety = 0.2
 			}
@@ -107,12 +107,12 @@ deviants_succubus = {
 				diplomacy = 4
 				opinion_of_male_rulers = 10
 				men_at_arms_maintenance = -0.2
-				knight_effectiveness_mult = 0.2
+				knight_effectivenesuccubus_mult = 0.2
 				long_reign_bonus_mult = 0.2
 				monthly_piety = 0.3
 				no_water_crossing_penalty = yes
 				supply_duration = 0.5
-				stress_gain_mult = -0.5
+				stresuccubus_gain_mult = -0.5
 				movement_speed = 1
 				naval_movement_speed_mult = 1
 			}
@@ -121,7 +121,7 @@ deviants_succubus = {
 	shown_in_ruler_designer = no
 }
 
-deviants_lesser_succubus = {
+lesser_succubus = {
 	category = health
 	icon = lesser_succubus.dds
 	minimum_age = 18
@@ -135,7 +135,7 @@ deviants_lesser_succubus = {
 	ai_zeal = dominant_negative_ai_value
 	add_commander_trait = yes
 
-	opposites = { deviants_succubus deviants_virgin }
+	opposites = { succubus deviant_virgin }
 
 	desc = {
 		first_valid = {
@@ -143,9 +143,9 @@ deviants_lesser_succubus = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = deviants_lesser_succubus_desc
+				desc = lesser_succubus_desc
 			}
-			desc = deviants_lesser_succubus_character_desc
+			desc = lesser_succubus_character_desc
 		}
 	}
 
@@ -182,7 +182,7 @@ deviants_lesser_succubus = {
 	shown_in_ruler_designer = no
 }
 
-deviants_virgin = {
+deviant_virgin = {
 	category = fame
 	icon = virgin.dds
 	minimum_age = 16
@@ -191,7 +191,7 @@ deviants_virgin = {
 	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
-	opposites = { chaste deviants_succubus deviants_lesser_succubus }
+	opposites = { chaste succubus lesser_succubus }
 
 	desc = {
 		first_valid = {
@@ -199,9 +199,9 @@ deviants_virgin = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = deviants_virgin_desc
+				desc = deviant_virgin_desc
 			}
-			desc = deviants_virgin_character_desc
+			desc = deviant_virgin_character_desc
 		}
 	}
 
@@ -210,7 +210,7 @@ deviants_virgin = {
 	shown_in_ruler_designer = no
 }
 
-deviants_blood = {
+deviant_blood = {
 	icon = blood.dds
 	category = fame
 	desc = {
@@ -219,9 +219,9 @@ deviants_blood = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = deviants_blood_desc
+				desc = deviant_blood_desc
 			}
-			desc = deviants_blood_character_desc
+			desc = deviant_blood_character_desc
 		}
 	}
 

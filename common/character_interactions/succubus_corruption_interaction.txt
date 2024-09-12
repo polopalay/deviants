@@ -1,6 +1,6 @@
-deviants_switch_body_interaction = {
+succubus_switch_body_interaction = {
 	icon = two_body
-	desc = deviants_switch_body_interaction.desc
+	desc = succubus_switch_body_interaction.desc
 	category = interaction_category_diplomacy
 	interface_priority = 1
 	common_interaction = yes
@@ -10,18 +10,18 @@ deviants_switch_body_interaction = {
 		scope:actor = {
 			is_ai = no
 			OR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_virgin
+				has_trait = succubus
+				has_trait = lesser_succubus
+				has_trait = deviant_virgin
 			}
 		}
 		scope:recipient = {
 			is_ruler = yes
 			primary_title.tier >= tier_county
 			OR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_virgin
+				has_trait = succubus
+				has_trait = lesser_succubus
+				has_trait = deviant_virgin
 			}
 		}
 	}
@@ -31,9 +31,9 @@ deviants_switch_body_interaction = {
 	auto_accept = yes
 }
 
-deviants_add_courtier_interaction = {
+succubus_add_courtier_interaction = {
 	icon = fascinate
-	desc = deviants_add_courtier_interaction.desc
+	desc = succubus_add_courtier_interaction.desc
 	category = interaction_category_vassal
 	use_diplomatic_range = yes
 	common_interaction = no
@@ -42,7 +42,7 @@ deviants_add_courtier_interaction = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value >= 1
 			}
@@ -59,46 +59,27 @@ deviants_add_courtier_interaction = {
 		scope:actor = {
 			add_courtier = scope:recipient
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = -1
-			}
-		}
-		scope:recipient = {
-			if = {
-				limit = {
-					is_female = yes
-					age >= 16
-					scope:actor = {
-						any_courtier = {
-							has_character_modifier = deviants_prostitute
-							count <= 2
-						}
-					}
-				}
-				add_character_modifier = deviants_prostitute
-				if = {
-					limit = { have_devil_nicknames_trigger = no }
-					give_prostitution_nickname = yes
-				}
 			}
 		}
 	}
 	auto_accept = yes
 }
 
-deviants_child_interaction = {
+succubus_child_interaction = {
 	icon = pregnant
-	desc = deviants_child_interaction.desc
+	desc = succubus_child_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = no
-	#cooldown = { years = 2 }
+	cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = { trait = deviants_succubus track = corruption value >= 5 }
+			has_trait_xp = { trait = succubus track = corruption value >= 5 }
 			have_soul_forge_trigger = yes
 		}
 		scope:recipient = {
@@ -120,7 +101,7 @@ deviants_child_interaction = {
 					culture = primary_spouse.culture
 					faith = primary_spouse.faith
 					gender_female_chance = 50
-					trait = deviants_blood
+					trait = deviant_blood
 				}
 			}
 			else = {
@@ -133,13 +114,13 @@ deviants_child_interaction = {
 					culture = culture
 					faith = faith
 					gender_female_chance = 50
-					trait = deviants_blood
+					trait = deviant_blood
 				}
 			}
 		}
 		scope:actor = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = -5
 			}
@@ -148,9 +129,9 @@ deviants_child_interaction = {
 	auto_accept = yes
 }
 
-deviants_create_lesser_succubus_interaction = {
+succubus_create_lesser_succubus_interaction = {
 	icon = lesser_devil
-	desc = deviants_create_lesser_succubus_interaction.desc
+	desc = succubus_create_lesser_succubus_interaction.desc
 	category = interaction_category_vassal
 	use_diplomatic_range = yes
 	cooldown = { years = 10 }
@@ -163,14 +144,14 @@ deviants_create_lesser_succubus_interaction = {
 			is_female = yes
 			age >= 18
 			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_virgin
+				has_trait = succubus
+				has_trait = lesser_succubus
+				has_trait = deviant_virgin
 			}
 		}
 		scope:actor = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value >= 25
 			}
@@ -190,12 +171,11 @@ deviants_create_lesser_succubus_interaction = {
 				give_prostitution_nickname = yes
 			}
 			mind_break_personality = yes
-			add_trait = deviants_lesser_succubus
-			add_character_modifier = deviants_prostitute
+			add_trait = lesser_succubus
 		}
 		scope:actor = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = -25
 			}
@@ -204,9 +184,9 @@ deviants_create_lesser_succubus_interaction = {
 	auto_accept = yes
 }
 
-deviants_create_succubus_interaction = {
+succubus_create_succubus_interaction = {
 	icon = devil
-	desc = deviants_create_succubus_interaction.desc
+	desc = succubus_create_succubus_interaction.desc
 	category = interaction_category_vassal
 	use_diplomatic_range = yes
 	cooldown = { years = 50 }
@@ -215,14 +195,14 @@ deviants_create_succubus_interaction = {
 			is_female = yes
 			age >= 18
 			NOR = {
-				has_trait = deviants_succubus
-				has_trait = deviants_lesser_succubus
-				has_trait = deviants_virgin
+				has_trait = succubus
+				has_trait = lesser_succubus
+				has_trait = deviant_virgin
 			}
 		}
 		scope:actor = {
 			has_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value >= 100
 			}
@@ -242,12 +222,11 @@ deviants_create_succubus_interaction = {
 				limit = { have_devil_nicknames_trigger = no }
 				give_prostitution_nickname = yes
 			}
-			add_trait = deviants_succubus
-			add_character_modifier = deviants_prostitute
+			add_trait = succubus
 		}
 		scope:actor = {
 			add_trait_xp = {
-				trait = deviants_succubus
+				trait = succubus
 				track = corruption
 				value = -100
 			}

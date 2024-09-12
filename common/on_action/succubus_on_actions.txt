@@ -1,8 +1,7 @@
 quarterly_playable_pulse = {
 	trigger = {
 		is_adult = yes
-		has_character_modifier = deviants_prostitute
-		has_trait = deviants_succubus
+		has_trait = succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -10,14 +9,14 @@ quarterly_playable_pulse = {
 		is_female = yes
 	}
 	random_on_action = {
-		100 = deviants_devil_on_action
+		100 = succubus_devil_on_action
 	}
 }
 
-deviants_devil_on_action = {
+succubus_devil_on_action = {
 	random_events = {
 		chance_to_happen = 10
-		50 = deviants_devil.1410 # gremlin fuck
-		25 = deviants_devil.1300 # special dream
+		50 = succubus_devil.1410 # gremlin fuck
+		25 = succubus_devil.1300 # special dream
 	}
 }

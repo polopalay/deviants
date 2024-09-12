@@ -1,18 +1,10 @@
-deviants_prostitute = {
-	icon = prostitute_positive
-}
-
-deviants_slave = {
-	icon = slave_positive
-}
-
-deviants_fuckedsilly = {
+succubus_fuckedsilly = {
 	icon = souls_positive
 	health = -0.2
 	stacking = yes
 }
 
-deviants_buff = {
+succubus_buff = {
 	icon = souls_positive
 	diplomacy = 1
 	martial = 1
@@ -32,7 +24,7 @@ deviants_buff = {
 	stacking = yes
 }
 
-deviants_generals = {
+succubus_generals = {
 	icon = souls_positive
 	diplomacy = 100
 	martial = 100
@@ -51,7 +43,7 @@ deviants_generals = {
 	supply_limit_mult = 1
 }
 
-deviants_philosopher_stone_modifier = {
+succubus_philosopher_stone_modifier = {
 	build_gold_cost = -0.1
 	monthly_income_mult = 0.1
 	vassal_tax_contribution_mult = 0.1
@@ -59,7 +51,7 @@ deviants_philosopher_stone_modifier = {
 	mercenary_hire_cost_mult = -0.1
 }
 
-deviants_contraception = {
+succubus_contraception = {
 	icon = fertility_negative
 	fertility = -20
 }
