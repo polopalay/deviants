@@ -519,6 +519,7 @@ succubus_honor_interaction = {
 			}
 		}
 	}
+	auto_accept = yes
 }
 
 succubus_mind_break_interaction = {
