@@ -484,9 +484,21 @@ succubus_honor_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			remove_trait = witch
-			remove_trait = deviant
-			remove_trait = cannibal
+			if = {
+				limit = { has_trait = witch }
+				remove_trait = witch
+				add_secret = { type = secret_witch }
+			}
+			if = {
+				limit = { has_trait = deviant }
+				remove_trait = deviant
+				add_secret = { type = secret_deviant }
+			}
+			if = {
+				limit = { has_trait = cannibal }
+				remove_trait = cannibal
+				add_secret = { type = secret_cannibal }
+			}
 			remove_trait = adulterer
 			remove_trait = sodomite
 			remove_trait = incestuous
