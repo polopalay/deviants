@@ -229,16 +229,10 @@ succubus_makeup_interaction = {
 		flag = succubus_red_hair
 	}
 	send_option = {
-		is_valid = {
-			scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
-		}
 		flag = naked
 	}
 	send_option = {
-		is_valid = {
-			scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-		}
-		flag = dress
+		flag = glass
 	}
 	send_options_exclusive = yes
 
@@ -425,13 +419,43 @@ succubus_makeup_interaction = {
 		else_if = {
 			limit = { scope:naked = yes }
 			scope:recipient = {
-				add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+				if = {
+					limit = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+					remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+				}
+				else = {
+					add_character_flag = diplomacy_majesty_4090_no_raiment_modifier
+				}
 			}
 		}
 		else_if = {
 			limit = { scope:dress = yes }
 			scope:recipient = {
 				remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+		}
+		else_if = {
+			limit = { scope:glass = yes }
+			scope:recipient = {
+				if = {
+					limit = {
+						NOR = {
+							has_character_flag = teacher_1
+							has_character_flag = teacher_2
+							has_character_flag = has_reading_glasses
+						}
+					}
+					random_list = {
+						50 = { add_character_flag = teacher_1 }
+						50 = { add_character_flag = teacher_2 }
+						50 = { add_character_flag = has_reading_glasses }
+					}
+				}
+				else = {
+					remove_character_flag = teacher_1
+					remove_character_flag = teacher_2
+					remove_character_flag = has_reading_glasses
+				}
 			}
 		}
 

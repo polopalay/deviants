@@ -222,7 +222,6 @@ succubus_heal_interaction = {
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
 			recover_from_disease_effect = { DISEASE = dysentery }
 			recover_from_disease_effect = { DISEASE = ergotism }
-			recover_from_disease_effect = { DISEASE = measles }
 		}
 	}
 	auto_accept = yes

@@ -60,7 +60,7 @@
  succubus_white_hair: "White Hair"
  succubus_red_hair: "Red Hair"
  naked: "Naked"
- dress: "Dress"
+ glass: "Glass"
 
  succubus_cultist_interaction: "Create Cultist"
  succubus_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
