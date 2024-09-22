@@ -424,7 +424,7 @@ succubus_makeup_interaction = {
 					remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 				}
 				else = {
-					add_character_flag = diplomacy_majesty_4090_no_raiment_modifier
+					add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 				}
 			}
 		}
