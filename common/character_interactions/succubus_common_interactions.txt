@@ -35,6 +35,9 @@ dress_interaction = {
 			scope:actor = scope:recipient
 			scope:recipient = { is_courtier_of = scope:actor }
 		}
+		scope:actor = {
+			NOT = { has_trait = succubus }
+		}
 		scope:recipient = {
 			has_trait = lifestyle_prostitute
 			has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
