@@ -33,7 +33,7 @@
 		scope:actor = {
 			stress_impact = { base = massive_stress_impact_loss }
 			pay_short_term_gold = { target = scope:recipient gold = 5 }
-			prostitute_effect = { CHARACTER = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+			prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 			random = {
 				chance = 10
 				modifier = { add = 10 has_trait = generous }
@@ -216,7 +216,7 @@ offer_prostitute_interaction = {
 	on_accept = {
 		scope:recipient = {
 			stress_impact = { base = massive_stress_impact_loss }
-			prostitute_effect = { CHARACTER = scope:secondary_recipient PREGNANCY_CHANCE = pregnancy_chance }
+			prostitute_effect = { PROSTITUTE = scope:secondary_recipient PREGNANCY_CHANCE = pregnancy_chance }
 			pay_short_term_gold = { target = scope:actor gold = 3 }
 			pay_short_term_gold = { target = scope:secondary_recipient gold = 2 }
 			random = {

@@ -1,4 +1,5 @@
 ﻿carn_enslave_interaction = {
+	icon = enslave_interaction
 	desc = carn_enslave_interaction.desc
 	category = interaction_category_prison
 	common_interaction = yes
@@ -58,6 +59,7 @@
 }
 
 carn_buy_slave_directly_interaction = {
+	icon = buy_slave_interaction
 	category = interaction_category_prison
 	desc = carn_buy_slave_directly_interaction.desc
 	common_interaction = yes
@@ -150,9 +152,10 @@ carn_buy_slave_directly_interaction = {
 	}
 }
 
-carn_buy_slave_directly_interaction = {
+carn_sell_slave_interaction = {
+	icon = sell_slave_interaction
 	category = interaction_category_prison
-	desc = carn_buy_slave_directly_interaction.desc
+	desc = carn_sell_slave_interaction.desc
 	common_interaction = yes
 
 	is_shown = {
@@ -251,6 +254,7 @@ carn_buy_slave_directly_interaction = {
 }
 
 carn_free_slave_interaction = {
+	icon = free_slave_interaction
 	category = interaction_category_prison
 	desc = carn_free_slave_interaction.desc
 	common_interaction = yes
@@ -303,29 +307,30 @@ carn_free_slave_interaction = {
 	ai_will_do = {
 		base = 0
 		modifier = {
-			trigger = { scope:secondary_recipient = { is_spouse_of = scope:actor } }
+			trigger = { scope:recipient = { is_spouse_of = scope:actor } }
 			add = 50
 		}
 		modifier = {
-			trigger = { scope:secondary_recipient = { is_close_family_of = scope:actor } }
+			trigger = { scope:recipient = { is_close_family_of = scope:actor } }
 			add = 25
 		}
 		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_friend = scope:actor } }
+			trigger = { scope:recipient = { has_relation_friend = scope:actor } }
 			add = 10
 		}
 		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_lover = scope:actor } }
+			trigger = { scope:recipient = { has_relation_lover = scope:actor } }
 			add = 10
 		}
 		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
+			trigger = { scope:recipient = { has_relation_soulmate = scope:actor } }
 			add = 100
 		}
 	}
 }
 
 forced_labor_interaction = {
+	icon = forced_labor_interaction
 	category = interaction_category_prison
 	desc = forced_labor_interaction.desc
 	common_interaction = no
@@ -373,6 +378,7 @@ forced_labor_interaction = {
 }
 
 ordinary_labor_interaction = {
+	icon = ordinary_labor_interaction
 	category = interaction_category_prison
 	desc = ordinary_labor_interaction.desc
 	common_interaction = no
@@ -419,6 +425,7 @@ ordinary_labor_interaction = {
 }
 
 extortion_interaction = {
+	icon = extortion_interaction
 	category = interaction_category_prison
 	desc = extortion_interaction.desc
 	cooldown_against_recipient = { years = 5 }
