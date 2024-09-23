@@ -24,4 +24,3 @@
  trait_deviant_blood: "Devil Blood"
  deviant_blood_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
-
