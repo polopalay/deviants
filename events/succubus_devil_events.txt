@@ -257,10 +257,6 @@ succubus_devil.1415 = {
 			lustful = medium_stress_impact_loss
 		}
 		add_piety = minor_piety_loss
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
@@ -337,10 +333,6 @@ succubus_devil.1417 = {
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -440,10 +432,6 @@ succubus_devil.1418 = {
 			base = minor_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 3
-		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
@@ -510,10 +498,6 @@ succubus_devil.1420 = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 60
-		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
@@ -546,10 +530,6 @@ succubus_devil.1421 = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 180
-		}
 	}
 }
 #1422 if manage to get the big cock cum
@@ -570,10 +550,6 @@ succubus_devil.1422 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 60
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -607,10 +583,6 @@ succubus_devil.1423 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 180
 		}
 	}
 }
@@ -689,10 +661,6 @@ succubus_devil.5101 = {
 	option = {
 		name = succubus_devil.5101.a
 		custom_tooltip = succubus_devil.5101.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		trigger_event = succubus_devil.5500
 	}
 }
@@ -716,10 +684,6 @@ succubus_devil.5110 = {
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -790,10 +754,6 @@ succubus_devil.5111 = {
 	option = {
 		name = succubus_devil.5111.a
 		custom_tooltip = succubus_devil.5111.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		trigger_event = succubus_devil.5501
 	}
 }
@@ -816,10 +776,6 @@ succubus_devil.5120 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -885,10 +841,6 @@ succubus_devil.5121 = {
 	option = {
 		name = succubus_devil.5121.a
 		custom_tooltip = succubus_devil.5121.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		trigger_event = succubus_devil.5501
 	}
 }
@@ -911,10 +863,6 @@ succubus_devil.5130 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -973,10 +921,6 @@ succubus_devil.5131 = {
 	option = {
 		name = succubus_devil.5131.a
 		custom_tooltip = succubus_devil.5131.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 60
-		}
 		trigger_event = succubus_devil.5501
 	}
 }
@@ -999,10 +943,6 @@ succubus_devil.5140 = {
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1059,10 +999,6 @@ succubus_devil.5141 = {
 	option = {
 		name = succubus_devil.5141.a
 		custom_tooltip = succubus_devil.5141.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 60
-		}
 		trigger_event = succubus_devil.5501
 	}
 }
@@ -1143,10 +1079,6 @@ succubus_devil.5151 = {
 	option = {
 		name = succubus_devil.5151.a
 		custom_tooltip = succubus_devil.5151.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		hidden_effect = {
 			add_character_flag = { flag = succubus_pussy_cum months = 1 }
 			trigger_event = succubus_devil.5501
@@ -1229,10 +1161,6 @@ succubus_devil.5161 = {
 	option = {
 		name = succubus_devil.5161.a
 		custom_tooltip = succubus_devil.5161.a.tt
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		trigger_event = succubus_devil.5501
 	}
 }
@@ -1293,10 +1221,6 @@ succubus_devil.5301 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = minor_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {
@@ -1374,10 +1298,6 @@ succubus_devil.5321 = {
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		trigger_event = succubus_devil.5501
 	}
@@ -2114,10 +2034,6 @@ succubus_devil.1302 = {
 				value = -2
 			}
 		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 90
-		}
 	}
 }
 #1303 you submitting before the demon
@@ -2211,10 +2127,6 @@ succubus_devil.1310 = {
 		hidden_effect = {
 			add_character_flag = { flag = succubus_pussy_cum months = 1 }
 			add_character_flag = { flag = succubus_body_cum months = 1 }
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 	}
 }

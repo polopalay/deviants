@@ -1,5 +1,8 @@
 ﻿slave = {
 	icon = slave.dds
+	opposites = {
+		former_slave
+	}
 	category = fame
 	diplomacy = -5
 	general_opinion = -10
@@ -16,8 +19,25 @@
 	claim_inheritance_blocker = all
 
 	inherit_chance = 100
+	parent_inheritance_sex = female
 
-	shown_in_ruler_designer = no
+	ruler_designer_cost = 0
+}
+
+former_slave = {
+	icon = former_slave.dds
+	opposites = {
+		slave
+	}
+
+	diplomacy = -1
+
+	ruler_designer_cost = 0
+
+	compatibility = {
+		slave = @pos_compat_medium
+		former_slave = @pos_compat_medium
+	}
 }
 
 lifestyle_prostitute = {
@@ -41,8 +61,7 @@ lifestyle_prostitute = {
 		}
 	}
 
-
-	shown_in_ruler_designer = no
+	ruler_designer_cost = 0
 
 	ai_greed = medium_positive_ai_value
 	ai_sociability = medium_positive_ai_value

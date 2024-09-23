@@ -1,10 +1,10 @@
-succubus_brothel1 = {
+brothel1 = {
 	type_icon = "icon_brothel.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_1_cost }
 	type = duchy_capital
 
-	next_building = succubus_brothel2
+	next_building = brothel2
 
 	is_enabled = {
 		scope:holder = {
@@ -31,13 +31,13 @@ succubus_brothel1 = {
 	ai_value = { base = 100 }
 }
 
-succubus_brothel2 = {
+brothel2 = {
 	type_icon = "icon_brothel.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_2_cost }
 	type = duchy_capital
 
-	next_building = succubus_brothel3
+	next_building = brothel3
 
 	is_enabled = {
 		scope:holder = {
@@ -64,7 +64,7 @@ succubus_brothel2 = {
 	ai_value = { base = 100 }
 }
 
-succubus_brothel3 = {
+brothel3 = {
 	type_icon = "icon_brothel.dds"
 	construction_time = cheap_building_tier_2_cost
 	cost = { gold = cheap_building_tier_3_cost }
@@ -95,13 +95,13 @@ succubus_brothel3 = {
 	ai_value = { base = 100 }
 }
 
-succubus_alchemy1 = {
+alchemy1 = {
 	type_icon = "icon_alchemy.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_1_cost }
 	type = duchy_capital
 
-	next_building = succubus_alchemy2
+	next_building = alchemy2
 
 	is_enabled = {
 		scope:holder = {
@@ -129,13 +129,13 @@ succubus_alchemy1 = {
 	ai_value = { base = 80 }
 }
 
-succubus_alchemy2 = {
+alchemy2 = {
 	type_icon = "icon_alchemy.dds"
 	construction_time = very_quick_construction_time
 	cost = { gold = cheap_building_tier_2_cost }
 	type = duchy_capital
 
-	next_building = succubus_alchemy3
+	next_building = alchemy3
 
 	is_enabled = {
 		scope:holder = {
@@ -163,7 +163,7 @@ succubus_alchemy2 = {
 	ai_value = { base = 80 }
 }
 
-succubus_alchemy3 = {
+alchemy3 = {
 	type_icon = "icon_alchemy.dds"
 	construction_time = quick_construction_time
 	cost = { gold = cheap_building_tier_3_cost }

@@ -22,13 +22,13 @@ gain_level_of_fame_piety_m = {
 give_building_witch_forest = {
 	if = {
 		limit = { capital_province = { has_special_building_slot = no } }
-		capital_province = { add_special_building_slot = succubus_witch_forest }
+		capital_province = { add_special_building_slot = witch_forest }
 	}
 	else_if = {
 		limit = { any_sub_realm_barony = { title_province = { has_special_building_slot = no } } }
 		random_sub_realm_barony = {
 			limit = { title_province = { has_special_building_slot = no } }
-			title_province = { add_special_building_slot = succubus_witch_forest }
+			title_province = { add_special_building_slot = witch_forest }
 		}
 	}
 }
@@ -36,13 +36,13 @@ give_building_witch_forest = {
 give_building_soul_forge = {
 	if = {
 		limit = { capital_province = { has_special_building_slot = no } }
-		capital_province = { add_special_building_slot = succubus_soul_forge }
+		capital_province = { add_special_building_slot = soul_forge }
 	}
 	else_if = {
 		limit = { any_sub_realm_barony = { title_province = { has_special_building_slot = no } } }
 		random_sub_realm_barony = {
 			limit = { title_province = { has_special_building_slot = no } }
-			title_province = { add_special_building_slot = succubus_soul_forge }
+			title_province = { add_special_building_slot = soul_forge }
 		}
 	}
 }

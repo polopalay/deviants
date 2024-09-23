@@ -1,4 +1,4 @@
-succubus_witch_forest = {
+witch_forest = {
 	asset = {
 		type = pdxmesh
 		name = "fp4_legendary_desert_hunting_lodge_01_a_mesh"
@@ -35,7 +35,7 @@ succubus_witch_forest = {
 	type = special
 }
 
-succubus_soul_forge = {
+soul_forge = {
 	asset = {
 		type = pdxmesh
 		name = "fp4_legendary_western_watchtower_01_a_mesh"

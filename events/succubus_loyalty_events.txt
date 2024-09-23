@@ -731,7 +731,6 @@ succubus_loyalty.8205 = {
 			add_character_flag = { flag = succubus_body_cum months = 3 }
 			add_character_flag = { flag = succubus_pussy_cum months = 3 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
-			add_character_modifier = { modifier = succubus_fuckedsilly months = 3 }
 		}
 	}
 }
@@ -818,7 +817,6 @@ succubus_loyalty.8208 = {
 			add_character_flag = { flag = succubus_body_cum months = 3 }
 			add_character_flag = { flag = succubus_pussy_cum months = 3 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
-			add_character_modifier = { modifier = succubus_fuckedsilly months = 3 }
 		}
 	}
 }
@@ -847,7 +845,6 @@ succubus_loyalty.8209 = {
 			add_character_flag = { flag = succubus_body_cum months = 3 }
 			add_character_flag = { flag = succubus_pussy_cum months = 3 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
-			add_character_modifier = { modifier = succubus_fuckedsilly months = 3 }
 			add_trait_xp = {
 				trait = succubus
 				track = loyalty

@@ -22,6 +22,7 @@
 			}
 			depose = yes
 		}
+		remove_trait = former_slave
 		add_trait = slave
 		if = {
 			limit = {gold > 0}

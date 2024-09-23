@@ -1,9 +1,3 @@
-succubus_fuckedsilly = {
-	icon = souls_positive
-	health = -0.2
-	stacking = yes
-}
-
 succubus_buff = {
 	icon = souls_positive
 	diplomacy = 1
@@ -43,15 +37,10 @@ succubus_generals = {
 	supply_limit_mult = 1
 }
 
-succubus_philosopher_stone_modifier = {
+philosopher_stone_modifier = {
 	build_gold_cost = -0.1
 	monthly_income_mult = 0.1
 	vassal_tax_contribution_mult = 0.1
 	men_at_arms_maintenance = -0.1
 	mercenary_hire_cost_mult = -0.1
-}
-
-succubus_contraception = {
-	icon = fertility_negative
-	fertility = -20
 }

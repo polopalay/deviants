@@ -266,6 +266,7 @@ carn_free_slave_interaction = {
 		scope:recipient = {
 			remove_trait = slave
 			remove_character_modifier = forced_labor
+			add_trait = former_slave
 			add_opinion = { target = scope:actor modifier = carn_freed_me_from_slavery_opinion }
 			every_spouse = {
 				limit = { NOT = { this = scope:new_owner } }

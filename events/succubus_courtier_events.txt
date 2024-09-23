@@ -1150,10 +1150,7 @@ succubus_courtier.7011 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
+
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
@@ -1214,10 +1211,6 @@ succubus_courtier.7021 = {
 		stress_impact = {
 			base = minor_stress_impact_loss
 		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
-		}
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
@@ -1244,10 +1237,6 @@ succubus_courtier.7022 = {
 		custom_tooltip = succubus_courtier.7022.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
-		}
-		add_character_modifier = {
-			modifier = succubus_fuckedsilly
-			days = 30
 		}
 		hidden_effect = {
 			add_trait_xp = {

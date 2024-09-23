@@ -265,9 +265,9 @@ decisions_ritual_complete = {
 		create_artifact = {
 			name = succubus_philosopher_stone
 			description = succubus_philosopher_stone.d
-			type = succubus_magic_creation
+			type = magic_creation
 			visuals = rock
-			modifier = succubus_philosopher_stone_modifier
+			modifier = philosopher_stone_modifier
 			creator = root
 			rarity = illustrious
 		}

@@ -10,7 +10,8 @@ forced_labor = {
 }
 
 carn_using_birth_control_modifier = {
-	icon = fertility_negative
-	fertility = -20
+	icon = fertility_positive
+	fertility = -1.0
+	monthly_income = -0.1
+	monthly_piety = -0.05
 }
-

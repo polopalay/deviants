@@ -4,9 +4,9 @@
  forced_into_prostitution_opinion: "Forced to become a prostitute"
  freed_from_prostitution_opinion: "Freed from the brothel"
 
- succubus_magic_creation: "$trinket$"
- succubus_magic_creation_miscellaneous: "$trinket$"
- artifact_succubus_magic_creation: "Magic Creation"
+ magic_creation: "$trinket$"
+ magic_creation_miscellaneous: "$trinket$"
+ artifact_magic_creation: "Magic Creation"
 
  succubus_philosopher_stone: "Philosopher's Stone"
  succubus_philosopher_stone.d: "The Philosopher's Stone is a legendary alchemical substance said to be capable of turning base metals into gold or silver, and also acting as an elixir of life that grants immortality."
