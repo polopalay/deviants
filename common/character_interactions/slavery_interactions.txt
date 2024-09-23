@@ -1,0 +1,479 @@
+﻿carn_enslave_interaction = {
+	desc = carn_enslave_interaction.desc
+	category = interaction_category_prison
+	common_interaction = yes
+
+	is_shown = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			is_ruler = no
+			is_landed = no
+			NOT = { has_trait = slave }
+		}
+	}
+	auto_accept = yes
+
+	on_accept = {
+		carn_enslave_effect = { SLAVE = scope:recipient OWNER = scope:actor DRAMA = yes }
+	}
+
+	ai_targets = { ai_recipients = prisoners }
+	ai_frequency = 12
+	ai_potential = { is_at_war = no }
+
+	ai_will_do = {
+		base = 0
+
+		ai_value_modifier = {
+			max = 5
+			ai_compassion = -1
+		}
+		modifier = {
+			add = -25
+			scope:actor.dynasty = scope:recipient.dynasty
+		}
+		modifier = {
+			add = -25
+			is_close_or_extended_family_of = scope:recipient
+		}
+		modifier = {
+			add = -25
+			is_close_family_of = scope:recipient
+		}
+		modifier = {
+			add = -25
+			any_dynasty_member = {
+				primary_heir = scope:recipient
+			}
+		}
+		modifier = {
+			add = 50
+			has_execute_reason = scope:recipient
+			OR = {
+				has_trait = sadistic
+				has_trait = lunatic
+			}
+		}
+	}
+}
+
+carn_buy_slave_directly_interaction = {
+	category = interaction_category_prison
+	desc = carn_buy_slave_directly_interaction.desc
+	common_interaction = yes
+
+	is_shown = {
+		scope:recipient = {
+			is_ruler = yes
+			any_courtier = { has_trait = slave }
+		}
+		NOT = { scope:actor = scope:recipient }
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			every_courtier = { limit = { has_trait = slave } add_to_list = characters }
+
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			pay_short_term_gold = { target = scope:recipient gold = minor_gold_value }
+			add_courtier = scope:secondary_recipient
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = spouses
+		ai_recipients = family
+		ai_recipients = children
+		ai_recipients = scripted_relations
+		max = 10
+	}
+	ai_potential = { always = yes }
+	ai_frequency = 12
+
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			multiplier = 1
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_knight_of = scope:recipient } }
+			add = -25
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_councillor_of = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_friend = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_lover = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_crush = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
+			add = -100
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_spouse_of = scope:actor } }
+			add = 50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_close_family_of = scope:actor } }
+			add = 40
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_friend = scope:actor } }
+			add = 10
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_lover = scope:actor } }
+			add = 10
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
+			add = 100
+		}
+	}
+}
+
+carn_buy_slave_directly_interaction = {
+	category = interaction_category_prison
+	desc = carn_buy_slave_directly_interaction.desc
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			any_courtier = { has_trait = slave }
+		}
+		scope:recipient = {
+			is_ruler = yes
+		}
+		NOT = { scope:actor = scope:recipient }
+	}
+
+	populate_recipient_list = {
+		scope:actor = {
+			every_courtier = { limit = { has_trait = slave } add_to_list = characters }
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			pay_short_term_gold = { target = scope:actor gold = minor_gold_value }
+			add_courtier = scope:secondary_recipient
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			multiplier = 1
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_spouse_of = scope:recipient } }
+			add = 50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_close_family_of = scope:recipient } }
+			add = 40
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_friend = scope:recipient } }
+			add = 10
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_lover = scope:recipient } }
+			add = 10
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
+			add = 100
+		}
+	}
+	ai_frequency = 12
+	ai_potential = { always = yes }
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		max = 10
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			trigger = { scope:recipient.gold < minor_gold_value }
+			add = 5
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_knight_of = scope:recipient } }
+			add = -25
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_councillor_of = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_friend = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_lover = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_crush = scope:recipient } }
+			add = -50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
+			add = -100
+		}
+	}
+}
+
+carn_free_slave_interaction = {
+	category = interaction_category_prison
+	desc = carn_free_slave_interaction.desc
+	common_interaction = yes
+
+	is_shown = {
+		scope:recipient = {
+			has_trait = slave
+			is_courtier_of = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = slave
+			remove_character_modifier = forced_labor
+			add_opinion = { target = scope:actor modifier = carn_freed_me_from_slavery_opinion }
+			every_spouse = {
+				limit = { NOT = { this = scope:new_owner } }
+				add_opinion = { target = scope:new_owner modifier = free_slave_close_family_opinion }
+			}
+			every_close_family_member = {
+				limit = { NOT = { this = scope:new_owner is_spouse_of = scope:new_slave } }
+				add_opinion = { target = scope:new_owner modifier = free_slave_close_family_opinion }
+			}
+			every_relation = {
+				type = friend
+				limit = { NOT = { this = scope:new_owner is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave } }
+				add_opinion = { target = scope:new_owner modifier = free_slave_friend_opinion }
+			}
+			every_relation = {
+				type = lover
+				limit = { NOT = { this = scope:new_owner  is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave has_relation_friend = scope:new_slave  } }
+				add_opinion = { target = scope:new_owner modifier = free_slave_friend_opinion }
+			}
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = spouses
+		ai_recipients = family
+		ai_recipients = children
+		ai_recipients = scripted_relations
+		max = 10
+	}
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_spouse_of = scope:actor } }
+			add = 50
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { is_close_family_of = scope:actor } }
+			add = 25
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_friend = scope:actor } }
+			add = 10
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_lover = scope:actor } }
+			add = 10
+		}
+		modifier = {
+			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
+			add = 100
+		}
+	}
+}
+
+forced_labor_interaction = {
+	category = interaction_category_prison
+	desc = forced_labor_interaction.desc
+	common_interaction = no
+
+	is_shown = {
+		scope:recipient = {
+			has_trait = slave
+			NOT = { has_character_modifier = forced_labor }
+			is_courtier_of = scope:actor
+			is_adult = yes
+		}
+	}
+	auto_accept = yes
+
+	on_accept = {
+		scope:recipient = {
+			add_character_modifier = forced_labor
+			add_opinion = { target = scope:actor modifier = forced_labor_opinion }
+		}
+	}
+
+	ai_targets = { ai_recipients = courtiers }
+	ai_potential = { always = yes }
+	ai_frequency = 12
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 20
+			OR = { has_trait = sadistic has_trait = callous }
+		}
+		modifier = {
+			trigger = { scope:recipient = { has_relation_friend = scope:actor } }
+			add = -20
+		}
+		modifier = {
+			trigger = { scope:recipient = { has_relation_lover = scope:actor } }
+			add = -20
+		}
+		modifier = {
+			trigger = { scope:recipient = { has_relation_soulmate = scope:actor } }
+			add = -100
+		}
+	}
+}
+
+ordinary_labor_interaction = {
+	category = interaction_category_prison
+	desc = ordinary_labor_interaction.desc
+	common_interaction = no
+
+	is_shown = {
+		scope:recipient = {
+			has_trait = slave
+			has_character_modifier = forced_labor
+			is_courtier_of = scope:actor
+		}
+	}
+	auto_accept = yes
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_modifier = forced_labor
+			add_opinion = { target = scope:actor modifier = ordinary_labor_opinion }
+		}
+	}
+
+	ai_targets = { ai_recipients = courtiers }
+	ai_potential = { always = yes }
+	ai_frequency = 12
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 20
+			OR = { has_trait = compassionate has_trait = gregarious }
+		}
+		modifier = {
+			trigger = { scope:recipient = { has_relation_friend = scope:actor } }
+			add = 20
+		}
+		modifier = {
+			trigger = { scope:recipient = { has_relation_lover = scope:actor } }
+			add = 20
+		}
+		modifier = {
+			trigger = { scope:recipient = { has_relation_soulmate = scope:actor } }
+			add = 100
+		}
+	}
+}
+
+extortion_interaction = {
+	category = interaction_category_prison
+	desc = extortion_interaction.desc
+	cooldown_against_recipient = { years = 5 }
+	common_interaction = yes
+
+	is_shown = {
+		scope:recipient = {
+			is_adult = yes
+			has_trait = slave
+			is_courtier_of = scope:actor
+			gold > 0
+		}
+	}
+	auto_accept = yes
+
+	on_accept = {
+		scope:recipient = {
+			pay_short_term_gold = { target = scope:actor gold = gold }
+			add_opinion = { target = scope:actor modifier = extortion_opinion }
+		}
+	}
+
+	ai_targets = { ai_recipients = courtiers }
+	ai_potential = { always = yes }
+	ai_frequency = 12
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 25
+			scope:actor.dynasty = scope:recipient.dynasty
+		}
+		modifier = {
+			add = 25
+			is_close_or_extended_family_of = scope:recipient
+		}
+		modifier = {
+			add = 25
+			is_close_family_of = scope:recipient
+		}
+		modifier = {
+			add = -50
+			has_execute_reason = scope:recipient
+		}
+		modifier = {
+			add = 100
+			OR = {
+				has_trait = greedy
+			}
+		}
+		modifier = {
+			add = -50
+			OR = {
+				has_trait = kind
+				has_trait = honest
+			}
+		}
+	}
+}

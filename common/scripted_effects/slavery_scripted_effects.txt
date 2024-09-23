@@ -1,0 +1,82 @@
+﻿carn_enslave_effect = {
+	$SLAVE$ = { save_temporary_scope_as = new_slave }
+	$OWNER$ = { save_temporary_scope_as = new_owner }
+
+	scope:new_slave = {
+		if = {
+			limit = { is_ruler = yes }
+			every_character_war = {
+				if = {
+					limit = { primary_attacker = scope:new_slave }
+					end_war = invalidated
+				}
+				else_if = {
+					limit = { primary_defender = scope:new_slave }
+					if = {
+						limit = { primary_attacker = scope:new_owner }
+						end_war = attacker
+					}
+					else = { end_war = invalidated }
+				}
+				else = { remove_participant = scope:new_slave }
+			}
+			depose = yes
+		}
+		add_trait = slave
+		if = {
+			limit = {gold > 0}
+			pay_short_term_gold = { target = scope:new_owner gold = gold }
+		}
+		every_spouse = { divorce = scope:new_slave }
+		if = {
+			limit = { exists = betrothed }
+			break_betrothal = betrothed
+		}
+		every_concubine = { scope:new_slave = { remove_concubine = prev } }
+		every_relation = { type = guardian remove_relation_ward = prev }
+		add_prestige_level = -6
+		if = {
+			limit = { $DRAMA$ = yes }
+			add_opinion = { target = scope:new_owner modifier = carn_enslaved_me_opinion }
+
+			if = {
+				limit = { has_character_flag =  peasant_faction_random_peasant }
+				add_character_flag = peasant_revolt_do_not_kill
+			}
+			if = {
+				limit = { is_imprisoned_by = scope:new_owner }
+				release_from_prison = yes
+			}
+
+			every_spouse = {
+				limit = { NOT = { this = scope:new_owner } }
+				add_opinion = { target = scope:new_owner modifier = carn_enslaved_close_family_opinion }
+			}
+			every_close_family_member = {
+				limit = { NOT = { this = scope:new_owner is_spouse_of = scope:new_slave } }
+				add_opinion = { target = scope:new_owner modifier = carn_enslaved_close_family_opinion }
+			}
+			every_relation = {
+				type = friend
+				limit = { NOT = { this = scope:new_owner is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave } }
+				add_opinion = { target = scope:new_owner modifier = carn_enslaved_close_relation_opinion }
+			}
+			every_relation = {
+				type = lover
+				limit = { NOT = { this = scope:new_owner  is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave has_relation_friend = scope:new_slave  } }
+				add_opinion = { target = scope:new_owner modifier = carn_enslaved_close_relation_opinion }
+			}
+		}
+
+	}
+
+	scope:new_owner = {
+		if = {
+			limit = {
+				scope:new_slave = { NOT = { is_courtier_of = scope:new_owner } }
+			}
+			add_courtier = scope:new_slave
+		}
+	}
+}
+

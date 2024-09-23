@@ -1,0 +1,335 @@
+special_genes = {
+	morph_genes = {
+		pussy_cum = {
+			no_pussy_cum = {
+				index = 0
+			}
+			pussy_cum_1 = {
+				index = 1
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_miss_1d.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_miss_1n.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_miss_1p.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			pussy_cum_2 = {
+				index = 2
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_miss_2d.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_miss_2n.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_miss_2p.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			pussy_cum_3 = {
+				index = 3
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_miss_3d.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_miss_3n.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_miss_3p.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+		}
+
+		ass_cum = {
+			no_ass_cum = {
+				index = 0
+			}
+			ass_cum_1 = {
+				index = 1
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_doggy_1d.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_doggy_1n.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_doggy_1p.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			ass_cum_2 = {
+				index = 2
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_doggy_2d.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_doggy_2n.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_doggy_2p.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			ass_cum_3 = {
+				index = 3
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_doggy_3d.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_doggy_3n.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_doggy_3p.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+		}
+
+		body_cum = {
+			no_body_cum = {
+				index = 0
+			}
+			body_cum_1 = {
+				index = 1
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_1_body.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_1n_body.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_1p_body.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			body_cum_2 = {
+				index = 2
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_2_body.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_2n_body.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_2p_body.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			body_cum_3 = {
+				index = 3
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_3_body.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_3n_body.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_3p_body.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			body_cum_4 = {
+				index = 4
+				male = {
+					decal = {
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_4_body.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_4n_body.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_4p_body.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+		}
+
+		face_cum = {
+			no_face_cum = {
+				index = 0
+			}
+			face_cum_1 = {
+				index = 1
+				male = {
+					decal = {
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_1_face.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_1n_face.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_1p_face.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			face_cum_2 = {
+				index = 2
+				male = {
+					decal = {
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_2_face.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_2n_face.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_2p_face.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			face_cum_3 = {
+				index = 3
+				male = {
+					decal = {
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_3_face.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_3n_face.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_3p_face.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			face_cum_4 = {
+				index = 4
+				male = {
+					decal = {
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cum/cum_oral_4_face.dds"
+							normal = "gfx/models/portraits/decals/cum/cum_oral_4n_face.dds"
+							properties = "gfx/models/portraits/decals/cum/cum_oral_4p_face.dds"
+						}
+						blend_modes = {
+							diffuse = overlay
+							normal = overlay
+							properties = overlay
+						}
+						priority = 10
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+		}
+	}
+}

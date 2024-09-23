@@ -1,0 +1,52 @@
+﻿prostitute_effect = {
+	save_scope_as = had_sex_root_character
+	$CHARACTER$ = { save_scope_as = had_sex_with_effect_partner }
+
+	custom_tooltip = had_sex_with_effect.third_person.tt
+
+	hidden_effect = {
+		if = {
+			limit = {
+				is_female = yes
+				is_adult = yes
+				$CHARACTER$ = { is_male = yes is_adult = yes }
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
+			}
+			add_to_variable_list = { name = potential_father_variable_list target = $CHARACTER$ }
+			random = { chance = $PREGNANCY_CHANCE$ make_pregnant = { father = $CHARACTER$ } }
+		}
+		else_if = {
+			limit = {
+				is_male = yes
+				is_adult = yes
+				$CHARACTER$ = { is_female = yes is_adult = yes }
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
+			}
+			$CHARACTER$ = {
+				add_to_variable_list = { name = potential_father_variable_list target = scope:had_sex_with_effect_partner }
+				random = { chance = $PREGNANCY_CHANCE$ make_pregnant = { father = scope:had_sex_root_character } }
+			}
+		}
+		if = {
+			limit = { is_female = yes }
+			random = { chance = 25 add_character_flag = { flag = face_cum days = 10 } }
+			random = { chance = 25 add_character_flag = { flag = body_cum days = 10 } }
+			random = { chance = 25 add_character_flag = { flag = ass_cum days = 10 } }
+			random = { chance = 25 add_character_flag = { flag = pussy_cum days = 10 } }
+			add_character_modifier = { modifier = recently_had_sex months = 12 }
+		}
+		else = {
+			$CHARACTER$ = {
+				random = { chance = 25 add_character_flag = { flag = face_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = body_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = ass_cum days = 10 } }
+				random = { chance = 25 add_character_flag = { flag = pussy_cum days = 10 } }
+				add_character_modifier = { modifier = recently_had_sex months = 12 }
+			}
+		}
+
+		risk_of_std_from_effect = { PARTNER = $CHARACTER$ }
+		hidden_effect = { $CHARACTER$ = { risk_of_std_from_effect = { PARTNER = scope:had_sex_root_character } } }
+	}
+}
+

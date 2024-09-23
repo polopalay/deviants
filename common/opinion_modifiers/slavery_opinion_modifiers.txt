@@ -1,0 +1,63 @@
+﻿prostitute_criminal_opinion = {
+	opinion = -10
+	imprisonment_reason = yes
+	execute_reason = yes
+}
+
+prostitute_shunned_opinion = {
+	opinion = -5
+}
+
+carn_enslaved_me_opinion = {
+	opinion = -50
+	years = 30
+	decaying = yes
+}
+
+carn_enslaved_close_family_opinion = {
+	opinion = -30
+	years = 30
+	decaying = yes
+}
+
+carn_enslaved_close_relation_opinion = {
+	opinion = -10
+	years = 30
+	decaying = yes
+}
+
+carn_freed_me_from_slavery_opinion = {
+	opinion = 100
+	years = 50
+	decaying = yes
+}
+
+free_slave_close_family_opinion = {
+	opinion = 50
+	years = 50
+	decaying = yes
+}
+
+free_slave_friend_opinion = {
+	opinion = 25
+	years = 50
+	decaying = yes
+}
+
+extortion_opinion = {
+	opinion = -25
+	years = 10
+	decaying = yes
+}
+
+forced_labor_opinion = {
+	opinion = -50
+	years = 10
+	decaying = yes
+}
+
+ordinary_labor_opinion = {
+	opinion = 50
+	years = 10
+	decaying = yes
+}

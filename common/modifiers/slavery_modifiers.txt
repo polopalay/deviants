@@ -1,0 +1,16 @@
+recently_had_sex = {
+	icon = prostitute_positive
+	health = -0.25
+}
+
+forced_labor = {
+	icon = slave_positive
+	monthly_income = 0.2
+	health = -0.5
+}
+
+carn_using_birth_control_modifier = {
+	icon = fertility_negative
+	fertility = -20
+}
+
