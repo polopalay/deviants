@@ -48,7 +48,7 @@ succubus_demon_generals = {
 	effect = {
 		every_courtier = {
 			limit = { is_knight = yes }
-			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			prostitute_effect= { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 			add_character_modifier = { modifier = succubus_generals years = 13 }
 		}
 		add_character_modifier = { modifier = succubus_generals years = 13 }

@@ -115,7 +115,7 @@ succubus_blackmail.1110 = {
 		animation = scheme
 	}
 	immediate = {
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -355,7 +355,7 @@ succubus_blackmail.1201 = {
 			}
 		}
 		trigger_event = succubus_blackmail.1110
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}

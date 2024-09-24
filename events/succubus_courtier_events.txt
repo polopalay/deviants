@@ -500,7 +500,7 @@ succubus_courtier.1371 = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:deviant_go_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -886,7 +886,7 @@ succubus_courtier.1461 = {
 				track = power
 				value = 1
 			}
-			had_sex_with_effect = {
+			prostitute_effect= {
 				CHARACTER = scope:deviant_go_random_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}

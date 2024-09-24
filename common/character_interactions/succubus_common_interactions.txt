@@ -51,6 +51,7 @@ dress_interaction = {
 }
 
 start_birth_control_interaction = {
+	icon = chastity
 	desc = start_birth_control_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
@@ -76,6 +77,7 @@ start_birth_control_interaction = {
 }
 
 stop_birth_control_interaction = {
+	icon = chastity
 	desc = stop_birth_control_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes

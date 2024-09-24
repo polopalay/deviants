@@ -107,7 +107,7 @@
 			is_adult = no
 		}
 		#Claimant won't leave while claim is pressed...
-		scope:liege = { pressing_claim_of_character_trigger = { CHARACTER = scope:leaving_courtier } }
+		scope:liege = { pressing_claim_of_character_trigger = { PROSTITUTE = scope:leaving_courtier } }
 		#Would be leaving without a child or consort
 		any_child_not_in_traveling_family_trigger = yes
 		any_consort_not_in_traveling_family_trigger = yes

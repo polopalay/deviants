@@ -96,7 +96,7 @@ succubus_loyalty.8002 = {
 	option = {
 		name = succubus_loyalty.8002.a
 		custom_tooltip = succubus_loyalty.8002.a.tt
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:succubus_randoman_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -128,7 +128,7 @@ succubus_loyalty.8003 = {
 	option = {
 		name = succubus_loyalty.8003.a
 		custom_tooltip = succubus_loyalty.8003.a.tt
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:succubus_randoman_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -183,7 +183,7 @@ succubus_loyalty.8005 = {
 				modifier = amused_opinion
 				opinion = 20
 			}
-			had_sex_with_effect = {
+			prostitute_effect= {
 				CHARACTER = scope:succubus_randoman_1
 				PREGNANCY_CHANCE = pregnancy_chance
 			}
@@ -347,7 +347,7 @@ succubus_loyalty.8100 = {
 				value = 1
 			}
 		}
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -383,7 +383,7 @@ succubus_loyalty.8101 = {
 			}
 			add_character_flag = { flag = succubus_asuccubus_cum days = 15 }
 		}
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -415,7 +415,7 @@ succubus_loyalty.8101 = {
 			}
 			add_character_flag = { flag = succubus_pussy_cum days = 15 }
 		}
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
@@ -436,7 +436,7 @@ succubus_loyalty.8102 = {
 	option = {
 		name = succubus_loyalty.8102.a
 		custom_tooltip = succubus_loyalty.8102.a.tt
-		had_sex_with_effect = {
+		prostitute_effect= {
 			CHARACTER = scope:succubus_loyalty_random_1
 			PREGNANCY_CHANCE = pregnancy_chance
 		}
