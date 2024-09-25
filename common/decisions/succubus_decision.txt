@@ -82,12 +82,6 @@ succubus_become_succubus = {
 		}
 	}
 	effect = {
-		add_secret = { type = secret_deviant }
-		add_secret = { type = secret_witch }
-		if = {
-			limit = { have_devil_nicknames_trigger = no }
-			give_prostitution_nickname = yes
-		}
 		mind_break_personality = yes
 		add_trait = succubus
 		set_immortal_age = 18

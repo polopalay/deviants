@@ -1,4 +1,4 @@
-succubus_religion = {
+satanic_religion = {
 	family = rf_pagan
 	pagan_roots = no
 
@@ -199,7 +199,7 @@ succubus_religion = {
 	}
 
 	faiths = {
-		succubus_beelzebub = {
+		beelzebub = {
 			color = { 50 50 255 }
 			icon = custom_faith_10
 
@@ -215,7 +215,7 @@ succubus_religion = {
 
 			doctrine = doctrine_concubines
 		}
-		succubus_lilith = {
+		lilith = {
 			color = { 238 115 221 }
 			icon = custom_faith_black_sheep
 
@@ -232,7 +232,7 @@ succubus_religion = {
 			doctrine = doctrine_polygamy
 			doctrine = doctrine_deviancy_virtuous
 		}
-		succubus_abaddon = {
+		abaddon = {
 			color = { 139 0 0 }
 			icon = custom_faith_pentagram_inverted
 
@@ -250,7 +250,7 @@ succubus_religion = {
 			doctrine = doctrine_funeral_cremation
 			doctrine = doctrine_pluralism_fundamentalist
 		}
-		succubus_mammon = {
+		mammon = {
 			color = { 255 215 0 }
 			icon = custom_faith_fp1_thors_hammer
 
@@ -266,7 +266,7 @@ succubus_religion = {
 
 			doctrine = doctrine_funeral_sky_burial
 		}
-		succubus_asmodeus = {
+		asmodeus = {
 			color = { 255 0 0 }
 			icon = custom_faith_lamb
 
@@ -282,7 +282,7 @@ succubus_religion = {
 
 			doctrine = doctrine_pluralism_fundamentalist
 		}
-		succubus_belial = {
+		belial = {
 			color = { 247 185 238 }
 			icon = custom_faith_eye_of_providence
 

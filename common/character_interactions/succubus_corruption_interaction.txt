@@ -159,16 +159,6 @@ succubus_create_lesser_succubus_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			add_secret = {
-				type = secret_deviant
-			}
-			add_secret = {
-				type = secret_witch
-			}
-			if = {
-				limit = { have_devil_nicknames_trigger = no }
-				give_prostitution_nickname = yes
-			}
 			mind_break_personality = yes
 			add_trait = lesser_succubus
 			set_immortal_age = 18
@@ -214,13 +204,7 @@ succubus_create_succubus_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
-			add_secret = { type = secret_deviant }
-			add_secret = { type = secret_witch }
 			mind_break_personality = yes
-			if = {
-				limit = { have_devil_nicknames_trigger = no }
-				give_prostitution_nickname = yes
-			}
 			add_trait = succubus
 			set_immortal_age = 18
 		}

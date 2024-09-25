@@ -90,27 +90,27 @@ succubus_cultist_interaction = {
 
 	send_option = {
 		flag = beelzebub
-		localization = succubus_beelzebub
+		localization = beelzebub
 	}
 	send_option = {
 		flag = lilith
-		localization = succubus_lilith
+		localization = lilith
 	}
 	send_option = {
 		flag = abaddon
-		localization = succubus_abaddon
+		localization = abaddon
 	}
 	send_option = {
 		flag = mammon
-		localization = succubus_mammon
+		localization = mammon
 	}
 	send_option = {
 		flag = asmodeus
-		localization = succubus_asmodeus
+		localization = asmodeus
 	}
 	send_option = {
 		flag = belial
-		localization = succubus_belial
+		localization = belial
 	}
 
 	on_accept = {
@@ -119,7 +119,7 @@ succubus_cultist_interaction = {
 				scope:beelzebub = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:succubus_beelzebub
+				set_character_faith_with_conversion = faith:beelzebub
 			}
 		}
 		else_if = {
@@ -127,7 +127,7 @@ succubus_cultist_interaction = {
 				scope:lilith = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:succubus_lilith
+				set_character_faith_with_conversion = faith:lilith
 			}
 		}
 		else_if = {
@@ -135,7 +135,7 @@ succubus_cultist_interaction = {
 				scope:abaddon = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:succubus_abaddon
+				set_character_faith_with_conversion = faith:abaddon
 			}
 		}
 		else_if = {
@@ -143,7 +143,7 @@ succubus_cultist_interaction = {
 				scope:mammon = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:succubus_mammon
+				set_character_faith_with_conversion = faith:mammon
 			}
 		}
 		else_if = {
@@ -151,7 +151,7 @@ succubus_cultist_interaction = {
 				scope:asmodeus = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:succubus_asmodeus
+				set_character_faith_with_conversion = faith:asmodeus
 			}
 		}
 		else_if = {
@@ -159,7 +159,7 @@ succubus_cultist_interaction = {
 				scope:belial = yes
 			}
 			scope:recipient = {
-				set_character_faith_with_conversion = faith:succubus_belial
+				set_character_faith_with_conversion = faith:belial
 			}
 		}
 

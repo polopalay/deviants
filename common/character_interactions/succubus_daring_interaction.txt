@@ -587,16 +587,9 @@ succubus_mind_break_interaction = {
 			}
 		}
 		scope:recipient = {
-			if = {
-				limit = { have_devil_nicknames_trigger = no }
-				give_prostitution_nickname = yes
-			}
 			mind_break_personality = yes
 			add_trait = deviant_virgin
 			add_trait = lifestyle_prostitute
-			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			add_secret = { type = secret_deviant }
-			add_secret = { type = secret_witch }
 		}
 	}
 	auto_accept = yes

@@ -25,6 +25,7 @@
 }
 
 former_slave = {
+	category = fame
 	icon = former_slave.dds
 	opposites = {
 		slave
