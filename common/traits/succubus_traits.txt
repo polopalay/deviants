@@ -1,14 +1,18 @@
 succubus = {
 	category = health
 	icon = succubus.dds
-	minimum_age = 18
 	valid_sex = female
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -2
+	monthly_lifestyle_xp_gain_mult = -1000
+	long_reign_bonus_mult = -1000
 	seduce_scheme_power_add = 100
 	can_have_children = no
 	shown_in_encyclopedia = no
 	shown_in_ruler_designer = no
+	flag = immortal_visuals
+	flag = immortal_fertility
+	flag = immortal_incapability
+	no_prowess_loss_from_age = yes
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 	add_commander_trait = yes
@@ -23,7 +27,7 @@ succubus = {
 		}
 	}
 
-	opposites = { lesser_succubus deviant_virgin }
+	opposites = { lesser_succubus deviant_virgin incapable }
 
 	tracks = {
 		power = {
@@ -86,7 +90,6 @@ succubus = {
 				opinion_of_male_rulers = 5
 				men_at_arms_maintenance = -0.1
 				knight_effectivenesuccubus_mult = 0.1
-				long_reign_bonus_mult = 0.1
 				monthly_piety = 0.1
 				stress_gain_mult = -0.1
 			}
@@ -98,7 +101,6 @@ succubus = {
 				opinion_of_male_rulers = 5
 				men_at_arms_maintenance = -0.2
 				knight_effectivenesuccubus_mult = 0.2
-				long_reign_bonus_mult = 0.2
 				monthly_piety = 0.2
 			}
 
@@ -109,7 +111,6 @@ succubus = {
 				opinion_of_male_rulers = 10
 				men_at_arms_maintenance = -0.2
 				knight_effectivenesuccubus_mult = 0.2
-				long_reign_bonus_mult = 0.2
 				monthly_piety = 0.3
 				no_water_crossing_penalty = yes
 				supply_duration = 0.5
@@ -125,19 +126,23 @@ succubus = {
 lesser_succubus = {
 	category = health
 	icon = lesser_succubus.dds
-	minimum_age = 18
 	valid_sex = female
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -2
+	monthly_lifestyle_xp_gain_mult = -1000
+	long_reign_bonus_mult = -1000
 	seduce_scheme_power_add = 100
 	can_have_children = no
 	shown_in_encyclopedia = no
 	shown_in_ruler_designer = no
+	flag = immortal_visuals
+	flag = immortal_fertility
+	flag = immortal_incapability
+	no_prowess_loss_from_age = yes
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 	add_commander_trait = yes
 
-	opposites = { succubus deviant_virgin }
+	opposites = { succubus deviant_virgin incapable }
 
 	desc = {
 		first_valid = {

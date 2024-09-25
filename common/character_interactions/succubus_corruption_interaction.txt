@@ -142,7 +142,6 @@ succubus_create_lesser_succubus_interaction = {
 				is_vassal_of = scope:actor
 			}
 			is_female = yes
-			age >= 18
 			NOR = {
 				has_trait = succubus
 				has_trait = lesser_succubus
@@ -172,6 +171,7 @@ succubus_create_lesser_succubus_interaction = {
 			}
 			mind_break_personality = yes
 			add_trait = lesser_succubus
+			set_immortal_age = 18
 		}
 		scope:actor = {
 			add_trait_xp = {
@@ -193,7 +193,6 @@ succubus_create_succubus_interaction = {
 	is_shown = {
 		scope:recipient = {
 			is_female = yes
-			age >= 18
 			NOR = {
 				has_trait = succubus
 				has_trait = lesser_succubus
@@ -223,6 +222,7 @@ succubus_create_succubus_interaction = {
 				give_prostitution_nickname = yes
 			}
 			add_trait = succubus
+			set_immortal_age = 18
 		}
 		scope:actor = {
 			add_trait_xp = {

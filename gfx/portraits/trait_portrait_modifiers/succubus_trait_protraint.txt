@@ -1,9 +1,7 @@
 succubus_outfit = {
 	usage = game
 	succubus_1 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -17,18 +15,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_9
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_9
+				}
 			}
 		}
 	}
 	succubus_2 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -47,18 +45,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_8
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_8
+				}
 			}
 		}
 	}
 	succubus_3 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -72,18 +70,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_5
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_5
+				}
 			}
 		}
 	}
 	succubus_4 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -102,18 +100,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_2
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_2
+				}
 			}
 		}
 	}
 	succubus_5 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -132,18 +130,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_5
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_5
+				}
 			}
 		}
 	}
 	succubus_6 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -157,11 +155,13 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_12
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_12
+				}
 			}
 		}
 	}
@@ -187,18 +187,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_10
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_10
+				}
 			}
 		}
 	}
 	succubus_8 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -217,18 +217,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_11
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_11
+				}
 			}
 		}
 	}
 	succubus_9 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -247,18 +247,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_15
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_15
+				}
 			}
 		}
 	}
 	succubus_10 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -277,18 +277,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_16
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_16
+				}
 			}
 		}
 	}
 	succubus_11 = {
-		traits = {
-			succubus
-		}
+		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = succubus
@@ -302,18 +302,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_6
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_6
+				}
 			}
 		}
 	}
 	lesser_succubus_1 = {
-		traits = {
-			lesser_succubus
-		}
+		traits = { lesser_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = lesser_succubus
@@ -321,18 +321,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_13
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_13
+				}
 			}
 		}
 	}
 	lesser_succubus_1 = {
-		traits = {
-			lesser_succubus
-		}
+		traits = { lesser_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = lesser_succubus
@@ -340,18 +340,18 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_4
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_4
+				}
 			}
 		}
 	}
 	lesser_succubus_2 = {
-		traits = {
-			lesser_succubus
-		}
+		traits = { lesser_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = lesser_succubus
@@ -359,24 +359,26 @@ succubus_outfit = {
 			}
 		}
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_7
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_7
+				}
 			}
 		}
 	}
 	virgin = {
-		traits = {
-			deviant_virgin
-		}
+		traits = { deviant_virgin }
 		dna_modifiers = {
-			morph = {
-				mode = add
-				gene = succubus_womb
-				value = 1
-				template = womb_14
+			human = {
+				morph = {
+					mode = add
+					gene = succubus_womb
+					value = 1
+					template = womb_14
+				}
 			}
 		}
 	}

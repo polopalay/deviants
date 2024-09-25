@@ -1,8 +1,9 @@
 succubus_start_ritual_decision = {
 	desc = succubus_start_ritual_decision.d
 	selection_tooltip = succubus_start_ritual_decision.t
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	confirm_text = succubus_start_ritual_decision.c
+	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -48,8 +49,9 @@ succubus_start_ritual_decision = {
 succubus_tensoul_decision = {
 	desc = succubus_tensoul_decision.d
 	selection_tooltip = succubus_tensoul_decision.t
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	confirm_text = succubus_tensoul_decision.c
+	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -93,8 +95,9 @@ succubus_tensoul_decision = {
 succubus_vassal_decision = {
 	desc = succubus_vassal_decision.d
 	selection_tooltip = succubus_vassal_decision.t
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	confirm_text = succubus_vassal_decision.c
+	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -140,8 +143,9 @@ succubus_vassal_decision = {
 succubus_homologus_decision = {
 	desc = succubus_homologus_decision.d
 	selection_tooltip = succubus_homologus_decision.t
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	confirm_text = succubus_homologus_decision.c
+	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -192,8 +196,9 @@ succubus_homologus_decision = {
 succubus_family_decision = {
 	desc = succubus_family_decision.d
 	selection_tooltip = succubus_family_decision.t
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	confirm_text = succubus_family_decision.c
+	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft
@@ -236,8 +241,9 @@ succubus_family_decision = {
 decisions_ritual_complete = {
 	desc = decisions_ritual_complete.d
 	selection_tooltip = decisions_ritual_complete.t
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	confirm_text = decisions_ritual_complete.c
+	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
 			legend_type = legend_type:witchcraft

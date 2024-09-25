@@ -128,6 +128,12 @@
 		ai_recipients = realm_characters
 		max = 10
 	}
+	ai_targets = {
+		ai_recipients = contacts
+		ai_recipients = top_realm_domicile_owners
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
 	ai_will_do = {
 		base = 0
 		modifier = { add = 10 scope:actor = { stress_level >= 1 } }
@@ -312,6 +318,12 @@ offer_prostitute_interaction = {
 		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
+	}
+	ai_targets = {
+		ai_recipients = contacts
+		ai_recipients = top_realm_domicile_owners
+		ai_recipients = nearby_domicile_owners
+		max = 5
 	}
 	ai_targets = {
 		ai_recipients = realm_characters

@@ -384,8 +384,6 @@ morph_genes = {
 
 	accessory_genes = {
 		horns = {
-			group = horn_group
-
 			no_horns = {
 				index = 0
 				male = {
@@ -401,7 +399,7 @@ morph_genes = {
 					1 = empty
 				}
 				female = {
-					1 = female_horns_0
+					100 = female_horns_0
 				}
 				boy = male
 				girl = female
