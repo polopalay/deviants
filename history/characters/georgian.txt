@@ -580,32 +580,36 @@
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 8
-	religion = "orthodox"
+	religion = "lilith"
 	culture = "georgian"
 	trait = ambitious #Involved in the second imperial coup 
 	trait = diligent
-	trait = lustful #Noted for her charity
 	trait = curious
+	trait = lustful
 	disallow_random_traits = yes
 	father = 9952
 	mother = 9953
 	1053.1.1 = {
 		birth = "1053.1.1"
 		effect = {
+			mind_break_personality = yes
+			add_trait = lesser_succubus
+			set_immortal_age = 18
 			add_character_flag = has_scripted_appearance
 		}
 	}
 	1066.1.2 = {
 		effect = {
 			create_betrothal = character:1736 #In real life they were married at this time, but we don't marry underage characters in this game so bethrothal it is
-			mind_break_personality = yes
-			add_trait = lesser_succubus
-			set_immortal_age = 18
-			add_trait_xp = { trait = lesser_succubus value = 100 }
 		}
 	}
 	1069.1.1 = {
 		add_spouse = 1736
+		add_trait = education_diplomacy_3
+	}
+	1178.1.1 = {
+		add_trait = slave
+		add_character_modifier = forced_labor
 	}
 }
 

@@ -6,9 +6,6 @@ quarterly_playable_pulse = {
 			has_trait = lesser_succubus
 		}
 		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_landed = yes
 		is_female = yes
 	}
 	random_on_action = {

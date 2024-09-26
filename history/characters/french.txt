@@ -640,6 +640,8 @@
 	religion = "abaddon"
 	culture = french
 	trait = education_stewardship_2
+	trait = just
+	trait = greedy
 	trait = lustful
 	father = 1180
 	mother = 1115
@@ -647,15 +649,18 @@
 		#birth = "1051.9.21" # Historical, but then she is a child at game start
 		birth = "1048.9.21"
 		effect = {
+			add_character_flag = do_not_generate_starting_family
 			add_character_flag = has_scripted_appearance
 			mind_break_personality = yes
 			add_trait = succubus
 			set_immortal_age = 18
-			add_trait_xp = { trait = succubus track = power value = 100 }
-			add_trait_xp = { trait = succubus track = daring value = 100 }
-			add_trait_xp = { trait = succubus track = corruption value = 100 }
-			add_trait_xp = { trait = succubus track = loyalty value = 100 }
 		}	
+	}
+	1065.1.1 = {
+		effect = {
+			set_landless_government_effect = yes
+			set_relation_friend = character:7757
+		}
 	}
 }
 

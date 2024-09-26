@@ -10793,11 +10793,14 @@
 	dna = 161257_queen_wyszeslawa
 	female = yes
 	dynasty = 705 # Rurikovich
-	religion = "orthodox"
+	religion = "lilith"
 	culture = "russian"
 	father = 628
 	mother = 125044
+	trait = brave
+	trait = wrathful
 	trait = lustful
+	trait = education_martial_3
 	1047.1.1 = {
 		birth = "1047.1.1"
 		effect = {
@@ -10805,8 +10808,11 @@
 			mind_break_personality = yes
 			add_trait = lesser_succubus
 			set_immortal_age = 18
-			add_trait_xp = { trait = lesser_succubus value = 100 }
 		}	
+	}
+	1178.1.1 = {
+		add_trait = slave
+		add_character_modifier = forced_labor
 	}
 }
 

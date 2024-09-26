@@ -548,11 +548,14 @@
 	dna = 765_princess_swietoslawa
 	female = yes
 	dynasty = 699
-	religion = "catholic"
+	religion = "lilith"
 	culture = "polish"
 	father = 760
 	mother = 13501
+	trait = callous
+	trait = calm
 	trait = lustful
+	trait = education_intrigue_2
 	1048.1.2 = {
 		birth = "1048.1.2"
 		effect = {
@@ -560,11 +563,14 @@
 			mind_break_personality = yes
 			add_trait = lesser_succubus
 			set_immortal_age = 18
-			add_trait_xp = { trait = lesser_succubus value = 100 }
-		}	
+		}
 	}
-}
+	1178.1.1 = {
+		add_trait = slave
+		add_character_modifier = forced_labor
+	}
 	
+}
 	#Wladyslaw I 's family
 	
 170108 = {
