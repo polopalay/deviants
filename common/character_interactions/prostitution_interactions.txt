@@ -4,8 +4,8 @@
 	category = interaction_category_diplomacy
 	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { months = 12 }
-	cooldown_against_recipient = { months = 12 }
+	cooldown = { years = 1 }
+	cooldown_against_recipient = { years = 2 }
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -13,12 +13,8 @@
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
-			is_travelling = no
 			is_attracted_to_women = yes
-			NOT = {
-				is_at_war_with = scope:recipient
-				has_trait = lovers_pox
-			}
+			NOT = { is_at_war_with = scope:recipient }
 		}
 		scope:recipient = {
 			is_valid_prostitute_trigger = yes
@@ -36,8 +32,29 @@
 			prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 			random = {
 				chance = 10
-				modifier = { add = 10 has_trait = generous }
-				modifier = { add = -10 has_trait = greedy }
+				opinion_modifier = {
+					opinion_target = scope:actor
+					who = scope:recipient
+					multiplier = 0.1
+				}
+				modifier = { add = 10 scope:actor = { has_relation_friend = scope:recipient } }
+				modifier = { add = 10 scope:actor = { has_trait = generous } }
+				modifier = { add = 10 scope:actor = { has_trait = profligate } }
+				modifier = { add = -10 scope:actor = { has_trait = greedy } }
+				modifier = { add = -10 scope:actor = { has_trait = chaste } }
+				modifier = { add = 5 scope:actor = { has_trait = lustful } }
+				modifier = { add = 5 scope:actor = { has_trait = rakish } }
+				modifier = { add = -5 scope:actor = { has_trait = temperate } }
+				modifier = { add = 2 scope:actor = { has_trait = gregarious } }
+				modifier = { add = 2 scope:actor = { has_trait = paranoid } }
+				modifier = { add = 1 scope:actor = { has_trait = trusting } }
+				modifier = { add = 1 scope:actor = { has_trait = arrogant } }
+				modifier = { add = 1 scope:actor = { has_trait = lifestyle_reveler } }
+				modifier = { 
+					add = 5 
+					scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+					scope:recipient = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } 
+				}
 				modifier = { add = 5 scope:recipient = { has_trait = beauty_good_1 } }
 				modifier = { add = 10 scope:recipient = { has_trait = beauty_good_2 } }
 				modifier = { add = 20 scope:recipient = { has_trait = beauty_good_3 } }
@@ -67,6 +84,9 @@
 				modifier = { add = -5 scope:recipient = { has_trait = giant } }
 				modifier = { add = -5 scope:recipient = { has_trait = weak } }
 				modifier = { add = -5 scope:recipient = { has_trait = dull } }
+				modifier = { add = -5 scope:recipient = { has_trait = poet } }
+				modifier = { add = 10 scope:recipient = { age <= 18 } }
+				modifier = { add = 10 scope:recipient = { age <= 20 } }
 				modifier = { add = -5 scope:recipient = { age >= 30 is_immortal = no } }
 				modifier = { add = -50 scope:recipient = { age >= 40 is_immortal = no } }
 				modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
@@ -123,23 +143,16 @@
 		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
-	}
-	ai_targets = {
-		ai_recipients = realm_characters
-		max = 10
-	}
-	ai_targets = {
-		ai_recipients = contacts
-		ai_recipients = top_realm_domicile_owners
 		ai_recipients = nearby_domicile_owners
+		ai_recipients = realm_characters
 		max = 5
 	}
 	ai_will_do = {
 		base = 0
 		modifier = { add = 10 scope:actor = { stress_level >= 1 } }
 		modifier = { add = -10 scope:actor = { has_trait = chaste } }
-		modifier = { add = 1 scope:actor = { has_trait = lustful } }
-		modifier = { add = 1 scope:actor = { has_trait = rakish } }
+		modifier = { add = 5 scope:actor = { has_trait = lustful } }
+		modifier = { add = 5 scope:actor = { has_trait = rakish } }
 		modifier = { add = -20 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = -5 scope:recipient = { has_trait = beauty_bad_1 } }
 		modifier = { add = -10 scope:recipient = { has_trait = beauty_bad_2 } }
@@ -170,6 +183,8 @@
 		modifier = { add = -5 scope:recipient = { has_trait = giant } }
 		modifier = { add = -5 scope:recipient = { has_trait = weak } }
 		modifier = { add = -5 scope:recipient = { has_trait = dull } }
+		modifier = { add = 10 scope:recipient = { age <= 18 } }
+		modifier = { add = 10 scope:recipient = { age <= 20 } }
 		modifier = { add = -5 scope:recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -50 scope:recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
@@ -183,7 +198,7 @@ offer_prostitute_interaction = {
 	ignores_pending_interaction_block = no
 	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { months = 24 }
+	cooldown = { years = 2 }
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -191,7 +206,6 @@ offer_prostitute_interaction = {
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
-			is_travelling = no
 			is_attracted_to_women = yes
 			NOT = {
 				is_at_war_with = scope:actor
@@ -227,8 +241,29 @@ offer_prostitute_interaction = {
 			pay_short_term_gold = { target = scope:secondary_recipient gold = 2 }
 			random = {
 				chance = 10
-				modifier = { add = 10 has_trait = generous }
-				modifier = { add = -10 has_trait = greedy }
+				opinion_modifier = {
+					opinion_target = scope:secondary_recipient
+					who = scope:recipient
+					multiplier = 0.1
+				}
+				modifier = { add = 10 scope:actor = { has_relation_friend = scope:secondary_recipient } }
+				modifier = { add = 10 scope:actor = { has_trait = generous } }
+				modifier = { add = 10 scope:actor = { has_trait = profligate } }
+				modifier = { add = -10 scope:actor = { has_trait = greedy } }
+				modifier = { add = -10 scope:actor = { has_trait = chaste } }
+				modifier = { add = 5 scope:actor = { has_trait = lustful } }
+				modifier = { add = 5 scope:actor = { has_trait = rakish } }
+				modifier = { add = -5 scope:actor = { has_trait = temperate } }
+				modifier = { add = 2 scope:actor = { has_trait = gregarious } }
+				modifier = { add = 2 scope:actor = { has_trait = paranoid } }
+				modifier = { add = 1 scope:actor = { has_trait = trusting } }
+				modifier = { add = 1 scope:actor = { has_trait = arrogant } }
+				modifier = { add = 1 scope:actor = { has_trait = lifestyle_reveler } }
+				modifier = { 
+					add = 5 
+					scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+					scope:secondary_recipient = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+				}
 				modifier = { add = 5 scope:secondary_recipient = { has_trait = beauty_good_1 } }
 				modifier = { add = 10 scope:secondary_recipient = { has_trait = beauty_good_2 } }
 				modifier = { add = 20 scope:secondary_recipient = { has_trait = beauty_good_3 } }
@@ -258,6 +293,8 @@ offer_prostitute_interaction = {
 				modifier = { add = -5 scope:secondary_recipient = { has_trait = giant } }
 				modifier = { add = -5 scope:secondary_recipient = { has_trait = weak } }
 				modifier = { add = -5 scope:secondary_recipient = { has_trait = dull } }
+				modifier = { add = 10 scope:secondary_recipient = { age <= 18 } }
+				modifier = { add = 10 scope:secondary_recipient = { age <= 20 } }
 				modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 				modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 				modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
@@ -300,6 +337,8 @@ offer_prostitute_interaction = {
 		modifier = { add = -5 scope:secondary_recipient = { has_trait = giant } }
 		modifier = { add = -5 scope:secondary_recipient = { has_trait = weak } }
 		modifier = { add = -5 scope:secondary_recipient = { has_trait = dull } }
+		modifier = { add = 10 scope:secondary_recipient = { age <= 18 } }
+		modifier = { add = 10 scope:secondary_recipient = { age <= 20 } }
 		modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
@@ -318,16 +357,9 @@ offer_prostitute_interaction = {
 		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
-	}
-	ai_targets = {
-		ai_recipients = contacts
-		ai_recipients = top_realm_domicile_owners
 		ai_recipients = nearby_domicile_owners
-		max = 5
-	}
-	ai_targets = {
 		ai_recipients = realm_characters
-		max = 10
+		max = 5
 	}
 	ai_will_do = {
 		base = 100
@@ -457,28 +489,11 @@ start_prostitution_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 25
-			scope:actor = {
-				faith = { has_doctrine = tenet_polyamory }
-			}
-		}
-		modifier = {
-			add = -25
-			scope:actor = { has_trait = chaste }
-		}
-		modifier = {
-			add = 5
-			scope:actor = { has_trait = lustful }
-		}
-		modifier = {
-			add = 5
-			scope:actor = { has_trait = rakish }
-		}
-		modifier = {
-			add = 5
-			scope:actor = { has_trait = greedy }
-		}
+		modifier = { add = 25 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
+		modifier = { add = -25 scope:actor = { has_trait = chaste } }
+		modifier = { add = 5 scope:actor = { has_trait = lustful } }
+		modifier = { add = 5 scope:actor = { has_trait = rakish } }
+		modifier = { add = 5 scope:actor = { has_trait = greedy } }
 	}
 }
 

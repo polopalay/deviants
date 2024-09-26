@@ -10,3 +10,5 @@
 
  succubus_philosopher_stone: "Philosopher's Stone"
  succubus_philosopher_stone.d: "The Philosopher's Stone is a legendary alchemical substance said to be capable of turning base metals into gold or silver, and also acting as an elixir of life that grants immortality."
+
+ prostitute_effect.tt:1 "[had_sex_root_character.GetShortUIName|U] prostitution for [had_sex_with_effect_partner.GetShortUIName]"

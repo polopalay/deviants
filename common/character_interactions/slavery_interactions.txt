@@ -25,36 +25,12 @@
 	ai_will_do = {
 		base = 0
 
-		ai_value_modifier = {
-			max = 5
-			ai_compassion = -1
-		}
-		modifier = {
-			add = -25
-			scope:actor.dynasty = scope:recipient.dynasty
-		}
-		modifier = {
-			add = -25
-			is_close_or_extended_family_of = scope:recipient
-		}
-		modifier = {
-			add = -25
-			is_close_family_of = scope:recipient
-		}
-		modifier = {
-			add = -25
-			any_dynasty_member = {
-				primary_heir = scope:recipient
-			}
-		}
-		modifier = {
-			add = 50
-			has_execute_reason = scope:recipient
-			OR = {
-				has_trait = sadistic
-				has_trait = lunatic
-			}
-		}
+		ai_value_modifier = { max = 5 ai_compassion = -1 }
+		modifier = { add = -25 scope:actor.dynasty = scope:recipient.dynasty }
+		modifier = { add = -25 is_close_or_extended_family_of = scope:recipient }
+		modifier = { add = -25 is_close_family_of = scope:recipient }
+		modifier = { add = -25 any_dynasty_member = { primary_heir = scope:recipient } }
+		modifier = { add = 50 has_execute_reason = scope:recipient scope:actor = { has_trait = sadistic } }
 	}
 }
 
@@ -129,26 +105,11 @@ carn_buy_slave_directly_interaction = {
 	}
 	ai_will_do = {
 		base = 0
-		modifier = {
-			trigger = { scope:secondary_recipient = { is_spouse_of = scope:actor } }
-			add = 50
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { is_close_family_of = scope:actor } }
-			add = 40
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_friend = scope:actor } }
-			add = 10
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_lover = scope:actor } }
-			add = 10
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
-			add = 100
-		}
+		modifier = { scope:secondary_recipient = { is_spouse_of = scope:actor } add = 50 }
+		modifier = { scope:secondary_recipient = { is_close_family_of = scope:actor } add = 40 }
+		modifier = { scope:secondary_recipient = { has_relation_friend = scope:actor } add = 10 }
+		modifier = { scope:secondary_recipient = { has_relation_lover = scope:actor } add = 10 }
+		modifier = { scope:secondary_recipient = { has_relation_soulmate = scope:actor } add = 100 }
 	}
 }
 
@@ -217,39 +178,18 @@ carn_sell_slave_interaction = {
 		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
-		max = 10
+		max = 5
 	}
 
 	ai_will_do = {
 		base = 0
-		modifier = {
-			trigger = { scope:recipient.gold < minor_gold_value }
-			add = 5
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { is_knight_of = scope:recipient } }
-			add = -25
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { is_councillor_of = scope:recipient } }
-			add = -50
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_friend = scope:recipient } }
-			add = -50
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_lover = scope:recipient } }
-			add = -50
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_crush = scope:recipient } }
-			add = -50
-		}
-		modifier = {
-			trigger = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
-			add = -100
-		}
+		modifier = { scope:recipient.gold < 0 add = 10 }
+		modifier = { scope:secondary_recipient = { is_knight_of = scope:recipient } add = -25 }
+		modifier = { scope:secondary_recipient = { is_councillor_of = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_friend = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_lover = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_crush = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = -100 }
 	}
 }
 
@@ -306,26 +246,11 @@ carn_free_slave_interaction = {
 
 	ai_will_do = {
 		base = 0
-		modifier = {
-			trigger = { scope:recipient = { is_spouse_of = scope:actor } }
-			add = 50
-		}
-		modifier = {
-			trigger = { scope:recipient = { is_close_family_of = scope:actor } }
-			add = 25
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_friend = scope:actor } }
-			add = 10
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_lover = scope:actor } }
-			add = 10
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_soulmate = scope:actor } }
-			add = 100
-		}
+		modifier = { scope:recipient = { is_spouse_of = scope:actor } add = 50 }
+		modifier = { scope:recipient = { is_close_family_of = scope:actor } add = 25 }
+		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = 10 }
+		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = 10 }
+		modifier = { scope:recipient = { has_relation_soulmate = scope:actor } add = 100 }
 	}
 }
 
@@ -357,23 +282,10 @@ forced_labor_interaction = {
 	ai_frequency = 12
 
 	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 20
-			OR = { has_trait = sadistic has_trait = callous }
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_friend = scope:actor } }
-			add = -20
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_lover = scope:actor } }
-			add = -20
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_soulmate = scope:actor } }
-			add = -100
-		}
+		base = 20
+		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = -20 }
+		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = -20 }
+		modifier = { scope:recipient = { has_relation_soulmate = scope:actor } add = -100 }
 	}
 }
 
@@ -405,22 +317,9 @@ ordinary_labor_interaction = {
 
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 20
-			OR = { has_trait = compassionate has_trait = gregarious }
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_friend = scope:actor } }
-			add = 20
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_lover = scope:actor } }
-			add = 20
-		}
-		modifier = {
-			trigger = { scope:recipient = { has_relation_soulmate = scope:actor } }
-			add = 100
-		}
+		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = 20 }
+		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = 20 }
+		modifier = {  scope:recipient = { has_relation_soulmate = scope:actor } add = 100 }
 	}
 }
 
@@ -453,35 +352,10 @@ extortion_interaction = {
 	ai_frequency = 12
 
 	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 25
-			scope:actor.dynasty = scope:recipient.dynasty
-		}
-		modifier = {
-			add = 25
-			is_close_or_extended_family_of = scope:recipient
-		}
-		modifier = {
-			add = 25
-			is_close_family_of = scope:recipient
-		}
-		modifier = {
-			add = -50
-			has_execute_reason = scope:recipient
-		}
-		modifier = {
-			add = 100
-			OR = {
-				has_trait = greedy
-			}
-		}
-		modifier = {
-			add = -50
-			OR = {
-				has_trait = kind
-				has_trait = honest
-			}
-		}
+		base = 25
+		modifier = { add = -25 scope:actor.dynasty = scope:recipient.dynasty }
+		modifier = { add = -25 is_close_or_extended_family_of = scope:recipient }
+		modifier = { add = -25 is_close_family_of = scope:recipient }
+		modifier = { add = 50 has_execute_reason = scope:recipient }
 	}
 }

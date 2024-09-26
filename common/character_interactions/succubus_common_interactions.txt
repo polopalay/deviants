@@ -22,6 +22,10 @@
 			add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		}
 	}
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_frequency = 1
+	ai_will_do = { base = 5 }
 }
 
 dress_interaction = {

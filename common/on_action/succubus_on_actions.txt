@@ -5,6 +5,7 @@ quarterly_playable_pulse = {
 			has_trait = succubus
 			has_trait = lesser_succubus
 		}
+		is_ruler = yes
 		is_imprisoned = no
 		is_female = yes
 	}

@@ -966,6 +966,7 @@
 			add_character_flag = do_not_generate_starting_family
 			mind_break_personality = yes
 			add_trait = succubus
+			add_trait = lifestyle_prostitute
 			set_immortal_age = 18
 		}
 	}
@@ -2751,6 +2752,7 @@
 	535.1.1 = {
 		effect = {
 			mind_break_personality = yes
+			add_trait = lifestyle_prostitute
 			add_trait = lesser_succubus
 			set_immortal_age = 18
 			add_trait = slave
@@ -2796,6 +2798,7 @@
 	488.1.1 = {
 		effect = {
 			mind_break_personality = yes
+			add_trait = lifestyle_prostitute
 			add_trait = lesser_succubus
 			set_immortal_age = 18
 			add_trait = slave

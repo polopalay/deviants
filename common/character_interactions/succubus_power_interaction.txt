@@ -84,17 +84,9 @@ deavians_dealing_with_stress_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 10
-		modifier = {
-			add = 10
-			scope:recipient = scope:actor
-		}
-		modifier = {
-			add = 5
-			scope:recipient = {
-				is_child_of = scope:actor
-			}
-		}
+		base = 0
+		modifier = { add = 50 scope:recipient = scope:actor }
+		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 	}
 
 }
@@ -232,17 +224,9 @@ succubus_heal_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 50
-		modifier = {
-			add = 50
-			scope:recipient = scope:actor
-		}
-		modifier = {
-			add = 30
-			scope:recipient = {
-				is_child_of = scope:actor
-			}
-		}
+		base = 0
+		modifier = { add = 50 scope:recipient = scope:actor }
+		modifier = { add = 30 scope:recipient = { is_child_of = scope:actor } }
 	}
 }
 
@@ -343,15 +327,7 @@ succubus_purify_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 50
-			scope:recipient = scope:actor
-		}
-		modifier = {
-			add = 25
-			scope:recipient = {
-				is_child_of = scope:actor
-			}
-		}
+		modifier = { add = 50 scope:recipient = scope:actor }
+		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
 	}
 }

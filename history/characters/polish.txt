@@ -561,6 +561,7 @@
 		effect = {
 			add_character_flag = has_scripted_appearance
 			mind_break_personality = yes
+			add_trait = lifestyle_prostitute
 			add_trait = lesser_succubus
 			set_immortal_age = 18
 		}

@@ -116,3 +116,10 @@ have_devil_building_trigger = {
 		}
 	}
 }
+
+is_in_landless_adventurer_government = {
+	OR = {
+		liege = { government_has_flag = government_is_landless_adventurer }
+		government_has_flag = government_is_landless_adventurer
+	}
+}

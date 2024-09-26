@@ -604,8 +604,12 @@
 		}
 	}
 	1069.1.1 = {
+		effect = {
+			break_betrothal = character:1736
+		}
 		add_spouse = 1736
 		add_trait = education_diplomacy_3
+		add_trait = lifestyle_prostitute
 	}
 	1178.1.1 = {
 		add_trait = slave

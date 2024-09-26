@@ -11,14 +11,13 @@ succubus_absorb_interaction = {
 			is_ruler = yes
 			NOT = { is_at_war_with = scope:recipient }
 			has_trait_xp = { trait = succubus track = loyalty value < 100 }
-			have_soul_forge_trigger = yes
 		}
 		scope:recipient = {
 			OR = {
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
 			}
-			has_trait_xp = { trait = lesser_succubus value >= 100 }
+			has_trait_xp = { trait = lesser_succubus value >= 50 }
 		}
 	}
 	on_accept = {
@@ -26,7 +25,7 @@ succubus_absorb_interaction = {
 			add_character_modifier = succubus_buff
 			add_trait_xp = {
 				trait = lesser_succubus
-				value = -100
+				value = -50
 			}
 		}
 		scope:actor = {

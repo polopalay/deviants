@@ -544,6 +544,13 @@ succubus_honor_interaction = {
 		}
 	}
 	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = { ai_recipients = self }
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 25 scope:recipient = scope:actor }
+	}
 }
 
 succubus_mind_break_interaction = {
@@ -560,7 +567,6 @@ succubus_mind_break_interaction = {
 				track = daring
 				value >= 50
 			}
-			is_valid_construction_alchemy2_trigger = yes
 		}
 		scope:recipient = {
 			is_female = yes
@@ -582,7 +588,7 @@ succubus_mind_break_interaction = {
 			}
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 		}
@@ -593,12 +599,18 @@ succubus_mind_break_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 60
+	ai_frequency = 2
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		ai_recipients = realm_characters
+		max = 5
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 5 }
+	ai_will_do = { base = 25 }
 }
