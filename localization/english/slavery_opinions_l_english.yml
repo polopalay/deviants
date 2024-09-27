@@ -1,5 +1,7 @@
 ﻿l_english:
   carn_prostitution_crime_opinion: "Known [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_wants_to_be_your_slave_opinion: "Desires an Owner"
+
   prostitute_shunned_opinion: "Known [GetTrait('prostitute').GetName( GetNullCharacter )]"
   carn_enslaved_me_opinion: "Enslaved me"
   carn_enslaved_close_family_opinion: "Enslaved close family member"

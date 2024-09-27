@@ -61,3 +61,8 @@ ordinary_labor_opinion = {
 	years = 10
 	decaying = yes
 }
+
+carn_wants_to_be_your_slave_opinion = {
+	opinion = 10
+}
+

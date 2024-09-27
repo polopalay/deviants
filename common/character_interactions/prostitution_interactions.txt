@@ -529,6 +529,7 @@ stop_prostitution_interaction = {
 
 	ai_frequency = 12
 	ai_targets = {
+		ai_recipients = self
 		ai_recipients = courtiers
 		ai_recipients = vassals
 	}
@@ -539,6 +540,7 @@ stop_prostitution_interaction = {
 			add = 100
 			scope:recipient = {
 				age > 40
+				is_immortal = no
 			}
 		}
 	}

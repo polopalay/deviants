@@ -1,0 +1,11 @@
+﻿carn_slave_can_be_sold_trigger = {
+	NOR = {
+		has_treatable_disease_trigger = yes
+		has_contagious_disease_trigger = yes
+		has_wounds_trigger = yes
+		is_incapable = yes
+		has_character_flag = carn_slave_cannot_be_sold
+		has_trait_with_flag = carn_slave_cannot_be_sold
+	}
+}
+

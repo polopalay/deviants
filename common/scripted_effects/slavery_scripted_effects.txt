@@ -81,3 +81,86 @@
 	}
 }
 
+carn_free_slave_effect = {
+	scope:slave = {
+		if = {
+			limit = { scope:gold = yes }
+			pay_short_term_gold = { gold = scope:slave.carn_slave_price_value target = scope:owner }
+		}
+
+		if = {
+			limit = { scope:current_gold = yes }
+			pay_short_term_gold = { gold = scope:slave.current_gold_value target = scope:owner }
+		}
+
+		if = {
+			limit = { scope:demand_conversion = yes }
+			set_character_faith = scope:actor.faith
+			add_opinion = { modifier = demanded_my_conversion_opinion target = scope:owner }
+		}
+		
+		if = {
+			limit = { scope:renounce_claims = yes }
+			add_opinion = { modifier = demanded_claim_renouncement target = scope:owner }
+			scope:slave = {
+				every_claim = {
+					explicit = yes
+					limit = {
+						save_temporary_scope_as = temp_claim
+						OR = {
+							holder = scope:owner
+							AND = {
+								exists = holder
+								NOT = { prev = { target_is_liege_or_above = scope:owner } }
+								holder = { target_is_liege_or_above = scope:owner }
+							}
+							scope:owner = {
+								any_held_title = { is_de_jure_liege_or_above_target = scope:temp_claim }
+							}
+						}
+					}
+					scope:slave = { remove_claim = prev }
+				}
+			}
+		}
+		
+		if = {
+			limit = { scope:gain_hook = yes }
+			add_opinion = { modifier = demanded_hook target = scope:owner }
+			scope:owner = {
+				add_hook = { target = scope:slave type = favor_hook }
+			}
+		}
+		if = {
+			limit = {
+				scope:gold = no
+				scope:current_gold = no
+				scope:demand_conversion = no
+				scope:renounce_claims = no
+				scope:gain_hook = no
+			}
+			add_opinion = { target = scope:owner modifier = carn_freed_me_from_slavery_opinion }
+			every_spouse = {
+				limit = { NOT = { this = scope:owner } }
+				add_opinion = { target = scope:owner modifier = free_slave_close_family_opinion }
+			}
+			every_close_family_member = {
+				limit = { NOT = { this = scope:owner is_spouse_of = scope:new_slave } }
+				add_opinion = { target = scope:owner modifier = free_slave_close_family_opinion }
+			}
+			every_relation = {
+				type = friend
+				limit = { NOT = { this = scope:owner is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave } }
+				add_opinion = { target = scope:owner modifier = free_slave_friend_opinion }
+			}
+			every_relation = {
+				type = lover
+				limit = { NOT = { this = scope:owner  is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave has_relation_friend = scope:new_slave  } }
+				add_opinion = { target = scope:owner modifier = free_slave_friend_opinion }
+			}
+		}
+		remove_trait = slave
+		remove_character_modifier = forced_labor
+		add_trait = former_slave
+	}
+}
