@@ -1,0 +1,65 @@
+namespace = prostitute_contracts_event
+
+# Offer prostitute services to employer
+prostitute_contracts_event.0001 = {
+	type = character_event
+	title = prostitute_contracts_event.0800.t
+	desc = prostitute_contracts_event.0800.desc
+
+	theme = landless_adventurer
+	override_background = { reference = terrain }
+	right_portrait = {
+		character = root
+		animation = thinking
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		ai_chance = { base = 100 }
+		name = prostitute_contracts_event.0800.a
+		custom_tooltip = prostitute_contracts_event.0800.a.tt
+		scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
+		scope:request_prostitute = {
+			duel = {
+				skill = intrigue
+				value = high_skill_rating
+				50 = {
+					compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
+					scope:task_contract = { complete_task_contract = success_critical }
+				}
+				50 = { 
+					compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
+					scope:task_contract = { complete_task_contract = success_standard }
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_valid_prostitute_trigger = yes
+			NOT = { root = scope:request_prostitute }
+		}
+		name = prostitute_contracts_event.0800.b
+		custom_tooltip = prostitute_contracts_event.0800.b.tt
+		scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
+		duel = {
+			skill = intrigue
+			value = high_skill_rating
+			40 = {
+				compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
+				scope:task_contract = { complete_task_contract = success_critical }
+			}
+			60 = { 
+				compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
+				scope:task_contract = { complete_task_contract = failure_standard }
+			}
+		}
+	}
+	option = {
+		name = prostitute_contracts_event.0800.c
+		custom_tooltip = prostitute_contracts_event.0800.c.tt
+		scope:task_contract = {
+			complete_task_contract = failure_standard
+		}
+	}
+}

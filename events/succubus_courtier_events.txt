@@ -500,10 +500,7 @@ succubus_courtier.1371 = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
-		prostitute_effect= {
-			CHARACTER = scope:deviant_go_random_1
-			PREGNANCY_CHANCE = pregnancy_chance
-		}
+		scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 		scope:deviant_go_random_1 = {
 			add_opinion = {
 				target = root
@@ -886,10 +883,7 @@ succubus_courtier.1461 = {
 				track = power
 				value = 1
 			}
-			prostitute_effect= {
-				CHARACTER = scope:deviant_go_random_1
-				PREGNANCY_CHANCE = pregnancy_chance
-			}
+			scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 			add_character_flag = { flag = succubus_pussy_cum days = 10 }
 			add_character_flag = { flag = succubus_body_cum days = 10 }
 		}

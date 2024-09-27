@@ -115,10 +115,7 @@ succubus_blackmail.1110 = {
 		animation = scheme
 	}
 	immediate = {
-		prostitute_effect= {
-			CHARACTER = scope:deviant_go_random_1
-			PREGNANCY_CHANCE = pregnancy_chance
-		}
+		scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 		add_character_flag = { flag = succubus_pussy_cum days = 20 }
 	}
 	#Go deal with the mess
@@ -355,10 +352,7 @@ succubus_blackmail.1201 = {
 			}
 		}
 		trigger_event = succubus_blackmail.1110
-		prostitute_effect= {
-			CHARACTER = scope:deviant_go_random_1
-			PREGNANCY_CHANCE = pregnancy_chance
-		}
+		scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus

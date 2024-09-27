@@ -5,3 +5,10 @@
 	has_trait = lifestyle_prostitute
 	NOT = { has_character_modifier = recently_had_sex }
 }
+
+has_valid_prostitute_trigger = {
+	OR = {
+		is_valid_prostitute_trigger = yes
+		any_courtier = { is_valid_prostitute_trigger = yes }
+	}
+}

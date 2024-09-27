@@ -1,0 +1,9 @@
+﻿l_english:
+ prostitute_contracts_event.0800.t: "Looking for a Whore"
+ prostitute_contracts_event.0800.desc: "[employer.GetShortUINameNoTooltip] requests sexual services from [request_prostitute.GetFirstNameNoTooltip], the prostitute's sexual skills will determine the success of the mission."
+ prostitute_contracts_event.0800.a: "Provide Service"
+ prostitute_contracts_event.0800.a.tt: "[request_prostitute.GetShortUINameNoTooltip] will provide sexual services to [employer.GetShortUINameNoTooltip]"
+ prostitute_contracts_event.0800.b: "Why not me"
+ prostitute_contracts_event.0800.b.tt: "You are a whore too, why don't you provide the service yourself"
+ prostitute_contracts_event.0800.c: "Refuse"
+ prostitute_contracts_event.0800.c.tt: "Refuse to provide services to [employer.GetShortUINameNoTooltip]"

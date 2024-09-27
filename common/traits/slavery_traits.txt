@@ -90,7 +90,7 @@ lifestyle_prostitute = {
 
 	compatibility = {
 		lustful = @pos_compat_high
-		prostitute = @pos_compat_medium
+		lifestyle_prostitute = @pos_compat_medium
 		lifestyle_reveler = @pos_compat_low
 		seducer = @pos_compat_medium
 		gregarious = @pos_compat_low

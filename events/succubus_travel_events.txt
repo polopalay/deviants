@@ -1113,9 +1113,7 @@ succubus_travel.0122 = {
 		current_travel_plan = {
 			delay_travel_plan = { days = 10 }
 		}
-		scope:deviant_randoman_1 = {
-			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
-		}
+		scope:deviant_randoman_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 		hidden_effect = {
 			scope:deviant_randoman_1 = {
 				death = { death_reason = death_vanished }

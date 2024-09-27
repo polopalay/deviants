@@ -231,27 +231,21 @@ offer_prostitute_interaction = {
 			is_incapable = no
 			is_imprisoned = no
 			is_attracted_to_women = yes
-			NOT = {
-				is_at_war_with = scope:actor
-				has_trait = lovers_pox
-			}
+			NOT = { is_at_war_with = scope:actor }
 		}
 		scope:actor = {
-			OR = {
-				is_valid_prostitute_trigger = yes
-				any_courtier = { is_valid_prostitute_trigger = yes }
-			}
+			has_valid_prostitute_trigger = yes
 		}
 	}
 
 	populate_recipient_list = {
 		scope:actor = {
 			if = {
-				limit = { is_valid_prostitute_trigger = yes NOT = { is_spouse_of = scope:recipient is_close_family_of = scope:recipient } }
+				limit = { is_valid_prostitute_trigger = yes }
 				add_to_list = characters
 			}
 			every_courtier = {
-				limit = { is_valid_prostitute_trigger = yes NOT = { is_spouse_of = scope:recipient is_close_family_of = scope:recipient } }
+				limit = { is_valid_prostitute_trigger = yes }
 				add_to_list = characters
 			}
 		}
