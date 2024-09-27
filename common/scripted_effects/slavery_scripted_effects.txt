@@ -158,6 +158,14 @@ carn_free_slave_effect = {
 				limit = { NOT = { this = scope:owner  is_spouse_of = scope:new_slave is_close_family_of = scope:new_slave has_relation_friend = scope:new_slave  } }
 				add_opinion = { target = scope:owner modifier = free_slave_friend_opinion }
 			}
+			scope:owner = {
+				add_dread = minor_dread_loss
+				stress_impact = {
+					compassionate = medium_stress_impact_loss
+					sadistic = medium_stress_impact_gain
+					callous = minor_stress_impact_gain
+				}
+			}
 		}
 		remove_trait = slave
 		remove_character_modifier = forced_labor

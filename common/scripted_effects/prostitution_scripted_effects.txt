@@ -35,7 +35,7 @@
 			add_character_modifier = { modifier = recently_had_sex years = 2 }
 			if = {
 				has_trait = { lifestyle_prostitute }
-				add_trait_xp = { trait = lifestyle_prostitute value = 1 }
+				add_trait_xp = { trait = lifestyle_prostitute value = 5 }
 			}
 			if = {
 				limit = { has_trait = succubus }

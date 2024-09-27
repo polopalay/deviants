@@ -400,11 +400,11 @@ offer_prostitute_interaction = {
 	}
 }
 
-start_prostitution_interaction = {
+carn_force_start_prostitution_interaction = {
 	icon = start_prostitution_interaction
-	desc = start_prostitution_interaction.desc
+	desc = carn_force_start_prostitution_interaction.desc
 	extra_icon = hook_icon
-	category = interaction_category_friendly
+	category = interaction_category_prison
 	use_diplomatic_range = yes
 	common_interaction = yes
 
@@ -420,6 +420,10 @@ start_prostitution_interaction = {
 		scope:recipient = {
 			is_adult = yes
 			is_female = yes
+			OR = {
+				age < carn_prostitution_age_cutoff
+				is_immortal = yes
+			}
 			NOT = { has_trait = lifestyle_prostitute }
 			OR = {
 				is_courtier_of = scope:actor
@@ -444,7 +448,7 @@ start_prostitution_interaction = {
 					scope:actor = {
 						any_courtier = {
 							has_trait = lifestyle_prostitute
-							count < 5
+							count < maximum_prostitute
 						}
 					}
 				}
@@ -454,6 +458,10 @@ start_prostitution_interaction = {
 
 	on_accept = {
 		scope:recipient = {
+			if = {
+				limit = { has_trait = celibate }
+				remove_trait = celibate
+			}
 			add_trait = lifestyle_prostitute
 			if = {
 				limit = { is_imprisoned_by = scope:actor }
@@ -513,7 +521,7 @@ start_prostitution_interaction = {
 		modifier = { add = -50 scope:recipient = { has_trait = chaste } }
 	}
 
-	ai_frequency = 12
+	ai_frequency = 2
 	ai_targets = {
 		ai_recipients = courtiers
 		ai_recipients = prisoners
@@ -531,9 +539,9 @@ start_prostitution_interaction = {
 	}
 }
 
-stop_prostitution_interaction = {
+carn_force_stop_prostitution_interaction = {
 	icon = stop_prostitution_interaction
-	desc = stop_prostitution_interaction.desc
+	desc = carn_force_stop_prostitution_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = yes
@@ -573,7 +581,7 @@ stop_prostitution_interaction = {
 		modifier = {
 			add = 100
 			scope:recipient = {
-				age > 40
+				age > carn_prostitution_age_cutoff
 				is_immortal = no
 			}
 		}
