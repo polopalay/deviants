@@ -1,0 +1,2007 @@
+namespace = succubus_travel
+
+#0100-1000 travel events
+#0100random woman hanging from her hands naked on the side of the road, guarded by some men and a priest, wooden stick up her ass, bandit witch written multiple times on her body, among other things, she begging to be freed, promising to serve you fatefully if you do. the guys claim this is a legimate witch trial...free/prowess challange, ignore, as sadist say you know how to handle witches fist and pull her clit, gain piety
+succubus_travel.0100 = {
+	type = character_event
+	title = succubus_travel.0100.t
+	desc = succubus_travel.0100.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			location = root.location
+			faith = location.faith
+			age = { 19 25 }
+			gender_female_chance = 100
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+		if = {
+			limit = { exists = current_travel_plan.travel_leader }
+			current_travel_plan.travel_leader = { save_scope_as = travel_leader }
+		}
+		else = {
+			current_travel_plan = {
+				random_entourage_character = {
+					weight = {
+						base = 1
+						modifier = { add = prowess }
+					}
+					save_scope_as = travel_leader
+				}
+			}
+		}
+	}
+	# as a sadist, you know how to handle witches, metal clit clamp to make her show her Devil's Teat, and some humiliation before you countinue
+	option = {
+		name = succubus_travel.0100.a
+		custom_tooltip = succubus_travel.0100.a.tt
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+		add_piety = minor_piety_gain
+		hidden_effect = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 2
+			}
+			scope:deviant_go_random_1 = { death = { death_reason = death_disappearance } }
+		}
+	}
+	# try to free her
+	option = {
+		name = succubus_travel.0100.b
+		custom_tooltip = succubus_travel.0100.b.tt
+		duel = {
+			skill = prowess
+			value = 15
+			# you manage to free her, rumor has it that you perdonally fought a horde of priests to free a seductive witch
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = {
+					text = succubus_travel.0100.bw.tt
+				}
+				stress_impact = {
+					base = major_stress_impact_loss
+				}
+				add_to_entourage_court_and_activity_effect = {
+					CHAR_TO_ADD = scope:deviant_go_random_1
+					NEW_COURT_OWNER = root
+				}
+				add_piety = major_piety_loss
+				add_prestige = minor_prestige_gain
+				scope:deviant_go_random_1 = {
+					add_opinion = {
+						target = root
+						modifier = saved_my_life_opinion
+						opinion = 100
+					}
+				}
+			}
+			# they manage to fight you off, most of your escort refusing to take part
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = {
+					text = succubus_travel.0100.bl.tt
+				}
+				stress_impact = {
+					base = minor_stress_impact_gain
+					ambitious = medium_stress_impact_gain
+				}
+				add_prestige = medium_prestige_loss
+				scope:deviant_go_random_1 = { death = { death_reason = death_disappearance } }
+				current_travel_plan = { delay_travel_plan = { days = 10 } }
+			}
+		}
+	}
+	# ignore
+	option = {
+		name = succubus_travel.0100.c
+		custom_tooltip = succubus_travel.0100.c.tt
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			just = medium_stress_impact_gain
+			zealous = medium_stress_impact_loss
+			lustful = minor_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			stress_impact = { base = medium_stress_impact_gain }
+			hidden_effect = { death = { death_reason = death_disappearance } }
+		}
+	}
+}
+#0101 bound person is blocking your path, says they ran away from bandits, a heraldic flag up their ass. wants to offer their services for some clothes, promise to be strong but was ambushed by some celver bandits, accept, or ignore or sadist, imprison them?
+succubus_travel.0101 = {
+	type = character_event
+	title = succubus_travel.0101.t
+	desc = succubus_travel.0101.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			location = root.location
+			faith = location.faith
+			age = { 20 30 }
+			gender_female_chance = 50
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# claims to be a mighty knight, just pay and free me and I will join you
+	option = {
+		name = succubus_travel.0101.a
+		custom_tooltip = succubus_travel.0101.a.tt
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = major_gold_value
+		}
+		add_to_entourage_court_and_activity_effect = {
+			CHAR_TO_ADD = scope:deviant_go_random_1
+			NEW_COURT_OWNER = root
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 40
+			}
+			stress_impact = {
+				base = medium_stress_impact_loss
+			}
+		}
+	}
+	# sadist, bind, gag and witch written with carcoal on them, multiple times, and then bring them to a local village to watch the show
+	option = {
+		name = succubus_travel.0101.b
+		custom_tooltip = succubus_travel.0101.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		add_piety = minor_piety_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -200
+			}
+			death = {
+				death_reason = death_burned_by_mob
+			}
+		}
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 2
+			}
+		}
+	}
+	# just free them
+	option = {
+		name = succubus_travel.0101.c
+		custom_tooltip = succubus_travel.0101.c.tt
+		add_prestige = minor_prestige_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = medium_stress_impact_loss
+			}
+		}
+	}
+}
+#0102 man tied to a tree, smooth wooden stick in their ass taht has a cross head, cock and balls tied with a tight rope, claiming to be a priest, witch did this to me, help, free, mock or ignore
+succubus_travel.0102 = {
+	type = character_event
+	title = succubus_travel.0102.t
+	desc = succubus_travel.0102.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		create_character = {
+			template = simple_priest_character_template
+			location = root.location
+			culture = location.culture
+			faith = location.faith
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# free
+	option = {
+		name = succubus_travel.0102.a
+		custom_tooltip = succubus_travel.0102.a.tt
+		add_piety = minor_piety_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 40
+			}
+			stress_impact = {
+				base = medium_stress_impact_loss
+			}
+		}
+	}
+	# if sadist, gag and write sodomite on them...
+	option = {
+		name = succubus_travel.0102.b
+		custom_tooltip = succubus_travel.0102.b.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -200
+			}
+			stress_impact = { base = massive_stress_impact_gain }
+			death = { death_reason = death_burned_by_mob }
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = corruption
+				value = 1
+			}
+		}
+	}
+	# ignore
+	option = {
+		name = succubus_travel.0102.c
+		custom_tooltip = succubus_travel.0102.c.tt
+		add_piety = minor_piety_loss
+		add_gold = tiny_gold_value
+		stress_impact = {
+			zealous = medium_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -50
+			}
+			stress_impact = { base = massive_stress_impact_gain }
+			hidden_effect = { death = { death_reason = death_vanished } }
+		}
+	}
+}
+#0103 peasants offering a woman in exhange for some gold, I'm not a slave, please just buy me, my village needs the money,blocking your path, sadist option, to offer even more gold to see all the men fuck her at the same time...
+succubus_travel.0103 = {
+	type = character_event
+	title = succubus_travel.0103.t
+	desc = succubus_travel.0103.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = chaplain
+	}
+	immediate = {
+		create_character = {
+			location = root.location
+			culture = location.culture
+			faith = location.faith
+			age = { 20 30 }
+			gender_female_chance = 100
+			dynasty = none
+			trait = beauty_good_3
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# buy her, she joins the court
+	option = {
+		name = succubus_travel.0103.a
+		custom_tooltip = succubus_travel.0103.a.tt
+		add_piety = minor_piety_loss
+		remove_short_term_gold = medium_gold_value
+		add_to_entourage_court_and_activity_effect = {
+			CHAR_TO_ADD = scope:deviant_go_random_1
+			NEW_COURT_OWNER = root
+		}
+	}
+	# as sadist, pay the men to fuck her, causes delay...
+	option = {
+		name = succubus_travel.0103.b
+		custom_tooltip = succubus_travel.0103.b.tt
+		remove_short_term_gold = massive_gold_value
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			stress_impact = { base = massive_stress_impact_gain }
+			death = { death_reason = death_vanished }
+		}
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = corruption
+				value = 1
+			}
+		}
+	}
+	# push them away...
+	option = {
+		name = succubus_travel.0103.c
+		custom_tooltip = succubus_travel.0103.c.tt
+		hidden_effect = {
+			scope:deviant_go_random_1 = {
+				death = { death_reason = death_vanished }
+			}
+		}
+	}
+}
+#0104 you spot a naked woman dancing for a group of men... "Please go, I don't need a bigger audeince" merchant woman who is giving a bonys to the hired guards she hired. watch the show, ignore or as sadist, pay the men to spank her Or as lustful, pay her to fuck you
+succubus_travel.0104 = {
+	type = character_event
+	title = succubus_travel.0104.t
+	desc = succubus_travel.0104.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_cheer_2
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			location = root.location
+			faith = location.faith
+			age = { 20 30 }
+			gender_female_chance = 100
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# or as a sadist, pay the men to fuck her, makes her dissapear...
+	option = {
+		name = succubus_travel.0104.a
+		custom_tooltip = succubus_travel.0104.a.tt
+		remove_short_term_gold = major_gold_value
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -200
+			}
+			stress_impact = {
+				base = massive_stress_impact_gain
+			}
+			hidden_effect = {
+				death = { death_reason = death_vanished }
+			}
+		}
+		current_travel_plan = {
+			delay_travel_plan = { days = 5 }
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 2
+			}
+		}
+	}
+	#watch, the men say it's fine since she swore to keep going no matter what for an hour
+	option = {
+		name = succubus_travel.0104.b
+		custom_tooltip = succubus_travel.0104.b.tt
+		add_piety = minor_piety_loss
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+			chaste = major_stress_impact_gain
+		}
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -50
+			}
+			stress_impact = { base = medium_stress_impact_gain }
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 1
+			}
+		}
+	}
+	# ignore
+	option = {
+		name = succubus_travel.0104.c
+		custom_tooltip = succubus_travel.0104.c.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 50
+			}
+		}
+	}
+}
+#0105 spot random man commitings self-abuse... trying to hide but you see them from the angle, ignore, have then dragged to the nearby village and flogged, or find a spot yourself
+succubus_travel.0105 = {
+	type = character_event
+	title = succubus_travel.0105.t
+	desc = succubus_travel.0105.desc
+	override_background = { reference = wilderness }
+	theme = realm
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_kneel_2
+	}
+	trigger = {
+		any_pool_character = {
+			province = root.location
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+	}
+	immediate = {
+		random_pool_character = {
+			province = root.location
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# if you female, go give him a hand, both lustful and sadist lose stress...
+	option = {
+		name = succubus_travel.0105.a
+		custom_tooltip = succubus_travel.0105.a.tt
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 50
+			}
+			stress_impact = { base = medium_stress_impact_loss }
+		}
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 2
+			}
+		}
+	}
+	# condemn and drag him to be flogged in the nearby village
+	option = {
+		name = succubus_travel.0105.b
+		custom_tooltip = succubus_travel.0105.b.tt
+		add_piety = minor_piety_gain
+		stress_impact = {
+			zealous = major_stress_impact_loss
+			lustful = medium_stress_impact_gain
+			sadistic = major_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -50
+			}
+			stress_impact = { base = major_stress_impact_gain }
+		}
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+	}
+	# ignore
+	option = {
+		name = succubus_travel.0105.c
+		custom_tooltip = succubus_travel.0105.c.tt
+	}
+}
+#0106naked thief, bound, paraded before some merchant convoy, option to go rub some dirt on them as suggested by the guard, or as saist, buy them for a night, gives her major stress and sadist major stree relief, ignore
+succubus_travel.0106 = {
+	type = character_event
+	title = succubus_travel.0106.t
+	desc = succubus_travel.0106.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			location = root.location
+			faith = location.faith
+			age = { 20 30 }
+			gender_female_chance = 100
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# as sadist, I have an even better idea, tie her to crawl like an animal
+	option = {
+		name = succubus_travel.0106.a
+		custom_tooltip = succubus_travel.0106.a.tt
+		add_gold = tiny_gold_value
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -150
+			}
+			stress_impact = {
+				base = massive_stress_impact_gain
+			}
+			hidden_effect = {
+				death = { death_reason = death_vanished }
+			}
+		}
+		current_travel_plan = {
+			delay_travel_plan = { days = 1 }
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 2
+			}
+		}
+	}
+	# try to free
+	option = {
+		name = succubus_travel.0106.b
+		custom_tooltip = succubus_travel.0106.b.tt
+		duel = {
+			skill = prowess
+			value = 20
+			# you manage to free her, rumor has it that you personally sought an anemy many times the size of your group
+			30 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = {
+					text = succubus_travel.0106.bw.tt
+				}
+				stress_impact = {
+					base = major_stress_impact_loss
+				}
+				add_to_entourage_court_and_activity_effect = {
+					CHAR_TO_ADD = scope:deviant_go_random_1
+					NEW_COURT_OWNER = root
+				}
+				add_prestige = major_prestige_gain
+				scope:deviant_go_random_1 = {
+					add_opinion = {
+						target = root
+						modifier = saved_my_life_opinion
+						opinion = 100
+					}
+					stress_impact = { base = medium_stress_impact_loss }
+				}
+			}
+			# they manage to fight you off, most of your escort refusing to take part
+			70 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0106.bl.tt }
+				stress_impact = {
+					base = minor_stress_impact_gain
+					ambitious = medium_stress_impact_gain
+				}
+				add_prestige = major_prestige_loss
+				if = {
+					limit = {
+						exists = scope:travel_leader
+					}
+					scope:travel_leader = {
+						add_opinion = {
+							target = root
+							modifier = angry_opinion
+							opinion = -40
+						}
+						stress_impact = {
+							base = medium_stress_impact_gain
+						}
+					}
+				}
+				scope:deviant_go_random_1 = {
+					stress_impact = {
+						base = medium_stress_impact_gain
+					}
+					hidden_effect = {
+						death = {
+							death_reason = death_disappearance
+						}
+					}
+				}
+				current_travel_plan = { delay_travel_plan = { days = 10 } }
+			}
+		}
+	}
+	# ignore
+	option = {
+		name = succubus_travel.0106.c
+		custom_tooltip = succubus_travel.0106.c.tt
+		hidden_effect = {
+			scope:deviant_go_random_1 = {
+				death = { death_reason = death_disappearance }
+			}
+		}
+	}
+}
+#0107 woman being inspected of being a witch by peasants... ignore, tell them to try trial by fire or show them how to inspect the Devil's Teat
+succubus_travel.0107 = {
+	type = character_event
+	title = succubus_travel.0107.t
+	desc = succubus_travel.0107.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 2 }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisonhouse
+	}
+	immediate = {
+		create_character = {
+			template = scholar_character
+			location = root.location
+			culture = location.culture
+			faith = location.faith
+			age = { 20 30 }
+			gender_female_chance = 100
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# teach them how to inspect Devil's Teat
+	option = {
+		name = succubus_travel.0107.a
+		custom_tooltip = succubus_travel.0107.a.tt
+		add_piety = medium_piety_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -200
+			}
+			stress_impact = { base = massive_stress_impact_gain }
+			death = { death_reason = death_burned_by_mob }
+		}
+		current_travel_plan = { delay_travel_plan = { days = 1 } }
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 2
+			}
+		}
+	}
+	# free her since she promised to pay
+	option = {
+		name = succubus_travel.0107.b
+		custom_tooltip = succubus_travel.0107.b.tt
+		add_piety = medium_piety_loss
+		add_gold = tiny_gold_value
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 50
+			}
+			stress_impact = { base = medium_stress_impact_loss }
+		}
+	}
+	# ignore
+	option = {
+		name = succubus_travel.0107.c
+		custom_tooltip = succubus_travel.0107.c.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -50
+			}
+			stress_impact = { base = massive_stress_impact_gain }
+			hidden_effect = {
+				death = { death_reason = death_vanished }
+			}
+		}
+	}
+}
+#0108if you are woman, having sleep paralyziz dream of being pinned down and fucked, scream youself awake, endure or embrace as lustful
+succubus_travel.0108 = {
+	type = character_event
+	title = succubus_travel.0108.t
+	desc = succubus_travel.0108.desc
+	theme = realm
+	override_background = { reference = bp1_bonfire }
+	cooldown = { years = 2 }
+	right_portrait = {
+		character = root
+		animation = ecstasy
+	}
+	immediate = {
+		if = {
+			limit = { exists = current_travel_plan.travel_leader }
+			current_travel_plan.travel_leader = { save_scope_as = travel_leader }
+		}
+		else = {
+			current_travel_plan = {
+				random_entourage_character = {
+					weight = {
+						base = 1
+						modifier = { add = prowess }
+					}
+					save_scope_as = travel_leader
+				}
+			}
+		}
+	}
+	# as lustful, embrace, you won't wake up for 5 days...
+	option = {
+		name = succubus_travel.0108.a
+		custom_tooltip = succubus_travel.0108.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+		current_travel_plan = { delay_travel_plan = { days = 5 } }
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = loyalty
+				value = 1
+			}
+		}
+	}
+	# scream yourself awake
+	option = {
+		name = succubus_travel.0108.b
+		custom_tooltip = succubus_travel.0108.b.tt
+		add_prestige = minor_prestige_loss
+		if = {
+			limit = { exists = scope:travel_leader }
+			scope:travel_leader = {
+				add_opinion = {
+					target = root
+					modifier = annoyed_opinion
+					opinion = -10
+				}
+			}
+		}
+	}
+	# endure
+	option = {
+		name = succubus_travel.0108.c
+		custom_tooltip = succubus_travel.0108.c.tt
+		stress_impact = { base = medium_stress_impact_gain }
+	}
+}
+
+#0110 big bandit attack
+succubus_travel.0110 = {
+	type = character_event
+	title = succubus_travel.0110.t
+	desc = succubus_travel.0110.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	cooldown = { years = 5 }
+	right_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = celebrate_sword
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			age = { 20 45 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# fight and command the best you can
+	option = {
+		name = succubus_travel.0110.a
+		custom_tooltip = succubus_travel.0110.a.tt
+		duel = {
+			skills = { prowess martial }
+			target = scope:deviant_go_random_1
+			# if win
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0110.aw.tt }
+				trigger_event = succubus_travel.0111
+			}
+			# if lose
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0110.al.tt }
+				trigger_event = succubus_travel.0120
+			}
+		}
+	}
+	# agree to go talk to the bandit boss, diplo challange
+	option = {
+		name = succubus_travel.0110.b
+		custom_tooltip = succubus_travel.0110.b.tt
+		duel = {
+			skill = diplomacy
+			target = scope:deviant_go_random_1
+			# if win
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0110.bw.tt }
+				trigger_event = succubus_travel.0140
+			}
+			# if lose
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0110.bl.tt }
+				trigger_event = succubus_travel.0141
+			}
+		}
+	}
+	# if promise to pay so much the boss's head spins
+	option = {
+		name = succubus_travel.0110.c
+		custom_tooltip = succubus_travel.0110.c.tt
+		remove_short_term_gold = massive_gold_value
+	}
+}
+#0111 if win prowess/martial , decent? challange
+succubus_travel.0111 = {
+	type = character_event
+	title = succubus_travel.0111.t
+	desc = succubus_travel.0111.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = celebrate_sword
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_kneel_1
+	}
+	# kill him
+	option = {
+		name = succubus_travel.0111.a
+		custom_tooltip = succubus_travel.0111.a.tt
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			scope:deviant_go_random_1 = {
+				death = { death_reason = death_decapitated }
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -200
+			}
+		}
+	}
+	# prison
+	option = {
+		name = succubus_travel.0111.b
+		custom_tooltip = succubus_travel.0111.b.tt
+		add_prestige = medium_prestige_gain
+		imprison = { target = scope:deviant_go_random_1 type = dungeon }
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -200
+			}
+		}
+	}
+	# ask him to pay for his freedom
+	option = {
+		name = succubus_travel.0111.c
+		custom_tooltip = succubus_travel.0111.c.tt
+		add_gold = minor_gold_value
+		hidden_effect = {
+			scope:deviant_go_random_1 = {
+				death = { death_reason = death_vanished }
+			}
+		}
+	}
+}
+
+
+#0120 if captured, can still pay way more...
+succubus_travel.0120 = {
+	type = character_event
+	title = succubus_travel.0120.t
+	desc = succubus_travel.0120.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = prisonhouse
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	# promise to pay major gold to be treated well, and have many long chats with him
+	option = {
+		name = succubus_travel.0120.a
+		custom_tooltip = succubus_travel.0120.a.tt
+		remove_short_term_gold = major_gold_value
+		current_travel_plan = { delay_travel_plan = { days = 10 } }
+	}
+
+	# refuse, bound as bandit fuck toy
+	option = {
+		name = succubus_travel.0120.b
+		custom_tooltip = succubus_travel.0120.b.tt
+		trigger_event = succubus_travel.0121
+	}
+
+	# work it off, just let everybdoy else go, i'm the whore and I can prove it
+	option = {
+		name = succubus_travel.0120.c
+		custom_tooltip = succubus_travel.0120.c.tt
+		current_travel_plan = { delay_travel_plan = { days = 10 } }
+		trigger_event = succubus_travel.0130
+	}
+}
+#0121 if tied publicly for humiliation while waiting for low ransom, new bondage humiliation pic
+succubus_travel.0121 = {
+	type = character_event
+	title = succubus_travel.0121.t
+	desc = succubus_travel.0121.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# endure
+	option = {
+		name = succubus_travel.0121.a
+		custom_tooltip = succubus_travel.0121.a.tt
+		trigger_event = succubus_travel.0122
+	}
+}
+
+#0122being public use, random bandit template?
+succubus_travel.0122 = {
+	type = character_event
+	title = succubus_travel.0122.t
+	desc = succubus_travel.0122.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	immediate = {
+		stress_impact = {
+			base = major_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_randoman_1
+		}
+	}
+	# getfucked
+	option = {
+		name = succubus_travel.0122.a
+		custom_tooltip = succubus_travel.0122.a.tt
+		trigger_event = succubus_travel.0123
+		current_travel_plan = {
+			delay_travel_plan = { days = 10 }
+		}
+		scope:deviant_randoman_1 = {
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		hidden_effect = {
+			scope:deviant_randoman_1 = {
+				death = { death_reason = death_vanished }
+			}
+		}
+	}
+}
+#0123being drawn on, leaking cum, let go for doing good service
+succubus_travel.0123 = {
+	type = character_event
+	title = succubus_travel.0123.t
+	desc = succubus_travel.0123.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	immediate = {
+		current_travel_plan = {
+			delay_travel_plan = { days = 10 }
+		}
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_randoman_1
+		}
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_randoman_2
+		}
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_randoman_3
+		}
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_randoman_4
+		}
+	}
+	# be let go
+	option = {
+		name = succubus_travel.0123.a
+		custom_tooltip = succubus_travel.0123.a.tt
+		add_gold = minor_gold_value
+		hidden_effect = {
+			scope:deviant_randoman_1 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+			scope:deviant_randoman_2 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+			scope:deviant_randoman_3 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+			scope:deviant_randoman_4 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+			scope:deviant_randoman_1 = { death = { death_reason = death_vanished } }
+			scope:deviant_randoman_2 = { death = { death_reason = death_vanished } }
+			scope:deviant_randoman_3 = { death = { death_reason = death_vanished } }
+			scope:deviant_randoman_4 = { death = { death_reason = death_vanished } }
+		}
+	}
+}
+
+#0130 lustful only, fuck the bandit boss, anal cowgirl on his lap?
+succubus_travel.0130 = {
+	type = character_event
+	title = succubus_travel.0130.t
+	desc = succubus_travel.0130.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# work hard
+	option = {
+		name = succubus_travel.0130.a
+		custom_tooltip = succubus_travel.0130.a.tt
+		trigger_event = succubus_travel.0131
+	}
+}
+#0131 cumming
+succubus_travel.0131 = {
+	type = character_event
+	title = succubus_travel.0131.t
+	desc = succubus_travel.0131.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	# cumming
+	option = {
+		name = succubus_travel.0131.a
+		custom_tooltip = succubus_travel.0131.a.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 20
+			}
+			stress_impact = { base = minor_stress_impact_loss }
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+		}
+		current_travel_plan = {
+			delay_travel_plan = { days = 7 }
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = corruption
+				value = 1
+			}
+		}
+	}
+}
+
+#0140 if win diplo challange to bargain for payament for safe passage
+succubus_travel.0140 = {
+	type = character_event
+	title = succubus_travel.0140.t
+	desc = succubus_travel.0140.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# near escape
+	option = {
+		name = succubus_travel.0140.a
+		custom_tooltip = succubus_travel.0140.a.tt
+		remove_short_term_gold = minor_gold_value
+	}
+}
+#0141 if fail, he also wants your ass,
+succubus_travel.0141 = {
+	type = character_event
+	title = succubus_travel.0141.t
+	desc = succubus_travel.0141.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	# try to stab him
+	option = {
+		name = succubus_travel.0141.a
+		custom_tooltip = succubus_travel.0141.a.tt
+		duel = {
+			skill = prowess
+			target = scope:deviant_go_random_1
+			# if win
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = {
+					text = succubus_travel.0141.aw.tt
+				}
+				trigger_event = succubus_travel.0142
+			}
+			# if lose
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = {
+					text = succubus_travel.0141.al.tt
+				}
+				trigger_event = succubus_travel.0121
+			}
+		}
+	}
+	# agree
+	option = {
+		name = succubus_travel.0141.b
+		custom_tooltip = succubus_travel.0141.b.tt
+		remove_short_term_gold = minor_gold_value
+		trigger_event = succubus_travel.0130
+	}
+}
+#0142 if manage to stab him, win and is let go
+succubus_travel.0142 = {
+	type = character_event
+	title = succubus_travel.0142.t
+	desc = succubus_travel.0142.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = celebrate_sword
+	}
+	# the bandits flee
+	option = {
+		name = succubus_travel.0142.a
+		custom_tooltip = succubus_travel.0142.a.tt
+		add_prestige = minor_prestige_gain
+	}
+}
+
+#0200 spot woman fucking a doing
+succubus_travel.0200 = {
+	type = character_event
+	title = succubus_travel.0200.t
+	desc = succubus_travel.0200.desc
+	theme = realm
+	cooldown = { years = 1 }
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0200.a
+		custom_tooltip = succubus_travel.0200.a.tt
+		trigger_event = succubus_travel.0201
+	}
+	#
+	option = {
+		name = succubus_travel.0200.b
+		custom_tooltip = succubus_travel.0200.b.tt
+		duel = {
+			skills = { intrigue }
+			value = 10
+			# if win
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0200.bw.tt }
+				hidden_effect = {
+					random_list = {
+						50 = { trigger_event = succubus_travel.0202 }
+						50 = { trigger_event = succubus_travel.0203 }
+					}
+				}
+			}
+			# if lose
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = succubus_travel.0110.bl.tt }
+				trigger_event = succubus_travel.0204
+			}
+		}
+	}
+	#
+	option = {
+		name = succubus_travel.0200.c
+		custom_tooltip = succubus_travel.0200.c.tt
+		trigger_event = succubus_travel.0205
+	}
+	# just leave
+	option = {
+		name = succubus_travel.0200.d
+		custom_tooltip = succubus_travel.0200.d.tt
+	}
+}
+#0201 if masturbate
+succubus_travel.0201 = {
+	type = character_event
+	title = succubus_travel.0201.t
+	desc = succubus_travel.0201.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0201.a
+		custom_tooltip = succubus_travel.0201.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+		}
+		hidden_effect = { add_trait_xp = { trait = succubus track = power value = 1 } }
+	}
+}
+#0202 if manage to win 50% two women
+succubus_travel.0202 = {
+	type = character_event
+	title = succubus_travel.0202.t
+	desc = succubus_travel.0202.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	option = {
+		name = succubus_travel.0202.a
+		custom_tooltip = succubus_travel.0202.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+	}
+}
+#0203 if manage to win 50% threeomse
+succubus_travel.0203 = {
+	type = character_event
+	title = succubus_travel.0203.t
+	desc = succubus_travel.0203.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0203.a
+		custom_tooltip = succubus_travel.0203.a.tt
+		hidden_effect = { add_trait_xp = { trait = succubus track = daring value = 2 } }
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+	}
+}
+#0204 if fail
+succubus_travel.0204 = {
+	type = character_event
+	title = succubus_travel.0204.t
+	desc = succubus_travel.0204.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = disbelief
+	}
+	#
+	option = {
+		name = succubus_travel.0204.a
+		custom_tooltip = succubus_travel.0204.a.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+	}
+}
+#0205 if sadistic, have her punished as a deviant
+succubus_travel.0205 = {
+	type = character_event
+	title = succubus_travel.0205.t
+	desc = succubus_travel.0205.desc
+	theme = realm
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# give her to the local peasants as a witch
+	option = {
+		name = succubus_travel.0205.a
+		custom_tooltip = succubus_travel.0205.a.tt
+		add_piety = minor_piety_gain
+	}
+	# sell her as a fuck doll
+	option = {
+		name = succubus_travel.0205.b
+		custom_tooltip = succubus_travel.0205.b.tt
+		add_gold = minor_gold_value
+	}
+	# mess with her until bored and then leave tied
+	option = {
+		name = succubus_travel.0205.c
+		custom_tooltip = succubus_travel.0205.c.tt
+		current_travel_plan = { delay_travel_plan = { days = 3 } }
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+	}
+}
+
+succubus_travel.0300 = {
+	type = character_event
+	title = succubus_travel.0300.t
+	desc = succubus_travel.0300.desc
+	theme = realm
+	cooldown = { years = 10 }
+	override_background = { reference = market }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_cheer_2
+		outfit_tags = { beggar_rags }
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			location = root.location
+			faith = location.faith
+			age = { 20 22 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# hire
+	option = {
+		name = succubus_travel.0300.a
+		custom_tooltip = succubus_travel.0300.a.tt
+		remove_short_term_gold = major_gold_value
+		add_to_entourage_court_and_activity_effect = {
+			CHAR_TO_ADD = scope:deviant_go_random_1
+			NEW_COURT_OWNER = root
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = admiration_opinion
+				opinion = 1000
+			}
+		}
+		trigger_event = succubus_travel.0301
+	}
+	# nice show, go on
+	option = {
+		name = succubus_travel.0300.b
+		custom_tooltip = succubus_travel.0300.b.tt
+	}
+}
+
+#301 alone at last.
+succubus_travel.0301 = {
+	type = character_event
+	title = succubus_travel.0301.t
+	desc = succubus_travel.0301.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = scheme
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_kneel_1
+		outfit_tags = { beggar_rags }
+	}
+	#
+	option = {
+		name = succubus_travel.0301.a
+		custom_tooltip = succubus_travel.0301.a.tt
+		trigger_event = succubus_travel.0302
+	}
+	#
+	option = {
+		name = succubus_travel.0301.b
+		custom_tooltip = succubus_travel.0301.b.tt
+		stress_impact = {
+			lustful = major_stress_impact_gain
+		}
+	}
+}
+#302, inspect
+succubus_travel.0302 = {
+	type = character_event
+	title = succubus_travel.0302.t
+	desc = succubus_travel.0302.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0302.a
+		custom_tooltip = succubus_travel.0302.a.tt
+		trigger_event = succubus_travel.0303
+	}
+	#
+	option = {
+		name = succubus_travel.0302.b
+		custom_tooltip = succubus_travel.0302.b.tt
+	}
+}
+#303, pussy job
+succubus_travel.0303 = {
+	type = character_event
+	title = succubus_travel.0303.t
+	desc = succubus_travel.0303.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0303.a
+		custom_tooltip = succubus_travel.0303.a.tt
+		trigger_event = succubus_travel.0304
+	}
+	#
+	option = {
+		name = succubus_travel.0303.b
+		custom_tooltip = succubus_travel.0303.b.tt
+	}
+}
+#304 he put in
+succubus_travel.0304 = {
+	type = character_event
+	title = succubus_travel.0304.t
+	desc = succubus_travel.0304.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0304.a
+		custom_tooltip = succubus_travel.0304.a.tt
+		trigger_event = succubus_travel.0305
+	}
+	#
+	option = {
+		name = succubus_travel.0304.b
+		custom_tooltip = succubus_travel.0304.b.tt
+	}
+}
+#305 fucking, firts cum
+succubus_travel.0305 = {
+	type = character_event
+	title = succubus_travel.0305.t
+	desc = succubus_travel.0305.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0305.a
+		custom_tooltip = succubus_travel.0305.a.tt
+		scope:deviant_go_random_1 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+		trigger_event = succubus_travel.0306
+	}
+	#
+	option = {
+		name = succubus_travel.0305.b
+		custom_tooltip = succubus_travel.0305.b.tt
+	}
+}
+#306 fucking, second cum
+succubus_travel.0306 = {
+	type = character_event
+	title = succubus_travel.0306.t
+	desc = succubus_travel.0306.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0306.a
+		custom_tooltip = succubus_travel.0306.a.tt
+		scope:deviant_go_random_1 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+		trigger_event = succubus_travel.0307
+	}
+	#
+	option = {
+		name = succubus_travel.0306.b
+		custom_tooltip = succubus_travel.0306.b.tt
+	}
+}
+#307 you laying on the floor, he very sorry
+succubus_travel.0307 = {
+	type = character_event
+	title = succubus_travel.0307.t
+	desc = succubus_travel.0307.desc
+	theme = realm
+	override_background = { reference = study }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#
+	option = {
+		name = succubus_travel.0307.a
+		custom_tooltip = succubus_travel.0307.a.tt
+		scope:deviant_go_random_1 = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+	}
+	#
+	option = {
+		name = succubus_travel.0307.b
+		custom_tooltip = succubus_travel.0307.b.tt
+	}
+}
+
+###### 1000-2000 lustful female special travel events #######
+succubus_travel.1000 = {
+	type = character_event
+	title = succubus_travel.1000.t
+	desc = succubus_travel.1000.desc
+	cooldown = { years = 1 }
+	theme = realm
+	override_background = { reference = tavern }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	immediate = {
+		create_character = {
+			culture = location.culture
+			faith = location.faith
+			location = root.location
+			age = { 40 50 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	#drink the drink and sleep naked in the specified altar room...
+	option = {
+		name = succubus_travel.1000.a
+		custom_tooltip = succubus_travel.1000.a.tt
+		trigger_event = succubus_travel.1010
+		hidden_effect = {
+			scope:deviant_go_random_1 = { death = { death_reason = death_vanished } }
+		}
+	}
+	# burn this inn
+	option = {
+		name = succubus_travel.1000.b
+		custom_tooltip = succubus_travel.1000.b.tt
+		add_dread = minor_dread_gain
+		add_prestige = minor_prestige_loss
+		hidden_effect = {
+			scope:deviant_go_random_1 = { death = { death_reason = death_vanished } }
+		}
+	}
+	# just get a regular room
+	option = {
+		name = succubus_travel.1000.c
+		custom_tooltip = succubus_travel.1000.c.tt
+		trigger_event = succubus_travel.1100
+		stress_impact = { base = minor_stress_impact_loss }
+		hidden_effect = {
+			scope:deviant_go_random_1 = {
+				death = { death_reason = death_vanished }
+			}
+		}
+	}
+	# keep going, we not satuying here
+	option = {
+		name = succubus_travel.1000.d
+		custom_tooltip = succubus_travel.1000.d.tt
+		stress_impact = { base = minor_stress_impact_gain }
+		hidden_effect = {
+			scope:deviant_go_random_1 = {
+				death = { death_reason = death_vanished }
+			}
+		}
+	}
+}
+
+#sleep molested
+succubus_travel.1010 = {
+	type = character_event
+	title = succubus_travel.1010.t
+	desc = {
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1010.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1010.b.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1010.c.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1010.d.desc
+			}
+		}
+	}
+	theme = realm
+	override_background = { reference = bedchamber }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#float in the dreams
+	option = {
+		name = succubus_travel.1010.a
+		custom_tooltip = succubus_travel.1010.a.tt
+		current_travel_plan = { delay_travel_plan = { days = 3 } }
+		add_gold = tiny_gold_value
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 2
+			}
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 2
+			}
+		}
+		stress_impact = { lustful = major_stress_impact_loss }
+	}
+}
+
+#if took the room, sweet smells, feeling horny, masturbate, use dildo, just sleep
+succubus_travel.1100 = {
+	type = character_event
+	title = succubus_travel.1100.t
+	desc = succubus_travel.1100.a.desc
+	theme = realm
+	override_background = { reference = bedchamber }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# masturbate with the dildo
+	option = {
+		name = succubus_travel.1100.a
+		custom_tooltip = succubus_travel.1100.a.tt
+		trigger_event = succubus_travel.1101
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = corruption
+				value = 1
+			}
+		}
+		stress_impact = { lustful = medium_stress_impact_loss }
+	}
+	#just masturbate
+	option = {
+		name = succubus_travel.1100.b
+		custom_tooltip = succubus_travel.1100.b.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 2
+			}
+		}
+		stress_impact = { lustful = minor_stress_impact_loss }
+	}
+	#just try to sleep
+	option = {
+		name = succubus_travel.1100.c
+		custom_tooltip = succubus_travel.1100.c.tt
+		stress_impact = { lustful = minor_stress_impact_gain }
+	}
+}
+
+#if used dildo, feels too good, pass out on the floor, pass out, or beg, anyone...
+succubus_travel.1101 = {
+	type = character_event
+	title = succubus_travel.1101.t
+	desc = succubus_travel.1101.a.desc
+	theme = realm
+	override_background = { reference = bedchamber }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	immediate = {
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 1
+			}
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 1
+			}
+		}
+	}
+	# beg, anyone, more
+	option = {
+		name = succubus_travel.1101.a
+		custom_tooltip = succubus_travel.1101.a.tt
+		trigger_event = succubus_travel.1110
+	}
+	#just pass out and sleep
+	option = {
+		name = succubus_travel.1101.b
+		custom_tooltip = succubus_travel.1101.b.tt
+	}
+}
+
+#masked men come in, from a secret passage, dildo you, buckage you, and leave some coins
+succubus_travel.1110 = {
+	type = character_event
+	title = succubus_travel.1110.t
+	desc = {
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1110.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1110.b.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1110.c.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = succubus_travel.1110.d.desc
+			}
+		}
+	}
+	theme = realm
+	override_background = { reference = bedchamber }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	#they eventually leave and drop some coin on you
+	option = {
+		name = succubus_travel.1110.a
+		custom_tooltip = succubus_travel.1110.a.tt
+		add_gold = tiny_gold_value
+		hidden_effect = {
+			add_trait_xp = {
+				trait = succubus
+				track = power
+				value = 5
+			}
+			add_trait_xp = {
+				trait = succubus
+				track = daring
+				value = 5
+			}
+		}
+		stress_impact = { lustful = major_stress_impact_loss }
+	}
+}
