@@ -14,6 +14,9 @@
 
  carn_enslave_interaction: "Enslave"
  carn_enslave_interaction.desc: "Turn [recipient.GetShortUINameNoTooltip] into your slave"
+ carn_wants_to_be_your_slave: "Wants you as their Owner: $VALUE|=+0$"
+ carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] is a [noble|E]: $VALUE|=+0$"
+ carn_enslave_you_have_no_reason: "You do not have an [execute_reason|E]: $VALUE|=+0$"
 
  carn_buy_slave_directly_interaction: "Buy Slave"
  carn_buy_slave_directly_interaction_desc: "Buy a slave for [gold|E]"
@@ -23,6 +26,12 @@
  carn_sell_slave_interaction_desc: "Sell [recipient.GetShortUINameNoTooltip] on the slave_market for #high [gold_i]#!"
  recipient_secondary_carn_sell_slave_interaction: "Buyer"
  carn_buyer_not_enough_gold_for_slave_price_tooltip: "Pays #high [gold_i]#!"
+ carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] is my [recipient.Custom('KnightCulture')]: $VALUE|=+0$"
+ carn_secondary_recipient_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U] is my [councillor|E]: $VALUE|=+0$"
+ carn_secondary_recipient_is_my_friend_reason: "[secondary_recipient.GetShortUIName|U] is my [friend|E]: $VALUE|=+0$"
+ carn_secondary_recipient_is_my_lover_reason: "[secondary_recipient.GetShortUIName|U] is my [lover|E]: $VALUE|=+0$"
+ carn_secondary_recipient_is_my_crush_reason: "[secondary_recipient.GetShortUIName|U] is my [crush|E]: $VALUE|=+0$"
+ carn_secondary_recipient_is_my_soulmate_reason: "[secondary_recipient.GetShortUIName|U] is my [soulmate|E]: $VALUE|=+0$"
 
  carn_free_slave_interaction: "Free Slave"
  carn_free_slave_interaction.desc: "Free [recipient.GetShortUINameNoTooltip] from slavery"

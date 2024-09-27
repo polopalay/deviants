@@ -37,7 +37,19 @@
 		every_relation = { type = guardian remove_relation_ward = prev }
 		add_prestige_level = -6
 		if = {
-			limit = { $DRAMA$ = yes }
+			limit = { 
+				$DRAMA$ = yes
+				scope:new_slave = {
+					NOR = {
+						has_character_flag = carn_wants_to_be_a_slave
+						has_trait_with_flag = carn_wants_to_be_a_slave
+						has_opinion_modifier = {
+							target = scope:new_owner
+							modifier = carn_wants_to_be_your_slave_opinion
+						}
+					}
+				}
+			}
 			add_opinion = { target = scope:new_owner modifier = carn_enslaved_me_opinion }
 
 			if = {
@@ -84,16 +96,6 @@
 carn_free_slave_effect = {
 	scope:slave = {
 		if = {
-			limit = { scope:gold = yes }
-			pay_short_term_gold = { gold = scope:slave.carn_slave_price_value target = scope:owner }
-		}
-
-		if = {
-			limit = { scope:current_gold = yes }
-			pay_short_term_gold = { gold = scope:slave.current_gold_value target = scope:owner }
-		}
-
-		if = {
 			limit = { scope:demand_conversion = yes }
 			set_character_faith = scope:actor.faith
 			add_opinion = { modifier = demanded_my_conversion_opinion target = scope:owner }
@@ -133,8 +135,6 @@ carn_free_slave_effect = {
 		}
 		if = {
 			limit = {
-				scope:gold = no
-				scope:current_gold = no
 				scope:demand_conversion = no
 				scope:renounce_claims = no
 				scope:gain_hook = no

@@ -23,6 +23,7 @@
 		opinion_modifier = { opinion_target = scope:actor who = scope:recipient multiplier = 1 }
 		modifier = {
 			add = 1000
+			desc = carn_wants_to_be_your_slave
 			scope:recipient = {
 				OR = {
 					has_character_flag = carn_wants_to_be_a_slave
@@ -40,9 +41,9 @@
 		modifier = { add = -100 scope:recipient = { has_trait = arrogant } }
 		modifier = { desc = carn_enslave_recipient_is_noble add = -10 scope:recipient = { is_lowborn = no } }
 		modifier = { add = -50 scope:recipient = { is_ruler = yes } }
-		modifier = { add = -50 scope:actor = { NOT = { has_execute_reason = scope:recipient } } }
-		modifier = { add = 10 scope:recipient = { has_dread_level_towards = { target = scope:actor level = 1 } } }
-		modifier = { add = 20 scope:recipient = { has_dread_level_towards = { target = scope:actor level = 2 } } }
+		modifier = { desc = carn_enslave_you_have_no_reason add = -50 scope:actor = { NOT = { has_execute_reason = scope:recipient } } }
+		modifier = { desc = INTIMIDATED_REASON add = 10 scope:recipient = { has_dread_level_towards = { target = scope:actor level = 1 } } }
+		modifier = { desc = COWED_REASON add = 20 scope:recipient = { has_dread_level_towards = { target = scope:actor level = 2 } } }
 	}
 
 	auto_accept = {
@@ -159,21 +160,20 @@ carn_buy_slave_directly_interaction = {
 	is_shown = {
 		scope:recipient = {
 			is_ruler = yes
-			any_courtier = { has_trait = slave }
+			any_courtier = { has_trait = slave scope:actor.gold >= scope:secondary_recipient.carn_slave_price_value }
 		}
 		NOT = { scope:actor = scope:recipient }
 	}
 
 	populate_recipient_list = {
 		scope:recipient = {
-			every_courtier = { limit = { has_trait = slave } add_to_list = characters }
-
+			every_courtier = { limit = { has_trait = slave scope:actor.gold >= scope:secondary_recipient.carn_slave_price_value } add_to_list = characters }
 		}
 	}
 
 	on_accept = {
 		scope:actor = {
-			pay_short_term_gold = { target = scope:recipient gold = minor_gold_value }
+			pay_short_term_gold = { target = scope:recipient gold = scope:secondary_recipient.carn_slave_price_value }
 			add_courtier = scope:secondary_recipient
 		}
 	}
@@ -194,30 +194,12 @@ carn_buy_slave_directly_interaction = {
 			opinion_target = scope:actor
 			multiplier = 1
 		}
-		modifier = {
-			scope:secondary_recipient = { is_knight_of = scope:recipient }
-			add = -25
-		}
-		modifier = {
-			scope:secondary_recipient = { is_councillor_of = scope:recipient }
-			add = -50
-		}
-		modifier = {
-			scope:secondary_recipient = { has_relation_friend = scope:recipient }
-			add = -50
-		}
-		modifier = {
-			scope:secondary_recipient = { has_relation_lover = scope:recipient }
-			add = -50
-		}
-		modifier = {
-			scope:secondary_recipient = { has_relation_crush = scope:recipient }
-			add = -50
-		}
-		modifier = {
-			scope:secondary_recipient = { has_relation_soulmate = scope:recipient }
-			add = -100
-		}
+		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_knight_of = scope:recipient } add = -25 }
+		modifier = { desc = carn_secondary_recipient_is_my_councillor_reason scope:secondary_recipient = { is_councillor_of = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_friend_reason scope:secondary_recipient = { has_relation_friend = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_lover_reason scope:secondary_recipient = { has_relation_lover = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_crush_reason scope:secondary_recipient = { has_relation_crush = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_soulmate_reason scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = -100 }
 	}
 	ai_will_do = {
 		base = 0
@@ -237,7 +219,7 @@ carn_sell_slave_interaction = {
 
 	is_shown = {
 		scope:actor = {
-			any_courtier = { has_trait = slave }
+			any_courtier = { has_trait = slave scope:recipient.gold >= scope:secondary_recipient.carn_slave_price_value }
 		}
 		scope:recipient = {
 			is_ruler = yes
@@ -247,13 +229,13 @@ carn_sell_slave_interaction = {
 
 	populate_recipient_list = {
 		scope:actor = {
-			every_courtier = { limit = { has_trait = slave } add_to_list = characters }
+			every_courtier = { limit = { has_trait = slave scope:recipient.gold >= scope:secondary_recipient.carn_slave_price_value } add_to_list = characters }
 		}
 	}
 
 	on_accept = {
 		scope:recipient = {
-			pay_short_term_gold = { target = scope:actor gold = minor_gold_value }
+			pay_short_term_gold = { target = scope:actor gold = scope:secondary_recipient.carn_slave_price_value }
 			add_courtier = scope:secondary_recipient
 		}
 	}
@@ -261,11 +243,12 @@ carn_sell_slave_interaction = {
 	ai_accept = {
 		base = 0
 		opinion_modifier = { opinion_target = scope:actor multiplier = 1 }
-		modifier = { scope:secondary_recipient = { is_spouse_of = scope:recipient } add = 50 }
-		modifier = { scope:secondary_recipient = { is_close_family_of = scope:recipient } add = 40 }
-		modifier = { scope:secondary_recipient = { has_relation_friend = scope:recipient } add = 10 }
-		modifier = { scope:secondary_recipient = { has_relation_lover = scope:recipient } add = 10 }
-		modifier = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = 100 }
+		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_knight_of = scope:recipient } add = 25 }
+		modifier = { desc = carn_secondary_recipient_is_my_councillor_reason scope:secondary_recipient = { is_councillor_of = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_friend_reason scope:secondary_recipient = { has_relation_friend = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_lover_reason scope:secondary_recipient = { has_relation_lover = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_crush_reason scope:secondary_recipient = { has_relation_crush = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_soulmate_reason scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = 100 }
 	}
 	ai_frequency = 12
 	ai_potential = { always = yes }
@@ -303,29 +286,6 @@ carn_free_slave_interaction = {
 			is_courtier_of = scope:actor
 		}
 	}
-	send_option = {
-		flag = gold
-		localization = "RANSOM_GOLD_OPTION"
-		is_shown = {
-			scope:recipient = {
-				gold >= scope:recipient.carn_slave_price_value
-				carn_slave_can_be_sold_trigger = yes
-			}
-		}
-	}
-
-	send_option = {
-		flag = current_gold
-		localization = "RANSOM_CURRENT_GOLD_OPTION"
-		is_shown = {
-			scope:recipient = {
-				gold < scope:recipient.carn_slave_price_value
-				gold > 0
-				carn_slave_can_be_sold_trigger = yes
-			}
-		}
-	}
-	
 	send_option = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
@@ -527,11 +487,7 @@ carn_free_slave_interaction = {
 		}
 		modifier = {
 			add = -100
-			scope:actor = {
-				NOT = {
-					has_trait = forgiving
-				}
-			}
+			scope:actor = { NOT = { has_trait = forgiving } }
 			scope:actor.ai_vengefulness >= very_high_positive_ai_value
 			scope:recipient = {
 				OR = {
