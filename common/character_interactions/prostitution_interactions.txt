@@ -5,7 +5,13 @@
 	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { years = 1 }
-	cooldown_against_recipient = { years = 2 }
+
+	send_option = {
+		flag = use_contraception
+		localization = use_contraception
+	}
+	
+	send_options_exclusive = no
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -29,7 +35,13 @@
 		scope:actor = {
 			stress_impact = { base = massive_stress_impact_loss }
 			pay_short_term_gold = { target = scope:recipient gold = scope:recipient.prostitute_price_value }
-			prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+			if = {
+				limit = { scope:use_contraception = yes }
+				prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = 0 }
+			}
+			else = {
+				prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+			}
 			random = {
 				chance = 10
 				opinion_modifier = {
@@ -134,6 +146,7 @@
 		modifier = { add = -5 scope:actor = { has_trait = weak } }
 		modifier = { add = -5 scope:actor = { has_trait = dull } }
 		modifier = { add = -10 scope:actor = { has_trait = disfigured } }
+		modifier = { desc = cant_have_sex_without_contraception add = -25 scope:recipient = { can_have_children = yes } scope:use_contraception = no }
 	}
 
 	ai_potential = { always = yes }
@@ -191,6 +204,7 @@
 		modifier = { add = -50 scope:recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = -50 scope:recipient = { has_trait = disfigured } }
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+		modifier = { add = -25 scope:recipient = { can_have_children = yes } scope:use_contraception = no }
 	}
 }
 
@@ -201,7 +215,14 @@ offer_prostitute_interaction = {
 	ignores_pending_interaction_block = no
 	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { years = 2 }
+	cooldown = { years = 1 }
+
+	send_option = {
+		flag = use_contraception
+		localization = use_contraception
+	}
+	
+	send_options_exclusive = no
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -239,7 +260,13 @@ offer_prostitute_interaction = {
 	on_accept = {
 		scope:recipient = {
 			stress_impact = { base = massive_stress_impact_loss }
-			prostitute_effect = { PROSTITUTE = scope:secondary_recipient PREGNANCY_CHANCE = pregnancy_chance }
+			if = {
+				limit = { scope:use_contraception = yes }
+				prostitute_effect = { PROSTITUTE = scope:secondary_recipient PREGNANCY_CHANCE = 0 }
+			}
+			else = {
+				prostitute_effect = { PROSTITUTE = scope:secondary_recipient PREGNANCY_CHANCE = pregnancy_chance }
+			}
 			pay_short_term_gold = { target = scope:actor gold = scope:actor.prostitute_broker_value }
 			pay_short_term_gold = { target = scope:secondary_recipient gold = scope:secondary_recipient.prostitute_price_value }
 			random = {
@@ -302,6 +329,7 @@ offer_prostitute_interaction = {
 				modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 				modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 				modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+				modifier = { add = -25 scope:secondary_recipient = { can_have_children = yes } scope:use_contraception = no }
 				pay_short_term_gold = { target = scope:secondary_recipient gold = scope:secondary_recipient.prostitute_tips_value }
 			}
 		}
@@ -347,6 +375,7 @@ offer_prostitute_interaction = {
 		modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+		modifier = { desc = cant_have_sex_without_contraception add = -25 scope:secondary_recipient = { can_have_children = yes scope:use_contraception = no } }
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient

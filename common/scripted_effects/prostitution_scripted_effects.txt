@@ -28,11 +28,11 @@
 			}
 		}
 		$PROSTITUTE$ = {
-			random = { chance = 25 add_character_flag = { flag = face_cum days = 10 } }
-			random = { chance = 25 add_character_flag = { flag = body_cum days = 10 } }
-			random = { chance = 25 add_character_flag = { flag = ass_cum days = 10 } }
-			random = { chance = 25 add_character_flag = { flag = pussy_cum days = 10 } }
-			add_character_modifier = { modifier = recently_had_sex months = 12 }
+			random = { chance = 25 add_character_flag = { flag = face_cum months = 3 } }
+			random = { chance = 25 add_character_flag = { flag = body_cum months = 3 } }
+			random = { chance = 25 add_character_flag = { flag = ass_cum months = 3 } }
+			random = { chance = 25 add_character_flag = { flag = pussy_cum months = 3 } }
+			add_character_modifier = { modifier = recently_had_sex years = 2 }
 			if = {
 				has_trait = { lifestyle_prostitute }
 				add_trait_xp = { trait = lifestyle_prostitute value = 1 }
@@ -44,14 +44,14 @@
 						add_trait_xp = { trait = succubus track = power value = 2 } 
 						if = {
 							limit = { is_in_landless_adventurer_government = yes }
-							add_trait_xp = { trait = succubus track = power value = 8 }
+							add_trait_xp = { trait = succubus track = power value = 3 }
 						}
 					}
 					1 = { 
 						add_trait_xp = { trait = succubus track = daring value = 2 } 
 						if = {
 							limit = { is_in_landless_adventurer_government = yes }
-							add_trait_xp = { trait = succubus track = daring value = 8 } 
+							add_trait_xp = { trait = succubus track = daring value = 3 } 
 						}
 					}
 				}
@@ -61,7 +61,7 @@
 				add_trait_xp = { trait = lesser_succubus value = 4 }
 				if = {
 					limit = { is_in_landless_adventurer_government = yes }
-					add_trait_xp = { trait = lesser_succubus value = 16 }
+					add_trait_xp = { trait = lesser_succubus value = 6 }
 				}
 			}
 		}

@@ -1,17 +1,4 @@
 ﻿l_english:
- prostitute_interaction: "Prostituting"
- prostitute_interaction.desc: "Request [recipient.GetShortUIName] to provide sexual services"
-
- offer_prostitute_interaction: "Offer Prostituting"
- offer_prostitute_interaction.desc: "Offer [recipient.GetShortUIName] sexual services"
- recipient_secondary_offer_prostitute_interaction: "Choose one"
-
- start_prostitution_interaction: "Start Prostitution"
- start_prostitution_interaction.desc: "Force [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a prostitute"
-
- stop_prostitution_interaction: "Stop Prostitution"
- stop_prostitution_interaction.desc: "Stop forcing [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a prostitute"
-
  carn_enslave_interaction: "Enslave"
  carn_enslave_interaction.desc: "Turn [recipient.GetShortUINameNoTooltip] into your slave"
  carn_wants_to_be_your_slave: "Wants you as their Owner: $VALUE|=+0$"
@@ -44,15 +31,3 @@
 
  extortion_interaction: "Extort"
  extortion_interaction.desc: "Extort [recipient.GetShortUINameNoTooltip] for [gold|E]"
-
- naked_interaction: "Naked"
- naked_interaction.desc: "[recipient.GetShortUIName] removes all clothing"
-
- dress_interaction: "Dress"
- dress_interaction.desc: "[recipient.GetShortUIName] puts on all clothing"
-
- start_birth_control_interaction: "Start Contraception"
- start_birth_control_interaction.desc: "By maintaining a stockpile of condoms, diaphragms, silphium leaves, and other supplies, I can ensure that my dalliances are less likely to result in unwanted children"
-
- stop_birth_control_interaction: "Stop Contraception"
- stop_birth_control_interaction.desc: "These artificial impediments have become too much of a burden in the bedroom. I will set them aside and let my passions roam wild and free, as nature intended"

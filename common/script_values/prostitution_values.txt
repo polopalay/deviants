@@ -1,6 +1,5 @@
 prostitute_price_value = {
 	value = 3
-
 	if = {
 		limit = { has_trait = beauty_good_1 }
 		add = 1
@@ -296,10 +295,11 @@ prostitute_price_value = {
 				has_trait = chakravarti
 				has_trait = greatest_of_khans
 				has_trait = paragon
+				has_trait = succubus
 			}
 		}
 		multiply = 2
-		add = 10
+		add = 5
 	}
 	if = {
 		limit = {
@@ -309,6 +309,7 @@ prostitute_price_value = {
 				has_trait = saint
 				has_trait = born_in_the_purple
 				has_trait = consecrated_blood
+				has_trait = lesser_succubus
 			}
 		}
 		multiply = 2
@@ -362,6 +363,7 @@ prostitute_tips_value = {
 				has_trait = chakravarti
 				has_trait = greatest_of_khans
 				has_trait = paragon
+				has_trait = succubus
 			}
 		}
 		add = 10
@@ -374,6 +376,7 @@ prostitute_tips_value = {
 				has_trait = saint
 				has_trait = born_in_the_purple
 				has_trait = consecrated_blood
+				has_trait = lesser_succubus
 			}
 		}
 		add = 5

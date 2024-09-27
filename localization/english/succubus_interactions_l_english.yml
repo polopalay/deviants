@@ -64,8 +64,6 @@
 
  succubus_cultist_interaction: "Create Cultist"
  succubus_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
- lilith: "Lilithism"
- satan: "Satanism"
 
  succubus_honor_interaction: "Remove the disgraceful Trait"
  succubus_honor_interaction.desc: "Remove the disgraceful Trait from [recipient.GetShortUIName]"
