@@ -37,6 +37,10 @@
 		every_relation = { type = guardian remove_relation_ward = prev }
 		add_prestige_level = -6
 		if = {
+			limit = { is_imprisoned_by = scope:new_owner }
+			release_from_prison = yes
+		}
+		if = {
 			limit = { 
 				$DRAMA$ = yes
 				scope:new_slave = {
