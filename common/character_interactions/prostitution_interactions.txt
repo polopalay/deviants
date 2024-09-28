@@ -146,7 +146,20 @@
 		modifier = { add = -5 scope:actor = { has_trait = weak } }
 		modifier = { add = -5 scope:actor = { has_trait = dull } }
 		modifier = { add = -10 scope:actor = { has_trait = disfigured } }
-		modifier = { desc = cant_have_sex_without_contraception add = -25 scope:recipient = { can_have_children = yes } scope:use_contraception = no }
+		modifier = { 
+			desc = cant_have_sex_without_contraception
+			add = -25
+			scope:recipient = { can_have_children = yes }
+			scope:actor = { can_have_children = yes NOT = { has_trait = deviant } }
+			scope:use_contraception = no
+		}
+		modifier = { 
+			desc = can_have_sex_without_contraception
+			add = 25
+			scope:recipient = { can_have_children = yes }
+			scope:actor = { can_have_children = yes has_trait = deviant }
+			scope:use_contraception = no
+		}
 	}
 
 	ai_potential = { always = yes }
@@ -204,6 +217,18 @@
 		modifier = { add = -50 scope:recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = -50 scope:recipient = { has_trait = disfigured } }
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+		modifier = { 
+			add = -25
+			scope:recipient = { can_have_children = yes }
+			scope:actor = { can_have_children = yes NOT = { has_trait = deviant } }
+			scope:use_contraception = no
+		}
+		modifier = {
+			add = 25
+			scope:recipient = { can_have_children = yes }
+			scope:actor = { can_have_children = yes has_trait = deviant }
+			scope:use_contraception = no
+		}
 		modifier = { add = -25 scope:recipient = { can_have_children = yes } scope:use_contraception = no }
 	}
 }
@@ -369,7 +394,20 @@ offer_prostitute_interaction = {
 		modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
-		modifier = { desc = cant_have_sex_without_contraception add = -25 scope:secondary_recipient = { can_have_children = yes scope:use_contraception = no } }
+		modifier = { 
+			desc = cant_have_sex_without_contraception
+			add = -25
+			scope:recipient = { can_have_children = yes }
+			scope:secondary_recipient = { can_have_children = yes NOT = { has_trait = deviant } }
+			scope:use_contraception = no
+		}
+		modifier = { 
+			desc = can_have_sex_without_contraception
+			add = 25
+			scope:recipient = { can_have_children = yes has_trait = deviant }
+			scope:secondary_recipient = { can_have_children = yes }
+			scope:use_contraception = no
+		}
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient

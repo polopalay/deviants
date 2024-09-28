@@ -140,17 +140,11 @@ prostitute_price_value = {
 		add = -1
 	}
 	if = {
-		limit = {
-			has_trait = fecund
-			is_visibly_fertile = yes
-		}
+		limit = { has_trait = fecund is_visibly_fertile = yes }
 		add = 1
 	}
 	if = {
-		limit = {
-			has_trait = infertile
-			is_visibly_fertile = yes
-		}
+		limit = { has_trait = infertile is_visibly_fertile = yes }
 		add = -1
 	}
 
@@ -204,7 +198,6 @@ prostitute_price_value = {
 		limit = { has_trait = athletic }
 		add = 1
 	}
-
 	if = {
 		limit = { has_trait = strong }
 		add = 1
@@ -222,24 +215,15 @@ prostitute_price_value = {
 		add = -1
 	}
 	if = {
-		limit = {
-			is_female = yes
-			has_trait = impotent
-			is_visibly_fertile = yes
-		}
+		limit = { is_female = yes has_trait = impotent is_visibly_fertile = yes }
 		add = -1
 	}
 	if = {
-		limit = {
-			OR = {
-				has_trait = sayyid
-				has_trait = blood_of_prophet
-			}
-		}
+		limit = { OR = { has_trait = sayyid has_trait = blood_of_prophet } }
 		add = 1
 	}
 	if = {
-		limit = { # famous slaves get top shelf prices
+		limit = {
 			OR = {
 				has_trait = faith_warrior
 				has_trait = berserker

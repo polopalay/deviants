@@ -6,13 +6,20 @@ request_prostitute = {
 	use_diplomatic_range = no
 
 	weight = {
-		# Standard weights.
 		value = task_contract_weight_default_value
 		add = laamp_contracts_weight_up_stewardship_value
 		scope:employer = {
 			add = {
 				if = {
 					limit = { has_trait = lustful }
+					add = task_contract_weight_bonus_employer_has_associated_traits_value
+				}
+				if = {
+					limit = { has_trait = profligate }
+					add = task_contract_weight_bonus_employer_has_associated_traits_value
+				}
+				if = {
+					limit = { has_trait = rakish }
 					add = task_contract_weight_bonus_employer_has_associated_traits_value
 				}
 				if = {
@@ -26,6 +33,10 @@ request_prostitute = {
 				if = {
 					limit = { has_trait = rakish stress_level = 3 }
 					add = task_contract_weight_massive_bonus_value
+				}
+				if = {
+					limit = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+					add = task_contract_weight_standard_bonus_value
 				}
 				min = task_contract_weight_employer_associated_traits_min_value
 				max = task_contract_weight_employer_associated_traits_max_value
@@ -177,4 +188,3 @@ request_prostitute = {
 		}
 	}
 }
-

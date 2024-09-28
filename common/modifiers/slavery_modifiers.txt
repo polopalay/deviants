@@ -8,10 +8,3 @@ forced_labor = {
 	monthly_income = 0.2
 	health = -0.5
 }
-
-carn_using_birth_control_modifier = {
-	icon = fertility_positive
-	fertility = -1.0
-	monthly_income = -0.1
-	monthly_piety = -0.05
-}

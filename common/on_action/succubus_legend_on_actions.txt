@@ -6,6 +6,7 @@ legend_semen_tank_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
+		is_landed = yes
 		is_female = yes
 	}
 	random_events = {
@@ -28,6 +29,7 @@ legend_sex_machine_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
+		is_landed = yes
 		is_female = yes
 	}
 	random_events = {
@@ -52,6 +54,7 @@ legend_ladycow_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
+		is_landed = yes
 		is_female = yes
 	}
 	random_events = {
@@ -73,6 +76,7 @@ legend_penis_guillotine_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
+		is_landed = yes
 		is_female = yes
 	}
 	random_events = {
@@ -93,6 +97,7 @@ legend_penis_exhibitionist_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
+		is_landed = yes
 		is_female = yes
 	}
 	random_events = {
