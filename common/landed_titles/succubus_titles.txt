@@ -37,15 +37,15 @@ d_laamp_abaddon = {
 	ai_primary_priority = { add = @never_primary_score }
 }
 
-#d_laamp_satan = {
-#	color = { 160 0 0 }
-#	capital = c_alexandria
-#
-#	definite_form = yes
-#	landless = yes
-#	ruler_uses_title_name = no
-#	no_automatic_claims = yes
-#	destroy_if_invalid_heir = yes
-#
-#	ai_primary_priority = { add = @never_primary_score }
-#}
+d_laamp_satan = {
+	color = { 160 0 0 }
+	capital = c_alexandria
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
