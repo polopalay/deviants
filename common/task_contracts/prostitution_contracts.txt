@@ -16,11 +16,11 @@ request_prostitute = {
 				}
 				if = {
 					limit = { has_trait = profligate }
-					add = task_contract_weight_bonus_employer_has_associated_traits_value
+					add = task_contract_weight_slight_bonus_value
 				}
 				if = {
 					limit = { has_trait = rakish }
-					add = task_contract_weight_bonus_employer_has_associated_traits_value
+					add = task_contract_weight_slight_bonus_value
 				}
 				if = {
 					limit = { has_trait = rakish stress_level = 1 }
