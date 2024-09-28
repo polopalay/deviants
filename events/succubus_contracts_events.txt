@@ -87,11 +87,11 @@ prostitute_contracts_event.0002 = {
 		duel = {
 			skill = intrigue
 			value = high_skill_rating
-			40 = {
+			50 = {
 				compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
 				scope:task_contract = { complete_task_contract = success_critical }
 			}
-			60 = { 
+			50 = { 
 				compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
 				scope:task_contract = { complete_task_contract = failure_standard }
 			}
