@@ -1,10 +1,9 @@
 namespace = prostitute_contracts_event
 
-# Offer prostitute services to employer
 prostitute_contracts_event.0001 = {
 	type = character_event
-	title = prostitute_contracts_event.0800.t
-	desc = prostitute_contracts_event.0800.desc
+	title = prostitute_contracts_event.0001.t
+	desc = prostitute_contracts_event.0001.desc
 
 	theme = landless_adventurer
 	override_background = { reference = terrain }
@@ -16,32 +15,75 @@ prostitute_contracts_event.0001 = {
 
 	option = {
 		ai_chance = { base = 100 }
-		name = prostitute_contracts_event.0800.a
-		custom_tooltip = prostitute_contracts_event.0800.a.tt
+		name = prostitute_contracts_event.0001.a
+		custom_tooltip = prostitute_contracts_event.0001.a.tt
 		scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
 		scope:request_prostitute = {
-			duel = {
-				skill = diplomacy
-				value = high_skill_rating
-				50 = {
-					compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
-					scope:task_contract = { complete_task_contract = success_critical }
-				}
-				50 = { 
-					compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
-					scope:task_contract = { complete_task_contract = success_standard }
-				}
+			scope:task_contract = { complete_task_contract = success_standard }
+		}
+	}
+	option = {
+		name = prostitute_contracts_event.0001.b
+		custom_tooltip = prostitute_contracts_event.0001.b.tt
+		scope:employer = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+		duel = {
+			skill = intrigue
+			value = high_skill_rating
+			50 = {
+				compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
+				scope:task_contract = { complete_task_contract = success_critical }
+			}
+			50 = { 
+				compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
+				scope:task_contract = { complete_task_contract = failure_standard }
 			}
 		}
 	}
 	option = {
-		trigger = {
-			is_valid_prostitute_trigger = yes
-			NOT = { root = scope:request_prostitute }
+		name = prostitute_contracts_event.0001.c
+		custom_tooltip = prostitute_contracts_event.0001.c.tt
+		scope:task_contract = {
+			complete_task_contract = failure_standard
 		}
-		name = prostitute_contracts_event.0800.b
-		custom_tooltip = prostitute_contracts_event.0800.b.tt
-		scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
+	}
+}
+
+prostitute_contracts_event.0002 = {
+	type = character_event
+	title = prostitute_contracts_event.0002.t
+	desc = prostitute_contracts_event.0002.desc
+
+	theme = landless_adventurer
+	override_background = { reference = terrain }
+	right_portrait = {
+		character = root
+		animation = thinking
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		ai_chance = { base = 100 }
+		name = prostitute_contracts_event.0002.a
+		custom_tooltip = prostitute_contracts_event.0002.a.tt
+		scope:employer = { 
+			prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance }
+			every_knight = {
+				limit = { is_adult = yes is_attracted_to_women = yes }
+				prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+		scope:task_contract = { complete_task_contract = success_standard }
+	}
+	option = {
+		name = prostitute_contracts_event.0002.b
+		custom_tooltip = prostitute_contracts_event.0002.b.tt
+		scope:employer = { 
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			every_knight = {
+				limit = { is_adult = yes is_attracted_to_women = yes }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
 		duel = {
 			skill = intrigue
 			value = high_skill_rating
@@ -56,8 +98,65 @@ prostitute_contracts_event.0001 = {
 		}
 	}
 	option = {
-		name = prostitute_contracts_event.0800.c
-		custom_tooltip = prostitute_contracts_event.0800.c.tt
+		name = prostitute_contracts_event.0002.b
+		custom_tooltip = prostitute_contracts_event.0002.b.tt
+		scope:task_contract = {
+			complete_task_contract = failure_standard
+		}
+	}
+}
+
+prostitute_contracts_event.0003 = {
+	type = character_event
+	title = prostitute_contracts_event.0003.t
+	desc = prostitute_contracts_event.0003.desc
+
+	theme = landless_adventurer
+	override_background = { reference = terrain }
+	right_portrait = {
+		character = root
+		animation = thinking
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		trigger = { 
+			OR = {
+				is_valid_prostitute_trigger = yes
+				any_courtier = { is_valid_prostitute_trigger = yes }
+			}
+		}
+		ai_chance = { base = 100 }
+		name = prostitute_contracts_event.0003.a
+		custom_tooltip = prostitute_contracts_event.0003.a.tt
+		random_list = {
+			10 = {
+				modifier = { add = 10 is_valid_prostitute_trigger = yes }
+				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 1 } }
+				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 2 } }
+				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 3 } }
+				scope:task_contract = { complete_task_contract = success_critical }
+			}
+			30 = {
+				scope:task_contract = { complete_task_contract = success_standard }
+			}
+			30 = {
+				scope:task_contract = { complete_task_contract = failure_standard }
+			}
+		}
+		if = {
+			limit = { is_valid_prostitute_trigger = yes }
+			scope:employer = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
+		}
+		every_courtier = {
+			limit = { is_valid_prostitute_trigger = yes }
+			save_scope_as = request_prostitute
+			scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
+		}
+	}
+	option = {
+		name = prostitute_contracts_event.0003.b
+		custom_tooltip = prostitute_contracts_event.0003.b.tt
 		scope:task_contract = {
 			complete_task_contract = failure_standard
 		}

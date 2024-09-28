@@ -2,4 +2,14 @@
   request_prostitute_contract: "Request Prostitute"
   request_prostitute_desc_title: "Prostitute Contract"
   request_prostitute_desc: "Request a prostitute to come to employer location."
-  request_prostitute_request: "This [task_contract|E] requires you take a prostitute to a location. Are you sure you want to take this contract?"
+  request_prostitute_request: "This [task_contract|E] requires you take a prostitute to a location, To serve [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip]'s sexual needs, complete the contract to receive [gold|E]. The skill of the prostitute will determine the success of the contract. Are you sure you want to take this contract?"
+
+  request_orgy_contract: "Request Orgy"
+  request_orgy_desc_title: "Orgy Contract"
+  request_orgy_desc: "Request the whore to come and serve the orgy"
+  request_orgy_request: "This [task_contract|E] requires the whore to serve the employer and all of their knights. The skill of the whore will determine the quality of the contract."
+
+  request_harem_contract: "Request Harem"
+  request_harem_desc_title: "Harem Contract"
+  request_harem_desc: "Require all whores to come for sexual service"
+  request_harem_request: "This [task_contract|E] requires you to provide quality whores for service. The number of whores will determine the quality of the contract."
