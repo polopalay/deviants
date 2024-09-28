@@ -4,6 +4,7 @@
  use_contraception: "Use Contraception"
  cant_have_sex_without_contraception: "Can't have sex without using contraception: $VALUE|=+0$"
  can_have_sex_without_contraception: "Sex needs results: $VALUE|=+0$"
+ NOT_IS_IMMORTAL_TRIGGER: "Is not immortal"
 
  offer_prostitute_interaction: "Offer Prostituting"
  offer_prostitute_interaction.desc: "Offer [recipient.GetShortUIName] sexual services"
