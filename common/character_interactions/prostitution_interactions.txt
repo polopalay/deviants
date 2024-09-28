@@ -146,6 +146,7 @@
 		modifier = { add = -5 scope:actor = { has_trait = weak } }
 		modifier = { add = -5 scope:actor = { has_trait = dull } }
 		modifier = { add = -10 scope:actor = { has_trait = disfigured } }
+		modifier = { add = -50 scope:actor = { has_std_trigger = yes } }
 		modifier = { 
 			desc = cant_have_sex_without_contraception
 			add = -25
@@ -217,6 +218,7 @@
 		modifier = { add = -5 scope:recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -50 scope:recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = -50 scope:recipient = { has_trait = disfigured } }
+		modifier = { add = -50 scope:actor = { has_std_trigger = yes } }
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
 		modifier = { 
 			add = -25
@@ -390,6 +392,7 @@ offer_prostitute_interaction = {
 		modifier = { add = -5 scope:secondary_recipient = { has_trait = weak } }
 		modifier = { add = -5 scope:secondary_recipient = { has_trait = dull } }
 		modifier = { add = -10 scope:secondary_recipient = { has_trait = disfigured } }
+		modifier = { add = -50 scope:secondary_recipient = { has_std_trigger = yes } }
 		modifier = { add = 10 scope:secondary_recipient = { age <= 18 } }
 		modifier = { add = 10 scope:secondary_recipient = { age <= 20 } }
 		modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }

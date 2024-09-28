@@ -5,6 +5,9 @@
 	common_interaction = yes
 
 	is_shown = {
+		scope:actor = {
+			cruelty_is_acceptable = yes
+		}
 		scope:recipient = {
 			OR = {
 				is_courtier_of = scope:actor

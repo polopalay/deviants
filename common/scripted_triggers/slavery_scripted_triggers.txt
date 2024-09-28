@@ -9,3 +9,12 @@
 	}
 }
 
+cruelty_is_acceptable = {
+	NOR = {
+		faith = { trait_is_sin = sadistic }
+		faith = { trait_is_sin = callous }
+		faith = { trait_is_sin = vengeful }
+		faith = { trait_is_sin = deceitful }
+		faith = { trait_is_sin = wrathful }
+	}
+}
