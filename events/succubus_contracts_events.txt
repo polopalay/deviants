@@ -21,7 +21,7 @@ prostitute_contracts_event.0001 = {
 		scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
 		scope:request_prostitute = {
 			duel = {
-				skill = intrigue
+				skill = diplomacy
 				value = high_skill_rating
 				50 = {
 					compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
