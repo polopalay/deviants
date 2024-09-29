@@ -45,6 +45,7 @@ lifestyle_prostitute = {
 	category = lifestyle
 	icon = prostitute.dds
 
+	valid_sex = female
 	minimum_age = 16
 
 	track = {

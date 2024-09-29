@@ -159,18 +159,23 @@ carn_buy_slave_directly_interaction = {
 	category = interaction_category_prison
 	desc = carn_buy_slave_directly_interaction.desc
 	common_interaction = yes
+	needs_recipient_to_open = yes
 
 	is_shown = {
+		scope:actor = {
+			is_ruler = yes
+		}
 		scope:recipient = {
 			is_ruler = yes
-			any_courtier = { has_trait = slave scope:actor.gold >= scope:secondary_recipient.carn_slave_price_value }
+			any_courtier = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value }
 		}
 		NOT = { scope:actor = scope:recipient }
 	}
 
 	populate_recipient_list = {
 		scope:recipient = {
-			every_courtier = { limit = { has_trait = slave scope:actor.gold >= scope:secondary_recipient.carn_slave_price_value } add_to_list = characters }
+			save_scope_as = valid_slave
+			every_courtier = { limit = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value } add_to_list = characters }
 		}
 	}
 
@@ -219,10 +224,11 @@ carn_sell_slave_interaction = {
 	category = interaction_category_prison
 	desc = carn_sell_slave_interaction.desc
 	common_interaction = yes
+	needs_recipient_to_open = yes
 
 	is_shown = {
 		scope:actor = {
-			any_courtier = { has_trait = slave scope:recipient.gold >= scope:secondary_recipient.carn_slave_price_value }
+			any_courtier = { has_trait = slave scope:recipient.gold >= prev.carn_slave_price_value }
 		}
 		scope:recipient = {
 			is_ruler = yes
@@ -232,7 +238,7 @@ carn_sell_slave_interaction = {
 
 	populate_recipient_list = {
 		scope:actor = {
-			every_courtier = { limit = { has_trait = slave scope:recipient.gold >= scope:secondary_recipient.carn_slave_price_value } add_to_list = characters }
+			every_courtier = { limit = { has_trait = slave scope:recipient.gold >= prev.carn_slave_price_value } add_to_list = characters }
 		}
 	}
 
@@ -289,19 +295,32 @@ carn_free_slave_interaction = {
 			is_courtier_of = scope:actor
 		}
 	}
+
+	localization_values = {
+		RANSOM_COST = scope:secondary_recipient.ransom_cost_value
+		CURRENT_GOLD = scope:recipient.gold
+	}
+
+	send_option = {
+		is_shown = {
+			scope:recipient ?= { gold >= scope:recipient.carn_slave_price_value }
+		}
+		flag = gold
+		localization = "RANSOM_GOLD_OPTION"
+	}
+
+	send_option = {
+		is_shown = {
+			scope:recipient ?= { gold >= 1 gold < scope:recipient.carn_slave_price_value }
+		}
+		flag = current_gold
+		localization = "RANSOM_CURRENT_GOLD_OPTION"
+	}
+
 	send_option = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
 		is_valid = {
-			trigger_if = {
-				limit = { scope:actor = { is_ai = yes } }
-				scope:recipient = {
-					OR = {
-						is_close_or_extended_family_of = scope:actor
-						is_vassal_of = scope:actor
-					}
-				}
-			}
 			NOT = { scope:recipient.faith = scope:actor.faith }
 			custom_description = {
 				text = cannot_demand_religious_head_conversion
@@ -317,50 +336,8 @@ carn_free_slave_interaction = {
 	}
 	
 	send_option = {
-		flag = renounce_claims
-		localization = RELEASE_RENOUNCE_CLAIMS
-		is_shown = {
-			custom_description = {
-				text = "release_renounce_claims"
-				subject = scope:recipient
-				scope:recipient = {
-					any_claim = {
-						explicit = yes
-						save_temporary_scope_as = temp_claim
-						OR = {
-							holder = scope:actor
-							AND = {
-								NOT = { prev = { target_is_liege_or_above = scope:actor } }
-								trigger_if = {
-									limit = { exists = holder }
-									holder = { target_is_liege_or_above = scope:actor }
-								}
-							}
-							scope:actor = {
-								any_held_title = { is_de_jure_liege_or_above_target = scope:temp_claim }
-							}
-						}
-					}
-				}
-			}
-		}
-		current_description = { desc = RELEASE_RENOUNCE_CLAIMS_DESC }
-	}
-	
-	send_option = {
 		flag = gain_hook
 		localization = "RELEASE_GAIN_HOOK"
-		is_valid = {
-			trigger_if = {
-				limit = { scope:actor = { is_ai = yes } }
-				scope:recipient = {
-					OR = {
-						is_vassal_of = scope:actor
-						AND = { exists = liege liege = scope:actor }
-					}
-				}
-			}
-		}
 	}
 	
 	send_options_exclusive = no
@@ -428,32 +405,6 @@ carn_free_slave_interaction = {
 			desc = "CONVERSION_NEGATIVE_REASON"
 		}
 		modifier = {
-			add = -25
-			scope:renounce_claims = yes
-			ai_greed < 0
-			desc = "RENOUNCE_CLAIMS_REASON"
-		}
-		modifier = {
-			add = -50
-			scope:renounce_claims = yes
-			ai_greed >= 0
-			ai_greed < 26
-			desc = "RENOUNCE_CLAIMS_REASON"
-		}
-		modifier = {
-			add = -75
-			scope:renounce_claims = yes
-			ai_greed >= 26
-			ai_greed < 51
-			desc = "RENOUNCE_CLAIMS_REASON"
-		}
-		modifier = {
-			add = -95
-			scope:renounce_claims = yes
-			ai_greed >= 51
-			desc = "RENOUNCE_CLAIMS_REASON"
-		}
-		modifier = {
 			add = {
 				value = -50
 				if = {
@@ -468,8 +419,10 @@ carn_free_slave_interaction = {
 
 	ai_will_do = {
 		base = 0
+		modifier = { add = 20 scope:gain_hook = yes }
 		modifier = { add = 20 scope:demand_conversion = yes }
-		modifier = { add = 30 scope:renounce_claims = yes }
+		modifier = { add = 20 scope:gold = yes }
+		modifier = { add = 20 scope:current_gold = yes }
 		modifier = {
 			add = -40
 			scope:actor = {

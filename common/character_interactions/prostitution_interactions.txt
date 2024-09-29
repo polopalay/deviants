@@ -244,6 +244,7 @@ offer_prostitute_interaction = {
 	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { years = 1 }
+	needs_recipient_to_open = yes
 
 	send_option = {
 		flag = use_contraception
