@@ -75,7 +75,7 @@ prostitute_contracts_event.1100 = {
 		name = prostitute_contracts_event.1100.a
 		custom_tooltip = prostitute_contracts_event.1100.a.tt
 		scope:request_prostitute = {
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 		}
 	}
 }
@@ -102,7 +102,7 @@ prostitute_contracts_event.1200 = {
 	option = {
 		name = prostitute_contracts_event.1200.a
 		custom_tooltip = prostitute_contracts_event.1200.a.tt
-		add_character_flag = { flag = succubus_pussy_cum months = 1 }
+		add_character_flag = { flag = pussy_cum months = 1 }
 	}
 }
 
@@ -239,7 +239,7 @@ prostitute_contracts_event.2100 = {
 		name = prostitute_contracts_event.2100.a
 		custom_tooltip = prostitute_contracts_event.2100.a.tt
 		scope:request_prostitute = {
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 		}
 	}
 }
@@ -266,7 +266,7 @@ prostitute_contracts_event.2200 = {
 	option = {
 		name = prostitute_contracts_event.2200.a
 		custom_tooltip = prostitute_contracts_event.2200.a.tt
-		add_character_flag = { flag = succubus_pussy_cum months = 1 }
+		add_character_flag = { flag = pussy_cum months = 1 }
 	}
 }
 
@@ -402,7 +402,7 @@ prostitute_contracts_event.3100 = {
 		name = prostitute_contracts_event.3100.a
 		custom_tooltip = prostitute_contracts_event.3100.a.tt
 		scope:request_prostitute = {
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 		}
 	}
 }
@@ -429,7 +429,7 @@ prostitute_contracts_event.3200 = {
 	option = {
 		name = prostitute_contracts_event.3200.a
 		custom_tooltip = prostitute_contracts_event.3200.a.tt
-		add_character_flag = { flag = succubus_pussy_cum months = 1 }
+		add_character_flag = { flag = pussy_cum months = 1 }
 	}
 }
 

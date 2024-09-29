@@ -52,14 +52,12 @@ lifestyle_prostitute = {
 		50 = {
 			diplomacy = 1
 			intrigue = 2
-			attraction_opinion = 10
-			seduce_scheme_power_add = 10
+			attraction_opinion = 25
 		}
 		100 = {
 			diplomacy = 2
 			intrigue = 3
-			attraction_opinion = 20
-			seduce_scheme_power_add = 20
+			attraction_opinion = 50
 		}
 	}
 

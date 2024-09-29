@@ -116,7 +116,7 @@ succubus_blackmail.1110 = {
 	}
 	immediate = {
 		scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
-		add_character_flag = { flag = succubus_pussy_cum days = 20 }
+		add_character_flag = { flag = pussy_cum days = 20 }
 	}
 	#Go deal with the mess
 	option = {
@@ -311,7 +311,7 @@ succubus_blackmail.1201 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_body_cum days = 20 }
+			add_character_flag = { flag = body_cum days = 20 }
 		}
 	}
 	# just give the major hook, and he won't even cum and leaves
@@ -359,7 +359,7 @@ succubus_blackmail.1201 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 20 }
+			add_character_flag = { flag = pussy_cum days = 20 }
 		}
 		ai_chance = { base = 100 }
 	}
@@ -588,9 +588,9 @@ succubus_blackmail.1301 = {
 				value = 1
 			}
 			add_character_flag = { flag = succubus_asuccubus_cum days = 20 }
-			add_character_flag = { flag = succubus_body_cum days = 20 }
-			add_character_flag = { flag = succubus_pussy_cum days = 20 }
-			add_character_flag = { flag = succubus_face_cum days = 20 }
+			add_character_flag = { flag = body_cum days = 20 }
+			add_character_flag = { flag = pussy_cum days = 20 }
+			add_character_flag = { flag = face_cum days = 20 }
 		}
 	}
 }
@@ -933,7 +933,7 @@ succubus_blackmail.2010 = {
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = succubus_face_cum days = 15 }
+			add_character_flag = { flag = face_cum days = 15 }
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -973,7 +973,7 @@ succubus_blackmail.2010 = {
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = succubus_face_cum days = 15 }
+			add_character_flag = { flag = face_cum days = 15 }
 		}
 	}
 	# I can't do this, get out...
@@ -1029,8 +1029,8 @@ succubus_blackmail.2010 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_face_cum days = 15 }
-			add_character_flag = { flag = succubus_body_cum days = 15 }
+			add_character_flag = { flag = face_cum days = 15 }
+			add_character_flag = { flag = body_cum days = 15 }
 		}
 	}
 }
@@ -1079,7 +1079,7 @@ succubus_blackmail.2020 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_2
@@ -1118,7 +1118,7 @@ succubus_blackmail.2020 = {
 				track = corruption
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 	}
 	# I can't do this, get out...
@@ -1183,7 +1183,7 @@ succubus_blackmail.2020 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 	}
 }

@@ -489,7 +489,7 @@ succubus_courtier.1371 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_body_cum days = 10 }
+			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
 	# slip it in at last moment
@@ -521,8 +521,8 @@ succubus_courtier.1371 = {
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
-			add_character_flag = { flag = succubus_body_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
+			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
 	# make him pay before cum
@@ -552,7 +552,7 @@ succubus_courtier.1371 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 	}
 }
@@ -632,7 +632,7 @@ succubus_courtier.1372 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_face_cum days = 10 }
+			add_character_flag = { flag = face_cum days = 10 }
 		}
 	}
 }
@@ -733,8 +733,8 @@ succubus_courtier.1442 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
-			add_character_flag = { flag = succubus_body_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
+			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
 }
@@ -884,8 +884,8 @@ succubus_courtier.1461 = {
 				value = 1
 			}
 			scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
-			add_character_flag = { flag = succubus_body_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
+			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
 }
@@ -987,8 +987,8 @@ succubus_courtier.1463 = {
 				track = loyalty
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
-			add_character_flag = { flag = succubus_body_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
+			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
 }
@@ -1683,7 +1683,7 @@ succubus_courtier.5500 = {
 				track = corruption
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 20 }
+			add_character_flag = { flag = pussy_cum days = 20 }
 			add_character_flag = { flag = succubus_asuccubus_cum days = 20 }
 		}
 	}
@@ -1877,7 +1877,7 @@ succubus_courtier.6010 = {
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 20 }
+			add_character_flag = { flag = pussy_cum days = 20 }
 		}
 	}
 	# stay silent
@@ -1924,7 +1924,7 @@ succubus_courtier.6011 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}
@@ -2003,7 +2003,7 @@ succubus_courtier.6021 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_face_cum days = 15 }
+			add_character_flag = { flag = face_cum days = 15 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}
@@ -2122,7 +2122,7 @@ succubus_courtier.6040 = {
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 15 }
+			add_character_flag = { flag = pussy_cum days = 15 }
 		}
 		scope:deviant_go_random_2 = { start_promote_lew_legend = yes }
 	}

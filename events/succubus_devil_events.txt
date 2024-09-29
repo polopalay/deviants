@@ -173,7 +173,7 @@ succubus_devil.1412 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 		}
 	}
 }
@@ -208,7 +208,7 @@ succubus_devil.1413 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 	}
 }
@@ -508,7 +508,7 @@ succubus_devil.1420 = {
 				trait = lesser_succubus
 				value = 20
 			}
-			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
 		}
 	}
 }
@@ -561,7 +561,7 @@ succubus_devil.1422 = {
 				trait = lesser_succubus
 				value = 20
 			}
-			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
 		}
 	}
 }
@@ -615,7 +615,7 @@ succubus_devil.5100 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_body_cum days = 20 }
+			add_character_flag = { flag = body_cum days = 20 }
 			trigger_event = succubus_devil.5500
 		}
 	}
@@ -695,7 +695,7 @@ succubus_devil.5110 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_face_cum days = 20 }
+			add_character_flag = { flag = face_cum days = 20 }
 			trigger_event = succubus_devil.5501
 		}
 	}
@@ -874,7 +874,7 @@ succubus_devil.5130 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
 			trigger_event = succubus_devil.5501
 		}
 	}
@@ -954,7 +954,7 @@ succubus_devil.5140 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
 			trigger_event = succubus_devil.5501
 		}
 	}
@@ -1032,7 +1032,7 @@ succubus_devil.5150 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
 		}
 		trigger_event = succubus_devil.5151
 	}
@@ -1080,7 +1080,7 @@ succubus_devil.5151 = {
 		name = succubus_devil.5151.a
 		custom_tooltip = succubus_devil.5151.a.tt
 		hidden_effect = {
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 			trigger_event = succubus_devil.5501
 		}
 	}
@@ -1115,7 +1115,7 @@ succubus_devil.5160 = {
 				trait = lesser_succubus
 				value = 10
 			}
-			add_character_flag = { flag = succubus_body_cum months = 1 }
+			add_character_flag = { flag = body_cum months = 1 }
 		}
 		trigger_event = succubus_devil.5161
 	}
@@ -1198,8 +1198,8 @@ succubus_devil.5300 = {
 				trait = lesser_succubus
 				value = 20
 			}
-			add_character_flag = { flag = succubus_body_cum months = 1 }
-			add_character_flag = { flag = succubus_face_cum months = 1 }
+			add_character_flag = { flag = body_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
 		}
 		trigger_event = succubus_devil.5301
 	}
@@ -1275,7 +1275,7 @@ succubus_devil.5320 = {
 				trait = lesser_succubus
 				value = 25
 			}
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
 		}
 		trigger_event = succubus_devil.5321
@@ -2102,7 +2102,7 @@ succubus_devil.1310 = {
 		name = succubus_devil.1310.a
 		custom_tooltip = succubus_devil.1310.a.tt
 		hidden_effect = {
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 			add_trait_xp = {
 				trait = succubus
 				track = corruption
@@ -2125,8 +2125,8 @@ succubus_devil.1310 = {
 		name = succubus_devil.1310.b
 		custom_tooltip = succubus_devil.1310.b.tt
 		hidden_effect = {
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
-			add_character_flag = { flag = succubus_body_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
+			add_character_flag = { flag = body_cum months = 1 }
 		}
 	}
 }

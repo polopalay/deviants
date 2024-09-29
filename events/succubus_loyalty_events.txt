@@ -207,10 +207,10 @@ succubus_loyalty.8006 = {
 				track = loyalty
 				value = 1
 			}
-			add_character_flag = { flag = succubus_face_cum months = 1 }
-			add_character_flag = { flag = succubus_body_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
+			add_character_flag = { flag = body_cum months = 1 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 			every_knight = {
 				limit = { is_ruler = yes is_female = no age >16 }
 				start_promote_lew_legend = yes
@@ -330,7 +330,7 @@ succubus_loyalty.8100 = {
 		name = succubus_loyalty.8100.b
 		custom_tooltip = succubus_loyalty.8100.b.tt
 		add_character_flag = { flag = succubus_asuccubus_cum days = 15 }
-		add_character_flag = { flag = succubus_pussy_cum days = 15 }
+		add_character_flag = { flag = pussy_cum days = 15 }
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
@@ -398,7 +398,7 @@ succubus_loyalty.8101 = {
 				track = loyalty
 				value = 1
 			}
-			add_character_flag = { flag = succubus_pussy_cum days = 15 }
+			add_character_flag = { flag = pussy_cum days = 15 }
 		}
 		scope:succubus_loyalty_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 	}
@@ -555,9 +555,9 @@ succubus_loyalty.8201 = {
 		}
 		add_legitimacy = medium_legitimacy_loss
 		hidden_effect = {
-			add_character_flag = { flag = succubus_face_cum months = 1 }
-			add_character_flag = { flag = succubus_body_cum months = 1 }
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
+			add_character_flag = { flag = body_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
 		}
 	}
@@ -603,9 +603,9 @@ succubus_loyalty.8202 = {
 		trigger_event = succubus_loyalty.8203
 		add_legitimacy = minor_legitimacy_loss
 		hidden_effect = {
-			add_character_flag = { flag = succubus_face_cum months = 1 }
-			add_character_flag = { flag = succubus_body_cum months = 1 }
-			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+			add_character_flag = { flag = face_cum months = 1 }
+			add_character_flag = { flag = body_cum months = 1 }
+			add_character_flag = { flag = pussy_cum months = 1 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
 		}
 	}
@@ -706,9 +706,9 @@ succubus_loyalty.8205 = {
 		custom_tooltip = succubus_loyalty.8205.a.tt
 		trigger_event = succubus_loyalty.8206
 		hidden_effect = {
-			add_character_flag = { flag = succubus_face_cum months = 3 }
-			add_character_flag = { flag = succubus_body_cum months = 3 }
-			add_character_flag = { flag = succubus_pussy_cum months = 3 }
+			add_character_flag = { flag = face_cum months = 3 }
+			add_character_flag = { flag = body_cum months = 3 }
+			add_character_flag = { flag = pussy_cum months = 3 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
 		}
 	}
@@ -792,9 +792,9 @@ succubus_loyalty.8208 = {
 		name = succubus_loyalty.8208.a
 		custom_tooltip = succubus_loyalty.8208.a.tt
 		hidden_effect = {
-			add_character_flag = { flag = succubus_face_cum months = 3 }
-			add_character_flag = { flag = succubus_body_cum months = 3 }
-			add_character_flag = { flag = succubus_pussy_cum months = 3 }
+			add_character_flag = { flag = face_cum months = 3 }
+			add_character_flag = { flag = body_cum months = 3 }
+			add_character_flag = { flag = pussy_cum months = 3 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
 		}
 	}
@@ -820,9 +820,9 @@ succubus_loyalty.8209 = {
 		name = succubus_loyalty.8209.a
 		custom_tooltip = succubus_loyalty.8209.a.tt
 		hidden_effect = {
-			add_character_flag = { flag = succubus_face_cum months = 3 }
-			add_character_flag = { flag = succubus_body_cum months = 3 }
-			add_character_flag = { flag = succubus_pussy_cum months = 3 }
+			add_character_flag = { flag = face_cum months = 3 }
+			add_character_flag = { flag = body_cum months = 3 }
+			add_character_flag = { flag = pussy_cum months = 3 }
 			add_character_flag = { flag = succubus_asuccubus_cum months = 3 }
 			add_trait_xp = {
 				trait = succubus
@@ -920,7 +920,7 @@ succubus_loyalty.8901 = {
 				value = 1
 			}
 			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
-			add_character_flag = { flag = succubus_pussy_cum days = 10 }
+			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 	}
 }
