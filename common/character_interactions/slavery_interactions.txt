@@ -297,8 +297,8 @@ carn_free_slave_interaction = {
 	}
 
 	localization_values = {
-		RANSOM_COST = scope:secondary_recipient.ransom_cost_value
-		CURRENT_GOLD = scope:recipient.gold
+		RANSOM_COST = scope:recipient.carn_slave_price_value
+		CURRENT_GOLD = scope:recipient.carn_slave_price_value
 	}
 
 	send_option = {
