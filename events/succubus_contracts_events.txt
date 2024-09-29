@@ -207,8 +207,8 @@ prostitute_contracts_event.2000 = {
 		}
 	}
 	option = {
-		name = prostitute_contracts_event.2000.b
-		custom_tooltip = prostitute_contracts_event.2000.b.tt
+		name = prostitute_contracts_event.2000.c
+		custom_tooltip = prostitute_contracts_event.2000.c.tt
 		scope:task_contract = {
 			complete_task_contract = failure_standard
 			trigger_event = prostitute_contracts_event.2400
@@ -393,7 +393,7 @@ prostitute_contracts_event.3100 = {
 	}
 
 	left_portrait = {
-		character = scope:request_prostitute
+		character = root
 		animation = idle
 		outfit_tags = { no_clothes }
 	}
