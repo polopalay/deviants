@@ -70,7 +70,7 @@
  prostitute_contracts_event.3100.a.tt: "You have succeeded in satisfying [employer.GetShortUINameNoTooltip]"
 
  prostitute_contracts_event.3200.t: "Contract Critical Success"
- prostitute_contracts_event.3200.desc: "Although you are not the whore [employer.GetShortUINameNoTooltip] requested, you have indeed demonstrated sexual skills beyond [employer.GetShortUINameNoTooltip]'s expectations. [employer.GetShortUINameNoTooltip] and the knights have fucked you relentlessly.\n[employer.GetShortUINameNoTooltip] has decided to pay a larger bonus than the original agreement."
+ prostitute_contracts_event.3200.desc: "The whores have been fucking [employer.GetShortUINameNoTooltip] non-stop for days in a row. [employer.GetShortUINameNoTooltip] is extremely satisfied with their sexual skills, many whores have even exceeded expectations.\nThe contract is a great success, [employer.GetShortUINameNoTooltip] will give you an extra bonus for these exceeding expectations."
  prostitute_contracts_event.3200.a: "A great success"
  prostitute_contracts_event.3200.a.tt: "Not only did you satisfy [employer.GetShortUINameNoTooltip], you also made him addicted to the pussy of all the whores you provided"
 
