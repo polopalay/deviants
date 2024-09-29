@@ -1,9 +1,9 @@
 namespace = prostitute_contracts_event
 
-prostitute_contracts_event.0001 = {
+prostitute_contracts_event.1000 = {
 	type = character_event
-	title = prostitute_contracts_event.0001.t
-	desc = prostitute_contracts_event.0001.desc
+	title = prostitute_contracts_event.1000.t
+	desc = prostitute_contracts_event.1000.desc
 
 	theme = landless_adventurer
 	override_background = { reference = terrain }
@@ -15,16 +15,17 @@ prostitute_contracts_event.0001 = {
 
 	option = {
 		ai_chance = { base = 100 }
-		name = prostitute_contracts_event.0001.a
-		custom_tooltip = prostitute_contracts_event.0001.a.tt
+		name = prostitute_contracts_event.1000.a
+		custom_tooltip = prostitute_contracts_event.1000.a.tt
 		scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
 		scope:request_prostitute = {
 			scope:task_contract = { complete_task_contract = success_standard }
 		}
+		trigger_event = prostitute_contracts_event.1100
 	}
 	option = {
-		name = prostitute_contracts_event.0001.b
-		custom_tooltip = prostitute_contracts_event.0001.b.tt
+		name = prostitute_contracts_event.1000.b
+		custom_tooltip = prostitute_contracts_event.1000.b.tt
 		scope:employer = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
 		duel = {
 			skill = intrigue
@@ -32,26 +33,131 @@ prostitute_contracts_event.0001 = {
 			50 = {
 				compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
 				scope:task_contract = { complete_task_contract = success_critical }
+				trigger_event = prostitute_contracts_event.1200
 			}
-			50 = { 
+			50 = {
 				compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
 				scope:task_contract = { complete_task_contract = failure_standard }
+				trigger_event = prostitute_contracts_event.1300
 			}
 		}
 	}
 	option = {
-		name = prostitute_contracts_event.0001.c
-		custom_tooltip = prostitute_contracts_event.0001.c.tt
+		name = prostitute_contracts_event.1000.c
+		custom_tooltip = prostitute_contracts_event.1000.c.tt
 		scope:task_contract = {
 			complete_task_contract = failure_standard
+			trigger_event = prostitute_contracts_event.1400
 		}
 	}
 }
 
-prostitute_contracts_event.0002 = {
+#Success with request_prostitute
+prostitute_contracts_event.1100 = {
 	type = character_event
-	title = prostitute_contracts_event.0002.t
-	desc = prostitute_contracts_event.0002.desc
+	title = prostitute_contracts_event.1100.t
+	desc = prostitute_contracts_event.1100.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = ecstasy
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = scope:request_prostitute
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.1100.a
+		custom_tooltip = prostitute_contracts_event.1100.a.tt
+		scope:request_prostitute = {
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+		}
+	}
+}
+
+#Success with root
+prostitute_contracts_event.1200 = {
+	type = character_event
+	title = prostitute_contracts_event.1200.t
+	desc = prostitute_contracts_event.1200.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = love
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.1200.a
+		custom_tooltip = prostitute_contracts_event.1200.a.tt
+		add_character_flag = { flag = succubus_pussy_cum months = 1 }
+	}
+}
+
+#Failure with root
+prostitute_contracts_event.1300 = {
+	type = character_event
+	title = prostitute_contracts_event.1300.t
+	desc = prostitute_contracts_event.1300.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.1300.a
+		custom_tooltip = prostitute_contracts_event.1300.a.tt
+	}
+}
+
+#Refuse to prostitute
+prostitute_contracts_event.1400 = {
+	type = character_event
+	title = prostitute_contracts_event.1400.t
+	desc = prostitute_contracts_event.1400.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	option = {
+		name = prostitute_contracts_event.1400.a
+		custom_tooltip = prostitute_contracts_event.1400.a.tt
+	}
+}
+
+prostitute_contracts_event.2000 = {
+	type = character_event
+	title = prostitute_contracts_event.2000.t
+	desc = prostitute_contracts_event.2000.desc
 
 	theme = landless_adventurer
 	override_background = { reference = terrain }
@@ -63,9 +169,9 @@ prostitute_contracts_event.0002 = {
 
 	option = {
 		ai_chance = { base = 100 }
-		name = prostitute_contracts_event.0002.a
-		custom_tooltip = prostitute_contracts_event.0002.a.tt
-		scope:employer = { 
+		name = prostitute_contracts_event.2000.a
+		custom_tooltip = prostitute_contracts_event.2000.a.tt
+		scope:employer = {
 			prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance }
 			every_knight = {
 				limit = { is_adult = yes is_attracted_to_women = yes }
@@ -73,11 +179,12 @@ prostitute_contracts_event.0002 = {
 			}
 		}
 		scope:task_contract = { complete_task_contract = success_standard }
+		trigger_event = prostitute_contracts_event.2100
 	}
 	option = {
-		name = prostitute_contracts_event.0002.b
-		custom_tooltip = prostitute_contracts_event.0002.b.tt
-		scope:employer = { 
+		name = prostitute_contracts_event.2000.b
+		custom_tooltip = prostitute_contracts_event.2000.b.tt
+		scope:employer = {
 			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 			every_knight = {
 				limit = { is_adult = yes is_attracted_to_women = yes }
@@ -90,26 +197,131 @@ prostitute_contracts_event.0002 = {
 			50 = {
 				compare_modifier = { value = scope:duel_value multiplier = 3.5 min = -49 }
 				scope:task_contract = { complete_task_contract = success_critical }
+				trigger_event = prostitute_contracts_event.2200
 			}
-			50 = { 
+			50 = {
 				compare_modifier = { value = scope:duel_value multiplier = -3.5 min = -49 }
 				scope:task_contract = { complete_task_contract = failure_standard }
+				trigger_event = prostitute_contracts_event.2300
 			}
 		}
 	}
 	option = {
-		name = prostitute_contracts_event.0002.b
-		custom_tooltip = prostitute_contracts_event.0002.b.tt
+		name = prostitute_contracts_event.2000.b
+		custom_tooltip = prostitute_contracts_event.2000.b.tt
 		scope:task_contract = {
 			complete_task_contract = failure_standard
+			trigger_event = prostitute_contracts_event.2400
 		}
 	}
 }
 
-prostitute_contracts_event.0003 = {
+#Success with request_prostitute
+prostitute_contracts_event.2100 = {
 	type = character_event
-	title = prostitute_contracts_event.0003.t
-	desc = prostitute_contracts_event.0003.desc
+	title = prostitute_contracts_event.2100.t
+	desc = prostitute_contracts_event.2100.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = ecstasy
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = scope:request_prostitute
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.2100.a
+		custom_tooltip = prostitute_contracts_event.2100.a.tt
+		scope:request_prostitute = {
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+		}
+	}
+}
+
+#Success with root
+prostitute_contracts_event.2200 = {
+	type = character_event
+	title = prostitute_contracts_event.2200.t
+	desc = prostitute_contracts_event.2200.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = love
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.2200.a
+		custom_tooltip = prostitute_contracts_event.2200.a.tt
+		add_character_flag = { flag = succubus_pussy_cum months = 1 }
+	}
+}
+
+#Failure with root
+prostitute_contracts_event.2300 = {
+	type = character_event
+	title = prostitute_contracts_event.2300.t
+	desc = prostitute_contracts_event.2300.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.2300.a
+		custom_tooltip = prostitute_contracts_event.2300.a.tt
+	}
+}
+
+#Refuse to prostitute
+prostitute_contracts_event.2400 = {
+	type = character_event
+	title = prostitute_contracts_event.2400.t
+	desc = prostitute_contracts_event.2400.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	option = {
+		name = prostitute_contracts_event.2400.a
+		custom_tooltip = prostitute_contracts_event.2400.a.tt
+	}
+}
+
+prostitute_contracts_event.3000 = {
+	type = character_event
+	title = prostitute_contracts_event.3000.t
+	desc = prostitute_contracts_event.3000.desc
 
 	theme = landless_adventurer
 	override_background = { reference = terrain }
@@ -120,15 +332,15 @@ prostitute_contracts_event.0003 = {
 	}
 
 	option = {
-		trigger = { 
+		trigger = {
 			OR = {
 				is_valid_prostitute_trigger = yes
 				any_courtier = { is_valid_prostitute_trigger = yes }
 			}
 		}
 		ai_chance = { base = 100 }
-		name = prostitute_contracts_event.0003.a
-		custom_tooltip = prostitute_contracts_event.0003.a.tt
+		name = prostitute_contracts_event.3000.a
+		custom_tooltip = prostitute_contracts_event.3000.a.tt
 		random_list = {
 			10 = {
 				modifier = { add = 10 is_valid_prostitute_trigger = yes }
@@ -136,12 +348,15 @@ prostitute_contracts_event.0003 = {
 				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 2 } }
 				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 3 } }
 				scope:task_contract = { complete_task_contract = success_critical }
+				trigger_event = prostitute_contracts_event.3200
 			}
 			30 = {
 				scope:task_contract = { complete_task_contract = success_standard }
+				trigger_event = prostitute_contracts_event.3100
 			}
 			30 = {
 				scope:task_contract = { complete_task_contract = failure_standard }
+				trigger_event = prostitute_contracts_event.3330
 			}
 		}
 		if = {
@@ -155,10 +370,113 @@ prostitute_contracts_event.0003 = {
 		}
 	}
 	option = {
-		name = prostitute_contracts_event.0003.b
-		custom_tooltip = prostitute_contracts_event.0003.b.tt
+		name = prostitute_contracts_event.3000.b
+		custom_tooltip = prostitute_contracts_event.3000.b.tt
 		scope:task_contract = {
 			complete_task_contract = failure_standard
 		}
+		trigger_event = prostitute_contracts_event.3400
+	}
+}
+
+#Success 
+prostitute_contracts_event.3100 = {
+	type = character_event
+	title = prostitute_contracts_event.3100.t
+	desc = prostitute_contracts_event.3100.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = ecstasy
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = scope:request_prostitute
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.3100.a
+		custom_tooltip = prostitute_contracts_event.3100.a.tt
+		scope:request_prostitute = {
+			add_character_flag = { flag = succubus_pussy_cum months = 1 }
+		}
+	}
+}
+
+#Critical success
+prostitute_contracts_event.3200 = {
+	type = character_event
+	title = prostitute_contracts_event.3200.t
+	desc = prostitute_contracts_event.3200.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = love
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.3200.a
+		custom_tooltip = prostitute_contracts_event.3200.a.tt
+		add_character_flag = { flag = succubus_pussy_cum months = 1 }
+	}
+}
+
+#Failure 
+prostitute_contracts_event.3330 = {
+	type = character_event
+	title = prostitute_contracts_event.3300.t
+	desc = prostitute_contracts_event.3300.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+		outfit_tags = { no_clothes }
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+		outfit_tags = { no_clothes }
+	}
+
+	option = {
+		name = prostitute_contracts_event.3300.a
+		custom_tooltip = prostitute_contracts_event.3300.a.tt
+	}
+}
+
+#Refuse to prostitute
+prostitute_contracts_event.3400 = {
+	type = character_event
+	title = prostitute_contracts_event.3400.t
+	desc = prostitute_contracts_event.3400.desc
+	theme = diplomacy
+
+	right_portrait = {
+		character = scope:employer
+		animation = disapproval
+	}
+
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	option = {
+		name = prostitute_contracts_event.3400.a
+		custom_tooltip = prostitute_contracts_event.3400.a.tt
 	}
 }

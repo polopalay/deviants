@@ -99,7 +99,7 @@ request_prostitute = {
 				list = random_protitute_list
 				save_scope_as = request_prostitute
 			}
-			trigger_event = prostitute_contracts_event.0001
+			trigger_event = prostitute_contracts_event.1000
 		}
 	}
 	on_create = {
@@ -290,7 +290,7 @@ request_orgy = {
 				list = random_protitute_list
 				save_scope_as = request_prostitute
 			}
-			trigger_event = prostitute_contracts_event.0002
+			trigger_event = prostitute_contracts_event.2000
 		}
 	}
 	on_create = {
@@ -469,7 +469,7 @@ request_harem = {
 		save_scope_as = task_contract
 		task_contract_employer = { save_scope_as = employer }
 		task_contract_taker = {
-			trigger_event = prostitute_contracts_event.0003
+			trigger_event = prostitute_contracts_event.3000
 		}
 	}
 	on_create = {

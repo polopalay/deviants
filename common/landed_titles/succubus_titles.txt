@@ -1,6 +1,6 @@
 ﻿d_laamp_lilith = {
 	color = { 238 115 221 }
-	capital = c_roma
+	capital = c_oxfordshire
 
 	definite_form = yes
 	landless = yes
@@ -13,7 +13,7 @@
 
 d_laamp_belial = {
 	color = { 247 185 238 }
-	capital = c_cologne
+	capital = c_modena
 
 	definite_form = yes
 	landless = yes
@@ -26,7 +26,7 @@ d_laamp_belial = {
 
 d_laamp_abaddon = {
 	color = { 139 0 0 }
-	capital = c_jerusalem
+	capital = c_cologne
 
 	definite_form = yes
 	landless = yes
@@ -39,7 +39,7 @@ d_laamp_abaddon = {
 
 d_laamp_satan = {
 	color = { 160 0 0 }
-	capital = c_alexandria
+	capital = c_roma
 
 	definite_form = yes
 	landless = yes
