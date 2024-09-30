@@ -1,0 +1,10 @@
+master_dildo = {
+	icon = "master_dildo.dds"
+	asset = { reference = ep1_mena_box_medium_basic_01_a_entity }
+}
+
+mistress_dildo = {
+	icon = "mistress_dildo.dds"
+	asset = { reference = ep1_mena_box_medium_basic_01_a_entity }
+}
+

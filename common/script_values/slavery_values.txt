@@ -395,14 +395,3 @@ carn_slave_price_value = {
 	min = 1
 }
 
-# used in localization for carn_buy_slave_effect
-carn_scope_recipient_carn_slave_price_value = {
-	value = scope:recipient.carn_slave_price_value
-}
-carn_scope_buyer_current_gold_value = {
-	value = scope:buyer.current_gold_value
-}
-carn_scope_slave_price_value = {
-	value = scope:slave_price
-}
-

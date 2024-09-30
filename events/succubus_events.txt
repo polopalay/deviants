@@ -261,3 +261,60 @@ succubus_event.0902 = {
 	}
 }
 
+#0550 if has no dildo at max addiction...
+succubus_event.0550 = { 
+	type = character_event
+	title = succubus_event.0550.t
+	desc = succubus_event.0550.desc
+	theme = bloody_wedding_night
+	override_background = { reference = bedchamber }
+	right_portrait = {
+		character = root
+		animation = lunatic
+	}	
+	# find one, at any cost
+	option = {
+		trigger = {
+			gold >= major_gold_value
+		}
+		name = succubus_event.0550.a
+		custom_tooltip = succubus_event.0550.a.tt
+		remove_short_term_gold = medium_gold_value
+		create_artifact = {
+			name = master_dildo
+			description = master_dildo_desc
+			type = magic_creation
+			modifier = master_dildo_modifier
+			visuals = master_dildo
+			template = master_dildo_template
+			max_durability = 20
+			wealth = 10
+			quality = 10
+		}
+	}	
+	# try to endure
+	option = {
+		name = succubus_event.0550.b
+		custom_tooltip = succubus_event.0550.b.tt
+		stress_impact = {
+			base = massive_stress_impact_gain
+			lustful = massive_stress_impact_gain
+		}
+	}	
+	# you can feel it, there is one nearby
+	option = {
+		name = succubus_event.0550.c
+		custom_tooltip = succubus_event.0550.c.tt
+		create_artifact = {
+			name = mistress_dildo
+			description = mistress_dildo_desc
+			type = magic_creation
+			modifier = mistress_dildo_modifier
+			visuals = mistress_dildo
+			template = mistress_dildo_template
+			max_durability = 20
+			wealth = 10
+			quality = 10
+		}
+	}	
+}

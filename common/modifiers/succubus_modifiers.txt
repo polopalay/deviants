@@ -44,3 +44,15 @@ philosopher_stone_modifier = {
 	men_at_arms_maintenance = -0.1
 	mercenary_hire_cost_mult = -0.1
 }
+
+master_dildo_modifier = {
+	fertility = -1
+	stress_loss_mult = 0.1
+	stress_gain_mult = -0.1
+}
+
+mistress_dildo_modifier = {
+	fertility = -0.5
+	stress_loss_mult = 0.05
+	stress_gain_mult = -0.05
+}

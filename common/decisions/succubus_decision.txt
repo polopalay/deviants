@@ -92,3 +92,40 @@ succubus_become_succubus = {
 	}
 	ai_check_interval = 0
 }
+
+masturbate = {
+	picture = { reference = "gfx/interface/illustrations/decisions/deviant_courtesans.dds" }
+	desc = masturbate.desc
+	confirm_text = masturbate.c
+	selection_tooltip = masturbate.t
+	decision_group_type = decisions
+	cooldown = { years = 1 }
+	
+	is_shown = {
+		is_female = yes
+		stress_level >= 1
+		OR = {
+			any_character_artifact = { has_artifact_modifier = master_dildo_modifier }
+			any_character_artifact = { has_artifact_modifier = mistress_dildo_modifier }
+		}
+	}
+	effect = {
+		if = {
+			limit = { any_character_artifact = { has_artifact_modifier = master_dildo_modifier } }
+			stress_impact = { base = massive_stress_impact_loss }
+			random_artifact = {
+				limit = { has_artifact_modifier = master_dildo_modifier }
+				add_durability = -1
+			}
+		}
+		if = {
+			limit = { any_character_artifact = { has_artifact_modifier = mistress_dildo_modifier } }
+			stress_impact = { base = major_stress_impact_loss }
+			random_artifact = {
+				limit = { has_artifact_modifier = mistress_dildo_modifier }
+				add_durability = -1
+			}
+		}
+		add_character_flag = { flag = pussy_cum months = 1 }
+	}
+}

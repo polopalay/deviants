@@ -1,0 +1,23 @@
+﻿l_english:
+ prostitute_interaction: "Prostituting"
+ prostitute_interaction.desc: "Request [recipient.GetShortUIName] to provide sexual services"
+ use_contraception: "Use Contraception"
+ cant_have_sex_without_contraception: "Can't have sex without using contraception: $VALUE|=+0$"
+ can_have_sex_without_contraception: "Sex needs results: $VALUE|=+0$"
+ NOT_IS_IMMORTAL_TRIGGER: "Is not immortal"
+
+ offer_prostitute_interaction: "Offer Prostituting"
+ offer_prostitute_interaction.desc: "Offer [recipient.GetShortUIName] sexual services"
+ recipient_secondary_offer_prostitute_interaction: "Choose one"
+
+ carn_force_start_prostitution_interaction: "Start Prostitution"
+ carn_force_start_prostitution_interaction.desc: "Force [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a prostitute"
+
+ carn_force_stop_prostitution_interaction: "Stop Prostitution"
+ carn_force_stop_prostitution_interaction.desc: "Stop forcing [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a prostitute"
+
+ naked_interaction: "Naked"
+ naked_interaction.desc: "[recipient.GetShortUIName] removes all clothing"
+
+ dress_interaction: "Dress"
+ dress_interaction.desc: "[recipient.GetShortUIName] puts on all clothing"

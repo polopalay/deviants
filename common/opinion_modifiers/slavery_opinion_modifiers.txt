@@ -1,14 +1,4 @@
-﻿prostitute_criminal_opinion = {
-	opinion = -10
-	imprisonment_reason = yes
-	execute_reason = yes
-}
-
-prostitute_shunned_opinion = {
-	opinion = -5
-}
-
-carn_enslaved_me_opinion = {
+﻿carn_enslaved_me_opinion = {
 	opinion = -50
 	years = 30
 	decaying = yes

@@ -1,0 +1,45 @@
+master_dildo_template = {
+	can_equip = {
+		always = yes
+		age >= 18
+	}
+	can_reforge = {
+		always = no
+	}
+	can_repair = {
+		always = yes
+	}
+	can_benefit = {
+		is_female = yes
+	}
+	fallback = {
+		stress_loss_mult = -0.2
+		stress_gain_mult = 0.2
+		learning = 2
+		martial = 2
+		stewardship = 2
+		diplomacy = 2
+		intrigue = 2
+	}
+}
+
+mistress_dildo_template = {
+	can_equip = {
+		always = yes
+		age >= 18
+	}
+	can_reforge = {
+		always = no
+	}
+	can_repair = {
+		always = yes
+	}
+	can_benefit = {
+		is_female = yes
+	}
+	fallback = {
+		stress_loss_mult = -0.2
+		stress_gain_mult = 0.2
+		fertility = -9000
+	}
+}

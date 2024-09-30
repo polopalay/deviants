@@ -6,7 +6,20 @@
 
 	is_shown = {
 		scope:actor = {
-			cruelty_is_acceptable = yes
+			OR = {
+				culture = {
+					cultural_acceptance = {
+						target = scope:recipient.culture
+						value < 50
+					}
+				}
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value >= faith_hostile_level
+					}
+				}
+			}
 		}
 		scope:recipient = {
 			OR = {

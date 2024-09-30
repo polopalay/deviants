@@ -75,7 +75,7 @@ succubus_makeup_interaction = {
 		}
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = {
 				OR = {
 					has_character_flag = succubus_horn0
@@ -90,42 +90,42 @@ succubus_makeup_interaction = {
 		localization = succubus_no_horn
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_horn0 } }
 		}
 		flag = succubus_horn0
 		localization = succubus_horn0
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_horn1 } }
 		}
 		flag = succubus_horn1
 		localization = succubus_horn1
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_horn2 } }
 		}
 		flag = succubus_horn2
 		localization = succubus_horn2
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_horn3 } }
 		}
 		flag = succubus_horn3
 		localization = succubus_horn3
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_horn4 } }
 		}
 		flag = succubus_horn4
 		localization = succubus_horn4
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = {
 				OR = {
 					has_character_flag = succubus_marking_1
@@ -141,49 +141,49 @@ succubus_makeup_interaction = {
 		localization = succubus_no_eyes
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_marking_1 } }
 		}
 		flag = succubus_marking_1
 		localization = succubus_marking_1
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_marking_2 } }
 		}
 		flag = succubus_marking_2
 		localization = succubus_marking_2
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_marking_3 } }
 		}
 		flag = succubus_marking_3
 		localization = succubus_marking_3
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_marking_4 } }
 		}
 		flag = succubus_marking_4
 		localization = succubus_marking_4
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_marking_5 } }
 		}
 		flag = succubus_marking_5
 		localization = succubus_marking_5
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_marking_6 } }
 		}
 		flag = succubus_marking_6
 		localization = succubus_marking_6
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = {
 				OR = {
 					has_character_flag = succubus_white_eyes
@@ -194,19 +194,19 @@ succubus_makeup_interaction = {
 		flag = succubus_default_eyes
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_white_eyes } }
 		}
 		flag = succubus_white_eyes
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_red_eyes } }
 		}
 		flag = succubus_red_eyes
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = {
 				OR = {
 					has_character_flag = succubus_white_hair
@@ -217,13 +217,13 @@ succubus_makeup_interaction = {
 		flag = succubus_default_hair
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_white_hair } }
 		}
 		flag = succubus_white_hair
 	}
 	send_option = {
-		is_valid = {
+		is_shown = {
 			scope:recipient = { NOT = { has_character_flag = succubus_red_hair } }
 		}
 		flag = succubus_red_hair
@@ -445,16 +445,17 @@ succubus_makeup_interaction = {
 							has_character_flag = has_reading_glasses
 						}
 					}
-					random_list = {
-						50 = { add_character_flag = teacher_1 }
-						50 = { add_character_flag = teacher_2 }
-						50 = { add_character_flag = has_reading_glasses }
+					hidden_effect = {
+						add_character_flag = has_reading_glasses
 					}
 				}
 				else = {
-					remove_character_flag = teacher_1
-					remove_character_flag = teacher_2
-					remove_character_flag = has_reading_glasses
+					hidden_effect = {
+						text = remove_glasses
+						remove_character_flag = teacher_1
+						remove_character_flag = teacher_2
+						remove_character_flag = has_reading_glasses
+					}
 				}
 			}
 		}
@@ -491,6 +492,13 @@ succubus_honor_interaction = {
 		}
 		scope:recipient = {
 			OR = {
+				has_trait = bastard
+				has_trait = legitimized_bastard
+				has_trait = disputed_heritage
+				has_trait = child_of_concubine_female
+				has_trait = child_of_concubine_male
+				has_trait = wild_oat
+				has_trait = bastard_founder
 				has_trait = witch
 				has_trait = deviant
 				has_trait = cannibal
@@ -508,6 +516,20 @@ succubus_honor_interaction = {
 	}
 	on_accept = {
 		scope:recipient = {
+			if = {
+				limit = { NOT = { scope:actor = scope:recipient } }
+				add_opinion = {
+					target = scope:actor
+					modifier = be_healed_opinion
+				}
+			}
+			remove_trait = bastard
+			remove_trait = legitimized_bastard
+			remove_trait = disputed_heritage
+			remove_trait = child_of_concubine_female
+			remove_trait = child_of_concubine_male
+			remove_trait = wild_oat
+			remove_trait = bastard_founder
 			if = {
 				limit = { has_trait = witch }
 				remove_trait = witch
@@ -565,7 +587,7 @@ succubus_mind_break_interaction = {
 			has_trait_xp = {
 				trait = succubus
 				track = daring
-				value >= 50
+				value >= 25
 			}
 		}
 		scope:recipient = {
@@ -584,11 +606,11 @@ succubus_mind_break_interaction = {
 			add_trait_xp = {
 				trait = succubus
 				track = daring
-				value = -50
+				value = -25
 			}
 			add_trait_xp = {
 				trait = succubus
-				track = power
+				track = corruption
 				value = 1
 			}
 		}

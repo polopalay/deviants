@@ -1,0 +1,26 @@
+﻿l_english:
+ trait_succubus: "Succubus"
+ succubus_desc: "Some have seen it, others have heard about it, everybody is whispering about [ROOT.GetCharacter.GetNamePossessive] odd behavior."
+ succubus_character_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."
+ trait_track_corruption: "Deviant"
+ trait_track_corruption_desc: "From the souls she collects, she gains more power to summon monstrous creatures"
+ trait_track_power: "Power"
+ trait_track_power_desc: "She serves as a cheap prostitute, serving men in order to obtain their semen"
+ trait_track_loyalty: "Men-at-arms Loyalty"
+ trait_track_loyalty_desc: "There is more than one way to ensure a man's loyalty"
+ trait_track_daring: "Daring"
+ trait_track_daring_desc: "Courage is needed for many things in life"
+
+ trait_lesser_succubus: "Lesser Succubus"
+ lesser_succubus_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."
+ lesser_succubus_character_desc: "Most have seen it, everybody has heard about it. [ROOT.GetCharacter.GetNamePossessive] behavior is morally depraved. She is spoken with the same disdain as one would when commenting about a common street whore."
+ trait_track_lesser_succubus: "Power"
+ trait_track_lesser_succubus_desc: "She serves as a cheap prostitute, serving men in order to obtain their semen"
+
+ trait_deviant_virgin: "Horny Virgin"
+ deviant_virgin_desc: "[ROOT.GetCharacter.GetName] is the devil's whore"
+ deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] is the devil's whore"
+
+ trait_deviant_blood: "Devil Blood"
+ deviant_blood_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
+ deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"

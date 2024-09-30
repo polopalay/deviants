@@ -2,19 +2,21 @@ succubus = {
 	category = health
 	icon = succubus.dds
 	valid_sex = female
+
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -1000
-	long_reign_bonus_mult = -1000
 	can_have_children = no
-	shown_in_encyclopedia = no
 	shown_in_ruler_designer = no
+	no_prowess_loss_from_age = yes
+	add_commander_trait = yes
+
+	flag = is_immortal
 	flag = immortal_visuals
 	flag = immortal_fertility
 	flag = immortal_incapability
-	no_prowess_loss_from_age = yes
+	flag = carn_cannot_be_enslaved
+
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
-	add_commander_trait = yes
 
 	desc = {
 		first_valid = {
@@ -28,6 +30,8 @@ succubus = {
 
 	opposites = { lesser_succubus deviant_virgin incapable }
 
+	monthly_lifestyle_xp_gain_mult = -1000
+	long_reign_bonus_mult = -1000
 	character_travel_speed = 1
 	travel_danger = -1
 	attraction_opinion = 1
@@ -40,6 +44,7 @@ succubus = {
 	prowess = 1
 	diplomacy = 1
 	opinion_of_male_rulers = 5
+	stress_gain_mult = -0.1
 
 	tracks = {
 		power = {
@@ -110,7 +115,7 @@ succubus = {
 				men_at_arms_maintenance = -0.1
 				knight_effectivenesuccubus_mult = 0.1
 				monthly_piety = 0.1
-				stress_gain_mult = -0.1
+				stress_gain_mult = -0.2
 			}
 
 			66 = {
@@ -146,19 +151,20 @@ lesser_succubus = {
 	category = health
 	icon = lesser_succubus.dds
 	valid_sex = female
+
 	immortal = yes
-	monthly_lifestyle_xp_gain_mult = -1000
-	long_reign_bonus_mult = -1000
 	can_have_children = no
-	shown_in_encyclopedia = no
-	shown_in_ruler_designer = no
+	no_prowess_loss_from_age = yes
+	add_commander_trait = yes
+
+	flag = is_immortal
 	flag = immortal_visuals
 	flag = immortal_fertility
 	flag = immortal_incapability
-	no_prowess_loss_from_age = yes
+	flag = carn_cannot_be_enslaved
+
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
-	add_commander_trait = yes
 
 	opposites = { succubus deviant_virgin incapable }
 
@@ -173,6 +179,9 @@ lesser_succubus = {
 			desc = lesser_succubus_character_desc
 		}
 	}
+
+	monthly_lifestyle_xp_gain_mult = -1000
+	long_reign_bonus_mult = -1000
 	stewardship = 1
 	diplomacy = 1
 	prowess = 1
@@ -224,7 +233,6 @@ deviant_virgin = {
 	icon = virgin.dds
 	minimum_age = 16
 	valid_sex = female
-	shown_in_encyclopedia = no
 	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value

@@ -2293,7 +2293,15 @@ succubus_devil.1319 = {
 		random = {
 			chance = 10
 			modifier = { add = 15  has_character_flag = succubus_marking_6 }
-			modifier = { add = -100 OR = { 	has_personal_legend_seed = witchcraft promoted_legend.legend_type = legend_type:witchcraft NOT = { has_trait = succubus } } }
+			modifier = { 
+				add = -100
+				OR = {
+					has_personal_legend_seed = witchcraft
+					promoted_legend.legend_type = legend_type:witchcraft
+					NOT = { has_trait = succubus } 
+					any_artifact = { has_artifact_modifier = philosopher_stone_modifier count > 0 }
+				} 
+			}
 
 			create_legend_seed = {
 				type = witchcraft

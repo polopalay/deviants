@@ -52,6 +52,22 @@
 
 		risk_of_std_from_effect = { PARTNER = $PROSTITUTE$ }
 		hidden_effect = { $PROSTITUTE$ = { risk_of_std_from_effect = { PARTNER = scope:had_sex_root_character } } }
+		if = {
+			limit = {
+				is_female = yes
+				scope:had_sex_with_effect_partner = { any_artifact = { has_artifact_modifier = master_dildo_modifier count = 0 } }
+				scope:had_sex_with_effect_partner = { any_artifact = { has_artifact_modifier = mistress_dildo_modifier count = 0 } }
+			}
+			scope:had_sex_with_effect_partner = {
+				random = {
+					chance = 10
+					modifier = { has_trait = lustful add = 10 }
+					modifier = { has_trait = succubus add = 5 }
+					modifier = { has_trait = lesser_succubus add = 10 }
+					trigger_event = { id = succubus_event.0550 days = { 7 14 } } 
+				}
+			}
+		}
 	}
 }
 

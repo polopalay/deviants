@@ -1,0 +1,69 @@
+﻿l_english:
+ succubus_weight_interaction: "Adjust Weight"
+ succubus_weight_interaction.desc: "Get your weight to the perfect level"
+
+ deavians_dealing_with_stress_interaction: "Dealing with stress"
+ deavians_dealing_with_stress_interaction.desc: "Eliminate stress and all the effects it brings"
+
+ succubus_heal_interaction: "Healing"
+ succubus_heal_interaction.desc: "Eliminates all kinds of diseases, injuries, and all disgraceful names"
+
+ succubus_purify_interaction: "Purify"
+ succubus_purify_interaction.desc: "Purify [recipient.GetShortUIName]'s bloodstream, eliminating all bad genes"
+
+ succubus_imprison_interaction: "Imprison"
+ succubus_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
+
+ succubus_mind_break_interaction: "Mind Break"
+ succubus_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
+ 
+ succubus_create_lesser_succubus_interaction: "Create Lesser Succubus"
+ succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
+
+ succubus_child_interaction: "Create Child"
+ succubus_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"
+
+ succubus_rumor_interaction: "Spreading Rumors"
+ succubus_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
+
+ succubus_switch_body_interaction: "Switch"
+ succubus_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
+
+ succubus_create_succubus_interaction: "Create Succubus"
+ succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
+
+ succubus_add_courtier_interaction: "Add to Court"
+ succubus_add_courtier_interaction.desc: "Add [recipient.GetShortUIName] to your Court"
+
+ succubus_absorb_interaction: "Absorb"
+ succubus_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
+
+ succubus_makeup_interaction: "Makeup"
+ succubus_makeup_interaction.desc: "Apply makeup to [recipient.GetShortUIName]"
+ succubus_no_horn: "No Horn"
+ succubus_horn0: "Long curved horns"
+ succubus_horn1: "Twisted horns"
+ succubus_horn2: "Tapered horns"
+ succubus_horn3: "Curved horns"
+ succubus_horn4: "Short horns"
+ succubus_no_eyes: "No smokey Eyes"
+ succubus_marking_1: "Crying smokey eyes"
+ succubus_marking_2: "Scratched smokey eyes"
+ succubus_marking_3: "Scratched smokey eyes"
+ succubus_marking_4: "Flower smokey eyes"
+ succubus_marking_5: "Small smokey eyes"
+ succubus_marking_6: "Tiny smokey eyes"
+ succubus_default_eyes: "Default Eyes"
+ succubus_white_eyes: "White Eyes"
+ succubus_red_eyes: "Red Eyes"
+ succubus_default_hair: "Default Hair"
+ succubus_white_hair: "White Hair"
+ succubus_red_hair: "Red Hair"
+ naked: "Naked"
+ glass: "Glass"
+
+ succubus_cultist_interaction: "Create Cultist"
+ succubus_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
+
+ succubus_honor_interaction: "Remove the disgraceful Trait"
+ succubus_honor_interaction.desc: "Remove the disgraceful Trait from [recipient.GetShortUIName]"

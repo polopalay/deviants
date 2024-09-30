@@ -12,7 +12,6 @@ succubus_switch_body_interaction = {
 			OR = {
 				has_trait = succubus
 				has_trait = lesser_succubus
-				has_trait = deviant_virgin
 			}
 		}
 		scope:recipient = {
