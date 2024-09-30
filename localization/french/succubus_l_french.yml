@@ -6,8 +6,8 @@
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "Création Magique"
 
- succubus_philosopher_stone: "Pierre Philosophale"
- succubus_philosopher_stone.d: "La Pierre Philosophale est une substance alchimique légendaire censée être capable de transformer les métaux de base en or ou en argent, et aussi d'agir comme un élixir de vie qui accorde l'immortalité."
+ philosopher_stone: "Pierre Philosophale"
+ philosopher_stone.d: "La Pierre Philosophale est une substance alchimique légendaire censée être capable de transformer les métaux de base en or ou en argent, et aussi d'agir comme un élixir de vie qui accorde l'immortalité."
 
  master_dildo: "Mon Maître"
  master_dildo_desc: "Rien qu'à le regarder, les genoux deviennent faibles."

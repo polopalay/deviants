@@ -269,8 +269,8 @@ complete_ritual_philosophers_stone_decision = {
 			}
 		}
 		create_artifact = {
-			name = succubus_philosopher_stone
-			description = succubus_philosopher_stone.d
+			name = philosopher_stone
+			description = philosopher_stone.d
 			type = magic_creation
 			visuals = rock
 			modifier = philosopher_stone_modifier

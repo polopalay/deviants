@@ -6,8 +6,8 @@
   magic_creation_miscellaneous: "$trinket$"
   artifact_magic_creation: "Magische Kreation"
 
-  succubus_philosopher_stone: "Stein der Weisen"
-  succubus_philosopher_stone.d: "Der Stein der Weisen ist eine legendäre alchemistische Substanz, die in der Lage sein soll, unedle Metalle in Gold oder Silber zu verwandeln und auch als Lebenselixier zu wirken, das Unsterblichkeit gewährt."
+  philosopher_stone: "Stein der Weisen"
+  philosopher_stone.d: "Der Stein der Weisen ist eine legendäre alchemistische Substanz, die in der Lage sein soll, unedle Metalle in Gold oder Silber zu verwandeln und auch als Lebenselixier zu wirken, das Unsterblichkeit gewährt."
 
   master_dildo: "Mein Meister"
   master_dildo_desc: "Allein beim Anblick werden die Knie schwach."

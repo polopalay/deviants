@@ -6,8 +6,8 @@
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "魔法创造"
 
- succubus_philosopher_stone: "哲学之石"
- succubus_philosopher_stone.d: "哲学之石是一种传奇的炼金物质，据说能够将低级金属转变为黄金或白银，并且作为赐予不朽的生命之灵药。"
+ philosopher_stone: "哲学之石"
+ philosopher_stone.d: "哲学之石是一种传奇的炼金物质，据说能够将低级金属转变为黄金或白银，并且作为赐予不朽的生命之灵药。"
 
  master_dildo: "我的主人"
  master_dildo_desc: "只看着它就让人感到双膝无力。"

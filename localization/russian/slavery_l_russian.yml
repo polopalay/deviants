@@ -3,13 +3,11 @@
   recently_had_sex_desc: "Этот персонаж недавно имел секс и не мог продолжать в течение некоторого времени."
   forced_labor: "Принудительный труд"
   forced_labor_desc: "Этот персонаж вынужден работать против своей воли."
-  carn_using_birth_control_modifier: "Использование контрацепции"
-  carn_using_birth_control_modifier_desc: "Этот персонаж использует настойки и искусственные средства, чтобы снизить вероятность появления нежелательных детей."
 
   carn_prostitution_crime_opinion: "Известно, что [GetTrait('prostitute').GetName( GetNullCharacter )]"
-  carn_wants_to_be_your_slave_opinion: "Жаждет быть вашим хозяином"
-
   prostitute_shunned_opinion: "Известно, что [GetTrait('prostitute').GetName( GetNullCharacter )]"
+
+  carn_wants_to_be_your_slave_opinion: "Жаждет быть вашим хозяином"
   carn_enslaved_me_opinion: "Поработил меня"
   carn_enslaved_close_family_opinion: "Поработил близкого члена семьи"
   carn_enslaved_close_relation_opinion: "Поработил друга"

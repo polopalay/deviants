@@ -3,13 +3,11 @@
   recently_had_sex_desc: "Ce personnage a eu des relations sexuelles récemment et n'a pas pu continuer depuis un moment."
   forced_labor: "Travail Forcé"
   forced_labor_desc: "Ce personnage est forcé de travailler contre sa volonté."
-  carn_using_birth_control_modifier: "Utilise une Contraception"
-  carn_using_birth_control_modifier_desc: "Ce personnage utilise des teintures et des remèdes artificiels pour réduire les risques d'avoir des enfants non désirés."
 
   carn_prostitution_crime_opinion: "[GetTrait('prostitute').GetName( GetNullCharacter )] connu(e)"
-  carn_wants_to_be_your_slave_opinion: "Désire un Maître"
-
   prostitute_shunned_opinion: "[GetTrait('prostitute').GetName( GetNullCharacter )] connu(e)"
+
+  carn_wants_to_be_your_slave_opinion: "Désire un Maître"
   carn_enslaved_me_opinion: "M'a asservi(e)"
   carn_enslaved_close_family_opinion: "A asservi un membre de ma famille proche"
   carn_enslaved_close_relation_opinion: "A asservi un(e) ami(e)"
