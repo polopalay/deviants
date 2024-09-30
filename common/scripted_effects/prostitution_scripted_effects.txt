@@ -52,6 +52,10 @@
 
 		risk_of_std_from_effect = { PARTNER = $PROSTITUTE$ }
 		hidden_effect = { $PROSTITUTE$ = { risk_of_std_from_effect = { PARTNER = scope:had_sex_root_character } } }
+		add_opinion = {
+			target = scope:had_sex_with_effect_partner
+			modifier = have_sex_opinion
+		}
 		if = {
 			limit = {
 				is_female = yes

@@ -1,7 +1,8 @@
 ﻿l_english:
+# Opinions
  have_sex_opinion: "Had sex recently"
  be_healed_opinion: "Healed by black magic"
-
+ # Artifacts
  magic_creation: "$trinket$"
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "Magic Creation"
@@ -15,8 +16,10 @@
  mistress_dildo: "Humble Guardian"
  mistress_dildo_desc: "Just looking at it makes lady parts pulse."
 
+# Effect
  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] lays with [had_sex_with_effect_partner.GetShortUIName]"
 
+# Nicknames
  nickname_the_bitch: "The Bitch"
  nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is a horny bitch, willing to fuck without paying."
  
@@ -44,11 +47,13 @@
  nickname_the_exhibitionist: "The Exhibitionist"
  nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is famous for [CHARACTER.GetHerHis|U] exhibitionism, public sex, and public urination."
 
+# Titles
  d_laamp_lilith: "Lilith's Whores"
  d_laamp_belial: "Belial's Witches"
  d_laamp_abaddon: "Abaddon's Slaves"
  d_laamp_satan: "Satan's Devils"
 
+# Men at Arms
  succubus_dark_amry: "Dark Army"
  succubus_dark_amry_flavor: "Dark Army"
  succubus_death_korps: "Death Korps"
@@ -58,6 +63,7 @@
  succubus_skeleton: "Skeleton"
  succubus_skeleton_flavor: "Skeleton"
 
+# Modifiers
  succubus_buff: "Devil's Blessing"
  succubus_buff_desc: "This person had been blessed by the Succubus"
 

@@ -1,7 +1,9 @@
 ﻿l_french:
+# Opinions
  have_sex_opinion: "A eu des relations sexuelles récemment"
  be_healed_opinion: "Guéri par la magie noire"
 
+ # Artifacts
  magic_creation: "$trinket$"
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "Création Magique"
@@ -15,8 +17,10 @@
  mistress_dildo: "Gardien Humble"
  mistress_dildo_desc: "Rien qu'à le regarder, les parties féminines palpitent."
 
+# Effect
  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] couche avec [had_sex_with_effect_partner.GetShortUIName]"
 
+# Nicknames
  nickname_the_bitch: "La Chienne"
  nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est une chienne en chaleur, prête à baiser sans payer."
 
@@ -44,11 +48,13 @@
  nickname_the_exhibitionist: "L'Exhibitionniste"
  nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est célèbre pour son exhibitionnisme, son sexe public et son urine publique."
 
+# Titles
  d_laamp_lilith: "Les Prostituées de Lilith"
  d_laamp_belial: "Les Sorcières de Belial"
  d_laamp_abaddon: "Les Esclaves d'Abaddon"
  d_laamp_satan: "Les Diables de Satan"
 
+# Men at Arms
  succubus_dark_amry: "Armée Sombre"
  succubus_dark_amry_flavor: "Armée Sombre"
  succubus_death_korps: "Korps de la Mort"
@@ -58,6 +64,7 @@
  succubus_skeleton: "Squelette"
  succubus_skeleton_flavor: "Squelette"
 
+# Modifiers
  succubus_buff: "Bénédiction du Diable"
  succubus_buff_desc: "Cette personne a été bénie par le Succube."
 
