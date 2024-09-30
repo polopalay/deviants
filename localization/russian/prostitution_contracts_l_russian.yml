@@ -1,0 +1,15 @@
+﻿l_russian:
+  request_prostitute_contract: "Запрос на проститутку"
+  request_prostitute_desc_title: "Контракт на проститутку"
+  request_prostitute_desc: "Запросите проститутку приехать в место работодателя."
+  request_prostitute_request: "Этот [task_contract|E] требует, чтобы вы взяли проститутку на место, чтобы удовлетворить сексуальные потребности [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip]. Завершите контракт, чтобы получить [gold|E]. Умение проститутки определит успех контракта. Вы уверены, что хотите взять этот контракт?"
+
+  request_orgy_contract: "Запрос на оргии"
+  request_orgy_desc_title: "Контракт на оргии"
+  request_orgy_desc: "Запросите шлюху прийти и обслужить оргии."
+  request_orgy_request: "Этот [task_contract|E] требует, чтобы шлюха обслуживала работодателя и всех его рыцарей. Умение шлюхи определит качество контракта."
+
+  request_harem_contract: "Запрос на гарем"
+  request_harem_desc_title: "Контракт на гарем"
+  request_harem_desc: "Требуйте, чтобы все шлюхи пришли для сексуального обслуживания."
+  request_harem_request: "Этот [task_contract|E] требует, чтобы вы предоставили качественных шлюх для обслуживания. Количество шлюх определит качество контракта."

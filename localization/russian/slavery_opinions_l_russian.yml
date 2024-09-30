@@ -1,0 +1,14 @@
+﻿l_russian:
+  carn_prostitution_crime_opinion: "Известно, что [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_wants_to_be_your_slave_opinion: "Жаждет быть вашим хозяином"
+
+  prostitute_shunned_opinion: "Известно, что [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_enslaved_me_opinion: "Поработил меня"
+  carn_enslaved_close_family_opinion: "Поработил близкого члена семьи"
+  carn_enslaved_close_relation_opinion: "Поработил друга"
+  carn_freed_me_from_slavery_opinion: "Освободил меня"
+  free_slave_close_family_opinion: "Освободил близкого члена семьи"
+  free_slave_friend_opinion: "Освободил друга"
+  extortion_opinion: "Вымогал у меня"
+  forced_labor_opinion: "Принудительный труд"
+  ordinary_labor_opinion: "Обычный труд"

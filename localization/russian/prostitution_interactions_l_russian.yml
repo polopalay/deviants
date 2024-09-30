@@ -1,0 +1,23 @@
+﻿l_russian:
+  prostitute_interaction: "Проституция"
+  prostitute_interaction.desc: "Запросите [recipient.GetShortUIName] предоставить сексуальные услуги."
+  use_contraception: "Использовать контрацепцию"
+  cant_have_sex_without_contraception: "Невозможно иметь секс без использования контрацепции: $VALUE|=+0$"
+  can_have_sex_without_contraception: "Секс требует результатов: $VALUE|=+0$"
+  NOT_IS_IMMORTAL_TRIGGER: "Не является бессмертным"
+
+  offer_prostitute_interaction: "Предложить проституцию"
+  offer_prostitute_interaction.desc: "Предложите [recipient.GetShortUIName] сексуальные услуги."
+  recipient_secondary_offer_prostitute_interaction: "Выберите одно"
+
+  carn_force_start_prostitution_interaction: "Начать проституцию"
+  carn_force_start_prostitution_interaction.desc: "Заставьте [recipient.GetShortUINameNoTooltip] зарабатывать [gold|E] для вас как проститутка."
+
+  carn_force_stop_prostitution_interaction: "Остановить проституцию"
+  carn_force_stop_prostitution_interaction.desc: "Прекратите заставлять [recipient.GetShortUINameNoTooltip] зарабатывать [gold|E] для вас как проститутка."
+
+  naked_interaction: "Нагой"
+  naked_interaction.desc: "[recipient.GetShortUIName] снимает всю одежду."
+
+  dress_interaction: "Одеться"
+  dress_interaction.desc: "[recipient.GetShortUIName] надевает всю одежду."

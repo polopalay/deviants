@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_french:
  prostitute_contracts_event.1000.t: "Looking for a Whore"
  prostitute_contracts_event.1000.desc: "[employer.GetShortUINameNoTooltip] asks you to call [request_prostitute.GetFirstNameNoTooltip] to provide sexual services. However, you can also try your hand to get a better result from the contract."
  prostitute_contracts_event.1000.a: "Provide Service"

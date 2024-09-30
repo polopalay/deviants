@@ -1,0 +1,56 @@
+﻿l_german:
+  succubus_become_succubus: "Werde Succubus"
+  succubus_become_succubus.desc: "Dämonen, die sexuelle Beziehungen mit Männern haben und deren Sperma absorbieren, werden Succubi genannt. Um ein Succubus zu werden, müssen Sie eine verdorbene, perverse Person mit ungesunden sexuellen Vorlieben sein und vor allem eine Hexe, die die schwarze Magie beherrscht."
+  succubus_become_succubus.c: "Werde Succubus"
+  succubus_become_succubus.t: "Du wirst ein Succubus"
+
+  succubus_spawn_death_korp: "Die Totenheere beschwören"
+  succubus_spawn_death_korp.desc: "Legenden erzählen von einer Armee von Untoten, die aus der Hölle gekommen sind. Blutdürstig, furchtlos und unglaublich mächtig, können diese Wesen Feinde besiegen, die doppelt so groß sind wie sie selbst. Dämonen können mit der Segnung Satans ihre geheimen Künste nutzen, um diese tödlichen Legionen zu beschwören."
+  succubus_spawn_death_korp.c: "Beschwören"
+  succubus_spawn_death_korp.t: "Die Totenheere in deiner Hauptstadt beschwören"
+
+  succubus_demon_generals: "Dämonengeneräle beschwören"
+  succubus_demon_generals.desc: "Das Sperma der Männer stärkt nicht nur die Macht der Succubi, sondern verwandelt sie auch allmählich in mächtigere Wesen. Sie können jedoch auch das, was sie angesammelt haben, opfern, um vorübergehende, zerstörerische, mächtige, aber vergängliche Kräfte aus der Hölle zu erhalten. Habe sexuelle Beziehungen zu so vielen Soldaten wie möglich, damit deine Soldaten auch die Segnung Satans erhalten können."
+  succubus_demon_generals.c: "Beschwören"
+  succubus_demon_generals.t: "Verwandle alle deine Ritter in Dämonengeneräle"
+
+  masturbate: "Sich Selbstbefriedigen"
+  masturbate.desc: "Dein Leben ist bereits voller Stress, du suchst nach etwas, um dich zu entspannen. Dildos sind der sicherste Weg, du kannst dich der Sinnlichkeit hingeben, ohne dir Sorgen über das Gerede über dich als schamlose Schlampe machen zu müssen."
+  masturbate.t: "Stress abbauen"
+  masturbate.c: "Führe es in deine Vagina ein"
+
+  succubus_start_ritual_decision: "Ritual des Steins der Weisen beginnen"
+  succubus_start_ritual_decision.d: "$legend_chapter_rital_start_philosopher_stone$"
+  succubus_start_ritual_decision.t: "Das Geheimnis des Volksliedes wurde enthüllt, lass uns mit dem Ritual beginnen"
+  succubus_start_ritual_decision.c: "Ritual beginnen"
+  succubus_start_ritual_decision.e: "Das Geheimnis des Volksliedes wurde enthüllt, lass uns mit dem Ritual beginnen"
+
+  succubus_tensoul_decision: "10 Seelen opfern"
+  succubus_tensoul_decision.d: "$legend_chapter_tensoul_philosopher_stone$"
+  succubus_tensoul_decision.t: "Erstes Ritual, 10 Sterbliche Leben"
+  succubus_tensoul_decision.c: "10 Seelen opfern"
+  succubus_tensoul_decision.e: "Erstes Ritual, 10 Sterbliche Leben"
+
+  succubus_vassal_decision: "Einen Vasallen opfern"
+  succubus_vassal_decision.d: "$legend_chapter_vassal_philosopher_stone$"
+  succubus_vassal_decision.t: "Zweites Ritual, Blut des Vasallen"
+  succubus_vassal_decision.c: "Einen Vasallen opfern"
+  succubus_vassal_decision.e: "Zweites Ritual, Blut des Vasallen"
+
+  succubus_homologus_decision: "Eine andere Hexe opfern"
+  succubus_homologus_decision.d: "$legend_chapter_homologous_philosopher_stone$"
+  succubus_homologus_decision.t: "Drittes Ritual, Blut der Hexe"
+  succubus_homologus_decision.c: "Eine andere Hexe opfern"
+  succubus_homologus_decision.e: "Drittes Ritual, Blut der Hexe"
+
+  succubus_family_decision: "Ein Familienmitglied opfern"
+  succubus_family_decision.d: "$legend_chapter_family_philosopher_stone$"
+  succubus_family_decision.t: "Viertes Ritual, Blut der Familie"
+  succubus_family_decision.c: "Ein Familienmitglied opfern"
+  succubus_family_decision.e: "Viertes Ritual, Blut der Familie"
+
+  decisions_ritual_complete: "Ritual des Steins der Weisen"
+  decisions_ritual_complete.d: "$legend_chapter_rital_complete_philosopher_stone$"
+  decisions_ritual_complete.t: "Das Ritual des Steins der Weisen vervollständigen"
+  decisions_ritual_complete.c: "Das Ritual vervollständigen"
+  decisions_ritual_complete.e: "Das Ritual des Steins der Weisen vervollständigen"

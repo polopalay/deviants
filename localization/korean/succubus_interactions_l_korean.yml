@@ -1,0 +1,71 @@
+﻿l_korean:
+  succubus_weight_interaction: "체중 조절"
+  succubus_weight_interaction.desc: "당신의 체중을 완벽한 수준으로 조절합니다."
+
+  deavians_dealing_with_stress_interaction: "스트레스 해소"
+  deavians_dealing_with_stress_interaction.desc: "스트레스와 그로 인한 모든 영향을 제거합니다."
+
+  succubus_heal_interaction: "치유"
+  succubus_heal_interaction.desc: "모든 종류의 질병, 부상 및 모든 불명예스러운 이름을 제거합니다."
+
+  succubus_purify_interaction: "정화"
+  succubus_purify_interaction.desc: "[recipient.GetShortUIName]의 혈액을 정화하여 나쁜 유전자를 제거합니다."
+
+  succubus_imprison_interaction: "감금"
+  succubus_imprison_interaction.desc: "[recipient.GetShortUIName]를 당신의 감옥에 감금합니다."
+
+  succubus_mind_break_interaction: "정신 파괴"
+  succubus_mind_break_interaction.desc: "[recipient.GetShortUIName]에게 음탕한 생각에 시달리게 합니다."
+
+  succubus_create_lesser_succubus_interaction: "하위 서큐버스 만들기"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]가 하위 서큐버스가 됩니다."
+
+  succubus_child_interaction: "아이 만들기"
+  succubus_child_interaction.desc: "[recipient.GetShortUIName]의 자녀를 만듭니다."
+
+  succubus_rumor_interaction: "소문 퍼뜨리기"
+  succubus_rumor_interaction.desc: "[recipient.GetShortUIName]에 대한 나쁜 소문을 퍼뜨립니다."
+
+  succubus_switch_body_interaction: "변경"
+  succubus_switch_body_interaction.desc: "[recipient.GetShortUIName]를 플레이합니다."
+
+  succubus_create_succubus_interaction: "서큐버스 만들기"
+  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]가 서큐버스가 됩니다."
+
+  succubus_add_courtier_interaction: "법원에 추가"
+  succubus_add_courtier_interaction.desc: "[recipient.GetShortUIName]를 당신의 법원에 추가합니다."
+
+  succubus_absorb_interaction: "흡수"
+  succubus_absorb_interaction.desc: "[recipient.GetShortUIName]의 힘을 충성도로 흡수합니다."
+
+  succubus_makeup_interaction: "메이크업"
+  succubus_makeup_interaction.desc: "[recipient.GetShortUIName]에게 메이크업을 합니다."
+
+  succubus_no_horn: "뿔 없음"
+  succubus_horn0: "긴 곡선 뿔"
+  succubus_horn1: "꼬인 뿔"
+  succubus_horn2: "끝이 뾰족한 뿔"
+  succubus_horn3: "곡선 뿔"
+  succubus_horn4: "짧은 뿔"
+  succubus_no_eyes: "스모키 눈 없음"
+  succubus_marking_1: "울고 있는 스모키 눈"
+  succubus_marking_2: "긁힌 스모키 눈"
+  succubus_marking_3: "긁힌 스모키 눈"
+  succubus_marking_4: "꽃 스모키 눈"
+  succubus_marking_5: "작은 스모키 눈"
+  succubus_marking_6: "아주 작은 스모키 눈"
+  succubus_default_eyes: "기본 눈"
+  succubus_white_eyes: "흰 눈"
+  succubus_red_eyes: "붉은 눈"
+  succubus_default_hair: "기본 머리"
+  succubus_white_hair: "흰 머리"
+  succubus_red_hair: "붉은 머리"
+  
+  naked: "나체"
+  glass: "유리"
+
+  succubus_cultist_interaction: "사제 만들기"
+  succubus_cultist_interaction.desc: "정신 조작으로 [recipient.GetShortUIName]가 악마의 cult를 따르도록 만듭니다."
+
+  succubus_honor_interaction: "불명예스러운 특성 제거"
+  succubus_honor_interaction.desc: "[recipient.GetShortUIName]의 불명예스러운 특성을 제거합니다."

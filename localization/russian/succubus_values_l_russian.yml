@@ -1,0 +1,20 @@
+﻿l_russian:
+  have_sex_opinion: "Недавно занимался сексом"
+  be_healed_opinion: "Исцелен черной магией"
+  forced_into_prostitution_opinion: "Заставлен стать проституткой"
+  freed_from_prostitution_opinion: "Освобожден из борделя"
+
+  magic_creation: "$trinket$"
+  magic_creation_miscellaneous: "$trinket$"
+  artifact_magic_creation: "Создание магии"
+
+  succubus_philosopher_stone: "Философский камень"
+  succubus_philosopher_stone.d: "Философский камень — это легендарное алхимическое вещество, которое, как говорят, может превращать простые металлы в золото или серебро, а также действовать как эликсир жизни, дарующий бессмертие."
+
+  master_dildo: "Мой Мастер"
+  master_dildo_desc: "Одного взгляда на него достаточно, чтобы почувствовать слабость в коленях."
+
+  mistress_dildo: "Скромный хранитель"
+  mistress_dildo_desc: "Одного взгляда на него достаточно, чтобы заставить женские части тела пульсировать."
+
+  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] спит с [had_sex_with_effect_partner.GetShortUIName]"

@@ -1,0 +1,56 @@
+﻿l_russian:
+  succubus_become_succubus: "Стать Суккубом"
+  succubus_become_succubus.desc: " demons, которые занимаются сексом с мужчинами и впитывают их семя, называются Суккубами. Чтобы стать Суккубом, вы должны быть распутным, извращенцем с больными сексуальными предпочтениями и, прежде всего, ведьмой с черной магией."
+  succubus_become_succubus.c: "Стать Суккубом"
+  succubus_become_succubus.t: "Вы станете Суккубом"
+
+  succubus_spawn_death_korp: "Призвать Армию Смерти"
+  succubus_spawn_death_korp.desc: "Легенды рассказывают о неживой армии из ада. Кровожадные, бесстрашные и невероятно мощные, эти люди могут сражаться с врагами вдвое большими и все равно побеждать. Демоны с благословением Сатаны могут использовать свои тайные искусства, чтобы призвать эти смертоносные легионы."
+  succubus_spawn_death_korp.c: "Призвать"
+  succubus_spawn_death_korp.t: "Призвать Армию Смерти в вашу столицу"
+
+  succubus_demon_generals: "Призвать Демон-Генералов"
+  succubus_demon_generals.desc: "Мужское семя не только усиливает силу Суккуба, но и постепенно трансформирует Суккуба в более мощные существа. Однако они также могут пожертвовать тем, что они собрали, в обмен на временную силу из ада, разрушительную, мощную, но временную. Имейте секс с как можно большим количеством солдат, чтобы ваши солдаты тоже могли получить благословение от Сатаны."
+  succubus_demon_generals.c: "Призвать"
+  succubus_demon_generals.t: "Преобразовать всех ваших рыцарей в демон-генералов"
+
+  masturbate: "Мастурбировать"
+  masturbate.desc: "Ваша жизнь уже полна стресса, и вы ищете что-то, чтобы облегчить его. Вибраторы — это самый безопасный способ, вы можете предаваться чувственности, не беспокоясь о сплетнях о том, что вы распутны и безнравственны."
+  masturbate.t: "Снять стресс"
+  masturbate.c: "Вставьте это в вашу вагину"
+
+  succubus_start_ritual_decision: "Начать ритуал философского камня"
+  succubus_start_ritual_decision.d: "$legend_chapter_rital_start_philosopher_stone$"
+  succubus_start_ritual_decision.t: "Секрет народной песни был раскрыт, давайте начнем ритуал"
+  succubus_start_ritual_decision.c: "Начать ритуал"
+  succubus_start_ritual_decision.e: "Секрет народной песни был раскрыт, давайте начнем ритуал"
+
+  succubus_tensoul_decision: "Пожертвовать 10 душ"
+  succubus_tensoul_decision.d: "$legend_chapter_tensoul_philosopher_stone$"
+  succubus_tensoul_decision.t: "Первый ритуал, 10 смертных жизней"
+  succubus_tensoul_decision.c: "Пожертвовать 10 душ"
+  succubus_tensoul_decision.e: "Первый ритуал, 10 смертных жизней"
+
+  succubus_vassal_decision: "Пожертвовать вассала"
+  succubus_vassal_decision.d: "$legend_chapter_vassal_philosopher_stone$"
+  succubus_vassal_decision.t: "Второй ритуал, кровь вассала"
+  succubus_vassal_decision.c: "Пожертвовать вассала"
+  succubus_vassal_decision.e: "Второй ритуал, кровь вассала"
+
+  succubus_homologus_decision: "Пожертвовать другую ведьму"
+  succubus_homologus_decision.d: "$legend_chapter_homologous_philosopher_stone$"
+  succubus_homologus_decision.t: "Третий ритуал, кровь ведьмы"
+  succubus_homologus_decision.c: "Пожертвовать другую ведьму"
+  succubus_homologus_decision.e: "Третий ритуал, кровь ведьмы"
+
+  succubus_family_decision: "Пожертвовать члена семьи"
+  succubus_family_decision.d: "$legend_chapter_family_philosopher_stone$"
+  succubus_family_decision.t: "Четвертый ритуал, кровь семьи"
+  succubus_family_decision.c: "Пожертвовать члена семьи"
+  succubus_family_decision.e: "Четвертый ритуал, кровь семьи"
+
+  decisions_ritual_complete: "Ритуал философского камня"
+  decisions_ritual_complete.d: "$legend_chapter_rital_complete_philosopher_stone$"
+  decisions_ritual_complete.t: "Завершить ритуал философского камня"
+  decisions_ritual_complete.c: "Завершить ритуал"
+  decisions_ritual_complete.e: "Завершить ритуал философского камня"

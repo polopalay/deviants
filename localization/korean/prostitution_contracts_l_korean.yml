@@ -1,0 +1,15 @@
+﻿l_korean:
+  request_prostitute_contract: "프로스티튜트 요청"
+  request_prostitute_desc_title: "프로스티튜트 계약"
+  request_prostitute_desc: "고용주 위치로 프로스티튜트를 요청합니다."
+  request_prostitute_request: "이 [task_contract|E]는 프로스티튜트를 특정 장소로 데려가서 [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip]'s 성적 요구를 충족시키는 계약입니다. 계약을 완료하면 [gold|E]를 받을 수 있습니다. 프로스티튜트의 능력이 계약의 성공을 결정합니다. 이 계약을 수락하시겠습니까?"
+
+  request_orgy_contract: "오르지 요청"
+  request_orgy_desc_title: "오르지 계약"
+  request_orgy_desc: "창녀를 요청하여 오르지를 서비스합니다."
+  request_orgy_request: "이 [task_contract|E]는 창녀가 고용주와 그의 모든 기사들에게 서비스를 제공해야 합니다. 창녀의 능력이 계약의 품질을 결정합니다."
+
+  request_harem_contract: "하렘 요청"
+  request_harem_desc_title: "하렘 계약"
+  request_harem_desc: "모든 창녀를 성 서비스 위해 요청합니다."
+  request_harem_request: "이 [task_contract|E]는 서비스 제공을 위해 양질의 창녀를 준비해야 합니다. 창녀의 수가 계약의 품질을 결정합니다."

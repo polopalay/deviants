@@ -1,0 +1,20 @@
+﻿l_korean:
+  have_sex_opinion: "최근 성관계"
+  be_healed_opinion: "흑마법으로 치유됨"
+  forced_into_prostitution_opinion: "매춘을 강요받음"
+  freed_from_prostitution_opinion: "매춘굴에서 해방됨"
+
+  magic_creation: "$trinket$"
+  magic_creation_miscellaneous: "$trinket$"
+  artifact_magic_creation: "마법 창조"
+
+  succubus_philosopher_stone: "철학자의 돌"
+  succubus_philosopher_stone.d: "철학자의 돌은 원소를 금속이나 은으로 변환할 수 있다고 전해지는 전설적인 연금술 물질이며, 불사의 삶을 부여하는 엘릭서 역할도 한다고 합니다."
+
+  master_dildo: "나의 주인"
+  master_dildo_desc: "그것을 보는 것만으로도 무릎이 풀릴 것 같습니다."
+
+  mistress_dildo: "겸손한 수호자"
+  mistress_dildo_desc: "그것을 보는 것만으로도 여성의 부분이 두근거립니다."
+
+  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U]가 [had_sex_with_effect_partner.GetShortUIName]와 성관계를 가짐"

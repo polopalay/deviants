@@ -1,0 +1,71 @@
+﻿l_russian:
+  succubus_weight_interaction: "Регулировка веса"
+  succubus_weight_interaction.desc: "Приведите свой вес к идеальному уровню."
+
+  deavians_dealing_with_stress_interaction: "Снятие стресса"
+  deavians_dealing_with_stress_interaction.desc: "Устраните стресс и все его последствия."
+
+  succubus_heal_interaction: "Исцеление"
+  succubus_heal_interaction.desc: "Устраняет все виды болезней, травм и все позорные имена."
+
+  succubus_purify_interaction: "Очищение"
+  succubus_purify_interaction.desc: "Очищает кровь [recipient.GetShortUIName], устраняя все плохие гены."
+
+  succubus_imprison_interaction: "Заключить в тюрьму"
+  succubus_imprison_interaction.desc: "Заключите [recipient.GetShortUIName] в свою темницу."
+
+  succubus_mind_break_interaction: "Разрушение разума"
+  succubus_mind_break_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
+
+  succubus_create_lesser_succubus_interaction: "Создать младшего суккуба"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] станет младшим суккубом."
+
+  succubus_child_interaction: "Создать ребенка"
+  succubus_child_interaction.desc: "Создать ребенка от [recipient.GetShortUIName]."
+
+  succubus_rumor_interaction: "Распространение слухов"
+  succubus_rumor_interaction.desc: "Распространение плохих слухов о [recipient.GetShortUIName]."
+
+  succubus_switch_body_interaction: "Сменить тело"
+  succubus_switch_body_interaction.desc: "Играть за [recipient.GetShortUIName]."
+
+  succubus_create_succubus_interaction: "Создать суккуба"
+  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] станет суккубом."
+
+  succubus_add_courtier_interaction: "Добавить в двор"
+  succubus_add_courtier_interaction.desc: "Добавьте [recipient.GetShortUIName] в свой двор."
+
+  succubus_absorb_interaction: "Поглотить"
+  succubus_absorb_interaction.desc: "Поглотить силу от [recipient.GetShortUIName] в верность."
+
+  succubus_makeup_interaction: "Макияж"
+  succubus_makeup_interaction.desc: "Нанесите макияж на [recipient.GetShortUIName]."
+  
+  succubus_no_horn: "Нет рогов"
+  succubus_horn0: "Длинные изогнутые рога"
+  succubus_horn1: "Скрученные рога"
+  succubus_horn2: "Остроконечные рога"
+  succubus_horn3: "Изогнутые рога"
+  succubus_horn4: "Короткие рога"
+  succubus_no_eyes: "Нет смоки глаз"
+  succubus_marking_1: "Плачущие смоки глаза"
+  succubus_marking_2: "Царапанные смоки глаза"
+  succubus_marking_3: "Царапанные смоки глаза"
+  succubus_marking_4: "Цветочные смоки глаза"
+  succubus_marking_5: "Маленькие смоки глаза"
+  succubus_marking_6: "Крошечные смоки глаза"
+  succubus_default_eyes: "Стандартные глаза"
+  succubus_white_eyes: "Белые глаза"
+  succubus_red_eyes: "Красные глаза"
+  succubus_default_hair: "Стандартные волосы"
+  succubus_white_hair: "Белые волосы"
+  succubus_red_hair: "Красные волосы"
+  
+  naked: "Нагой"
+  glass: "Стекло"
+
+  succubus_cultist_interaction: "Создать культиста"
+  succubus_cultist_interaction.desc: "Мозговая манипуляция, заставляя [recipient.GetShortUIName] следовать культу дьявола."
+
+  succubus_honor_interaction: "Удалить позорное качество"
+  succubus_honor_interaction.desc: "Удалите позорное качество у [recipient.GetShortUIName]."

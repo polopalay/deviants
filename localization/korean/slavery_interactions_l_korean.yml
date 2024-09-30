@@ -1,0 +1,33 @@
+﻿l_korean:
+  carn_enslave_interaction: "노예화"
+  carn_enslave_interaction.desc: "[recipient.GetShortUINameNoTooltip]를 당신의 노예로 만듭니다."
+  carn_wants_to_be_your_slave: "당신을 주인으로 원합니다: $VALUE|=+0$"
+  carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U]는 [noble|E]입니다: $VALUE|=+0$"
+  carn_enslave_you_have_no_reason: "당신은 [execute_reason|E]이 없습니다: $VALUE|=+0$"
+
+  carn_buy_slave_directly_interaction: "노예 구매"
+  carn_buy_slave_directly_interaction_desc: "[gold|E]로 노예를 구매합니다."
+  recipient_secondary_carn_buy_slave_directly_interaction: "노예"
+
+  carn_sell_slave_interaction: "노예 판매"
+  carn_sell_slave_interaction_desc: "[recipient.GetShortUINameNoTooltip]를 노예 시장에서 #high [gold_i]#!에 판매합니다."
+  recipient_secondary_carn_sell_slave_interaction: "구매자"
+  carn_buyer_not_enough_gold_for_slave_price_tooltip: "지불 #high [gold_i]#!"
+  carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U]는 내 [recipient.Custom('KnightCulture')]입니다: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U]는 내 [councillor|E]입니다: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_friend_reason: "[secondary_recipient.GetShortUIName|U]는 내 [friend|E]입니다: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_lover_reason: "[secondary_recipient.GetShortUIName|U]는 내 [lover|E]입니다: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_crush_reason: "[secondary_recipient.GetShortUIName|U]는 내 [crush|E]입니다: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_soulmate_reason: "[secondary_recipient.GetShortUIName|U]는 내 [soulmate|E]입니다: $VALUE|=+0$"
+
+  carn_free_slave_interaction: "노예 해방"
+  carn_free_slave_interaction.desc: "[recipient.GetShortUINameNoTooltip]를 노예에서 해방합니다."
+
+  forced_labor_interaction: "강제 노동"
+  forced_labor_interaction.desc: "[recipient.GetShortUINameNoTooltip]가 과도하게 일을 하도록 강요받았습니다."
+
+  ordinary_labor_interaction: "일반 노동"
+  ordinary_labor_interaction.desc: "[recipient.GetShortUIName]가 건강에 적합한 보통의 방식으로 일하고 있습니다."
+
+  extortion_interaction: "갈취"
+  extortion_interaction.desc: "[recipient.GetShortUINameNoTooltip]에게서 [gold|E]를 갈취합니다."

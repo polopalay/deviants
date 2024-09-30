@@ -1,14 +1,14 @@
-﻿l_english:
- trait_slave: "Slave"
- trait_slave_desc: "This character is the property of another person, recognized by law to be less than a human being."
- trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the property of another person, recognized by law to be less than a human being."
+﻿l_french:
+  trait_slave: "Esclave"
+  trait_slave_desc: "Ce personnage est la propriété d'une autre personne, reconnu(e) par la loi comme étant moins qu'un être humain."
+  trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] est la propriété d'une autre personne, reconnu(e) par la loi comme étant moins qu'un être humain."
 
- trait_former_slave: "Former Slave"
- trait_former_slave_desc: "This character is a former slave who has escaped bondage and become a free person."
- trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a former slave who has escaped bondage and become a free person."
+  trait_former_slave: "Ancien Esclave"
+  trait_former_slave_desc: "Ce personnage est un ancien esclave qui a échappé à la servitude et est devenu(e) une personne libre."
+  trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] est un ancien esclave qui a échappé à la servitude et est devenu(e) une personne libre."
 
- trait_lifestyle_prostitute: "Prostitute"
- trait_lifestyle_prostitute_desc: "This character sells their body for money."
- trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is in the business of sexually serving clients for coin."
- trait_track_lifestyle_prostitute: "Prostitute"
- trait_track_lifestyle_prostitute_desc: "A life of selling sex"
+  trait_lifestyle_prostitute: "Prostitué(e)"
+  trait_lifestyle_prostitute_desc: "Ce personnage vend son corps pour de l'argent."
+  trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] est dans le métier de servir sexuellement des clients contre de la monnaie."
+  trait_track_lifestyle_prostitute: "Prostitué(e)"
+  trait_track_lifestyle_prostitute_desc: "Une vie de vente de services sexuels"

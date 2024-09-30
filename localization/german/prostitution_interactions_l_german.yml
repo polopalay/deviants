@@ -1,0 +1,24 @@
+﻿l_german:
+  prostitute_interaction: "Prostitution"
+  prostitute_interaction.desc: "[recipient.GetShortUIName] um sexuelle Dienstleistungen bitten"
+  use_contraception: "Verhütung benutzen"
+  cant_have_sex_without_contraception: "Kein Sex ohne Verhütung: $VALUE|=+0$"
+  can_have_sex_without_contraception: "Sex braucht Ergebnisse: $VALUE|=+0$"
+  NOT_IS_IMMORTAL_TRIGGER: "Ist nicht unsterblich"
+
+  offer_prostitute_interaction: "Prostitution anbieten"
+  offer_prostitute_interaction.desc: "[recipient.GetShortUIName] sexuelle Dienstleistungen anbieten"
+  recipient_secondary_offer_prostitute_interaction: "Wählen Sie eine"
+
+  carn_force_start_prostitution_interaction: "Prostitution beginnen"
+  carn_force_start_prostitution_interaction.desc: "[recipient.GetShortUINameNoTooltip] zwingen, [gold|E] für Sie als Prostituierte zu verdienen"
+
+  carn_force_stop_prostitution_interaction: "Prostitution stoppen"
+  carn_force_stop_prostitution_interaction.desc: "Stoppen Sie, [recipient.GetShortUINameNoTooltip] zu zwingen, [gold|E] für Sie als Prostituierte zu verdienen"
+
+  naked_interaction: "Nackt"
+  naked_interaction.desc: "[recipient.GetShortUIName] zieht alle Kleider aus"
+
+  dress_interaction: "Ankleiden"
+  dress_interaction.desc: "[recipient.GetShortUIName] zieht alle Kleider an"
+

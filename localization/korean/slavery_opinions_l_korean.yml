@@ -1,0 +1,14 @@
+﻿l_korean:
+  carn_prostitution_crime_opinion: "알려진 [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_wants_to_be_your_slave_opinion: "주인을 원함"
+
+  prostitute_shunned_opinion: "알려진 [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_enslaved_me_opinion: "나를 노예로 삼음"
+  carn_enslaved_close_family_opinion: "가까운 가족을 노예로 삼음"
+  carn_enslaved_close_relation_opinion: "친구를 노예로 삼음"
+  carn_freed_me_from_slavery_opinion: "나를 해방시킴"
+  free_slave_close_family_opinion: "가까운 가족을 해방시킴"
+  free_slave_friend_opinion: "친구를 해방시킴"
+  extortion_opinion: "갈취당함"
+  forced_labor_opinion: "강제 노동"
+  ordinary_labor_opinion: "일반 노동"

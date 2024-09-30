@@ -1,0 +1,31 @@
+﻿l_german:
+  trait_succubus: "Succubus"
+  succubus_desc: "Einige haben sie gesehen, andere haben von ihr gehört, alle flüstern über das seltsame Verhalten von [ROOT.GetCharacter.GetNamePossessive]."
+  succubus_character_desc: "Egal, was im Inneren steckt, niemand denkt, dass es etwas Seltsames an [ROOT.GetCharacter.GetName] gibt."
+
+  trait_track_corruption: "Abweichend"
+  trait_track_corruption_desc: "Durch die Seelen, die sie sammelt, gewinnt sie mehr Macht, um monströse Kreaturen zu beschwören."
+
+  trait_track_power: "Macht"
+  trait_track_power_desc: "Sie dient als billige Prostituierte und bedient Männer, um deren Samen zu erhalten."
+
+  trait_track_loyalty: "Loyalität der Krieger"
+  trait_track_loyalty_desc: "Es gibt mehr als einen Weg, die Loyalität eines Mannes zu sichern."
+
+  trait_track_daring: "Kühnheit"
+  trait_track_daring_desc: "Mut ist für viele Dinge im Leben notwendig."
+
+  trait_lesser_succubus: "Niedriger Succubus"
+  lesser_succubus_desc: "Egal, was im Inneren steckt, niemand denkt, dass es etwas Seltsames an [ROOT.GetCharacter.GetName] gibt."
+  lesser_succubus_character_desc: "Die meisten haben sie gesehen, alle haben davon gehört. Das Verhalten von [ROOT.GetCharacter.GetNamePossessive] ist moralisch verderbt. Man spricht darüber mit dem gleichen Verachtung, die man einer gewöhnlichen Straßenprostituierten entgegenbringt."
+
+  trait_track_lesser_succubus: "Macht"
+  trait_track_lesser_succubus_desc: "Sie dient als billige Prostituierte, die Männer bedient, um deren Samen zu erhalten."
+
+  trait_deviant_virgin: "Erregte Jungfrau"
+  deviant_virgin_desc: "[ROOT.GetCharacter.GetName] ist die Prostituierte des Teufels."
+  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] ist die Prostituierte des Teufels."
+
+  trait_deviant_blood: "Blut des Teufels"
+  deviant_blood_desc: "[ROOT.GetCharacter.GetName] ist ein Kind des Teufels."
+  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] ist ein Kind des Teufels."

@@ -1,7 +1,7 @@
-﻿l_english:
-  recently_had_sex: "Had Sex Recently"
-  recently_had_sex_desc: "This character had sex recently and hasn't been able to continue for a while."
-  forced_labor: "Forced Labor"
-  forced_labor_desc: "This character is being forced to work against their will."
-  carn_using_birth_control_modifier: "Using Birth Control"
-  carn_using_birth_control_modifier_desc: "This character is using tinctures and artificial remedies to reduce the chance of having unwanted children."
+﻿l_french:
+  recently_had_sex: "A eu des Relations Sexuelles Récemment"
+  recently_had_sex_desc: "Ce personnage a eu des relations sexuelles récemment et n'a pas pu continuer depuis un moment."
+  forced_labor: "Travail Forcé"
+  forced_labor_desc: "Ce personnage est forcé de travailler contre sa volonté."
+  carn_using_birth_control_modifier: "Utilise une Contraception"
+  carn_using_birth_control_modifier_desc: "Ce personnage utilise des teintures et des remèdes artificiels pour réduire les risques d'avoir des enfants non désirés."

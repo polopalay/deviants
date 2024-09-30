@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_french:
  succubus_blackmail.1100.t: "Private Meeting"
  succubus_blackmail.1100.a.desc: "[deviant_go_random_1.GetName] requested a private meeting with me in the council chamber. Even before he speaks, his intent is clear just from the devious look on his face.\n\n"[ROOT.GetCharacter.GetName] I come with the most urgent plea, your humble servant is in need of some funds so he may serve you better," [deviant_go_random_1.GetName] speaks with a mockingly polite tone. "Or if you do not happen to afford the minor aid, you could apologize that you can't make the full payment, on your knees. To avoid some unfortunate rumors.""
  succubus_blackmail.1100.a: "Apologize and offer less."

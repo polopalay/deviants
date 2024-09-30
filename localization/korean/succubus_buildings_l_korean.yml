@@ -1,0 +1,41 @@
+﻿l_korean:
+
+  building_brothel1: "일반 방"
+  building_brothel1_desc: "캐주얼한 성 서비스를 제공하며, 창녀들은 고객으로부터 더 많은 팁을 받을 수 있습니다."
+  building_type_brothel1: "매춘굴"
+  building_type_brothel1_desc: "매춘굴은 고객과 창녀 간의 성행위가 이루어지는 사업장입니다."
+
+  building_brothel2: "고급 방"
+  building_brothel2_desc: "단체 성행위 및 노출과 같은 특별한 서비스를 제공합니다."
+  building_type_brothel2_market: "매춘굴"
+  building_type_brothel2_desc: "매춘굴은 고객과 창녀 간의 성행위가 이루어지는 사업장입니다."
+
+  building_brothel3: "사치스러운 방"
+  building_brothel3_desc: "모든 종류의 성 서비스를 제공합니다: 짐승 성교, 가학증과 피학증."
+  building_type_brothel3: "매춘굴"
+  building_type_brothel3_desc: "매춘굴은 고객과 창녀 간의 성행위가 이루어지는 사업장입니다."
+
+  building_alchemy1: "흑마법 연구 작업장"
+  building_alchemy1_desc: "마녀들은 마법의 힘을 강화하기 위해 연금술을 사용합니다."
+  building_type_alchemy1: "연금술 작업장"
+  building_type_alchemy1_desc: "연금술에 대한 재정적 투자는 서큐버스의 마법력을 증가시키는 데 도움이 됩니다."
+
+  building_alchemy2: "마녀의 돌 작업장"
+  building_alchemy2_desc: "철학자의 돌은 현재의 잠재력으로는 여전히 꽤나 비현실적인 것입니다. 그러나 연금술사들은 다른 종류의 연구를 진행했습니다. 사람들의 마음에 간섭할 수 있는 마녀의 돌입니다."
+  building_type_alchemy2: "연금술 작업장"
+  building_type_alchemy2_desc: "연금술에 대한 재정적 투자는 서큐버스의 마법력을 증가시키는 데 도움이 됩니다."
+
+  building_alchemy3: "철학자의 돌 작업장"
+  building_alchemy3_desc: "마녀의 마법, 서큐버스의 힘, 연금술사의 지식으로 철학자의 돌을 만드는 궁극적인 공식이 탄생했습니다. 이제 서큐버스는 생명의 본질에 간섭하는 가장 강력한 마법을 가졌습니다."
+  building_type_alchemy3: "연금술 작업장"
+  building_type_alchemy3_desc: "연금술에 대한 재정적 투자는 서큐버스의 마법력을 증가시키는 데 도움이 됩니다."
+
+  building_witch_forest: "마녀의 숲"
+  building_witch_forest_desc: "사람들은 마녀들이 나체로 다니며 마법 의식을 수행하는 유령이 있는 숲에 대해 서로 이야기해왔습니다. 여기서 수백 명이 실종되었으며, 이 숲 주변에서 많은 신비한 현상이 발견되었습니다."
+  building_type_witch_forest: "마녀의 숲"
+  building_type_witch_forest_desc: "숲에는 인간과 동물의 시체가 가득 차 있으며, 이는 희생 의식의 유적일 수 있습니다."
+
+  building_soul_forge: "영혼 단조소"
+  building_soul_forge_desc: "서큐버스는 죽은 자의 영혼을 사용하여 강력한 마법 아이템을 만들 수 있습니다."
+  building_type_soul_forge: "영혼 단조소"
+  building_type_soul_forge_desc: "서큐버스는 죽은 자의 영혼을 사용하여 강력한 마법 아이템을 만들 수 있습니다."

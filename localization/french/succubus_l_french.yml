@@ -1,0 +1,34 @@
+﻿l_french:
+ have_sex_opinion: "A eu des relations sexuelles récemment"
+ be_healed_opinion: "Guéri par la magie noire"
+ forced_into_prostitution_opinion: "Forcé(e) de devenir prostitué(e)"
+ freed_from_prostitution_opinion: "Libéré(e) du bordel"
+
+ magic_creation: "$trinket$"
+ magic_creation_miscellaneous: "$trinket$"
+ artifact_magic_creation: "Création Magique"
+
+ succubus_philosopher_stone: "Pierre Philosophale"
+ succubus_philosopher_stone.d: "La Pierre Philosophale est une substance alchimique légendaire censée être capable de transformer les métaux de base en or ou en argent, et aussi d'agir comme un élixir de vie qui accorde l'immortalité."
+
+ master_dildo: "Mon Maître"
+ master_dildo_desc: "Rien qu'à le regarder, les genoux deviennent faibles."
+
+ mistress_dildo: "Gardien Humble"
+ mistress_dildo_desc: "Rien qu'à le regarder, les parties féminines palpitent."
+
+ prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] couche avec [had_sex_with_effect_partner.GetShortUIName]"
+
+ d_laamp_lilith: "Les Prostituées de Lilith"
+ d_laamp_belial: "Les Sorcières de Belial"
+ d_laamp_abaddon: "Les Esclaves d'Abaddon"
+ d_laamp_satan: "Les Diables de Satan"
+
+ succubus_dark_amry: "Armée Sombre"
+ succubus_dark_amry_flavor: "Armée Sombre"
+ succubus_death_korps: "Korps de la Mort"
+ succubus_death_korps_flavor: "Korps de la Mort"
+ succubus_zombie: "Zombie"
+ succubus_zombie_flavor: "Zombie"
+ succubus_skeleton: "Squelette"
+ succubus_skeleton_flavor: "Squelette"

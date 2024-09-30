@@ -1,23 +1,23 @@
-﻿l_english:
- prostitute_interaction: "Prostituting"
- prostitute_interaction.desc: "Request [recipient.GetShortUIName] to provide sexual services"
- use_contraception: "Use Contraception"
- cant_have_sex_without_contraception: "Can't have sex without using contraception: $VALUE|=+0$"
- can_have_sex_without_contraception: "Sex needs results: $VALUE|=+0$"
- NOT_IS_IMMORTAL_TRIGGER: "Is not immortal"
+﻿l_french:
+  prostitute_interaction: "Prostitution"
+  prostitute_interaction.desc: "Demander à [recipient.GetShortUIName] de fournir des services sexuels"
+  use_contraception: "Utiliser une Contraception"
+  cant_have_sex_without_contraception: "Impossible d'avoir des relations sexuelles sans utiliser de contraception : $VALUE|=+0$"
+  can_have_sex_without_contraception: "Les relations sexuelles nécessitent des résultats : $VALUE|=+0$"
+  NOT_IS_IMMORTAL_TRIGGER: "N'est pas immortel"
 
- offer_prostitute_interaction: "Offer Prostituting"
- offer_prostitute_interaction.desc: "Offer [recipient.GetShortUIName] sexual services"
- recipient_secondary_offer_prostitute_interaction: "Choose one"
+  offer_prostitute_interaction: "Offrir des Services de Prostitution"
+  offer_prostitute_interaction.desc: "Offrir les services sexuels de [recipient.GetShortUIName]"
+  recipient_secondary_offer_prostitute_interaction: "Choisissez-en un"
 
- carn_force_start_prostitution_interaction: "Start Prostitution"
- carn_force_start_prostitution_interaction.desc: "Force [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a prostitute"
+  carn_force_start_prostitution_interaction: "Commencer la Prostitution"
+  carn_force_start_prostitution_interaction.desc: "Forcer [recipient.GetShortUINameNoTooltip] à gagner [gold|E] pour vous en tant que prostituée"
 
- carn_force_stop_prostitution_interaction: "Stop Prostitution"
- carn_force_stop_prostitution_interaction.desc: "Stop forcing [recipient.GetShortUINameNoTooltip] to earn [gold|E] for you as a prostitute"
+  carn_force_stop_prostitution_interaction: "Arrêter la Prostitution"
+  carn_force_stop_prostitution_interaction.desc: "Arrêter de forcer [recipient.GetShortUINameNoTooltip] à gagner [gold|E] pour vous en tant que prostituée"
 
- naked_interaction: "Naked"
- naked_interaction.desc: "[recipient.GetShortUIName] removes all clothing"
+  naked_interaction: "Nue"
+  naked_interaction.desc: "[recipient.GetShortUIName] enlève tous ses vêtements"
 
- dress_interaction: "Dress"
- dress_interaction.desc: "[recipient.GetShortUIName] puts on all clothing"
+  dress_interaction: "Habillée"
+  dress_interaction.desc: "[recipient.GetShortUIName] remet tous ses vêtements"

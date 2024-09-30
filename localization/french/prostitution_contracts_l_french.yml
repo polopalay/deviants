@@ -1,15 +1,15 @@
-﻿l_english:
-  request_prostitute_contract: "Request Prostitute"
-  request_prostitute_desc_title: "Prostitute Contract"
-  request_prostitute_desc: "Request a prostitute to come to employer location."
-  request_prostitute_request: "This [task_contract|E] requires you take a prostitute to a location, To serve [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip]'s sexual needs, complete the contract to receive [gold|E]. The skill of the prostitute will determine the success of the contract. Are you sure you want to take this contract?"
+﻿l_french:
+ request_prostitute_contract: "Demander une Prostituée"
+ request_prostitute_desc_title: "Contrat de Prostituée"
+ request_prostitute_desc: "Demandez à une prostituée de venir à l'emplacement de l'employeur."
+ request_prostitute_request: "Ce [task_contract|E] nécessite que vous ameniez une prostituée à un lieu pour satisfaire les besoins sexuels de [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip]. Terminez le contrat pour recevoir [gold|E]. La compétence de la prostituée déterminera le succès du contrat. Êtes-vous sûr de vouloir accepter ce contrat ?"
 
-  request_orgy_contract: "Request Orgy"
-  request_orgy_desc_title: "Orgy Contract"
-  request_orgy_desc: "Request the whore to come and serve the orgy"
-  request_orgy_request: "This [task_contract|E] requires the whore to serve the employer and all of their knights. The skill of the whore will determine the quality of the contract."
+ request_orgy_contract: "Demander une Orgie"
+ request_orgy_desc_title: "Contrat d'Orgie"
+ request_orgy_desc: "Demandez à la prostituée de venir et de servir lors de l'orgie."
+ request_orgy_request: "Ce [task_contract|E] nécessite que la prostituée serve l'employeur et tous ses chevaliers. La compétence de la prostituée déterminera la qualité du contrat."
 
-  request_harem_contract: "Request Harem"
-  request_harem_desc_title: "Harem Contract"
-  request_harem_desc: "Require all whores to come for sexual service"
-  request_harem_request: "This [task_contract|E] requires you to provide quality whores for service. The number of whores will determine the quality of the contract."
+ request_harem_contract: "Demander un Harem"
+ request_harem_desc_title: "Contrat de Harem"
+ request_harem_desc: "Exigez que toutes les prostituées viennent pour un service sexuel."
+ request_harem_request: "Ce [task_contract|E] nécessite que vous fournissiez des prostituées de qualité pour le service. Le nombre de prostituées déterminera la qualité du contrat."

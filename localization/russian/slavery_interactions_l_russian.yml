@@ -1,0 +1,33 @@
+﻿l_russian:
+  carn_enslave_interaction: "Порабощение"
+  carn_enslave_interaction.desc: "Превратите [recipient.GetShortUINameNoTooltip] в своего раба."
+  carn_wants_to_be_your_slave: "Хотят, чтобы вы были их хозяином: $VALUE|=+0$"
+  carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] является [noble|E]: $VALUE|=+0$"
+  carn_enslave_you_have_no_reason: "У вас нет [execute_reason|E]: $VALUE|=+0$"
+
+  carn_buy_slave_directly_interaction: "Купить раба"
+  carn_buy_slave_directly_interaction_desc: "Купите раба за [gold|E]."
+  recipient_secondary_carn_buy_slave_directly_interaction: "Раб"
+
+  carn_sell_slave_interaction: "Продать раба"
+  carn_sell_slave_interaction_desc: "Продайте [recipient.GetShortUINameNoTooltip] на рынке рабов за #high [gold_i]#!"
+  recipient_secondary_carn_sell_slave_interaction: "Покупатель"
+  carn_buyer_not_enough_gold_for_slave_price_tooltip: "Платит #high [gold_i]#!"
+  carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] является моим [recipient.Custom('KnightCulture')]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U] является моим [councillor|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_friend_reason: "[secondary_recipient.GetShortUIName|U] является моим [friend|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_lover_reason: "[secondary_recipient.GetShortUIName|U] является моим [lover|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_crush_reason: "[secondary_recipient.GetShortUIName|U] является моей [crush|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_soulmate_reason: "[secondary_recipient.GetShortUIName|U] является моей [soulmate|E]: $VALUE|=+0$"
+
+  carn_free_slave_interaction: "Освободить раба"
+  carn_free_slave_interaction.desc: "Освободите [recipient.GetShortUINameNoTooltip] от рабства."
+
+  forced_labor_interaction: "Принудительный труд"
+  forced_labor_interaction.desc: "[recipient.GetShortUINameNoTooltip] был вынужден работать слишком усердно."
+
+  ordinary_labor_interaction: "Обычный труд"
+  ordinary_labor_interaction.desc: "[recipient.GetShortUIName] работает умеренно, что подходит для здоровья."
+
+  extortion_interaction: "Вымогать"
+  extortion_interaction.desc: "Вымогать [recipient.GetShortUINameNoTooltip] [gold|E]."

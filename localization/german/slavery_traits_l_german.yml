@@ -1,0 +1,14 @@
+﻿l_german:
+  trait_slave: "Sklave"
+  trait_slave_desc: "Diese Figur ist das Eigentum einer anderen Person und wird gesetzlich als weniger als ein Mensch anerkannt."
+  trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] ist das Eigentum einer anderen Person und wird gesetzlich als weniger als ein Mensch anerkannt."
+
+  trait_former_slave: "Ehemaliger Sklave"
+  trait_former_slave_desc: "Diese Figur ist ein ehemaliger Sklave, der der Knechtschaft entkommen ist und zu einer freien Person geworden ist."
+  trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] ist ein ehemaliger Sklave, der der Knechtschaft entkommen ist und zu einer freien Person geworden ist."
+
+  trait_lifestyle_prostitute: "Prostituierte(r)"
+  trait_lifestyle_prostitute_desc: "Diese Figur verkauft ihren Körper gegen Geld."
+  trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] ist im Beruf tätig, um sexuelle Dienstleistungen gegen Geld anzubieten."
+  trait_track_lifestyle_prostitute: "Prostituierte(r)"
+  trait_track_lifestyle_prostitute_desc: "Ein Leben im Verkauf sexueller Dienstleistungen"

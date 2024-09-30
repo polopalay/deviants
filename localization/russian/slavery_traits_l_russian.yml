@@ -1,0 +1,14 @@
+﻿l_russian:
+  trait_slave: "Раб"
+  trait_slave_desc: "Этот персонаж является собственностью другого человека, признанным законом менее чем человеком."
+  trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] является собственностью другого человека, признанным законом менее чем человеком."
+
+  trait_former_slave: "Бывший раб"
+  trait_former_slave_desc: "Этот персонаж является бывшим рабом, который сбежал из неволи и стал свободным человеком."
+  trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] является бывшим рабом, который сбежал из неволи и стал свободным человеком."
+
+  trait_lifestyle_prostitute: "Проститутка"
+  trait_lifestyle_prostitute_desc: "Этот персонаж продает свое тело за деньги."
+  trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] занимается секс-услугами за деньги."
+  trait_track_lifestyle_prostitute: "Проститутка"
+  trait_track_lifestyle_prostitute_desc: "Жизнь продажи секса"

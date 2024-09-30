@@ -1,0 +1,31 @@
+﻿l_russian:
+  trait_succubus: "Суккуб"
+  succubus_desc: "Некоторые видели это, другие слышали об этом, все шепчутся о странном поведении [ROOT.GetCharacter.GetNamePossessive]."
+  succubus_character_desc: "Независимо от того, что внутри, никто не считает [ROOT.GetCharacter.GetName] чем-то странным."
+
+  trait_track_corruption: "Убежище"
+  trait_track_corruption_desc: "Собирая души, она получает больше силы для призыва чудовищных существ."
+  
+  trait_track_power: "Сила"
+  trait_track_power_desc: "Она служит дешевой проституткой, удовлетворяя мужчин, чтобы получить их семя."
+
+  trait_track_loyalty: "Лояльность оруженосцев"
+  trait_track_loyalty_desc: "Существует больше одного способа обеспечить лояльность мужчины."
+
+  trait_track_daring: "Смелость"
+  trait_track_daring_desc: "Смелость необходима для многих вещей в жизни."
+
+  trait_lesser_succubus: "Младший суккуб"
+  lesser_succubus_desc: "Независимо от того, что внутри, никто не считает [ROOT.GetCharacter.GetName] чем-то странным."
+  lesser_succubus_character_desc: "Большинство видели это, все слышали об этом. Поведение [ROOT.GetCharacter.GetNamePossessive] аморально. О ней говорят с тем же презрением, как о простой уличной шлюхе."
+
+  trait_track_lesser_succubus: "Сила"
+  trait_track_lesser_succubus_desc: "Она служит дешевой проституткой, удовлетворяя мужчин, чтобы получить их семя."
+
+  trait_deviant_virgin: "Возбужденная дева"
+  deviant_virgin_desc: "[ROOT.GetCharacter.GetName] — шлюха дьявола."
+  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] — шлюха дьявола."
+
+  trait_deviant_blood: "Дьявольская кровь"
+  deviant_blood_desc: "[ROOT.GetCharacter.GetName] — дитя дьявола."
+  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] — дитя дьявола."

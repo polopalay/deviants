@@ -1,0 +1,14 @@
+﻿l_korean:
+  trait_slave: "노예"
+  trait_slave_desc: "이 캐릭터는 다른 사람의 재산이며, 법적으로 인간 이하로 인정됩니다."
+  trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]는 다른 사람의 재산이며, 법적으로 인간 이하로 인정됩니다."
+
+  trait_former_slave: "전 노예"
+  trait_former_slave_desc: "이 캐릭터는 노예에서 탈출하여 자유인이 된 전 노예입니다."
+  trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]는 노예에서 탈출하여 자유인이 된 전 노예입니다."
+
+  trait_lifestyle_prostitute: "프로스티튜트"
+  trait_lifestyle_prostitute_desc: "이 캐릭터는 돈을 위해 자신의 몸을 팔고 있습니다."
+  trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]는 돈을 위해 고객에게 성적으로 서비스를 제공하는 사업을 하고 있습니다."
+  trait_track_lifestyle_prostitute: "프로스티튜트"
+  trait_track_lifestyle_prostitute_desc: "성 판매의 삶"

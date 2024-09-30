@@ -1,0 +1,23 @@
+﻿l_korean:
+  prostitute_interaction: "매춘"
+  prostitute_interaction.desc: "[recipient.GetShortUIName]에게 성 서비스를 요청합니다."
+  use_contraception: "피임 사용"
+  cant_have_sex_without_contraception: "피임 없이 성관계를 가질 수 없습니다: $VALUE|=+0$"
+  can_have_sex_without_contraception: "성관계 필요 결과: $VALUE|=+0$"
+  NOT_IS_IMMORTAL_TRIGGER: "불사의 존재가 아닙니다."
+
+  offer_prostitute_interaction: "매춘 제공"
+  offer_prostitute_interaction.desc: "[recipient.GetShortUIName]에게 성 서비스를 제공합니다."
+  recipient_secondary_offer_prostitute_interaction: "하나 선택"
+
+  carn_force_start_prostitution_interaction: "매춘 시작"
+  carn_force_start_prostitution_interaction.desc: "[recipient.GetShortUINameNoTooltip]가 당신을 위해 [gold|E]를 벌도록 강요합니다."
+
+  carn_force_stop_prostitution_interaction: "매춘 중지"
+  carn_force_stop_prostitution_interaction.desc: "[recipient.GetShortUINameNoTooltip]가 당신을 위해 [gold|E]를 벌도록 강요하는 것을 중지합니다."
+
+  naked_interaction: "나체"
+  naked_interaction.desc: "[recipient.GetShortUIName]가 모든 의복을 벗습니다."
+
+  dress_interaction: "옷 입기"
+  dress_interaction.desc: "[recipient.GetShortUIName]가 모든 의복을 입습니다."
