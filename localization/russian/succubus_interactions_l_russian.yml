@@ -2,8 +2,8 @@
   succubus_weight_interaction: "Регулировка веса"
   succubus_weight_interaction.desc: "Приведите свой вес к идеальному уровню."
 
-  deavians_dealing_with_stress_interaction: "Снятие стресса"
-  deavians_dealing_with_stress_interaction.desc: "Устраните стресс и все его последствия."
+  succubus_dealing_with_stress_interaction: "Снятие стресса"
+  succubus_dealing_with_stress_interaction.desc: "Устраните стресс и все его последствия."
 
   succubus_heal_interaction: "Исцеление"
   succubus_heal_interaction.desc: "Устраняет все виды болезней, травм и все позорные имена."

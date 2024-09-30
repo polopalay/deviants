@@ -1,0 +1,65 @@
+﻿l_simp_chinese:
+ have_sex_opinion: "最近有过性行为"
+ be_healed_opinion: "被黑魔法治愈"
+
+ magic_creation: "$trinket$"
+ magic_creation_miscellaneous: "$trinket$"
+ artifact_magic_creation: "魔法创造"
+
+ succubus_philosopher_stone: "哲学之石"
+ succubus_philosopher_stone.d: "哲学之石是一种传奇的炼金物质，据说能够将低级金属转变为黄金或白银，并且作为赐予不朽的生命之灵药。"
+
+ master_dildo: "我的主人"
+ master_dildo_desc: "只看着它就让人感到双膝无力。"
+
+ mistress_dildo: "谦卑的守护者"
+ mistress_dildo_desc: "只看着它就让女性部位感到脉动。"
+
+ prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] 和 [had_sex_with_effect_partner.GetShortUIName] 发生性关系。"
+
+ nickname_the_bitch: "母狗"
+ nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 是一只发情的母狗，愿意无偿发生性关系。"
+
+ nickname_the_slut: "妓女"
+ nickname_the_slut_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 公然自称为妓女，这让顾客既愤怒又感到好笑。"
+
+ nickname_the_wench: "女侍"
+ nickname_the_wench_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 在整个王国都以其淫荡的名声而闻名。"
+
+ nickname_the_whore: "妓女"
+ nickname_the_whore_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 曾是一位贵族，但放弃了一切成为妓女。"
+
+ nickname_the_semen_tank: "精液罐"
+ nickname_the_semen_tank_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 对精液有着强烈的热情。"
+
+ nickname_the_penis_guillotine: "阴茎断头台"
+ nickname_the_penis_guillotine_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 随时随地与任何人发生性关系。"
+
+ nickname_the_sex_machine: "性爱机器"
+ nickname_the_sex_machine_desc: "精液提取器，阴茎切割器，这些称号都不足以形容 [CHARACTER.GetHerHis|U] 的性才能。"
+
+ nickname_the_ladycow: "母牛"
+ nickname_the_ladycow_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 是 [CHARACTER.GetHerHis|U] 军队的母牛妓女。我的荣誉和尊严被自己的士兵践踏。"
+
+ nickname_the_exhibitionist: "展览主义者"
+ nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 以其展览主义、公共性爱和公开排尿而闻名。"
+
+ d_laamp_lilith: "莉莉丝的妓女"
+ d_laamp_belial: "贝利尔的女巫"
+ d_laamp_abaddon: "阿巴顿的奴隶"
+ d_laamp_satan: "撒旦的恶魔"
+
+ succubus_dark_amry: "邪恶生物"
+ succubus_dark_amry_flavor: "邪恶生物"
+ succubus_death_korps: "死亡军团"
+ succubus_death_korps_flavor: "死亡军团"
+ succubus_zombie: "Zombie"
+ succubus_zombie_flavor: "Zombie"
+ succubus_skeleton: "Skeleton"
+ succubus_skeleton_flavor: "Skeleton"
+
+ succubus_buff: "魔鬼的祝福"
+ succubus_buff_desc: "此人曾受到女魅的祝福"
+
+ succubus_generals: "魔鬼将军"
+ succubus_generals_desc: "魔鬼的战士被召唤来服务魔鬼的女主人"

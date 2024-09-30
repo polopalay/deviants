@@ -1,0 +1,69 @@
+﻿l_simp_chinese:
+  succubus_weight_interaction: "调整体重"
+  succubus_weight_interaction.desc: "将您的体重调整到完美水平"
+
+  succubus_dealing_with_stress_interaction: "应对压力"
+  succubus_dealing_with_stress_interaction.desc: "消除压力及其带来的所有影响"
+
+  succubus_heal_interaction: "治愈"
+  succubus_heal_interaction.desc: "消除各种疾病、伤害和所有不光彩的名称"
+
+  succubus_purify_interaction: "净化"
+  succubus_purify_interaction.desc: "净化[recipient.GetShortUIName]的血液，消除所有坏基因"
+
+  succubus_imprison_interaction: "监禁"
+  succubus_imprison_interaction.desc: "将[recipient.GetShortUIName]监禁到你的地牢"
+
+  succubus_mind_break_interaction: "心灵崩溃"
+  succubus_mind_break_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
+
+  succubus_create_lesser_succubus_interaction: "创造小魅魔"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]将变成小魅魔"
+
+  succubus_child_interaction: "创造孩子"
+  succubus_child_interaction.desc: "创造一个是[recipient.GetShortUIName]的孩子"
+
+  succubus_rumor_interaction: "散布谣言"
+  succubus_rumor_interaction.desc: "散布关于[recipient.GetShortUIName]的坏谣言"
+
+  succubus_switch_body_interaction: "切换"
+  succubus_switch_body_interaction.desc: "扮演[recipient.GetShortUIName]"
+
+  succubus_create_succubus_interaction: "创造魅魔"
+  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]将变成魅魔"
+
+  succubus_add_courtier_interaction: "添加到朝廷"
+  succubus_add_courtier_interaction.desc: "将[recipient.GetShortUIName]添加到你的朝廷"
+
+  succubus_absorb_interaction: "吸收"
+  succubus_absorb_interaction.desc: "将[recipient.GetShortUIName]的力量吸收到忠诚中"
+
+  succubus_makeup_interaction: "化妆"
+  succubus_makeup_interaction.desc: "给[recipient.GetShortUIName]化妆"
+  succubus_no_horn: "没有角"
+  succubus_horn0: "长弯曲角"
+  succubus_horn1: "扭曲的角"
+  succubus_horn2: "尖细的角"
+  succubus_horn3: "弯曲的角"
+  succubus_horn4: "短角"
+  succubus_no_eyes: "没有烟熏眼"
+  succubus_marking_1: "流泪的烟熏眼"
+  succubus_marking_2: "划伤的烟熏眼"
+  succubus_marking_3: "划伤的烟熏眼"
+  succubus_marking_4: "花朵烟熏眼"
+  succubus_marking_5: "小烟熏眼"
+  succubus_marking_6: "微小烟熏眼"
+  succubus_default_eyes: "默认眼睛"
+  succubus_white_eyes: "白眼"
+  succubus_red_eyes: "红眼"
+  succubus_default_hair: "默认头发"
+  succubus_white_hair: "白发"
+  succubus_red_hair: "红发"
+  naked: "裸体"
+  glass: "玻璃"
+
+  succubus_cultist_interaction: "创造邪教徒"
+  succubus_cultist_interaction.desc: "思想操控，使[recipient.GetShortUIName]追随魔鬼的邪教"
+
+  succubus_honor_interaction: "移除不光彩的特质"
+  succubus_honor_interaction.desc: "从[recipient.GetShortUIName]移除不光彩的特质"

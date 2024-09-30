@@ -1,8 +1,8 @@
-succubus_spawn_death_korp = {
-	desc = succubus_spawn_death_korp.desc
-	selection_tooltip = succubus_spawn_death_korp.t
+spawn_death_korp = {
+	desc = spawn_death_korp.desc
+	selection_tooltip = spawn_death_korp.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_invite_knights.dds" }
-	confirm_text = succubus_spawn_death_korp.c
+	confirm_text = spawn_death_korp.c
 	decision_group_type = decisions
 	is_shown = {
 		has_trait_xp = {
@@ -35,11 +35,11 @@ succubus_spawn_death_korp = {
 	ai_will_do = { base = 5 }
 }
 
-succubus_demon_generals = {
-	desc = succubus_demon_generals.desc
+demon_generals = {
+	desc = demon_generals.desc
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_realm.dds" }
-	confirm_text = succubus_demon_generals.c
-	selection_tooltip = succubus_demon_generals.t
+	confirm_text = demon_generals.c
+	selection_tooltip = demon_generals.t
 	decision_group_type = decisions
 	is_shown = {
 		has_trait_xp = {
@@ -68,11 +68,11 @@ succubus_demon_generals = {
 	ai_will_do = { base = 10 }
 }
 
-succubus_become_succubus = {
+become_succubus = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	desc = succubus_become_succubus.desc
-	confirm_text = succubus_become_succubus.c
-	selection_tooltip = succubus_become_succubus.t
+	desc = become_succubus.desc
+	confirm_text = become_succubus.c
+	selection_tooltip = become_succubus.t
 	decision_group_type = decisions
 
 	is_shown = {
@@ -100,7 +100,7 @@ masturbate = {
 	selection_tooltip = masturbate.t
 	decision_group_type = decisions
 	cooldown = { years = 1 }
-	
+
 	is_shown = {
 		is_female = yes
 		stress_level >= 1

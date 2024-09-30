@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+  trait_slave: "奴隶"
+  trait_slave_desc: "这个角色是另一个人的财产，法律上被认为低于人类。"
+  trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] 是另一个人的财产，法律上被认为低于人类。"
+
+  trait_former_slave: "前奴隶"
+  trait_former_slave_desc: "这个角色是一个曾经的奴隶，已经逃离束缚，成为自由人。"
+  trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] 是一个曾经的奴隶，已经逃离束缚，成为自由人。"
+
+  trait_lifestyle_prostitute: "妓女"
+  trait_lifestyle_prostitute_desc: "这个角色为金钱出卖自己的身体。"
+  trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] 从事性服务客户以获取报酬的生意。"
+  trait_track_lifestyle_prostitute: "妓女"
+  trait_track_lifestyle_prostitute_desc: "卖淫生活"

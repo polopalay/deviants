@@ -1,0 +1,40 @@
+﻿l_simp_chinese:
+  building_brothel1: "普通房间"
+  building_brothel1_desc: "提供随意的性服务，妓女可以从顾客那里获得更丰厚的小费"
+  building_type_brothel1: "妓院"
+  building_type_brothel1_desc: "妓院是顾客与妓女之间进行性活动的商业场所"
+
+  building_brothel2: "高级房间"
+  building_brothel2_desc: "提供一些特殊服务，如群交和展览"
+  building_type_brothel2_market: "妓院"
+  building_type_brothel2_desc: "妓院是顾客与妓女之间进行性活动的商业场所"
+
+  building_brothel3: "奢华房间"
+  building_brothel3_desc: "提供各种性服务：兽交、施虐受虐"
+  building_type_brothel3: "妓院"
+  building_type_brothel3_desc: "妓院是顾客与妓女之间进行性活动的商业场所"
+
+  building_alchemy1: "黑魔法研究工作坊"
+  building_alchemy1_desc: "女巫使用炼金术增强她们的魔法力量"
+  building_type_alchemy1: "炼金术工作坊"
+  building_type_alchemy1_desc: "在炼金术上的财务投资将帮助提升魅魔法术的力量"
+
+  building_alchemy2: "女巫之石工作坊"
+  building_alchemy2_desc: "哲学之石在目前的潜力下仍然相当遥不可及。然而，炼金术士们研究了另一种类型，即女巫之石，帮助干扰他人的思想"
+  building_type_alchemy2: "炼金术工作坊"
+  building_type_alchemy2_desc: "在炼金术上的财务投资将帮助提升魅魔法术的力量"
+
+  building_alchemy3: "哲学之石工作坊"
+  building_alchemy3_desc: "通过女巫的魔法、魅魔的力量以及炼金术士的知识，创造了哲学之石的终极公式。现在魅魔拥有最强大的魔法，干扰生命的本质"
+  building_type_alchemy3: "炼金术工作坊"
+  building_type_alchemy3_desc: "在炼金术上的财务投资将帮助提升魅魔法术的力量"
+
+  building_witch_forest: "女巫森林"
+  building_witch_forest_desc: "人们互相传说一个闹鬼的森林，女巫在这里裸露身体并进行魔法仪式。这里已经有数百人失踪，并且在这个森林周围发现了许多神秘现象"
+  building_type_witch_forest: "女巫森林"
+  building_type_witch_forest_desc: "树林里满是人类和动物的尸体，这可能是祭祀仪式的遗骸"
+
+  building_soul_forge: "灵魂铸造所"
+  building_soul_forge_desc: "魅魔可以利用死者的灵魂来创造强大的魔法物品"
+  building_type_soul_forge: "灵魂铸造所"
+  building_type_soul_forge_desc: "魅魔可以利用死者的灵魂来创造强大的魔法物品"

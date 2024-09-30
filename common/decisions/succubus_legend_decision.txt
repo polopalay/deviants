@@ -1,8 +1,8 @@
-succubus_start_ritual_decision = {
-	desc = succubus_start_ritual_decision.d
-	selection_tooltip = succubus_start_ritual_decision.t
+start_ritual_philosophers_stone_decision = {
+	desc = start_ritual_philosophers_stone_decision.d
+	selection_tooltip = start_ritual_philosophers_stone_decision.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	confirm_text = succubus_start_ritual_decision.c
+	confirm_text = start_ritual_philosophers_stone_decision.c
 	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
@@ -46,11 +46,11 @@ succubus_start_ritual_decision = {
 	ai_check_interval = 0
 }
 
-succubus_tensoul_decision = {
-	desc = succubus_tensoul_decision.d
-	selection_tooltip = succubus_tensoul_decision.t
+sacrifice_tensoul_ritual_decision = {
+	desc = sacrifice_tensoul_ritual_decision.d
+	selection_tooltip = sacrifice_tensoul_ritual_decision.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	confirm_text = succubus_tensoul_decision.c
+	confirm_text = sacrifice_tensoul_ritual_decision.c
 	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
@@ -92,11 +92,11 @@ succubus_tensoul_decision = {
 	ai_check_interval = 0
 }
 
-succubus_vassal_decision = {
-	desc = succubus_vassal_decision.d
-	selection_tooltip = succubus_vassal_decision.t
+sacrifice_vassal_ritual_decision = {
+	desc = sacrifice_vassal_ritual_decision.d
+	selection_tooltip = sacrifice_vassal_ritual_decision.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	confirm_text = succubus_vassal_decision.c
+	confirm_text = sacrifice_vassal_ritual_decision.c
 	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
@@ -140,11 +140,11 @@ succubus_vassal_decision = {
 	ai_check_interval = 0
 }
 
-succubus_homologus_decision = {
-	desc = succubus_homologus_decision.d
-	selection_tooltip = succubus_homologus_decision.t
+sacrifice_homologus_ritual_decision = {
+	desc = sacrifice_homologus_ritual_decision.d
+	selection_tooltip = sacrifice_homologus_ritual_decision.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	confirm_text = succubus_homologus_decision.c
+	confirm_text = sacrifice_homologus_ritual_decision.c
 	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
@@ -193,11 +193,11 @@ succubus_homologus_decision = {
 	ai_check_interval = 0
 }
 
-succubus_family_decision = {
-	desc = succubus_family_decision.d
-	selection_tooltip = succubus_family_decision.t
+sacrifice_family_ritual_decision = {
+	desc = sacrifice_family_ritual_decision.d
+	selection_tooltip = sacrifice_family_ritual_decision.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	confirm_text = succubus_family_decision.c
+	confirm_text = sacrifice_family_ritual_decision.c
 	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {
@@ -238,11 +238,11 @@ succubus_family_decision = {
 	ai_check_interval = 0
 }
 
-decisions_ritual_complete = {
-	desc = decisions_ritual_complete.d
-	selection_tooltip = decisions_ritual_complete.t
+complete_ritual_philosophers_stone_decision = {
+	desc = complete_ritual_philosophers_stone_decision.d
+	selection_tooltip = complete_ritual_philosophers_stone_decision.t
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	confirm_text = decisions_ritual_complete.c
+	confirm_text = complete_ritual_philosophers_stone_decision.c
 	decision_group_type = decisions
 	is_shown = {
 		promoted_legend = {

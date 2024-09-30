@@ -1,0 +1,33 @@
+﻿l_simp_chinese:
+  carn_enslave_interaction: "奴役"
+  carn_enslave_interaction.desc: "将 [recipient.GetShortUINameNoTooltip] 变成你的奴隶"
+  carn_wants_to_be_your_slave: "希望你成为他们的主人: $VALUE|=+0$"
+  carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] 是一位 [noble|E]: $VALUE|=+0$"
+  carn_enslave_you_have_no_reason: "你没有 [execute_reason|E]: $VALUE|=+0$"
+
+  carn_buy_slave_directly_interaction: "购买奴隶"
+  carn_buy_slave_directly_interaction_desc: "用 [gold|E] 购买一个奴隶"
+  recipient_secondary_carn_buy_slave_directly_interaction: "奴隶"
+
+  carn_sell_slave_interaction: "出售奴隶"
+  carn_sell_slave_interaction_desc: "在奴隶市场上以 #high [gold_i]#! 出售 [recipient.GetShortUINameNoTooltip]"
+  recipient_secondary_carn_sell_slave_interaction: "买家"
+  carn_buyer_not_enough_gold_for_slave_price_tooltip: "支付 #high [gold_i]#!"
+  carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [recipient.Custom('KnightCulture')]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [councillor|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_friend_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [friend|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_lover_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [lover|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_crush_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [crush|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_soulmate_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [soulmate|E]: $VALUE|=+0$"
+
+  carn_free_slave_interaction: "解放奴隶"
+  carn_free_slave_interaction.desc: "解放 [recipient.GetShortUINameNoTooltip] 从奴役中"
+
+  forced_labor_interaction: "强迫劳动"
+  forced_labor_interaction.desc: "[recipient.GetShortUINameNoTooltip] 被迫工作过于辛苦"
+
+  ordinary_labor_interaction: "普通劳动"
+  ordinary_labor_interaction.desc: "[recipient.GetShortUIName] 正在以适合健康的适度方式工作"
+
+  extortion_interaction: "敲诈"
+  extortion_interaction.desc: "敲诈 [recipient.GetShortUINameNoTooltip] 以获取 [gold|E]"

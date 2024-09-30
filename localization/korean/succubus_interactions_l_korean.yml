@@ -2,8 +2,8 @@
   succubus_weight_interaction: "체중 조절"
   succubus_weight_interaction.desc: "당신의 체중을 완벽한 수준으로 조절합니다."
 
-  deavians_dealing_with_stress_interaction: "스트레스 해소"
-  deavians_dealing_with_stress_interaction.desc: "스트레스와 그로 인한 모든 영향을 제거합니다."
+  succubus_dealing_with_stress_interaction: "스트레스 해소"
+  succubus_dealing_with_stress_interaction.desc: "스트레스와 그로 인한 모든 영향을 제거합니다."
 
   succubus_heal_interaction: "치유"
   succubus_heal_interaction.desc: "모든 종류의 질병, 부상 및 모든 불명예스러운 이름을 제거합니다."

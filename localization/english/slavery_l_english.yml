@@ -5,3 +5,17 @@
   forced_labor_desc: "This character is being forced to work against their will."
   carn_using_birth_control_modifier: "Using Birth Control"
   carn_using_birth_control_modifier_desc: "This character is using tinctures and artificial remedies to reduce the chance of having unwanted children."
+
+  carn_prostitution_crime_opinion: "Known [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_wants_to_be_your_slave_opinion: "Desires an Owner"
+
+  prostitute_shunned_opinion: "Known [GetTrait('prostitute').GetName( GetNullCharacter )]"
+  carn_enslaved_me_opinion: "Enslaved me"
+  carn_enslaved_close_family_opinion: "Enslaved close family member"
+  carn_enslaved_close_relation_opinion: "Enslave friend"
+  carn_freed_me_from_slavery_opinion: "Freed me"
+  free_slave_close_family_opinion: "Freed close family member"
+  free_slave_friend_opinion: "Freed friend"
+  extortion_opinion: "Extorted me"
+  forced_labor_opinion: "Forced labor"
+  ordinary_labor_opinion: "Ordinary labor"

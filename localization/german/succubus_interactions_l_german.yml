@@ -2,8 +2,8 @@
   succubus_weight_interaction: "Gewicht anpassen"
   succubus_weight_interaction.desc: "Passen Sie Ihr Gewicht auf das perfekte Niveau an"
 
-  deavians_dealing_with_stress_interaction: "Stress bewältigen"
-  deavians_dealing_with_stress_interaction.desc: "Eliminieren Sie Stress und alle seine Auswirkungen"
+  succubus_dealing_with_stress_interaction: "Stress bewältigen"
+  succubus_dealing_with_stress_interaction.desc: "Eliminieren Sie Stress und alle seine Auswirkungen"
 
   succubus_heal_interaction: "Heilung"
   succubus_heal_interaction.desc: "Beseitigt alle Arten von Krankheiten, Verletzungen und alle unehrenhaften Namen"

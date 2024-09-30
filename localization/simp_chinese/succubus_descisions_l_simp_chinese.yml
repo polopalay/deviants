@@ -1,0 +1,56 @@
+﻿l_simp_chinese:
+  become_succubus: "成为魅魔"
+  become_succubus.desc: "与男性发生性关系并吸收其精液的恶魔称为魅魔。要成为魅魔，你必须是一个荡妇，一个有病态性偏好的变态，最重要的是，必须是一个拥有黑暗魔法的女巫。"
+  become_succubus.c: "成为魅魔"
+  become_succubus.t: "你将成为魅魔"
+
+  spawn_death_korp: "召唤死亡军团"
+  spawn_death_korp.desc: "传说中有一支来自地狱的不死军队。嗜血、无畏且强大无比，这些人能与比自己大两倍的敌人作战并获胜。受到撒旦祝福的恶魔可以使用他们的秘密法术召唤这些致命的军团。"
+  spawn_death_korp.c: "召唤"
+  spawn_death_korp.t: "在你的首都召唤死亡军团"
+
+  demon_generals: "召唤恶魔将军"
+  demon_generals.desc: "男性的精液不仅增强魅魔的力量，还逐渐将魅魔转变为更强大的生物。然而，他们也可以牺牲所收集的精液以换取来自地狱的暂时力量，破坏性强大但短暂。与尽可能多的士兵发生性关系，让你的士兵也能接受撒旦的祝福。"
+  demon_generals.c: "召唤"
+  demon_generals.t: "将你的所有骑士变成恶魔将军"
+
+  masturbate: "自慰"
+  masturbate.desc: "你的生活已经充满压力，你在寻找解压的方式。使用假阳具是最安全的方式，你可以沉溺于感官享受而不用担心别人对你是荡妇和放荡的闲言碎语。"
+  masturbate.t: "缓解压力"
+  masturbate.c: "放入阴道中"
+
+  start_ritual_philosophers_stone_decision: "开始哲学之石仪式"
+  start_ritual_philosophers_stone_decision.d: "$legend_chapter_rital_start_philosopher_stone$"
+  start_ritual_philosophers_stone_decision.t: "民谣的秘密已经揭晓，让我们开始仪式"
+  start_ritual_philosophers_stone_decision.c: "开始仪式"
+  start_ritual_philosophers_stone_decision.e: "民谣的秘密已经揭晓，让我们开始仪式"
+
+  sacrifice_tensoul_ritual_decision: "牺牲10个灵魂"
+  sacrifice_tensoul_ritual_decision.d: "$legend_chapter_tensoul_philosopher_stone$"
+  sacrifice_tensoul_ritual_decision.t: "第一次仪式，10条凡人生命"
+  sacrifice_tensoul_ritual_decision.c: "牺牲10个灵魂"
+  sacrifice_tensoul_ritual_decision.e: "第一次仪式，10条凡人生命"
+
+  sacrifice_vassal_ritual_decision: "牺牲一个附庸"
+  sacrifice_vassal_ritual_decision.d: "$legend_chapter_vassal_philosopher_stone$"
+  sacrifice_vassal_ritual_decision.t: "第二次仪式，附庸的鲜血"
+  sacrifice_vassal_ritual_decision.c: "牺牲一个附庸"
+  sacrifice_vassal_ritual_decision.e: "第二次仪式，附庸的鲜血"
+
+  sacrifice_homologus_ritual_decision: "牺牲另一个女巫"
+  sacrifice_homologus_ritual_decision.d: "$legend_chapter_homologous_philosopher_stone$"
+  sacrifice_homologus_ritual_decision.t: "第三次仪式，女巫的鲜血"
+  sacrifice_homologus_ritual_decision.c: "牺牲另一个女巫"
+  sacrifice_homologus_ritual_decision.e: "第三次仪式，女巫的鲜血"
+
+  sacrifice_family_ritual_decision: "牺牲一个家庭成员"
+  sacrifice_family_ritual_decision.d: "$legend_chapter_family_philosopher_stone$"
+  sacrifice_family_ritual_decision.t: "第四次仪式，家庭的鲜血"
+  sacrifice_family_ritual_decision.c: "牺牲一个家庭成员"
+  sacrifice_family_ritual_decision.e: "第四次仪式，家庭的鲜血"
+
+  complete_ritual_philosophers_stone_decision: "哲学之石的仪式"
+  complete_ritual_philosophers_stone_decision.d: "$legend_chapter_rital_complete_philosopher_stone$"
+  complete_ritual_philosophers_stone_decision.t: "完成哲学之石的仪式"
+  complete_ritual_philosophers_stone_decision.c: "完成仪式"
+  complete_ritual_philosophers_stone_decision.e: "完成哲学之石的仪式"

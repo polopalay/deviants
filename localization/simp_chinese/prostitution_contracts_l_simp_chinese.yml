@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+  request_prostitute_contract: "请求妓女"
+  request_prostitute_desc_title: "妓女合同"
+  request_prostitute_desc: "请求妓女到雇主地点。"
+  request_prostitute_request: "此 [task_contract|E] 要求您带妓女到指定地点，以满足 [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip] 的性需求，完成合同以获得 [gold|E]。妓女的技能将决定合同的成功。您确定要接受此合同吗？"
+
+  request_orgy_contract: "请求狂欢"
+  request_orgy_desc_title: "狂欢合同"
+  request_orgy_desc: "请求妓女前来服务狂欢"
+  request_orgy_request: "此 [task_contract|E] 要求妓女服务雇主及其所有骑士。妓女的技能将决定合同的质量。"
+
+  request_harem_contract: "请求后宫"
+  request_harem_desc_title: "后宫合同"
+  request_harem_desc: "要求所有妓女前来提供性服务"
+  request_harem_request: "此 [task_contract|E] 要求您提供优质妓女进行服务。妓女的数量将决定合同的质量。"

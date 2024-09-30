@@ -1,6 +1,6 @@
-deavians_dealing_with_stress_interaction = {
+succubus_dealing_with_stress_interaction = {
 	icon = torment
-	desc = deavians_dealing_with_stress_interaction.desc
+	desc = succubus_dealing_with_stress_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	is_shown = {

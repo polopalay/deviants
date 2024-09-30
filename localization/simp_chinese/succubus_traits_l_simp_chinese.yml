@@ -1,0 +1,26 @@
+﻿l_simp_chinese:
+ trait_succubus: "魅魔"
+ succubus_desc: "有人听说或者见过它，每个人都在窃窃私语[ROOT.GetCharacter.GetNamePossessive]的奇怪行为。"
+ succubus_character_desc: "不管里面有什么，没有人会为[ROOT.GetCharacter.GetName]感到奇怪。"
+ trait_track_corruption: "变态"
+ trait_track_corruption_desc: "从收集到的灵魂中，她获得了更多召集怪物的力量"
+ trait_track_power: "淫能"
+ trait_track_power_desc: "她是一位竭心侍奉男性以乞求精液的廉价娼妓"
+ trait_track_loyalty: "兵士忠诚"
+ trait_track_loyalty_desc: "确保男人忠诚的方法不止一种"
+ trait_track_daring: "勇气"
+ trait_track_daring_desc: "生活中的许多事情都需要勇气"
+
+ trait_lesser_succubus: "低等魅魔"
+ lesser_succubus_desc: "不管里面有什么，没有人会为[ROOT.GetCharacter.GetName]感到奇怪。"
+ lesser_succubus_character_desc: "大多数人都听说过，见过[ROOT.GetCharacter.GetNamePossessive]道德败坏的行为。人们对她的评价就像对街头妓女一样不屑一顾。"
+ trait_track_lesser_succubus: "淫能"
+ trait_track_lesser_succubus_desc: "她是一位竭心侍奉男性以乞求精液的廉价娼妓"
+
+ trait_deviant_virgin: "淫欲处女"
+ deviant_virgin_desc: "[ROOT.GetCharacter.GetName]是魔鬼的情妇"
+ deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName]是魔鬼的情妇"
+
+ trait_deviant_blood: "恶魔之血"
+ deviant_blood_desc: "[ROOT.GetCharacter.GetName]是恶魔之子"
+ deviant_blood_character_desc: "[ROOT.GetCharacter.GetName]是恶魔之子"

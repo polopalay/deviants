@@ -1,4 +1,22 @@
 ﻿l_russian:
+  have_sex_opinion: "Недавно занимался сексом"
+  be_healed_opinion: "Исцелен черной магией"
+
+  magic_creation: "$trinket$"
+  magic_creation_miscellaneous: "$trinket$"
+  artifact_magic_creation: "Создание магии"
+
+  succubus_philosopher_stone: "Философский камень"
+  succubus_philosopher_stone.d: "Философский камень — это легендарное алхимическое вещество, которое, как говорят, может превращать простые металлы в золото или серебро, а также действовать как эликсир жизни, дарующий бессмертие."
+
+  master_dildo: "Мой Мастер"
+  master_dildo_desc: "Одного взгляда на него достаточно, чтобы почувствовать слабость в коленях."
+
+  mistress_dildo: "Скромный хранитель"
+  mistress_dildo_desc: "Одного взгляда на него достаточно, чтобы заставить женские части тела пульсировать."
+
+  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] спит с [had_sex_with_effect_partner.GetShortUIName]"
+
   nickname_the_bitch: "Сука"
   nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] — возбужденная сука, готовая заняться сексом без оплаты."
 
@@ -25,3 +43,23 @@
 
   nickname_the_exhibitionist: "Экспозиционист"
   nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] известен(известна) своим эксгибиционизмом, публичным сексом и публичным мочеиспусканием."
+
+  d_laamp_lilith: "Шлюхи Лилит"
+  d_laamp_belial: "Ведьмы Белияла"
+  d_laamp_abaddon: "Рабы Абаддона"
+  d_laamp_satan: "Дьяволы Сатаны"
+
+  succubus_dark_amry: "Темная армия"
+  succubus_dark_amry_flavor: "Темная армия"
+  succubus_death_korps: "Армия Смерти"
+  succubus_death_korps_flavor: "Армия Смерти"
+  succubus_zombie: "Зомби"
+  succubus_zombie_flavor: "Зомби"
+  succubus_skeleton: "Скелет"
+  succubus_skeleton_flavor: "Скелет"
+
+  succubus_buff: "Благословение Дьявола"
+  succubus_buff_desc: "Этот человек был благословлен Суккубом."
+
+  succubus_generals: "Дьявольский Генерал"
+  succubus_generals_desc: "Воители дьявола призваны служить госпоже дьявола."

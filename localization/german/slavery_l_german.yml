@@ -5,3 +5,17 @@
   forced_labor_desc: "Diese Figur wird gegen ihren Willen zur Arbeit gezwungen."
   carn_using_birth_control_modifier: "Verwendet Verhütung"
   carn_using_birth_control_modifier_desc: "Diese Figur verwendet Färbemittel und künstliche Mittel, um das Risiko ungewollter Kinder zu verringern."
+
+  carn_prostitution_crime_opinion: "[GetTrait('prostitute').GetName( GetNullCharacter )] bekannt"
+  carn_wants_to_be_your_slave_opinion: "Wünscht sich einen Meister"
+
+  prostitute_shunned_opinion: "[GetTrait('prostitute').GetName( GetNullCharacter )] bekannt"
+  carn_enslaved_me_opinion: "Hat mich versklavt"
+  carn_enslaved_close_family_opinion: "Hat ein Familienmitglied versklavt"
+  carn_enslaved_close_relation_opinion: "Hat einen Freund/eine Freundin versklavt"
+  carn_freed_me_from_slavery_opinion: "Hat mich befreit"
+  free_slave_close_family_opinion: "Hat ein Familienmitglied befreit"
+  free_slave_friend_opinion: "Hat einen Freund/eine Freundin befreit"
+  extortion_opinion: "Hat mich erpresst"
+  forced_labor_opinion: "Zwangsarbeit"
+  ordinary_labor_opinion: "Ordentliche Arbeit"

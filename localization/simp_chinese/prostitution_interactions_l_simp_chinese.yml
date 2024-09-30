@@ -1,0 +1,23 @@
+﻿l_simp_chinese:
+  prostitute_interaction: "卖淫"
+  prostitute_interaction.desc: "请求 [recipient.GetShortUIName] 提供性服务"
+  use_contraception: "使用避孕措施"
+  cant_have_sex_without_contraception: "不能在不使用避孕措施的情况下发生性关系: $VALUE|=+0$"
+  can_have_sex_without_contraception: "性行为需要结果: $VALUE|=+0$"
+  NOT_IS_IMMORTAL_TRIGGER: "不是不死者"
+
+  offer_prostitute_interaction: "提供卖淫"
+  offer_prostitute_interaction.desc: "向 [recipient.GetShortUIName] 提供性服务"
+  recipient_secondary_offer_prostitute_interaction: "选择一个"
+
+  carn_force_start_prostitution_interaction: "开始卖淫"
+  carn_force_start_prostitution_interaction.desc: "强迫 [recipient.GetShortUINameNoTooltip] 为您赚取 [gold|E] 作为妓女"
+
+  carn_force_stop_prostitution_interaction: "停止卖淫"
+  carn_force_stop_prostitution_interaction.desc: "停止强迫 [recipient.GetShortUINameNoTooltip] 为您赚取 [gold|E] 作为妓女"
+
+  naked_interaction: "裸体"
+  naked_interaction.desc: "[recipient.GetShortUIName] 脱去所有衣物"
+
+  dress_interaction: "穿衣"
+  dress_interaction.desc: "[recipient.GetShortUIName] 穿上所有衣物"
