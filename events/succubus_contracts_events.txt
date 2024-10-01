@@ -24,6 +24,7 @@ prostitute_contracts_event.1000 = {
 		trigger_event = prostitute_contracts_event.1100
 	}
 	option = {
+		trigger = { NOT = { scope:request_prostitute = root } }
 		name = prostitute_contracts_event.1000.b
 		custom_tooltip = prostitute_contracts_event.1000.b.tt
 		scope:employer = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
@@ -182,6 +183,7 @@ prostitute_contracts_event.2000 = {
 		trigger_event = prostitute_contracts_event.2100
 	}
 	option = {
+		trigger = { NOT = { scope:request_prostitute = root } }
 		name = prostitute_contracts_event.2000.b
 		custom_tooltip = prostitute_contracts_event.2000.b.tt
 		scope:employer = {

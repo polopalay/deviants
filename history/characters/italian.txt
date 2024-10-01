@@ -99,21 +99,6 @@
 	}
 	1065.1.1 = {
 		effect = {
-			refund_all_perks = yes
-			remove_all_perk_lifestyle_traits_effect = yes
-			add_learning_lifestyle_perk_points = -10
-			add_perk = faithful_perk
-			add_perk = zealous_proselytizer_perk
-			add_perk = religious_icon_perk
-			add_perk = prophet_perk
-			add_perk = clerical_justifications_perk
-			add_perk = church_and_state_perk
-			add_perk = radiant_perk
-			add_perk = defender_of_the_faith_perk
-			add_perk = theologian_perk
-			add_trait = theologian
-			add_perk = pedagogy_perk
-			add_perk = open_minded_perk
 			add_piety = 750
 			add_piety_level = 1
 			add_character_modifier = {
