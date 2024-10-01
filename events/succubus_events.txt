@@ -274,14 +274,20 @@ succubus_event.0550 = {
 	}	
 	# find one, at any cost
 	option = {
+		ai_chance = { base = 50 }
 		trigger = {
 			gold >= major_gold_value
+			OR = {
+				has_trait = succubus
+				has_trait = lesser_succubus
+			}
 		}
 		name = succubus_event.0550.a
 		custom_tooltip = succubus_event.0550.a.tt
 		remove_short_term_gold = medium_gold_value
 		create_artifact = {
 			name = master_dildo
+			rarity = masterwork
 			description = master_dildo_desc
 			type = magic_creation
 			modifier = master_dildo_modifier
@@ -303,8 +309,21 @@ succubus_event.0550 = {
 	}	
 	# you can feel it, there is one nearby
 	option = {
+		ai_chance = { base = 50 }
+		trigger = {
+			has_trait_xp = {
+				trait = succubus
+				track = corruption
+				value >= 1
+			}
+		}
 		name = succubus_event.0550.c
 		custom_tooltip = succubus_event.0550.c.tt
+		add_trait_xp = {
+			trait = succubus
+			track = corruption
+			value = -1
+		}
 		create_artifact = {
 			name = mistress_dildo
 			description = mistress_dildo_desc

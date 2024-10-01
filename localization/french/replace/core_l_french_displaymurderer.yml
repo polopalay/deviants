@@ -1,2 +1,0 @@
-﻿l_french: 
- CHARACTER_DEAD_TOOLTIP: "[Character.GetDeathReason|U] $CHARACTER_DEAD_TOOLTIP_DATE_INFO$ [Character.GetKiller.GetUIName|V]"

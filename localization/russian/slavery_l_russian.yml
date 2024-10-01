@@ -17,3 +17,8 @@
   extortion_opinion: "Вымогал у меня"
   forced_labor_opinion: "Принудительный труд"
   ordinary_labor_opinion: "Обычный труд"
+
+  enslave_war: "Война порабощения"
+  enslave_war_victory_desc: "Все женщины [дворянки|E] [defender.GetName] будут [заключены|E] [attacker.GetName]"
+  enslave_war_white_peace_desc: "Война бесполезна"
+  enslave_war_defeat_desc: "[attacker.GetName] должен выплатить [defender.GetName] репарации"

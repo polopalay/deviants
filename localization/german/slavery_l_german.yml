@@ -17,3 +17,8 @@
   extortion_opinion: "Hat mich erpresst"
   forced_labor_opinion: "Zwangsarbeit"
   ordinary_labor_opinion: "Ordentliche Arbeit"
+
+  enslave_war: "Versklavungskrieg"
+  enslave_war_victory_desc: "Alle weiblichen [Hofdamen|E] von [defender.GetName] werden von [attacker.GetName] [inhaftiert|E]"
+  enslave_war_white_peace_desc: "Der Krieg ist fruchtlos"
+  enslave_war_defeat_desc: "[attacker.GetName] muss [defender.GetName] Kriegsreparationen zahlen"

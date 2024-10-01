@@ -17,3 +17,8 @@
   extortion_opinion: "갈취당함"
   forced_labor_opinion: "강제 노동"
   ordinary_labor_opinion: "일반 노동"
+
+  enslave_war: "노예 전쟁"
+  enslave_war_victory_desc: "[defender.GetName]의 모든 여성 [courtier|E]는 [attacker.GetName]에 의해 [구금될|E] 것입니다"
+  enslave_war_white_peace_desc: "전쟁은 무의미합니다"
+  enslave_war_defeat_desc: "[attacker.GetName]는 [defender.GetName]에게 전쟁 배상금을 지불해야 합니다"

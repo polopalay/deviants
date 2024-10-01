@@ -1,0 +1,100 @@
+enslave_war = {
+	icon = apprehend_adventurer
+	group = subjugation
+	ai_only_against_liege = yes
+	allowed_for_character =	{
+		government_has_flag = government_is_landless_adventurer
+		OR = {
+			has_trait = succubus
+			has_trait = lesser_succubus
+		}
+	}
+
+	allowed_against_character = {
+		is_ruler = yes
+		any_courtier = { is_female = yes }
+	}
+
+	target_de_jure_regions_above = yes
+	target_top_liege_if_outside_realm = no
+
+	valid_to_start = {
+	}
+
+
+	on_declaration = {
+		#on_declared_war = yes
+
+		scope:defender = {
+			add_opinion = {
+				modifier = declared_war
+				target = scope:attacker
+			}
+		}
+	}
+
+	on_victory_desc = {
+		desc = enslave_war_victory_desc
+	}
+
+	on_victory = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		scope:defender = {
+			# Legitimacy effect
+			faction_war_end_defeat_legitimacy_effect = yes
+			every_courtier = {
+				limit = { is_female = yes }
+				scope:attacker = {
+					imprison = { target = prev type = house_arrest }
+				}
+			}
+		}
+
+	}
+
+	on_white_peace_desc = {
+		desc = enslave_war_white_peace_desc
+	}
+
+	on_white_peace = {
+		scope:attacker = { 
+			show_pow_release_message_effect = yes
+		}
+	}
+
+	on_defeat_desc = {
+		desc = enslave_war_defeat_desc
+	}
+
+	on_defeat = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		scope:attacker = {
+			pay_short_term_gold = {
+				target = scope:defender
+				gold = major_gold_value
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_invalidate_war_title
+
+	on_primary_attacker_death = invalidate
+	on_primary_defender_death = invalidate
+
+	transfer_behavior = transfer
+
+	attacker_allies_inherit = no
+	defender_allies_inherit = no
+
+	war_name = enslave_war
+
+	attacker_wargoal_percentage = 1
+	defender_wargoal_percentage = 1
+
+	max_attacker_score_from_battles = 100
+	max_defender_score_from_battles = 100
+
+	max_ai_diplo_distance_to_title = 500
+}
+

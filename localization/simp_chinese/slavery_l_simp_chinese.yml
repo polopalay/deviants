@@ -17,3 +17,8 @@
   extortion_opinion: "敲诈了我"
   forced_labor_opinion: "强迫劳动"
   ordinary_labor_opinion: "普通劳动"
+
+  enslave_war: "奴役战争"
+  enslave_war_victory_desc: "[defender.GetName]的所有女性[courtier|E]将被[attacker.GetName] [囚禁|E]"
+  enslave_war_white_peace_desc: "战争毫无意义"
+  enslave_war_defeat_desc: "[attacker.GetName]必须向[defender.GetName]支付战争赔偿"

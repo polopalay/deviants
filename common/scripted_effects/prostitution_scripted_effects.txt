@@ -56,20 +56,26 @@
 			target = scope:had_sex_with_effect_partner
 			modifier = have_sex_opinion
 		}
-		if = {
-			limit = {
-				is_female = yes
-				scope:had_sex_with_effect_partner = { any_artifact = { has_artifact_modifier = master_dildo_modifier count = 0 } }
-				scope:had_sex_with_effect_partner = { any_artifact = { has_artifact_modifier = mistress_dildo_modifier count = 0 } }
-			}
-			scope:had_sex_with_effect_partner = {
-				random = {
-					chance = 10
-					modifier = { has_trait = lustful add = 10 }
-					modifier = { has_trait = succubus add = 5 }
-					modifier = { has_trait = lesser_succubus add = 10 }
-					trigger_event = { id = succubus_event.0550 days = { 7 14 } } 
+		scope:had_sex_with_effect_partner = {
+			random = {
+				chance = 10
+				modifier = { has_trait = lustful add = 10 }
+				modifier = { has_trait = succubus add = 10 }
+				modifier = { has_trait = lesser_succubus add = 5 }
+				modifier = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier add = 10 }
+				modifier = {
+					faith = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted }
+					add = 10
 				}
+				modifier = { add = 25  faith = { has_doctrine = tenet_polyamory } }
+				modifier = {
+					add = -100
+					OR = {
+						any_artifact = { has_artifact_modifier = master_dildo_modifier }
+						any_artifact = { has_artifact_modifier = mistress_dildo_modifier }
+					}
+				}
+				trigger_event = { id = succubus_event.0550 days = { 7 14 } } 
 			}
 		}
 	}
