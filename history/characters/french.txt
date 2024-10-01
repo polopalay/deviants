@@ -654,7 +654,7 @@
 			mind_break_personality = yes
 			add_trait = succubus
 			set_immortal_age = 18
-		}	
+		}
 	}
 	1065.1.1 = {
 		effect = {

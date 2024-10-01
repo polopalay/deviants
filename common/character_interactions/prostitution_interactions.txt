@@ -453,10 +453,7 @@ carn_force_start_prostitution_interaction = {
 			scope:actor = {
 				faith = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted }
 			}
-			scope:actor = { has_trait = rakish OR = { has_trait = lustful has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:recipient = { has_trait = deviant_virgin }
-			scope:recipient = { has_trait = succubus }
-			scope:recipient = { has_trait = lesser_succubus }
+			scope:actor = { OR = { has_trait = rakish has_trait = lustful has_trait = deviant any_secret = { secret_type = secret_deviant } } }
 		}
 		scope:actor = {
 			is_adult = yes
