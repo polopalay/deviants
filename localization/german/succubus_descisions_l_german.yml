@@ -1,8 +1,8 @@
 ﻿l_german:
-  become_succubus: "Werde Succubus"
-  become_succubus.desc: "Dämonen, die sexuelle Beziehungen mit Männern haben und deren Sperma absorbieren, werden Succubi genannt. Um ein Succubus zu werden, müssen Sie eine verdorbene, perverse Person mit ungesunden sexuellen Vorlieben sein und vor allem eine Hexe, die die schwarze Magie beherrscht."
-  become_succubus.c: "Werde Succubus"
-  become_succubus.t: "Du wirst ein Succubus"
+  become_demon: "Werde Dämon"
+  become_demon.desc: "Als eine von Satan und den Fürsten der Hölle gesegnete Succubus hast du alle Voraussetzungen erfüllt, um ein wahrer Dämon zu werden, indem du 100 Menschenleben opferst, um dieses heilige Ritual durchzuführen."
+  become_demon.c: "Erhalte den Segen"
+  become_demon.t: "Beginne das heilige Ritual"
 
   spawn_death_korp: "Die Totenheere beschwören"
   spawn_death_korp.desc: "Legenden erzählen von einer Armee von Untoten, die aus der Hölle gekommen sind. Blutdürstig, furchtlos und unglaublich mächtig, können diese Wesen Feinde besiegen, die doppelt so groß sind wie sie selbst. Dämonen können mit der Segnung Satans ihre geheimen Künste nutzen, um diese tödlichen Legionen zu beschwören."

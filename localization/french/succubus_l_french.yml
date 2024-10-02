@@ -70,3 +70,6 @@
 
  succubus_generals: "Général du Diable"
  succubus_generals_desc: "Les guerriers du diable sont convoqués pour servir la maîtresse du diable."
+
+ cast_spell_recetly: "Magie Récemment Utilisée"
+ cast_spell_recetly_desc: "Magie récemment utilisée, ne peut pas être utilisée pendant un certain temps."

@@ -1,8 +1,8 @@
 ﻿l_french:
-  become_succubus: "Devenir Succube"
-  become_succubus.desc: "Les démons qui ont des relations sexuelles avec des hommes et absorbent leur sperme sont appelés Succubes. Pour devenir Succube, vous devez être une dépravée, une perverse avec des préférences sexuelles malsaines et surtout, une sorcière maîtrisant la magie noire."
-  become_succubus.c: "Devenir Succube"
-  become_succubus.t: "Vous deviendrez Succube"
+  become_demon: "Devenir démon"
+  become_demon.desc: "En tant que Succube béni par Satan et les princes de l'enfer, vous avez rempli toutes les conditions pour devenir un véritable démon, en sacrifiant 100 vies humaines pour effectuer ce rituel sacré."
+  become_demon.c: "Recevoir la bénédiction"
+  become_demon.t: "Commencer le rituel sacré"
 
   spawn_death_korp: "Invoquer les Korps de la Mort"
   spawn_death_korp.desc: "Les légendes racontent l'existence d'une armée de morts-vivants venus de l'enfer. Assoiffés de sang, sans peur et incroyablement puissants, ces êtres peuvent combattre des ennemis deux fois plus grands qu'eux et l'emporter. Les démons, avec la bénédiction de Satan, peuvent utiliser leurs arts secrets pour invoquer ces légions mortelles."

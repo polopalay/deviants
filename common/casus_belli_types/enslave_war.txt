@@ -3,16 +3,23 @@ enslave_war = {
 	group = subjugation
 	ai_only_against_liege = yes
 	allowed_for_character =	{
-		government_has_flag = government_is_landless_adventurer
-		OR = {
-			has_trait = succubus
-			has_trait = lesser_succubus
+		scope:attacker = {
+			government_has_flag = government_is_landless_adventurer
+			OR = { has_trait = succubus has_trait = lesser_succubus }
 		}
 	}
 
 	allowed_against_character = {
-		is_ruler = yes
-		any_courtier = { is_female = yes }
+		scope:defender = {
+			is_ruler = yes
+			any_courtier = { is_female = yes }
+			faith = {
+				faith_hostility_level = {
+					target = scope:attacker.faith
+					value >= faith_hostile_level
+				}
+			}
+		}
 	}
 
 	target_de_jure_regions_above = yes

@@ -1,4 +1,8 @@
 ﻿l_english:
+ trait_demon: "Demon"
+ demon_desc: "Those cursed by heaven, blessed by hell. Deep within them is death and destruction."
+ demon_character_desc: "As children of the devil, blessed by the princes of hell. [ROOT.GetCharacter.GetNamePossessive]'s mission is to bless chaos and destruction throughout the world."
+
  trait_succubus: "Succubus"
  succubus_desc: "Some have seen it, others have heard about it, everybody is whispering about [ROOT.GetCharacter.GetNamePossessive] odd behavior."
  succubus_character_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."

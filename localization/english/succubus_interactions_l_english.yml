@@ -67,3 +67,14 @@
 
  succubus_honor_interaction: "Remove the disgraceful Trait"
  succubus_honor_interaction.desc: "Remove the disgraceful Trait from [recipient.GetShortUIName]"
+
+ deal_with_the_devil: "Deal with the Devil"
+ deal_with_the_devil.desc: "Make a deal with the devil, get what ever you want with a \"small\" price"
+
+ ask_for_become_lesser_succubus: "Ask for become Lesser Succubus"
+ ask_for_become_lesser_succubus.desc: "Ask the devil to become a Lesser Succubus"
+ recipient_secondary_ask_for_become_lesser_succubus: "Choose one"
+
+ ask_for_become_succubus: "Ask for become Succubus"
+ ask_for_become_succubus.desc: "Ask the devil to become a Succubus"
+ recipient_secondary_ask_for_become_succubus: "Choose one"

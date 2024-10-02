@@ -230,7 +230,6 @@
 			scope:actor = { can_have_children = yes has_trait = deviant }
 			scope:use_contraception = no
 		}
-		modifier = { add = -25 scope:recipient = { can_have_children = yes } scope:use_contraception = no }
 	}
 }
 
@@ -551,8 +550,10 @@ carn_force_start_prostitution_interaction = {
 	}
 
 	send_option = {
-		is_valid = {
+		is_shown = {
 			NOT = { scope:actor = scope:recipient }
+		}
+		is_valid = {
 			scope:actor = {
 				has_usable_hook = scope:recipient
 			}
@@ -671,8 +672,10 @@ carn_force_stop_prostitution_interaction = {
 	}
 
 	send_option = {
-		is_valid = {
+		is_shown = {
 			NOT = { scope:actor = scope:recipient }
+		}
+		is_valid = {
 			scope:actor = {
 				has_usable_hook = scope:recipient
 			}
@@ -762,4 +765,3 @@ carn_force_stop_prostitution_interaction = {
 		modifier = { add = 25 scope:hook = yes }
 	}
 }
-

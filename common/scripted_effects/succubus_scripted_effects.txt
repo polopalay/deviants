@@ -69,6 +69,9 @@ start_promote_lew_legend = {
 mind_break_personality = {
 	if = {
 		limit = { has_trait = lustful }
+	}
+	else_if = {
+		limit = { has_trait = lustful }
 		remove_trait = chaste
 	}
 	else_if = {
@@ -203,12 +206,14 @@ mind_break_personality = {
 		limit = { has_trait = greedy }
 		remove_trait = greedy
 	}
-	add_trait = lustful
+	if = {
+		limit = { NOT = { has_trait = lustful } }
+		add_trait = lustful
+	}
 	add_secret = { type = secret_deviant }
 	add_secret = { type = secret_witch }
 	if = {
-		limit = { have_devil_nicknames_trigger = no }
+		limit = { have_devil_nicknames_trigger = no is_female = yes }
 		give_prostitution_nickname = yes
 	}
-	add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 }

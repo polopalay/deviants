@@ -1,3 +1,8 @@
+cast_spell_recetly = {
+	icon = souls_positive
+	health = -1
+}
+
 succubus_buff = {
 	icon = souls_positive
 	diplomacy = 1

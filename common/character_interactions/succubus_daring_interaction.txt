@@ -8,6 +8,7 @@ succubus_weight_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
+				has_trait = demon
 				has_trait_xp = {
 					trait = succubus
 					track = daring
@@ -64,7 +65,10 @@ succubus_makeup_interaction = {
 
 	is_shown = {
 		scope:actor = {
-			has_trait_xp = { trait = succubus track = daring value >= 1 }
+			OR = {
+				has_trait = demon
+				has_trait_xp = { trait = succubus track = daring value >= 1 }
+			}
 		}
 		scope:recipient = {
 			OR = {
@@ -461,10 +465,9 @@ succubus_makeup_interaction = {
 		}
 
 		scope:actor = {
-			add_trait_xp = {
-				trait = succubus
-				track = daring
-				value = -1
+			if = {
+				limit = { has_trait = succubus }
+				add_trait_xp = { trait = succubus track = daring value = -1 }
 			}
 		}
 	}
@@ -476,9 +479,11 @@ succubus_honor_interaction = {
 	desc = succubus_honor_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
+	cooldown = { years = 5 }
 	is_shown = {
 		scope:actor = {
 			OR = {
+				has_trait = demon
 				has_trait_xp = {
 					trait = succubus
 					track = daring
@@ -580,14 +585,13 @@ succubus_mind_break_interaction = {
 	desc = succubus_mind_break_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
-	cooldown = { years = 1 }
+	cooldown = { years = 10 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = {
-			has_trait_xp = {
-				trait = succubus
-				track = daring
-				value >= 25
+			OR = {
+				has_trait = demon
+				has_trait_xp = { trait = succubus track = daring value >= 25 }
 			}
 		}
 		scope:recipient = {
@@ -603,15 +607,10 @@ succubus_mind_break_interaction = {
 	}
 	on_accept = {
 		scope:actor = {
-			add_trait_xp = {
-				trait = succubus
-				track = daring
-				value = -25
-			}
-			add_trait_xp = {
-				trait = succubus
-				track = corruption
-				value = 1
+			if = {
+				limit = { has_trait = succubus }
+				add_trait_xp = { trait = succubus track = daring value = -25 }
+				add_trait_xp = { trait = succubus track = corruption value = 1 }
 			}
 		}
 		scope:recipient = {

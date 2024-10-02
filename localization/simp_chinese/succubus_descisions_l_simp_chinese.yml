@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
-  become_succubus: "成为魅魔"
-  become_succubus.desc: "与男性发生性关系并吸收其精液的恶魔称为魅魔。要成为魅魔，你必须是一个荡妇，一个有病态性偏好的变态，最重要的是，必须是一个拥有黑暗魔法的女巫。"
-  become_succubus.c: "成为魅魔"
-  become_succubus.t: "你将成为魅魔"
+  become_demon: "成为恶魔"
+  become_demon.desc: "作为受到撒旦和地狱王子祝福的魅魔，你已经满足了成为真正恶魔的所有条件，献祭100个人类生命以执行这个神圣的仪式。"
+  become_demon.c: "接受祝福"
+  become_demon.t: "开始神圣仪式"
 
   spawn_death_korp: "召唤死亡军团"
   spawn_death_korp.desc: "传说中有一支来自地狱的不死军队。嗜血、无畏且强大无比，这些人能与比自己大两倍的敌人作战并获胜。受到撒旦祝福的恶魔可以使用他们的秘密法术召唤这些致命的军团。"

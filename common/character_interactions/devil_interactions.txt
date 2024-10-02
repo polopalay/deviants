@@ -1,0 +1,476 @@
+﻿deal_with_the_devil = {
+	icon = fascinate
+	desc = deal_with_the_devil.desc
+	category = interaction_category_diplomacy
+	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait = drunkard
+				has_trait = hashishiyah
+				has_trait = rakish
+				has_trait = reclusive
+				has_trait = irritable
+				has_trait = flagellant
+				has_trait = profligate
+				has_trait = improvident
+				has_trait = contrite
+				has_trait = comfort_eater
+				has_trait = inappetetic
+
+				has_trait = depressed_1
+				has_trait = depressed_genetic
+				has_trait = lunatic_1
+				has_trait = lunatic_genetic
+				has_trait = possessed_1
+				has_trait = one_eyed
+				has_trait = scarred
+				has_trait = maimed
+				has_trait = one_legged
+				has_trait = disfigured
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = sickly
+				has_trait = infirm
+				has_trait = incapable
+				has_trait = leper
+				has_trait = dysentery
+				has_trait = ergotism
+				has_trait = wounded_1
+				has_trait = wounded_2
+				has_trait = wounded_3
+
+				has_trait = ill
+				has_trait = pneumonic
+				has_trait = gout_ridden
+				has_trait = typhus
+				has_trait = consumption
+				has_trait = cancer
+				has_trait = great_pox
+				has_trait = smallpox
+				has_trait = bubonic_plague
+				has_trait = lovers_pox
+				has_trait = great_pox
+				has_trait = possessed_genetic
+				has_trait = bubonic_plague
+				has_trait = measles
+
+				has_trait = albino
+				has_trait = lisping
+				has_trait = stuttering
+				has_trait = giant
+				has_trait = scaly
+				has_trait = clubfooted
+				has_trait = dwarf
+				has_trait = hunchbacked
+				has_trait = infertile
+				has_trait = wheezing
+				has_trait = spindly
+				has_trait = bleeder
+				has_trait = weak
+				has_trait = dull
+				has_trait = beauty_bad_1
+				has_trait = beauty_bad_2
+				has_trait = beauty_bad_3
+				has_trait = intellect_bad_1
+				has_trait = intellect_bad_2
+				has_trait = intellect_bad_3
+				has_trait = physique_bad_1
+				has_trait = physique_bad_2
+				has_trait = physique_bad_3
+				has_trait = inbred
+			}
+			NOR = {
+				has_trait = demon
+				has_trait = succubus
+				has_trait = lesser_succubus
+			}
+		}
+		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
+			OR = {
+				has_trait = demon
+				has_trait = succubus
+				has_trait = lesser_succubus
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			mind_break_personality = yes	
+			remove_trait = drunkard
+			remove_trait = hashishiyah
+			remove_trait = rakish
+			remove_trait = reclusive
+			remove_trait = irritable
+			remove_trait = flagellant
+			remove_trait = profligate
+			remove_trait = improvident
+			remove_trait = contrite
+			remove_trait = comfort_eater
+			remove_trait = inappetetic
+			remove_trait = depressed_1
+			remove_trait = depressed_genetic
+			remove_trait = lunatic_1
+			remove_trait = lunatic_genetic
+			remove_trait = possessed_1
+			remove_trait = possessed_genetic
+			remove_trait = one_eyed
+			remove_trait = scarred
+			remove_trait = maimed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = eunuch
+			remove_trait = blind
+			remove_trait = sickly
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = leper
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+
+			recover_from_disease_effect = { DISEASE = ill }
+			recover_from_disease_effect = { DISEASE = pneumonic }
+			recover_from_disease_effect = { DISEASE = gout_ridden }
+			recover_from_disease_effect = { DISEASE = typhus }
+			recover_from_disease_effect = { DISEASE = consumption }
+			recover_from_disease_effect = { DISEASE = measles }
+			recover_from_disease_effect = { DISEASE = cancer }
+			recover_from_disease_effect = { DISEASE = great_pox }
+			recover_from_disease_effect = { DISEASE = smallpox }
+			recover_from_disease_effect = { DISEASE = bubonic_plague }
+			recover_from_disease_effect = { DISEASE = lovers_pox }
+			recover_from_disease_effect = { DISEASE = bubonic_plague }
+			recover_from_disease_effect = { DISEASE = dysentery }
+			recover_from_disease_effect = { DISEASE = ergotism }
+
+			remove_trait = albino
+			remove_trait = lisping
+			remove_trait = stuttering
+			remove_trait = giant
+			remove_trait = scaly
+			remove_trait = clubfooted
+			remove_trait = dwarf
+			remove_trait = hunchbacked
+			remove_trait = infertile
+			remove_trait = wheezing
+			remove_trait = spindly
+			remove_trait = bleeder
+			remove_trait = weak
+			remove_trait = dull
+			remove_trait = beauty_bad_1
+			remove_trait = beauty_bad_2
+			remove_trait = beauty_bad_3
+			remove_trait = intellect_bad_1
+			remove_trait = intellect_bad_2
+			remove_trait = intellect_bad_3
+			remove_trait = physique_bad_1
+			remove_trait = physique_bad_2
+			remove_trait = physique_bad_3
+			remove_trait = inbred
+			hidden_effect = { 
+				if = {
+					limit = { NOT = { has_trait = beauty_good_1 } }
+					add_trait = beauty_good_1
+					remove_trait = beauty_good_1
+				}
+			}
+		}
+		scope:recipient = {
+			add_character_modifier = { modifier = cast_spell_recetly years = 5 }
+		}
+	}
+	auto_accept = {
+		scope:actor = {
+			NOR = {
+				has_trait = lustful
+				has_trait = deviant
+				has_trait = witch
+				any_secret = { secret_type = secret_deviant } 
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+		modifier = { add = 5 scope:actor = { has_trait = lustful } }
+		modifier = { add = 5 scope:actor = { has_trait = deviant } }
+		modifier = { add = 5 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
+	}
+
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
+
+	ai_will_do = {
+		base = 1
+		modifier = { add = -5 scope:actor ={ has_trait = chaste } }
+		modifier = { add = -5 scope:actor = { has_trait = zealous } }
+		modifier = { add = 1 scope:actor = { has_trait = lustful } }
+		modifier = { add = 1 scope:actor = { has_trait = rakish } }
+		modifier = { add = 1 scope:actor = { has_trait = disfigured } }
+		modifier = { add = 1 scope:actor = { has_treatable_disease_trigger = yes } }
+		modifier = { add = 1 scope:actor = { has_wounds_trigger = yes } }
+		modifier = { add = 1 scope:actor = { has_std_trigger = yes } }
+		modifier = { add = 1 scope:actor = { has_trait = lunatic_1 } }
+		modifier = { add = 1 scope:actor = { has_trait = lunatic_genetic } }
+		modifier = { add = 1 scope:actor = { has_trait = possessed_1 } }
+		modifier = { add = 1 scope:actor = { has_trait = possessed_genetic } }
+	}
+}
+
+ask_for_become_lesser_succubus = {
+	icon = lesser_devil
+	desc = ask_for_become_lesser_succubus.desc
+	category = interaction_category_diplomacy
+	use_diplomatic_range = yes
+	cooldown = { years = 1 }
+
+	is_shown = {
+		scope:actor = {
+			is_female = yes
+			NOR = {
+				has_trait = demon
+				has_trait = succubus
+				has_trait = lesser_succubus
+			}
+			has_trait = lustful
+			OR = {
+				has_trait = deviant
+				any_secret = { secret_type = secret_deviant }
+			}
+			OR = {
+				has_trait = witch
+				any_secret = { secret_type = secret_witch }
+			}
+		}
+		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
+			OR = {
+				has_trait = demon
+				has_trait = succubus
+			}
+		}
+	}
+
+	is_valid = {
+		scope:actor = {
+			any_prisoner = { count > 0 }	
+		}
+	}
+
+	populate_recipient_list = {
+		scope:actor = {
+			every_prisoner = {
+				add_to_list = characters
+			}
+		}
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_trait = lesser_succubus
+			set_immortal_age = 18
+		}
+		scope:secondary_recipient = {
+			death = {
+				death_reason = death_execution
+				killer = scope:actor
+			}
+		}
+		scope:recipient = {
+			add_character_modifier = { modifier = cast_spell_recetly years = 5 }
+		}
+	}
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+		opinion_modifier = {
+			opinion_target = scope:secondary_recipient
+			who = scope:recipient
+			multiplier = -1
+		}
+		modifier = { add = 10 scope:actor = { has_trait = lustful } }
+		modifier = { add = 10 scope:actor = { has_trait = deviant } }
+		modifier = { add = 10 scope:actor = { has_trait = witch } }
+		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
+		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
+	}
+
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 5
+			scope:actor = {
+				has_trait = lustful
+				OR = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+				OR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
+			}
+		}
+	}
+}
+
+ask_for_become_succubus = {
+	icon = devil
+	desc = ask_for_become_succubus.desc
+	category = interaction_category_diplomacy
+	use_diplomatic_range = yes
+	cooldown = { years = 5 }
+
+	is_shown = {
+		scope:actor = {
+			has_trait_xp = {
+				trait = lesser_succubus
+				value >= 100
+			}
+			NOR = {
+				has_trait = demon
+				has_trait = succubus
+			}
+		}
+		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
+			has_trait = demon
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			any_prisoner = { count > 0 }	
+		}
+	}
+
+	populate_recipient_list = {
+		scope:actor = {
+			every_prisoner = {
+				add_to_list = characters
+			}
+		}
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	on_accept = {
+		scope:actor = {
+			remove_trait = lesser_succubus
+			add_trait = succubus
+			set_immortal_age = 18
+		}
+		scope:secondary_recipient = {
+			death = {
+				death_reason = death_execution
+				killer = scope:actor
+			}
+		}
+		scope:recipient = {
+			add_character_modifier = { modifier = cast_spell_recetly years = 5 }
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+		opinion_modifier = {
+			opinion_target = scope:secondary_recipient
+			who = scope:recipient
+			multiplier = -1
+		}
+		modifier = { add = 10 scope:actor = { has_trait = lustful } }
+		modifier = { add = 10 scope:actor = { has_trait = deviant } }
+		modifier = { add = 10 scope:actor = { has_trait = witch } }
+		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
+		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
+	}
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 25
+			scope:actor = {
+				has_trait_xp = {
+					trait = lesser_succubus
+					value >= 100
+				}
+			}
+		}
+	}
+		

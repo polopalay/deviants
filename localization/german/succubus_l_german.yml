@@ -70,3 +70,6 @@
 
   succubus_generals: "Teufelsgeneral"
   succubus_generals_desc: "Die Krieger des Teufels werden gerufen, um der Herrin des Teufels zu dienen."
+
+  cast_spell_recetly: "Vor kurzem Magie verwendet"
+  cast_spell_recetly_desc: "Vor kurzem verwendete Magie, kann für eine gewisse Zeit nicht verwendet werden."

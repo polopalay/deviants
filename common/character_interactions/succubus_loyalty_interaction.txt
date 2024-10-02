@@ -57,12 +57,16 @@ succubus_cultist_interaction = {
 
 	is_shown = {
 		scope:actor = {
-			has_trait = succubus
+			OR = {
+				has_trait = succubus
+				has_trait = demon
+			}
 			is_ruler = yes
 			is_valid_construction_alchemy1_trigger = yes
 		}
 		scope:recipient = {
 			OR = {
+				scope:actor = { has_trait = demon }
 				AND = {
 					scope:actor = { has_trait_xp = { trait = succubus track = loyalty value >= 2 } }
 					primary_title.tier < tier_county
@@ -163,7 +167,7 @@ succubus_cultist_interaction = {
 		}
 
 		if = {
-			limit = { scope:recipient.primary_title.tier = tier_county }
+			limit = { scope:recipient.primary_title.tier = tier_county scope:actor = { has_trait = succubus } }
 			scope:actor = {
 				add_trait_xp = {
 					trait = succubus
@@ -173,7 +177,7 @@ succubus_cultist_interaction = {
 			}
 		}
 		else_if = {
-			limit = { scope:recipient.primary_title.tier = tier_duchy }
+			limit = { scope:recipient.primary_title.tier = tier_duchy scope:actor = { has_trait = succubus } }
 			scope:actor = {
 				add_trait_xp = {
 					trait = succubus
@@ -183,7 +187,7 @@ succubus_cultist_interaction = {
 			}
 		}
 		else_if = {
-			limit = { scope:recipient.primary_title.tier = tier_kingdom }
+			limit = { scope:recipient.primary_title.tier = tier_kingdom scope:actor = { has_trait = succubus } }
 			scope:actor = {
 				add_trait_xp = {
 					trait = succubus
@@ -193,7 +197,7 @@ succubus_cultist_interaction = {
 			}
 		}
 		else_if = {
-			limit = { scope:recipient.primary_title.tier = tier_empire }
+			limit = { scope:recipient.primary_title.tier = tier_empire scope:actor = { has_trait = succubus } }
 			scope:actor = {
 				add_trait_xp = {
 					trait = succubus
@@ -202,7 +206,8 @@ succubus_cultist_interaction = {
 				}
 			}
 		}
-		else = {
+		else_if = {
+			limit = { scope:actor = { has_trait = succubus } }
 			scope:actor = {
 				add_trait_xp = {
 					trait = succubus

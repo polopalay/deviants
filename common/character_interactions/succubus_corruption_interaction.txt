@@ -1,85 +1,21 @@
-succubus_switch_body_interaction = {
-	icon = two_body
-	desc = succubus_switch_body_interaction.desc
-	category = interaction_category_diplomacy
-	interface_priority = 1
-	common_interaction = yes
-	use_diplomatic_range = yes
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = {
-			is_ai = no
-			OR = {
-				has_trait = succubus
-				has_trait = lesser_succubus
-			}
-		}
-		scope:recipient = {
-			is_ruler = yes
-			primary_title.tier >= tier_county
-			OR = {
-				has_trait = succubus
-				has_trait = lesser_succubus
-				has_trait = deviant_virgin
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = { set_player_character = scope:recipient }
-	}
-	auto_accept = yes
-}
-
-succubus_add_courtier_interaction = {
-	icon = fascinate
-	desc = succubus_add_courtier_interaction.desc
-	category = interaction_category_vassal
-	use_diplomatic_range = yes
-	common_interaction = no
-	cooldown = { years = 1 }
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = {
-			has_trait_xp = {
-				trait = succubus
-				track = corruption
-				value >= 1
-			}
-		}
-		scope:recipient = {
-			OR = {
-				is_courtier = yes
-				NOT = { exists = scope:recipient.liege }
-			}
-			NOT = { is_courtier_of = scope:actor }
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			add_courtier = scope:recipient
-			add_trait_xp = {
-				trait = succubus
-				track = corruption
-				value = -1
-			}
-		}
-	}
-	auto_accept = yes
-}
-
 succubus_child_interaction = {
 	icon = pregnant
 	desc = succubus_child_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = no
-	cooldown = { years = 2 }
+	cooldown = { years = 10 }
 	is_shown = {
 		scope:actor = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = { trait = succubus track = corruption value >= 5 }
-			have_soul_forge_trigger = yes
+			OR = {
+				has_trait = demon
+				AND = {
+					has_trait_xp = { trait = succubus track = corruption value >= 5 }
+					have_soul_forge_trigger = yes
+				}
+			}
 		}
 		scope:recipient = {
 			is_adult = yes
@@ -118,10 +54,9 @@ succubus_child_interaction = {
 			}
 		}
 		scope:actor = {
-			add_trait_xp = {
-				trait = succubus
-				track = corruption
-				value = -5
+			if = {
+				limit = { has_trait = succubus }
+				add_trait_xp = { trait = succubus track = corruption value = -5 }
 			}
 		}
 	}
@@ -133,7 +68,7 @@ succubus_create_lesser_succubus_interaction = {
 	desc = succubus_create_lesser_succubus_interaction.desc
 	category = interaction_category_vassal
 	use_diplomatic_range = yes
-	cooldown = { years = 10 }
+	cooldown = { years = 25 }
 	is_shown = {
 		scope:recipient = {
 			OR = {
@@ -142,18 +77,20 @@ succubus_create_lesser_succubus_interaction = {
 			}
 			is_female = yes
 			NOR = {
+				has_trait = demon
 				has_trait = succubus
 				has_trait = lesser_succubus
 				has_trait = deviant_virgin
 			}
 		}
 		scope:actor = {
-			has_trait_xp = {
-				trait = succubus
-				track = corruption
-				value >= 25
+			OR = {
+				has_trait = demon
+				AND = {
+					has_trait_xp = { trait = succubus track = corruption value >= 25 }
+					is_valid_construction_alchemy3_trigger = yes
+				}
 			}
-			is_valid_construction_alchemy3_trigger = yes
 		}
 	}
 	on_accept = {
@@ -163,10 +100,9 @@ succubus_create_lesser_succubus_interaction = {
 			set_immortal_age = 18
 		}
 		scope:actor = {
-			add_trait_xp = {
-				trait = succubus
-				track = corruption
-				value = -25
+			if = {
+				limit = { has_trait = succubus }
+				add_trait_xp = { trait = succubus track = corruption value = -25 }
 			}
 		}
 	}
@@ -183,22 +119,20 @@ succubus_create_succubus_interaction = {
 		scope:recipient = {
 			is_female = yes
 			NOR = {
+				has_trait = demon
 				has_trait = succubus
 				has_trait = lesser_succubus
 				has_trait = deviant_virgin
 			}
 		}
 		scope:actor = {
-			has_trait_xp = {
-				trait = succubus
-				track = corruption
-				value >= 100
+			OR = {
+				has_trait = demon
+				AND = {
+					has_trait_xp = { trait = succubus track = corruption value >= 100 }
+					is_valid_construction_alchemy3_trigger = yes
+				}
 			}
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			is_valid_construction_alchemy3_trigger = yes
 		}
 	}
 	on_accept = {
@@ -208,10 +142,9 @@ succubus_create_succubus_interaction = {
 			set_immortal_age = 18
 		}
 		scope:actor = {
-			add_trait_xp = {
-				trait = succubus
-				track = corruption
-				value = -100
+			if = {
+				limit = { has_trait = succubus }
+				add_trait_xp = { trait = succubus track = corruption value = -100 }
 			}
 		}
 	}

@@ -70,3 +70,6 @@
 
   succubus_generals: "악마 장군"
   succubus_generals_desc: "악마의 전사들이 악마의 여주인을 섬기기 위해 소환됩니다."
+
+  cast_spell_recetly: "최근 마법 사용"
+  cast_spell_recetly_desc: "최근에 마법을 사용하였으므로 일정 시간 동안 사용할 수 없습니다."

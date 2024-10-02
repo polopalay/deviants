@@ -70,3 +70,6 @@
 
  succubus_generals: "魔鬼将军"
  succubus_generals_desc: "魔鬼的战士被召唤来服务魔鬼的女主人"
+
+ cast_spell_recetly: "最近使用魔法"
+ cast_spell_recetly_desc: "最近使用的魔法，无法在一段时间内使用。"

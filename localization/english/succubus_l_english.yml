@@ -65,7 +65,10 @@
 
 # Modifiers
  succubus_buff: "Devil's Blessing"
- succubus_buff_desc: "This person had been blessed by the Succubus"
+ succubus_buff_desc: "This person had been blessed by the Succubus."
 
  succubus_generals: "Devil General"
- succubus_generals_desc: "The devil's warriors are summoned to serve the devil's mistress"
+ succubus_generals_desc: "The devil's warriors are summoned to serve the devil's mistress."
+
+ cast_spell_recetly: "Recently Used Magic"
+ cast_spell_recetly_desc: "Recently used magic, cannot be used for a period of time."

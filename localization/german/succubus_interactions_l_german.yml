@@ -55,14 +55,12 @@
   succubus_marking_4: "Blumige rauchige Augen"
   succubus_marking_5: "Kleine rauchige Augen"
   succubus_marking_6: "Minimale rauchige Augen"
-
   succubus_default_eyes: "Standardaugen"
   succubus_white_eyes: "Weiße Augen"
   succubus_red_eyes: "Rote Augen"
   succubus_default_hair: "Standardhaare"
   succubus_white_hair: "Weiße Haare"
   succubus_red_hair: "Rote Haare"
-
   naked: "Nackt"
   glass: "Glas"
 
@@ -72,3 +70,13 @@
   succubus_honor_interaction: "Unehrenhaften Trait entfernen"
   succubus_honor_interaction.desc: "Entfernen Sie den unehrenhaften Trait von [recipient.GetShortUIName]"
 
+  deal_with_the_devil: "Pakt mit dem Teufel"
+  deal_with_the_devil.desc: "Schließe einen Pakt mit dem Teufel und erhalte, was immer du willst, zu einem \"kleinen\" Preis."
+
+  ask_for_become_lesser_succubus: "Bitte um die Transformation zur geringeren Succubus"
+  ask_for_become_lesser_succubus.desc: "Bitte den Teufel, um eine geringere Succubus zu werden."
+  recipient_secondary_ask_for_become_lesser_succubus: "Wähle eine"
+
+  ask_for_become_succubus: "Bitte um die Transformation zur Succubus"
+  ask_for_become_succubus.desc: "Bitte den Teufel, um eine Succubus zu werden."
+  recipient_secondary_ask_for_become_succubus: "Wähle eine"

@@ -1,3 +1,64 @@
+demon = {
+	category = health
+	icon = demon.dds
+	
+	immortal = yes
+	can_have_children = no
+	shown_in_ruler_designer = no
+	no_prowess_loss_from_age = yes
+	add_commander_trait = yes
+	add_commander_trait = yes
+
+	flag = is_immortal
+	flag = immortal_visuals
+	flag = immortal_fertility
+	flag = immortal_incapability
+	flag = carn_cannot_be_enslaved
+
+	ai_zeal = dominant_positive_ai_value
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = demon_desc
+			}
+			desc = demon_character_desc
+		}
+	}
+
+	opposites = { lesser_succubus deviant_virgin incapable }
+	character_travel_speed = 66
+	character_travel_safety = 66
+	travel_danger = -66
+	attraction_opinion = 66
+	courtier_opinion = 66
+	general_opinion = 66
+	opinion_of_male_rulers = 66
+	health = 3
+	negate_health_penalty_add = 2
+	stewardship = 13
+	intrigue = 13
+	learning = 13
+	martial = 13
+	prowess = 13
+	diplomacy = 13
+	enemy_hostile_scheme_phase_duration_add = 66
+	legitimacy_baseline_add = 1.3
+	monthly_dynasty_prestige = 1.3
+	monthly_prestige = 1.3
+	men_at_arms_maintenance = -0.6
+	knight_effectivenesuccubus_mult = 0.6
+	monthly_piety = 0.6
+	no_water_crossing_penalty = yes
+	supply_duration = 0.6
+	stress_gain_mult = -0.6
+	movement_speed = 1.3
+	naval_movement_speed_mult = 1.3
+
+	ruler_designer_cost = 250
+}
+
 succubus = {
 	category = health
 	icon = succubus.dds
@@ -28,7 +89,7 @@ succubus = {
 		}
 	}
 
-	opposites = { lesser_succubus deviant_virgin incapable }
+	opposites = { demon lesser_succubus deviant_virgin chaste incapable }
 
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
@@ -166,7 +227,7 @@ lesser_succubus = {
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
-	opposites = { succubus deviant_virgin incapable }
+	opposites = { demon succubus deviant_virgin chaste incapable }
 
 	desc = {
 		first_valid = {
@@ -236,7 +297,7 @@ deviant_virgin = {
 	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
-	opposites = { chaste succubus lesser_succubus }
+	opposites = { demon succubus lesser_succubus chaste }
 
 	desc = {
 		first_valid = {

@@ -68,26 +68,39 @@ demon_generals = {
 	ai_will_do = { base = 10 }
 }
 
-become_succubus = {
+become_demon = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
-	desc = become_succubus.desc
-	confirm_text = become_succubus.c
-	selection_tooltip = become_succubus.t
+	desc = become_demon.desc
+	confirm_text = become_demon.c
+	selection_tooltip = become_demon.t
 	decision_group_type = decisions
 
 	is_shown = {
 		is_ai = no
 		is_ruler = yes
 		is_female = yes
-		NOR = {
-			has_trait = succubus
-			has_trait = lesser_succubus
-			has_trait = deviant_virgin
+		has_trait_xp = {
+			trait = succubus
+			track = corruption
+			value >= 100
+		}
+		has_trait_xp = {
+			trait = succubus
+			track = loyalty
+			value >= 100
 		}
 	}
+	is_valid = {
+		any_prisoner = { count >= 100 }
+	}
 	effect = {
-		mind_break_personality = yes
-		add_trait = succubus
+		every_prisoner = {
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
+		add_trait = demon
 		set_immortal_age = 18
 	}
 	ai_check_interval = 0

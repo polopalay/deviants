@@ -1,8 +1,8 @@
 ﻿l_english:
- become_succubus: "Become Succubus"
- become_succubus.desc: "Demons who have sex with men and absorb their semen are called Succubus. To become a Succubus, you must be a slut, a pervert with sick sexual preferences and above all, a witch with dark magic."
- become_succubus.c: "Become Succubus"
- become_succubus.t: "You will become Succubus"
+ become_demon: "Become demon"
+ become_demon.desc: "As a Succubus blessed by satan and the princes of hell. You have met all the conditions to become a true demon, sacrificing 100 human lives to perform this sacred ritual."
+ become_demon.c: "Receive the blessing" 
+ become_demon.t: "Begin the sacred ritual"
  
  spawn_death_korp: "Spawn Death Korps"
  spawn_death_korp.desc: "Legends tell of an undead army from hell. Bloodthirsty, fearless, and incredibly powerful, these people can fight enemies twice their size and still win. Demons with the blessing of Satan can use their secret arts to summon these deadly legions."
