@@ -1684,7 +1684,7 @@ succubus_courtier.5500 = {
 				value = 1
 			}
 			add_character_flag = { flag = pussy_cum days = 20 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 20 }
+			add_character_flag = { flag = ass_cum days = 20 }
 		}
 	}
 	# just pose

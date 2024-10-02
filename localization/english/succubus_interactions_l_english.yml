@@ -32,9 +32,6 @@
  succubus_create_succubus_interaction: "Create Succubus"
  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
 
- succubus_add_courtier_interaction: "Add to Court"
- succubus_add_courtier_interaction.desc: "Add [recipient.GetShortUIName] to your Court"
-
  succubus_absorb_interaction: "Absorb"
  succubus_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
 

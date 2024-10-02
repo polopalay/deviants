@@ -32,9 +32,6 @@
   succubus_create_succubus_interaction: "Einen Succubus erschaffen"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem Succubus"
 
-  succubus_add_courtier_interaction: "Hinzufügen zum Hof"
-  succubus_add_courtier_interaction.desc: "Fügen Sie [recipient.GetShortUIName] zu Ihrem Hof hinzu"
-
   succubus_absorb_interaction: "Absorbieren"
   succubus_absorb_interaction.desc: "Absorbieren Sie die Macht von [recipient.GetShortUIName] in Loyalität"
 

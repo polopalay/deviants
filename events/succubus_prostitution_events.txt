@@ -68,7 +68,7 @@ succubus_prostitution.9002 = {
 			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
 		}
 	}
@@ -97,7 +97,7 @@ succubus_prostitution.9003 = {
 				track = power
 				value = 1
 			}
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = pussy_cum days = 10 }
 		}
 	}
@@ -249,7 +249,7 @@ succubus_prostitution.9013 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -271,7 +271,7 @@ succubus_prostitution.9014 = {
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -300,7 +300,7 @@ succubus_prostitution.9015 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -322,7 +322,7 @@ succubus_prostitution.9016 = {
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -420,7 +420,7 @@ succubus_prostitution.9021 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -442,7 +442,7 @@ succubus_prostitution.9022 = {
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -470,7 +470,7 @@ succubus_prostitution.9023 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -492,7 +492,7 @@ succubus_prostitution.9024 = {
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -548,7 +548,7 @@ succubus_prostitution.9031 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -661,7 +661,7 @@ succubus_prostitution.9033 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -684,7 +684,7 @@ succubus_prostitution.9034 = {
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -712,7 +712,7 @@ succubus_prostitution.9035 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -734,7 +734,7 @@ succubus_prostitution.9036 = {
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 	}
@@ -1449,7 +1449,7 @@ succubus_prostitution.9233 = {
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
-			add_character_flag = { flag = succubus_asuccubus_cum days = 10 }
+			add_character_flag = { flag = ass_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 		if = {

@@ -32,9 +32,6 @@
   succubus_create_succubus_interaction: "创造魅魔"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]将变成魅魔"
 
-  succubus_add_courtier_interaction: "添加到朝廷"
-  succubus_add_courtier_interaction.desc: "将[recipient.GetShortUIName]添加到你的朝廷"
-
   succubus_absorb_interaction: "吸收"
   succubus_absorb_interaction.desc: "将[recipient.GetShortUIName]的力量吸收到忠诚中"
 

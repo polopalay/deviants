@@ -1,6 +1,5 @@
 ﻿is_valid_prostitute_trigger = {
 	is_adult = yes
-	is_female = yes
 	is_in_army = no
 	has_trait = lifestyle_prostitute
 	NOT = { has_character_modifier = recently_had_sex }

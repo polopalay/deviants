@@ -1,4 +1,38 @@
-﻿deal_with_the_devil = {
+﻿succubus_switch_body_interaction = {
+	icon = two_body
+	desc = succubus_switch_body_interaction.desc
+	category = interaction_category_diplomacy
+	interface_priority = 1
+	common_interaction = yes
+	use_diplomatic_range = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			OR = {
+				has_trait = demon
+				has_trait = succubus
+				has_trait = lesser_succubus
+			}
+		}
+		scope:recipient = {
+			is_ruler = yes
+			primary_title.tier >= tier_county
+			OR = {
+				has_trait = succubus
+				has_trait = lesser_succubus
+				has_trait = deviant_virgin
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = { set_player_character = scope:recipient }
+	}
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+}
+
+deal_with_the_devil = {
 	icon = fascinate
 	desc = deal_with_the_devil.desc
 	category = interaction_category_diplomacy
@@ -246,7 +280,6 @@ ask_for_become_lesser_succubus = {
 
 	is_shown = {
 		scope:actor = {
-			is_female = yes
 			NOR = {
 				has_trait = demon
 				has_trait = succubus

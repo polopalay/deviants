@@ -587,7 +587,7 @@ succubus_blackmail.1301 = {
 				track = daring
 				value = 1
 			}
-			add_character_flag = { flag = succubus_asuccubus_cum days = 20 }
+			add_character_flag = { flag = ass_cum days = 20 }
 			add_character_flag = { flag = body_cum days = 20 }
 			add_character_flag = { flag = pussy_cum days = 20 }
 			add_character_flag = { flag = face_cum days = 20 }

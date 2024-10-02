@@ -1276,7 +1276,7 @@ succubus_devil.5320 = {
 				value = 25
 			}
 			add_character_flag = { flag = pussy_cum months = 1 }
-			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
+			add_character_flag = { flag = ass_cum months = 1 }
 		}
 		trigger_event = succubus_devil.5321
 	}
@@ -2372,7 +2372,7 @@ succubus_devil.1320 = {
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
-			add_character_flag = { flag = succubus_asuccubus_cum months = 1 }
+			add_character_flag = { flag = ass_cum months = 1 }
 			add_trait_xp = {
 				trait = succubus
 				track = corruption

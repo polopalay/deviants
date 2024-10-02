@@ -32,9 +32,6 @@
   succubus_create_succubus_interaction: "Создать суккуба"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] станет суккубом."
 
-  succubus_add_courtier_interaction: "Добавить в двор"
-  succubus_add_courtier_interaction.desc: "Добавьте [recipient.GetShortUIName] в свой двор."
-
   succubus_absorb_interaction: "Поглотить"
   succubus_absorb_interaction.desc: "Поглотить силу от [recipient.GetShortUIName] в верность."
 

@@ -1,31 +1,36 @@
 ﻿l_korean:
-  trait_succubus: "서큐버스"
-  succubus_desc: "어떤 이들은 그것을 보았고, 다른 이들은 들었으며, 모두가 [ROOT.GetCharacter.GetNamePossessive] 이상한 행동에 대해 속삭이고 있습니다."
-  succubus_character_desc: "내부가 어떤지와 관계없이, 아무도 [ROOT.GetCharacter.GetName]에 대해 이상하다고 생각하지 않습니다."
-  
-  trait_track_corruption: "일탈"
-  trait_track_corruption_desc: "그녀가 수집한 영혼들로부터, 그녀는 괴물 같은 존재를 소환할 수 있는 더 많은 힘을 얻습니다."
-  
-  trait_track_power: "힘"
-  trait_track_power_desc: "그녀는 저렴한 창녀로서 남성들에게 서비스를 제공하여 그들의 정액을 얻습니다."
-  
-  trait_track_loyalty: "병사들의 충성"
-  trait_track_loyalty_desc: "남성의 충성을 보장하는 방법은 여러 가지가 있습니다."
-  
-  trait_track_daring: "대담함"
-  trait_track_daring_desc: "인생의 많은 일에는 용기가 필요합니다."
+  trait_demon: "악마"
+  demon_desc: "하늘에 저주받고 지옥에 축복받은 자들. 그들 안에는 죽음과 파괴가 깊이 숨어 있다."
+  demon_character_desc: "악마의 자녀로, 지옥의 왕자들에게 축복받은 자들. [ROOT.GetCharacter.GetNamePossessive]의 임무는 전 세계에 혼돈과 파괴를 축복하는 것이다."
 
-  trait_lesser_succubus: "하위 서큐버스"
-  lesser_succubus_desc: "내부가 어떤지와 관계없이, 아무도 [ROOT.GetCharacter.GetName]에 대해 이상하다고 생각하지 않습니다."
-  lesser_succubus_character_desc: "대부분이 그것을 보았고, 모두가 들었습니다. [ROOT.GetCharacter.GetNamePossessive] 행동은 도덕적으로 타락했습니다. 그녀는 평범한 거리의 창녀에 대해 언급할 때와 같은 경멸로 언급됩니다."
+  trait_succubus_neutral: "섹시한 악마"
+  trait_succubus_female: "섹시한 악마"
+  trait_succubus_male: "인큐버스"
+  succubus_desc: "어떤 사람은 보았고, 어떤 사람은 들었습니다. 모두가 [ROOT.GetCharacter.GetNamePossessive]의 이상한 행동에 대해 속삭이고 있습니다."
+  succubus_character_desc: "내부가 무엇이든 간에, [ROOT.GetCharacter.GetName]에 대해 이상하다고 생각하는 사람은 없다."
+
+  trait_track_corruption: "변태"
+  trait_track_corruption_desc: "그녀가 수집한 영혼들로부터, 그녀는 괴물 같은 생물을 소환할 수 있는 더 많은 힘을 얻는다."
+  trait_track_power: "힘"
+  trait_track_power_desc: "그녀는 저렴한 매춘부로서 남성들에게 그들의 정액을 얻기 위해 봉사한다."
+  trait_track_loyalty: "무장한 자들의 충성"
+  trait_track_loyalty_desc: "남성의 충성을 보장하는 방법은 하나가 아니다."
+  trait_track_daring: "대담함"
+  trait_track_daring_desc: "인생의 많은 일에 용기가 필요하다."
+
+  trait_lesser_succubus_neutral: "하위 섹시한 악마"
+  trait_lesser_succubus_female: "하위 섹시한 악마"
+  trait_lesser_succubus_male: "하위 인큐버스"
+  lesser_succubus_desc: "내부가 무엇이든 간에, [ROOT.GetCharacter.GetName]에 대해 이상하다고 생각하는 사람은 없다."
+  lesser_succubus_character_desc: "대부분이 보았고, 모두가 들었다. [ROOT.GetCharacter.GetNamePossessive]의 행동은 도덕적으로 타락해 있다. 그녀는 일반적인 거리 매춘부를 이야기할 때와 같은 경멸로 언급된다."
   
   trait_track_lesser_succubus: "힘"
-  trait_track_lesser_succubus_desc: "그녀는 저렴한 창녀로서 남성들에게 서비스를 제공하여 그들의 정액을 얻습니다."
+  trait_track_lesser_succubus_desc: "그녀는 저렴한 매춘부로서 남성들에게 그들의 정액을 얻기 위해 봉사한다."
 
-  trait_deviant_virgin: "흥분한 처녀"
-  deviant_virgin_desc: "[ROOT.GetCharacter.GetName]는 악마의 창녀입니다."
-  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName]는 악마의 창녀입니다."
+  trait_deviant_virgin: "음탕한 처녀"
+  deviant_virgin_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 창녀이다."
+  deviant_virgin_character_desc: "[ROOT.GetCharacter.Get.Name]은(는) 악마의 창녀이다."
 
   trait_deviant_blood: "악마의 피"
-  deviant_blood_desc: "[ROOT.GetCharacter.GetName]는 악마의 자식입니다."
-  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName]는 악마의 자식입니다."
+  deviant_blood_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 자식이다."
+  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 자식이다."

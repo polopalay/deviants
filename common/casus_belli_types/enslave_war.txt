@@ -5,14 +5,14 @@ enslave_war = {
 	allowed_for_character =	{
 		scope:attacker = {
 			government_has_flag = government_is_landless_adventurer
-			OR = { has_trait = succubus has_trait = lesser_succubus }
+			OR = { has_trait = succubus has_trait = lesser_succubus has_trait = demon }
 		}
 	}
 
 	allowed_against_character = {
 		scope:defender = {
 			is_ruler = yes
-			any_courtier = { is_female = yes }
+			any_courtier = { count > 0 }
 			faith = {
 				faith_hostility_level = {
 					target = scope:attacker.faith
@@ -51,7 +51,6 @@ enslave_war = {
 			# Legitimacy effect
 			faction_war_end_defeat_legitimacy_effect = yes
 			every_courtier = {
-				limit = { is_female = yes }
 				scope:attacker = {
 					imprison = { target = prev type = house_arrest }
 				}

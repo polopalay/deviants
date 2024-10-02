@@ -31,10 +31,7 @@ demon = {
 	character_travel_speed = 66
 	character_travel_safety = 66
 	travel_danger = -66
-	attraction_opinion = 66
-	courtier_opinion = 66
 	general_opinion = 66
-	opinion_of_male_rulers = 66
 	health = 3
 	negate_health_penalty_add = 2
 	stewardship = 13
@@ -62,7 +59,6 @@ demon = {
 succubus = {
 	category = health
 	icon = succubus.dds
-	valid_sex = female
 
 	immortal = yes
 	can_have_children = no
@@ -79,6 +75,20 @@ succubus = {
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_succubus_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_succubus_female
+			}
+			desc = trait_succubus_male
+		}
+	}
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -91,12 +101,11 @@ succubus = {
 
 	opposites = { demon lesser_succubus deviant_virgin chaste incapable }
 
+	general_opinion = 5
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
 	character_travel_speed = 1
 	travel_danger = -1
-	attraction_opinion = 1
-	courtier_opinion = 1
 	stewardship = 1
 	intrigue = 1
 	learning = 1
@@ -104,7 +113,6 @@ succubus = {
 	martial = 1
 	prowess = 1
 	diplomacy = 1
-	opinion_of_male_rulers = 5
 	stress_gain_mult = -0.1
 
 	tracks = {
@@ -127,20 +135,15 @@ succubus = {
 		}
 		daring = {
 			25 = {
-				attraction_opinion = 4
-				courtier_opinion = 4
+				general_opinion = 5
 			}
 			50 = {
-				attraction_opinion = 5
-				courtier_opinion = 5
+				general_opinion = 5
 			}
 			75 = {
-				attraction_opinion = 5
-				courtier_opinion = 5
+				general_opinion = 5
 			}
 			100 = {
-				attraction_opinion = 5
-				courtier_opinion = 5
 				general_opinion = 10
 			}
 		}
@@ -172,7 +175,6 @@ succubus = {
 				martial = 2
 				prowess = 2
 				diplomacy = 2
-				opinion_of_male_rulers = 10
 				men_at_arms_maintenance = -0.1
 				knight_effectivenesuccubus_mult = 0.1
 				monthly_piety = 0.1
@@ -183,7 +185,6 @@ succubus = {
 				martial = 3
 				prowess = 3
 				diplomacy = 3
-				opinion_of_male_rulers = 10
 				men_at_arms_maintenance = -0.2
 				knight_effectivenesuccubus_mult = 0.2
 				monthly_piety = 0.2
@@ -193,7 +194,6 @@ succubus = {
 				martial = 4
 				prowess = 4
 				diplomacy = 4
-				opinion_of_male_rulers = 25
 				men_at_arms_maintenance = -0.2
 				knight_effectivenesuccubus_mult = 0.2
 				monthly_piety = 0.3
@@ -211,7 +211,6 @@ succubus = {
 lesser_succubus = {
 	category = health
 	icon = lesser_succubus.dds
-	valid_sex = female
 
 	immortal = yes
 	can_have_children = no
@@ -228,6 +227,20 @@ lesser_succubus = {
 	ai_zeal = dominant_negative_ai_value
 
 	opposites = { demon succubus deviant_virgin chaste incapable }
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_lesser_succubus_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_lesser_succubus_female
+			}
+			desc = trait_lesser_succubus_female
+		}
+	}
 
 	desc = {
 		first_valid = {
@@ -293,7 +306,6 @@ deviant_virgin = {
 	category = fame
 	icon = virgin.dds
 	minimum_age = 16
-	valid_sex = female
 	shown_in_ruler_designer = no
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value

@@ -280,6 +280,7 @@ succubus_event.0550 = {
 			OR = {
 				has_trait = succubus
 				has_trait = lesser_succubus
+				has_trait = demon
 			}
 		}
 		name = succubus_event.0550.a
@@ -311,10 +312,9 @@ succubus_event.0550 = {
 	option = {
 		ai_chance = { base = 50 }
 		trigger = {
-			has_trait_xp = {
-				trait = succubus
-				track = corruption
-				value >= 1
+			OR = {
+				has_trait = demon
+				has_trait_xp = { trait = succubus track = corruption value >= 1 }
 			}
 		}
 		name = succubus_event.0550.c

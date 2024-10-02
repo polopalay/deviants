@@ -20,6 +20,7 @@ prostitute_clothes = {
 					has_trait = succubus
 					has_trait = lesser_succubus
 					has_trait = deviant_virgin
+					has_trait = demon
 				}
 			}
 		}

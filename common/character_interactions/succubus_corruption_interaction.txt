@@ -7,7 +7,6 @@ succubus_child_interaction = {
 	cooldown = { years = 10 }
 	is_shown = {
 		scope:actor = {
-			is_female = yes
 			is_adult = yes
 			OR = {
 				has_trait = demon
@@ -75,7 +74,6 @@ succubus_create_lesser_succubus_interaction = {
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
 			}
-			is_female = yes
 			NOR = {
 				has_trait = demon
 				has_trait = succubus
@@ -106,6 +104,7 @@ succubus_create_lesser_succubus_interaction = {
 			}
 		}
 	}
+	ignores_pending_interaction_block = yes
 	auto_accept = yes
 }
 
@@ -117,7 +116,6 @@ succubus_create_succubus_interaction = {
 	cooldown = { years = 50 }
 	is_shown = {
 		scope:recipient = {
-			is_female = yes
 			NOR = {
 				has_trait = demon
 				has_trait = succubus
@@ -137,6 +135,7 @@ succubus_create_succubus_interaction = {
 		}
 		}
 	}
+	ignores_pending_interaction_block = yes
 	auto_accept = yes
 }
 

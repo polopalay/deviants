@@ -3,7 +3,9 @@
  demon_desc: "Those cursed by heaven, blessed by hell. Deep within them is death and destruction."
  demon_character_desc: "As children of the devil, blessed by the princes of hell. [ROOT.GetCharacter.GetNamePossessive]'s mission is to bless chaos and destruction throughout the world."
 
- trait_succubus: "Succubus"
+ trait_succubus_neutral: "Succubus"
+ trait_succubus_female: "Succubus"
+ trait_succubus_male: "Incubus"
  succubus_desc: "Some have seen it, others have heard about it, everybody is whispering about [ROOT.GetCharacter.GetNamePossessive] odd behavior."
  succubus_character_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."
  trait_track_corruption: "Deviant"
@@ -15,7 +17,9 @@
  trait_track_daring: "Daring"
  trait_track_daring_desc: "Courage is needed for many things in life"
 
- trait_lesser_succubus: "Lesser Succubus"
+ trait_lesser_succubus_neutral: "Lesser Succubus"
+ trait_lesser_succubus_female: "Lesser Succubus"
+ trait_lesser_succubus_male: "Lesser Incubus"
  lesser_succubus_desc: "Regardless of what's on the inside, nobody thinks there is anything that odd about [ROOT.GetCharacter.GetName]."
  lesser_succubus_character_desc: "Most have seen it, everybody has heard about it. [ROOT.GetCharacter.GetNamePossessive] behavior is morally depraved. She is spoken with the same disdain as one would when commenting about a common street whore."
  trait_track_lesser_succubus: "Power"

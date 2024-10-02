@@ -78,7 +78,6 @@ become_demon = {
 	is_shown = {
 		is_ai = no
 		is_ruler = yes
-		is_female = yes
 		has_trait_xp = {
 			trait = succubus
 			track = corruption

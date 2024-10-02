@@ -288,17 +288,14 @@ succubus_outfit = {
 		}
 	}
 	succubus_11 = {
-		traits = { succubus }
+		traits = { succubus demon }
 		trigger = {
-			has_trait_xp = {
-				trait = succubus
-				track = corruption
-				value = 100
-			}
-			has_trait_xp = {
-				trait = succubus
-				track = loyalty
-				value = 100
+			OR = {
+				has_trait = demon
+				AND = {
+					has_trait_xp = { trait = succubus track = corruption value = 100 }
+					has_trait_xp = { trait = succubus track = loyalty value = 100 }
+				}
 			}
 		}
 		dna_modifiers = {

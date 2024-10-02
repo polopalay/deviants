@@ -1,6 +1,7 @@
 quarterly_playable_pulse = {
 	trigger = {
 		is_adult = yes
+		is_female = yes
 		OR = {
 			has_trait = succubus
 			has_trait = lesser_succubus
@@ -8,7 +9,6 @@ quarterly_playable_pulse = {
 		is_ruler = yes
 		is_landed = yes
 		is_imprisoned = no
-		is_female = yes
 	}
 	random_on_action = {
 		100 = succubus_devil_on_action
@@ -24,6 +24,13 @@ succubus_devil_on_action = {
 }
 
 on_travel_plan_movement = {
+	trigger = {
+		is_adult = yes
+		is_female = yes
+		has_trait = succubus
+		is_ruler = yes
+		age >= 18
+	}
 	on_actions = {
 		delay = { days = { 2 4 } }
 		succubus_travel_events
@@ -31,12 +38,6 @@ on_travel_plan_movement = {
 }
 
 succubus_travel_events = {
-	trigger = {
-		is_adult = yes
-		has_trait = succubus
-		is_ruler = yes
-		age >= 18
-	}
 	random_events = {
 		chance_to_happen = 5
 		100 = succubus_travel.0100 # spot a bound woman having a witch trial

@@ -36,6 +36,7 @@ succubus_absorb_interaction = {
 			}
 		}
 	}
+	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 12
 	ai_targets = {
@@ -218,5 +219,6 @@ succubus_cultist_interaction = {
 		}
 	}
 
+	ignores_pending_interaction_block = yes
 	auto_accept = yes
 }
