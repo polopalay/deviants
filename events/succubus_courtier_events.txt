@@ -948,7 +948,7 @@ succubus_courtier.1463 = {
 
 	option = {
 		if = {
-			limit = { NOT = { has_nickname = nickname_the_exhibitionist } }
+			limit = { NOT = { has_nickname = nickname_the_exhibitionist has_nickname = nickname_the_demon_queen } }
 			give_nickname = nickname_the_exhibitionist
 		}
 		name = succubus_courtier.1463.a
@@ -1759,8 +1759,8 @@ succubus_courtier.5510 = {
 			value = 1
 		}
 		if = {
-			limit = { NOT = { has_nickname = nickname_the_sex_machine } }
-			give_nickname = nickname_the_sex_machine
+			limit = { NOT = { has_nickname = nickname_the_penis_guillotine  has_nickname = nickname_the_demon_queen } }
+			give_nickname = nickname_the_penis_guillotine
 		}
 	}
 	# pleasure yourself

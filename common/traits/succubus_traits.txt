@@ -4,7 +4,6 @@ demon = {
 	
 	immortal = yes
 	can_have_children = no
-	shown_in_ruler_designer = no
 	no_prowess_loss_from_age = yes
 	add_commander_trait = yes
 	add_commander_trait = yes
@@ -26,14 +25,17 @@ demon = {
 			desc = demon_character_desc
 		}
 	}
-
 	opposites = { lesser_succubus deviant_virgin incapable }
+
+	monthly_lifestyle_xp_gain_mult = -1000
+	long_reign_bonus_mult = -1000
+
+	general_opinion = 66
 	character_travel_speed = 66
 	character_travel_safety = 66
 	travel_danger = -66
-	general_opinion = 66
 	health = 3
-	negate_health_penalty_add = 2
+	negate_health_penalty_add = 3
 	stewardship = 13
 	intrigue = 13
 	learning = 13
@@ -53,7 +55,7 @@ demon = {
 	movement_speed = 1.3
 	naval_movement_speed_mult = 1.3
 
-	ruler_designer_cost = 250
+	ruler_designer_cost = 400
 }
 
 succubus = {
@@ -62,7 +64,6 @@ succubus = {
 
 	immortal = yes
 	can_have_children = no
-	shown_in_ruler_designer = no
 	no_prowess_loss_from_age = yes
 	add_commander_trait = yes
 

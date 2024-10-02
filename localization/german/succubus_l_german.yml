@@ -48,10 +48,10 @@
   nickname_the_exhibitionist: "Der Exhibitionist"
   nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] ist berühmt für [CHARACTER.GetHerHis|U] Exhibitionismus, öffentliche Sexualakte und öffentliches Urinieren."
 
+  nickname_the_demon_queen: "Die Dämonen-Königin"
+  nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] ist ein Geschöpf der Hölle, das die Segnungen des Bösen in die Welt bringen wird."
+
 # Titles
-  d_laamp_lilith: "Die Prostituierten von Lilith"
-  d_laamp_belial: "Die Hexen von Belial"
-  d_laamp_abaddon: "Die Sklaven von Abaddon"
   d_laamp_satan: "Die Teufel von Satan"
 
 # Men at Arms

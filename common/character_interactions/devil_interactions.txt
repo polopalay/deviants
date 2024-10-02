@@ -28,7 +28,6 @@
 	on_accept = {
 		scope:actor = { set_player_character = scope:recipient }
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 }
 

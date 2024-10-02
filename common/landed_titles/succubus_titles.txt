@@ -1,43 +1,4 @@
-﻿d_laamp_lilith = {
-	color = { 238 115 221 }
-	capital = c_oxfordshire
-
-	definite_form = yes
-	landless = yes
-	ruler_uses_title_name = no
-	no_automatic_claims = yes
-	destroy_if_invalid_heir = yes
-
-	ai_primary_priority = { add = @never_primary_score }
-}
-
-d_laamp_belial = {
-	color = { 247 185 238 }
-	capital = c_modena
-
-	definite_form = yes
-	landless = yes
-	ruler_uses_title_name = no
-	no_automatic_claims = yes
-	destroy_if_invalid_heir = yes
-
-	ai_primary_priority = { add = @never_primary_score }
-}
-
-d_laamp_abaddon = {
-	color = { 139 0 0 }
-	capital = c_cologne
-
-	definite_form = yes
-	landless = yes
-	ruler_uses_title_name = no
-	no_automatic_claims = yes
-	destroy_if_invalid_heir = yes
-
-	ai_primary_priority = { add = @never_primary_score }
-}
-
-d_laamp_satan = {
+﻿d_laamp_satan = {
 	color = { 160 0 0 }
 	capital = c_roma
 

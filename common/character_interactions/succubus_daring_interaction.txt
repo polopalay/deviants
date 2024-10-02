@@ -50,7 +50,6 @@ succubus_weight_interaction = {
 			}
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 12
 	ai_targets = { ai_recipients = self }
@@ -466,7 +465,6 @@ succubus_makeup_interaction = {
 			}
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 }
 
@@ -566,7 +564,6 @@ succubus_honor_interaction = {
 			}
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 1
 	ai_targets = { ai_recipients = self }
@@ -617,7 +614,6 @@ succubus_mind_break_interaction = {
 			add_character_flag = carn_wants_to_be_a_slave
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 2
 	ai_targets = {

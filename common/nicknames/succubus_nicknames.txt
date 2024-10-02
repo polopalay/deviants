@@ -7,3 +7,4 @@ nickname_the_penis_guillotine = { is_bad = yes }
 nickname_the_sex_machine = { is_bad = yes }
 nickname_the_ladycow = { is_bad = yes }
 nickname_the_exhibitionist = { is_bad = yes }
+nickname_the_demon_queen = {}

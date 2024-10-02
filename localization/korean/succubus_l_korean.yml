@@ -48,10 +48,10 @@
   nickname_the_exhibitionist: "전시주의자"
   nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]는 [CHARACTER.GetHerHis|U]의 전시주의, 공개 성관계, 공개 소변으로 유명합니다."
 
+  nickname_the_demon_queen: "악마 여왕"
+  nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]는 세상에 악의 축복을 가져올 지옥의 존재입니다."
+
 # Titles
-  d_laamp_lilith: "릴리트의 창녀들"
-  d_laamp_belial: "벨리알의 마녀들"
-  d_laamp_abaddon: "아바돈의 노예들"
   d_laamp_satan: "사탄의 악마들"
 
 # Men at Arms

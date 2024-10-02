@@ -1,0 +1,5 @@
+﻿666666 = {
+	name = "succubus"
+	culture = "hebrew"
+}
+

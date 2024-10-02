@@ -1453,7 +1453,7 @@ succubus_prostitution.9233 = {
 			add_character_flag = { flag = body_cum days = 10 }
 		}
 		if = {
-			limit = { NOT = { has_nickname = nickname_the_sex_machine } }
+			limit = { NOT = { has_nickname = nickname_the_sex_machine has_nickname = nickname_the_demon_queen } }
 			give_nickname = nickname_the_sex_machine
 		}
 		add_gold = minor_gold_value

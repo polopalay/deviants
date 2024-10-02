@@ -78,7 +78,6 @@ succubus_dealing_with_stress_interaction = {
 			}
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 1
 	ai_targets = {
@@ -221,7 +220,6 @@ succubus_heal_interaction = {
 			recover_from_disease_effect = { DISEASE = ergotism }
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 1
 	ai_targets = {
@@ -330,7 +328,6 @@ succubus_purify_interaction = {
 			}
 		}
 	}
-	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_frequency = 1
 	ai_targets = {

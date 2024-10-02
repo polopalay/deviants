@@ -48,10 +48,10 @@
  nickname_the_exhibitionist: "展览主义者"
  nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 以其展览主义、公共性爱和公开排尿而闻名。"
 
+ nickname_the_demon_queen: "恶魔女王"
+ nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]是一个来自地狱的生物，将把邪恶的祝福带给这个世界。"
+
 # Titles
- d_laamp_lilith: "莉莉丝的妓女"
- d_laamp_belial: "贝利尔的女巫"
- d_laamp_abaddon: "阿巴顿的奴隶"
  d_laamp_satan: "撒旦的恶魔"
 
 # Men at Arms

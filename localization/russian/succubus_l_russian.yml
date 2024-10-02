@@ -48,10 +48,10 @@
   nickname_the_exhibitionist: "Экспозиционист"
   nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] известен(известна) своим эксгибиционизмом, публичным сексом и публичным мочеиспусканием."
 
+  nickname_the_demon_queen: "Королева Демонов"
+  nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] — существо ада, которое принесет благословение зла в мир."
+
 # Titles
-  d_laamp_lilith: "Шлюхи Лилит"
-  d_laamp_belial: "Ведьмы Белияла"
-  d_laamp_abaddon: "Рабы Абаддона"
   d_laamp_satan: "Дьяволы Сатаны"
 
 # Men at Arms
