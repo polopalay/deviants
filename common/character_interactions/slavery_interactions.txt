@@ -76,7 +76,7 @@
 		modifier = { add = -20 scope:actor.dynasty = scope:recipient.dynasty }
 		modifier = { add = -20 is_close_or_extended_family_of = scope:recipient }
 		modifier = { add = -20 is_close_family_of = scope:recipient }
-		modifier = { add = 50 has_execute_reason = scope:recipient OR = { has_trait = sadistic has_trait = lunatic } }
+		modifier = { add = 50 scope:actor = { has_execute_reason = scope:recipient } OR = { has_trait = sadistic has_trait = lunatic } }
 		modifier = {.
 			add = 20
 			scope:actor = {
@@ -138,7 +138,7 @@
 		modifier = {
 			factor = 0
 			scope:actor = {
-				NOR = {t
+				NOR = {
 					has_execute_reason = scope:recipient
 					has_relation_rival = scope:recipient
 					has_relation_nemesis = scope:recipient
@@ -454,7 +454,7 @@ carn_free_slave_interaction = {
 			add = 10
 			scope:actor = { ai_compassion >= very_high_positive_ai_value }
 		}
-		modifier = {.
+		modifier = {
 			add = 10
 			scope:actor = {
 				OR = {
@@ -557,6 +557,7 @@ ordinary_labor_interaction = {
 		modifier = { add = -100 ai_vengefulness >= 51 }
 	}
 }
+
 extortion_interaction = {
 	icon = extortion_interaction
 	category = interaction_category_prison

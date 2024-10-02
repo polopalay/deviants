@@ -10,7 +10,7 @@
 				is_female = yes
 				is_adult = yes
 				$PROSTITUTE$ = { is_male = yes is_adult = yes }
-				possible_pregnancy_after_sex_with_character_trigger = { PROSTITUTE = scope:had_sex_with_effect_partner }
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
 			}
 			add_to_variable_list = { name = potential_father_variable_list target = $PROSTITUTE$ }
 			random = { chance = $PREGNANCY_CHANCE$ make_pregnant = { father = $PROSTITUTE$ } }
@@ -20,7 +20,7 @@
 				is_male = yes
 				is_adult = yes
 				$PROSTITUTE$ = { is_female = yes is_adult = yes }
-				possible_pregnancy_after_sex_with_character_trigger = { PROSTITUTE = scope:had_sex_with_effect_partner }
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
 			}
 			$PROSTITUTE$ = {
 				add_to_variable_list = { name = potential_father_variable_list target = scope:had_sex_with_effect_partner }
@@ -29,7 +29,7 @@
 		}
 		add_character_modifier = { modifier = recently_had_sex years = 2 }
 		if = {
-			has_trait = lifestyle_prostitute
+			limit = { has_trait = lifestyle_prostitute }
 			add_trait_xp = { trait = lifestyle_prostitute value = 5 }
 		}
 		if = {
@@ -53,7 +53,7 @@
 			}
 			add_character_modifier = { modifier = recently_had_sex years = 2 }
 			if = {
-				has_trait = lifestyle_prostitute
+				limit = { has_trait = lifestyle_prostitute }
 				add_trait_xp = { trait = lifestyle_prostitute value = 5 }
 			}
 			if = {

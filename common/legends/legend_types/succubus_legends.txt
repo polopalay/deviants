@@ -3,7 +3,7 @@ sexual = {
 	on_start = {
 		legend_protagonist = {
 			add_dead_character_flag = {
-				flag = ignore_sicknesuccubus_clothes
+				flag = ignore_sickness_clothes
 				years = 400
 			}
 		}
@@ -431,7 +431,7 @@ witchcraft = {
 	on_start = {
 		legend_protagonist = {
 			add_dead_character_flag = {
-				flag = ignore_sicknesuccubus_clothes
+				flag = ignore_sickness_clothes
 				years = 400
 			}
 		}

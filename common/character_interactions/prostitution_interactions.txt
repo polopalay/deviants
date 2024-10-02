@@ -600,11 +600,6 @@ carn_force_start_prostitution_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = -0.1
-		}
 		modifier = { add = 50 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
 		modifier = { add = -50 scope:actor = { has_trait = chaste } }
 		modifier = { add = 10 scope:actor = { has_trait = lustful } }

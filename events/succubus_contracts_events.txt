@@ -346,9 +346,9 @@ prostitute_contracts_event.3000 = {
 		random_list = {
 			10 = {
 				modifier = { add = 10 is_valid_prostitute_trigger = yes }
-				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 1 } }
-				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 2 } }
-				modifier = { add = 10 every_courtier = { is_valid_prostitute_trigger = yes count >= 3 } }
+				modifier = { add = 10 any_courtier = {  is_valid_prostitute_trigger = yes count >= 1 } }
+				modifier = { add = 10 any_courtier = { is_valid_prostitute_trigger = yes count >= 2 } }
+				modifier = { add = 10 any_courtier = { is_valid_prostitute_trigger = yes count >= 3 } }
 				scope:task_contract = { complete_task_contract = success_critical }
 				trigger_event = prostitute_contracts_event.3200
 			}

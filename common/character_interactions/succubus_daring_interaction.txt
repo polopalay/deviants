@@ -449,7 +449,6 @@ succubus_makeup_interaction = {
 				}
 				else = {
 					hidden_effect = {
-						text = remove_glasses
 						remove_character_flag = teacher_1
 						remove_character_flag = teacher_2
 						remove_character_flag = has_reading_glasses

@@ -130,6 +130,16 @@ deal_with_the_devil = {
 			}
 		}
 	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
 
 	on_accept = {
 		scope:actor = {
@@ -218,13 +228,11 @@ deal_with_the_devil = {
 		}
 	}
 	auto_accept = {
-		scope:actor = {
-			NOR = {
-				has_trait = lustful
-				has_trait = deviant
-				has_trait = witch
-				any_secret = { secret_type = secret_deviant } 
-			}
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
 		}
 	}
 
@@ -325,6 +333,7 @@ ask_for_become_lesser_succubus = {
 		flag = hook
 		localization = GENERIC_SPEND_A_HOOK
 	}
+	send_options_exclusive = no
 
 	on_accept = {
 		scope:actor = {
@@ -445,6 +454,8 @@ ask_for_become_succubus = {
 		flag = hook
 		localization = GENERIC_SPEND_A_HOOK
 	}
+	send_options_exclusive = no
+
 	on_accept = {
 		scope:actor = {
 			remove_trait = lesser_succubus
