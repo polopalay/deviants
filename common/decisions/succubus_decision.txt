@@ -4,11 +4,11 @@ spawn_death_korp = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_invite_knights.dds" }
 	confirm_text = spawn_death_korp.c
 	decision_group_type = decisions
+	cooldown = { years = 50 }
 	is_shown = {
-		has_trait_xp = {
-			trait = succubus
-			track = loyalty
-			value >= 100
+		OR = {
+			has_trait = demon
+			has_trait_xp = { trait = succubus track = loyalty value >= 100 }
 		}
 		is_ruler = yes
 		is_landed = yes
@@ -41,11 +41,11 @@ demon_generals = {
 	confirm_text = demon_generals.c
 	selection_tooltip = demon_generals.t
 	decision_group_type = decisions
+	cooldown = { years = 50 }
 	is_shown = {
-		has_trait_xp = {
-			trait = succubus
-			track = loyalty
-			value >= 100
+		OR = {
+			has_trait = demon
+			has_trait_xp = { trait = succubus track = loyalty value >= 100 }
 		}
 		is_ruler = yes
 		is_landed = yes
