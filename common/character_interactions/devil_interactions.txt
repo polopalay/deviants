@@ -292,18 +292,8 @@ ask_for_become_lesser_succubus = {
 				has_trait = succubus
 				has_trait = lesser_succubus
 			}
-			has_trait = lustful
-			OR = {
-				has_trait = deviant
-				any_secret = { secret_type = secret_deviant }
-			}
-			OR = {
-				has_trait = witch
-				any_secret = { secret_type = secret_witch }
-			}
 		}
 		scope:recipient = {
-			NOT = { has_character_modifier = cast_spell_recetly }
 			OR = {
 				has_trait = demon
 				has_trait = succubus
@@ -337,6 +327,7 @@ ask_for_become_lesser_succubus = {
 
 	on_accept = {
 		scope:actor = {
+			mind_break_personality = yes	
 			add_trait = lesser_succubus
 			set_immortal_age = 18
 		}
@@ -345,9 +336,6 @@ ask_for_become_lesser_succubus = {
 				death_reason = death_execution
 				killer = scope:actor
 			}
-		}
-		scope:recipient = {
-			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
 		}
 	}
 	auto_accept = {
@@ -428,7 +416,6 @@ ask_for_become_succubus = {
 			}
 		}
 		scope:recipient = {
-			NOT = { has_character_modifier = cast_spell_recetly }
 			has_trait = demon
 		}
 	}
@@ -467,9 +454,6 @@ ask_for_become_succubus = {
 				death_reason = death_execution
 				killer = scope:actor
 			}
-		}
-		scope:recipient = {
-			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
 		}
 	}
 
