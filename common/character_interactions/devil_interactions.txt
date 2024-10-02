@@ -214,7 +214,7 @@ deal_with_the_devil = {
 			}
 		}
 		scope:recipient = {
-			add_character_modifier = { modifier = cast_spell_recetly years = 5 }
+			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
 		}
 	}
 	auto_accept = {
@@ -338,7 +338,7 @@ ask_for_become_lesser_succubus = {
 			}
 		}
 		scope:recipient = {
-			add_character_modifier = { modifier = cast_spell_recetly years = 5 }
+			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
 		}
 	}
 	auto_accept = {
@@ -458,7 +458,7 @@ ask_for_become_succubus = {
 			}
 		}
 		scope:recipient = {
-			add_character_modifier = { modifier = cast_spell_recetly years = 5 }
+			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
 		}
 	}
 
