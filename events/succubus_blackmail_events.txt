@@ -578,7 +578,14 @@ succubus_blackmail.1301 = {
 			add_gold = minor_gold_value
 		}
 		if = {
-			limit = { NOT = { has_nickname = nickname_the_semen_tank has_nickname = nickname_the_demon_queen } }
+			limit = { 
+				NOT = { 
+					has_nickname = nickname_the_semen_tank 
+					has_nickname = nickname_the_demon_queen
+					has_nickname = nickname_the_demon_king
+					has_nickname = nickname_the_devil_creation
+				}
+			}
 			give_nickname = nickname_the_semen_tank
 		}
 		hidden_effect = {

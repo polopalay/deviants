@@ -84,6 +84,8 @@ have_devil_nicknames_trigger = {
 		has_nickname = nickname_the_ladycow
 		has_nickname = nickname_the_exhibitionist
 		has_nickname = nickname_the_demon_queen
+		has_nickname = nickname_the_demon_king
+		has_nickname = nickname_the_devil_creation
 	}
 }
 

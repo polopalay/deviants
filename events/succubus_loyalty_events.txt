@@ -25,6 +25,8 @@ succubus_loyalty.8000 = {
 		NOR = {
 			has_nickname = nickname_the_ladycow
 			has_nickname = nickname_the_demon_queen
+			has_nickname = nickname_the_demon_king
+			has_nickname = nickname_the_devil_creation
 			has_character_flag = slave
 		}
 	}
@@ -251,6 +253,8 @@ succubus_loyalty.8099 = {
 			has_character_flag = slave
 			has_nickname = nickname_the_ladycow
 			has_nickname = nickname_the_demon_queen
+			has_nickname = nickname_the_demon_king
+			has_nickname = nickname_the_devil_creation
 		}
 	}
 	immediate = {
@@ -460,6 +464,8 @@ succubus_loyalty.8200 = {
 		OR = {
 			has_nickname = nickname_the_ladycow
 			has_nickname = nickname_the_demon_queen
+			has_nickname = nickname_the_demon_king
+			has_nickname = nickname_the_devil_creation
 			has_character_flag = slave
 		}
 	}
@@ -737,7 +743,14 @@ succubus_loyalty.8206 = {
 		name = succubus_loyalty.8206.a
 		custom_tooltip = succubus_loyalty.8206.a.tt
 		if = {
-			limit = { NOT = { has_nickname = nickname_the_ladycow has_nickname = nickname_the_demon_queen } }
+			limit = { 
+				NOT = {
+						has_nickname = nickname_the_ladycow
+						has_nickname = nickname_the_demon_queen
+						has_nickname = nickname_the_demon_king
+						has_nickname = nickname_the_devil_creation
+					}
+				}
 			give_nickname = nickname_the_ladycow
 			remove_character_flag = slave
 		}
@@ -865,6 +878,8 @@ succubus_loyalty.8900 = {
 		OR = {
 			has_nickname = nickname_the_ladycow
 			has_nickname = nickname_the_demon_queen
+			has_nickname = nickname_the_demon_king
+			has_nickname = nickname_the_devil_creation
 			has_character_flag = slave
 		}
 	}
