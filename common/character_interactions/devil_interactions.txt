@@ -296,7 +296,7 @@ deal_with_the_devil = {
 				limit = { scope:favor = yes }
 				add_hook = {
 					target = scope:actor
-					type = fabrication_hook
+					type = favor_hook
 				}
 			}
 		}
