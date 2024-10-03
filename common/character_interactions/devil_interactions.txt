@@ -287,7 +287,7 @@ deal_with_the_devil = {
 			}
 			if = {
 				limit = { scope:demand_conversion = yes }
-				set_character_faith = scope:recipient.faith
+				set_character_faith_with_conversion = scope:recipient.faith
 			}
 		}
 		scope:recipient = {
@@ -410,6 +410,23 @@ ask_for_become_lesser_succubus = {
 		flag = favor
 		localization = "RANSOM_OWE_FAVOR_OPTION"
 	}
+	send_option = {
+		flag = demand_conversion
+		localization = "RELEASE_DEMAND_CONVERSION"
+		is_valid = {
+			NOT = { scope:recipient.faith = scope:actor.faith }
+			custom_description = {
+				text = cannot_demand_religious_head_conversion
+				subject = scope:recipient
+				NOT = {
+					AND = {
+						exists = scope:recipient.faith.religious_head
+						scope:recipient.faith.religious_head = scope:recipient
+					}
+				}
+			}
+		}
+	}
 	send_options_exclusive = no
 
 	on_accept = {
@@ -423,6 +440,12 @@ ask_for_become_lesser_succubus = {
 					has_hook = scope:recipient
 				}
 				use_hook = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:demand_conversion = yes
+				}
+				set_character_faith_with_conversion = scope:recipient.faith
 			}
 		}
 		scope:recipient = {
@@ -466,8 +489,9 @@ ask_for_become_lesser_succubus = {
 		modifier = { add = 10 scope:actor = { has_trait = witch } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
-		modifier = { add = 10 scope:hook = yes }
-		modifier = { add = 10 scope:favor = yes }
+		modifier = { add = 25 scope:hook = yes }
+		modifier = { add = 25 scope:favor = yes }
+		modifier = { add = 25 scope:demand_conversion = yes }
 	}
 
 	ai_potential = { always = yes }
@@ -517,6 +541,22 @@ ask_for_become_lesser_succubus = {
 		modifier = { 
 			add = 1 
 			scope:favor = yes
+			scope:actor = {
+				has_trait = lustful
+				OR = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+				OR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			scope:demand_conversion = yes
+			NOT = { scope:actor = { has_trait = zealous } }
 			scope:actor = {
 				has_trait = lustful
 				OR = {
@@ -589,6 +629,23 @@ ask_for_become_succubus = {
 		flag = favor
 		localization = "RANSOM_OWE_FAVOR_OPTION"
 	}
+	send_option = {
+		flag = demand_conversion
+		localization = "RELEASE_DEMAND_CONVERSION"
+		is_valid = {
+			NOT = { scope:recipient.faith = scope:actor.faith }
+			custom_description = {
+				text = cannot_demand_religious_head_conversion
+				subject = scope:recipient
+				NOT = {
+					AND = {
+						exists = scope:recipient.faith.religious_head
+						scope:recipient.faith.religious_head = scope:recipient
+					}
+				}
+			}
+		}
+	}
 	send_options_exclusive = no
 
 	on_accept = {
@@ -602,6 +659,12 @@ ask_for_become_succubus = {
 					has_hook = scope:recipient
 				}
 				use_hook = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:demand_conversion = yes
+				}
+				set_character_faith_with_conversion = scope:recipient.faith
 			}
 		}
 		scope:recipient = {
@@ -638,8 +701,9 @@ ask_for_become_succubus = {
 		modifier = { add = 10 scope:actor = { has_trait = witch } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
-		modifier = { add = 10 scope:hook = yes }
-		modifier = { add = 10 scope:favor = yes }
+		modifier = { add = 25 scope:hook = yes }
+		modifier = { add = 25 scope:favor = yes }
+		modifier = { add = 25 scope:demand_conversion = yes }
 	}
 	ai_potential = { always = yes }
 	ai_frequency = 12
@@ -666,7 +730,7 @@ ask_for_become_succubus = {
 			}
 		}
 		modifier = { 
-			add = 1 
+			add = 5 
 			scope:hook = yes
 			scope:actor = {
 				has_trait_xp = {
@@ -676,12 +740,28 @@ ask_for_become_succubus = {
 			}
 		}
 		modifier = { 
-			add = 1 
+			add = 5
 			scope:favor = yes
 			scope:actor = {
 				has_trait_xp = {
 					trait = lesser_succubus
 					value >= 100
+				}
+			}
+		}
+		modifier = {
+			add = 5
+			scope:demand_conversion = yes
+			NOT = { scope:actor = { has_trait = zealous } }
+			scope:actor = {
+				has_trait = lustful
+				OR = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+				OR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
 				}
 			}
 		}
