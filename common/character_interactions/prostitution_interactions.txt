@@ -575,9 +575,9 @@ carn_force_start_prostitution_interaction = {
 			who = scope:recipient
 			multiplier = 1
 		}
-		modifier = { add = -50 scope:recipient = { has_trait = chaste } }
 		modifier = { add = 50 scope:recipient = { faith = { has_doctrine = tenet_polyamory } } }
-		modifier = { add = -25 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
+		modifier = { add = -50 scope:recipient = { has_trait = chaste } }
+		modifier = { add = -20 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
 		modifier = { add = -10 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_shunned has_doctrine = doctrine_adultery_men_shunned } } } }
 		modifier = {
 			add = 10
@@ -600,40 +600,31 @@ carn_force_start_prostitution_interaction = {
 		}
 	}
 
-	ai_frequency = 6
+	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = self
 		ai_recipients = courtiers
 		ai_recipients = prisoners
-		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 25 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
-		modifier = { add = -20 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
+		modifier = { add = 6 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
+		modifier = { add = 6 scope:actor = { has_trait = lustful } scope:recipient = scope:actor }
+		modifier = { add = 6 scope:actor = { has_trait = rakish } scope:recipient = scope:actor }
+		modifier = { add = 6 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } scope:recipient = scope:actor } }
+		modifier = { add = 6 scope:actor = { faith = { has_doctrine = tenet_polyamory is_attracted_to_gender_of = scope:recipient } } }
+		modifier = { add = 6 scope:actor = { has_trait = lustful is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 6 scope:actor = { has_trait = rakish is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 6 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 2 scope:actor = { has_imprisonment_reason = scope:recipient is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 2 scope:hook = yes scope:actor = { is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = -5 scope:actor = { faith = { has_doctrine = doctrine_gender_male_dominated } is_male = yes } }
+		modifier = { add = -5 scope:actor = { faith = { has_doctrine = doctrine_gender_female_dominated } is_female = yes } }
 		modifier = { add = -10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
-		modifier = { add = -25 scope:actor = { has_trait = chaste } }
-		modifier = { add = 10 scope:actor = { has_trait = lustful } }
-		modifier = { add = 25 scope:actor = { has_trait = rakish } }
-		modifier = {
-			add = 25
-			scope:actor = {
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-			}
-		}
-		modifier = {
-			add = -100
-			scope:recipient = {
-				age > carn_prostitution_age_cutoff
-				is_immortal = no
-			}
-		}
-		modifier = { add = 10 scope:actor = { has_imprisonment_reason = scope:recipient } }
-		modifier = { add = 25 scope:hook = yes }
+		modifier = { add = -15 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
+		modifier = { add = -20 scope:actor = { has_trait = chaste } scope:actor = scope:recipient }
+		modifier = { add = -100 scope:recipient = { age > carn_prostitution_age_cutoff is_immortal = no } }
 	}
 }
 
@@ -742,29 +733,15 @@ carn_force_stop_prostitution_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 100
-			scope:recipient = {
-				age > carn_prostitution_age_cutoff
-				is_immortal = no
-			}
-		}
+		modifier = { add = 100 scope:recipient = { age > carn_prostitution_age_cutoff is_immortal = no } }
+		modifier = { add = 50 scope:actor = { has_trait = chaste } scope:recipient = scope:actor }
 		modifier = { add = 20 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
 		modifier = { add = 10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
-		modifier = { add = -50 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
-		modifier = { add = 50 scope:actor = { has_trait = chaste } }
-		modifier = { add = -10 scope:actor = { has_trait = lustful } }
+		modifier = { add = 5 scope:actor = { has_imprisonment_reason = scope:recipient } }
+		modifier = { add = 5 scope:hook = yes }
+		modifier = { add = -25 scope:actor = { has_trait = lustful } }
 		modifier = { add = -25 scope:actor = { has_trait = rakish } }
-		modifier = {
-			add = -25
-			scope:actor = {
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-			}
-		}
-		modifier = { add = 10 scope:actor = { has_imprisonment_reason = scope:recipient } }
-		modifier = { add = 25 scope:hook = yes }
+		modifier = { add = -25 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
+		modifier = { add = -50 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
 	}
 }

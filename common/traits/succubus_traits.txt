@@ -105,8 +105,8 @@ succubus = {
 	general_opinion = 5
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
-	character_travel_speed = 1
-	travel_danger = -1
+	character_travel_speed = 5
+	travel_danger = -5
 	stewardship = 1
 	intrigue = 1
 	learning = 1
@@ -119,8 +119,8 @@ succubus = {
 	tracks = {
 		power = {
 			33 = {
-				character_travel_speed = 4
-				travel_danger = -4
+				character_travel_speed = 5
+				travel_danger = -5
 			}
 
 			66 = {

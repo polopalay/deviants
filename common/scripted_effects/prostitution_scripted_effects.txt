@@ -35,13 +35,13 @@
 		if = {
 			limit = { has_trait = succubus }
 			random_list = {
-				1 = { add_trait_xp = { trait = succubus track = power value = 2 } }
-				1 = { add_trait_xp = { trait = succubus track = daring value = 2 } }
+				1 = { add_trait_xp = { trait = succubus track = power value = 5 } }
+				1 = { add_trait_xp = { trait = succubus track = daring value = 5 } }
 			}
 		}
 		if = {
 			limit = { has_trait = lesser_succubus }
-			add_trait_xp = { trait = lesser_succubus value = 5 }
+			add_trait_xp = { trait = lesser_succubus value = 10 }
 		}
 		$PROSTITUTE$ = {
 			random = { chance = 25 add_character_flag = { flag = face_cum months = 3 } }
@@ -59,13 +59,13 @@
 			if = {
 				limit = { has_trait = succubus }
 				random_list = {
-					1 = { add_trait_xp = { trait = succubus track = power value = 2 } }
-					1 = { add_trait_xp = { trait = succubus track = daring value = 2 } }
+					1 = { add_trait_xp = { trait = succubus track = power value = 5 } }
+					1 = { add_trait_xp = { trait = succubus track = daring value = 5 } }
 				}
 			}
 			if = {
 				limit = { has_trait = lesser_succubus }
-				add_trait_xp = { trait = lesser_succubus value = 5 }
+				add_trait_xp = { trait = lesser_succubus value = 10 }
 			}
 		}
 

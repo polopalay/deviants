@@ -4,7 +4,7 @@ succubus_absorb_interaction = {
 	category = interaction_category_vassal
 	use_diplomatic_range = yes
 	common_interaction = yes
-	cooldown = { months = 1 }
+	cooldown = { years = 2 }
 	is_shown = {
 		scope:actor = {
 			has_trait = succubus
@@ -17,15 +17,21 @@ succubus_absorb_interaction = {
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
 			}
-			has_trait_xp = { trait = lesser_succubus value >= 50 }
+			OR = {
+				has_trait = demon
+				has_trait_xp = { trait = lesser_succubus value >= 50 }
+			}
 		}
 	}
 	on_accept = {
 		scope:recipient = {
-			add_character_modifier = succubus_buff
-			add_trait_xp = {
-				trait = lesser_succubus
-				value = -50
+			if = {
+				limit = { has_trait = lesser_succubus }
+				add_character_modifier = succubus_buff
+				add_trait_xp = {
+					trait = lesser_succubus
+					value = -50
+				}
 			}
 		}
 		scope:actor = {

@@ -314,14 +314,14 @@ succubus_event.0550 = {
 		trigger = {
 			OR = {
 				has_trait = demon
-				has_trait_xp = { trait = succubus track = corruption value >= 1 }
+				has_trait_xp = { trait = succubus track = daring value >= 1 }
 			}
 		}
 		name = succubus_event.0550.c
 		custom_tooltip = succubus_event.0550.c.tt
 		add_trait_xp = {
 			trait = succubus
-			track = corruption
+			track = daring
 			value = -1
 		}
 		create_artifact = {
