@@ -150,12 +150,6 @@
 		modifier = { 
 			desc = cant_have_sex_without_contraception
 			add = -25
-			scope:recipient = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = yes
-		}
-		modifier = { 
-			desc = can_have_sex_without_contraception
-			add = 25
 			scope:recipient = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
 			scope:use_contraception = no
 		}
@@ -217,14 +211,9 @@
 		modifier = { add = -50 scope:actor = { has_std_trigger = yes } }
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
 		modifier = { 
-			add = -25
-			scope:recipient = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+			add = 10
+			scope:actor = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
 			scope:use_contraception = yes
-		}
-		modifier = { 
-			add = 25
-			scope:recipient = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = no
 		}
 	}
 }
@@ -400,15 +389,9 @@ offer_prostitute_interaction = {
 		modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
-		modifier = { 
-			desc = can_have_sex_without_contraception
+		modifier = {
+			desc = cant_have_sex_without_contraception
 			add = -25
-			scope:recipient = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = yes
-		}
-		modifier = { 
-			desc = cant_have_sex_without_contraception 
-			add = 25
 			scope:recipient = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
 			scope:use_contraception = no
 		}

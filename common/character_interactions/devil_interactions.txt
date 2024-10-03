@@ -162,6 +162,23 @@ deal_with_the_devil = {
 		flag = favor
 		localization = "RANSOM_OWE_FAVOR_OPTION"
 	}
+	send_option = {
+		flag = demand_conversion
+		localization = "RELEASE_DEMAND_CONVERSION"
+		is_valid = {
+			NOT = { scope:recipient.faith = scope:actor.faith }
+			custom_description = {
+				text = cannot_demand_religious_head_conversion
+				subject = scope:recipient
+				NOT = {
+					AND = {
+						exists = scope:recipient.faith.religious_head
+						scope:recipient.faith.religious_head = scope:recipient
+					}
+				}
+			}
+		}
+	}
 	send_options_exclusive = no
 
 	on_accept = {
@@ -250,6 +267,7 @@ deal_with_the_devil = {
 						scope:hook = yes
 						scope:favor = yes
 						scope:gold = yes
+						scope:demand_conversion = yes
 					}
 				}
 				mind_break_personality = yes	
@@ -266,6 +284,10 @@ deal_with_the_devil = {
 					scope:gold = yes
 				}
 				pay_short_term_gold = { target = scope:recipient gold = scope:actor.heal_price_value }
+			}
+			if = {
+				limit = { scope:demand_conversion = yes }
+				set_character_faith = scope:recipient.faith
 			}
 		}
 		scope:recipient = {
@@ -293,6 +315,7 @@ deal_with_the_devil = {
 		modifier = { add = 50 scope:hook = yes }
 		modifier = { add = 50 scope:favor = yes }
 		modifier = { add = 50 scope:gold = yes }
+		modifier = { add = 50 scope:demand_conversion = yes }
 	}
 
 	ai_potential = { always = yes }
@@ -310,7 +333,7 @@ deal_with_the_devil = {
 
 	ai_will_do = {
 		base = 1
-		modifier = { add = -5 scope:actor ={ has_trait = chaste } }
+		modifier = { add = -5 scope:actor = { has_trait = chaste } }
 		modifier = { add = -5 scope:actor = { has_trait = zealous } }
 		modifier = { add = 1 scope:actor = { has_trait = lustful } }
 		modifier = { add = 1 scope:actor = { has_trait = rakish } }
@@ -324,6 +347,7 @@ deal_with_the_devil = {
 		modifier = { add = 1 scope:actor = { has_trait = possessed_genetic } }
 		modifier = { add = 5 scope:hook = yes }
 		modifier = { add = 5 scope:favor = yes }
+		modifier = { add = 1 scope:demand_conversion = yes NOT = { scope:actor = { has_trait = zealous } } }
 		modifier = { add = 1 scope:gold = yes }
 	}
 }
