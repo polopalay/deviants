@@ -51,6 +51,12 @@
   nickname_the_demon_queen: "악마 여왕"
   nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]는 세상에 악의 축복을 가져올 지옥의 존재입니다."
 
+  nickname_the_demon_king: "악마 왕"
+  nickname_the_demon_king_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]는 세상에 악의 축복을 가져올 지옥의 존재입니다."
+
+  nickname_the_devil_creation: "악마의 창조물"
+  nickname_the_devil_creation_desc: "악마의 힘에서 태어난 아이들로, 세상에 혼돈과 파괴를 가져올 운명을 지닌 존재입니다."
+
 # Titles
   d_laamp_satan: "사탄의 악마들"
 

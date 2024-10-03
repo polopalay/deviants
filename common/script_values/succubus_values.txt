@@ -1,0 +1,284 @@
+heal_price_value = {
+	value = 50
+	if = {
+		limit = { has_trait = drunkard }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = hashishiyah }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = rakish }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = reclusive }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = irritable }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = flagellant }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = profligate }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = improvident }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = contrite }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = comfort_eater }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = inappetetic }
+		add = 25
+	}
+
+	if = {
+		limit = { has_trait = depressed_1 }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = depressed_genetic }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = lunatic_1 }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = lunatic_genetic }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = possessed_1 }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = one_eyed }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = scarred }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = maimed }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = one_legged }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = disfigured }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = eunuch }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = blind }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = sickly }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = infirm }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = incapable }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = leper }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = dysentery }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = ergotism }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = wounded_1 }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = wounded_2 }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = wounded_3 }
+		add = 30
+	}
+	if = {
+		limit = { has_trait = ill }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = pneumonic }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = gout_ridden }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = typhus }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = consumption }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = cancer }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = great_pox }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = smallpox }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = bubonic_plague }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = lovers_pox }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = great_pox }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = possessed_genetic }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = bubonic_plague }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = measles }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = albino }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = lisping }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = stuttering }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = giant }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = scaly }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = clubfooted }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = dwarf }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = hunchbacked }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = infertile }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = wheezing }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = spindly }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = bleeder }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = weak }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = dull }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = beauty_bad_1 }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = beauty_bad_2 }
+		add = 75
+	}
+	if = {
+		limit = { has_trait = beauty_bad_3 }
+		add = 100
+	}
+	if = {
+		limit = { has_trait = intellect_bad_1 }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = intellect_bad_2 }
+		add = 75
+	}
+	if = {
+		limit = { has_trait = intellect_bad_3 }
+		add = 100
+	}
+	if = {
+		limit = { has_trait = physique_bad_1 }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = physique_bad_2 }
+		add = 75
+	}
+	if = {
+		limit = { has_trait = physique_bad_3 }
+		add = 100
+	}
+	if = {
+		limit = { has_trait = inbred }
+		add = 50
+	}
+}

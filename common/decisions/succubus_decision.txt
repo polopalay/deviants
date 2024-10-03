@@ -90,7 +90,7 @@ become_demon = {
 		}
 	}
 	is_valid = {
-		any_prisoner = { count >= 100 }
+		any_prisoner = { count >= 666 }
 	}
 	effect = {
 		every_prisoner = {
@@ -99,6 +99,7 @@ become_demon = {
 				killer = root
 			}
 		}
+		remove_trait = succubus
 		add_trait = demon
 		set_immortal_age = 18
 	}

@@ -9,4 +9,7 @@
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
 		}
 	}
+	666.12.13 = {
+		holder = lilim_character
+	}
 }

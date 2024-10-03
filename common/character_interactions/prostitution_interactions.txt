@@ -151,7 +151,7 @@
 			desc = cant_have_sex_without_contraception
 			add = -25
 			scope:recipient = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = no
+			scope:use_contraception = yes
 		}
 		modifier = { 
 			desc = can_have_sex_without_contraception
@@ -218,12 +218,12 @@
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
 		modifier = { 
 			add = -25
-			scope:actor = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = no
+			scope:recipient = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+			scope:use_contraception = yes
 		}
 		modifier = { 
 			add = 25
-			scope:actor = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+			scope:recipient = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
 			scope:use_contraception = no
 		}
 	}
@@ -401,13 +401,13 @@ offer_prostitute_interaction = {
 		modifier = { add = -50 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
 		modifier = { 
-			desc = cant_have_sex_without_contraception
+			desc = can_have_sex_without_contraception
 			add = -25
 			scope:recipient = {  OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = no
+			scope:use_contraception = yes
 		}
 		modifier = { 
-			desc = can_have_sex_without_contraception
+			desc = cant_have_sex_without_contraception 
 			add = 25
 			scope:recipient = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
 			scope:use_contraception = no
@@ -656,6 +656,13 @@ carn_force_stop_prostitution_interaction = {
 			if = {
 				limit = { has_imprisonment_reason = scope:recipient }
 				consume_imprisonment_reasons = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
 			}
 		}
 	}

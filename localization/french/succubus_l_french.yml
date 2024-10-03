@@ -51,6 +51,12 @@
  nickname_the_demon_queen: "La Reine Démon"
  nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est une créature de l'enfer qui apportera les bénédictions du mal dans le monde."
 
+ nickname_the_demon_king: "Le Roi Démon"
+ nickname_the_demon_king_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est une créature de l'enfer qui apportera les bénédictions du mal dans le monde."
+
+ nickname_the_devil_creation: "Créatures Démons"
+ nickname_the_devil_creation_desc: "Enfants nés du pouvoir des démons, destinés à apporter le chaos et la destruction dans le monde."
+
 # Titles
  d_laamp_satan: "Les Diables de Satan"
 

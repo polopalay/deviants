@@ -1,6 +1,6 @@
 ﻿d_laamp_satan = {
 	color = { 160 0 0 }
-	capital = c_roma
+	capital = c_jerusalem
 
 	definite_form = yes
 	landless = yes

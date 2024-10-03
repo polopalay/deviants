@@ -2,6 +2,12 @@
 	name = "Lilith"
 	dna = lilith_dna
 	dynasty = 666666
+	martial = 13
+	diplomacy = 13
+	intrigue = 13
+	stewardship = 13
+	learning = 13
+	prowess = 13
 	female = yes
 	religion = "lilith"
 	culture = "hebrew"
@@ -27,3 +33,37 @@
 	}
 }
 
+lilim_character = {
+	name = "Lilim"
+	dna = lilim_dna
+	dynasty = 666666
+	mother = lilith_character
+	martial = 13
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 6
+	learning = 6
+	prowess = 13
+	female = yes
+	religion = "lilith"
+	culture = "hebrew"
+	trait = brave
+	trait = zealous
+	trait = lustful
+	trait = education_martial_4
+	trait = succubus
+	666.1.1 = {
+		birth = "666.6.13"
+		effect = {
+			give_nickname = nickname_the_devil_creation
+			add_character_flag = has_scripted_appearance
+			add_character_flag = do_not_generate_starting_family
+			mind_break_personality = yes
+			set_immortal_age = 18
+		}
+	}
+	666.12.13 = {
+		effect = {
+			set_landless_government_effect = yes
+		}
+	}

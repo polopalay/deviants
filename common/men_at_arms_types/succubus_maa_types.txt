@@ -15,7 +15,13 @@ succubus_dark_amry = {
 
 	stack = 100
 	max_sub_regiments = 5
-	can_recruit = { has_trait = succubus }
+	can_recruit = {
+		OR = {
+			has_trait = demon
+			has_trait = succubus
+			has_trait = lesser_succubus
+		}
+	}
 	buy_cost = { gold = 150 }
 	low_maintenance_cost = { gold = 0.2 }
 	high_maintenance_cost = { gold = 0.5 }
@@ -49,7 +55,12 @@ succubus_death_korps  = {
 succubus_zombie = {
 	icon = skirmishers
 	type = skirmishers
-	can_recruit = { have_devil_building_trigger = yes }
+	can_recruit = {
+		OR = {
+			has_trait = demon
+			have_devil_building_trigger = yes
+		}
+	}
 
 	pursuit = 4
 	screen = 4
@@ -69,7 +80,12 @@ succubus_zombie = {
 succubus_skeleton = {
 	icon = skirmishers
 	type = skirmishers
-	can_recruit = { have_devil_building_trigger = yes }
+	can_recruit = {
+		OR = {
+			has_trait = demon
+			have_devil_building_trigger = yes
+		}
+	}
 
 	pursuit = 8
 	screen = 0

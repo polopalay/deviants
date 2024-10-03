@@ -51,6 +51,12 @@
   nickname_the_demon_queen: "Die Dämonen-Königin"
   nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] ist ein Geschöpf der Hölle, das die Segnungen des Bösen in die Welt bringen wird."
 
+  nickname_the_demon_king: "Der Dämonenkönig"
+  nickname_the_demon_king_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] ist ein Geschöpf der Hölle, das die Segnungen des Bösen in die Welt bringen wird."
+
+  nickname_the_devil_creation: "Dämonische Kreaturen"
+  nickname_the_devil_creation_desc: "Kinder, die aus der Macht der Dämonen geboren wurden, dazu bestimmt, Chaos und Zerstörung in die Welt zu bringen."
+
 # Titles
   d_laamp_satan: "Die Teufel von Satan"
 

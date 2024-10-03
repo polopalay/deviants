@@ -130,6 +130,16 @@ deal_with_the_devil = {
 			}
 		}
 	}
+	localization_values = {
+		RANSOM_COST = scope:actor.heal_price_value
+	}
+	send_option = {
+		is_shown = {
+			scope:actor ?= { gold >= scope:actor.heal_price_value }
+		}
+		flag = gold
+		localization = "RANSOM_GOLD_OPTION"
+	}
 	send_option = {
 		is_valid = {
 			scope:actor = {
@@ -139,11 +149,23 @@ deal_with_the_devil = {
 		flag = hook
 		localization = GENERIC_SPEND_A_HOOK
 	}
+	send_option = {
+		is_valid = {
+			exists = scope:recipient
+			scope:recipient = {
+				can_add_hook = {
+					target = scope:actor
+					type = favor_hook
+				}
+			}
+		}
+		flag = favor
+		localization = "RANSOM_OWE_FAVOR_OPTION"
+	}
 	send_options_exclusive = no
 
 	on_accept = {
 		scope:actor = {
-			mind_break_personality = yes	
 			remove_trait = drunkard
 			remove_trait = hashishiyah
 			remove_trait = rakish
@@ -222,17 +244,39 @@ deal_with_the_devil = {
 					remove_trait = beauty_good_1
 				}
 			}
+			if = {
+				limit = {
+					NOR = {
+						scope:hook = yes
+						scope:favor = yes
+						scope:gold = yes
+					}
+				}
+				mind_break_personality = yes	
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:gold = yes
+				}
+				pay_short_term_gold = { target = scope:recipient gold = scope:actor.heal_price_value }
+			}
 		}
 		scope:recipient = {
 			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
-		}
-	}
-	auto_accept = {
-		custom_description = {
-			text = "spending_hook"
-			subject = scope:actor
-			object = scope:recipient
-			scope:hook = yes
+			if = {
+				limit = { scope:favor = yes }
+				add_hook = {
+					target = scope:actor
+					type = fabrication_hook
+				}
+			}
 		}
 	}
 
@@ -241,11 +285,14 @@ deal_with_the_devil = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 1
+			multiplier = 0.1
 		}
-		modifier = { add = 5 scope:actor = { has_trait = lustful } }
-		modifier = { add = 5 scope:actor = { has_trait = deviant } }
-		modifier = { add = 5 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
+		modifier = { add = 5 scope:actor = { NOT = { has_trait = lustful } } }
+		modifier = { add = 5 scope:actor = { NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
+		modifier = { add = 5 scope:actor = { NOR = { has_trait = witch any_secret = { secret_type = secret_witch } } } }
+		modifier = { add = 50 scope:hook = yes }
+		modifier = { add = 50 scope:favor = yes }
+		modifier = { add = 50 scope:gold = yes }
 	}
 
 	ai_potential = { always = yes }
@@ -275,6 +322,9 @@ deal_with_the_devil = {
 		modifier = { add = 1 scope:actor = { has_trait = lunatic_genetic } }
 		modifier = { add = 1 scope:actor = { has_trait = possessed_1 } }
 		modifier = { add = 1 scope:actor = { has_trait = possessed_genetic } }
+		modifier = { add = 5 scope:hook = yes }
+		modifier = { add = 5 scope:favor = yes }
+		modifier = { add = 1 scope:gold = yes }
 	}
 }
 
@@ -323,6 +373,19 @@ ask_for_become_lesser_succubus = {
 		flag = hook
 		localization = GENERIC_SPEND_A_HOOK
 	}
+	send_option = {
+		is_valid = {
+			exists = scope:recipient
+			scope:recipient = {
+				can_add_hook = {
+					target = scope:actor
+					type = favor_hook
+				}
+			}
+		}
+		flag = favor
+		localization = "RANSOM_OWE_FAVOR_OPTION"
+	}
 	send_options_exclusive = no
 
 	on_accept = {
@@ -330,6 +393,22 @@ ask_for_become_lesser_succubus = {
 			mind_break_personality = yes	
 			add_trait = lesser_succubus
 			set_immortal_age = 18
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { scope:favor = yes }
+				add_hook = {
+					target = scope:actor
+					type = fabrication_hook
+				}
+			}
 		}
 		scope:secondary_recipient = {
 			death = {
@@ -356,13 +435,15 @@ ask_for_become_lesser_succubus = {
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient
-			multiplier = -1
+			multiplier = -0.1
 		}
 		modifier = { add = 10 scope:actor = { has_trait = lustful } }
 		modifier = { add = 10 scope:actor = { has_trait = deviant } }
 		modifier = { add = 10 scope:actor = { has_trait = witch } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
+		modifier = { add = 10 scope:hook = yes }
+		modifier = { add = 10 scope:favor = yes }
 	}
 
 	ai_potential = { always = yes }
@@ -382,6 +463,36 @@ ask_for_become_lesser_succubus = {
 		base = 0
 		modifier = {
 			add = 5
+			scope:actor = {
+				has_trait = lustful
+				OR = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+				OR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
+			}
+		}
+		modifier = { 
+			add = 1 
+			scope:hook = yes
+			scope:actor = {
+				has_trait = lustful
+				OR = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+				OR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
+			}
+		}
+		modifier = { 
+			add = 1 
+			scope:favor = yes
 			scope:actor = {
 				has_trait = lustful
 				OR = {
@@ -441,6 +552,19 @@ ask_for_become_succubus = {
 		flag = hook
 		localization = GENERIC_SPEND_A_HOOK
 	}
+	send_option = {
+		is_valid = {
+			exists = scope:recipient
+			scope:recipient = {
+				can_add_hook = {
+					target = scope:actor
+					type = favor_hook
+				}
+			}
+		}
+		flag = favor
+		localization = "RANSOM_OWE_FAVOR_OPTION"
+	}
 	send_options_exclusive = no
 
 	on_accept = {
@@ -448,6 +572,22 @@ ask_for_become_succubus = {
 			remove_trait = lesser_succubus
 			add_trait = succubus
 			set_immortal_age = 18
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { scope:favor = yes }
+				add_hook = {
+					target = scope:actor
+					type = fabrication_hook
+				}
+			}
 		}
 		scope:secondary_recipient = {
 			death = {
@@ -467,13 +607,15 @@ ask_for_become_succubus = {
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient
-			multiplier = -1
+			multiplier = -0.1
 		}
 		modifier = { add = 10 scope:actor = { has_trait = lustful } }
 		modifier = { add = 10 scope:actor = { has_trait = deviant } }
 		modifier = { add = 10 scope:actor = { has_trait = witch } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
+		modifier = { add = 10 scope:hook = yes }
+		modifier = { add = 10 scope:favor = yes }
 	}
 	ai_potential = { always = yes }
 	ai_frequency = 12
@@ -492,6 +634,26 @@ ask_for_become_succubus = {
 		base = 0
 		modifier = {
 			add = 25
+			scope:actor = {
+				has_trait_xp = {
+					trait = lesser_succubus
+					value >= 100
+				}
+			}
+		}
+		modifier = { 
+			add = 1 
+			scope:hook = yes
+			scope:actor = {
+				has_trait_xp = {
+					trait = lesser_succubus
+					value >= 100
+				}
+			}
+		}
+		modifier = { 
+			add = 1 
+			scope:favor = yes
 			scope:actor = {
 				has_trait_xp = {
 					trait = lesser_succubus

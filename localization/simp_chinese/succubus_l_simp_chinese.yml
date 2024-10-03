@@ -50,6 +50,11 @@
 
  nickname_the_demon_queen: "恶魔女王"
  nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]是一个来自地狱的生物，将把邪恶的祝福带给这个世界。"
+ nickname_the_demon_king: "恶魔王"
+ nickname_the_demon_king_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]是一个来自地狱的生物，将把邪恶的祝福带给这个世界。"
+
+ nickname_the_devil_creation: "恶魔生物"
+ nickname_the_devil_creation_desc: "从恶魔的力量中诞生的孩子，注定要给世界带来混乱和毁灭。"
 
 # Titles
  d_laamp_satan: "撒旦的恶魔"

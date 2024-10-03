@@ -4,8 +4,13 @@ enslave_war = {
 	ai_only_against_liege = yes
 	allowed_for_character =	{
 		scope:attacker = {
-			has_trait_xp = { trait = succubus track = loyalty value >= 50 }
-			has_trait_xp = { trait = succubus track = corruption value >= 50 }
+			OR = {
+				AND = {
+					has_trait_xp = { trait = succubus track = loyalty value >= 50 }
+					has_trait_xp = { trait = succubus track = corruption value >= 50 }
+				}
+				has_trait_xp = { trait = lesser_succubus value >= 50 }
+			}
 		}
 	}
 

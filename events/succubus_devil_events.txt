@@ -2265,8 +2265,8 @@ succubus_devil.1319 = {
 			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual NOT = { has_trait = succubus } } }
 			random_list = {
 				20 = {
-					modifier = { add = 40 has_character_flag = succubus_marking_1 }
 					modifier = { add = 40 has_character_flag = succubus_horn1 }
+					modifier = { add = 40 has_character_flag = succubus_marking_1 }
 					create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
 				}
 				20 = {
@@ -2280,8 +2280,9 @@ succubus_devil.1319 = {
 					create_legend_seed = { type = sexual quality = famed chronicle = ladycow }
 				}
 				20 = {
-					modifier = { add = 40 has_character_flag = succubus_horn4 }
-					modifier = { add = 40 has_character_flag = succubus_marking_4 }
+					modifier = { add = 30 has_character_flag = succubus_horn4 }
+					modifier = { add = 30 has_character_flag = succubus_marking_4 }
+					modifier = { add = 20 has_trait = lifestyle_prostitute }
 					create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
 				}
 				20 = {
