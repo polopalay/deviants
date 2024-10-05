@@ -1,7 +1,7 @@
 succubus_outfit = {
 	usage = game
 	succubus_1 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -26,7 +26,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_2 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -56,7 +56,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_3 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -81,7 +81,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_4 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -111,7 +111,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_5 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -141,7 +141,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_6 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -198,7 +198,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_8 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -228,7 +228,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_9 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -258,7 +258,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_10 = {
-		traits = { succubus }
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
@@ -288,7 +288,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_11 = {
-		traits = { succubus demon }
+		traits = { sbs_succubus demon }
 		trigger = {
 			OR = {
 				has_trait = sbs_demon
@@ -310,7 +310,7 @@ succubus_outfit = {
 		}
 	}
 	lesser_succubus_1 = {
-		traits = { lesser_succubus }
+		traits = { sbs_lesser_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_lesser_succubus
@@ -329,7 +329,7 @@ succubus_outfit = {
 		}
 	}
 	lesser_succubus_1 = {
-		traits = { lesser_succubus }
+		traits = { sbs_lesser_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_lesser_succubus
@@ -348,7 +348,7 @@ succubus_outfit = {
 		}
 	}
 	lesser_succubus_2 = {
-		traits = { lesser_succubus }
+		traits = { sbs_lesser_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_lesser_succubus

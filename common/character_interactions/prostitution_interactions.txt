@@ -603,13 +603,13 @@ carn_force_start_prostitution_interaction = {
 			who = scope:recipient
 			multiplier = 0.2
 		}
-		modifier = { add = -25 NOT = { scope:recipient = scope:actor } }
 		modifier = { add = 25 scope:recipient = { faith = { has_doctrine = tenet_polyamory } } }
 		modifier = { add = 20 scope:recipient = { has_trait = lustful } }
 		modifier = { add = 20 scope:recipient = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
 		modifier = { add = -20 scope:recipient = { has_trait = chaste } }
 		modifier = { add = -20 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
 		modifier = { add = -10 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_shunned has_doctrine = doctrine_adultery_men_shunned } } } }
+		modifier = { add = -10 NOT = { scope:recipient = scope:actor } }
 		modifier = { add = 50 scope:forgive = yes }
 		modifier = { add = 50 scope:hook = yes }
 	}

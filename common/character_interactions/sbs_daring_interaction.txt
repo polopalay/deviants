@@ -731,7 +731,7 @@ succubus_honor_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 50 scope:recipient = scope:actor }
+		modifier = { add = 100 scope:recipient = scope:actor }
 		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }

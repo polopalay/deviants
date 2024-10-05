@@ -423,21 +423,21 @@ deal_with_the_devil = {
 		modifier = { add = 2 scope:recipient = { has_trait = physique_bad_2 } }
 		modifier = { add = 3 scope:recipient = { has_trait = physique_bad_3 } }
 		modifier = { add = 2 scope:recipient = { has_trait = inbred } }
-		modifier = { add = 5 scope:hook = yes }
-		modifier = { add = 5 scope:favor = yes }
+		modifier = { add = 1 scope:hook = yes }
+		modifier = { add = 1 scope:favor = yes }
 		modifier = { add = 1 scope:gold = yes }
-		modifier = { add = -1 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
-		modifier = { add = -1 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
-		modifier = { add = -3 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
-		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
-		modifier = { add = -1 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -2 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
-		modifier = { add = -3 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
+		modifier = { add = -2 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -3 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -8 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -2 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -3 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 		modifier = { add = 2 scope:small_price = yes scope:recipient = { ai_zeal < very_low_positive_ai_value } }
 		modifier = { add = 1 scope:small_price = yes scope:recipient = { ai_zeal < low_positive_ai_value } }
-		modifier = { add = -1 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
 		modifier = { add = -2 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
-		modifier = { add = -3 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -5 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -8 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
 	}
 }
 
@@ -557,14 +557,6 @@ ask_for_become_lesser_succubus = {
 			}
 		}
 	}
-	auto_accept = {
-		custom_description = {
-			text = "spending_hook"
-			subject = scope:actor
-			object = scope:recipient
-			scope:hook = yes
-		}
-	}
 	ai_accept = {
 		base = 0
 		opinion_modifier = {
@@ -582,7 +574,7 @@ ask_for_become_lesser_succubus = {
 		modifier = { add = 10 scope:actor = { has_trait = witch } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_deviant is_known_by = scope:recipient } } }
 		modifier = { add = 10 scope:actor = { any_secret = { secret_type = secret_witch is_known_by = scope:recipient } } }
-		modifier = { add = 25 scope:hook = yes }
+		modifier = { add = 50 scope:hook = yes }
 		modifier = { add = 25 scope:favor = yes }
 		modifier = { add = 25 scope:demand_conversion = yes }
 	}
@@ -870,19 +862,152 @@ succubus_absorb_interaction = {
 	use_diplomatic_range = yes
 	common_interaction = yes
 	cooldown = { years = 2 }
-	send_option = {
-		is_shown = {
-			scope:actor  = { has_trait = sbs_lesser_succubus }
+	is_shown = {
+		scope:actor = {
+			is_ruler = yes
+			NOT = { is_at_war_with = scope:recipient }
 		}
-			flag = lesser_succubus
-			localization = "trait_track_sbs_lesser_succubus"
+		OR = {
+			AND = {
+				scope:actor = { has_trait = sbs_lesser_succubus }
+				OR = {
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_lesser_succubus value < 100 } }
+					}
+					AND = {
+						OR = {
+							scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value >= 10 } }
+							scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = daring value >= 10 } }
+							scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = loyalty value >= 1 } }
+							scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = corruption value >= 1 } }
+						}
+						scope:actor  = { has_trait_xp = { trait = sbs_lesser_succubus value < 100 } }
+					}
+					AND = {
+						scope:recipient = { has_trait = sbs_demon }
+						scope:actor  = { has_trait_xp = { trait = sbs_lesser_succubus value < 100 } }
+					}
+				}
+			}
+			AND = {
+				scope:actor = { has_trait = sbs_succubus }
+				OR = {
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = power value < 100 } }
+					}
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value >= 10 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = power value < 100 } }
+					}
+					AND = {
+						scope:recipient = { has_trait = sbs_demon }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = power value < 100 } }
+					}
+				}
+			}
+			AND = {
+				scope:actor = { has_trait = sbs_succubus }
+				OR = {
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = daring value < 100 } }
+					}
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = daring value >= 10 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = daring value < 100 } }
+					}
+					AND = {
+						scope:recipient = { has_trait = sbs_demon }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = daring value < 100 } }
+					}
+				}
+			}
+			AND = {
+				scope:actor = { has_trait = sbs_succubus }
+				OR = {
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 100 } }
+					}
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = loyalty value > 1 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 100 } }
+					}
+					AND = {
+						scope:recipient = { has_trait = sbs_demon }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 100 } }
+					}
+				}
+			}
+			AND = {
+				scope:actor = { has_trait = sbs_succubus }
+				OR = {
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 100 } }
+					}
+					AND = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = corruption value > 1 } }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 100 } }
+					}
+					AND = {
+						scope:recipient = { has_trait = sbs_demon }
+						scope:actor  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 100 } }
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			OR = {
+				is_courtier_of = scope:actor
+				is_vassal_of = scope:actor
+			}
+		}
 	}
 	send_option = {
 		is_shown = {
-			scope:actor  = { has_trait = sbs_succubus }
+			scope:actor = { has_trait = sbs_lesser_succubus }
 			OR = {
-				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value < 10 } }
-				scope:recipient = { has_trait = sbs_demon }
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_lesser_succubus value < 100 } }
+				}
+				AND = {
+					OR = {
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value >= 10 } }
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = daring value >= 10 } }
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = loyalty value >= 1 } }
+						scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = corruption value >= 1 } }
+					}
+					scope:actor  = { has_trait_xp = { trait = sbs_lesser_succubus value < 100 } }
+				}
+				AND = {
+					scope:recipient = { has_trait = sbs_demon }
+					scope:actor  = { has_trait_xp = { trait = sbs_lesser_succubus value < 100 } }
+				}
+			}
+		}
+		flag = lesser_succubus
+		localization = "trait_track_sbs_lesser_succubus"
+	}
+	send_option = {
+		is_shown = {
+			scope:actor = { has_trait = sbs_succubus }
+			OR = {
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = power value < 100 } }
+				}
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value >= 10 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = power value < 100 } }
+				}
+				AND = {
+					scope:recipient = { has_trait = sbs_demon }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = power value < 100 } }
+				}
 			}
 		}
 		flag = power
@@ -890,10 +1015,20 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
-			scope:actor  = { has_trait = sbs_succubus }
+			scope:actor = { has_trait = sbs_succubus }
 			OR = {
-				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = daring value < 10 } }
-				scope:recipient = { has_trait = sbs_demon }
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = daring value < 100 } }
+				}
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = daring value >= 10 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = daring value < 100 } }
+				}
+				AND = {
+					scope:recipient = { has_trait = sbs_demon }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = daring value < 100 } }
+				}
 			}
 		}
 		flag = daring
@@ -901,10 +1036,20 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
-			scope:actor  = { has_trait = sbs_succubus }
+			scope:actor = { has_trait = sbs_succubus }
 			OR = {
-				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 1 } }
-				scope:recipient = { has_trait = sbs_demon }
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 100 } }
+				}
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = loyalty value > 1 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 100 } }
+				}
+				AND = {
+					scope:recipient = { has_trait = sbs_demon }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 100 } }
+				}
 			}
 		}
 		flag = loyalty
@@ -912,40 +1057,26 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
-			scope:actor  = { has_trait = sbs_succubus }
+			scope:actor = { has_trait = sbs_succubus }
 			OR = {
-				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 1 } }
-				scope:recipient = { has_trait = sbs_demon }
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_lesser_succubus value >= 50 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 100 } }
+				}
+				AND = {
+					scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = corruption value > 1 } }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 100 } }
+				}
+				AND = {
+					scope:recipient = { has_trait = sbs_demon }
+					scope:actor  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 100 } }
+				}
 			}
 		}
 		flag = corruption
 		localization = "trait_track_corruption"
 	}
 	send_options_exclusive = yes
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait = sbs_succubus
-				has_trait = sbs_lesser_succubus
-			}
-			is_ruler = yes
-			NOT = { is_at_war_with = scope:recipient }
-		}
-		scope:recipient = {
-			OR = {
-				is_courtier_of = scope:actor
-				is_vassal_of = scope:actor
-			}
-			OR = {
-				has_trait = sbs_demon
-				has_trait_xp = { trait = sbs_lesser_succubus value >= 50 }
-				has_trait_xp = { trait = sbs_succubus track = corruption value >= 1 }
-				has_trait_xp = { trait = sbs_succubus track = loyalty value >= 1 }
-				has_trait_xp = { trait = sbs_succubus track = power value >= 10 }
-				has_trait_xp = { trait = sbs_succubus track = daring value >= 10 }
-			}
-		}
-	}
 	on_accept = {
 		scope:actor = {
 			if = {
