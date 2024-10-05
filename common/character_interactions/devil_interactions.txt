@@ -584,12 +584,12 @@ ask_for_become_lesser_succubus_interaction = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 1
+			multiplier = 0.5
 		}
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient
-			multiplier = -0.5
+			multiplier = -0.2
 		}
 		modifier = { add = 10 scope:actor = { has_trait = lustful } }
 		modifier = { add = 10 scope:actor = { has_trait = deviant } }
@@ -809,12 +809,12 @@ ask_for_become_succubus_interaction = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 1
+			multiplier = 0.5
 		}
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient
-			multiplier = -0.5
+			multiplier = -0.2
 		}
 		modifier = { add = 10 scope:actor = { has_trait = lustful } }
 		modifier = { add = 10 scope:actor = { has_trait = deviant } }
@@ -1270,12 +1270,12 @@ succubus_create_lesser_succubus_interaction = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 1
+			multiplier = 0.5
 		}
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient
-			multiplier = -0.5
+			multiplier = -0.2
 		}
 	}
 	ai_frequency = 12
@@ -1359,12 +1359,12 @@ succubus_create_succubus_interaction = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 1
+			multiplier = 0,5
 		}
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
 			who = scope:recipient
-			multiplier = -0.5
+			multiplier = -0.2
 		}
 	}
 	ai_frequency = 12
