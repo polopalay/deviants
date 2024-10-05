@@ -603,6 +603,7 @@ carn_force_start_prostitution_interaction = {
 			who = scope:recipient
 			multiplier = 0.2
 		}
+		modifier = { add = -25 NOT = { scope:recipient = scope:actor } }
 		modifier = { add = 25 scope:recipient = { faith = { has_doctrine = tenet_polyamory } } }
 		modifier = { add = 20 scope:recipient = { has_trait = lustful } }
 		modifier = { add = 20 scope:recipient = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
