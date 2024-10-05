@@ -63,14 +63,12 @@
   naked: "나체"
   glass: "유리"
 
-  succubus_cultist_interaction: "사제 만들기"
-  succubus_cultist_interaction.desc: "정신 조작으로 [recipient.GetShortUIName]가 악마의 cult를 따르도록 만듭니다."
-
   succubus_honor_interaction: "불명예스러운 특성 제거"
   succubus_honor_interaction.desc: "[recipient.GetShortUIName]의 불명예스러운 특성을 제거합니다."
 
   deal_with_the_devil: "악마와 거래하기"
   deal_with_the_devil.desc: "악마와 거래하여 원하는 것을 \"작은\" 대가로 얻으세요."
+  small_price: "작은 가격"
 
   ask_for_become_lesser_succubus: "하위 섹시한 악마가 되기를 요청하기"
   ask_for_become_lesser_succubus.desc: "악마에게 하위 섹시한 악마가 되기를 요청하세요."

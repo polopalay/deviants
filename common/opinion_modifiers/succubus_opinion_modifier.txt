@@ -5,7 +5,7 @@ have_sex_opinion = {
 }
 
 be_healed_opinion = {
-	opinion = 100
+	opinion = 50
 	decaying = yes
 	years = 10
 }

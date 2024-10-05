@@ -59,14 +59,12 @@
  naked: "Naked"
  glass: "Glass"
 
- succubus_cultist_interaction: "Create Cultist"
- succubus_cultist_interaction.desc: "Mind manipulation, making[recipient.GetShortUIName] follow the devil's cult"
-
  succubus_honor_interaction: "Remove the disgraceful Trait"
  succubus_honor_interaction.desc: "Remove the disgraceful Trait from [recipient.GetShortUIName]"
 
  deal_with_the_devil: "Deal with the Devil"
  deal_with_the_devil.desc: "Make a deal with the devil, get what ever you want with a \"small\" price"
+ small_price: "Small Price"
 
  ask_for_become_lesser_succubus: "Ask for become Lesser Succubus"
  ask_for_become_lesser_succubus.desc: "Ask the devil to become a Lesser Succubus"

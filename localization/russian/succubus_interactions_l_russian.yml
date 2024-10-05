@@ -60,14 +60,12 @@
   naked: "Нагой"
   glass: "Стекло"
 
-  succubus_cultist_interaction: "Создать культиста"
-  succubus_cultist_interaction.desc: "Мозговая манипуляция, заставляя [recipient.GetShortUIName] следовать культу дьявола."
-
   succubus_honor_interaction: "Удалить позорное качество"
   succubus_honor_interaction.desc: "Удалите позорное качество у [recipient.GetShortUIName]."
 
   deal_with_the_devil: "Сделка с дьяволом"
   deal_with_the_devil.desc: "Заключите сделку с дьяволом и получите все, что хотите, за \"небольшую\" цену."
+  small_price: "Низкая цена"
 
   ask_for_become_lesser_succubus: "Попросить стать меньшим суккубом"
   ask_for_become_lesser_succubus.desc: "Попросите дьявола стать меньшим суккубом."

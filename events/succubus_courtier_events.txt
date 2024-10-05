@@ -989,11 +989,6 @@ succubus_courtier.1463 = {
 				track = power
 				value = 1
 			}
-			add_trait_xp = {
-				trait = succubus
-				track = loyalty
-				value = 1
-			}
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = body_cum days = 10 }
 		}
@@ -1617,7 +1612,7 @@ succubus_courtier.5400 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 		}
@@ -1687,7 +1682,7 @@ succubus_courtier.5500 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 			add_character_flag = { flag = pussy_cum days = 20 }
@@ -1972,7 +1967,7 @@ succubus_courtier.6020 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 		}
@@ -2089,7 +2084,7 @@ succubus_courtier.6030 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = power
 				value = 1
 			}
 		}

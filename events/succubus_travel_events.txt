@@ -290,7 +290,7 @@ succubus_travel.0102 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = power
 				value = 1
 			}
 		}
@@ -372,7 +372,7 @@ succubus_travel.0103 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 		}
@@ -841,7 +841,7 @@ succubus_travel.0108 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 		}
@@ -1239,7 +1239,7 @@ succubus_travel.0131 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = power
 				value = 1
 			}
 		}
@@ -1885,7 +1885,7 @@ succubus_travel.1100 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = corruption
+				track = daring
 				value = 1
 			}
 		}

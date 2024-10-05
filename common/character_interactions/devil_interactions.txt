@@ -131,11 +131,11 @@ deal_with_the_devil = {
 		}
 	}
 	localization_values = {
-		RANSOM_COST = scope:actor.heal_price_value
+		RANSOM_COST = scope:actor.deal_price_value
 	}
 	send_option = {
 		is_shown = {
-			scope:actor ?= { gold >= scope:actor.heal_price_value }
+			scope:actor ?= { gold >= scope:actor.deal_price_value }
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
@@ -166,18 +166,50 @@ deal_with_the_devil = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
 		is_valid = {
-			NOT = { scope:recipient.faith = scope:actor.faith }
+			# Cannot ask Religious Heads to convert
 			custom_description = {
 				text = cannot_demand_religious_head_conversion
-				subject = scope:recipient
 				NOT = {
 					AND = {
-						exists = scope:recipient.faith.religious_head
-						scope:recipient.faith.religious_head = scope:recipient
+						exists = scope:actor.faith.religious_head
+						scope:actor.faith.religious_head = scope:actor
+					}
+				}
+			}
+			# Cannot ask Holy Order Master to convert
+			custom_description = {
+				text = cannot_demand_holy_order_master_conversion
+				NAND = {
+					exists = scope:actor.faith
+					scope:actor.faith = {
+						any_faith_holy_order = { leader = scope:actor }
 					}
 				}
 			}
 		}
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+			scope:actor = {
+				OR = {
+					NOT = {
+						has_trait = lesser_succubus
+						has_trait = succubus
+						has_trait = demon
+					}
+					NOR = {
+						has_trait = lustful
+						has_trait = deviant
+						has_trait = witch
+						any_secret = { secret_type = secret_deviant }
+						any_secret = { secret_type = secret_witch }
+					}
+				}
+			}
+		}
+		flag = small_price
+		localization = "small_price"
 	}
 	send_options_exclusive = no
 
@@ -254,23 +286,12 @@ deal_with_the_devil = {
 			remove_trait = physique_bad_2
 			remove_trait = physique_bad_3
 			remove_trait = inbred
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = { NOT = { has_trait = beauty_good_1 } }
 					add_trait = beauty_good_1
 					remove_trait = beauty_good_1
 				}
-			}
-			if = {
-				limit = {
-					NOR = {
-						scope:hook = yes
-						scope:favor = yes
-						scope:gold = yes
-						scope:demand_conversion = yes
-					}
-				}
-				mind_break_personality = yes	
 			}
 			if = {
 				limit = {
@@ -283,15 +304,19 @@ deal_with_the_devil = {
 				limit = {
 					scope:gold = yes
 				}
-				pay_short_term_gold = { target = scope:recipient gold = scope:actor.heal_price_value }
+				pay_short_term_gold = { target = scope:recipient gold = scope:actor.deal_price_value }
 			}
 			if = {
 				limit = { scope:demand_conversion = yes }
 				set_character_faith_with_conversion = scope:recipient.faith
 			}
+			if = {
+				limit = { scope:small_price = yes }
+				mind_break_personality = yes	
+			}
 		}
 		scope:recipient = {
-			add_character_modifier = { modifier = cast_spell_recetly years = 3 }
+			add_character_modifier = { modifier = cast_spell_recetly years = 2 }
 			if = {
 				limit = { scope:favor = yes }
 				add_hook = {
@@ -307,15 +332,13 @@ deal_with_the_devil = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 0.1
+			multiplier = 1
 		}
-		modifier = { add = 5 scope:actor = { NOT = { has_trait = lustful } } }
-		modifier = { add = 5 scope:actor = { NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
-		modifier = { add = 5 scope:actor = { NOR = { has_trait = witch any_secret = { secret_type = secret_witch } } } }
-		modifier = { add = 50 scope:hook = yes }
-		modifier = { add = 50 scope:favor = yes }
-		modifier = { add = 50 scope:gold = yes }
-		modifier = { add = 50 scope:demand_conversion = yes }
+		modifier = { add = 40 scope:hook = yes }
+		modifier = { add = 40 scope:favor = yes }
+		modifier = { add = 40 scope:gold = yes }
+		modifier = { add = 40 scope:demand_conversion = yes }
+		modifier = { add = 40 scope:small_price = yes }
 	}
 
 	ai_potential = { always = yes }
@@ -349,6 +372,7 @@ deal_with_the_devil = {
 		modifier = { add = 5 scope:favor = yes }
 		modifier = { add = 1 scope:demand_conversion = yes NOT = { scope:actor = { has_trait = zealous } } }
 		modifier = { add = 1 scope:gold = yes }
+		modifier = { add = 1 scope:small_price = yes }
 	}
 }
 
@@ -766,4 +790,163 @@ ask_for_become_succubus = {
 			}
 		}
 	}
-		
+
+succubus_absorb_interaction = {
+	icon = drain_life
+	desc = succubus_absorb_interaction.desc
+	category = interaction_category_vassal
+	use_diplomatic_range = yes
+	common_interaction = yes
+	cooldown = { years = 2 }
+	send_option = {
+		is_shown = {
+			scope:actor  = { has_trait = lesser_succubus }
+		}
+		flag = lesser_succubus
+		localization = "trait_track_lesser_succubus"
+	}
+	send_option = {
+		is_shown = {
+			OR = {
+				scope:recipient  = { has_trait_xp = { trait = succubus track = power value < 10 } }
+				scope = { has_trait = demon }
+			}
+		}
+		flag = power
+		localization = "trait_track_power"
+	}
+	send_option = {
+		is_shown = {
+			OR = {
+				scope:recipient  = { has_trait_xp = { trait = succubus track = daring value < 10 } }
+				scope = { has_trait = demon }
+			}
+		}
+		flag = daring
+		localization = "trait_track_daring"
+	}
+	send_option = {
+		is_shown = {
+			OR = {
+				scope:recipient  = { has_trait_xp = { trait = succubus track = loyalty value < 1 } }
+				scope = { has_trait = demon }
+			}
+		}
+		flag = loyalty
+		localization = "trait_track_loyalty"
+	}
+	send_option = {
+		is_shown = {
+			OR = {
+				scope:recipient  = { has_trait_xp = { trait = succubus track = corruption value < 1 } }
+				scope = { has_trait = demon }
+			}
+		}
+		flag = corruption
+		localization = "trait_track_corruption"
+	}
+	send_options_exclusive = yes
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait = succubus
+				has_trait = lesser_succubus
+			}
+			is_ruler = yes
+			NOT = { is_at_war_with = scope:recipient }
+			has_trait_xp = { trait = succubus track = loyalty value < 100 }
+		}
+		scope:recipient = {
+			OR = {
+				is_courtier_of = scope:actor
+				is_vassal_of = scope:actor
+			}
+			OR = {
+				has_trait = demon
+				has_trait_xp = { trait = lesser_succubus value >= 50 }
+				has_trait_xp = { trait = succubus track = corruption value >= 1 }
+				has_trait_xp = { trait = succubus track = loyalty value >= 1 }
+				has_trait_xp = { trait = succubus track = power value >= 10 }
+				has_trait_xp = { trait = succubus track = daring value >= 10 }
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = lesser_succubus scope:lesser_succubus = yes }
+				add_trait_xp = { trait = lesser_succubus value = 50 }
+			}
+			else_if = {
+				limit = { has_trait = succubus scope:power = yes }
+				add_trait_xp = { trait = succubus track = power value = 10 }
+			}
+			else_if = {
+				limit = { has_trait = succubus scope:daring = yes }
+				add_trait_xp = { trait = succubus track = daring value = 10 }
+			}
+			else_if = {
+				limit = { has_trait = succubus scope:loyalty = yes }
+				add_trait_xp = { trait = succubus track = loyalty value = 1 }
+			}
+			else_if = {
+				limit = { has_trait = succubus scope:corruption = yes }
+				add_trait_xp = { trait = succubus track = corruption value = 1 }
+			}
+		}
+		scope:recipient = {
+			add_character_modifier = { modifier = succubus_buff years = 2 }
+			if = {
+				limit = { has_trait = lesser_succubus }
+				add_trait_xp = { trait = lesser_succubus value = -50 }
+			}
+			if = {
+				limit = { has_trait = succubus }
+				if = {
+					limit = { scope:power = yes }
+					add_trait_xp = { trait = succubus track = power value = -10 }
+				}
+				if = {
+					limit = { scope:daring = yes }
+					add_trait_xp = { trait = succubus track = daring value = -10 }
+				}
+				if = {
+					limit = { scope:loyalty = yes }
+					add_trait_xp = { trait = succubus track = loyalty value = -1 }
+				}
+				if = {
+					limit = { scope:corruption = yes }
+					add_trait_xp = { trait = succubus track = corruption value = -1 }
+				}
+				if = {
+					limit = { scope:lesser_succubus = yes }
+					if = {
+						limit = { has_trait_xp = { trait = succubus track = power value >= 10 } }
+						add_trait_xp = { trait = succubus track = power value = -10 }
+					}
+					else_if = {
+						limit = { has_trait_xp = { trait = succubus track = daring value >= 10 } }
+						add_trait_xp = { trait = succubus track = daring value = -10 }
+					}
+					else_if = {
+						limit = { has_trait_xp = { trait = succubus track = loyalty value >= 1 } }
+						add_trait_xp = { trait = succubus track = loyalty value = -1 }
+					}
+					else_if = {
+						limit = { has_trait_xp = { trait = succubus track = corruption value >= 1 } }
+						add_trait_xp = { trait = succubus track = corruption value = -1 }
+					}
+				}
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = prisoners
+		ai_recipients = vassals
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}

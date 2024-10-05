@@ -207,7 +207,7 @@ succubus_loyalty.8006 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 			add_character_flag = { flag = face_cum months = 1 }
@@ -239,7 +239,7 @@ succubus_loyalty.8099 = {
 	trigger = {
 		has_trait_xp = {
 			trait = succubus
-			track = loyalty
+			track = daring
 			value >= 1
 		}
 		is_ruler = yes
@@ -340,7 +340,7 @@ succubus_loyalty.8100 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = daring
 				value = 1
 			}
 		}
@@ -372,7 +372,7 @@ succubus_loyalty.8101 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 			add_character_flag = { flag = ass_cum days = 15 }
@@ -401,7 +401,7 @@ succubus_loyalty.8101 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 			add_character_flag = { flag = pussy_cum days = 15 }
@@ -439,7 +439,7 @@ succubus_loyalty.8102 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = daring
 				value = 1
 			}
 		}
@@ -547,7 +547,7 @@ succubus_loyalty.8201 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 		}
@@ -599,7 +599,7 @@ succubus_loyalty.8202 = {
 		hidden_effect = {
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = daring
 				value = 1
 			}
 		}
@@ -842,7 +842,7 @@ succubus_loyalty.8209 = {
 			add_character_flag = { flag = ass_cum months = 3 }
 			add_trait_xp = {
 				trait = succubus
-				track = loyalty
+				track = power
 				value = 1
 			}
 		}

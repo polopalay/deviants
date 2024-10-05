@@ -512,10 +512,124 @@ succubus_honor_interaction = {
 			}
 		}
 	}
+	localization_values = {
+		RANSOM_COST = scope:recipient.honor_price_value
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient ?= { gold >= scope:recipient.purify_price_value }
+		}
+		flag = gold
+		localization = "RANSOM_GOLD_OPTION"
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				has_usable_hook = scope:actor
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_option = {
+		is_valid = {
+			exists = scope:actor
+			scope:actor= {
+				can_add_hook = {
+					target = scope:recipient
+					type = favor_hook
+				}
+			}
+		}
+		flag = favor
+		localization = "RANSOM_OWE_FAVOR_OPTION"
+	}
+	send_option = {
+		flag = demand_conversion
+		localization = "RELEASE_DEMAND_CONVERSION"
+		is_valid = {
+			# Cannot ask Religious Heads to convert
+			custom_description = {
+				text = cannot_demand_religious_head_conversion
+				NOT = {
+					AND = {
+						exists = scope:recipient.faith.religious_head
+						scope:recipient.faith.religious_head = scope:recipient
+					}
+				}
+			}
+			# Cannot ask Holy Order Master to convert
+			custom_description = {
+				text = cannot_demand_holy_order_master_conversion
+				NAND = {
+					exists = scope:recipient.faith
+					scope:recipient.faith = {
+						any_faith_holy_order = { leader = scope:recipient }
+					}
+				}
+			}
+		}
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+			scope:recipient.liege = scope:actor
+		}
+		is_valid = {
+			scope:recipient = {
+				has_imprisonment_reason = scope:actor
+			}
+		}
+		flag = forgive
+		localization = forgive_interaction
+	}
+	send_options_exclusive = no
 	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = succubus }
+				add_trait_xp = { trait = succubus track = daring value = -5 }
+			}
+			if = {
+				limit = { has_trait = lesser_succubus }
+				add_trait_xp = { trait = lesser_succubus value = -10 }
+			}
+			if = {
+				limit = { scope:favor = yes }
+				add_hook = {
+					target = scope:recipient
+					type = favor_hook
+				}
+			}
+		}
 		scope:recipient = {
 			if = {
-				limit = { NOT = { scope:actor = scope:recipient } }
+				limit = {
+					scope:hook = yes
+					has_hook = scope:actor
+				}
+				use_hook = scope:actor
+			}
+			if = {
+				limit = { scope:gold = yes }
+				pay_short_term_gold = { target = scope:actor gold = scope:recipient.purify_price_value }
+			}
+			if = {
+				limit = { scope:demand_conversion = yes }
+				set_character_faith_with_conversion = scope:actor.faith
+			}
+			if = {
+				limit = {
+					NOR = {
+						scope:actor = scope:recipient
+						scope:favor = yes
+						scope:hook = yes
+						scope:gold = yes
+						scope:favor = yes
+						scope:demand_conversion = yes
+						scope:forgive = yes
+					}
+				}
 				add_opinion = {
 					target = scope:actor
 					modifier = be_healed_opinion
@@ -531,17 +645,17 @@ succubus_honor_interaction = {
 			if = {
 				limit = { has_trait = witch }
 				remove_trait = witch
-				add_secret = { type = secret_witch }
+				add_secret = { type = secret_witch is_known_by = scope:actor }
 			}
 			if = {
 				limit = { has_trait = deviant }
 				remove_trait = deviant
-				add_secret = { type = secret_deviant }
+				add_secret = { type = secret_deviant is_known_by = scope:actor }
 			}
 			if = {
 				limit = { has_trait = cannibal }
 				remove_trait = cannibal
-				add_secret = { type = secret_cannibal }
+				add_secret = { type = secret_cannibal is_known_by = scope:actor }
 			}
 			remove_trait = adulterer
 			remove_trait = sodomite
@@ -552,24 +666,64 @@ succubus_honor_interaction = {
 			remove_trait = kinslayer_3
 			remove_trait = murderer
 		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = daring value = -5 }
-			}
-			if = {
-				limit = { has_trait = lesser_succubus }
-				add_trait_xp = { trait = lesser_succubus value = -10 }
-			}
-		}
 	}
-	auto_accept = yes
-	ai_frequency = 1
-	ai_targets = { ai_recipients = self }
+	auto_accept = { scope:actor = scope:recipient }
+	ai_accept = {
+		base = 5
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.1
+		}
+		modifier = { add = 20 scope:recipient = { has_trait = bastard } }
+		modifier = { add = 15 scope:recipient = { has_trait = legitimized_bastard } }
+		modifier = { add = 15 scope:recipient = { has_trait = disputed_heritage } }
+		modifier = { add = 10 scope:recipient = { has_trait = child_of_concubine_female } }
+		modifier = { add = 10 scope:recipient = { has_trait = child_of_concubine_male } }
+		modifier = { add = 5 scope:recipient = { has_trait = wild_oat } }
+		modifier = { add = 5 scope:recipient = { has_trait = bastard_founder } }
+		modifier = { add = 20 scope:recipient = { has_trait = witch faith = { OR = { has_doctrine = doctrine_witchcraft_crime has_doctrine = doctrine_witchcraft_shunned } } } }
+		modifier = { add = 20 scope:recipient = { has_trait = deviant faith = { OR = { has_doctrine = doctrine_deviancy_crime has_doctrine = doctrine_deviancy_shunned } } } }
+		modifier = { add = 20 scope:recipient = { has_trait = cannibal NOT = { has_doctrine = tenet_ritual_cannibalism } } }
+		modifier = { add = 10 scope:recipient = { has_trait = adulterer faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
+		modifier = { add = 10 scope:recipient = { has_trait = sodomite faith = { OR = { has_doctrine = doctrine_homosexuality_crime has_doctrine = doctrine_homosexuality_shunned } } } }
+		modifier = { add = 10 scope:recipient = { has_trait = fornicator faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
+		modifier = { add = 20 scope:recipient = { has_trait = kinslayer_1 faith = { has_doctrine = doctrine_kinslaying_any_dynasty_member_crime } } }
+		modifier = { add = 15 scope:recipient = { has_trait = kinslayer_2 faith = { has_doctrine = doctrine_kinslaying_extended_family_crime } } }
+		modifier = { add = 10 scope:recipient = { has_trait = kinslayer_3 faith = { has_doctrine = doctrine_kinslaying_close_kin_crime } } }
+		modifier = { add = 5 scope:recipient = { has_trait = murderer faith = { has_doctrine = doctrine_kinslaying_shunned } } }
+		modifier = { add = -10 scope:gold = yes }
+		modifier = { add = -10 scope:hook = yes }
+		modifier = { add = -10 scope:favor = yes }
+		modifier = { add = -10 scope:forgive = yes }
+		modifier = { add = -10 scope:demand_conversion = yes }
+		modifier = { add = -10 scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -50 scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -100 scope:recipient = { ai_zeal > dominant_positive_ai_value } }
+	}
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = self
+		ai_recipients = children
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 25 scope:recipient = scope:actor }
+		modifier = { add = 50 scope:recipient = scope:actor }
+		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 5 scope:actor = { gold <= 0 } }
+		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
+		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
+		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
 	}
 }
 

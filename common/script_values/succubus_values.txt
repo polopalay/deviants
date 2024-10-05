@@ -1,5 +1,32 @@
-heal_price_value = {
-	value = 50
+deal_price_value = {
+	value = 0
+	add = dealing_with_stress_value
+	add = heal_price_value
+	add = purify_price_value
+}
+
+dealing_with_stress_value = {
+	value = 0
+	if = {
+		limit = { stress_level = 1 }
+		add = 20
+	}
+	if = {
+		limit = { stress_level = 2 }
+		add = 40
+	}
+	if = {
+		limit = { stress_level = 3 }
+		add = 60
+	}
+	if = {
+		limit = { stress_level = 4 }
+		add = 80
+	}
+	if = {
+		limit = { stress_level = 5 }
+		add = 100
+	}
 	if = {
 		limit = { has_trait = drunkard }
 		add = 25
@@ -44,33 +71,36 @@ heal_price_value = {
 		limit = { has_trait = inappetetic }
 		add = 25
 	}
+}
 
+heal_price_value = {
+	value = 0
 	if = {
 		limit = { has_trait = depressed_1 }
-		add = 30
+		add = 20
 	}
 	if = {
 		limit = { has_trait = depressed_genetic }
-		add = 30
+		add = 20
 	}
 	if = {
 		limit = { has_trait = lunatic_1 }
-		add = 30
+		add = 20
 	}
 	if = {
 		limit = { has_trait = lunatic_genetic }
-		add = 30
+		add = 20
 	}
 	if = {
 		limit = { has_trait = possessed_1 }
-		add = 30
-	}
-	if = {
-		limit = { has_trait = one_eyed }
-		add = 30
+		add = 20
 	}
 	if = {
 		limit = { has_trait = scarred }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = one_eyed }
 		add = 30
 	}
 	if = {
@@ -83,11 +113,11 @@ heal_price_value = {
 	}
 	if = {
 		limit = { has_trait = disfigured }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = eunuch }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = blind }
@@ -103,23 +133,23 @@ heal_price_value = {
 	}
 	if = {
 		limit = { has_trait = incapable }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = leper }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = dysentery }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = ergotism }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = wounded_1 }
-		add = 30
+		add = 20
 	}
 	if = {
 		limit = { has_trait = wounded_2 }
@@ -127,7 +157,7 @@ heal_price_value = {
 	}
 	if = {
 		limit = { has_trait = wounded_3 }
-		add = 30
+		add = 50
 	}
 	if = {
 		limit = { has_trait = ill }
@@ -135,43 +165,43 @@ heal_price_value = {
 	}
 	if = {
 		limit = { has_trait = pneumonic }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = gout_ridden }
-		add = 20
+		add = 30
 	}
 	if = {
 		limit = { has_trait = typhus }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = consumption }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = cancer }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = great_pox }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = smallpox }
-		add = 20
+		add = 30
 	}
 	if = {
 		limit = { has_trait = bubonic_plague }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = lovers_pox }
-		add = 20
+		add = 30
 	}
 	if = {
 		limit = { has_trait = great_pox }
-		add = 20
+		add = 30
 	}
 	if = {
 		limit = { has_trait = possessed_genetic }
@@ -179,12 +209,16 @@ heal_price_value = {
 	}
 	if = {
 		limit = { has_trait = bubonic_plague }
-		add = 20
+		add = 50
 	}
 	if = {
 		limit = { has_trait = measles }
-		add = 20
+		add = 50
 	}
+}
+
+purify_price_value = {
+	value = 0
 	if = {
 		limit = { has_trait = albino }
 		add = 50
@@ -280,5 +314,85 @@ heal_price_value = {
 	if = {
 		limit = { has_trait = inbred }
 		add = 50
+	}
+}
+
+honor_price_value = {
+	value = 0
+	if = {
+		limit = { has_trait = bastard }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = legitimized_bastard }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = disputed_heritage }
+		add = 15
+	}
+	if = {
+		limit = { has_trait = child_of_concubine_male }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = child_of_concubine_female }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = wild_oat }
+		add = 5
+	}
+	if = {
+		limit = { has_trait = bastard_founder }
+		add = 5
+	}
+	if = {
+		limit = { has_trait = witch }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = deviant }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = cannibal }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = deviant }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = adulterer }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = sodomite }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = incestuous }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = fornicator }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = kinslayer_1 }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = kinslayer_2 }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = kinslayer_3 }
+		add = 15
+	}
+	if = {
+		limit = { has_trait = murderer }
+		add = 10
 	}
 }

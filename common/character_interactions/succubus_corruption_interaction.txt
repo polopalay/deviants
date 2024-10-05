@@ -1,67 +1,3 @@
-succubus_child_interaction = {
-	icon = pregnant
-	desc = succubus_child_interaction.desc
-	category = interaction_category_friendly
-	use_diplomatic_range = yes
-	common_interaction = no
-	cooldown = { years = 10 }
-	is_shown = {
-		scope:actor = {
-			is_adult = yes
-			OR = {
-				has_trait = demon
-				AND = {
-					has_trait_xp = { trait = succubus track = corruption value >= 5 }
-					have_soul_forge_trigger = yes
-				}
-			}
-		}
-		scope:recipient = {
-			is_adult = yes
-			is_female = yes
-			age >= 18
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			if = {
-				limit = { patrilinear_marriage = yes }
-				create_character = {
-					age = 0
-					location = primary_spouse.capital_province
-					mother = scope:recipient
-					father = primary_spouse
-					dynasty_house = primary_spouse.house
-					culture = primary_spouse.culture
-					faith = primary_spouse.faith
-					gender_female_chance = 50
-					trait = deviant_blood
-				}
-			}
-			else = {
-				create_character = {
-					age = 0
-					location = capital_province
-					mother = scope:recipient
-					father = primary_spouse
-					dynasty_house = house
-					culture = culture
-					faith = faith
-					gender_female_chance = 50
-					trait = deviant_blood
-				}
-			}
-		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = corruption value = -5 }
-			}
-		}
-	}
-	auto_accept = yes
-}
-
 succubus_create_lesser_succubus_interaction = {
 	icon = lesser_devil
 	desc = succubus_create_lesser_succubus_interaction.desc
@@ -140,4 +76,3 @@ succubus_create_succubus_interaction = {
 	}
 	auto_accept = yes
 }
-

@@ -61,14 +61,12 @@
   naked: "Nackt"
   glass: "Glas"
 
-  succubus_cultist_interaction: "Einen Kultisten erschaffen"
-  succubus_cultist_interaction.desc: "Mentale Manipulation, wodurch [recipient.GetShortUIName] ein Anhänger des Teufelskults wird"
-
   succubus_honor_interaction: "Unehrenhaften Trait entfernen"
   succubus_honor_interaction.desc: "Entfernen Sie den unehrenhaften Trait von [recipient.GetShortUIName]"
 
   deal_with_the_devil: "Pakt mit dem Teufel"
   deal_with_the_devil.desc: "Schließe einen Pakt mit dem Teufel und erhalte, was immer du willst, zu einem \"kleinen\" Preis."
+  small_price: "Kleiner Preis"
 
   ask_for_become_lesser_succubus: "Bitte um die Transformation zur geringeren Succubus"
   ask_for_become_lesser_succubus.desc: "Bitte den Teufel, um eine geringere Succubus zu werden."
