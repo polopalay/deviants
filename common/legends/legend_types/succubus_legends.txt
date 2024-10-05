@@ -56,7 +56,7 @@ sexual = {
 
 	is_valid_protagonist = {
 		age >= 18
-		has_trait = succubus
+		has_trait = sbs_succubus
 	}
 
 	ai_protagonist_weight = {
@@ -66,7 +66,7 @@ sexual = {
 			add = 40
 		}
 		if = {
-			limit = { has_trait = succubus }
+			limit = { has_trait = sbs_succubus }
 			add = 10
 		}
 	}
@@ -132,12 +132,12 @@ sexual = {
 						}
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = corruption
 						value = 5
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = loyalty
 						value = 5
 					}
@@ -234,22 +234,22 @@ sexual = {
 						}
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = corruption
 						value = 10
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = loyalty
 						value = 10
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = power
 						value = 10
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = daring
 						value = 10
 					}
@@ -353,22 +353,22 @@ sexual = {
 						}
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = corruption
 						value = 20
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = loyalty
 						value = 20
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = power
 						value = 25
 					}
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = daring
 						value = 25
 					}
@@ -484,7 +484,7 @@ witchcraft = {
 
 	is_valid_protagonist = {
 		age >= 18
-		has_trait = succubus
+		has_trait = sbs_succubus
 	}
 
 	ai_protagonist_weight = {

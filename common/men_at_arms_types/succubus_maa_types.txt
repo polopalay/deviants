@@ -17,9 +17,9 @@ succubus_dark_amry = {
 	max_sub_regiments = 5
 	can_recruit = {
 		OR = {
-			has_trait = demon
-			has_trait = succubus
-			has_trait = lesser_succubus
+			has_trait = sbs_demon
+			has_trait = sbs_succubus
+			has_trait = sbs_lesser_succubus
 		}
 	}
 	buy_cost = { gold = 150 }
@@ -57,7 +57,7 @@ succubus_zombie = {
 	type = skirmishers
 	can_recruit = {
 		OR = {
-			has_trait = demon
+			has_trait = sbs_demon
 			have_devil_building_trigger = yes
 		}
 	}
@@ -82,7 +82,7 @@ succubus_skeleton = {
 	type = skirmishers
 	can_recruit = {
 		OR = {
-			has_trait = demon
+			has_trait = sbs_demon
 			have_devil_building_trigger = yes
 		}
 	}

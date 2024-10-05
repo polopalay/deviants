@@ -8,7 +8,7 @@ brothel1 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
 	}
 
@@ -41,7 +41,7 @@ brothel2 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
 	}
 
@@ -72,7 +72,7 @@ brothel3 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
 	}
 
@@ -105,7 +105,7 @@ alchemy1 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
 	}
 
@@ -139,7 +139,7 @@ alchemy2 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
 	}
 
@@ -171,7 +171,7 @@ alchemy3 = {
 
 	is_enabled = {
 		scope:holder = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
 	}
 

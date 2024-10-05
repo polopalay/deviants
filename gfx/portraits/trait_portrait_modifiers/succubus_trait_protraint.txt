@@ -4,12 +4,12 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 33
 			}
@@ -29,17 +29,17 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value >= 50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value < 100
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 33
 			}
@@ -59,12 +59,12 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 33
 			}
@@ -84,17 +84,17 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 33
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 66
 			}
@@ -114,17 +114,17 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 66
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 100
 			}
@@ -144,12 +144,12 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value < 50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value = 100
 			}
@@ -171,17 +171,17 @@ succubus_outfit = {
 		}
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value >=50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 33
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 66
 			}
@@ -201,17 +201,17 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value >=50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 66
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 100
 			}
@@ -231,17 +231,17 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 33
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 66
 			}
@@ -261,17 +261,17 @@ succubus_outfit = {
 		traits = { succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 100
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 66
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value < 100
 			}
@@ -291,10 +291,10 @@ succubus_outfit = {
 		traits = { succubus demon }
 		trigger = {
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				AND = {
-					has_trait_xp = { trait = succubus track = corruption value = 100 }
-					has_trait_xp = { trait = succubus track = loyalty value = 100 }
+					has_trait_xp = { trait = sbs_succubus track = corruption value = 100 }
+					has_trait_xp = { trait = sbs_succubus track = loyalty value = 100 }
 				}
 			}
 		}
@@ -313,7 +313,7 @@ succubus_outfit = {
 		traits = { lesser_succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 0
 			}
 		}
@@ -332,7 +332,7 @@ succubus_outfit = {
 		traits = { lesser_succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value < 50
 			}
 		}
@@ -351,7 +351,7 @@ succubus_outfit = {
 		traits = { lesser_succubus }
 		trigger = {
 			has_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value >= 50
 			}
 		}

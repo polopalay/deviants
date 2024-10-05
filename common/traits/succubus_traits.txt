@@ -1,7 +1,7 @@
-demon = {
+sbs_demon = {
 	category = health
 	icon = demon.dds
-	
+
 	immortal = yes
 	can_have_children = no
 	no_prowess_loss_from_age = yes
@@ -20,9 +20,9 @@ demon = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { NOT = { exists = this } }
-				desc = demon_desc
+				desc = sbs_demon_desc
 			}
-			desc = demon_character_desc
+			desc = sbs_demon_character_desc
 		}
 	}
 	opposites = { lesser_succubus deviant_virgin incapable }
@@ -58,7 +58,7 @@ demon = {
 	ruler_designer_cost = 400
 }
 
-succubus = {
+sbs_succubus = {
 	category = health
 	icon = succubus.dds
 
@@ -80,13 +80,13 @@ succubus = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { NOT = { exists = this } }
-				desc = trait_succubus_neutral
+				desc = trait_sbs_succubus_neutral
 			}
 			triggered_desc = {
 				trigger = { is_female = yes }
-				desc = trait_succubus_female
+				desc = trait_sbs_succubus_female
 			}
-			desc = trait_succubus_male
+			desc = trait_sbs_succubus_male
 		}
 	}
 
@@ -94,9 +94,9 @@ succubus = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { NOT = { exists = this } }
-				desc = succubus_desc
+				desc = sbs_succubus_desc
 			}
-			desc = succubus_character_desc
+			desc = sbs_succubus_character_desc
 		}
 	}
 
@@ -209,7 +209,7 @@ succubus = {
 	ruler_designer_cost = 100
 }
 
-lesser_succubus = {
+sbs_lesser_succubus = {
 	category = health
 	icon = lesser_succubus.dds
 
@@ -249,9 +249,9 @@ lesser_succubus = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = lesser_succubus_desc
+				desc = lesser_sbs_succubus_desc
 			}
-			desc = lesser_succubus_character_desc
+			desc = lesser_sbs_succubus_character_desc
 		}
 	}
 

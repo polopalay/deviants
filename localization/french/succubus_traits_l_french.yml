@@ -1,13 +1,13 @@
 ﻿l_french:
-  trait_demon: "Démon"
-  demon_desc: "Ceux qui sont maudits par le ciel, bénis par l'enfer. Au plus profond d'eux se trouvent la mort et la destruction."
-  demon_character_desc: "En tant qu'enfants du diable, bénis par les princes de l'enfer. La mission de [ROOT.GetCharacter.GetNamePossessive] est de bénir le chaos et la destruction à travers le monde."
+  trait_sbs_demon: "Démon"
+  sbs_demon_desc: "Ceux qui sont maudits par le ciel, bénis par l'enfer. Au plus profond d'eux se trouvent la mort et la destruction."
+  sbs_demon_character_desc: "En tant qu'enfants du diable, bénis par les princes de l'enfer. La mission de [ROOT.GetCharacter.GetNamePossessive] est de bénir le chaos et la destruction à travers le monde."
 
-  trait_succubus_neutral: "Succube"
-  trait_succubus_female: "Succube"
-  trait_succubus_male: "Incube"
-  succubus_desc: "Certains l'ont vu, d'autres en ont entendu parler, tout le monde chuchote au sujet du comportement étrange de [ROOT.GetCharacter.GetNamePossessive]."
-  succubus_character_desc: "Quoi qu'il y ait à l'intérieur, personne ne pense qu'il y a quelque chose d'étrange à propos de [ROOT.GetCharacter.GetName]."
+  trait_sbs_succubus_neutral: "Succube"
+  trait_sbs_succubus_female: "Succube"
+  trait_sbs_succubus_male: "Incube"
+  sbs_succubus_desc: "Certains l'ont vu, d'autres en ont entendu parler, tout le monde chuchote au sujet du comportement étrange de [ROOT.GetCharacter.GetNamePossessive]."
+  sbs_succubus_character_desc: "Quoi qu'il y ait à l'intérieur, personne ne pense qu'il y a quelque chose d'étrange à propos de [ROOT.GetCharacter.GetName]."
 
   trait_track_corruption: "Déviant"
   trait_track_corruption_desc: "Des âmes qu'elle collecte, elle gagne plus de pouvoir pour invoquer des créatures monstrueuses."
@@ -21,11 +21,11 @@
   trait_lesser_succubus_neutral: "Moins de Succube"
   trait_lesser_succubus_female: "Moins de Succube"
   trait_lesser_succubus_male: "Moins d'Incube"
-  lesser_succubus_desc: "Quoi qu'il y ait à l'intérieur, personne ne pense qu'il y a quelque chose d'étrange à propos de [ROOT.GetCharacter.GetName]."
-  lesser_succubus_character_desc: "La plupart des gens l'ont vu, tout le monde en a entendu parler. Le comportement de [ROOT.GetCharacter.GetNamePossessive] est moralement dépravé. Elle est évoquée avec le même mépris que l'on utiliserait pour parler d'une prostituée de rue ordinaire."
+  lesser_sbs_succubus_desc: "Quoi qu'il y ait à l'intérieur, personne ne pense qu'il y a quelque chose d'étrange à propos de [ROOT.GetCharacter.GetName]."
+  lesser_sbs_succubus_character_desc: "La plupart des gens l'ont vu, tout le monde en a entendu parler. Le comportement de [ROOT.GetCharacter.GetNamePossessive] est moralement dépravé. Elle est évoquée avec le même mépris que l'on utiliserait pour parler d'une prostituée de rue ordinaire."
 
   trait_track_lesser_succubus: "Pouvoir"
-  trait_track_lesser_succubus_desc: "Elle sert de prostituée bon marché, servant les hommes pour obtenir leur semence."
+  trait_track_lesser_sbs_succubus_desc: "Elle sert de prostituée bon marché, servant les hommes pour obtenir leur semence."
 
   trait_deviant_virgin: "Vierge Perversa"
   deviant_virgin_desc: "[ROOT.GetCharacter.GetName] est la prostituée du diable."

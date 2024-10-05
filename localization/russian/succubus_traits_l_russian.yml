@@ -1,13 +1,13 @@
 ﻿l_russian:
-  trait_demon: "Демон"
-  demon_desc: "Те, кто проклят небесами и благословлен адом. Глубоко в них находится смерть и разрушение."
-  demon_character_desc: "Как дети дьявола, благословленные принцами ада. Миссия [ROOT.GetCharacter.GetNamePossessive] — благословлять хаос и разрушение по всему миру."
+  trait_sbs_demon: "Демон"
+  sbs_demon_desc: "Те, кто проклят небесами и благословлен адом. Глубоко в них находится смерть и разрушение."
+  sbs_demon_character_desc: "Как дети дьявола, благословленные принцами ада. Миссия [ROOT.GetCharacter.GetNamePossessive] — благословлять хаос и разрушение по всему миру."
 
-  trait_succubus_neutral: "Суккуб"
-  trait_succubus_female: "Суккуб"
-  trait_succubus_male: "Инкуб"
-  succubus_desc: "Некоторые видели это, другие слышали об этом, все шепчутся о странном поведении [ROOT.GetCharacter.GetNamePossessive]."
-  succubus_character_desc: "Независимо от того, что внутри, никто не думает, что в [ROOT.GetCharacter.GetName] есть что-то странное."
+  trait_sbs_succubus_neutral: "Суккуб"
+  trait_sbs_succubus_female: "Суккуб"
+  trait_sbs_succubus_male: "Инкуб"
+  sbs_succubus_desc: "Некоторые видели это, другие слышали об этом, все шепчутся о странном поведении [ROOT.GetCharacter.GetNamePossessive]."
+  sbs_succubus_character_desc: "Независимо от того, что внутри, никто не думает, что в [ROOT.GetCharacter.GetName] есть что-то странное."
 
   trait_track_corruption: "Отклонение"
   trait_track_corruption_desc: "Из собранных ей душ она получает больше силы для призыва чудовищ."
@@ -21,11 +21,11 @@
   trait_lesser_succubus_neutral: "Меньший Суккуб"
   trait_lesser_succubus_female: "Меньший Суккуб"
   trait_lesser_succubus_male: "Меньший Инкуб"
-  lesser_succubus_desc: "Независимо от того, что внутри, никто не думает, что в [ROOT.GetCharacter.GetName] есть что-то странное."
-  lesser_succubus_character_desc: "Большинство это видели, все об этом слышали. Поведение [ROOT.GetCharacter.GetNamePossessive] морально развращено. О ней говорят с таким же презрением, как о обычной уличной проститутке."
+  lesser_sbs_succubus_desc: "Независимо от того, что внутри, никто не думает, что в [ROOT.GetCharacter.GetName] есть что-то странное."
+  lesser_sbs_succubus_character_desc: "Большинство это видели, все об этом слышали. Поведение [ROOT.GetCharacter.GetNamePossessive] морально развращено. О ней говорят с таким же презрением, как о обычной уличной проститутке."
 
   trait_track_lesser_succubus: "Сила"
-  trait_track_lesser_succubus_desc: "Она служит дешевой проституткой, обслуживая мужчин для получения их семени."
+  trait_track_lesser_sbs_succubus_desc: "Она служит дешевой проституткой, обслуживая мужчин для получения их семени."
 
   trait_deviant_virgin: "Похотливая девственница"
   deviant_virgin_desc: "[ROOT.GetCharacter.GetName] — это проститутка дьявола."

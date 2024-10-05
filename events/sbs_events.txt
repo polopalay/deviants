@@ -1,10 +1,10 @@
-namespace = succubus_event
+namespace = sbs_event
 
 #If repent your perversion, looking at your deranged body
-succubus_event.0800 = {
+sbs_event.0800 = {
 	type = character_event
-	title = succubus_event.0800.t
-	desc = succubus_event.0800.desc
+	title = sbs_event.0800.t
+	desc = sbs_event.0800.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -14,29 +14,29 @@ succubus_event.0800 = {
 	#punish pussy
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0800.a
-		custom_tooltip = succubus_event.0800.a.tt
-		trigger_event = succubus_event.0801
+		name = sbs_event.0800.a
+		custom_tooltip = sbs_event.0800.a.tt
+		trigger_event = sbs_event.0801
 	}
 	#public shaming
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0800.b
-		custom_tooltip = succubus_event.0800.b.tt
-		trigger_event = succubus_event.0900
+		name = sbs_event.0800.b
+		custom_tooltip = sbs_event.0800.b.tt
+		trigger_event = sbs_event.0900
 	}
 	#just some minor acts of faith will do
 	option = {
-		name = succubus_event.0800.c
-		custom_tooltip = succubus_event.0800.c.tt
+		name = sbs_event.0800.c
+		custom_tooltip = sbs_event.0800.c.tt
 	}
 }
 
 #0801 looking at your clit like it's cancer growth
-succubus_event.0801 = {
+sbs_event.0801 = {
 	type = character_event
-	title = succubus_event.0801.t
-	desc = succubus_event.0801.desc
+	title = sbs_event.0801.t
+	desc = sbs_event.0801.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -46,24 +46,24 @@ succubus_event.0801 = {
 	#Punish your deviant knob
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0801.a
-		custom_tooltip = succubus_event.0801.a.tt
-		trigger_event = succubus_event.0802
+		name = sbs_event.0801.a
+		custom_tooltip = sbs_event.0801.a.tt
+		trigger_event = sbs_event.0802
 	}
 	#Teach your horny flower a lesson
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0801.b
-		custom_tooltip = succubus_event.0801.b.tt
-		trigger_event = succubus_event.0810
+		name = sbs_event.0801.b
+		custom_tooltip = sbs_event.0801.b.tt
+		trigger_event = sbs_event.0810
 	}
 }
 
 #0802 clamp clit, you punishing it more for it daring to enjoy it
-succubus_event.0802 = {
+sbs_event.0802 = {
 	type = character_event
-	title = succubus_event.0802.t
-	desc = succubus_event.0802.desc
+	title = sbs_event.0802.t
+	desc = sbs_event.0802.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -73,8 +73,8 @@ succubus_event.0802 = {
 	#no mercy
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0802.a
-		custom_tooltip = succubus_event.0802.a.tt
+		name = sbs_event.0802.a
+		custom_tooltip = sbs_event.0802.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 		}
@@ -82,14 +82,14 @@ succubus_event.0802 = {
 	#masturbate
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0802.b
-		custom_tooltip = succubus_event.0802.b.tt
+		name = sbs_event.0802.b
+		custom_tooltip = sbs_event.0802.b.tt
 		stress_impact = {
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -97,16 +97,16 @@ succubus_event.0802 = {
 	}
 	#this is enough
 	option = {
-		name = succubus_event.0802.c
-		custom_tooltip = succubus_event.0802.c.tt
+		name = sbs_event.0802.c
+		custom_tooltip = sbs_event.0802.c.tt
 	}
 }
 
 #0810 punishing pussy, spank/insertion
-succubus_event.0810 = {
+sbs_event.0810 = {
 	type = character_event
-	title = succubus_event.0810.t
-	desc = succubus_event.0810.desc
+	title = sbs_event.0810.t
+	desc = sbs_event.0810.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -116,8 +116,8 @@ succubus_event.0810 = {
 	#no mercy
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0810.a
-		custom_tooltip = succubus_event.0810.a.tt
+		name = sbs_event.0810.a
+		custom_tooltip = sbs_event.0810.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 		}
@@ -125,14 +125,14 @@ succubus_event.0810 = {
 	#masturbate
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0810.b
-		custom_tooltip = succubus_event.0810.b.tt
+		name = sbs_event.0810.b
+		custom_tooltip = sbs_event.0810.b.tt
 		stress_impact = {
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -140,15 +140,15 @@ succubus_event.0810 = {
 	}
 	#this is enough
 	option = {
-		name = succubus_event.0810.c
-		custom_tooltip = succubus_event.0810.c.tt
+		name = sbs_event.0810.c
+		custom_tooltip = sbs_event.0810.c.tt
 	}
 }
 
-succubus_event.0900 = {
+sbs_event.0900 = {
 	type = character_event
-	title = succubus_event.0900.t
-	desc = succubus_event.0900.desc
+	title = sbs_event.0900.t
+	desc = sbs_event.0900.desc
 	theme = bloody_wedding_night
 	override_background = { reference = gallows }
 	right_portrait = {
@@ -159,21 +159,21 @@ succubus_event.0900 = {
 	#say nothing, get the usual pillory punishment
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_event.0900.a
-		custom_tooltip = succubus_event.0900.a.tt
+		name = sbs_event.0900.a
+		custom_tooltip = sbs_event.0900.a.tt
 	}
 	#admit being a deviant whore who loves sex
 	option = {
 		ai_chance = { base = 80 }
 		trigger = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
-		name = succubus_event.0900.b
-		custom_tooltip = succubus_event.0900.b.tt
-		trigger_event = succubus_event.0901
+		name = sbs_event.0900.b
+		custom_tooltip = sbs_event.0900.b.tt
+		trigger_event = sbs_event.0901
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -183,14 +183,14 @@ succubus_event.0900 = {
 	option = {
 		ai_chance = { base = 80 }
 		trigger = {
-			has_trait = succubus
+			has_trait = sbs_succubus
 		}
-		name = succubus_event.0900.c
-		custom_tooltip = succubus_event.0900.c.tt
-		trigger_event = succubus_event.0901
+		name = sbs_event.0900.c
+		custom_tooltip = sbs_event.0900.c.tt
+		trigger_event = sbs_event.0901
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -198,10 +198,10 @@ succubus_event.0900 = {
 	}
 }
 #0901 fisting/washed/spanked with blessed water to clean your tainted pussy
-succubus_event.0901 = {
+sbs_event.0901 = {
 	type = character_event
-	title = succubus_event.0901.t
-	desc = succubus_event.0901.desc
+	title = sbs_event.0901.t
+	desc = sbs_event.0901.desc
 	theme = bloody_wedding_night
 	override_background = { reference = gallows }
 	right_portrait = {
@@ -211,18 +211,18 @@ succubus_event.0901 = {
 	}
 	#endure
 	option = {
-		name = succubus_event.0901.a
-		custom_tooltip = succubus_event.0901.a.tt
+		name = sbs_event.0901.a
+		custom_tooltip = sbs_event.0901.a.tt
 	}
 	#beg for more
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_event.0901.b
-		custom_tooltip = succubus_event.0901.b.tt
-		trigger_event = succubus_event.0902
+		name = sbs_event.0901.b
+		custom_tooltip = sbs_event.0901.b.tt
+		trigger_event = sbs_event.0902
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -230,10 +230,10 @@ succubus_event.0901 = {
 	}
 }
 #0902 put on a "pole of shame" pussy pole... covered in dirty things the crowd throws, for hours
-succubus_event.0902 = {
+sbs_event.0902 = {
 	type = character_event
-	title = succubus_event.0902.t
-	desc = succubus_event.0902.desc
+	title = sbs_event.0902.t
+	desc = sbs_event.0902.desc
 	theme = bloody_wedding_night
 	override_background = { reference = gallows }
 	right_portrait = {
@@ -243,17 +243,17 @@ succubus_event.0902 = {
 	}
 	#endure
 	option = {
-		name = succubus_event.0902.a
-		custom_tooltip = succubus_event.0902.a.tt
+		name = sbs_event.0902.a
+		custom_tooltip = sbs_event.0902.a.tt
 	}
 	#beg for more
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_event.0902.b
-		custom_tooltip = succubus_event.0902.b.tt
+		name = sbs_event.0902.b
+		custom_tooltip = sbs_event.0902.b.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -262,29 +262,29 @@ succubus_event.0902 = {
 }
 
 #0550 if has no dildo at max addiction...
-succubus_event.0550 = { 
+sbs_event.0550 = {
 	type = character_event
-	title = succubus_event.0550.t
-	desc = succubus_event.0550.desc
+	title = sbs_event.0550.t
+	desc = sbs_event.0550.desc
 	theme = bloody_wedding_night
 	override_background = { reference = bedchamber }
 	right_portrait = {
 		character = root
 		animation = lunatic
-	}	
+	}
 	# find one, at any cost
 	option = {
 		ai_chance = { base = 50 }
 		trigger = {
 			gold >= major_gold_value
 			OR = {
-				has_trait = succubus
-				has_trait = lesser_succubus
-				has_trait = demon
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
+				has_trait = sbs_demon
 			}
 		}
-		name = succubus_event.0550.a
-		custom_tooltip = succubus_event.0550.a.tt
+		name = sbs_event.0550.a
+		custom_tooltip = sbs_event.0550.a.tt
 		remove_short_term_gold = medium_gold_value
 		create_artifact = {
 			name = master_dildo
@@ -298,29 +298,29 @@ succubus_event.0550 = {
 			wealth = 10
 			quality = 10
 		}
-	}	
+	}
 	# try to endure
 	option = {
-		name = succubus_event.0550.b
-		custom_tooltip = succubus_event.0550.b.tt
+		name = sbs_event.0550.b
+		custom_tooltip = sbs_event.0550.b.tt
 		stress_impact = {
 			base = massive_stress_impact_gain
 			lustful = massive_stress_impact_gain
 		}
-	}	
+	}
 	# you can feel it, there is one nearby
 	option = {
 		ai_chance = { base = 50 }
 		trigger = {
 			OR = {
-				has_trait = demon
-				has_trait_xp = { trait = succubus track = daring value >= 1 }
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 1 }
 			}
 		}
-		name = succubus_event.0550.c
-		custom_tooltip = succubus_event.0550.c.tt
+		name = sbs_event.0550.c
+		custom_tooltip = sbs_event.0550.c.tt
 		add_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = daring
 			value = -1
 		}
@@ -335,5 +335,5 @@ succubus_event.0550 = {
 			wealth = 10
 			quality = 10
 		}
-	}	
+	}
 }

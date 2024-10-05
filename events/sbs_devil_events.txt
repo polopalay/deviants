@@ -1,40 +1,40 @@
-namespace = succubus_devil
+namespace = sbs_devil
 
-succubus_devil.1410 = {
+sbs_devil.1410 = {
 	type = character_event
-	title = succubus_devil.1410.t
+	title = sbs_devil.1410.t
 	cooldown = { years = 2 }
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					has_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = corruption
 						value >= 100
 					}
 				}
-				desc = succubus_devil.1410.a.desc
+				desc = sbs_devil.1410.a.desc
 			}
 			triggered_desc = {
 				trigger = {
 					has_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = corruption
 						value < 50
 					}
 				}
-				desc = succubus_devil.1410.b.desc
+				desc = sbs_devil.1410.b.desc
 			}
 			triggered_desc = {
 				trigger = {
 					has_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = corruption
 						value >= 50
 					}
 				}
-				desc = succubus_devil.1410.c.desc
+				desc = sbs_devil.1410.c.desc
 			}
 		}
 	}
@@ -45,8 +45,8 @@ succubus_devil.1410 = {
 	}
 	trigger = {
 		OR = {
-			has_trait = succubus
-			has_trait = lesser_succubus
+			has_trait = sbs_succubus
+			has_trait = sbs_lesser_succubus
 		}
 		is_ruler = yes
 		is_female = yes
@@ -56,17 +56,17 @@ succubus_devil.1410 = {
 	option = {
 		trigger = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value >= 100
 			}
 		}
 		ai_chance = { base = 5 }
-		name = succubus_devil.1410.a
-		custom_tooltip = succubus_devil.1410.a.tt
+		name = sbs_devil.1410.a
+		custom_tooltip = sbs_devil.1410.a.tt
 		add_piety = medium_piety_loss
 		remove_short_term_gold = massive_gold_value
-		trigger_event = succubus_devil.1411
+		trigger_event = sbs_devil.1411
 	}
 	# beg for sex
 	option = {
@@ -74,32 +74,32 @@ succubus_devil.1410 = {
 			has_trait = lustful
 		}
 		ai_chance = { base = 5 }
-		name = succubus_devil.1410.b
-		custom_tooltip = succubus_devil.1410.b.tt
+		name = sbs_devil.1410.b
+		custom_tooltip = sbs_devil.1410.b.tt
 		add_piety = medium_piety_loss
-		trigger_event = succubus_devil.1412
+		trigger_event = sbs_devil.1412
 	}
 	# stay still
 	option = {
 		ai_chance = { base = 5 }
-		name = succubus_devil.1410.c
-		custom_tooltip = succubus_devil.1410.c.tt
+		name = sbs_devil.1410.c
+		custom_tooltip = sbs_devil.1410.c.tt
 		add_piety = minor_piety_loss
-		trigger_event = succubus_devil.1413
+		trigger_event = sbs_devil.1413
 	}
 	# ask gold from it instead
 	option = {
 		ai_chance = { base = 0 }
 		add_piety = major_piety_loss
-		name = succubus_devil.1410.d
-		custom_tooltip = succubus_devil.1410.d.tt
-		trigger_event = succubus_devil.1414
+		name = sbs_devil.1410.d
+		custom_tooltip = sbs_devil.1410.d.tt
+		trigger_event = sbs_devil.1414
 	}
 	# resist
 	option = {
-		name = succubus_devil.1410.e
+		name = sbs_devil.1410.e
 		ai_chance = { base = 0 }
-		custom_tooltip = succubus_devil.1410.e.tt
+		custom_tooltip = sbs_devil.1410.e.tt
 		add_piety = minor_piety_gain
 		stress_impact = {
 			base = major_stress_impact_gain
@@ -107,7 +107,7 @@ succubus_devil.1410 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
@@ -116,61 +116,61 @@ succubus_devil.1410 = {
 }
 
 #1411 if pay gold, tongue kiss until pass out
-succubus_devil.1411 = {
+sbs_devil.1411 = {
 	type = character_event
-	title = succubus_devil.1411.t
-	desc = succubus_devil.1411.a.desc
+	title = sbs_devil.1411.t
+	desc = sbs_devil.1411.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
 		animation = personality_greedy
 	}
 	option = {
-		name = succubus_devil.1411.a
-		custom_tooltip = succubus_devil.1411.a.tt
+		name = sbs_devil.1411.a
+		custom_tooltip = sbs_devil.1411.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value = 2
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
 	}
 }
 #1412 if beg for sex, brutal strangle fuck to pass out, stress loss, gain corruption
-succubus_devil.1412 = {
+sbs_devil.1412 = {
 	type = character_event
-	title = succubus_devil.1412.t
-	desc = succubus_devil.1412.a.desc
+	title = sbs_devil.1412.t
+	desc = sbs_devil.1412.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
 		animation = personality_coward
 	}
 	option = {
-		name = succubus_devil.1412.a
-		custom_tooltip = succubus_devil.1412.a.tt
+		name = sbs_devil.1412.a
+		custom_tooltip = sbs_devil.1412.a.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = massive_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = pussy_cum months = 1 }
@@ -178,34 +178,34 @@ succubus_devil.1412 = {
 	}
 }
 #1413 if stay still, creepy lick fuck
-succubus_devil.1413 = {
+sbs_devil.1413 = {
 	type = character_event
-	title = succubus_devil.1413.t
-	desc = succubus_devil.1413.a.desc
+	title = sbs_devil.1413.t
+	desc = sbs_devil.1413.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
 		animation = personality_callous
 	}
 	option = {
-		name = succubus_devil.1413.a
-		custom_tooltip = succubus_devil.1413.a.tt
+		name = sbs_devil.1413.a
+		custom_tooltip = sbs_devil.1413.a.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 5
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 5
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = pussy_cum days = 10 }
@@ -214,10 +214,10 @@ succubus_devil.1413 = {
 }
 
 #1414 if ask gold from it instead
-succubus_devil.1414 = {
+sbs_devil.1414 = {
 	type = character_event
-	title = succubus_devil.1414.t
-	desc = succubus_devil.1414.a.desc
+	title = sbs_devil.1414.t
+	desc = sbs_devil.1414.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -225,33 +225,33 @@ succubus_devil.1414 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1414.a
-		custom_tooltip = succubus_devil.1414.a.tt
+		name = sbs_devil.1414.a
+		custom_tooltip = sbs_devil.1414.a.tt
 		add_gold = 5
-		trigger_event = succubus_devil.1415
+		trigger_event = sbs_devil.1415
 	}
 	# demand more gold
 	option = {
-		name = succubus_devil.1414.b
+		name = sbs_devil.1414.b
 		add_piety = major_piety_loss
-		custom_tooltip = succubus_devil.1414.b.tt
-		trigger_event = succubus_devil.1416
+		custom_tooltip = sbs_devil.1414.b.tt
+		trigger_event = sbs_devil.1416
 	}
 }
 
 #1415 if only pleasure him, he riding you around while fucking
-succubus_devil.1415 = {
+sbs_devil.1415 = {
 	type = character_event
-	title = succubus_devil.1415.t
-	desc = succubus_devil.1415.a.desc
+	title = sbs_devil.1415.t
+	desc = sbs_devil.1415.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
 		animation = frontend_right_idle
 	}
 	option = {
-		name = succubus_devil.1415.a
-		custom_tooltip = succubus_devil.1415.a.tt
+		name = sbs_devil.1415.a
+		custom_tooltip = sbs_devil.1415.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = medium_stress_impact_loss
@@ -259,22 +259,22 @@ succubus_devil.1415 = {
 		add_piety = minor_piety_loss
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
@@ -282,10 +282,10 @@ succubus_devil.1415 = {
 }
 
 #1416 if demand more gold, more demons appear, they surround you
-succubus_devil.1416 = {
+sbs_devil.1416 = {
 	type = character_event
-	title = succubus_devil.1416.t
-	desc = succubus_devil.1416.a.desc
+	title = sbs_devil.1416.t
+	desc = sbs_devil.1416.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -293,34 +293,34 @@ succubus_devil.1416 = {
 	}
 	# if agree to stuff every hole
 	option = {
-		name = succubus_devil.1416.a
-		custom_tooltip = succubus_devil.1416.a.tt
+		name = sbs_devil.1416.a
+		custom_tooltip = sbs_devil.1416.a.tt
 		add_piety = minor_piety_loss
 		add_gold = tiny_gold_value
-		trigger_event = succubus_devil.1417
+		trigger_event = sbs_devil.1417
 	}
 	# if agree to fuck the biggest cock, longer you stay consious, the more you earn
 	option = {
-		name = succubus_devil.1416.b
+		name = sbs_devil.1416.b
 		add_piety = minor_piety_loss
-		custom_tooltip = succubus_devil.1416.b.tt
-		trigger_event = succubus_devil.1418
+		custom_tooltip = sbs_devil.1416.b.tt
+		trigger_event = sbs_devil.1418
 	}
 	# if agree to a parade
 	option = {
-		name = succubus_devil.1416.c
+		name = sbs_devil.1416.c
 		add_piety = medium_piety_loss
-		custom_tooltip = succubus_devil.1416.c.tt
+		custom_tooltip = sbs_devil.1416.c.tt
 		add_gold = medium_gold_value
-		trigger_event = succubus_devil.1419
+		trigger_event = sbs_devil.1419
 	}
 }
 
 #1417 if agree to stuff every hole
-succubus_devil.1417 = {
+sbs_devil.1417 = {
 	type = character_event
-	title = succubus_devil.1417.t
-	desc = succubus_devil.1417.a.desc
+	title = sbs_devil.1417.t
+	desc = sbs_devil.1417.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -328,28 +328,28 @@ succubus_devil.1417 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.1417.a
-		custom_tooltip = succubus_devil.1417.a.tt
+		name = sbs_devil.1417.a
+		custom_tooltip = sbs_devil.1417.a.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 2
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
 	}
 	# see how long you can endure
 	option = {
-		name = succubus_devil.1417.b
-		custom_tooltip = succubus_devil.1417.b.tt
+		name = sbs_devil.1417.b
+		custom_tooltip = sbs_devil.1417.b.tt
 		duel = {
 			skill = prowess
 			value = decent_skill_rating
@@ -361,9 +361,9 @@ succubus_devil.1417 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.1417.bwin.tt
+					text = sbs_devil.1417.bwin.tt
 				}
-				trigger_event = succubus_devil.1420
+				trigger_event = sbs_devil.1420
 			}
 			# Failure, lose
 			60 = {
@@ -373,18 +373,18 @@ succubus_devil.1417 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.1417.blose.tt
+					text = sbs_devil.1417.blose.tt
 				}
-				trigger_event = succubus_devil.1421
+				trigger_event = sbs_devil.1421
 			}
 		}
 	}
 }
 #1418 if cowgirl the one with the biggets cock, the longer you can endure, the more tips you get
-succubus_devil.1418 = {
+sbs_devil.1418 = {
 	type = character_event
-	title = succubus_devil.1418.t
-	desc = succubus_devil.1418.a.desc
+	title = sbs_devil.1418.t
+	desc = sbs_devil.1418.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -392,8 +392,8 @@ succubus_devil.1418 = {
 	}
 	# see how long you can endure
 	option = {
-		name = succubus_devil.1418.a
-		custom_tooltip = succubus_devil.1418.a.tt
+		name = sbs_devil.1418.a
+		custom_tooltip = sbs_devil.1418.a.tt
 		duel = {
 			skill = prowess
 			value = high_skill_rating
@@ -405,9 +405,9 @@ succubus_devil.1418 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.1418.awin.tt
+					text = sbs_devil.1418.awin.tt
 				}
-				trigger_event = succubus_devil.1422
+				trigger_event = sbs_devil.1422
 			}
 			# Failure, lose
 			60 = {
@@ -417,16 +417,16 @@ succubus_devil.1418 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.1418.alose.tt
+					text = sbs_devil.1418.alose.tt
 				}
-				trigger_event = succubus_devil.1423
+				trigger_event = sbs_devil.1423
 			}
 		}
 	}
 	#just pass out to guard your fragile mind
 	option = {
-		name = succubus_devil.1418.b
-		custom_tooltip = succubus_devil.1418.b.tt
+		name = sbs_devil.1418.b
+		custom_tooltip = sbs_devil.1418.b.tt
 		add_gold = 2
 		stress_impact = {
 			base = minor_stress_impact_loss
@@ -434,22 +434,22 @@ succubus_devil.1418 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 2
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
 	}
 }
 #1419 if agree to go on a parade, being paraded along a corridor by demons
-succubus_devil.1419 = {
+sbs_devil.1419 = {
 	type = character_event
-	title = succubus_devil.1419.t
-	desc = succubus_devil.1419.a.desc
+	title = sbs_devil.1419.t
+	desc = sbs_devil.1419.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -457,33 +457,33 @@ succubus_devil.1419 = {
 	}
 	# set worth
 	option = {
-		name = succubus_devil.1419.a
-		custom_tooltip = succubus_devil.1419.a.tt
+		name = sbs_devil.1419.a
+		custom_tooltip = sbs_devil.1419.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = succubus_devil.5100 }
-				10 = { trigger_event = succubus_devil.5110 }
-				10 = { trigger_event = succubus_devil.5120 }
-				10 = { trigger_event = succubus_devil.5130 }
-				10 = { trigger_event = succubus_devil.5140 }
-				10 = { trigger_event = succubus_devil.5150 }
-				10 = { trigger_event = succubus_devil.5160 }
-				10 = { trigger_event = succubus_devil.5300 }
-				10 = { trigger_event = succubus_devil.5320 }
+				10 = { trigger_event = sbs_devil.5100 }
+				10 = { trigger_event = sbs_devil.5110 }
+				10 = { trigger_event = sbs_devil.5120 }
+				10 = { trigger_event = sbs_devil.5130 }
+				10 = { trigger_event = sbs_devil.5140 }
+				10 = { trigger_event = sbs_devil.5150 }
+				10 = { trigger_event = sbs_devil.5160 }
+				10 = { trigger_event = sbs_devil.5300 }
+				10 = { trigger_event = sbs_devil.5320 }
 			}
 		}
 	}
 }
 
 #1420 if endure the orgy, become a cumdump
-succubus_devil.1420 = {
+sbs_devil.1420 = {
 	type = character_event
-	title = succubus_devil.1420.t
-	desc = succubus_devil.1420.a.desc
+	title = sbs_devil.1420.t
+	desc = sbs_devil.1420.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -491,8 +491,8 @@ succubus_devil.1420 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.1420.a
-		custom_tooltip = succubus_devil.1420.a.tt
+		name = sbs_devil.1420.a
+		custom_tooltip = sbs_devil.1420.a.tt
 		add_gold = minor_gold_value
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -500,12 +500,12 @@ succubus_devil.1420 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 			add_character_flag = { flag = face_cum months = 1 }
@@ -513,10 +513,10 @@ succubus_devil.1420 = {
 	}
 }
 #1421 if fail the orgy, they insult and humiliate you
-succubus_devil.1421 = {
+sbs_devil.1421 = {
 	type = character_event
-	title = succubus_devil.1421.t
-	desc = succubus_devil.1421.a.desc
+	title = sbs_devil.1421.t
+	desc = sbs_devil.1421.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -524,8 +524,8 @@ succubus_devil.1421 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.1421.a
-		custom_tooltip = succubus_devil.1421.a.tt
+		name = sbs_devil.1421.a
+		custom_tooltip = sbs_devil.1421.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
@@ -533,10 +533,10 @@ succubus_devil.1421 = {
 	}
 }
 #1422 if manage to get the big cock cum
-succubus_devil.1422 = {
+sbs_devil.1422 = {
 	type = character_event
-	title = succubus_devil.1422.t
-	desc = succubus_devil.1422.a.desc
+	title = sbs_devil.1422.t
+	desc = sbs_devil.1422.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -544,8 +544,8 @@ succubus_devil.1422 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.1422.a
-		custom_tooltip = succubus_devil.1422.a.tt
+		name = sbs_devil.1422.a
+		custom_tooltip = sbs_devil.1422.a.tt
 		add_gold = medium_gold_value
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -553,12 +553,12 @@ succubus_devil.1422 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 			add_character_flag = { flag = face_cum months = 1 }
@@ -566,10 +566,10 @@ succubus_devil.1422 = {
 	}
 }
 #1423 if fail to make the big cock cum, calling you liar
-succubus_devil.1423 = {
+sbs_devil.1423 = {
 	type = character_event
-	title = succubus_devil.1423.t
-	desc = succubus_devil.1423.a.desc
+	title = sbs_devil.1423.t
+	desc = sbs_devil.1423.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -577,8 +577,8 @@ succubus_devil.1423 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.1423.a
-		custom_tooltip = succubus_devil.1423.a.tt
+		name = sbs_devil.1423.a
+		custom_tooltip = sbs_devil.1423.a.tt
 		add_gold = 10
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -587,10 +587,10 @@ succubus_devil.1423 = {
 	}
 }
 #5100 getting spanked for lacking dicipline/diligence/other?, ass pussy and breasts
-succubus_devil.5100 = {
+sbs_devil.5100 = {
 	type = character_event
-	title = succubus_devil.5100.t
-	desc = succubus_devil.5100.a.desc
+	title = sbs_devil.5100.t
+	desc = sbs_devil.5100.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -598,60 +598,60 @@ succubus_devil.5100 = {
 	}
 	# promise to do better
 	option = {
-		name = succubus_devil.5100.a
+		name = sbs_devil.5100.a
 		ai_chance = { base = 10 }
-		custom_tooltip = succubus_devil.5100.a.tt
+		custom_tooltip = sbs_devil.5100.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = body_cum days = 20 }
-			trigger_event = succubus_devil.5500
+			trigger_event = sbs_devil.5500
 		}
 	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5100.b
-		custom_tooltip = succubus_devil.5100.b.tt
+		name = sbs_devil.5100.b
+		custom_tooltip = sbs_devil.5100.b.tt
 		hidden_effect = {
-			trigger_event = succubus_devil.5502
+			trigger_event = sbs_devil.5502
 		}
 	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5100.c
-		custom_tooltip = succubus_devil.5100.c.tt
+		name = sbs_devil.5100.c
+		custom_tooltip = sbs_devil.5100.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
 		}
-		trigger_event = succubus_devil.5101
+		trigger_event = sbs_devil.5101
 	}
 }
 #5101 if refuse, dropped to the ground and stepped on, to teach you your place
-succubus_devil.5101 = {
+sbs_devil.5101 = {
 	type = character_event
-	title = succubus_devil.5101.t
-	desc = succubus_devil.5101.a.desc
+	title = sbs_devil.5101.t
+	desc = sbs_devil.5101.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -659,17 +659,17 @@ succubus_devil.5101 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5101.a
-		custom_tooltip = succubus_devil.5101.a.tt
-		trigger_event = succubus_devil.5500
+		name = sbs_devil.5101.a
+		custom_tooltip = sbs_devil.5101.a.tt
+		trigger_event = sbs_devil.5500
 	}
 }
 
 #5110 being fed buckets of cum that makes you dizzy, bc you look thirsty
-succubus_devil.5110 = {
+sbs_devil.5110 = {
 	type = character_event
-	title = succubus_devil.5110.t
-	desc = succubus_devil.5110.a.desc
+	title = sbs_devil.5110.t
+	desc = sbs_devil.5110.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -678,8 +678,8 @@ succubus_devil.5110 = {
 	# drink it all
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5110.a
-		custom_tooltip = succubus_devil.5110.a.tt
+		name = sbs_devil.5110.a
+		custom_tooltip = sbs_devil.5110.a.tt
 		add_gold = tiny_gold_value
 		stress_impact = {
 			base = medium_stress_impact_loss
@@ -687,64 +687,64 @@ succubus_devil.5110 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = face_cum days = 20 }
-			trigger_event = succubus_devil.5501
+			trigger_event = sbs_devil.5501
 		}
 	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5110.b
-		custom_tooltip = succubus_devil.5110.b.tt
+		name = sbs_devil.5110.b
+		custom_tooltip = sbs_devil.5110.b.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
-			trigger_event = succubus_devil.5502
+			trigger_event = sbs_devil.5502
 		}
 	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5110.c
-		custom_tooltip = succubus_devil.5110.c.tt
+		name = sbs_devil.5110.c
+		custom_tooltip = sbs_devil.5110.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
-		trigger_event = succubus_devil.5111
+		trigger_event = sbs_devil.5111
 	}
 }
 #5111 if resist, body covered and rubbed with cum, to make you more beautiful and diligent
-succubus_devil.5111 = {
+sbs_devil.5111 = {
 	type = character_event
-	title = succubus_devil.5111.t
-	desc = succubus_devil.5111.a.desc
+	title = sbs_devil.5111.t
+	desc = sbs_devil.5111.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -752,17 +752,17 @@ succubus_devil.5111 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5111.a
-		custom_tooltip = succubus_devil.5111.a.tt
-		trigger_event = succubus_devil.5501
+		name = sbs_devil.5111.a
+		custom_tooltip = sbs_devil.5111.a.tt
+		trigger_event = sbs_devil.5501
 	}
 }
 
 #5120 getting fisted to run around, bc you being too slow
-succubus_devil.5120 = {
+sbs_devil.5120 = {
 	type = character_event
-	title = succubus_devil.5120.t
-	desc = succubus_devil.5120.a.desc
+	title = sbs_devil.5120.t
+	desc = sbs_devil.5120.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -770,8 +770,8 @@ succubus_devil.5120 = {
 	}
 	# run faster
 	option = {
-		name = succubus_devil.5120.a
-		custom_tooltip = succubus_devil.5120.a.tt
+		name = sbs_devil.5120.a
+		custom_tooltip = sbs_devil.5120.a.tt
 		ai_chance = { base = 10 }
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -779,59 +779,59 @@ succubus_devil.5120 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
-			trigger_event = succubus_devil.5500
+			trigger_event = sbs_devil.5500
 		}
 	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5120.b
-		custom_tooltip = succubus_devil.5120.b.tt
+		name = sbs_devil.5120.b
+		custom_tooltip = sbs_devil.5120.b.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
-			trigger_event = succubus_devil.5502
+			trigger_event = sbs_devil.5502
 		}
 	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5120.c
-		custom_tooltip = succubus_devil.5120.c.tt
+		name = sbs_devil.5120.c
+		custom_tooltip = sbs_devil.5120.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
 		}
-		trigger_event = succubus_devil.5121
+		trigger_event = sbs_devil.5121
 	}
 }
 #5121 if resist, pussy spread open by demon hands to cool your hot pussy...
-succubus_devil.5121 = {
+sbs_devil.5121 = {
 	type = character_event
-	title = succubus_devil.5121.t
-	desc = succubus_devil.5121.a.desc
+	title = sbs_devil.5121.t
+	desc = sbs_devil.5121.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -839,17 +839,17 @@ succubus_devil.5121 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5121.a
-		custom_tooltip = succubus_devil.5121.a.tt
-		trigger_event = succubus_devil.5501
+		name = sbs_devil.5121.a
+		custom_tooltip = sbs_devil.5121.a.tt
+		trigger_event = sbs_devil.5501
 	}
 }
 
 #5130 hard strangle doggy bucket on head, the demons betting on how fast you squirt from anal, another demon is sitting on the bucket
-succubus_devil.5130 = {
+sbs_devil.5130 = {
 	type = character_event
-	title = succubus_devil.5130.t
-	desc = succubus_devil.5130.a.desc
+	title = sbs_devil.5130.t
+	desc = sbs_devil.5130.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -858,60 +858,60 @@ succubus_devil.5130 = {
 	# moan as you cum
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5130.a
-		custom_tooltip = succubus_devil.5130.a.tt
+		name = sbs_devil.5130.a
+		custom_tooltip = sbs_devil.5130.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = face_cum months = 1 }
-			trigger_event = succubus_devil.5501
+			trigger_event = sbs_devil.5501
 		}
 	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5130.b
-		custom_tooltip = succubus_devil.5130.b.tt
+		name = sbs_devil.5130.b
+		custom_tooltip = sbs_devil.5130.b.tt
 		hidden_effect = {
-			trigger_event = succubus_devil.5502
+			trigger_event = sbs_devil.5502
 		}
 	}
 	# refuse
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5130.c
-		custom_tooltip = succubus_devil.5130.c.tt
+		name = sbs_devil.5130.c
+		custom_tooltip = sbs_devil.5130.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
 		}
-		trigger_event = succubus_devil.5131
+		trigger_event = sbs_devil.5131
 	}
 }
 
 #5131 if struggle, actual being forced to cum by orgy fuck, insults, berating, etc
-succubus_devil.5131 = {
+sbs_devil.5131 = {
 	type = character_event
-	title = succubus_devil.5131.t
-	desc = succubus_devil.5131.a.desc
+	title = sbs_devil.5131.t
+	desc = sbs_devil.5131.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -919,17 +919,17 @@ succubus_devil.5131 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5131.a
-		custom_tooltip = succubus_devil.5131.a.tt
-		trigger_event = succubus_devil.5501
+		name = sbs_devil.5131.a
+		custom_tooltip = sbs_devil.5131.a.tt
+		trigger_event = sbs_devil.5501
 	}
 }
 
 #5140 head to a bucket of cum, being stepped on, taking a break, feeding/rewarding Mc with a cum bucket, head in
-succubus_devil.5140 = {
+sbs_devil.5140 = {
 	type = character_event
-	title = succubus_devil.5140.t
-	desc = succubus_devil.5140.a.desc
+	title = sbs_devil.5140.t
+	desc = sbs_devil.5140.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -938,58 +938,58 @@ succubus_devil.5140 = {
 	# swallow as much as you can
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5140.a
-		custom_tooltip = succubus_devil.5140.a.tt
+		name = sbs_devil.5140.a
+		custom_tooltip = sbs_devil.5140.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = face_cum months = 1 }
-			trigger_event = succubus_devil.5501
+			trigger_event = sbs_devil.5501
 		}
 	}
 	# indifferent, you pass out, straight to wake up event
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5140.b
-		custom_tooltip = succubus_devil.5140.b.tt
-		trigger_event = succubus_devil.5502
+		name = sbs_devil.5140.b
+		custom_tooltip = sbs_devil.5140.b.tt
+		trigger_event = sbs_devil.5502
 	}
 	# struggle to breathe
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5140.c
-		custom_tooltip = succubus_devil.5140.c.tt
+		name = sbs_devil.5140.c
+		custom_tooltip = sbs_devil.5140.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = -1
 			}
 		}
-		trigger_event = succubus_devil.5141
+		trigger_event = sbs_devil.5141
 	}
 }
 
 #5141 they show mercy and feed the seed to bloat your belly instead
-succubus_devil.5141 = {
+sbs_devil.5141 = {
 	type = character_event
-	title = succubus_devil.5141.t
-	desc = succubus_devil.5141.a.desc
+	title = sbs_devil.5141.t
+	desc = sbs_devil.5141.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -997,17 +997,17 @@ succubus_devil.5141 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5141.a
-		custom_tooltip = succubus_devil.5141.a.tt
-		trigger_event = succubus_devil.5501
+		name = sbs_devil.5141.a
+		custom_tooltip = sbs_devil.5141.a.tt
+		trigger_event = sbs_devil.5501
 	}
 }
 
 #5150 punishing your soldiers for interrupting the parade, making them analfuck you... if you don't cum in her ass, we will find your mistress and turn her into a demon fuck toy
-succubus_devil.5150 = {
+sbs_devil.5150 = {
 	type = character_event
-	title = succubus_devil.5150.t
-	desc = succubus_devil.5150.a.desc
+	title = sbs_devil.5150.t
+	desc = sbs_devil.5150.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1016,60 +1016,60 @@ succubus_devil.5150 = {
 	# act like a sex demon
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5150.a
-		custom_tooltip = succubus_devil.5150.a.tt
+		name = sbs_devil.5150.a
+		custom_tooltip = sbs_devil.5150.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = face_cum months = 1 }
 		}
-		trigger_event = succubus_devil.5151
+		trigger_event = sbs_devil.5151
 	}
 	# indifferent,
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5150.b
-		custom_tooltip = succubus_devil.5150.b.tt
+		name = sbs_devil.5150.b
+		custom_tooltip = sbs_devil.5150.b.tt
 		hidden_effect = {
-			trigger_event = succubus_devil.5502
+			trigger_event = sbs_devil.5502
 		}
 	}
 	# struggle, too much, to wake up event
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5150.c
-		custom_tooltip = succubus_devil.5150.c.tt
+		name = sbs_devil.5150.c
+		custom_tooltip = sbs_devil.5150.c.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
 		}
-		trigger_event = succubus_devil.5500
+		trigger_event = sbs_devil.5500
 	}
 }
 
 #5151 if act like a sex demon
-succubus_devil.5151 = {
+sbs_devil.5151 = {
 	type = character_event
-	title = succubus_devil.5151.t
-	desc = succubus_devil.5151.a.desc
+	title = sbs_devil.5151.t
+	desc = sbs_devil.5151.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1077,20 +1077,20 @@ succubus_devil.5151 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5151.a
-		custom_tooltip = succubus_devil.5151.a.tt
+		name = sbs_devil.5151.a
+		custom_tooltip = sbs_devil.5151.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum months = 1 }
-			trigger_event = succubus_devil.5501
+			trigger_event = sbs_devil.5501
 		}
 	}
 }
 
 #5160 anal fucking a bucket on head a terrified servant held by demons while trying to get him to insult you... if you don't this witch is going to steal your soul...
-succubus_devil.5160 = {
+sbs_devil.5160 = {
 	type = character_event
-	title = succubus_devil.5160.t
-	desc = succubus_devil.5160.a.desc
+	title = sbs_devil.5160.t
+	desc = sbs_devil.5160.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1099,59 +1099,59 @@ succubus_devil.5160 = {
 	# act like a sex demon
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5160.a
-		custom_tooltip = succubus_devil.5160.a.tt
+		name = sbs_devil.5160.a
+		custom_tooltip = sbs_devil.5160.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 			add_character_flag = { flag = body_cum months = 1 }
 		}
-		trigger_event = succubus_devil.5161
+		trigger_event = sbs_devil.5161
 	}
 	# indifferent
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5160.b
-		custom_tooltip = succubus_devil.5160.b.tt
+		name = sbs_devil.5160.b
+		custom_tooltip = sbs_devil.5160.b.tt
 		hidden_effect = {
-			trigger_event = succubus_devil.5502
+			trigger_event = sbs_devil.5502
 		}
 	}
 	# struggle, too much, to wake up event
 	option = {
 		ai_chance = { base = 10 }
-		name = succubus_devil.5160.c
-		custom_tooltip = succubus_devil.5160.c.tt
+		name = sbs_devil.5160.c
+		custom_tooltip = sbs_devil.5160.c.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
 		}
-		trigger_event = succubus_devil.5500
+		trigger_event = sbs_devil.5500
 	}
 }
 #5161 if act like a sex demon
-succubus_devil.5161 = {
+sbs_devil.5161 = {
 	type = character_event
-	title = succubus_devil.5161.t
-	desc = succubus_devil.5161.a.desc
+	title = sbs_devil.5161.t
+	desc = sbs_devil.5161.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1159,17 +1159,17 @@ succubus_devil.5161 = {
 	}
 	# pass out
 	option = {
-		name = succubus_devil.5161.a
-		custom_tooltip = succubus_devil.5161.a.tt
-		trigger_event = succubus_devil.5501
+		name = sbs_devil.5161.a
+		custom_tooltip = sbs_devil.5161.a.tt
+		trigger_event = sbs_devil.5501
 	}
 }
 
 #5300 dildo show, servants, courtriers and soldiers in the audience... if they get hard, they get to live? so work hard...
-succubus_devil.5300 = {
+sbs_devil.5300 = {
 	type = character_event
-	title = succubus_devil.5300.t
-	desc = succubus_devil.5300.a.desc
+	title = sbs_devil.5300.t
+	desc = sbs_devil.5300.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1177,38 +1177,38 @@ succubus_devil.5300 = {
 	}
 	# work hard
 	option = {
-		name = succubus_devil.5300.a
-		custom_tooltip = succubus_devil.5300.a.tt
+		name = sbs_devil.5300.a
+		custom_tooltip = sbs_devil.5300.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 4
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 			add_character_flag = { flag = body_cum months = 1 }
 			add_character_flag = { flag = face_cum months = 1 }
 		}
-		trigger_event = succubus_devil.5301
+		trigger_event = sbs_devil.5301
 	}
 }
 #5301 you make them hard. as a reward, they get all to fuck your ass
-succubus_devil.5301 = {
+sbs_devil.5301 = {
 	type = character_event
-	title = succubus_devil.5301.t
-	desc = succubus_devil.5301.a.desc
+	title = sbs_devil.5301.t
+	desc = sbs_devil.5301.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1216,37 +1216,37 @@ succubus_devil.5301 = {
 	}
 	# work hard
 	option = {
-		name = succubus_devil.5301.a
-		custom_tooltip = succubus_devil.5301.a.tt
+		name = sbs_devil.5301.a
+		custom_tooltip = sbs_devil.5301.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 4
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 4
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 		}
-		trigger_event = succubus_devil.5501
+		trigger_event = sbs_devil.5501
 	}
 }
 
 #5320 the parade visting common prisoners, you are there to enetrain them tonight, bc they so sad
-succubus_devil.5320 = {
+sbs_devil.5320 = {
 	type = character_event
-	title = succubus_devil.5320.t
-	desc = succubus_devil.5320.a.desc
+	title = sbs_devil.5320.t
+	desc = sbs_devil.5320.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1254,38 +1254,38 @@ succubus_devil.5320 = {
 	}
 	# introduce yourself
 	option = {
-		name = succubus_devil.5320.a
-		custom_tooltip = succubus_devil.5320.a.tt
+		name = sbs_devil.5320.a
+		custom_tooltip = sbs_devil.5320.a.tt
 		stress_impact = {
 			base = minor_stress_impact_loss
 			lustful = minor_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 5
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 5
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 25
 			}
 			add_character_flag = { flag = pussy_cum months = 1 }
 			add_character_flag = { flag = ass_cum months = 1 }
 		}
-		trigger_event = succubus_devil.5321
+		trigger_event = sbs_devil.5321
 	}
 }
 #5321 getting fucked by prisoners like they are posessed demons
-succubus_devil.5321 = {
+sbs_devil.5321 = {
 	type = character_event
-	title = succubus_devil.5321.t
-	desc = succubus_devil.5321.a.desc
+	title = sbs_devil.5321.t
+	desc = sbs_devil.5321.a.desc
 	theme = memory_intrigue
 	right_portrait = {
 		character = root
@@ -1293,39 +1293,39 @@ succubus_devil.5321 = {
 	}
 	#
 	option = {
-		name = succubus_devil.5321.a
-		custom_tooltip = succubus_devil.5321.a.tt
+		name = sbs_devil.5321.a
+		custom_tooltip = sbs_devil.5321.a.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
-		trigger_event = succubus_devil.5501
+		trigger_event = sbs_devil.5501
 	}
 }
 
 ### wake up events
 
 #5500 generic variant event,
-succubus_devil.5500 = {
+sbs_devil.5500 = {
 	type = character_event
-	title = succubus_devil.5500.t
+	title = sbs_devil.5500.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5500.a.desc
+				desc = sbs_devil.5500.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5500.b.desc
+				desc = sbs_devil.5500.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5500.c.desc
+				desc = sbs_devil.5500.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5500.d.desc
+				desc = sbs_devil.5500.d.desc
 			}
 		}
 	}
@@ -1337,15 +1337,15 @@ succubus_devil.5500 = {
 	}
 	# go wash
 	option = {
-		name = succubus_devil.5500.a
+		name = sbs_devil.5500.a
 		add_piety = minor_piety_loss
-		custom_tooltip = succubus_devil.5500.a.tt
+		custom_tooltip = sbs_devil.5500.a.tt
 	}
 	#
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_devil.5500.b
-		custom_tooltip = succubus_devil.5500.b.tt
+		name = sbs_devil.5500.b
+		custom_tooltip = sbs_devil.5500.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
@@ -1354,8 +1354,8 @@ succubus_devil.5500 = {
 	}
 	#
 	option = {
-		name = succubus_devil.5500.c
-		custom_tooltip = succubus_devil.5500.c.tt
+		name = sbs_devil.5500.c
+		custom_tooltip = sbs_devil.5500.c.tt
 		remove_short_term_gold = minor_gold_value
 		add_piety = minor_piety_gain
 	}
@@ -1364,13 +1364,13 @@ succubus_devil.5500 = {
 			random_list = {
 				10 = {
 					trigger_event = {
-						id = succubus_devil.5700
+						id = sbs_devil.5700
 						days = 1
 					}
 				}
 				10 = {
 					trigger_event = {
-						id = succubus_devil.5703
+						id = sbs_devil.5703
 						days = 1
 					}
 				}
@@ -1381,26 +1381,26 @@ succubus_devil.5500 = {
 }
 
 #5501 wake up covered in cum, almost glued to the ground
-succubus_devil.5501 = {
+sbs_devil.5501 = {
 	type = character_event
-	title = succubus_devil.5501.t
+	title = sbs_devil.5501.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5501.a.desc
+				desc = sbs_devil.5501.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5501.b.desc
+				desc = sbs_devil.5501.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5501.c.desc
+				desc = sbs_devil.5501.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5501.d.desc
+				desc = sbs_devil.5501.d.desc
 			}
 		}
 	}
@@ -1412,15 +1412,15 @@ succubus_devil.5501 = {
 	}
 	# go wash
 	option = {
-		name = succubus_devil.5501.a
+		name = sbs_devil.5501.a
 		add_piety = minor_piety_loss
-		custom_tooltip = succubus_devil.5501.a.tt
+		custom_tooltip = sbs_devil.5501.a.tt
 	}
 	#
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_devil.5501.b
-		custom_tooltip = succubus_devil.5501.b.tt
+		name = sbs_devil.5501.b
+		custom_tooltip = sbs_devil.5501.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
@@ -1429,8 +1429,8 @@ succubus_devil.5501 = {
 	}
 	#
 	option = {
-		name = succubus_devil.5501.c
-		custom_tooltip = succubus_devil.5501.c.tt
+		name = sbs_devil.5501.c
+		custom_tooltip = sbs_devil.5501.c.tt
 		remove_short_term_gold = minor_gold_value
 		add_piety = minor_piety_gain
 	}
@@ -1439,19 +1439,19 @@ succubus_devil.5501 = {
 			random_list = {
 				10 = {
 					trigger_event = {
-						id = succubus_devil.5701
+						id = sbs_devil.5701
 						days = 1
 					}
 				}
 				10 = {
 					trigger_event = {
-						id = succubus_devil.5702
+						id = sbs_devil.5702
 						days = 1
 					}
 				}
 				10 = {
 					trigger_event = {
-						id = succubus_devil.5703
+						id = sbs_devil.5703
 						days = 1
 					}
 				}
@@ -1462,26 +1462,26 @@ succubus_devil.5501 = {
 }
 
 #5502 wake up, indiffrent humiliation wake up
-succubus_devil.5502 = {
+sbs_devil.5502 = {
 	type = character_event
-	title = succubus_devil.5502.t
+	title = sbs_devil.5502.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5502.a.desc
+				desc = sbs_devil.5502.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5502.b.desc
+				desc = sbs_devil.5502.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5502.c.desc
+				desc = sbs_devil.5502.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.5502.d.desc
+				desc = sbs_devil.5502.d.desc
 			}
 		}
 	}
@@ -1493,15 +1493,15 @@ succubus_devil.5502 = {
 	}
 	# go wash
 	option = {
-		name = succubus_devil.5502.a
+		name = sbs_devil.5502.a
 		add_piety = minor_piety_loss
-		custom_tooltip = succubus_devil.5502.a.tt
+		custom_tooltip = sbs_devil.5502.a.tt
 	}
 	#
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_devil.5502.b
-		custom_tooltip = succubus_devil.5502.b.tt
+		name = sbs_devil.5502.b
+		custom_tooltip = sbs_devil.5502.b.tt
 		add_prestige = medium_prestige_loss
 		add_piety = medium_piety_loss
 		stress_impact = {
@@ -1510,8 +1510,8 @@ succubus_devil.5502 = {
 	}
 	#
 	option = {
-		name = succubus_devil.5502.c
-		custom_tooltip = succubus_devil.5502.c.tt
+		name = sbs_devil.5502.c
+		custom_tooltip = sbs_devil.5502.c.tt
 		remove_short_term_gold = minor_gold_value
 		add_piety = minor_piety_gain
 	}
@@ -1519,10 +1519,10 @@ succubus_devil.5502 = {
 
 #post parade events
 #5700 large group of courtiesr, servants and guards insist that demons kidnapped them last night into hekk and forced them to watch a carnal show, demand you to get professinals to close the gate to hell that is somewhere in the castle...
-succubus_devil.5700 = {
+sbs_devil.5700 = {
 	type = character_event
-	title = succubus_devil.5700.t
-	desc = succubus_devil.5700.a.desc
+	title = sbs_devil.5700.t
+	desc = sbs_devil.5700.a.desc
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -1530,15 +1530,15 @@ succubus_devil.5700 = {
 	}
 	# hire professioansl
 	option = {
-		name = succubus_devil.5700.a
-		custom_tooltip = succubus_devil.5700.a.tt
+		name = sbs_devil.5700.a
+		custom_tooltip = sbs_devil.5700.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = minor_piety_gain
 	}
 	# claim peronally closing the demon gates
 	option = {
-		name = succubus_devil.5700.b
-		custom_tooltip = succubus_devil.5700.b.tt
+		name = sbs_devil.5700.b
+		custom_tooltip = sbs_devil.5700.b.tt
 		duel = {
 			skill = diplomacy
 			value = high_skill_rating
@@ -1550,7 +1550,7 @@ succubus_devil.5700 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5700.bwin.tt
+					text = sbs_devil.5700.bwin.tt
 				}
 				add_piety = medium_piety_gain
 				add_prestige = medium_prestige_gain
@@ -1563,7 +1563,7 @@ succubus_devil.5700 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5700.blose.tt
+					text = sbs_devil.5700.blose.tt
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
@@ -1575,25 +1575,25 @@ succubus_devil.5700 = {
 	}
 	# hunt down the cultists who opened the portal, and hang them
 	option = {
-		name = succubus_devil.5700.c
-		custom_tooltip = succubus_devil.5700.c.tt
+		name = sbs_devil.5700.c
+		custom_tooltip = sbs_devil.5700.c.tt
 		add_dread = medium_dread_gain
 		add_prestige = minor_prestige_gain
 	}
 	# refuse, this is nonsense get hated on
 	option = {
-		name = succubus_devil.5700.d
-		custom_tooltip = succubus_devil.5700.d.tt
+		name = sbs_devil.5700.d
+		custom_tooltip = sbs_devil.5700.d.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #5701 courtiers demand you to deal with the female succubus ghost, some even claim she stole their seed by making them cum by hearing the howls...
-succubus_devil.5701 = {
+sbs_devil.5701 = {
 	type = character_event
-	title = succubus_devil.5701.t
-	desc = succubus_devil.5701.a.desc
+	title = sbs_devil.5701.t
+	desc = sbs_devil.5701.a.desc
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -1601,15 +1601,15 @@ succubus_devil.5701 = {
 	}
 	# hire professioansl
 	option = {
-		name = succubus_devil.5701.a
-		custom_tooltip = succubus_devil.5701.a.tt
+		name = sbs_devil.5701.a
+		custom_tooltip = sbs_devil.5701.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = minor_piety_gain
 	}
 	# tell your soldiers to hunt down the ghost
 	option = {
-		name = succubus_devil.5701.b
-		custom_tooltip = succubus_devil.5701.b.tt
+		name = sbs_devil.5701.b
+		custom_tooltip = sbs_devil.5701.b.tt
 		duel = {
 			skill = martial
 			value = decent_skill_rating
@@ -1621,7 +1621,7 @@ succubus_devil.5701 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5701.bwin.tt
+					text = sbs_devil.5701.bwin.tt
 				}
 				add_prestige = medium_prestige_gain
 			}
@@ -1633,7 +1633,7 @@ succubus_devil.5701 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5701.blose.tt
+					text = sbs_devil.5701.blose.tt
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
@@ -1645,8 +1645,8 @@ succubus_devil.5701 = {
 	}
 	# say you hunted it down personally and won... diplo check on results
 	option = {
-		name = succubus_devil.5701.c
-		custom_tooltip = succubus_devil.5701.c.tt
+		name = sbs_devil.5701.c
+		custom_tooltip = sbs_devil.5701.c.tt
 		duel = {
 			skill = diplomacy
 			value = high_skill_rating
@@ -1658,7 +1658,7 @@ succubus_devil.5701 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5701.cwin.tt
+					text = sbs_devil.5701.cwin.tt
 				}
 				add_piety = medium_piety_gain
 				add_prestige = medium_prestige_gain
@@ -1671,7 +1671,7 @@ succubus_devil.5701 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5701.close.tt
+					text = sbs_devil.5701.close.tt
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
@@ -1683,18 +1683,18 @@ succubus_devil.5701 = {
 	}
 	# refuse, this is nonsense get hated on
 	option = {
-		name = succubus_devil.5701.d
-		custom_tooltip = succubus_devil.5701.d.tt
+		name = sbs_devil.5701.d
+		custom_tooltip = sbs_devil.5701.d.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #5702 courtiers/servants claiming to having been posessed and that the castle is cursed
-succubus_devil.5702 = {
+sbs_devil.5702 = {
 	type = character_event
-	title = succubus_devil.5702.t
-	desc = succubus_devil.5702.a.desc
+	title = sbs_devil.5702.t
+	desc = sbs_devil.5702.a.desc
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -1702,15 +1702,15 @@ succubus_devil.5702 = {
 	}
 	# hire professioansl
 	option = {
-		name = succubus_devil.5702.a
-		custom_tooltip = succubus_devil.5702.a.tt
+		name = sbs_devil.5702.a
+		custom_tooltip = sbs_devil.5702.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = minor_piety_gain
 	}
 	# tell your soldiers to find the cultists and witches
 	option = {
-		name = succubus_devil.5702.b
-		custom_tooltip = succubus_devil.5702.b.tt
+		name = sbs_devil.5702.b
+		custom_tooltip = sbs_devil.5702.b.tt
 		duel = {
 			skill = martial
 			value = decent_skill_rating
@@ -1722,7 +1722,7 @@ succubus_devil.5702 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5702.bwin.tt
+					text = sbs_devil.5702.bwin.tt
 				}
 				add_prestige = medium_prestige_gain
 			}
@@ -1734,7 +1734,7 @@ succubus_devil.5702 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5702.blose.tt
+					text = sbs_devil.5702.blose.tt
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
@@ -1746,8 +1746,8 @@ succubus_devil.5702 = {
 	}
 	# say you hunted the demons, witches and cultists down personally and won... diplo check on results
 	option = {
-		name = succubus_devil.5702.c
-		custom_tooltip = succubus_devil.5702.c.tt
+		name = sbs_devil.5702.c
+		custom_tooltip = sbs_devil.5702.c.tt
 		duel = {
 			skill = diplomacy
 			value = high_skill_rating
@@ -1759,7 +1759,7 @@ succubus_devil.5702 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5702.cwin.tt
+					text = sbs_devil.5702.cwin.tt
 				}
 				add_piety = medium_piety_gain
 				add_prestige = medium_prestige_gain
@@ -1772,7 +1772,7 @@ succubus_devil.5702 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.5702.close.tt
+					text = sbs_devil.5702.close.tt
 				}
 				add_piety = minor_piety_loss
 				add_prestige = medium_prestige_loss
@@ -1784,18 +1784,18 @@ succubus_devil.5702 = {
 	}
 	# refuse, this is nonsense get hated on
 	option = {
-		name = succubus_devil.5702.d
-		custom_tooltip = succubus_devil.5702.d.tt
+		name = sbs_devil.5702.d
+		custom_tooltip = sbs_devil.5702.d.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #5703 claiming the prisoners did some dark ritual with demons last night, asking you to execute them all
-succubus_devil.5703 = {
+sbs_devil.5703 = {
 	type = character_event
-	title = succubus_devil.5703.t
-	desc = succubus_devil.5703.a.desc
+	title = sbs_devil.5703.t
+	desc = sbs_devil.5703.a.desc
 	theme = diplomacy
 	right_portrait = {
 		character = root
@@ -1803,53 +1803,53 @@ succubus_devil.5703 = {
 	}
 	# hire professioansl
 	option = {
-		name = succubus_devil.5703.a
-		custom_tooltip = succubus_devil.5703.a.tt
+		name = sbs_devil.5703.a
+		custom_tooltip = sbs_devil.5703.a.tt
 		remove_short_term_gold = major_gold_value
 		add_piety = major_piety_gain
 	}
 	# excetute all
 	option = {
-		name = succubus_devil.5703.b
-		custom_tooltip = succubus_devil.5703.b.tt
+		name = sbs_devil.5703.b
+		custom_tooltip = sbs_devil.5703.b.tt
 		add_dread = medium_dread_gain
 		add_prestige = minor_prestige_gain
 	}
 	# refuse, this is nonsense get hated on
 	option = {
-		name = succubus_devil.5703.c
-		custom_tooltip = succubus_devil.5703.c.tt
+		name = sbs_devil.5703.c
+		custom_tooltip = sbs_devil.5703.c.tt
 		add_piety = major_piety_loss
 		add_prestige = major_prestige_loss
 	}
 }
 
 #1300 initial thing comes to you, manifests in different ways, varinants
-succubus_devil.1300 = {
+sbs_devil.1300 = {
 	type = character_event
-	title = succubus_devil.1300.t
+	title = sbs_devil.1300.t
 	cooldown = { years = 5 }
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1300.a.desc
+				desc = sbs_devil.1300.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1300.b.desc
+				desc = sbs_devil.1300.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1300.c.desc
+				desc = sbs_devil.1300.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1300.d.desc
+				desc = sbs_devil.1300.d.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1300.e.desc
+				desc = sbs_devil.1300.e.desc
 			}
 		}
 	}
@@ -1861,8 +1861,8 @@ succubus_devil.1300 = {
 	}
 	trigger = {
 		OR = {
-			has_trait = succubus
-			has_trait = lesser_succubus
+			has_trait = sbs_succubus
+			has_trait = sbs_lesser_succubus
 		}
 		is_ruler = yes
 		is_female = yes
@@ -1871,25 +1871,25 @@ succubus_devil.1300 = {
 	# submit
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1300.a
-		custom_tooltip = succubus_devil.1300.a.tt
+		name = sbs_devil.1300.a
+		custom_tooltip = sbs_devil.1300.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 5
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
-		trigger_event = succubus_devil.1303
+		trigger_event = sbs_devil.1303
 	}
 	# fight it
 	option = {
-		name = succubus_devil.1300.b
-		custom_tooltip = succubus_devil.1300.b.tt
+		name = sbs_devil.1300.b
+		custom_tooltip = sbs_devil.1300.b.tt
 		duel = {
 			skill = prowess
 			value = high_skill_rating
@@ -1901,12 +1901,12 @@ succubus_devil.1300 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.1300.bwin.tt
+					text = sbs_devil.1300.bwin.tt
 				}
 				stress_impact = {
 					base = medium_stress_impact_loss
 				}
-				trigger_event = succubus_devil.1301
+				trigger_event = sbs_devil.1301
 			}
 			# Failure, lose
 			80 = {
@@ -1916,33 +1916,33 @@ succubus_devil.1300 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_devil.1300.blose.tt
+					text = sbs_devil.1300.blose.tt
 				}
 				stress_impact = {
 					base = massive_stress_impact_gain
 				}
 				hidden_effect = {
 					add_trait_xp = {
-						trait = succubus
+						trait = sbs_succubus
 						track = power
 						value = -10
 					}
 				}
-				trigger_event = succubus_devil.1302
+				trigger_event = sbs_devil.1302
 			}
 		}
 	}
 	# escape, by any means
 	option = {
-		name = succubus_devil.1300.c
-		custom_tooltip = succubus_devil.1300.c.tt
+		name = sbs_devil.1300.c
+		custom_tooltip = sbs_devil.1300.c.tt
 		add_piety = minor_piety_gain
 		stress_impact = {
 			base = minor_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -1
 			}
@@ -1950,10 +1950,10 @@ succubus_devil.1300 = {
 	}
 }
 #1301 win the fight
-succubus_devil.1301 = {
+sbs_devil.1301 = {
 	type = character_event
-	title = succubus_devil.1301.t
-	desc = succubus_devil.1301.a.desc
+	title = sbs_devil.1301.t
+	desc = sbs_devil.1301.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -1962,49 +1962,49 @@ succubus_devil.1301 = {
 	}
 	#
 	option = {
-		name = succubus_devil.1301.a
-		custom_tooltip = succubus_devil.1301.a.tt
+		name = sbs_devil.1301.a
+		custom_tooltip = sbs_devil.1301.a.tt
 		stress_impact = {
 			base = massive_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 20
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 40
 			}
 		}
 	}
 }
 #1302 lose fight, variant on being humiliated
-succubus_devil.1302 = {
+sbs_devil.1302 = {
 	type = character_event
-	title = succubus_devil.1302.t
+	title = sbs_devil.1302.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1302.a.desc
+				desc = sbs_devil.1302.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1302.b.desc
+				desc = sbs_devil.1302.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1302.c.desc
+				desc = sbs_devil.1302.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1302.d.desc
+				desc = sbs_devil.1302.d.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1302.e.desc
+				desc = sbs_devil.1302.e.desc
 			}
 		}
 	}
@@ -2016,20 +2016,20 @@ succubus_devil.1302 = {
 	}
 	#submit
 	option = {
-		name = succubus_devil.1302.a
-		custom_tooltip = succubus_devil.1302.a.tt
-		trigger_event = succubus_devil.1303
+		name = sbs_devil.1302.a
+		custom_tooltip = sbs_devil.1302.a.tt
+		trigger_event = sbs_devil.1303
 	}
 	#resist
 	option = {
-		name = succubus_devil.1302.b
-		custom_tooltip = succubus_devil.1302.b.tt
+		name = sbs_devil.1302.b
+		custom_tooltip = sbs_devil.1302.b.tt
 		stress_impact = {
 			base = massive_stress_impact_gain
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = -2
 			}
@@ -2037,10 +2037,10 @@ succubus_devil.1302 = {
 	}
 }
 #1303 you submitting before the demon
-succubus_devil.1303 = {
+sbs_devil.1303 = {
 	type = character_event
-	title = succubus_devil.1303.t
-	desc = succubus_devil.1303.a.desc
+	title = sbs_devil.1303.t
+	desc = sbs_devil.1303.a.desc
 	theme = bloody_wedding_night
 	right_portrait = {
 		character = root
@@ -2050,43 +2050,43 @@ succubus_devil.1303 = {
 	# offer ass
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1303.a
-		custom_tooltip = succubus_devil.1303.a.tt
-		trigger_event = succubus_devil.1320
+		name = sbs_devil.1303.a
+		custom_tooltip = sbs_devil.1303.a.tt
+		trigger_event = sbs_devil.1320
 	}
 	# willingly mount with pussy
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1303.b
-		custom_tooltip = succubus_devil.1303.b.tt
-		trigger_event = succubus_devil.1310
+		name = sbs_devil.1303.b
+		custom_tooltip = sbs_devil.1303.b.tt
+		trigger_event = sbs_devil.1310
 	}
 }
 #1310 serve with your pussy
-succubus_devil.1310 = {
+sbs_devil.1310 = {
 	type = character_event
-	title = succubus_devil.1310.t
+	title = sbs_devil.1310.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1310.a.desc
+				desc = sbs_devil.1310.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1310.b.desc
+				desc = sbs_devil.1310.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1310.c.desc
+				desc = sbs_devil.1310.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1310.d.desc
+				desc = sbs_devil.1310.d.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1310.e.desc
+				desc = sbs_devil.1310.e.desc
 			}
 		}
 	}
@@ -2099,31 +2099,31 @@ succubus_devil.1310 = {
 	# accept seed
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1310.a
-		custom_tooltip = succubus_devil.1310.a.tt
+		name = sbs_devil.1310.a
+		custom_tooltip = sbs_devil.1310.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum months = 1 }
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 10
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 		}
-		trigger_event = succubus_devil.1315
+		trigger_event = sbs_devil.1315
 	}
 	# pull out
 	option = {
-		name = succubus_devil.1310.b
-		custom_tooltip = succubus_devil.1310.b.tt
+		name = sbs_devil.1310.b
+		custom_tooltip = sbs_devil.1310.b.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum months = 1 }
 			add_character_flag = { flag = body_cum months = 1 }
@@ -2131,30 +2131,30 @@ succubus_devil.1310 = {
 	}
 }
 #1315 come to your senses, vaginal fucking random servant on top, using the dildo as a condom.
-succubus_devil.1315 = {
+sbs_devil.1315 = {
 	type = character_event
-	title = succubus_devil.1315.t
+	title = sbs_devil.1315.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1315.a.desc
+				desc = sbs_devil.1315.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1315.b.desc
+				desc = sbs_devil.1315.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1315.c.desc
+				desc = sbs_devil.1315.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1315.d.desc
+				desc = sbs_devil.1315.d.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1315.e.desc
+				desc = sbs_devil.1315.e.desc
 			}
 		}
 	}
@@ -2166,8 +2166,8 @@ succubus_devil.1315 = {
 	}
 	# escape, before he comes to his senses
 	option = {
-		name = succubus_devil.1315.a
-		custom_tooltip = succubus_devil.1315.a.tt
+		name = sbs_devil.1315.a
+		custom_tooltip = sbs_devil.1315.a.tt
 		stress_impact = {
 			lustful = medium_stress_impact_gain
 		}
@@ -2175,62 +2175,62 @@ succubus_devil.1315 = {
 	# keep going, the man seems docile enough to let you cum... but he will definately tell others about it
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1315.b
-		custom_tooltip = succubus_devil.1315.b.tt
+		name = sbs_devil.1315.b
+		custom_tooltip = sbs_devil.1315.b.tt
 		add_piety = minor_piety_loss
 		stress_impact = {
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 10
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 		}
 	}
 	after =	{
 		trigger_event = {
-			id = succubus_devil.1319
+			id = sbs_devil.1319
 			days = 1
 		}
 	}
 }
 
 #1319 half-dream event about birthing things
-succubus_devil.1319 = {
+sbs_devil.1319 = {
 	type = character_event
-	title = succubus_devil.1319.t
+	title = sbs_devil.1319.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1319.a.desc
+				desc = sbs_devil.1319.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1319.b.desc
+				desc = sbs_devil.1319.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1319.c.desc
+				desc = sbs_devil.1319.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1319.d.desc
+				desc = sbs_devil.1319.d.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1319.e.desc
+				desc = sbs_devil.1319.e.desc
 			}
 		}
 	}
@@ -2243,12 +2243,12 @@ succubus_devil.1319 = {
 	immediate = {
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
@@ -2256,13 +2256,13 @@ succubus_devil.1319 = {
 	# it is, what it is
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1319.a
-		custom_tooltip = succubus_devil.1319.a.tt
+		name = sbs_devil.1319.a
+		custom_tooltip = sbs_devil.1319.a.tt
 		random = {
 			chance = 50
 			modifier = { add = 50 has_character_flag = succubus_marking_5 }
 			modifier = { add = -25 have_devil_nicknames_trigger = yes }
-			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual NOT = { has_trait = succubus } } }
+			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual NOT = { has_trait = sbs_succubus } } }
 			random_list = {
 				20 = {
 					modifier = { add = 40 has_character_flag = succubus_horn1 }
@@ -2294,14 +2294,14 @@ succubus_devil.1319 = {
 		random = {
 			chance = 10
 			modifier = { add = 15  has_character_flag = succubus_marking_6 }
-			modifier = { 
+			modifier = {
 				add = -100
 				OR = {
 					has_personal_legend_seed = witchcraft
 					promoted_legend.legend_type = legend_type:witchcraft
-					NOT = { has_trait = succubus } 
+					NOT = { has_trait = sbs_succubus }
 					any_artifact = { has_artifact_modifier = philosopher_stone_modifier count > 0 }
-				} 
+				}
 			}
 
 			create_legend_seed = {
@@ -2321,39 +2321,39 @@ succubus_devil.1319 = {
 	}
 	# this is wrong, go repent
 	option = {
-		name = succubus_devil.1319.b
-		custom_tooltip = succubus_devil.1319.b.tt
+		name = sbs_devil.1319.b
+		custom_tooltip = sbs_devil.1319.b.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 		}
-		trigger_event = succubus_event.0800
+		trigger_event = sbs_event.0800
 	}
 }
 #1320 they fuck your ass
-succubus_devil.1320 = {
+sbs_devil.1320 = {
 	type = character_event
-	title = succubus_devil.1320.t
+	title = sbs_devil.1320.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1320.a.desc
+				desc = sbs_devil.1320.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1320.b.desc
+				desc = sbs_devil.1320.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1320.c.desc
+				desc = sbs_devil.1320.c.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1320.d.desc
+				desc = sbs_devil.1320.d.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1320.e.desc
+				desc = sbs_devil.1320.e.desc
 			}
 		}
 	}
@@ -2366,8 +2366,8 @@ succubus_devil.1320 = {
 	# embrace
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1320.a
-		custom_tooltip = succubus_devil.1320.a.tt
+		name = sbs_devil.1320.a
+		custom_tooltip = sbs_devil.1320.a.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
@@ -2375,61 +2375,61 @@ succubus_devil.1320 = {
 		hidden_effect = {
 			add_character_flag = { flag = ass_cum months = 1 }
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 5
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 5
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 		}
-		trigger_event = succubus_devil.1325
+		trigger_event = sbs_devil.1325
 	}
 	# endure
 	option = {
-		name = succubus_devil.1320.b
-		custom_tooltip = succubus_devil.1320.b.tt
+		name = sbs_devil.1320.b
+		custom_tooltip = sbs_devil.1320.b.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 10
 			}
 		}
 	}
 }
 #1325 come to your senses, anal fucked by random servant against the floor
-succubus_devil.1325 = {
+sbs_devil.1325 = {
 	type = character_event
-	title = succubus_devil.1325.t
+	title = sbs_devil.1325.t
 	desc = {
 		random_valid = {
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1325.a.desc
+				desc = sbs_devil.1325.a.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1325.b.desc
+				desc = sbs_devil.1325.b.desc
 			}
 			triggered_desc = {
 				trigger = { is_ruler = yes }
-				desc = succubus_devil.1325.c.desc
+				desc = sbs_devil.1325.c.desc
 			}
 		}
 	}
@@ -2442,38 +2442,38 @@ succubus_devil.1325 = {
 	# embrace
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_devil.1325.a
-		custom_tooltip = succubus_devil.1325.a.tt
+		name = sbs_devil.1325.a
+		custom_tooltip = sbs_devil.1325.a.tt
 		stress_impact = {
 			base = medium_stress_impact_loss
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 5
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value = 5
 			}
 			add_trait_xp = {
-				trait = lesser_succubus
+				trait = sbs_lesser_succubus
 				value = 20
 			}
 		}
 	}
 	# resist
 	option = {
-		name = succubus_devil.1325.b
-		custom_tooltip = succubus_devil.1325.b.tt
+		name = sbs_devil.1325.b
+		custom_tooltip = sbs_devil.1325.b.tt
 		add_piety = minor_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -2481,14 +2481,14 @@ succubus_devil.1325 = {
 	}
 	# lay still...
 	option = {
-		name = succubus_devil.1325.c
-		custom_tooltip = succubus_devil.1325.c.tt
+		name = sbs_devil.1325.c
+		custom_tooltip = sbs_devil.1325.c.tt
 	}
 	# repent later
 	option = {
-		name = succubus_devil.1325.d
-		custom_tooltip = succubus_devil.1325.d.tt
-		trigger_event = succubus_event.0800
+		name = sbs_devil.1325.d
+		custom_tooltip = sbs_devil.1325.d.tt
+		trigger_event = sbs_event.0800
 	}
 }
 

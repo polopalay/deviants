@@ -26,8 +26,8 @@
   succubus_rumor_interaction: "散布谣言"
   succubus_rumor_interaction.desc: "散布关于[recipient.GetShortUIName]的坏谣言"
 
-  succubus_switch_body_interaction: "切换"
-  succubus_switch_body_interaction.desc: "扮演[recipient.GetShortUIName]"
+  sbs_switch_body_interaction: "切换"
+  sbs_switch_body_interaction.desc: "扮演[recipient.GetShortUIName]"
 
   succubus_create_succubus_interaction: "创造魅魔"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]将变成魅魔"

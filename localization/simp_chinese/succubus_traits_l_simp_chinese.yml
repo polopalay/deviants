@@ -1,13 +1,13 @@
 ﻿l_simplified_chinese:
-  trait_demon: "恶魔"
-  demon_desc: "那些被天堂诅咒、被地狱祝福的人。深藏在他们体内的是死亡和毁灭。"
-  demon_character_desc: "作为恶魔的孩子，被地狱的王子祝福。[ROOT.GetCharacter.GetNamePossessive]的使命是为全世界带来混乱和毁灭。"
+  trait_sbs_demon: "恶魔"
+  sbs_demon_desc: "那些被天堂诅咒、被地狱祝福的人。深藏在他们体内的是死亡和毁灭。"
+  sbs_demon_character_desc: "作为恶魔的孩子，被地狱的王子祝福。[ROOT.GetCharacter.GetNamePossessive]的使命是为全世界带来混乱和毁灭。"
 
-  trait_succubus_neutral: "魅魔"
-  trait_succubus_female: "魅魔"
-  trait_succubus_male: "魅影"
-  succubus_desc: "有些人见过它，有些人听说过，大家都在低声议论[ROOT.GetCharacter.GetNamePossessive]的奇怪行为。"
-  succubus_character_desc: "不论内心如何，没有人认为[ROOT.GetCharacter.GetName]有什么奇怪的地方。"
+  trait_sbs_succubus_neutral: "魅魔"
+  trait_sbs_succubus_female: "魅魔"
+  trait_sbs_succubus_male: "魅影"
+  sbs_succubus_desc: "有些人见过它，有些人听说过，大家都在低声议论[ROOT.GetCharacter.GetNamePossessive]的奇怪行为。"
+  sbs_succubus_character_desc: "不论内心如何，没有人认为[ROOT.GetCharacter.GetName]有什么奇怪的地方。"
 
   trait_track_corruption: "堕落者"
   trait_track_corruption_desc: "通过收集的灵魂，她获得更多的力量来召唤怪物。"
@@ -21,11 +21,11 @@
   trait_lesser_succubus_neutral: "低级魅魔"
   trait_lesser_succubus_female: "低级魅魔"
   trait_lesser_succubus_male: "低级魅影"
-  lesser_succubus_desc: "不论内心如何，没有人认为[ROOT.GetCharacter.GetName]有什么奇怪的地方。"
-  lesser_succubus_character_desc: "大多数人见过它，所有人听说过。 [ROOT.GetCharacter.GetNamePossessive]的行为在道德上是堕落的。人们以对待普通街头妓女的鄙视来谈论她。"
+  lesser_sbs_succubus_desc: "不论内心如何，没有人认为[ROOT.GetCharacter.GetName]有什么奇怪的地方。"
+  lesser_sbs_succubus_character_desc: "大多数人见过它，所有人听说过。 [ROOT.GetCharacter.GetNamePossessive]的行为在道德上是堕落的。人们以对待普通街头妓女的鄙视来谈论她。"
 
   trait_track_lesser_succubus: "力量"
-  trait_track_lesser_succubus_desc: "她作为廉价的妓女为男人提供服务，以获取他们的精液。"
+  trait_track_lesser_sbs_succubus_desc: "她作为廉价的妓女为男人提供服务，以获取他们的精液。"
 
   trait_deviant_virgin: "好色的处女"
   deviant_virgin_desc: "[ROOT.GetCharacter.GetName]是魔鬼的妓女。"

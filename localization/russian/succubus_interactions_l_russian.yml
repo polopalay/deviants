@@ -26,8 +26,8 @@
   succubus_rumor_interaction: "Распространение слухов"
   succubus_rumor_interaction.desc: "Распространение плохих слухов о [recipient.GetShortUIName]."
 
-  succubus_switch_body_interaction: "Сменить тело"
-  succubus_switch_body_interaction.desc: "Играть за [recipient.GetShortUIName]."
+  sbs_switch_body_interaction: "Сменить тело"
+  sbs_switch_body_interaction.desc: "Играть за [recipient.GetShortUIName]."
 
   succubus_create_succubus_interaction: "Создать суккуба"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] станет суккубом."

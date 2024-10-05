@@ -17,10 +17,10 @@ prostitute_clothes = {
 				add = 100
 				has_trait = lifestyle_prostitute
 				NOR = {
-					has_trait = succubus
-					has_trait = lesser_succubus
+					has_trait = sbs_succubus
+					has_trait = sbs_lesser_succubus
 					has_trait = deviant_virgin
-					has_trait = demon
+					has_trait = sbs_demon
 				}
 			}
 		}

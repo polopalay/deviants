@@ -1,10 +1,10 @@
-namespace = succubus_blackmail
+namespace = sbs_blackmail
 
 # he comes to you in private
-succubus_blackmail.1100 = {
+sbs_blackmail.1100 = {
 	type = character_event
-	title = succubus_blackmail.1100.t
-	desc = succubus_blackmail.1100.a.desc
+	title = sbs_blackmail.1100.t
+	desc = sbs_blackmail.1100.a.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -15,7 +15,7 @@ succubus_blackmail.1100 = {
 		animation = scheme
 	}
 	trigger = {
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_female = yes
 		any_vassal = {
 			is_female = no
@@ -41,8 +41,8 @@ succubus_blackmail.1100 = {
 	}
 	# kneel before him for a discount
 	option = {
-		name = succubus_blackmail.1100.a
-		custom_tooltip = succubus_blackmail.1100.a.tt
+		name = sbs_blackmail.1100.a
+		custom_tooltip = sbs_blackmail.1100.a.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
 			lustful = medium_stress_impact_loss
@@ -59,28 +59,28 @@ succubus_blackmail.1100 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
 		}
-		trigger_event = succubus_blackmail.1110
+		trigger_event = sbs_blackmail.1110
 		ai_chance = { base = 100 }
 	}
 	# just pay the gold
 	option = {
-		name = succubus_blackmail.1100.b
-		custom_tooltip = succubus_blackmail.1100.b.tt
+		name = sbs_blackmail.1100.b
+		custom_tooltip = sbs_blackmail.1100.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
 		}
-		trigger_event = succubus_blackmail.1120
+		trigger_event = sbs_blackmail.1120
 	}
 	# ignore, get rumors spread...
 	option = {
-		name = succubus_blackmail.1100.c
-		custom_tooltip = succubus_blackmail.1100.c.tt
+		name = sbs_blackmail.1100.c
+		custom_tooltip = sbs_blackmail.1100.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
 		stress_impact = {
@@ -88,7 +88,7 @@ succubus_blackmail.1100 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = -1
 			}
@@ -97,10 +97,10 @@ succubus_blackmail.1100 = {
 }
 
 #1110 he cumming in
-succubus_blackmail.1110 = {
+sbs_blackmail.1110 = {
 	type = character_event
-	title = succubus_blackmail.1110.t
-	desc = succubus_blackmail.1110.desc
+	title = sbs_blackmail.1110.t
+	desc = sbs_blackmail.1110.desc
 	theme = wedding_night_activity
 	trigger = {
 		is_female = yes
@@ -120,17 +120,17 @@ succubus_blackmail.1110 = {
 	}
 	#Go deal with the mess
 	option = {
-		name = succubus_blackmail.1110.a
-		custom_tooltip = succubus_blackmail.1110.a.tt
+		name = sbs_blackmail.1110.a
+		custom_tooltip = sbs_blackmail.1110.a.tt
 		scope:deviant_go_random_1 = { start_promote_lew_legend = yes }
 	}
 }
 
 #1120 humiliation event if you kneel
-succubus_blackmail.1120 = {
+sbs_blackmail.1120 = {
 	type = character_event
-	title = succubus_blackmail.1120.t
-	desc = succubus_blackmail.1120.desc
+	title = sbs_blackmail.1120.t
+	desc = sbs_blackmail.1120.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -146,8 +146,8 @@ succubus_blackmail.1120 = {
 	}
 	#endure
 	option = {
-		name = succubus_blackmail.1120.a
-		custom_tooltip = succubus_blackmail.1120.a.tt
+		name = sbs_blackmail.1120.a
+		custom_tooltip = sbs_blackmail.1120.a.tt
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = dismissive_opinion
@@ -157,10 +157,10 @@ succubus_blackmail.1120 = {
 }
 
 #1200 he comes to you in public, ass slap and grope, holding you still with the free hand, from your clothes, nobody else is seeing it... agree to pay, favor hook, or fuck in some semi public location
-succubus_blackmail.1200 = {
+sbs_blackmail.1200 = {
 	type = character_event
-	title = succubus_blackmail.1200.t
-	desc = succubus_blackmail.1200.desc
+	title = sbs_blackmail.1200.t
+	desc = sbs_blackmail.1200.desc
 	theme = party
 	right_portrait = {
 		character = root
@@ -171,7 +171,7 @@ succubus_blackmail.1200 = {
 		animation = scheme
 	}
 	trigger = {
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_female = yes
 		any_vassal = {
 			is_female = no
@@ -197,8 +197,8 @@ succubus_blackmail.1200 = {
 	}
 	# let him keep groping you for a discount, some notice odd behavior even as he tries to avoid it
 	option = {
-		name = succubus_blackmail.1200.a
-		custom_tooltip = succubus_blackmail.1200.a.tt
+		name = sbs_blackmail.1200.a
+		custom_tooltip = sbs_blackmail.1200.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
@@ -225,7 +225,7 @@ succubus_blackmail.1200 = {
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -233,8 +233,8 @@ succubus_blackmail.1200 = {
 	}
 	# just pay the gold
 	option = {
-		name = succubus_blackmail.1200.b
-		custom_tooltip = succubus_blackmail.1200.b.tt
+		name = sbs_blackmail.1200.b
+		custom_tooltip = sbs_blackmail.1200.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = major_gold_value
@@ -242,8 +242,8 @@ succubus_blackmail.1200 = {
 	}
 	# Command him to stop, get rumors spread...
 	option = {
-		name = succubus_blackmail.1200.c
-		custom_tooltip = succubus_blackmail.1200.c.tt
+		name = sbs_blackmail.1200.c
+		custom_tooltip = sbs_blackmail.1200.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
 		stress_impact = {
@@ -251,7 +251,7 @@ succubus_blackmail.1200 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = -1
 			}
@@ -259,17 +259,17 @@ succubus_blackmail.1200 = {
 	}
 	# agree to fuck
 	option = {
-		name = succubus_blackmail.1200.d
-		custom_tooltip = succubus_blackmail.1200.d.tt
-		trigger_event = succubus_blackmail.1201
+		name = sbs_blackmail.1200.d
+		custom_tooltip = sbs_blackmail.1200.d.tt
+		trigger_event = sbs_blackmail.1201
 	}
 }
 
 #1201 doggy under the table, sadistic can't undertand why she has not executed him yet...
-succubus_blackmail.1201 = {
+sbs_blackmail.1201 = {
 	type = character_event
-	title = succubus_blackmail.1201.t
-	desc = succubus_blackmail.1201.desc
+	title = sbs_blackmail.1201.t
+	desc = sbs_blackmail.1201.desc
 	theme = party
 	right_portrait = {
 		character = root
@@ -282,8 +282,8 @@ succubus_blackmail.1201 = {
 	}
 	# beg him to accept gold instead, so he cums on your clothes instead
 	option = {
-		name = succubus_blackmail.1201.a
-		custom_tooltip = succubus_blackmail.1201.a.tt
+		name = sbs_blackmail.1201.a
+		custom_tooltip = sbs_blackmail.1201.a.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = medium_stress_impact_loss
@@ -307,7 +307,7 @@ succubus_blackmail.1201 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -316,8 +316,8 @@ succubus_blackmail.1201 = {
 	}
 	# just give the major hook, and he won't even cum and leaves
 	option = {
-		name = succubus_blackmail.1201.b
-		custom_tooltip = succubus_blackmail.1201.b.tt
+		name = sbs_blackmail.1201.b
+		custom_tooltip = sbs_blackmail.1201.b.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
 			lustful = minor_stress_impact_gain
@@ -332,8 +332,8 @@ succubus_blackmail.1201 = {
 	}
 	# refuse, he cum in
 	option = {
-		name = succubus_blackmail.1201.c
-		custom_tooltip = succubus_blackmail.1201.c.tt
+		name = sbs_blackmail.1201.c
+		custom_tooltip = sbs_blackmail.1201.c.tt
 		stress_impact = {
 			base = medium_stress_impact_gain
 			lustful = major_stress_impact_loss
@@ -351,11 +351,11 @@ succubus_blackmail.1201 = {
 				sadistic = medium_stress_impact_loss
 			}
 		}
-		trigger_event = succubus_blackmail.1110
+		trigger_event = sbs_blackmail.1110
 		scope:deviant_go_random_1 = { prostitute_effect= { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance } }
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -366,10 +366,10 @@ succubus_blackmail.1201 = {
 }
 
 #1300 inviting to be party decoration or pay major gold or favor hook
-succubus_blackmail.1300 = {
+sbs_blackmail.1300 = {
 	type = character_event
-	title = succubus_blackmail.1300.t
-	desc = succubus_blackmail.1300.desc
+	title = sbs_blackmail.1300.t
+	desc = sbs_blackmail.1300.desc
 	theme = memory_stewardship
 	right_portrait = {
 		character = root
@@ -380,7 +380,7 @@ succubus_blackmail.1300 = {
 		animation = scheme
 	}
 	trigger = {
-		has_trait = succubus
+		has_trait = sbs_succubus
 		any_vassal = {
 			is_female = no
 			age >= 18
@@ -405,15 +405,15 @@ succubus_blackmail.1300 = {
 	}
 	# attend
 	option = {
-		name = succubus_blackmail.1300.a
-		custom_tooltip = succubus_blackmail.1300.a.tt
-		trigger_event = succubus_blackmail.1301
+		name = sbs_blackmail.1300.a
+		custom_tooltip = sbs_blackmail.1300.a.tt
+		trigger_event = sbs_blackmail.1301
 		ai_chance = { base = 100 }
 	}
 	# pay gold and apoligies on your knees for not attending the party...
 	option = {
-		name = succubus_blackmail.1300.b
-		custom_tooltip = succubus_blackmail.1300.b.tt
+		name = sbs_blackmail.1300.b
+		custom_tooltip = sbs_blackmail.1300.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = medium_gold_value
@@ -430,7 +430,7 @@ succubus_blackmail.1300 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -438,8 +438,8 @@ succubus_blackmail.1300 = {
 	}
 	# ignore, get rumors spread...
 	option = {
-		name = succubus_blackmail.1300.c
-		custom_tooltip = succubus_blackmail.1300.c.tt
+		name = sbs_blackmail.1300.c
+		custom_tooltip = sbs_blackmail.1300.c.tt
 		add_piety = medium_piety_loss
 		add_prestige = medium_prestige_loss
 		stress_impact = {
@@ -447,7 +447,7 @@ succubus_blackmail.1300 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = -1
 			}
@@ -456,10 +456,10 @@ succubus_blackmail.1300 = {
 }
 
 #1301 being party decor, look-alike head in the middle of a serving table, he claiming you gave permit
-succubus_blackmail.1301 = {
+sbs_blackmail.1301 = {
 	type = character_event
-	title = succubus_blackmail.1301.t
-	desc = succubus_blackmail.1301.desc
+	title = sbs_blackmail.1301.t
+	desc = sbs_blackmail.1301.desc
 	theme = party
 	lower_center_portrait = {
 		character = root
@@ -564,8 +564,8 @@ succubus_blackmail.1301 = {
 	}
 	# endure
 	option = {
-		name = succubus_blackmail.1301.a
-		custom_tooltip = succubus_blackmail.1301.a.tt
+		name = sbs_blackmail.1301.a
+		custom_tooltip = sbs_blackmail.1301.a.tt
 		add_piety = minor_piety_loss
 		add_prestige = minor_prestige_loss
 		scope:deviant_go_random_1 = {
@@ -578,9 +578,9 @@ succubus_blackmail.1301 = {
 			add_gold = minor_gold_value
 		}
 		if = {
-			limit = { 
-				NOT = { 
-					has_nickname = nickname_the_semen_tank 
+			limit = {
+				NOT = {
+					has_nickname = nickname_the_semen_tank
 					has_nickname = nickname_the_demon_queen
 					has_nickname = nickname_the_demon_king
 					has_nickname = nickname_the_devil_creation
@@ -590,7 +590,7 @@ succubus_blackmail.1301 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -603,10 +603,10 @@ succubus_blackmail.1301 = {
 }
 
 #1400 if both unmarried, forcing you to marry him...  refusing drops by 20 exp? pay massive gold? and suck his cock
-succubus_blackmail.1400 = {
+sbs_blackmail.1400 = {
 	type = character_event
-	title = succubus_blackmail.1400.t
-	desc = succubus_blackmail.1400.a.desc
+	title = sbs_blackmail.1400.t
+	desc = sbs_blackmail.1400.a.desc
 	override_background = { reference = council_chamber }
 	theme = seduction
 	right_portrait = {
@@ -670,8 +670,8 @@ succubus_blackmail.1400 = {
 	# agree to marry
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_blackmail.1400.a
-		custom_tooltip = succubus_blackmail.1400.a.tt
+		name = sbs_blackmail.1400.a
+		custom_tooltip = sbs_blackmail.1400.a.tt
 		marry = scope:deviant_go_random_1
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
@@ -682,8 +682,8 @@ succubus_blackmail.1400 = {
 	}
 	# pay gold and beg on your knees to marry matrilinearily
 	option = {
-		name = succubus_blackmail.1400.b
-		custom_tooltip = succubus_blackmail.1400.b.tt
+		name = sbs_blackmail.1400.b
+		custom_tooltip = sbs_blackmail.1400.b.tt
 		pay_short_term_gold = {
 			target = scope:deviant_go_random_1
 			gold = massive_gold_value
@@ -702,8 +702,8 @@ succubus_blackmail.1400 = {
 	}
 	# ignore, get rumors spread...
 	option = {
-		name = succubus_blackmail.1400.c
-		custom_tooltip = succubus_blackmail.1400.c.tt
+		name = sbs_blackmail.1400.c
+		custom_tooltip = sbs_blackmail.1400.c.tt
 		add_piety = massive_piety_loss
 		add_prestige = massive_prestige_loss
 		stress_impact = {
@@ -712,13 +712,13 @@ succubus_blackmail.1400 = {
 	}
 	# beg to be his sex toy instead
 	option = {
-		name = succubus_blackmail.1400.d
-		custom_tooltip = succubus_blackmail.1400.d.tt
+		name = sbs_blackmail.1400.d
+		custom_tooltip = sbs_blackmail.1400.d.tt
 		set_relation_lover = {
 			reason = lover_shared_deviancy
 			target = scope:deviant_go_random_1
 		}
-		trigger_event = succubus_blackmail.1110
+		trigger_event = sbs_blackmail.1110
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = disgusted_opinion
@@ -727,10 +727,10 @@ succubus_blackmail.1400 = {
 	}
 }
 #2000 if you have spouse, getting groped while spouse in the feast, to make him stop, pay or go fuck or major hook
-succubus_blackmail.2000 = {
+sbs_blackmail.2000 = {
 	type = character_event
-	title = succubus_blackmail.2000.t
-	desc = succubus_blackmail.2000.a.desc
+	title = sbs_blackmail.2000.t
+	desc = sbs_blackmail.2000.a.desc
 	override_background = { reference = feast }
 	theme = diplomacy
 	right_portrait = {
@@ -802,8 +802,8 @@ succubus_blackmail.2000 = {
 	# let him grope, while you are talking to your spouse
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2000.a
-		custom_tooltip = succubus_blackmail.2000.a.tt
+		name = sbs_blackmail.2000.a
+		custom_tooltip = sbs_blackmail.2000.a.tt
 		reverse_add_opinion = {
 			target = scope:deviant_go_random_1
 			modifier = amused_opinion
@@ -820,7 +820,7 @@ succubus_blackmail.2000 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -830,19 +830,19 @@ succubus_blackmail.2000 = {
 	# agree to go do sex in the council chamber
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2000.b
-		custom_tooltip = succubus_blackmail.2000.b.tt
+		name = sbs_blackmail.2000.b
+		custom_tooltip = sbs_blackmail.2000.b.tt
 		hidden_effect = {
 			random_list = {
-				50 = { trigger_event = succubus_blackmail.2010 }
-				50 = { trigger_event = succubus_blackmail.2020 }
+				50 = { trigger_event = sbs_blackmail.2010 }
+				50 = { trigger_event = sbs_blackmail.2020 }
 			}
 		}
 	}
 	# Get up and leave.
 	option = {
-		name = succubus_blackmail.2000.c
-		custom_tooltip = succubus_blackmail.2000.c.tt
+		name = sbs_blackmail.2000.c
+		custom_tooltip = sbs_blackmail.2000.c.tt
 		add_piety = massive_piety_loss
 		add_prestige = massive_prestige_loss
 		stress_impact = {
@@ -850,7 +850,7 @@ succubus_blackmail.2000 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = -2
 			}
@@ -859,8 +859,8 @@ succubus_blackmail.2000 = {
 	# grope him back... until he cums
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2000.d
-		custom_tooltip = succubus_blackmail.2000.d.tt
+		name = sbs_blackmail.2000.d
+		custom_tooltip = sbs_blackmail.2000.d.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
 			lustful = medium_stress_impact_loss
@@ -886,7 +886,7 @@ succubus_blackmail.2000 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -895,10 +895,10 @@ succubus_blackmail.2000 = {
 }
 
 #2010 if went to fuck, he visible and you sucking his cock while spouse follows to the office room, he sitting on your chair, you under it doing the deed, he gripping your hair with one hand, spuse wnats him to leave with him... not proper to sit there...
-succubus_blackmail.2010 = {
+sbs_blackmail.2010 = {
 	type = character_event
-	title = succubus_blackmail.2010.t
-	desc = succubus_blackmail.2010.a.desc
+	title = sbs_blackmail.2010.t
+	desc = sbs_blackmail.2010.a.desc
 	override_background = { reference = council_chamber }
 	theme = diplomacy
 	right_portrait = {
@@ -916,8 +916,8 @@ succubus_blackmail.2010 = {
 	# suck as fast as you can
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2010.a
-		custom_tooltip = succubus_blackmail.2010.a.tt
+		name = sbs_blackmail.2010.a
+		custom_tooltip = sbs_blackmail.2010.a.tt
 		add_prestige = minor_prestige_loss
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -931,12 +931,12 @@ succubus_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -952,8 +952,8 @@ succubus_blackmail.2010 = {
 	# tell the husband it's fine and keep sucking...
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2010.b
-		custom_tooltip = succubus_blackmail.2010.b.tt
+		name = sbs_blackmail.2010.b
+		custom_tooltip = sbs_blackmail.2010.b.tt
 		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -971,12 +971,12 @@ succubus_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -985,8 +985,8 @@ succubus_blackmail.2010 = {
 	}
 	# I can't do this, get out...
 	option = {
-		name = succubus_blackmail.2010.c
-		custom_tooltip = succubus_blackmail.2010.c.tt
+		name = sbs_blackmail.2010.c
+		custom_tooltip = sbs_blackmail.2010.c.tt
 		add_piety = minor_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -998,7 +998,7 @@ succubus_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value = -1
 			}
@@ -1007,8 +1007,8 @@ succubus_blackmail.2010 = {
 	# take your time and keep sucking after he cums
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2010.d
-		custom_tooltip = succubus_blackmail.2010.d.tt
+		name = sbs_blackmail.2010.d
+		custom_tooltip = sbs_blackmail.2010.d.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
 			lustful = major_stress_impact_loss
@@ -1027,12 +1027,12 @@ succubus_blackmail.2010 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1042,10 +1042,10 @@ succubus_blackmail.2010 = {
 	}
 }
 #2020 if went to fuck, you speaking to spouse while being fucked against the door...
-succubus_blackmail.2020 = {
+sbs_blackmail.2020 = {
 	type = character_event
-	title = succubus_blackmail.2020.t
-	desc = succubus_blackmail.2020.a.desc
+	title = sbs_blackmail.2020.t
+	desc = sbs_blackmail.2020.a.desc
 	override_background = { reference = council_chamber }
 	theme = diplomacy
 	left_portrait = {
@@ -1064,9 +1064,9 @@ succubus_blackmail.2020 = {
 	# let him cum in...
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2020.a
-		custom_tooltip = succubus_blackmail.2020.a.tt
-		trigger_event = succubus_blackmail.1110
+		name = sbs_blackmail.2020.a
+		custom_tooltip = sbs_blackmail.2020.a.tt
+		trigger_event = sbs_blackmail.1110
 		stress_impact = {
 			base = medium_stress_impact_gain
 		}
@@ -1077,12 +1077,12 @@ succubus_blackmail.2020 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1097,8 +1097,8 @@ succubus_blackmail.2020 = {
 	}
 	# tell the husband how you are being fucked against the door, and you love it
 	option = {
-		name = succubus_blackmail.2020.b
-		custom_tooltip = succubus_blackmail.2020.b.tt
+		name = sbs_blackmail.2020.b
+		custom_tooltip = sbs_blackmail.2020.b.tt
 		add_piety = medium_piety_loss
 		stress_impact = {
 			base = medium_stress_impact_gain
@@ -1116,12 +1116,12 @@ succubus_blackmail.2020 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1130,8 +1130,8 @@ succubus_blackmail.2020 = {
 	}
 	# I can't do this, get out...
 	option = {
-		name = succubus_blackmail.2020.c
-		custom_tooltip = succubus_blackmail.2020.c.tt
+		name = sbs_blackmail.2020.c
+		custom_tooltip = sbs_blackmail.2020.c.tt
 		add_piety = major_piety_loss
 		stress_impact = {
 			base = major_stress_impact_gain
@@ -1144,7 +1144,7 @@ succubus_blackmail.2020 = {
 		scope:deviant_go_random_1 = {
 			hidden_effect = {
 				add_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = corruption
 					value = -1
 				}
@@ -1154,8 +1154,8 @@ succubus_blackmail.2020 = {
 	# talk to your husband as much as possible to keep him there as you fuck, and slip the cock in your ass
 	option = {
 		ai_chance = { base = 80 }
-		name = succubus_blackmail.2020.d
-		custom_tooltip = succubus_blackmail.2020.d.tt
+		name = sbs_blackmail.2020.d
+		custom_tooltip = sbs_blackmail.2020.d.tt
 		stress_impact = {
 			base = minor_stress_impact_gain
 			lustful = major_stress_impact_loss
@@ -1181,12 +1181,12 @@ succubus_blackmail.2020 = {
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}

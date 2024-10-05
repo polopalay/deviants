@@ -131,14 +131,14 @@ satanic_religion = {
 			succubus_good_god_1
 			succubus_good_god_2
 		}
-		DevilName = succubus_devil_name
-		DevilNamePossessive = succubus_devil_name_possessive
+		DevilName = sbs_devil_name
+		DevilNamePossessive = sbs_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_HE
 		DevilHerHis = CHARACTER_HERHIS_HIS
 		DevilHerHis = CHARACTER_HERHIS_HIS
 		DevilHerselfHimself = CHARACTER_HIMSELF
 		EvilGodNames = {
-			succubus_devil_name
+			sbs_devil_name
 			succubus_evil_god_1
 		}
 		HouseOfWorship = succubus_house_of_worship

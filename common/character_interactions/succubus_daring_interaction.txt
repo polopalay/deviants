@@ -8,14 +8,14 @@ succubus_weight_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				has_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = daring
 					value >= 2
 				}
 				has_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value >= 4
 				}
 			}
@@ -34,17 +34,17 @@ succubus_weight_interaction = {
 		}
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
+				limit = { has_trait = sbs_succubus }
 				add_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = daring
 					value = -2
 				}
 			}
 			if = {
-				limit = { has_trait = lesser_succubus }
+				limit = { has_trait = sbs_lesser_succubus }
 				add_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value = -4
 				}
 			}
@@ -66,8 +66,8 @@ succubus_makeup_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
-				has_trait = demon
-				has_trait_xp = { trait = succubus track = daring value >= 1 }
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 1 }
 			}
 		}
 		scope:recipient = {
@@ -459,8 +459,8 @@ succubus_makeup_interaction = {
 
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = daring value = -1 }
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -1 }
 			}
 		}
 	}
@@ -476,14 +476,14 @@ succubus_honor_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				has_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = daring
 					value >= 5
 				}
 				has_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value >= 10
 				}
 			}
@@ -517,12 +517,16 @@ succubus_honor_interaction = {
 	}
 	send_option = {
 		is_shown = {
+			NOT = { scope:actor = scope:recipient }
 			scope:recipient ?= { gold >= scope:recipient.purify_price_value }
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
 	}
 	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
 		is_valid = {
 			scope:recipient = {
 				has_usable_hook = scope:actor
@@ -532,6 +536,9 @@ succubus_honor_interaction = {
 		localization = GENERIC_SPEND_A_HOOK
 	}
 	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
 		is_valid = {
 			exists = scope:actor
 			scope:actor= {
@@ -547,6 +554,9 @@ succubus_honor_interaction = {
 	send_option = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
+		is_shown = {
+			NOT = { scope:actor.faith = scope:recipient.faith }
+		}
 		is_valid = {
 			# Cannot ask Religious Heads to convert
 			custom_description = {
@@ -587,12 +597,12 @@ succubus_honor_interaction = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = daring value = -5 }
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -5 }
 			}
 			if = {
-				limit = { has_trait = lesser_succubus }
-				add_trait_xp = { trait = lesser_succubus value = -10 }
+				limit = { has_trait = sbs_lesser_succubus }
+				add_trait_xp = { trait = sbs_lesser_succubus value = -10 }
 			}
 			if = {
 				limit = { scope:favor = yes }
@@ -696,10 +706,13 @@ succubus_honor_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
-		modifier = { add = -10 scope:demand_conversion = yes }
-		modifier = { add = -10 scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -50 scope:recipient = { ai_zeal > very_high_positive_ai_value } }
-		modifier = { add = -100 scope:recipient = { ai_zeal > dominant_positive_ai_value } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -50 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 	}
 	ai_frequency = 12
 	ai_targets = {
@@ -732,21 +745,21 @@ succubus_mind_break_interaction = {
 	desc = succubus_mind_break_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
-	cooldown = { years = 10 }
+	cooldown = { years = 5 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = {
 			OR = {
-				has_trait = demon
-				has_trait_xp = { trait = succubus track = daring value >= 25 }
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 10 }
 			}
 		}
 		scope:recipient = {
 			age >= 16
 			age <= 30
 			NOR = {
-				has_trait = succubus
-				has_trait = lesser_succubus
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
 				has_trait = deviant_virgin
 			}
 		}
@@ -754,9 +767,8 @@ succubus_mind_break_interaction = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = daring value = -25 }
-				add_trait_xp = { trait = succubus track = corruption value = 1 }
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -10 }
 			}
 		}
 		scope:recipient = {
@@ -768,7 +780,7 @@ succubus_mind_break_interaction = {
 		}
 	}
 	auto_accept = yes
-	ai_frequency = 2
+	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
@@ -781,5 +793,10 @@ succubus_mind_break_interaction = {
 		max = 5
 	}
 	ai_potential = { always = yes }
-	ai_will_do = { base = 25 }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 10 scope:recipient = { age <= 18 } }
+		modifier = { add = 10 scope:recipient = { age <= 24 } }
+		modifier = { add = 20 scope:recipient = { is_imprisoned_by = scope:actor } }
+	}
 }

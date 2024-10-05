@@ -15,7 +15,7 @@
 	trait = calm
 	trait = lustful
 	trait = education_intrigue_4
-	trait = demon
+	trait = sbs_demon
 	1.1.1 = {
 		birth = "1.1.1"
 		effect = {
@@ -51,7 +51,7 @@ lilim_character = {
 	trait = zealous
 	trait = lustful
 	trait = education_martial_4
-	trait = lesser_succubus
+	trait = sbs_lesser_succubus
 	666.1.1 = {
 		birth = "666.6.13"
 		effect = {
@@ -69,16 +69,16 @@ lilim_character = {
 	}
 	1066.1.1 = {
 		effect = {
-			remove_trait = lesser_succubus
-			add_trait = succubus
+			remove_trait = sbs_lesser_succubus
+			add_trait = sbs_succubus
 			set_immortal_age = 18
 		}
 	}
 	1178.1.1 = {
 		effect = {
-			add_trait_xp = { trait = succubus track = loyalty value = 66 }
-			add_trait_xp = { trait = succubus track = corruption value = 50 }
-			add_trait_xp = { trait = succubus track = power value = 100 }
-			add_trait_xp = { trait = succubus track = daring value = 100 }
+			add_trait_xp = { trait = sbs_succubus track = loyalty value = 66 }
+			add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
+			add_trait_xp = { trait = sbs_succubus track = power value = 100 }
+			add_trait_xp = { trait = sbs_succubus track = daring value = 100 }
 		}
 	}

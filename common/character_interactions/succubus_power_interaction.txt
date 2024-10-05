@@ -7,14 +7,14 @@ succubus_dealing_with_stress_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				has_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = power
 					value >= 5
 				}
 				has_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value >= 10
 				}
 			}
@@ -79,7 +79,7 @@ succubus_dealing_with_stress_interaction = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
 		is_shown = {
-			NOT = { scope:actor = scope:recipient }
+			NOT = { scope:actor.faith = scope:recipient.faith }
 		}
 		is_valid = {
 			# Cannot ask Religious Heads to convert
@@ -123,9 +123,9 @@ succubus_dealing_with_stress_interaction = {
 			scope:recipient = {
 				OR = {
 					NOT = {
-						has_trait = lesser_succubus
-						has_trait = succubus
-						has_trait = demon
+						has_trait = sbs_lesser_succubus
+						has_trait = sbs_succubus
+						has_trait = sbs_demon
 					}
 					NOR = {
 						has_trait = lustful
@@ -144,17 +144,17 @@ succubus_dealing_with_stress_interaction = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
+				limit = { has_trait = sbs_succubus }
 				add_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = power
 					value = -5
 				}
 			}
 			if = {
-				limit = { has_trait = lesser_succubus }
+				limit = { has_trait = sbs_lesser_succubus }
 				add_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value = -10
 				}
 			}
@@ -186,7 +186,7 @@ succubus_dealing_with_stress_interaction = {
 			}
 			if = {
 				limit = { scope:small_price = yes }
-				mind_break_personality = yes	
+				mind_break_personality = yes
 			}
 			if = {
 				limit = {
@@ -247,11 +247,14 @@ succubus_dealing_with_stress_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
-		modifier = { add = -10 scope:demand_conversion = yes }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -50 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 		modifier = { add = -10 scope:small_price = yes }
-		modifier = { add = -10 scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -50 scope:recipient = { ai_zeal > very_high_positive_ai_value } }
-		modifier = { add = -100 scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 	}
 	ai_frequency = 12
 	ai_targets = {
@@ -291,14 +294,14 @@ succubus_heal_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				has_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = power
 					value >= 5
 				}
 				has_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value >= 10
 				}
 			}
@@ -387,7 +390,8 @@ succubus_heal_interaction = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
 		is_shown = {
-			NOT = { scope:actor = scope:recipient }
+			NOT = { scope:actor.faith = scope:recipient.faith }
+
 		}
 		is_valid = {
 			# Cannot ask Religious Heads to convert
@@ -431,9 +435,9 @@ succubus_heal_interaction = {
 			scope:recipient = {
 				OR = {
 					NOT = {
-						has_trait = lesser_succubus
-						has_trait = succubus
-						has_trait = demon
+						has_trait = sbs_lesser_succubus
+						has_trait = sbs_succubus
+						has_trait = sbs_demon
 					}
 					NOR = {
 						has_trait = lustful
@@ -452,17 +456,17 @@ succubus_heal_interaction = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
+				limit = { has_trait = sbs_succubus }
 				add_trait_xp = {
-					trait = succubus
+					trait = sbs_succubus
 					track = power
 					value = -5
 				}
 			}
 			if = {
-				limit = { has_trait = lesser_succubus }
+				limit = { has_trait = sbs_lesser_succubus }
 				add_trait_xp = {
-					trait = lesser_succubus
+					trait = sbs_lesser_succubus
 					value = -10
 				}
 			}
@@ -492,7 +496,7 @@ succubus_heal_interaction = {
 			}
 			if = {
 				limit = { scope:small_price = yes }
-				mind_break_personality = yes	
+				mind_break_personality = yes
 			}
 			if = {
 				limit = {
@@ -594,11 +598,14 @@ succubus_heal_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
-		modifier = { add = -10 scope:demand_conversion = yes }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -50 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 		modifier = { add = -10 scope:small_price = yes }
-		modifier = { add = -10 scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -50 scope:recipient = { ai_zeal > very_high_positive_ai_value } }
-		modifier = { add = -100 scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 	}
 	ai_frequency = 12
 	ai_frequency = 1
@@ -637,9 +644,9 @@ succubus_purify_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				AND = {
-					has_trait_xp = { trait = succubus track = power value >= 10 }
+					has_trait_xp = { trait = sbs_succubus track = power value >= 10 }
 					is_valid_construction_alchemy2_trigger = yes
 				}
 			}
@@ -716,7 +723,7 @@ succubus_purify_interaction = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
 		is_shown = {
-			NOT = { scope:actor = scope:recipient }
+			NOT = { scope:actor.faith = scope:recipient.faith }
 		}
 		is_valid = {
 			# Cannot ask Religious Heads to convert
@@ -760,9 +767,9 @@ succubus_purify_interaction = {
 			scope:recipient = {
 				OR = {
 					NOT = {
-						has_trait = lesser_succubus
-						has_trait = succubus
-						has_trait = demon
+						has_trait = sbs_lesser_succubus
+						has_trait = sbs_succubus
+						has_trait = sbs_demon
 					}
 					NOR = {
 						has_trait = lustful
@@ -781,8 +788,8 @@ succubus_purify_interaction = {
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = power value = -10 }
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = power value = -10 }
 			}
 			if = {
 				limit = { scope:favor = yes }
@@ -810,7 +817,7 @@ succubus_purify_interaction = {
 			}
 			if = {
 				limit = { scope:small_price = yes }
-				mind_break_personality = yes	
+				mind_break_personality = yes
 			}
 			if = {
 				limit = {
@@ -854,7 +861,7 @@ succubus_purify_interaction = {
 			remove_trait = physique_bad_2
 			remove_trait = physique_bad_3
 			remove_trait = inbred
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = { NOT = { has_trait = beauty_good_1 } }
 					add_trait = beauty_good_1
@@ -899,11 +906,14 @@ succubus_purify_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
-		modifier = { add = -10 scope:demand_conversion = yes }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -50 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 		modifier = { add = -10 scope:small_price = yes }
-		modifier = { add = -10 scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -50 scope:recipient = { ai_zeal > very_high_positive_ai_value } }
-		modifier = { add = -100 scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 	}
 	ai_frequency = 12
 	ai_targets = {
@@ -942,9 +952,9 @@ succubus_child_interaction = {
 		scope:actor = {
 			is_adult = yes
 			OR = {
-				has_trait = demon
+				has_trait = sbs_demon
 				AND = {
-					has_trait_xp = { trait = succubus track = power value >= 50 }
+					has_trait_xp = { trait = sbs_succubus track = power value >= 50 }
 					have_soul_forge_trigger = yes
 				}
 			}
@@ -987,8 +997,8 @@ succubus_child_interaction = {
 		}
 		scope:actor = {
 			if = {
-				limit = { has_trait = succubus }
-				add_trait_xp = { trait = succubus track = power value = -50 }
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = power value = -50 }
 			}
 		}
 	}

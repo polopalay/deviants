@@ -1,13 +1,13 @@
 ﻿l_german:
-  trait_demon: "Dämon"
-  demon_desc: "Diejenigen, die vom Himmel verflucht und von der Hölle gesegnet sind. In ihnen ist der Tod und die Zerstörung verborgen."
-  demon_character_desc: "Als Kinder des Teufels, gesegnet von den Fürsten der Hölle. [ROOT.GetCharacter.GetNamePossessive]'s Mission ist es, Chaos und Zerstörung in der Welt zu segnen."
+  trait_sbs_demon: "Dämon"
+  sbs_demon_desc: "Diejenigen, die vom Himmel verflucht und von der Hölle gesegnet sind. In ihnen ist der Tod und die Zerstörung verborgen."
+  sbs_demon_character_desc: "Als Kinder des Teufels, gesegnet von den Fürsten der Hölle. [ROOT.GetCharacter.GetNamePossessive]'s Mission ist es, Chaos und Zerstörung in der Welt zu segnen."
 
-  trait_succubus_neutral: "Sukubus"
-  trait_succubus_female: "Sukubus"
-  trait_succubus_male: "Inkubus"
-  succubus_desc: "Einige haben es gesehen, andere haben davon gehört, alle flüstern über [ROOT.GetCharacter.GetNamePossessive] seltsames Verhalten."
-  succubus_character_desc: "Unabhängig von dem, was innen ist, denkt niemand, dass an [ROOT.GetCharacter.GetName] etwas seltsam ist."
+  trait_sbs_succubus_neutral: "Sukubus"
+  trait_sbs_succubus_female: "Sukubus"
+  trait_sbs_succubus_male: "Inkubus"
+  sbs_succubus_desc: "Einige haben es gesehen, andere haben davon gehört, alle flüstern über [ROOT.GetCharacter.GetNamePossessive] seltsames Verhalten."
+  sbs_succubus_character_desc: "Unabhängig von dem, was innen ist, denkt niemand, dass an [ROOT.GetCharacter.GetName] etwas seltsam ist."
   
   trait_track_corruption: "Abweichler"
   trait_track_corruption_desc: "Durch die Seelen, die sie sammelt, gewinnt sie mehr Macht, um monströse Kreaturen zu beschwören."
@@ -21,11 +21,11 @@
   trait_lesser_succubus_neutral: "Geringer Sukubus"
   trait_lesser_succubus_female: "Geringer Sukubus"
   trait_lesser_succubus_male: "Geringer Inkubus"
-  lesser_succubus_desc: "Unabhängig von dem, was innen ist, denkt niemand, dass an [ROOT.GetCharacter.GetName] etwas seltsam ist."
-  lesser_succubus_character_desc: "Die meisten haben es gesehen, alle haben davon gehört. [ROOT.GetCharacter.GetNamePossessive] Verhalten ist moralisch verdorben. Sie wird mit der gleichen Verachtung angesprochen, wie man über eine gewöhnliche Straßenprostituierte spricht."
+  lesser_sbs_succubus_desc: "Unabhängig von dem, was innen ist, denkt niemand, dass an [ROOT.GetCharacter.GetName] etwas seltsam ist."
+  lesser_sbs_succubus_character_desc: "Die meisten haben es gesehen, alle haben davon gehört. [ROOT.GetCharacter.GetNamePossessive] Verhalten ist moralisch verdorben. Sie wird mit der gleichen Verachtung angesprochen, wie man über eine gewöhnliche Straßenprostituierte spricht."
   
   trait_track_lesser_succubus: "Macht"
-  trait_track_lesser_succubus_desc: "Sie dient als billige Prostituierte und bedient Männer, um deren Samen zu erhalten."
+  trait_track_lesser_sbs_succubus_desc: "Sie dient als billige Prostituierte und bedient Männer, um deren Samen zu erhalten."
 
   trait_deviant_virgin: "Geile Jungfrau"
   deviant_virgin_desc: "[ROOT.GetCharacter.GetName] ist die Hure des Teufels."

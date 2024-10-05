@@ -45,8 +45,8 @@
   succubus_good_god_1: "$succubus_health_god_name$"
   succubus_good_god_2: "루시퍼"
 
-  succubus_devil_name: "예수"
-  succubus_devil_name_possessive: "예수의"
+  sbs_devil_name: "예수"
+  sbs_devil_name_possessive: "예수의"
   succubus_evil_god_1: "예수"
 
   succubus_death_deity_name: "죽음"
@@ -80,7 +80,7 @@
   succubus_positive_afterlife_3: "$succubus_high_god_name_possessive$ 왕국"
   succubus_negative_afterlife: "천국"
   succubus_negative_afterlife_2: "파라다이스"
-  succubus_negative_afterlife_3: "$succubus_devil_name_possessive$ 왕국"
+  succubus_negative_afterlife_3: "$sbs_devil_name_possessive$ 왕국"
   succubus_witchgodname_the_horned_god: "사탄"
   succubus_witchgodname_the_horned_god_possessive: "사탄의"
 

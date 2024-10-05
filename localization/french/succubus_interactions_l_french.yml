@@ -26,8 +26,8 @@
   succubus_rumor_interaction: "Répandre des Rumeurs"
   succubus_rumor_interaction.desc: "Répandez de mauvaises rumeurs sur [recipient.GetShortUIName]"
 
-  succubus_switch_body_interaction: "Changer"
-  succubus_switch_body_interaction.desc: "Incarnez [recipient.GetShortUIName]"
+  sbs_switch_body_interaction: "Changer"
+  sbs_switch_body_interaction.desc: "Incarnez [recipient.GetShortUIName]"
 
   succubus_create_succubus_interaction: "Créer une Succube"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] deviendra une Succube"

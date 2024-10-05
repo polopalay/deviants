@@ -1,10 +1,10 @@
-namespace = succubus_prostitution
+namespace = sbs_prostitution
 
 #9000 inn slut, coming of age male
-succubus_prostitution.9000 = {
+sbs_prostitution.9000 = {
 	type = character_event
-	title = succubus_prostitution.9000.t
-	desc = succubus_prostitution.9000.a.desc
+	title = sbs_prostitution.9000.t
+	desc = sbs_prostitution.9000.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -13,26 +13,26 @@ succubus_prostitution.9000 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9000.a
-		custom_tooltip = succubus_prostitution.9000.a.tt
+		name = sbs_prostitution.9000.a
+		custom_tooltip = sbs_prostitution.9000.a.tt
 		hidden_effect = {
 			random_list = {
-				1 = { trigger_event = succubus_prostitution.9001 }
-				1 = { trigger_event = succubus_prostitution.9002 }
-				1 = { trigger_event = succubus_prostitution.9003 }
+				1 = { trigger_event = sbs_prostitution.9001 }
+				1 = { trigger_event = sbs_prostitution.9002 }
+				1 = { trigger_event = sbs_prostitution.9003 }
 			}
 		}
 	}
 	option = {
-		name = succubus_prostitution.9000.b
-		custom_tooltip = succubus_prostitution.9000.b.tt
+		name = sbs_prostitution.9000.b
+		custom_tooltip = sbs_prostitution.9000.b.tt
 	}
 }
 #9001
-succubus_prostitution.9001 = {
+sbs_prostitution.9001 = {
 	type = character_event
-	title = succubus_prostitution.9001.t
-	desc = succubus_prostitution.9001.a.desc
+	title = sbs_prostitution.9001.t
+	desc = sbs_prostitution.9001.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -40,8 +40,8 @@ succubus_prostitution.9001 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9001.a
-		custom_tooltip = succubus_prostitution.9001.a.tt
+		name = sbs_prostitution.9001.a
+		custom_tooltip = sbs_prostitution.9001.a.tt
 		add_gold = 1
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
@@ -50,10 +50,10 @@ succubus_prostitution.9001 = {
 }
 
 #9002
-succubus_prostitution.9002 = {
+sbs_prostitution.9002 = {
 	type = character_event
-	title = succubus_prostitution.9002.t
-	desc = succubus_prostitution.9002.a.desc
+	title = sbs_prostitution.9002.t
+	desc = sbs_prostitution.9002.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -61,8 +61,8 @@ succubus_prostitution.9002 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9002.a
-		custom_tooltip = succubus_prostitution.9002.a.tt
+		name = sbs_prostitution.9002.a
+		custom_tooltip = sbs_prostitution.9002.a.tt
 		add_gold = 1
 		stress_impact = {
 			lustful = minor_stress_impact_loss
@@ -74,10 +74,10 @@ succubus_prostitution.9002 = {
 	}
 }
 #9003
-succubus_prostitution.9003 = {
+sbs_prostitution.9003 = {
 	type = character_event
-	title = succubus_prostitution.9003.t
-	desc = succubus_prostitution.9003.a.desc
+	title = sbs_prostitution.9003.t
+	desc = sbs_prostitution.9003.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -85,15 +85,15 @@ succubus_prostitution.9003 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9003.a
-		custom_tooltip = succubus_prostitution.9003.a.tt
+		name = sbs_prostitution.9003.a
+		custom_tooltip = sbs_prostitution.9003.a.tt
 		add_gold = 10
 		stress_impact = {
 			lustful = medium_stress_impact_loss
 		}
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -104,10 +104,10 @@ succubus_prostitution.9003 = {
 }
 
 #9010 The Inn Whore - A Married Couple
-succubus_prostitution.9010 = {
+sbs_prostitution.9010 = {
 	type = character_event
-	title = succubus_prostitution.9010.t
-	desc = succubus_prostitution.9010.a.desc
+	title = sbs_prostitution.9010.t
+	desc = sbs_prostitution.9010.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -116,27 +116,27 @@ succubus_prostitution.9010 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9010.a
-		custom_tooltip = succubus_prostitution.9010.a.tt
+		name = sbs_prostitution.9010.a
+		custom_tooltip = sbs_prostitution.9010.a.tt
 		hidden_effect = {
 			random_list = {
-				1 = { trigger_event = succubus_prostitution.9011 }
-				1 = { trigger_event = succubus_prostitution.9012 }
-				1 = { trigger_event = succubus_prostitution.9020 }
+				1 = { trigger_event = sbs_prostitution.9011 }
+				1 = { trigger_event = sbs_prostitution.9012 }
+				1 = { trigger_event = sbs_prostitution.9020 }
 			}
 		}
 	}
 	option = {
-		name = succubus_prostitution.9010.b
-		custom_tooltip = succubus_prostitution.9010.b.tt
+		name = sbs_prostitution.9010.b
+		custom_tooltip = sbs_prostitution.9010.b.tt
 	}
 }
 
 #9011 33% chance, just happens normally
-succubus_prostitution.9011 = {
+sbs_prostitution.9011 = {
 	type = character_event
-	title = succubus_prostitution.9011.t
-	desc = succubus_prostitution.9011.a.desc
+	title = sbs_prostitution.9011.t
+	desc = sbs_prostitution.9011.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -144,12 +144,12 @@ succubus_prostitution.9011 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9011.a
-		custom_tooltip = succubus_prostitution.9011.a.tt
+		name = sbs_prostitution.9011.a
+		custom_tooltip = sbs_prostitution.9011.a.tt
 		add_gold = 1
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -157,10 +157,10 @@ succubus_prostitution.9011 = {
 	}
 }
 #9012 33% chance, timid wife
-succubus_prostitution.9012 = {
+sbs_prostitution.9012 = {
 	type = character_event
-	title = succubus_prostitution.9012.t
-	desc = succubus_prostitution.9012.a.desc
+	title = sbs_prostitution.9012.t
+	desc = sbs_prostitution.9012.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -169,8 +169,8 @@ succubus_prostitution.9012 = {
 	}
 	# focus on husband and talk up the wife
 	option = {
-		name = succubus_prostitution.9012.a
-		custom_tooltip = succubus_prostitution.9012.a.tt
+		name = sbs_prostitution.9012.a
+		custom_tooltip = sbs_prostitution.9012.a.tt
 		duel = {
 			skill = diplomacy
 			value = 10
@@ -181,8 +181,8 @@ succubus_prostitution.9012 = {
 					multiplier = 3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9012.aw.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9013	}
+				custom_tooltip = { text = sbs_prostitution.9012.aw.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9013	}
 			}
 			# Failure, not good enough
 			50 = {
@@ -191,15 +191,15 @@ succubus_prostitution.9012 = {
 					multiplier = -3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9012.al.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9014	}
+				custom_tooltip = { text = sbs_prostitution.9012.al.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9014	}
 			}
 		}
 	}
 	# focus on wife and try to figure out what to do via observation skills
 	option = {
-		name = succubus_prostitution.9012.b
-		custom_tooltip = succubus_prostitution.9012.b.tt
+		name = sbs_prostitution.9012.b
+		custom_tooltip = sbs_prostitution.9012.b.tt
 		duel = {
 			skill = intrigue
 			value = 10
@@ -210,8 +210,8 @@ succubus_prostitution.9012 = {
 					multiplier = 3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9012.bw.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9015	}
+				custom_tooltip = { text = sbs_prostitution.9012.bw.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9015	}
 			}
 			# Failure, not good enough
 			50 = {
@@ -220,17 +220,17 @@ succubus_prostitution.9012 = {
 					multiplier = -3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9012.bl.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9016 }
+				custom_tooltip = { text = sbs_prostitution.9012.bl.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9016 }
 			}
 		}
 	}
 }
 #9013 if win diplo challenge
-succubus_prostitution.9013 = {
+sbs_prostitution.9013 = {
 	type = character_event
-	title = succubus_prostitution.9013.t
-	desc = succubus_prostitution.9013.a.desc
+	title = sbs_prostitution.9013.t
+	desc = sbs_prostitution.9013.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -238,12 +238,12 @@ succubus_prostitution.9013 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9013.a
-		custom_tooltip = succubus_prostitution.9013.a.tt
+		name = sbs_prostitution.9013.a
+		custom_tooltip = sbs_prostitution.9013.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -255,10 +255,10 @@ succubus_prostitution.9013 = {
 	}
 }
 #9014 if lose diplo challenge
-succubus_prostitution.9014 = {
+sbs_prostitution.9014 = {
 	type = character_event
-	title = succubus_prostitution.9014.t
-	desc = succubus_prostitution.9014.a.desc
+	title = sbs_prostitution.9014.t
+	desc = sbs_prostitution.9014.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -266,8 +266,8 @@ succubus_prostitution.9014 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9014.a
-		custom_tooltip = succubus_prostitution.9014.a.tt
+		name = sbs_prostitution.9014.a
+		custom_tooltip = sbs_prostitution.9014.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
@@ -277,10 +277,10 @@ succubus_prostitution.9014 = {
 	}
 }
 #9015 if win intrigue challenge
-succubus_prostitution.9015 = {
+sbs_prostitution.9015 = {
 	type = character_event
-	title = succubus_prostitution.9015.t
-	desc = succubus_prostitution.9015.a.desc
+	title = sbs_prostitution.9015.t
+	desc = sbs_prostitution.9015.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -289,12 +289,12 @@ succubus_prostitution.9015 = {
 	}
 	#
 	option = {
-		name = succubus_prostitution.9015.a
-		custom_tooltip = succubus_prostitution.9015.a.tt
+		name = sbs_prostitution.9015.a
+		custom_tooltip = sbs_prostitution.9015.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -306,10 +306,10 @@ succubus_prostitution.9015 = {
 	}
 }
 #9016 if lose intrigue challenge
-succubus_prostitution.9016 = {
+sbs_prostitution.9016 = {
 	type = character_event
-	title = succubus_prostitution.9016.t
-	desc = succubus_prostitution.9016.a.desc
+	title = sbs_prostitution.9016.t
+	desc = sbs_prostitution.9016.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -317,8 +317,8 @@ succubus_prostitution.9016 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9016.a
-		custom_tooltip = succubus_prostitution.9016.a.tt
+		name = sbs_prostitution.9016.a
+		custom_tooltip = sbs_prostitution.9016.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
@@ -328,10 +328,10 @@ succubus_prostitution.9016 = {
 	}
 }
 #9020 33% chance, submissive husband
-succubus_prostitution.9020 = {
+sbs_prostitution.9020 = {
 	type = character_event
-	title = succubus_prostitution.9020.t
-	desc = succubus_prostitution.9020.a.desc
+	title = sbs_prostitution.9020.t
+	desc = sbs_prostitution.9020.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -340,8 +340,8 @@ succubus_prostitution.9020 = {
 	}
 	# focus on wife and talk up the husband
 	option = {
-		name = succubus_prostitution.9020.a
-		custom_tooltip = succubus_prostitution.9020.a.tt
+		name = sbs_prostitution.9020.a
+		custom_tooltip = sbs_prostitution.9020.a.tt
 		duel = {
 			skill = diplomacy
 			value = 10
@@ -352,8 +352,8 @@ succubus_prostitution.9020 = {
 					multiplier = 3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9020.aw.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9021 }
+				custom_tooltip = { text = sbs_prostitution.9020.aw.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9021 }
 			}
 			# Failure, not good enough
 			50 = {
@@ -362,15 +362,15 @@ succubus_prostitution.9020 = {
 					multiplier = -3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9020.al.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9022 }
+				custom_tooltip = { text = sbs_prostitution.9020.al.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9022 }
 			}
 		}
 	}
 	# focus on wife and try to figure out what to do via observation skills
 	option = {
-		name = succubus_prostitution.9020.b
-		custom_tooltip = succubus_prostitution.9020.b.tt
+		name = sbs_prostitution.9020.b
+		custom_tooltip = sbs_prostitution.9020.b.tt
 		duel = {
 			skill = intrigue
 			value = 10
@@ -381,8 +381,8 @@ succubus_prostitution.9020 = {
 					multiplier = 3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9020.bw.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9023 }
+				custom_tooltip = { text = sbs_prostitution.9020.bw.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9023 }
 			}
 			# Failure, not good enough
 			50 = {
@@ -391,17 +391,17 @@ succubus_prostitution.9020 = {
 					multiplier = -3.5
 					min = -49
 				}
-				custom_tooltip = { text = succubus_prostitution.9020.bl.tt }
-				hidden_effect = { trigger_event = succubus_prostitution.9024 }
+				custom_tooltip = { text = sbs_prostitution.9020.bl.tt }
+				hidden_effect = { trigger_event = sbs_prostitution.9024 }
 			}
 		}
 	}
 }
 #9021 if win diplo challenge
-succubus_prostitution.9021 = {
+sbs_prostitution.9021 = {
 	type = character_event
-	title = succubus_prostitution.9021.t
-	desc = succubus_prostitution.9021.a.desc
+	title = sbs_prostitution.9021.t
+	desc = sbs_prostitution.9021.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -409,12 +409,12 @@ succubus_prostitution.9021 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9021.a
-		custom_tooltip = succubus_prostitution.9021.a.tt
+		name = sbs_prostitution.9021.a
+		custom_tooltip = sbs_prostitution.9021.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -426,10 +426,10 @@ succubus_prostitution.9021 = {
 	}
 }
 #9022 if lose diplo challenge
-succubus_prostitution.9022 = {
+sbs_prostitution.9022 = {
 	type = character_event
-	title = succubus_prostitution.9022.t
-	desc = succubus_prostitution.9022.a.desc
+	title = sbs_prostitution.9022.t
+	desc = sbs_prostitution.9022.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -437,8 +437,8 @@ succubus_prostitution.9022 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9022.a
-		custom_tooltip = succubus_prostitution.9022.a.tt
+		name = sbs_prostitution.9022.a
+		custom_tooltip = sbs_prostitution.9022.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
@@ -448,10 +448,10 @@ succubus_prostitution.9022 = {
 	}
 }
 #9023 if win intrigue challenge
-succubus_prostitution.9023 = {
+sbs_prostitution.9023 = {
 	type = character_event
-	title = succubus_prostitution.9023.t
-	desc = succubus_prostitution.9023.a.desc
+	title = sbs_prostitution.9023.t
+	desc = sbs_prostitution.9023.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -459,12 +459,12 @@ succubus_prostitution.9023 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9023.a
-		custom_tooltip = succubus_prostitution.9023.a.tt
+		name = sbs_prostitution.9023.a
+		custom_tooltip = sbs_prostitution.9023.a.tt
 		add_gold = 1
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -476,10 +476,10 @@ succubus_prostitution.9023 = {
 	}
 }
 #9024 if lose intrigue challenge
-succubus_prostitution.9024 = {
+sbs_prostitution.9024 = {
 	type = character_event
-	title = succubus_prostitution.9024.t
-	desc = succubus_prostitution.9024.a.desc
+	title = sbs_prostitution.9024.t
+	desc = sbs_prostitution.9024.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -487,8 +487,8 @@ succubus_prostitution.9024 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9024.a
-		custom_tooltip = succubus_prostitution.9024.a.tt
+		name = sbs_prostitution.9024.a
+		custom_tooltip = sbs_prostitution.9024.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
@@ -499,10 +499,10 @@ succubus_prostitution.9024 = {
 }
 
 #9030 older man
-succubus_prostitution.9030 = {
+sbs_prostitution.9030 = {
 	type = character_event
-	title = succubus_prostitution.9030.t
-	desc = succubus_prostitution.9030.a.desc
+	title = sbs_prostitution.9030.t
+	desc = sbs_prostitution.9030.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -511,25 +511,25 @@ succubus_prostitution.9030 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9030.a
-		custom_tooltip = succubus_prostitution.9030.a.tt
+		name = sbs_prostitution.9030.a
+		custom_tooltip = sbs_prostitution.9030.a.tt
 		hidden_effect = {
 			random_list = {
-				1 = { trigger_event = succubus_prostitution.9031 }
-				1 = { trigger_event = succubus_prostitution.9032 }
+				1 = { trigger_event = sbs_prostitution.9031 }
+				1 = { trigger_event = sbs_prostitution.9032 }
 			}
 		}
 	}
 	option = {
-		name = succubus_prostitution.9030.b
-		custom_tooltip = succubus_prostitution.9030.b.tt
+		name = sbs_prostitution.9030.b
+		custom_tooltip = sbs_prostitution.9030.b.tt
 	}
 }
 #9031 50% chance, just happens normally
-succubus_prostitution.9031 = {
+sbs_prostitution.9031 = {
 	type = character_event
-	title = succubus_prostitution.9031.t
-	desc = succubus_prostitution.9031.a.desc
+	title = sbs_prostitution.9031.t
+	desc = sbs_prostitution.9031.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -537,12 +537,12 @@ succubus_prostitution.9031 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9031.a
-		custom_tooltip = succubus_prostitution.9031.a.tt
+		name = sbs_prostitution.9031.a
+		custom_tooltip = sbs_prostitution.9031.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -554,10 +554,10 @@ succubus_prostitution.9031 = {
 	}
 }
 #9032 50% chance, wants to pretend that you are the daughter
-succubus_prostitution.9032 = {
+sbs_prostitution.9032 = {
 	type = character_event
-	title = succubus_prostitution.9032.t
-	desc = succubus_prostitution.9032.a.desc
+	title = sbs_prostitution.9032.t
+	desc = sbs_prostitution.9032.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -565,8 +565,8 @@ succubus_prostitution.9032 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9032.a
-		custom_tooltip = succubus_prostitution.9032.a.tt
+		name = sbs_prostitution.9032.a
+		custom_tooltip = sbs_prostitution.9032.a.tt
 		duel = {
 			skill = diplomacy
 			value = 10
@@ -578,10 +578,10 @@ succubus_prostitution.9032 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9032.aw.tt
+					text = sbs_prostitution.9032.aw.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9033
+					trigger_event = sbs_prostitution.9033
 				}
 			}
 			# Failure, not good enough
@@ -592,18 +592,18 @@ succubus_prostitution.9032 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9032.al.tt
+					text = sbs_prostitution.9032.al.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9034
+					trigger_event = sbs_prostitution.9034
 				}
 			}
 		}
 	}
 	#
 	option = {
-		name = succubus_prostitution.9032.b
-		custom_tooltip = succubus_prostitution.9032.b.tt
+		name = sbs_prostitution.9032.b
+		custom_tooltip = sbs_prostitution.9032.b.tt
 		duel = {
 			skill = intrigue
 			value = 10
@@ -615,10 +615,10 @@ succubus_prostitution.9032 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9032.bw.tt
+					text = sbs_prostitution.9032.bw.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9035
+					trigger_event = sbs_prostitution.9035
 				}
 			}
 			# Failure, not good enough
@@ -629,20 +629,20 @@ succubus_prostitution.9032 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9032.bl.tt
+					text = sbs_prostitution.9032.bl.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9036
+					trigger_event = sbs_prostitution.9036
 				}
 			}
 		}
 	}
 }
 #9033 if win diplo
-succubus_prostitution.9033 = {
+sbs_prostitution.9033 = {
 	type = character_event
-	title = succubus_prostitution.9033.t
-	desc = succubus_prostitution.9033.a.desc
+	title = sbs_prostitution.9033.t
+	desc = sbs_prostitution.9033.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -650,12 +650,12 @@ succubus_prostitution.9033 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9033.a
-		custom_tooltip = succubus_prostitution.9033.a.tt
+		name = sbs_prostitution.9033.a
+		custom_tooltip = sbs_prostitution.9033.a.tt
 		add_gold = 5
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -667,10 +667,10 @@ succubus_prostitution.9033 = {
 	}
 }
 #9034 if lose diplo
-succubus_prostitution.9034 = {
+sbs_prostitution.9034 = {
 	type = character_event
-	title = succubus_prostitution.9034.t
-	desc = succubus_prostitution.9034.a.desc
+	title = sbs_prostitution.9034.t
+	desc = sbs_prostitution.9034.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -678,8 +678,8 @@ succubus_prostitution.9034 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9034.a
-		custom_tooltip = succubus_prostitution.9034.a.tt
+		name = sbs_prostitution.9034.a
+		custom_tooltip = sbs_prostitution.9034.a.tt
 		add_gold = 1
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
@@ -690,10 +690,10 @@ succubus_prostitution.9034 = {
 	}
 }
 #9035 if win intrigue
-succubus_prostitution.9035 = {
+sbs_prostitution.9035 = {
 	type = character_event
-	title = succubus_prostitution.9035.t
-	desc = succubus_prostitution.9035.a.desc
+	title = sbs_prostitution.9035.t
+	desc = sbs_prostitution.9035.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -701,12 +701,12 @@ succubus_prostitution.9035 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9035.a
-		custom_tooltip = succubus_prostitution.9035.a.tt
+		name = sbs_prostitution.9035.a
+		custom_tooltip = sbs_prostitution.9035.a.tt
 		add_gold = 5
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -718,10 +718,10 @@ succubus_prostitution.9035 = {
 	}
 }
 #9036 if lose intrigue
-succubus_prostitution.9036 = {
+sbs_prostitution.9036 = {
 	type = character_event
-	title = succubus_prostitution.9036.t
-	desc = succubus_prostitution.9036.a.desc
+	title = sbs_prostitution.9036.t
+	desc = sbs_prostitution.9036.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -729,8 +729,8 @@ succubus_prostitution.9036 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9036.a
-		custom_tooltip = succubus_prostitution.9036.a.tt
+		name = sbs_prostitution.9036.a
+		custom_tooltip = sbs_prostitution.9036.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = pussy_cum days = 10 }
 			add_character_flag = { flag = face_cum days = 10 }
@@ -741,10 +741,10 @@ succubus_prostitution.9036 = {
 }
 
 #noble woman
-succubus_prostitution.9040 = {
+sbs_prostitution.9040 = {
 	type = character_event
-	title = succubus_prostitution.9040.t
-	desc = succubus_prostitution.9040.a.desc
+	title = sbs_prostitution.9040.t
+	desc = sbs_prostitution.9040.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -753,30 +753,30 @@ succubus_prostitution.9040 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9040.a
-		custom_tooltip = succubus_prostitution.9040.a.tt
+		name = sbs_prostitution.9040.a
+		custom_tooltip = sbs_prostitution.9040.a.tt
 		hidden_effect = {
 			random_list = {
-				1 = { trigger_event = succubus_prostitution.9041 }
-				1 = { trigger_event = succubus_prostitution.9042 }
-				1 = { trigger_event = succubus_prostitution.9043 }
-				1 = { trigger_event = succubus_prostitution.9044 }
-				1 = { trigger_event = succubus_prostitution.9045 }
-				1 = { trigger_event = succubus_prostitution.9046 }
+				1 = { trigger_event = sbs_prostitution.9041 }
+				1 = { trigger_event = sbs_prostitution.9042 }
+				1 = { trigger_event = sbs_prostitution.9043 }
+				1 = { trigger_event = sbs_prostitution.9044 }
+				1 = { trigger_event = sbs_prostitution.9045 }
+				1 = { trigger_event = sbs_prostitution.9046 }
 			}
 		}
 	}
 	#
 	option = {
-		name = succubus_prostitution.9040.b
-		custom_tooltip = succubus_prostitution.9040.b.tt
+		name = sbs_prostitution.9040.b
+		custom_tooltip = sbs_prostitution.9040.b.tt
 	}
 }
 
-succubus_prostitution.9041 = {
+sbs_prostitution.9041 = {
 	type = character_event
-	title = succubus_prostitution.9041.t
-	desc = succubus_prostitution.9041.a.desc
+	title = sbs_prostitution.9041.t
+	desc = sbs_prostitution.9041.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -784,12 +784,12 @@ succubus_prostitution.9041 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9041.a
-		custom_tooltip = succubus_prostitution.9041.a.tt
+		name = sbs_prostitution.9041.a
+		custom_tooltip = sbs_prostitution.9041.a.tt
 		add_gold = 1
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -797,10 +797,10 @@ succubus_prostitution.9041 = {
 	}
 }
 
-succubus_prostitution.9042 = {
+sbs_prostitution.9042 = {
 	type = character_event
-	title = succubus_prostitution.9042.t
-	desc = succubus_prostitution.9042.a.desc
+	title = sbs_prostitution.9042.t
+	desc = sbs_prostitution.9042.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -808,12 +808,12 @@ succubus_prostitution.9042 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9042.a
-		custom_tooltip = succubus_prostitution.9042.a.tt
+		name = sbs_prostitution.9042.a
+		custom_tooltip = sbs_prostitution.9042.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -821,10 +821,10 @@ succubus_prostitution.9042 = {
 	}
 }
 
-succubus_prostitution.9043 = {
+sbs_prostitution.9043 = {
 	type = character_event
-	title = succubus_prostitution.9043.t
-	desc = succubus_prostitution.9043.a.desc
+	title = sbs_prostitution.9043.t
+	desc = sbs_prostitution.9043.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -832,12 +832,12 @@ succubus_prostitution.9043 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9043.a
-		custom_tooltip = succubus_prostitution.9043.a.tt
+		name = sbs_prostitution.9043.a
+		custom_tooltip = sbs_prostitution.9043.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -845,10 +845,10 @@ succubus_prostitution.9043 = {
 	}
 }
 #she brought her collection
-succubus_prostitution.9044 = {
+sbs_prostitution.9044 = {
 	type = character_event
-	title = succubus_prostitution.9044.t
-	desc = succubus_prostitution.9044.a.desc
+	title = sbs_prostitution.9044.t
+	desc = sbs_prostitution.9044.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -856,12 +856,12 @@ succubus_prostitution.9044 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9044.a
-		custom_tooltip = succubus_prostitution.9044.a.tt
+		name = sbs_prostitution.9044.a
+		custom_tooltip = sbs_prostitution.9044.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -869,10 +869,10 @@ succubus_prostitution.9044 = {
 	}
 }
 
-succubus_prostitution.9045 = {
+sbs_prostitution.9045 = {
 	type = character_event
-	title = succubus_prostitution.9045.t
-	desc = succubus_prostitution.9045.a.desc
+	title = sbs_prostitution.9045.t
+	desc = sbs_prostitution.9045.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -880,12 +880,12 @@ succubus_prostitution.9045 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9045.a
-		custom_tooltip = succubus_prostitution.9045.a.tt
+		name = sbs_prostitution.9045.a
+		custom_tooltip = sbs_prostitution.9045.a.tt
 		add_gold = 1
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -893,10 +893,10 @@ succubus_prostitution.9045 = {
 	}
 }
 
-succubus_prostitution.9046 = {
+sbs_prostitution.9046 = {
 	type = character_event
-	title = succubus_prostitution.9046.t
-	desc = succubus_prostitution.9046.a.desc
+	title = sbs_prostitution.9046.t
+	desc = sbs_prostitution.9046.a.desc
 	theme = seduction
 	right_portrait = {
 		character = root
@@ -904,12 +904,12 @@ succubus_prostitution.9046 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9046.a
-		custom_tooltip = succubus_prostitution.9046.a.tt
+		name = sbs_prostitution.9046.a
+		custom_tooltip = sbs_prostitution.9046.a.tt
 		add_gold = 2
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -918,10 +918,10 @@ succubus_prostitution.9046 = {
 }
 
 #9200 decide to be a nude waitress
-succubus_prostitution.9200 = {
+sbs_prostitution.9200 = {
 	type = character_event
-	title = succubus_prostitution.9200.t
-	desc = succubus_prostitution.9200.a.desc
+	title = sbs_prostitution.9200.t
+	desc = sbs_prostitution.9200.a.desc
 	theme = realm
 	right_portrait = {
 		character = root
@@ -931,26 +931,26 @@ succubus_prostitution.9200 = {
 	# agree
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9200.a
-		custom_tooltip = succubus_prostitution.9200.a.tt
+		name = sbs_prostitution.9200.a
+		custom_tooltip = sbs_prostitution.9200.a.tt
 		hidden_effect = {
 			random_list = {
-				1 = { trigger_event = succubus_prostitution.9201 }
-				1 = { trigger_event = succubus_prostitution.9202 }
+				1 = { trigger_event = sbs_prostitution.9201 }
+				1 = { trigger_event = sbs_prostitution.9202 }
 			}
 		}
 	}
 	#
 	option = {
-		name = succubus_prostitution.9200.b
-		custom_tooltip = succubus_prostitution.9200.b.tt
+		name = sbs_prostitution.9200.b
+		custom_tooltip = sbs_prostitution.9200.b.tt
 	}
 }
 #50% basic, random tip chance
-succubus_prostitution.9201 = {
+sbs_prostitution.9201 = {
 	type = character_event
-	title = succubus_prostitution.9201.t
-	desc = succubus_prostitution.9201.a.desc
+	title = sbs_prostitution.9201.t
+	desc = sbs_prostitution.9201.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -958,8 +958,8 @@ succubus_prostitution.9201 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9201.a
-		custom_tooltip = succubus_prostitution.9201.a.tt
+		name = sbs_prostitution.9201.a
+		custom_tooltip = sbs_prostitution.9201.a.tt
 		random_list = {
 			1 = { add_gold = 1 }
 			1 = { add_gold = 2 }
@@ -972,10 +972,10 @@ succubus_prostitution.9201 = {
 	}
 }
 #50% being proposed
-succubus_prostitution.9202 = {
+sbs_prostitution.9202 = {
 	type = character_event
-	title = succubus_prostitution.9202.t
-	desc = succubus_prostitution.9202.a.desc
+	title = sbs_prostitution.9202.t
+	desc = sbs_prostitution.9202.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -984,8 +984,8 @@ succubus_prostitution.9202 = {
 	}
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9202.a
-		custom_tooltip = succubus_prostitution.9202.a.tt
+		name = sbs_prostitution.9202.a
+		custom_tooltip = sbs_prostitution.9202.a.tt
 		duel = {
 			skill = intrigue
 			value = 10
@@ -997,10 +997,10 @@ succubus_prostitution.9202 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9202.aw.tt
+					text = sbs_prostitution.9202.aw.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9203
+					trigger_event = sbs_prostitution.9203
 				}
 			}
 			# Failure,
@@ -1011,10 +1011,10 @@ succubus_prostitution.9202 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9202.al.tt
+					text = sbs_prostitution.9202.al.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9204
+					trigger_event = sbs_prostitution.9204
 				}
 			}
 		}
@@ -1022,8 +1022,8 @@ succubus_prostitution.9202 = {
 	#
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9202.b
-		custom_tooltip = succubus_prostitution.9202.b.tt
+		name = sbs_prostitution.9202.b
+		custom_tooltip = sbs_prostitution.9202.b.tt
 		duel = {
 			skill = diplomacy
 			value = 10
@@ -1035,10 +1035,10 @@ succubus_prostitution.9202 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9202.bw.tt
+					text = sbs_prostitution.9202.bw.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9205
+					trigger_event = sbs_prostitution.9205
 				}
 			}
 			# Failure,
@@ -1049,10 +1049,10 @@ succubus_prostitution.9202 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9202.bl.tt
+					text = sbs_prostitution.9202.bl.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9206
+					trigger_event = sbs_prostitution.9206
 				}
 			}
 		}
@@ -1060,8 +1060,8 @@ succubus_prostitution.9202 = {
 	# anal ride him right there...
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9202.c
-		custom_tooltip = succubus_prostitution.9202.c.tt
+		name = sbs_prostitution.9202.c
+		custom_tooltip = sbs_prostitution.9202.c.tt
 		duel = {
 			skill = prowess
 			value = 10
@@ -1073,10 +1073,10 @@ succubus_prostitution.9202 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9202.cw.tt
+					text = sbs_prostitution.9202.cw.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9207
+					trigger_event = sbs_prostitution.9207
 				}
 			}
 			# Failure,
@@ -1087,21 +1087,21 @@ succubus_prostitution.9202 = {
 					min = -49
 				}
 				custom_tooltip = {
-					text = succubus_prostitution.9202.cl.tt
+					text = sbs_prostitution.9202.cl.tt
 				}
 				hidden_effect = {
-					trigger_event = succubus_prostitution.9208
+					trigger_event = sbs_prostitution.9208
 				}
 			}
 		}
 	}
 	#
 	option = {
-		name = succubus_prostitution.9202.d
-		custom_tooltip = succubus_prostitution.9202.d.tt
+		name = sbs_prostitution.9202.d
+		custom_tooltip = sbs_prostitution.9202.d.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = -1
 			}
@@ -1110,10 +1110,10 @@ succubus_prostitution.9202 = {
 	}
 }
 #9203 seduce pay win
-succubus_prostitution.9203 = {
+sbs_prostitution.9203 = {
 	type = character_event
-	title = succubus_prostitution.9203.t
-	desc = succubus_prostitution.9203.a.desc
+	title = sbs_prostitution.9203.t
+	desc = sbs_prostitution.9203.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1121,11 +1121,11 @@ succubus_prostitution.9203 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9203.a
-		custom_tooltip = succubus_prostitution.9203.a.tt
+		name = sbs_prostitution.9203.a
+		custom_tooltip = sbs_prostitution.9203.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1136,10 +1136,10 @@ succubus_prostitution.9203 = {
 	}
 }
 #9204 seduce pay lose
-succubus_prostitution.9204 = {
+sbs_prostitution.9204 = {
 	type = character_event
-	title = succubus_prostitution.9204.t
-	desc = succubus_prostitution.9204.a.desc
+	title = sbs_prostitution.9204.t
+	desc = sbs_prostitution.9204.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1147,8 +1147,8 @@ succubus_prostitution.9204 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9204.a
-		custom_tooltip = succubus_prostitution.9204.a.tt
+		name = sbs_prostitution.9204.a
+		custom_tooltip = sbs_prostitution.9204.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = face_cum days = 10 }
 		}
@@ -1156,10 +1156,10 @@ succubus_prostitution.9204 = {
 	}
 }
 #9205 suck right there win
-succubus_prostitution.9205 = {
+sbs_prostitution.9205 = {
 	type = character_event
-	title = succubus_prostitution.9205.t
-	desc = succubus_prostitution.9205.a.desc
+	title = sbs_prostitution.9205.t
+	desc = sbs_prostitution.9205.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1167,11 +1167,11 @@ succubus_prostitution.9205 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9205.a
-		custom_tooltip = succubus_prostitution.9205.a.tt
+		name = sbs_prostitution.9205.a
+		custom_tooltip = sbs_prostitution.9205.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1181,10 +1181,10 @@ succubus_prostitution.9205 = {
 	}
 }
 #9206 suck right there lose
-succubus_prostitution.9206 = {
+sbs_prostitution.9206 = {
 	type = character_event
-	title = succubus_prostitution.9206.t
-	desc = succubus_prostitution.9206.a.desc
+	title = sbs_prostitution.9206.t
+	desc = sbs_prostitution.9206.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1192,8 +1192,8 @@ succubus_prostitution.9206 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9206.a
-		custom_tooltip = succubus_prostitution.9206.a.tt
+		name = sbs_prostitution.9206.a
+		custom_tooltip = sbs_prostitution.9206.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = face_cum days = 10 }
 		}
@@ -1201,10 +1201,10 @@ succubus_prostitution.9206 = {
 	}
 }
 #9207 anal ride right there on his lap win
-succubus_prostitution.9207 = {
+sbs_prostitution.9207 = {
 	type = character_event
-	title = succubus_prostitution.9207.t
-	desc = succubus_prostitution.9207.a.desc
+	title = sbs_prostitution.9207.t
+	desc = sbs_prostitution.9207.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1212,11 +1212,11 @@ succubus_prostitution.9207 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9207.a
-		custom_tooltip = succubus_prostitution.9207.a.tt
+		name = sbs_prostitution.9207.a
+		custom_tooltip = sbs_prostitution.9207.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1227,10 +1227,10 @@ succubus_prostitution.9207 = {
 	}
 }
 #9208 can't take it, get vaginal fucked, right there lose
-succubus_prostitution.9208 = {
+sbs_prostitution.9208 = {
 	type = character_event
-	title = succubus_prostitution.9208.t
-	desc = succubus_prostitution.9208.a.desc
+	title = sbs_prostitution.9208.t
+	desc = sbs_prostitution.9208.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1238,8 +1238,8 @@ succubus_prostitution.9208 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9208.a
-		custom_tooltip = succubus_prostitution.9208.a.tt
+		name = sbs_prostitution.9208.a
+		custom_tooltip = sbs_prostitution.9208.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = face_cum days = 10 }
 		}
@@ -1248,10 +1248,10 @@ succubus_prostitution.9208 = {
 }
 
 #9220 only decoration aviable
-succubus_prostitution.9220 = {
+sbs_prostitution.9220 = {
 	type = character_event
-	title = succubus_prostitution.9220.t
-	desc = succubus_prostitution.9220.a.desc
+	title = sbs_prostitution.9220.t
+	desc = sbs_prostitution.9220.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1261,27 +1261,27 @@ succubus_prostitution.9220 = {
 	# agree
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9220.a
-		custom_tooltip = succubus_prostitution.9220.a.tt
+		name = sbs_prostitution.9220.a
+		custom_tooltip = sbs_prostitution.9220.a.tt
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = succubus_prostitution.9221 }
-				10 = { trigger_event = succubus_prostitution.9222 }
-				10 = { trigger_event = succubus_prostitution.9223 }
+				10 = { trigger_event = sbs_prostitution.9221 }
+				10 = { trigger_event = sbs_prostitution.9222 }
+				10 = { trigger_event = sbs_prostitution.9223 }
 			}
 		}
 	}
 	#
 	option = {
-		name = succubus_prostitution.9220.b
-		custom_tooltip = succubus_prostitution.9220.b.tt
+		name = sbs_prostitution.9220.b
+		custom_tooltip = sbs_prostitution.9220.b.tt
 	}
 }
 #9221 variant one, Relaxation Longue Decoration, the dildo box
-succubus_prostitution.9221 = {
+sbs_prostitution.9221 = {
 	type = character_event
-	title = succubus_prostitution.9221.t
-	desc = succubus_prostitution.9221.a.desc
+	title = sbs_prostitution.9221.t
+	desc = sbs_prostitution.9221.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1289,11 +1289,11 @@ succubus_prostitution.9221 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9221.a
-		custom_tooltip = succubus_prostitution.9221.a.tt
+		name = sbs_prostitution.9221.a
+		custom_tooltip = sbs_prostitution.9221.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1303,10 +1303,10 @@ succubus_prostitution.9221 = {
 	}
 }
 #9222 variant two, Art Exhibit Decoration, the painting
-succubus_prostitution.9222 = {
+sbs_prostitution.9222 = {
 	type = character_event
-	title = succubus_prostitution.9222.t
-	desc = succubus_prostitution.9222.a.desc
+	title = sbs_prostitution.9222.t
+	desc = sbs_prostitution.9222.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1314,11 +1314,11 @@ succubus_prostitution.9222 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9222.a
-		custom_tooltip = succubus_prostitution.9222.a.tt
+		name = sbs_prostitution.9222.a
+		custom_tooltip = sbs_prostitution.9222.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1327,10 +1327,10 @@ succubus_prostitution.9222 = {
 	}
 }
 #9223 variant three, front door handle
-succubus_prostitution.9223 = {
+sbs_prostitution.9223 = {
 	type = character_event
-	title = succubus_prostitution.9223.t
-	desc = succubus_prostitution.9223.a.desc
+	title = sbs_prostitution.9223.t
+	desc = sbs_prostitution.9223.a.desc
 	theme = host_dinner
 	right_portrait = {
 		character = root
@@ -1338,11 +1338,11 @@ succubus_prostitution.9223 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9223.a
-		custom_tooltip = succubus_prostitution.9223.a.tt
+		name = sbs_prostitution.9223.a
+		custom_tooltip = sbs_prostitution.9223.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = daring
 				value = 1
 			}
@@ -1354,10 +1354,10 @@ succubus_prostitution.9223 = {
 
 
 #9230 rich merchant
-succubus_prostitution.9230 = {
+sbs_prostitution.9230 = {
 	type = character_event
-	title = succubus_prostitution.9230.t
-	desc = succubus_prostitution.9230.a.desc
+	title = sbs_prostitution.9230.t
+	desc = sbs_prostitution.9230.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1367,23 +1367,23 @@ succubus_prostitution.9230 = {
 	# agree
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9230.a
-		custom_tooltip = succubus_prostitution.9230.a.tt
+		name = sbs_prostitution.9230.a
+		custom_tooltip = sbs_prostitution.9230.a.tt
 		hidden_effect = {
-			trigger_event = succubus_prostitution.9231
+			trigger_event = sbs_prostitution.9231
 		}
 	}
 	#
 	option = {
-		name = succubus_prostitution.9230.b
-		custom_tooltip = succubus_prostitution.9230.b.tt
+		name = sbs_prostitution.9230.b
+		custom_tooltip = sbs_prostitution.9230.b.tt
 	}
 }
 #9231  merchant inspecting a line of women
-succubus_prostitution.9231 = {
+sbs_prostitution.9231 = {
 	type = character_event
-	title = succubus_prostitution.9231.t
-	desc = succubus_prostitution.9231.a.desc
+	title = sbs_prostitution.9231.t
+	desc = sbs_prostitution.9231.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1391,22 +1391,22 @@ succubus_prostitution.9231 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9231.a
-		custom_tooltip = succubus_prostitution.9231.a.tt
+		name = sbs_prostitution.9231.a
+		custom_tooltip = sbs_prostitution.9231.a.tt
 		hidden_effect = {
 			random_list = {
-				10 = { trigger_event = succubus_prostitution.9232 }
-				10 = { trigger_event = succubus_prostitution.9232 }
-				10 = { trigger_event = succubus_prostitution.9232 }
+				10 = { trigger_event = sbs_prostitution.9232 }
+				10 = { trigger_event = sbs_prostitution.9232 }
+				10 = { trigger_event = sbs_prostitution.9232 }
 			}
 		}
 	}
 }
 #9232 dildo fucking competition
-succubus_prostitution.9232 = {
+sbs_prostitution.9232 = {
 	type = character_event
-	title = succubus_prostitution.9232.t
-	desc = succubus_prostitution.9232.a.desc
+	title = sbs_prostitution.9232.t
+	desc = sbs_prostitution.9232.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1416,22 +1416,22 @@ succubus_prostitution.9232 = {
 	# work hard
 	option = {
 		ai_chance = { base = 100 }
-		name = succubus_prostitution.9232.a
-		custom_tooltip = succubus_prostitution.9232.a.tt
-		trigger_event = succubus_prostitution.9233
+		name = sbs_prostitution.9232.a
+		custom_tooltip = sbs_prostitution.9232.a.tt
+		trigger_event = sbs_prostitution.9233
 	}
 	# don't try
 	option = {
-		name = succubus_prostitution.9233.a
-		custom_tooltip = succubus_prostitution.9233.a.tt
-		trigger_event = succubus_prostitution.9234
+		name = sbs_prostitution.9233.a
+		custom_tooltip = sbs_prostitution.9233.a.tt
+		trigger_event = sbs_prostitution.9234
 	}
 }
 #9233 if work hard
-succubus_prostitution.9233 = {
+sbs_prostitution.9233 = {
 	type = character_event
-	title = succubus_prostitution.9233.t
-	desc = succubus_prostitution.9233.a.desc
+	title = sbs_prostitution.9233.t
+	desc = sbs_prostitution.9233.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1439,11 +1439,11 @@ succubus_prostitution.9233 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9233.a
-		custom_tooltip = succubus_prostitution.9233.a.tt
+		name = sbs_prostitution.9233.a
+		custom_tooltip = sbs_prostitution.9233.a.tt
 		hidden_effect = {
 			add_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = power
 				value = 1
 			}
@@ -1467,10 +1467,10 @@ succubus_prostitution.9233 = {
 	}
 }
 #9234 if won't try
-succubus_prostitution.9234 = {
+sbs_prostitution.9234 = {
 	type = character_event
-	title = succubus_prostitution.9234.t
-	desc = succubus_prostitution.9234.a.desc
+	title = sbs_prostitution.9234.t
+	desc = sbs_prostitution.9234.a.desc
 	theme = tournament_locale_tavern
 	right_portrait = {
 		character = root
@@ -1478,8 +1478,8 @@ succubus_prostitution.9234 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		name = succubus_prostitution.9234.a
-		custom_tooltip = succubus_prostitution.9234.a.tt
+		name = sbs_prostitution.9234.a
+		custom_tooltip = sbs_prostitution.9234.a.tt
 		hidden_effect = {
 			add_character_flag = { flag = body_cum  days = 10 }
 		}

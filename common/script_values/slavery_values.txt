@@ -338,7 +338,7 @@ carn_slave_price_value = {
 				has_trait = saint
 				has_trait = born_in_the_purple
 				has_trait = consecrated_blood
-				has_trait = lesser_succubus
+				has_trait = sbs_lesser_succubus
 			}
 		}
 		multiply = 2

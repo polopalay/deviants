@@ -7,8 +7,8 @@ spawn_death_korp = {
 	cooldown = { years = 50 }
 	is_shown = {
 		OR = {
-			has_trait = demon
-			has_trait_xp = { trait = succubus track = loyalty value >= 100 }
+			has_trait = sbs_demon
+			has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
 		}
 		is_ruler = yes
 		is_landed = yes
@@ -26,7 +26,7 @@ spawn_death_korp = {
 			uses_supply = 10
 		}
 		add_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = loyalty
 			value = -100
 		}
@@ -36,16 +36,16 @@ spawn_death_korp = {
 }
 
 demon_generals = {
-	desc = demon_generals.desc
+	desc = sbs_demon_generals.desc
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_realm.dds" }
-	confirm_text = demon_generals.c
-	selection_tooltip = demon_generals.t
+	confirm_text = sbs_demon_generals.c
+	selection_tooltip = sbs_demon_generals.t
 	decision_group_type = decisions
 	cooldown = { years = 50 }
 	is_shown = {
 		OR = {
-			has_trait = demon
-			has_trait_xp = { trait = succubus track = loyalty value >= 100 }
+			has_trait = sbs_demon
+			has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
 		}
 		is_ruler = yes
 		is_landed = yes
@@ -59,7 +59,7 @@ demon_generals = {
 		}
 		add_character_modifier = { modifier = succubus_generals years = 13 }
 		add_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = loyalty
 			value = -100
 		}
@@ -79,12 +79,12 @@ become_demon = {
 		is_ai = no
 		is_ruler = yes
 		has_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = corruption
 			value >= 100
 		}
 		has_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = loyalty
 			value >= 100
 		}
@@ -99,8 +99,8 @@ become_demon = {
 				killer = root
 			}
 		}
-		remove_trait = succubus
-		add_trait = demon
+		remove_trait = sbs_succubus
+		add_trait = sbs_demon
 		set_immortal_age = 18
 	}
 	ai_check_interval = 0

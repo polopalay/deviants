@@ -282,7 +282,7 @@ prostitute_price_value = {
 				has_trait = chakravarti
 				has_trait = greatest_of_khans
 				has_trait = paragon
-				has_trait = succubus
+				has_trait = sbs_succubus
 			}
 		}
 		multiply = 2
@@ -296,7 +296,7 @@ prostitute_price_value = {
 				has_trait = saint
 				has_trait = born_in_the_purple
 				has_trait = consecrated_blood
-				has_trait = lesser_succubus
+				has_trait = sbs_lesser_succubus
 			}
 		}
 		multiply = 2
@@ -368,7 +368,7 @@ prostitute_tips_value = {
 				has_trait = chakravarti
 				has_trait = greatest_of_khans
 				has_trait = paragon
-				has_trait = succubus
+				has_trait = sbs_succubus
 			}
 		}
 		add = 10
@@ -381,7 +381,7 @@ prostitute_tips_value = {
 				has_trait = saint
 				has_trait = born_in_the_purple
 				has_trait = consecrated_blood
-				has_trait = lesser_succubus
+				has_trait = sbs_lesser_succubus
 			}
 		}
 		add = 5

@@ -3,23 +3,23 @@ quarterly_playable_pulse = {
 		is_adult = yes
 		is_female = yes
 		OR = {
-			has_trait = succubus
-			has_trait = lesser_succubus
+			has_trait = sbs_succubus
+			has_trait = sbs_lesser_succubus
 		}
 		is_ruler = yes
 		is_landed = yes
 		is_imprisoned = no
 	}
 	random_on_action = {
-		100 = succubus_devil_on_action
+		100 = sbs_devil_on_action
 	}
 }
 
-succubus_devil_on_action = {
+sbs_devil_on_action = {
 	random_events = {
 		chance_to_happen = 10
-		50 = succubus_devil.1410 # gremlin fuck
-		25 = succubus_devil.1300 # special dream
+		50 = sbs_devil.1410 # gremlin fuck
+		25 = sbs_devil.1300 # special dream
 	}
 }
 
@@ -27,31 +27,31 @@ on_travel_plan_movement = {
 	trigger = {
 		is_adult = yes
 		is_female = yes
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_ruler = yes
 		age >= 18
 	}
 	on_actions = {
 		delay = { days = { 2 4 } }
-		succubus_travel_events
+		sbs_travel_events
 	}
 }
 
-succubus_travel_events = {
+sbs_travel_events = {
 	random_events = {
 		chance_to_happen = 5
-		100 = succubus_travel.0100 # spot a bound woman having a witch trial
-		100 = succubus_travel.0101
-		100 = succubus_travel.0102
-		100 = succubus_travel.0103
-		100 = succubus_travel.0104
-		100 = succubus_travel.0105
-		100 = succubus_travel.0106
-		100 = succubus_travel.0107
-		100 = succubus_travel.0108
-		100 = succubus_travel.0110 # bandit attack if female
-		100 = succubus_travel.0200 # spot woman fucking a dog
-		50 = succubus_travel.0300 # giant man if lustful female
-		100 = succubus_travel.1000 # lustful female only perverted inn
+		100 = sbs_travel.0100 # spot a bound woman having a witch trial
+		100 = sbs_travel.0101
+		100 = sbs_travel.0102
+		100 = sbs_travel.0103
+		100 = sbs_travel.0104
+		100 = sbs_travel.0105
+		100 = sbs_travel.0106
+		100 = sbs_travel.0107
+		100 = sbs_travel.0108
+		100 = sbs_travel.0110 # bandit attack if female
+		100 = sbs_travel.0200 # spot woman fucking a dog
+		50 = sbs_travel.0300 # giant man if lustful female
+		100 = sbs_travel.1000 # lustful female only perverted inn
 	}
 }

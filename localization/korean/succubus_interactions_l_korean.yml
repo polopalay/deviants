@@ -26,8 +26,8 @@
   succubus_rumor_interaction: "소문 퍼뜨리기"
   succubus_rumor_interaction.desc: "[recipient.GetShortUIName]에 대한 나쁜 소문을 퍼뜨립니다."
 
-  succubus_switch_body_interaction: "변경"
-  succubus_switch_body_interaction.desc: "[recipient.GetShortUIName]를 플레이합니다."
+  sbs_switch_body_interaction: "변경"
+  sbs_switch_body_interaction.desc: "[recipient.GetShortUIName]를 플레이합니다."
 
   succubus_create_succubus_interaction: "서큐버스 만들기"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]가 서큐버스가 됩니다."

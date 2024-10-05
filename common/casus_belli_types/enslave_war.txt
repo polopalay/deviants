@@ -6,10 +6,10 @@ enslave_war = {
 		scope:attacker = {
 			OR = {
 				AND = {
-					has_trait_xp = { trait = succubus track = loyalty value >= 50 }
-					has_trait_xp = { trait = succubus track = corruption value >= 50 }
+					has_trait_xp = { trait = sbs_succubus track = loyalty value >= 50 }
+					has_trait_xp = { trait = sbs_succubus track = corruption value >= 50 }
 				}
-				has_trait_xp = { trait = lesser_succubus value >= 50 }
+				has_trait_xp = { trait = sbs_lesser_succubus value >= 50 }
 			}
 		}
 	}
@@ -18,9 +18,9 @@ enslave_war = {
 		scope:defender = {
 			is_ruler = yes
 			NOR = {
-				has_trait = demon
-				has_trait = succubus
-				has_trait = lesser_succubus
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
 			}
 			any_courtier = { count > 0 }
 			faith = {
@@ -74,7 +74,7 @@ enslave_war = {
 	}
 
 	on_white_peace = {
-		scope:attacker = { 
+		scope:attacker = {
 			show_pow_release_message_effect = yes
 		}
 	}

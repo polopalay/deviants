@@ -30,7 +30,7 @@ is_valid_construction_alchemy1_trigger = {
 			}
 		}
 		has_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = loyalty
 			value >= 33
 		}
@@ -45,7 +45,7 @@ is_valid_construction_alchemy2_trigger = {
 			}
 		}
 		has_trait_xp = {
-			trait = succubus
+			trait = sbs_succubus
 			track = corruption
 			value >= 50
 		}
@@ -61,12 +61,12 @@ is_valid_construction_alchemy3_trigger = {
 		}
 		AND = {
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = corruption
 				value >= 50
 			}
 			has_trait_xp = {
-				trait = succubus
+				trait = sbs_succubus
 				track = loyalty
 				value >= 66
 			}

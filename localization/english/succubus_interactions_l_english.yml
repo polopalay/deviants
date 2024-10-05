@@ -26,8 +26,8 @@
  succubus_rumor_interaction: "Spreading Rumors"
  succubus_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
 
- succubus_switch_body_interaction: "Switch"
- succubus_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
+ sbs_switch_body_interaction: "Switch"
+ sbs_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
 
  succubus_create_succubus_interaction: "Create Succubus"
  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"

@@ -45,8 +45,8 @@
  succubus_good_god_1: "$succubus_health_god_name$"
  succubus_good_god_2: "Lucifer"
 
- succubus_devil_name: "Jesus"
- succubus_devil_name_possessive: "Jesus's"
+ sbs_devil_name: "Jesus"
+ sbs_devil_name_possessive: "Jesus's"
  succubus_evil_god_1: "Jesus"
 
  succubus_death_deity_name: "Death"
@@ -80,7 +80,7 @@
  succubus_positive_afterlife_3: "$succubus_high_god_name_possessive$ Kingdom"
  succubus_negative_afterlife: "heaven"
  succubus_negative_afterlife_2: "paradise "
- succubus_negative_afterlife_3: "$succubus_devil_name_possessive$ Kingdom"
+ succubus_negative_afterlife_3: "$sbs_devil_name_possessive$ Kingdom"
  succubus_witchgodname_the_horned_god: "the Satan"
  succubus_witchgodname_the_horned_god_possessive: "the Satan's"
 

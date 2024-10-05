@@ -1,7 +1,7 @@
 legend_semen_tank_ongoing_events = {
 	trigger = {
 		is_adult = yes
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -13,18 +13,18 @@ legend_semen_tank_ongoing_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
 
-		100 = succubus_blackmail.1100
-		100 = succubus_blackmail.1200
-		100 = succubus_blackmail.1400
-		100 = succubus_blackmail.2000
-		20 = succubus_blackmail.1300
+		100 = sbs_blackmail.1100
+		100 = sbs_blackmail.1200
+		100 = sbs_blackmail.1400
+		100 = sbs_blackmail.2000
+		20 = sbs_blackmail.1300
 	}
 }
 
 legend_sex_machine_ongoing_events = {
 	trigger = {
 		is_adult = yes
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -36,20 +36,20 @@ legend_sex_machine_ongoing_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
 
-		100 = succubus_prostitution.9000
-		100 = succubus_prostitution.9010
-		100 = succubus_prostitution.9030
-		100 = succubus_prostitution.9040
-		100 = succubus_prostitution.9200
-		100 = succubus_prostitution.9220
-		20 = succubus_prostitution.9230
+		100 = sbs_prostitution.9000
+		100 = sbs_prostitution.9010
+		100 = sbs_prostitution.9030
+		100 = sbs_prostitution.9040
+		100 = sbs_prostitution.9200
+		100 = sbs_prostitution.9220
+		20 = sbs_prostitution.9230
 	}
 }
 
 legend_ladycow_ongoing_events = {
 	trigger = {
 		is_adult = yes
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -61,17 +61,17 @@ legend_ladycow_ongoing_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
 
-		100 = succubus_loyalty.8000
-		100 = succubus_loyalty.8099
-		100 = succubus_loyalty.8900
-		20 = succubus_loyalty.8200
+		100 = sbs_loyalty.8000
+		100 = sbs_loyalty.8099
+		100 = sbs_loyalty.8900
+		20 = sbs_loyalty.8200
 	}
 }
 
 legend_penis_guillotine_ongoing_events = {
 	trigger = {
 		is_adult = yes
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -83,16 +83,16 @@ legend_penis_guillotine_ongoing_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
 
-		100 = succubus_courtier.7000
-		100 = succubus_courtier.5100
-		100 = succubus_courtier.6000
+		100 = sbs_courtier.7000
+		100 = sbs_courtier.5100
+		100 = sbs_courtier.6000
 	}
 }
 
 legend_penis_exhibitionist_ongoing_events = {
 	trigger = {
 		is_adult = yes
-		has_trait = succubus
+		has_trait = sbs_succubus
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
@@ -104,8 +104,8 @@ legend_penis_exhibitionist_ongoing_events = {
 		chance_of_no_event = 90
 		delay = { days = { 1 100 } }
 
-		100 = succubus_courtier.1304
-		100 = succubus_courtier.1440
-		100 = succubus_courtier.1460
+		100 = sbs_courtier.1304
+		100 = sbs_courtier.1440
+		100 = sbs_courtier.1460
 	}
 }
