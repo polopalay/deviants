@@ -706,6 +706,7 @@ succubus_honor_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
+		modifier = { add = -5 scope:demand_conversion = yes }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
 		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }

@@ -356,23 +356,88 @@ deal_with_the_devil = {
 
 	ai_will_do = {
 		base = 1
-		modifier = { add = -5 scope:actor = { has_trait = chaste } }
-		modifier = { add = -5 scope:actor = { has_trait = zealous } }
-		modifier = { add = 1 scope:actor = { has_trait = lustful } }
-		modifier = { add = 1 scope:actor = { has_trait = rakish } }
-		modifier = { add = 1 scope:actor = { has_trait = disfigured } }
-		modifier = { add = 1 scope:actor = { has_treatable_disease_trigger = yes } }
-		modifier = { add = 1 scope:actor = { has_wounds_trigger = yes } }
-		modifier = { add = 1 scope:actor = { has_std_trigger = yes } }
-		modifier = { add = 1 scope:actor = { has_trait = lunatic_1 } }
-		modifier = { add = 1 scope:actor = { has_trait = lunatic_genetic } }
-		modifier = { add = 1 scope:actor = { has_trait = possessed_1 } }
-		modifier = { add = 1 scope:actor = { has_trait = possessed_genetic } }
+		modifier = { add = 1 scope:recipient = { has_trait = hashishiyah } }
+		modifier = { add = 1 scope:recipient = { has_trait = rakish } }
+		modifier = { add = 1 scope:recipient = { has_trait = reclusive } }
+		modifier = { add = 1 scope:recipient = { has_trait = irritable } }
+		modifier = { add = 1 scope:recipient = { has_trait = flagellant } }
+		modifier = { add = 1 scope:recipient = { has_trait = profligate } }
+		modifier = { add = 1 scope:recipient = { has_trait = improvident } }
+		modifier = { add = 1 scope:recipient = { has_trait = contrite } }
+		modifier = { add = 1 scope:recipient = { has_trait = comfort_eater } }
+		modifier = { add = 1 scope:recipient = { has_trait = inappetetic } }
+		modifier = { add = 1 scope:recipient = { has_trait = depressed_1 } }
+		modifier = { add = 1 scope:recipient = { has_trait = depressed_genetic } }
+		modifier = { add = 1 scope:recipient = { has_trait = lunatic_1 } }
+		modifier = { add = 1 scope:recipient = { has_trait = lunatic_genetic } }
+		modifier = { add = 1 scope:recipient = { has_trait = possessed_1 } }
+		modifier = { add = 1 scope:recipient = { has_trait = possessed_genetic } }
+		modifier = { add = 1 scope:recipient = { has_trait = scarred } }
+		modifier = { add = 1 scope:recipient = { has_trait = sickly } }
+		modifier = { add = 1 scope:recipient = { has_trait = wounded_1 } }
+		modifier = { add = 1 scope:recipient = { has_trait = ill } }
+		modifier = { add = 2 scope:recipient = { has_trait = one_eyed } }
+		modifier = { add = 2 scope:recipient = { has_trait = maimed } }
+		modifier = { add = 2 scope:recipient = { has_trait = one_legged } }
+		modifier = { add = 2 scope:recipient = { has_trait = blind } }
+		modifier = { add = 2 scope:recipient = { has_trait = infirm } }
+		modifier = { add = 2 scope:recipient = { has_trait = wounded_2 } }
+		modifier = { add = 2 scope:recipient = { has_trait = gout_ridden } }
+		modifier = { add = 2 scope:recipient = { has_trait = great_pox } }
+		modifier = { add = 2 scope:recipient = { has_trait = smallpox } }
+		modifier = { add = 2 scope:recipient = { has_trait = lovers_pox } }
+		modifier = { add = 3 scope:recipient = { has_trait = eunuch } }
+		modifier = { add = 3 scope:recipient = { has_trait = disfigured } }
+		modifier = { add = 3 scope:recipient = { has_trait = incapable } }
+		modifier = { add = 3 scope:recipient = { has_trait = leper } }
+		modifier = { add = 3 scope:recipient = { has_trait = wounded_3 } }
+		modifier = { add = 3 scope:recipient = { has_trait = pneumonic } }
+		modifier = { add = 3 scope:recipient = { has_trait = typhus } }
+		modifier = { add = 3 scope:recipient = { has_trait = consumption } }
+		modifier = { add = 3 scope:recipient = { has_trait = cancer } }
+		modifier = { add = 3 scope:recipient = { has_trait = bubonic_plague } }
+		modifier = { add = 3 scope:recipient = { has_trait = bubonic_plague } }
+		modifier = { add = 3 scope:recipient = { has_trait = dysentery } }
+		modifier = { add = 3 scope:recipient = { has_trait = ergotism } }
+		modifier = { add = 1 scope:recipient = { has_trait = albino } }
+		modifier = { add = 1 scope:recipient = { has_trait = lisping } }
+		modifier = { add = 1 scope:recipient = { has_trait = stuttering } }
+		modifier = { add = 1 scope:recipient = { has_trait = giant } }
+		modifier = { add = 1 scope:recipient = { has_trait = scaly } }
+		modifier = { add = 1 scope:recipient = { has_trait = clubfooted } }
+		modifier = { add = 2 scope:recipient = { has_trait = dwarf } }
+		modifier = { add = 1 scope:recipient = { has_trait = hunchbacked } }
+		modifier = { add = 1 scope:recipient = { has_trait = infertile } }
+		modifier = { add = 1 scope:recipient = { has_trait = wheezing } }
+		modifier = { add = 1 scope:recipient = { has_trait = spindly } }
+		modifier = { add = 1 scope:recipient = { has_trait = bleeder } }
+		modifier = { add = 1 scope:recipient = { has_trait = weak } }
+		modifier = { add = 1 scope:recipient = { has_trait = dull } }
+		modifier = { add = 1 scope:recipient = { has_trait = beauty_bad_1 } }
+		modifier = { add = 2 scope:recipient = { has_trait = beauty_bad_2 } }
+		modifier = { add = 3 scope:recipient = { has_trait = beauty_bad_3 } }
+		modifier = { add = 1 scope:recipient = { has_trait = intellect_bad_1 } }
+		modifier = { add = 2 scope:recipient = { has_trait = intellect_bad_2 } }
+		modifier = { add = 3 scope:recipient = { has_trait = intellect_bad_3 } }
+		modifier = { add = 1 scope:recipient = { has_trait = physique_bad_1 } }
+		modifier = { add = 2 scope:recipient = { has_trait = physique_bad_2 } }
+		modifier = { add = 3 scope:recipient = { has_trait = physique_bad_3 } }
+		modifier = { add = 2 scope:recipient = { has_trait = inbred } }
 		modifier = { add = 5 scope:hook = yes }
 		modifier = { add = 5 scope:favor = yes }
-		modifier = { add = 1 scope:demand_conversion = yes scope:actor = { OR = { NOT = { has_trait = zealous } primary_title.tier <= tier_duchy } } }
 		modifier = { add = 1 scope:gold = yes }
-		modifier = { add = 1 scope:small_price = yes }
+		modifier = { add = -1 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -1 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -3 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -1 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -2 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -3 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
+		modifier = { add = 2 scope:small_price = yes scope:recipient = { ai_zeal < very_low_positive_ai_value } }
+		modifier = { add = 1 scope:small_price = yes scope:recipient = { ai_zeal < low_positive_ai_value } }
+		modifier = { add = -1 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -2 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -3 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
 	}
 }
 
@@ -392,6 +457,7 @@ ask_for_become_lesser_succubus = {
 			}
 		}
 		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
 			OR = {
 				has_trait = sbs_demon
 				has_trait = sbs_succubus
@@ -482,6 +548,7 @@ ask_for_become_lesser_succubus = {
 					type = fabrication_hook
 				}
 			}
+			add_character_modifier = { modifier = cast_spell_recetly years = 10 }
 		}
 		scope:secondary_recipient = {
 			death = {
@@ -617,6 +684,7 @@ ask_for_become_succubus = {
 			}
 		}
 		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
 			has_trait = sbs_demon
 		}
 	}
@@ -701,6 +769,7 @@ ask_for_become_succubus = {
 					type = fabrication_hook
 				}
 			}
+			add_character_modifier = { modifier = cast_spell_recetly years = 25 }
 		}
 		scope:secondary_recipient = {
 			death = {

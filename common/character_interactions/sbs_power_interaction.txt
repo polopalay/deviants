@@ -254,7 +254,9 @@ succubus_dealing_with_stress_interaction = {
 		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
 		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
-		modifier = { add = -10 scope:small_price = yes }
+		modifier = { add = -10 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -25 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -50 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
 	}
 	ai_frequency = 12
 	ai_targets = {
@@ -598,6 +600,7 @@ succubus_heal_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
+		modifier = { add = -5 scope:demand_conversion = yes }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
 		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
@@ -605,7 +608,10 @@ succubus_heal_interaction = {
 		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
 		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
-		modifier = { add = -10 scope:small_price = yes }
+		modifier = { add = -5 scope:small_price = yes }
+		modifier = { add = -10 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -25 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -50 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
 	}
 	ai_frequency = 12
 	ai_frequency = 1
@@ -906,6 +912,7 @@ succubus_purify_interaction = {
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
 		modifier = { add = -10 scope:forgive = yes }
+		modifier = { add = -5 scope:demand_conversion = yes }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
 		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
@@ -913,7 +920,10 @@ succubus_purify_interaction = {
 		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
 		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
 		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
-		modifier = { add = -10 scope:small_price = yes }
+		modifier = { add = -5 scope:small_price = yes }
+		modifier = { add = -10 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -25 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -50 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
 	}
 	ai_frequency = 12
 	ai_targets = {
@@ -950,7 +960,6 @@ succubus_child_interaction = {
 	cooldown = { years = 10 }
 	is_shown = {
 		scope:actor = {
-			is_adult = yes
 			OR = {
 				has_trait = sbs_demon
 				AND = {
@@ -961,23 +970,150 @@ succubus_child_interaction = {
 		}
 		scope:recipient = {
 			is_adult = yes
-			is_female = yes
 			age >= 18
 		}
 	}
+	localization_values = {
+		RANSOM_COST = major_gold_value
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+			scope:recipient ?= { gold >= major_gold_value }
+		}
+		flag = gold
+		localization = "RANSOM_GOLD_OPTION"
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
+		is_valid = {
+			scope:recipient = {
+				has_usable_hook = scope:actor
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
+		is_valid = {
+			exists = scope:actor
+			scope:actor= {
+				can_add_hook = {
+					target = scope:recipient
+					type = favor_hook
+				}
+			}
+		}
+		flag = favor
+		localization = "RANSOM_OWE_FAVOR_OPTION"
+	}
+	send_option = {
+		flag = demand_conversion
+		localization = "RELEASE_DEMAND_CONVERSION"
+		is_shown = {
+			NOT = { scope:actor.faith = scope:recipient.faith }
+		}
+		is_valid = {
+			# Cannot ask Religious Heads to convert
+			custom_description = {
+				text = cannot_demand_religious_head_conversion
+				NOT = {
+					AND = {
+						exists = scope:recipient.faith.religious_head
+						scope:recipient.faith.religious_head = scope:recipient
+					}
+				}
+			}
+			# Cannot ask Holy Order Master to convert
+			custom_description = {
+				text = cannot_demand_holy_order_master_conversion
+				NAND = {
+					exists = scope:recipient.faith
+					scope:recipient.faith = {
+						any_faith_holy_order = { leader = scope:recipient }
+					}
+				}
+			}
+		}
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+			scope:recipient.liege = scope:actor
+		}
+		is_valid = {
+			scope:recipient = {
+				has_imprisonment_reason = scope:actor
+			}
+		}
+		flag = forgive
+		localization = forgive_interaction
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+			scope:recipient = {
+				OR = {
+					NOT = {
+						has_trait = sbs_lesser_succubus
+						has_trait = sbs_succubus
+						has_trait = sbs_demon
+					}
+					NOR = {
+						has_trait = lustful
+						has_trait = deviant
+						has_trait = witch
+						any_secret = { secret_type = secret_deviant }
+						any_secret = { secret_type = secret_witch }
+					}
+				}
+			}
+		}
+		flag = small_price
+		localization = "small_price"
+	}
+	send_option = {
+		flag = female
+		localization = "Female"
+	}
+	send_options_exclusive = no
 	on_accept = {
 		scope:recipient = {
 			if = {
-				limit = { patrilinear_marriage = yes }
+				limit = {
+					scope:hook = yes
+					has_hook = scope:actor
+				}
+				use_hook = scope:actor
+			}
+			if = {
+				limit = { scope:gold = yes }
+				pay_short_term_gold = { target = scope:actor gold = major_gold_value }
+			}
+			if = {
+				limit = { scope:demand_conversion = yes }
+				set_character_faith_with_conversion = scope:actor.faith
+			}
+			if = {
+				limit = { scope:small_price = yes }
+				mind_break_personality = yes
+			}
+			if = {
+				limit = { scope:female = yes }
 				create_character = {
 					age = 0
 					location = primary_spouse.capital_province
 					mother = scope:recipient
 					father = primary_spouse
-					dynasty_house = primary_spouse.house
-					culture = primary_spouse.culture
-					faith = primary_spouse.faith
-					gender_female_chance = 50
+					dynasty_house = house
+					culture = culture
+					faith = faith
+					gender_female_chance = 100
 					trait = deviant_blood
 				}
 			}
@@ -990,7 +1126,7 @@ succubus_child_interaction = {
 					dynasty_house = house
 					culture = culture
 					faith = faith
-					gender_female_chance = 50
+					gender_female_chance = 0
 					trait = deviant_blood
 				}
 			}
@@ -1000,7 +1136,65 @@ succubus_child_interaction = {
 				limit = { has_trait = sbs_succubus }
 				add_trait_xp = { trait = sbs_succubus track = power value = -50 }
 			}
+			if = {
+				limit = { scope:favor = yes }
+				add_hook = {
+					target = scope:recipient
+					type = favor_hook
+				}
+			}
 		}
 	}
-	auto_accept = yes
+	auto_accept = { scope:actor = scope:recipient }
+	ai_accept = {
+		base = 5
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.1
+		}
+		modifier = { add = 25 scope:recipient = { any_child = { count = 0 } } }
+		modifier = { add = -20 scope:female = yes scope:recipient = { faith = { has_doctrine = doctrine_gender_male_dominated } } }
+		modifier = { add = -20 scope:female = no scope:recipient = { faith = { has_doctrine = doctrine_gender_female_dominated } } }
+		modifier = { add = -10 scope:gold = yes }
+		modifier = { add = -10 scope:hook = yes }
+		modifier = { add = -10 scope:favor = yes }
+		modifier = { add = -10 scope:forgive = yes }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
+		modifier = { add = -50 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
+		modifier = { add = -5 scope:demand_conversion = yes }
+		modifier = { add = -5 scope:demand_conversion = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -10 scope:demand_conversion = yes scope:recipient = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = -25 scope:demand_conversion = yes scope:recipient = { ai_zeal > dominant_positive_ai_value } }
+		modifier = { add = -5 scope:small_price = yes }
+		modifier = { add = -10 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -25 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -50 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+	}
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = self
+		ai_recipients = children
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 50 scope:recipient = scope:actor }
+		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 5 scope:actor = { gold <= 0 } }
+		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
+		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
+		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+	}
 }
