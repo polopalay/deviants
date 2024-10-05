@@ -17,9 +17,6 @@
   succubus_mind_break_interaction: "心灵崩溃"
   succubus_mind_break_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
 
-  succubus_create_lesser_succubus_interaction: "创造小魅魔"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]将变成小魅魔"
-
   succubus_child_interaction: "创造孩子"
   succubus_child_interaction.desc: "创造一个是[recipient.GetShortUIName]的孩子"
 
@@ -29,8 +26,13 @@
   sbs_switch_body_interaction: "切换"
   sbs_switch_body_interaction.desc: "扮演[recipient.GetShortUIName]"
 
+  succubus_create_lesser_succubus_interaction: "创造小魅魔"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]将变成小魅魔"
+  recipient_secondary_succubus_create_lesser_succubus_interaction: "选择一个"
+
   succubus_create_succubus_interaction: "创造魅魔"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]将变成魅魔"
+  recipient_secondary_succubus_create_succubus_interaction: "选择一个"
 
   succubus_absorb_interaction: "吸收"
   succubus_absorb_interaction.desc: "将[recipient.GetShortUIName]的力量吸收到忠诚中"

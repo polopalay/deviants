@@ -27,10 +27,6 @@
   trait_track_sbs_lesser_succubus: "Macht"
   trait_track_sbs_lesser_succubus_desc: "Sie dient als billige Prostituierte und bedient Männer, um deren Samen zu erhalten."
 
-  trait_deviant_virgin: "Geile Jungfrau"
-  deviant_virgin_desc: "[ROOT.GetCharacter.GetName] ist die Hure des Teufels."
-  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] ist die Hure des Teufels."
-
   trait_deviant_blood: "Teufelsblut"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName] ist ein Kind des Teufels."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] ist ein Kind des Teufels."

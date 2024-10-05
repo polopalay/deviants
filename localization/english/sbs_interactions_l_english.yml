@@ -14,11 +14,8 @@
  succubus_imprison_interaction: "Imprison"
  succubus_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
 
- succubus_mind_break_interaction: "Mind Break"
- succubus_mind_break_interaction.desc: "Causing [recipient.GetShortUIName] to be haunted by lustful thoughts"
- 
- succubus_create_lesser_succubus_interaction: "Create Lesser Succubus"
- succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
+ succubus_mind_break_interaction: "The Devil's gift"
+ succubus_mind_break_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
 
  succubus_child_interaction: "Create Child"
  succubus_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"
@@ -28,9 +25,14 @@
 
  sbs_switch_body_interaction: "Switch"
  sbs_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
+ 
+ succubus_create_lesser_succubus_interaction: "Create Lesser Succubus"
+ succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
+ recipient_secondary_succubus_create_lesser_succubus_interaction: "Choose one"
 
  succubus_create_succubus_interaction: "Create Succubus"
  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
+ recipient_secondary_succubus_create_succubus_interaction: "Choose one"
 
  succubus_absorb_interaction: "Absorb"
  succubus_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"

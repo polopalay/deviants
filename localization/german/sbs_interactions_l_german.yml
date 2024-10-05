@@ -17,9 +17,6 @@
   succubus_mind_break_interaction: "Geistige Zerrüttung"
   succubus_mind_break_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
 
-  succubus_create_lesser_succubus_interaction: "Einen niederen Succubus erschaffen"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem niederen Succubus"
-
   succubus_child_interaction: "Ein Kind erschaffen"
   succubus_child_interaction.desc: "Ein Kind erschaffen, das das Kind von [recipient.GetShortUIName] sein wird"
 
@@ -29,8 +26,13 @@
   sbs_switch_body_interaction: "Wechseln"
   sbs_switch_body_interaction.desc: "Inkarniere [recipient.GetShortUIName]"
 
+  succubus_create_lesser_succubus_interaction: "Einen niederen Succubus erschaffen"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem niederen Succubus"
+  recipient_secondary_succubus_create_lesser_succubus_interaction: "Wählen eine"
+
   succubus_create_succubus_interaction: "Einen Succubus erschaffen"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem Succubus"
+  recipient_secondary_succubus_create_succubus_interaction: "Wählen eine"
 
   succubus_absorb_interaction: "Absorbieren"
   succubus_absorb_interaction.desc: "Absorbieren Sie die Macht von [recipient.GetShortUIName] in Loyalität"

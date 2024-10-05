@@ -21,7 +21,6 @@
 			OR = {
 				has_trait = sbs_succubus
 				has_trait = sbs_lesser_succubus
-				has_trait = deviant_virgin
 			}
 		}
 	}
@@ -347,7 +346,6 @@ deal_with_the_devil = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
-		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
@@ -467,12 +465,31 @@ ask_for_become_lesser_succubus = {
 
 	is_valid = {
 		scope:actor = {
-			any_prisoner = { count > 0 }
+			OR = {
+				any_prisoner = { count > 0 }
+				any_courtier = {
+					NOT = {
+						is_spouse_of = scope:actor
+						is_close_family_of = scope:actor
+						is_concubine_of = scope:actor
+					}
+				}
+			}
 		}
 	}
 
 	populate_recipient_list = {
 		scope:actor = {
+			every_courtier = {
+				limit = {
+					NOT = { 
+						is_spouse_of = scope:recipient
+						is_close_family_of = scope:recipient
+						is_concubine_of = scope:recipient
+					}
+				}
+				add_to_list = characters
+			}
 			every_prisoner = {
 				add_to_list = characters
 			}
@@ -585,7 +602,6 @@ ask_for_become_lesser_succubus = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
-		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
@@ -682,13 +698,27 @@ ask_for_become_succubus = {
 	}
 	is_valid = {
 		scope:actor = {
-			any_prisoner = { count > 0 }
+			any_prisoner = { count >= 13 }
+			any_courtier = {
+				OR = {
+					is_spouse_of = scope:actor
+					is_close_family_of = scope:actor
+					is_concubine_of = scope:actor
+				}
+			}
 		}
 	}
 
 	populate_recipient_list = {
 		scope:actor = {
-			every_prisoner = {
+			every_courtier = {
+				limit = {
+					OR = {
+						is_spouse_of = scope:actor
+						is_close_family_of = scope:actor
+						is_concubine_of = scope:actor
+					}
+				}
 				add_to_list = characters
 			}
 		}
@@ -752,6 +782,12 @@ ask_for_become_succubus = {
 				}
 				set_character_faith_with_conversion = scope:recipient.faith
 			}
+			every_prisoner = {
+				death = {
+					death_reason = death_execution
+					killer = scope:actor
+				}
+			}
 		}
 		scope:recipient = {
 			if = {
@@ -798,7 +834,6 @@ ask_for_become_succubus = {
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
-		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
@@ -1150,7 +1185,6 @@ succubus_absorb_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = courtiers
-		ai_recipients = prisoners
 		ai_recipients = vassals
 	}
 	ai_potential = { always = yes }
@@ -1170,6 +1204,25 @@ succubus_create_lesser_succubus_interaction = {
 				has_trait = sbs_succubus
 				has_trait = sbs_lesser_succubus
 			}
+			has_trait = lustful
+			OR = {
+				has_trait = deviant
+				any_secret = { secret_type = secret_deviant }
+			}
+			OR = {
+				has_trait = witch
+				any_secret = { secret_type = secret_witch }
+			}
+			OR = {
+				any_prisoner = { count > 0 }
+				any_courtier = {
+					NOT = {
+						is_spouse_of = scope:recipient
+						is_close_family_of = scope:recipient
+						is_concubine_of = scope:recipient
+					}
+				}
+			}
 		}
 		scope:actor = {
 			OR = {
@@ -1181,13 +1234,24 @@ succubus_create_lesser_succubus_interaction = {
 			}
 		}
 	}
+	populate_recipient_list = {
+		scope:recipient = {
+			every_prisoner = { add_to_list = characters }
+			every_courtier = {
+				limit = {
+					NOR = { 
+						is_spouse_of = scope:recipient
+						is_close_family_of = scope:recipient
+						is_concubine_of = scope:recipient
+					}
+				}
+				add_to_list = characters
+			}
+		}
+	}
 	on_accept = {
 		scope:recipient = {
-			if = {
-				limit = { has_trait = deviant_virgin }
-				remove_trait = deviant_virgin
-			}
-			mind_break_personality = yes
+			remove_character_modifier = succubus_buff
 			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
 		}
@@ -1197,8 +1261,43 @@ succubus_create_lesser_succubus_interaction = {
 				add_trait_xp = { trait = sbs_succubus track = corruption value = -25 }
 			}
 		}
+		scope:secondary_recipient = {
+			death = {
+				death_reason = death_execution
+				killer = scope:recipient
+			}
+		}
 	}
-	auto_accept = yes
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+		opinion_modifier = {
+			opinion_target = scope:secondary_recipient
+			who = scope:recipient
+			multiplier = -0.1
+		}
+	}
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = prisoners
+		ai_recipients = courtiers
+		ai_recipients = scripted_relations
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
+		modifier = { add = 100 scope:recipient = { is_ai = no } }
+		modifier = { add = -19 scope:recipient = { has_trait = sbs_succubus } }
+	}
 }
 
 succubus_create_succubus_interaction = {
@@ -1209,29 +1308,79 @@ succubus_create_succubus_interaction = {
 	cooldown = { years = 50 }
 	is_shown = {
 		scope:recipient = {
-			NOR = {
-				has_trait = sbs_demon
-				has_trait = sbs_succubus
+			has_trait = sbs_lesser_succubus
+			any_prisoner = { count >= 13 }
+			any_courtier = {
+				NOT = {
+					is_spouse_of = scope:recipient
+					is_close_family_of = scope:recipient
+					is_concubine_of = scope:recipient
+				}
 			}
 		}
 		scope:actor = {
 			has_trait = sbs_demon
 		}
 	}
+	populate_recipient_list = {
+		scope:recipient = {
+			every_courtier = {
+				limit = {
+					OR = { 
+						is_spouse_of = scope:recipient
+						is_close_family_of = scope:recipient
+						is_concubine_of = scope:recipient
+					}
+				}
+				add_to_list = characters
+			}
+		}
+	}
 	on_accept = {
 		scope:recipient = {
-			if = {
-				limit = { has_trait = deviant_virgin }
-				remove_trait = deviant_virgin
+			every_prisoner = {
+				death = {
+					death_reason = death_execution
+					killer = scope:recipient
+				}
 			}
-			if = {
-				limit = { has_trait = sbs_lesser_succubus }
-				remove_trait = sbs_lesser_succubus
-			}
-			mind_break_personality = yes
 			add_trait = sbs_succubus
 			set_immortal_age = 18
 		}
+		scope:secondary_recipient = {
+			death = {
+				death_reason = death_execution
+				killer = scope:recipient
+			}	
+		}
 	}
-	auto_accept = yes
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+		opinion_modifier = {
+			opinion_target = scope:secondary_recipient
+			who = scope:recipient
+			multiplier = -0.1
+		}
+	}
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = prisoners
+		ai_recipients = courtiers
+		ai_recipients = scripted_relations
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
+		modifier = { add = 100 scope:recipient = { is_ai = no } }
+	}
 }

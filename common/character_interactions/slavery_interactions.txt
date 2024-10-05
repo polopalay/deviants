@@ -190,11 +190,13 @@ carn_buy_slave_directly_interaction = {
 		}
 	}
 	ai_targets = {
-		ai_recipients = spouses
-		ai_recipients = family
-		ai_recipients = children
-		ai_recipients = scripted_relations
-		max = 10
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_frequency = 12
@@ -266,6 +268,7 @@ carn_sell_slave_interaction = {
 		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_will_do = {
@@ -342,7 +345,6 @@ carn_free_slave_interaction = {
 		}
 	}
 	ai_targets = {
-		ai_recipients = spouses
 		ai_recipients = family
 		ai_recipients = children
 		ai_recipients = scripted_relations

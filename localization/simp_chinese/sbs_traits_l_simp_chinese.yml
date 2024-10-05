@@ -27,10 +27,6 @@
   trait_track_sbs_lesser_succubus: "力量"
   trait_track_sbs_lesser_succubus_desc: "她作为廉价的妓女为男人提供服务，以获取他们的精液。"
 
-  trait_deviant_virgin: "好色的处女"
-  deviant_virgin_desc: "[ROOT.GetCharacter.GetName]是魔鬼的妓女。"
-  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName]是魔鬼的妓女。"
-
   trait_deviant_blood: "恶魔之血"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName]是魔鬼的孩子。"
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName]是魔鬼的孩子。"

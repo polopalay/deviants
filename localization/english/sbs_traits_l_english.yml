@@ -25,10 +25,6 @@
  trait_track_sbs_lesser_succubus: "Power"
  trait_track_sbs_lesser_succubus_desc: "She serves as a cheap prostitute, serving men in order to obtain their semen"
 
- trait_deviant_virgin: "Horny Virgin"
- deviant_virgin_desc: "[ROOT.GetCharacter.GetName] is the devil's whore"
- deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] is the devil's whore"
-
  trait_deviant_blood: "Devil Blood"
  deviant_blood_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"

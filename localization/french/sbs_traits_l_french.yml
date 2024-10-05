@@ -27,10 +27,6 @@
   trait_track_sbs_lesser_succubus: "Pouvoir"
   trait_track_sbs_lesser_succubus_desc: "Elle sert de prostituée bon marché, servant les hommes pour obtenir leur semence."
 
-  trait_deviant_virgin: "Vierge Perversa"
-  deviant_virgin_desc: "[ROOT.GetCharacter.GetName] est la prostituée du diable."
-  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] est la prostituée du diable."
-
   trait_deviant_blood: "Sang du Diable"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName] est un enfant du diable."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] est un enfant du diable."

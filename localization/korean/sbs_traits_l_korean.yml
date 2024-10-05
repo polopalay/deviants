@@ -27,10 +27,6 @@
   trait_track_sbs_lesser_succubus: "힘"
   trait_track_sbs_lesser_succubus_desc: "그녀는 저렴한 매춘부로서 남성들에게 그들의 정액을 얻기 위해 봉사한다."
 
-  trait_deviant_virgin: "음탕한 처녀"
-  deviant_virgin_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 창녀이다."
-  deviant_virgin_character_desc: "[ROOT.GetCharacter.Get.Name]은(는) 악마의 창녀이다."
-
   trait_deviant_blood: "악마의 피"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 자식이다."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 자식이다."

@@ -288,14 +288,11 @@ succubus_outfit = {
 		}
 	}
 	succubus_11 = {
-		traits = { sbs_succubus demon }
+		traits = { sbs_succubus }
 		trigger = {
-			OR = {
-				has_trait = sbs_demon
-				AND = {
-					has_trait_xp = { trait = sbs_succubus track = corruption value = 100 }
-					has_trait_xp = { trait = sbs_succubus track = loyalty value = 100 }
-				}
+			AND = {
+				has_trait_xp = { trait = sbs_succubus track = corruption value = 100 }
+				has_trait_xp = { trait = sbs_succubus track = loyalty value = 100 }
 			}
 		}
 		dna_modifiers = {
@@ -366,8 +363,8 @@ succubus_outfit = {
 			}
 		}
 	}
-	virgin = {
-		traits = { deviant_virgin }
+	sbs_demon = {
+		traits = { sbs_demon }
 		dna_modifiers = {
 			human = {
 				morph = {

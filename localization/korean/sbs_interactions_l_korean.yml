@@ -17,9 +17,6 @@
   succubus_mind_break_interaction: "정신 파괴"
   succubus_mind_break_interaction.desc: "[recipient.GetShortUIName]에게 음탕한 생각에 시달리게 합니다."
 
-  succubus_create_lesser_succubus_interaction: "하위 서큐버스 만들기"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]가 하위 서큐버스가 됩니다."
-
   succubus_child_interaction: "아이 만들기"
   succubus_child_interaction.desc: "[recipient.GetShortUIName]의 자녀를 만듭니다."
 
@@ -29,8 +26,13 @@
   sbs_switch_body_interaction: "변경"
   sbs_switch_body_interaction.desc: "[recipient.GetShortUIName]를 플레이합니다."
 
+  succubus_create_lesser_succubus_interaction: "하위 서큐버스 만들기"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]가 하위 서큐버스가 됩니다."
+  recipient_secondary_succubus_create_lesser_succubus_interaction: "하나 선택하기"
+
   succubus_create_succubus_interaction: "서큐버스 만들기"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]가 서큐버스가 됩니다."
+  recipient_secondary_succubus_create_succubus_interaction: "하나 선택하기"
 
   succubus_add_courtier_interaction: "법원에 추가"
   succubus_add_courtier_interaction.desc: "[recipient.GetShortUIName]를 당신의 법원에 추가합니다."

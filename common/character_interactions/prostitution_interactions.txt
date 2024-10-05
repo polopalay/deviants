@@ -181,7 +181,6 @@
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
-		ai_recipients = realm_characters
 		max = 5
 	}
 	ai_will_do = {
@@ -197,7 +196,6 @@
 		modifier = { add = 1 scope:actor = { has_trait = profligate } }
 		modifier = { add = 1 scope:actor = { has_trait = seducer } }
 		modifier = { add = 1 scope:actor = { has_trait = paranoid } }
-		modifier = { add = -20 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = -5 scope:recipient = { has_trait = beauty_bad_1 } }
 		modifier = { add = -10 scope:recipient = { has_trait = beauty_bad_2 } }
 		modifier = { add = -20 scope:recipient = { has_trait = beauty_bad_3 } }
@@ -234,7 +232,7 @@
 		modifier = { add = -10 scope:recipient = { has_trait = disfigured } }
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
 		modifier = { add = 5 scope:actor = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } scope:use_contraception = yes }
-		modifier = { add = -25 scope:actor = { is_close_family_of = scope:recipient faith = { NOT = { has_doctrine = tenet_divine_marriage } } } }
+		modifier = { add = -20 scope:actor = { is_close_family_of = scope:recipient faith = { NOT = { has_doctrine = tenet_divine_marriage } } } }
 	}
 }
 
@@ -446,12 +444,13 @@ offer_prostitute_interaction = {
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
-		ai_recipients = realm_characters
 		max = 5
 	}
 
 	ai_will_do = {
 		base = 20
+		modifier = { add = 50 scope:actor = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
+		modifier = { add = 25 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
 		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
 		modifier = { add = 10 scope:actor = { has_trait = lustful } }
 		modifier = { add = 10 scope:actor = { has_trait = greedy } }
@@ -459,8 +458,6 @@ offer_prostitute_interaction = {
 		modifier = { add = -5 scope:actor = { has_trait = chaste } }
 		modifier = { add = -10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
 		modifier = { add = -8 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
-		modifier = { add = 25 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
-		modifier = { add = 50 scope:actor = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
 		modifier = { add = -50 scope:recipient = { has_std_trigger = yes } }
 		modifier = {
 			add = 5
@@ -609,6 +606,8 @@ carn_force_start_prostitution_interaction = {
 		modifier = { add = -20 scope:recipient = { has_trait = chaste } }
 		modifier = { add = -20 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
 		modifier = { add = -10 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_shunned has_doctrine = doctrine_adultery_men_shunned } } } }
+		modifier = { add = -10 scope:recipient = { faith = { has_doctrine = doctrine_gender_male_dominated } is_male = yes } }
+		modifier = { add = -10 scope:recipient = { faith = { has_doctrine = doctrine_gender_female_dominated } is_female = yes } }
 		modifier = { add = -10 NOT = { scope:recipient = scope:actor } }
 		modifier = { add = 50 scope:forgive = yes }
 		modifier = { add = 50 scope:hook = yes }
@@ -623,6 +622,7 @@ carn_force_start_prostitution_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
+		modifier = { add = 100 scope:actor = scope:recipient scope:recipient = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
 		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
 		modifier = { add = 15 scope:actor = { has_trait = lustful } scope:recipient = scope:actor }
 		modifier = { add = 15 scope:actor = { has_trait = rakish } scope:recipient = scope:actor }
@@ -636,13 +636,13 @@ carn_force_start_prostitution_interaction = {
 		modifier = { add = 5 scope:forgive = yes scope:actor = { is_attracted_to_gender_of = scope:recipient } }
 		modifier = { add = 5 scope:hook = yes scope:actor = { is_attracted_to_gender_of = scope:recipient } }
 		modifier = { add = 5 scope:recipient = { age <= 18 } }
-		modifier = { add = 5 scope:recipient = { age <= 24 } }
+		modifier = { add = 5 scope:recipient = { age <= 20 } }
 		modifier = { add = -30 scope:actor = { faith = { has_doctrine = doctrine_gender_male_dominated } } scope:recipient = { is_male = yes } }
 		modifier = { add = -30 scope:actor = { faith = { has_doctrine = doctrine_gender_female_dominated } } scope:recipient = { is_female = yes } }
 		modifier = { add = -20 scope:recipient = { is_male = yes } }
-		modifier = { add = -30 scope:recipient = { is_spouse_of = scope:actor } }
-		modifier = { add = -30 scope:recipient = { is_close_family_of = scope:actor } }
-		modifier = { add = -30 scope:recipient = { is_extended_family_of = scope:actor } }
+		modifier = { add = -25 scope:recipient = { is_spouse_of = scope:actor } }
+		modifier = { add = -25 scope:recipient = { is_close_family_of = scope:actor } NOT = { scope:recipient = scope:actor } }
+		modifier = { add = -25 scope:recipient = { is_extended_family_of = scope:actor } }
 		modifier = { add = -10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
 		modifier = { add = -15 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
 		modifier = { add = -25 scope:actor = { has_trait = chaste } scope:actor = scope:recipient }
@@ -656,7 +656,6 @@ carn_force_start_prostitution_interaction = {
 		modifier = { add = -10 scope:recipient = { has_trait = one_eyed } }
 		modifier = { add = -10 scope:recipient = { has_trait = one_legged } }
 		modifier = { add = -10 scope:recipient = { has_trait = maimed } }
-		modifier = { add = 100 scope:actor = scope:recipient scope:recipient = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
 		modifier = { add = 1 scope:hook = yes }
 		modifier = { add = 1 scope:forgive = yes }
 	}

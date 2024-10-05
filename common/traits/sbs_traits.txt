@@ -25,7 +25,7 @@ sbs_demon = {
 			desc = sbs_demon_character_desc
 		}
 	}
-	opposites = { lesser_succubus deviant_virgin incapable }
+	opposites = { lesser_succubus incapable }
 
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
@@ -100,7 +100,7 @@ sbs_succubus = {
 		}
 	}
 
-	opposites = { demon lesser_succubus deviant_virgin chaste incapable }
+	opposites = { demon lesser_succubus chaste incapable }
 
 	general_opinion = 5
 	monthly_lifestyle_xp_gain_mult = -1000
@@ -227,7 +227,7 @@ sbs_lesser_succubus = {
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
-	opposites = { demon succubus deviant_virgin chaste incapable }
+	opposites = { demon succubus chaste incapable }
 
 	name = {
 		first_valid = {
@@ -301,32 +301,6 @@ sbs_lesser_succubus = {
 		}
 	}
 	ruler_designer_cost = 50
-}
-
-deviant_virgin = {
-	category = fame
-	icon = virgin.dds
-	minimum_age = 16
-	shown_in_ruler_designer = no
-	ai_greed = dominant_positive_ai_value
-	ai_zeal = dominant_negative_ai_value
-	opposites = { demon succubus lesser_succubus chaste }
-
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = deviant_virgin_desc
-			}
-			desc = deviant_virgin_character_desc
-		}
-	}
-
-	attraction_opinion = 25
-	fertility = 1
-	ruler_designer_cost = 10
 }
 
 deviant_blood = {

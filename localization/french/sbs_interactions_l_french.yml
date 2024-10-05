@@ -17,9 +17,6 @@
   succubus_mind_break_interaction: "Rupture Mentale"
   succubus_mind_break_interaction.desc: "Amène [recipient.GetShortUIName] à être hanté par des pensées lubriques"
 
-  succubus_create_lesser_succubus_interaction: "Créer une Succube Inférieure"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] deviendra une Succube Inférieure"
-
   succubus_child_interaction: "Créer un Enfant"
   succubus_child_interaction.desc: "Créer un enfant qui sera l'enfant de [recipient.GetShortUIName]"
 
@@ -29,8 +26,13 @@
   sbs_switch_body_interaction: "Changer"
   sbs_switch_body_interaction.desc: "Incarnez [recipient.GetShortUIName]"
 
+  succubus_create_lesser_succubus_interaction: "Créer une Succube Inférieure"
+  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] deviendra une Succube Inférieure"
+  recipient_secondary_succubus_create_lesser_succubus_interaction: "Choisir un"
+
   succubus_create_succubus_interaction: "Créer une Succube"
   succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] deviendra une Succube"
+  recipient_secondary_succubus_create_succubus_interaction: "Choisir un"
 
   succubus_absorb_interaction: "Absorber"
   succubus_absorb_interaction.desc: "Absorbez la puissance de [recipient.GetShortUIName] en loyauté"

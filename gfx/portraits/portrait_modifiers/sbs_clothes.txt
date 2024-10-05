@@ -19,7 +19,6 @@ prostitute_clothes = {
 				NOR = {
 					has_trait = sbs_succubus
 					has_trait = sbs_lesser_succubus
-					has_trait = deviant_virgin
 					has_trait = sbs_demon
 				}
 			}

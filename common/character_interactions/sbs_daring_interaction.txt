@@ -718,21 +718,17 @@ succubus_honor_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = self
-		ai_recipients = children
+		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
-		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
 		modifier = { add = 100 scope:recipient = scope:actor }
-		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
@@ -746,7 +742,7 @@ succubus_mind_break_interaction = {
 	desc = succubus_mind_break_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
-	cooldown = { years = 5 }
+	cooldown = { years = 4 }
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = {
@@ -756,12 +752,12 @@ succubus_mind_break_interaction = {
 			}
 		}
 		scope:recipient = {
-			age >= 16
-			age <= 30
 			NOR = {
-				has_trait = sbs_succubus
-				has_trait = sbs_lesser_succubus
-				has_trait = deviant_virgin
+				has_trait = lustful
+				has_trait = deviant
+				has_trait = witch
+				any_secret = { secret_type = secret_deviant }
+				any_secret = { secret_type = secret_witch }
 			}
 		}
 	}
@@ -773,31 +769,43 @@ succubus_mind_break_interaction = {
 			}
 		}
 		scope:recipient = {
-			mind_break_personality = yes
-			add_trait = deviant_virgin
-			add_trait = lifestyle_prostitute
-			add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
-			add_character_flag = carn_wants_to_be_a_slave
+			hidden_effect = {
+				mind_break_personality = yes
+				if = {
+					limit = { is_ai = yes }
+					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+					add_character_flag = carn_wants_to_be_a_slave
+				}
+			}
+			add_character_modifier = succubus_buff
 		}
 	}
-	auto_accept = yes
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.1
+		}
+		modifier = { add = -2 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -5 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -10 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+	}
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
+		ai_recipients = prisoners
 		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
-		ai_recipients = realm_characters
+		ai_recipients = scripted_relations
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 10 scope:recipient = { age <= 18 } }
-		modifier = { add = 10 scope:recipient = { age <= 24 } }
-		modifier = { add = 20 scope:recipient = { is_imprisoned_by = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
+		modifier = { add = 10 scope:recipient = { is_imprisoned_by = scope:actor } }
+		modifier = { add = 100 scope:recipient = { is_ai = no } }
 	}
 }

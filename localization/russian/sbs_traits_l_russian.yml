@@ -27,10 +27,6 @@
   trait_track_sbs_lesser_succubus: "Сила"
   trait_track_sbs_lesser_succubus_desc: "Она служит дешевой проституткой, обслуживая мужчин для получения их семени."
 
-  trait_deviant_virgin: "Похотливая девственница"
-  deviant_virgin_desc: "[ROOT.GetCharacter.GetName] — это проститутка дьявола."
-  deviant_virgin_character_desc: "[ROOT.GetCharacter.GetName] — это проститутка дьявола."
-
   trait_deviant_blood: "Кровь дьявола"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName] — дитя дьявола."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] — дитя дьявола."

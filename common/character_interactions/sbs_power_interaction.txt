@@ -261,21 +261,16 @@ succubus_dealing_with_stress_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = self
-		ai_recipients = children
+		ai_recipients = family
 		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
-		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
 		modifier = { add = 100 scope:recipient = scope:actor }
-		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
@@ -617,21 +612,16 @@ succubus_heal_interaction = {
 	ai_frequency = 1
 	ai_targets = {
 		ai_recipients = self
-		ai_recipients = children
+		ai_recipients = family
 		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
-		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
 		modifier = { add = 100 scope:recipient = scope:actor }
-		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
@@ -928,21 +918,16 @@ succubus_purify_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = self
-		ai_recipients = children
+		ai_recipients = family
 		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
-		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 50 scope:recipient = scope:actor }
-		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 100 scope:recipient = scope:actor }
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
@@ -1176,21 +1161,16 @@ succubus_child_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = self
-		ai_recipients = children
+		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = guests
-		ai_recipients = courtiers
-		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
-		modifier = { add = 5 scope:recipient = scope:actor scope:recipient = { any_child = { count = 0 } } }
+		modifier = { add = 5 scope:recipient = scope:actor scope:recipient = { any_child = { is_alive = yes count = 0 } } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
