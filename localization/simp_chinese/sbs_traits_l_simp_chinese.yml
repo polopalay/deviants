@@ -24,8 +24,8 @@
   lesser_sbs_succubus_desc: "不论内心如何，没有人认为[ROOT.GetCharacter.GetName]有什么奇怪的地方。"
   lesser_sbs_succubus_character_desc: "大多数人见过它，所有人听说过。 [ROOT.GetCharacter.GetNamePossessive]的行为在道德上是堕落的。人们以对待普通街头妓女的鄙视来谈论她。"
 
-  trait_track_lesser_succubus: "力量"
-  trait_track_lesser_sbs_succubus_desc: "她作为廉价的妓女为男人提供服务，以获取他们的精液。"
+  trait_track_sbs_lesser_succubus: "力量"
+  trait_track_sbs_lesser_succubus_desc: "她作为廉价的妓女为男人提供服务，以获取他们的精液。"
 
   trait_deviant_virgin: "好色的处女"
   deviant_virgin_desc: "[ROOT.GetCharacter.GetName]是魔鬼的妓女。"

@@ -873,13 +873,14 @@ succubus_absorb_interaction = {
 	send_option = {
 		is_shown = {
 			scope:actor  = { has_trait = sbs_lesser_succubus }
-			}
+		}
 			flag = lesser_succubus
-			localization = "trait_track_lesser_succubus"
+			localization = "trait_track_sbs_lesser_succubus"
 	}
 	send_option = {
 		is_shown = {
 			OR = {
+			scope:actor  = { has_trait = sbs_succubus }
 				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value < 10 } }
 				scope:recipient = { has_trait = sbs_demon }
 			}
@@ -889,6 +890,7 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
+			scope:actor  = { has_trait = sbs_succubus }
 			OR = {
 				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = daring value < 10 } }
 				scope:recipient = { has_trait = sbs_demon }
@@ -899,6 +901,7 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
+			scope:actor  = { has_trait = sbs_succubus }
 			OR = {
 				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = loyalty value < 1 } }
 				scope:recipient = { has_trait = sbs_demon }
@@ -909,6 +912,7 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
+			scope:actor  = { has_trait = sbs_succubus }
 			OR = {
 				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = corruption value < 1 } }
 				scope:recipient = { has_trait = sbs_demon }

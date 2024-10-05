@@ -24,8 +24,8 @@
   lesser_sbs_succubus_desc: "Unabhängig von dem, was innen ist, denkt niemand, dass an [ROOT.GetCharacter.GetName] etwas seltsam ist."
   lesser_sbs_succubus_character_desc: "Die meisten haben es gesehen, alle haben davon gehört. [ROOT.GetCharacter.GetNamePossessive] Verhalten ist moralisch verdorben. Sie wird mit der gleichen Verachtung angesprochen, wie man über eine gewöhnliche Straßenprostituierte spricht."
   
-  trait_track_lesser_succubus: "Macht"
-  trait_track_lesser_sbs_succubus_desc: "Sie dient als billige Prostituierte und bedient Männer, um deren Samen zu erhalten."
+  trait_track_sbs_lesser_succubus: "Macht"
+  trait_track_sbs_lesser_succubus_desc: "Sie dient als billige Prostituierte und bedient Männer, um deren Samen zu erhalten."
 
   trait_deviant_virgin: "Geile Jungfrau"
   deviant_virgin_desc: "[ROOT.GetCharacter.GetName] ist die Hure des Teufels."
