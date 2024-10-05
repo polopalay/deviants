@@ -879,8 +879,8 @@ succubus_absorb_interaction = {
 	}
 	send_option = {
 		is_shown = {
-			OR = {
 			scope:actor  = { has_trait = sbs_succubus }
+			OR = {
 				scope:recipient  = { has_trait_xp = { trait = sbs_succubus track = power value < 10 } }
 				scope:recipient = { has_trait = sbs_demon }
 			}
