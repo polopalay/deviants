@@ -453,18 +453,15 @@ ask_for_become_lesser_succubus = {
 				has_trait = sbs_succubus
 				has_trait = sbs_lesser_succubus
 			}
-		}
-		scope:recipient = {
-			NOT = { has_character_modifier = cast_spell_recetly }
+			has_trait = lustful
 			OR = {
-				has_trait = sbs_demon
-				has_trait = sbs_succubus
+				has_trait = deviant
+				any_secret = { secret_type = secret_deviant }
 			}
-		}
-	}
-
-	is_valid = {
-		scope:actor = {
+			ON = {
+				has_trait = witch
+				any_secret = { secret_type = secret_witch }
+			}
 			OR = {
 				any_prisoner = { count > 0 }
 				any_courtier = {
@@ -474,6 +471,13 @@ ask_for_become_lesser_succubus = {
 						is_concubine_of = scope:actor
 					}
 				}
+			}
+		}
+		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
+			OR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
 			}
 		}
 	}
@@ -540,6 +544,7 @@ ask_for_become_lesser_succubus = {
 
 	on_accept = {
 		scope:actor = {
+			remove_character_modifier = succubus_buff
 			mind_break_personality = yes
 			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
@@ -686,18 +691,6 @@ ask_for_become_succubus = {
 				trait = sbs_lesser_succubus
 				value >= 100
 			}
-			NOR = {
-				has_trait = sbs_demon
-				has_trait = sbs_succubus
-			}
-		}
-		scope:recipient = {
-			NOT = { has_character_modifier = cast_spell_recetly }
-			has_trait = sbs_demon
-		}
-	}
-	is_valid = {
-		scope:actor = {
 			any_prisoner = { count >= 13 }
 			any_courtier = {
 				OR = {
@@ -706,6 +699,10 @@ ask_for_become_succubus = {
 					is_concubine_of = scope:actor
 				}
 			}
+		}
+		scope:recipient = {
+			NOT = { has_character_modifier = cast_spell_recetly }
+			has_trait = sbs_demon
 		}
 	}
 
@@ -1308,7 +1305,10 @@ succubus_create_succubus_interaction = {
 	cooldown = { years = 50 }
 	is_shown = {
 		scope:recipient = {
-			has_trait = sbs_lesser_succubus
+			has_trait_xp = {
+				trait = sbs_lesser_succubus
+				value >= 100
+			}
 			any_prisoner = { count >= 13 }
 			any_courtier = {
 				NOT = {
