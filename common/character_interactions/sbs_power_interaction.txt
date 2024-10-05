@@ -1089,31 +1089,30 @@ succubus_child_interaction = {
 				mind_break_personality = yes
 			}
 			if = {
-				limit = { scope:female = yes }
-				create_character = {
-					age = 0
-					location = primary_spouse.capital_province
-					mother = scope:recipient
-					father = primary_spouse
-					dynasty_house = house
-					culture = culture
-					faith = faith
-					gender_female_chance = 100
-					trait = deviant_blood
+				limit = { is_female = yes }
+				save_scope_as = mother
+				if = {
+					limit = { exists = primary_spouse }
+					primary_spouse = { save_scope_as = father }
 				}
 			}
 			else = {
-				create_character = {
-					age = 0
-					location = capital_province
-					mother = scope:recipient
-					father = primary_spouse
-					dynasty_house = house
-					culture = culture
-					faith = faith
-					gender_female_chance = 0
-					trait = deviant_blood
+				save_scope_as = father
+				if = {
+					limit = { exists = primary_spouse }
+					primary_spouse = { save_scope_as = mother }
 				}
+			}
+			create_character = {
+				age = 0
+				location = capital_province
+				mother = scope:mother
+				father = scope:father
+				dynasty_house = house
+				culture = culture
+				faith = faith
+				gender_female_chance = { value = 0 if = { limit = { scope:female = yes } add = 100 } }
+				trait = deviant_blood
 			}
 		}
 		scope:actor = {
