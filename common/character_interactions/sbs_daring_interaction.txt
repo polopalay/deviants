@@ -752,12 +752,16 @@ succubus_mind_break_interaction = {
 			}
 		}
 		scope:recipient = {
-			NOR = {
-				has_trait = lustful
-				has_trait = deviant
-				has_trait = witch
-				any_secret = { secret_type = secret_deviant }
-				any_secret = { secret_type = secret_witch }
+			OR = {
+				NOT = { has_trait = lustful }
+				NOR = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+				NOR = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
 			}
 		}
 	}
