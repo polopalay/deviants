@@ -64,14 +64,14 @@
   succubus_honor_interaction: "移除不光彩的特质"
   succubus_honor_interaction.desc: "从[recipient.GetShortUIName]移除不光彩的特质"
 
-  deal_with_the_devil: "与魔鬼交易"
-  deal_with_the_devil.desc: "与魔鬼达成协议，以 \"小 \"代价获得你想要的一切。"
+  deal_with_the_devil_interaction: "与魔鬼交易"
+  deal_with_the_devil_interaction.desc: "与魔鬼达成协议，以 \"小 \"代价获得你想要的一切。"
   small_price: "小价格"
 
-  ask_for_become_lesser_succubus: "请求成为低级魅魔"
-  ask_for_become_lesser_succubus.desc: "请求魔鬼成为低级魅魔。"
-  recipient_secondary_ask_for_become_lesser_succubus: "选择一个"
+  ask_for_become_lesser_succubus_interaction: "请求成为低级魅魔"
+  ask_for_become_lesser_succubus_interaction.desc: "请求魔鬼成为低级魅魔。"
+  recipient_secondary_ask_for_become_lesser_succubus_interaction: "选择一个"
 
-  ask_for_become_succubus: "请求成为魅魔"
-  ask_for_become_succubus.desc: "请求魔鬼成为魅魔。"
-  recipient_secondary_ask_for_become_succubus: "选择一个"
+  ask_for_become_succubus_interaction: "请求成为魅魔"
+  ask_for_become_succubus_interaction.desc: "请求魔鬼成为魅魔。"
+  recipient_secondary_ask_for_become_succubus_interaction: "选择一个"
