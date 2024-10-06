@@ -1,6 +1,19 @@
 ﻿d_laamp_satan = {
-	color = { 160 0 0 }
+	color = { 150 0 0 }
 	capital = c_jerusalem
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_abandon_warhorse = {
+	color = { 180 0 0 }
+	capital = c_roma
 
 	definite_form = yes
 	landless = yes

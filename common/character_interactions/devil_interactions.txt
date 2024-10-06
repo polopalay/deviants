@@ -9,18 +9,23 @@
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = {
 			is_ai = no
-			OR = {
-				has_trait = sbs_demon
-				has_trait = sbs_succubus
-				has_trait = sbs_lesser_succubus
-			}
 		}
 		scope:recipient = {
 			is_ruler = yes
 			primary_title.tier >= tier_county
-			OR = {
-				has_trait = sbs_succubus
-				has_trait = sbs_lesser_succubus
+		}
+		OR = {
+			AND = {
+				scope:actor = { has_trait = sbs_lesser_succubus }
+				scope:recipient = { has_trait = sbs_lesser_succubus }
+			}
+			AND = {
+				scope:actor = { has_trait = sbs_succubus }
+				scope:recipient = { has_trait = sbs_succubus }
+			}
+			AND = {
+				scope:actor = { has_trait = sbs_demon }
+				scope:recipient = { has_trait = sbs_demon }
 			}
 		}
 	}
@@ -34,7 +39,9 @@ deal_with_the_devil_interaction = {
 	icon = fascinate
 	desc = deal_with_the_devil_interaction.desc
 	category = interaction_category_diplomacy
-	use_diplomatic_range = yes
+	use_diplomatic_range = {
+		scope:actor = { is_ai = yes }
+	}
 	cooldown = { years = 1 }
 
 	is_shown = {
@@ -443,7 +450,9 @@ ask_for_become_lesser_succubus_interaction = {
 	icon = lesser_devil
 	desc = ask_for_become_lesser_succubus_interaction.desc
 	category = interaction_category_diplomacy
-	use_diplomatic_range = yes
+	use_diplomatic_range = {
+		scope:actor = { is_ai = yes }
+	}
 	cooldown = { years = 1 }
 
 	is_shown = {
@@ -453,6 +462,16 @@ ask_for_become_lesser_succubus_interaction = {
 				has_trait = sbs_succubus
 				has_trait = sbs_lesser_succubus
 			}
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
 			has_trait = lustful
 			OR = {
 				has_trait = deviant
@@ -465,13 +484,6 @@ ask_for_become_lesser_succubus_interaction = {
 			OR = {
 				any_prisoner = { count > 0 }
 				any_courtier = { count > 0 }
-			}
-		}
-		scope:recipient = {
-			NOT = { has_character_modifier = cast_spell_recetly }
-			OR = {
-				has_trait = sbs_demon
-				has_trait = sbs_succubus
 			}
 		}
 	}
@@ -672,10 +684,20 @@ ask_for_become_succubus_interaction = {
 	icon = devil
 	desc = ask_for_become_succubus_interaction.desc
 	category = interaction_category_diplomacy
-	use_diplomatic_range = yes
+	use_diplomatic_range = {
+		scope:actor = { is_ai = yes }
+	}
 	cooldown = { years = 5 }
 
 	is_shown = {
+		scope:actor = {
+			has_trait = sbs_lesser_succubus
+		}
+		scope:recipient = {
+			has_trait = sbs_demon
+		}
+	}
+	is_valid = {
 		scope:actor = {
 			has_trait_xp = {
 				trait = sbs_lesser_succubus
@@ -685,14 +707,9 @@ ask_for_become_succubus_interaction = {
 			any_courtier = {
 				OR = {
 					is_spouse_of = scope:actor
-					is_close_family_of = scope:actor
-					is_concubine_of = scope:actor
+					is_close_or_extended_family_of = scope:actor
 				}
 			}
-		}
-		scope:recipient = {
-			NOT = { has_character_modifier = cast_spell_recetly }
-			has_trait = sbs_demon
 		}
 	}
 
@@ -702,8 +719,7 @@ ask_for_become_succubus_interaction = {
 				limit = {
 					OR = {
 						is_spouse_of = scope:actor
-						is_close_family_of = scope:actor
-						is_concubine_of = scope:actor
+						is_close_or_extended_family_of = scope:actor
 					}
 				}
 				add_to_list = characters
@@ -1297,8 +1313,7 @@ succubus_create_succubus_interaction = {
 			any_courtier = {
 				NOT = {
 					is_spouse_of = scope:recipient
-					is_close_family_of = scope:recipient
-					is_concubine_of = scope:recipient
+					is_close_or_extended_family_of = scope:recipient
 				}
 			}
 		}
@@ -1312,8 +1327,7 @@ succubus_create_succubus_interaction = {
 				limit = {
 					OR = {
 						is_spouse_of = scope:recipient
-						is_close_family_of = scope:recipient
-						is_concubine_of = scope:recipient
+						is_close_or_extended_family_of = scope:recipient
 					}
 				}
 				add_to_list = characters

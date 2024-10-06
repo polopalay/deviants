@@ -96,7 +96,13 @@
 		}
 	}
 	if = {
-		limit = { NOT = { has_game_rule = carn_slavery_content_disabled } }
+		limit = { 
+			OR = {
+				has_game_rule = carn_slavery_content_enabled
+				has_game_rule = carn_slavery_content_require_acceptance
+				has_game_rule = carn_slavery_content_consensual_only
+			}
+		}
 		scope:new_owner = {
 			set_relation_slave = scope:new_slave
 		}
@@ -117,7 +123,13 @@ carn_buy_slave_effect = {
 	}
 
 	if = {
-		limit = { NOT = { has_game_rule = carn_slavery_content_disabled } }
+		limit = { 
+			OR = {
+				has_game_rule = carn_slavery_content_enabled
+				has_game_rule = carn_slavery_content_require_acceptance
+				has_game_rule = carn_slavery_content_consensual_only
+			}
+		}
 		scope:slave = {
 			every_relation = {
 				type = slave_owner
@@ -230,7 +242,13 @@ carn_free_slave_effect = {
 		add_trait = former_slave
 	}
 	if = {
-		limit = { NOT = { has_game_rule = carn_slavery_content_disabled } }
+		limit = { 
+			OR = {
+				has_game_rule = carn_slavery_content_enabled
+				has_game_rule = carn_slavery_content_require_acceptance
+				has_game_rule = carn_slavery_content_consensual_only
+			}
+		}
 		scope:slave = {
 			every_relation = {
 				type = slave_owner

@@ -1,5 +1,10 @@
 ﻿666666 = {
-	name = "succubus"
+	name = "trait_sbs_succubus_neutral"
 	culture = "hebrew"
+}
+
+777777 = {
+	name = "trait_sbs_demon"
+	culture = "trojan"
 }
 

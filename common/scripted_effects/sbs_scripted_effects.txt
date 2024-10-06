@@ -206,6 +206,10 @@ mind_break_personality = {
 		limit = { has_trait = greedy }
 		remove_trait = greedy
 	}
+	else_if = {
+		limit = { has_trait = sadistic }
+		add_trait = lustful
+	}
 	if = {
 		limit = { NOT = { has_trait = lustful } }
 		add_trait = lustful
