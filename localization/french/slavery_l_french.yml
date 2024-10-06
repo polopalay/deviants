@@ -1,4 +1,12 @@
 ﻿l_french:
+  slave: "[slave|El]"
+  relation_slave: "Esclave"
+  relation_slave_possessive: "de l'esclave"
+
+  slave_owner: "[Concept('slave_owner', 'maître')|El]"
+  relation_slave_owner: "Maître"
+  relation_slave_owner_possessive: "du maître"
+
   recently_had_sex: "A eu des Relations Sexuelles Récemment"
   recently_had_sex_desc: "Ce personnage a eu des relations sexuelles récemment et n'a pas pu continuer depuis un moment."
   forced_labor: "Travail Forcé"

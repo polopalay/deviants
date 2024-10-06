@@ -1,0 +1,56 @@
+﻿l_spanish:
+  become_demon: "Convertirse en demonio"
+  become_demon.desc: "Como un Súcubo bendecido por Satanás y los príncipes del infierno. Has cumplido todas las condiciones para convertirte en un verdadero demonio, sacrificando 100 vidas humanas para realizar este ritual sagrado."
+  become_demon.c: "Recibir la bendición"
+  become_demon.t: "Iniciar el ritual sagrado"
+
+  spawn_death_korp: "Invocar los Korps de la Muerte"
+  spawn_death_korp.desc: "Las leyendas cuentan de un ejército no muerto del infierno. Sedientos de sangre, valientes e increíblemente poderosos, estas personas pueden luchar contra enemigos que son el doble de su tamaño y aún ganar. Los demonios con la bendición de Satanás pueden usar sus artes secretas para convocar estas legiones mortales."
+  spawn_death_korp.c: "Invocar"
+  spawn_death_korp.t: "Invocar los Korps de la Muerte en tu capital"
+
+  demon_generals: "Convocar Generales Demoníacos"
+  demon_generals.desc: "El semen masculino no solo mejora la fuerza del Súcubo, también transforma gradualmente al Súcubo en criaturas más poderosas. Sin embargo, también pueden sacrificar lo que han recolectado a cambio de poder temporal del infierno, destructivo, poderoso pero temporal. Ten sexo con tantos soldados como sea posible para que tus soldados también puedan recibir la bendición de Satanás."
+  demon_generals.c: "Convocar"
+  demon_generals.t: "Convertir a todos tus caballeros en generales demoníacos"
+
+  masturbate: "Masturbarse"
+  masturbate.desc: "Tu vida ya está llena de estrés, estás buscando algo para aliviarlo. Los consoladores son la forma más segura, puedes disfrutar de la sensualidad sin preocuparte por los rumores sobre ti siendo una puta y una promiscuo."
+  masturbate.t: "Aliviar el estrés"
+  masturbate.c: "Póntelo en tu vagina"
+
+  start_ritual_philosophers_stone_decision: "Iniciar el ritual de la Piedra Filosofal"
+  start_ritual_philosophers_stone_decision.d: "$legend_chapter_rital_start_philosopher_stone$"
+  start_ritual_philosophers_stone_decision.t: "El secreto de la canción popular ha sido revelado, comencemos el ritual"
+  start_ritual_philosophers_stone_decision.c: "Iniciar Ritual"
+  start_ritual_philosophers_stone_decision.e: "El secreto de la canción popular ha sido revelado, comencemos el ritual"
+
+  sacrifice_tensoul_ritual_decision: "Sacrificar 10 almas"
+  sacrifice_tensoul_ritual_decision.d: "$legend_chapter_tensoul_philosopher_stone$"
+  sacrifice_tensoul_ritual_decision.t: "Primer Ritual, 10 Vidas Mortales"
+  sacrifice_tensoul_ritual_decision.c: "Sacrificar 10 almas"
+  sacrifice_tensoul_ritual_decision.e: "Primer Ritual, 10 Vidas Mortales"
+
+  sacrifice_vassal_ritual_decision: "Sacrificar un vasallo"
+  sacrifice_vassal_ritual_decision.d: "$legend_chapter_vassal_philosopher_stone$"
+  sacrifice_vassal_ritual_decision.t: "Segundo Ritual, Sangre de Vasallo"
+  sacrifice_vassal_ritual_decision.c: "Sacrificar un vasallo"
+  sacrifice_vassal_ritual_decision.e: "Segundo Ritual, Sangre de Vasallo"
+
+  sacrifice_homologus_ritual_decision: "Sacrificar otra bruja"
+  sacrifice_homologus_ritual_decision.d: "$legend_chapter_homologous_philosopher_stone$"
+  sacrifice_homologus_ritual_decision.t: "Tercer Ritual, Sangre de Bruja"
+  sacrifice_homologus_ritual_decision.c: "Sacrificar otra bruja"
+  sacrifice_homologus_ritual_decision.e: "Tercer Ritual, Sangre de Bruja"
+
+  sacrifice_family_ritual_decision: "Sacrificar un familiar"
+  sacrifice_family_ritual_decision.d: "$legend_chapter_family_philosopher_stone$"
+  sacrifice_family_ritual_decision.t: "Cuarto Ritual, Sangre Familiar"
+  sacrifice_family_ritual_decision.c: "Sacrificar un familiar"
+  sacrifice_family_ritual_decision.e: "Cuarto Ritual, Sangre Familiar"
+
+  complete_ritual_philosophers_stone_decision: "Ritual de la Piedra Filosofal"
+  complete_ritual_philosophers_stone_decision.d: "$legend_chapter_rital_complete_philosopher_stone$"
+  complete_ritual_philosophers_stone_decision.t: "Completar el ritual de la Piedra Filosofal"
+  complete_ritual_philosophers_stone_decision.c: "Completar Ritual"
+  complete_ritual_philosophers_stone_decision.e: "Completar el ritual de la Piedra Filosofal"

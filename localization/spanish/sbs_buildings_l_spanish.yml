@@ -1,0 +1,40 @@
+﻿l_spanish:
+  building_brothel1: "Habitación Ordinaria"
+  building_brothel1_desc: "Proporcionando servicios sexuales casuales, las prostitutas pueden recibir propinas más generosas de los clientes."
+  building_type_brothel1: "Burdel"
+  building_type_brothel1_desc: "Los burdeles son lugares de negocio donde se realizan actividades sexuales entre clientes y prostitutas."
+
+  building_brothel2: "Habitación de Alto Nivel"
+  building_brothel2_desc: "Proporcionando algunos servicios especiales como sexo en grupo y exhibición."
+  building_type_brothel2_market: "Burdel"
+  building_type_brothel2_desc: "Los burdeles son lugares de negocio donde se realizan actividades sexuales entre clientes y prostitutas."
+
+  building_brothel3: "Habitación Lujuosa"
+  building_brothel3_desc: "Proporcionando todo tipo de servicios sexuales: bestialidad, sadomasoquismo."
+  building_type_brothel3: "Burdel"
+  building_type_brothel3_desc: "Los burdeles son lugares de negocio donde se realizan actividades sexuales entre clientes y prostitutas."
+
+  building_alchemy1: "Taller de Investigación de Magia Negra"
+  building_alchemy1_desc: "Las brujas utilizan la alquimia para aumentar el poder de su magia."
+  building_type_alchemy1: "Taller de Alquimia"
+  building_type_alchemy1_desc: "La inversión financiera en alquimia ayudará a aumentar el poder de los hechizos de la sucubo."
+
+  building_alchemy2: "Taller de Piedra de Bruja"
+  building_alchemy2_desc: "La piedra filosofal sigue siendo algo bastante inalcanzable con su potencial actual. Sin embargo, los alquimistas han investigado otro tipo, la piedra de las brujas que ayuda a interferir en las mentes de otras personas."
+  building_type_alchemy2: "Taller de Alquimia"
+  building_type_alchemy2_desc: "La inversión financiera en alquimia ayudará a aumentar el poder de los hechizos de la sucubo."
+
+  building_alchemy3: "Taller de la Piedra Filosofal"
+  building_alchemy3_desc: "Con la magia de las brujas, el poder de la sucubo y el conocimiento de los alquimistas, se creó la fórmula definitiva para crear la piedra filosofal. Ahora la sucubo tiene la magia más poderosa, interfiriendo con la naturaleza de la vida."
+  building_type_alchemy3: "Taller de Alquimia"
+  building_type_alchemy3_desc: "La inversión financiera en alquimia ayudará a aumentar el poder de los hechizos de la sucubo."
+
+  building_witch_forest: "Bosque de Brujas"
+  building_witch_forest_desc: "La gente ha estado hablando de un bosque encantado donde las brujas van desnudas y realizan rituales mágicos. Cientos de personas han desaparecido aquí, y se han descubierto muchos fenómenos misteriosos alrededor de este bosque."
+  building_type_witch_forest: "Bosque de Brujas"
+  building_type_witch_forest_desc: "El bosque está lleno de cadáveres humanos y animales, que pueden ser los restos de ceremonias de sacrificio."
+
+  building_soul_forge: "Forja de Almas"
+  building_soul_forge_desc: "La sucubo puede usar las almas de los muertos para crear poderosos objetos mágicos."
+  building_type_soul_forge: "Forja de Almas"
+  building_type_soul_forge_desc: "La sucubo puede usar las almas de los muertos para crear poderosos objetos mágicos."

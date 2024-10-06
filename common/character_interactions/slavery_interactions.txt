@@ -179,14 +179,14 @@ carn_buy_slave_directly_interaction = {
 	}
 	populate_recipient_list = {
 		scope:recipient = {
-			save_scope_as = valid_slave
 			every_courtier = { limit = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value } add_to_list = characters }
 		}
 	}
 	on_accept = {
-		scope:actor = {
-			pay_short_term_gold = { target = scope:recipient gold = scope:secondary_recipient.carn_slave_price_value }
-			add_courtier = scope:secondary_recipient
+		carn_buy_slave_effect = {
+			SELLER = scope:recipient
+			BUYER = scope:actor
+			SLAVE = scope:secondary_recipient
 		}
 	}
 	ai_targets = {
@@ -244,9 +244,10 @@ carn_sell_slave_interaction = {
 		}
 	}
 	on_accept = {
-		scope:recipient = {
-			pay_short_term_gold = { target = scope:actor gold = scope:secondary_recipient.carn_slave_price_value }
-			add_courtier = scope:secondary_recipient
+		carn_buy_slave_effect = {
+			SELLER = scope:actor
+			BUYER = scope:recipient
+			SLAVE = scope:secondary_recipient
 		}
 	}
 	ai_accept = {
@@ -258,6 +259,7 @@ carn_sell_slave_interaction = {
 		modifier = { desc = carn_secondary_recipient_is_my_lover_reason scope:secondary_recipient = { has_relation_lover = scope:recipient } add = 50 }
 		modifier = { desc = carn_secondary_recipient_is_my_crush_reason scope:secondary_recipient = { has_relation_crush = scope:recipient } add = 50 }
 		modifier = { desc = carn_secondary_recipient_is_my_soulmate_reason scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = 100 }
+		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_close_or_extended_family_of = scope:recipient } add = 100 }
 	}
 	ai_frequency = 12
 	ai_potential = { always = yes }

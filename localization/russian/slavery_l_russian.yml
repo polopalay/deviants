@@ -1,4 +1,11 @@
 ﻿l_russian:
+  slave: "[slave|E]"
+  relation_slave: "раб"
+  relation_slave_possessive: "раб"
+
+  slave_owner: "[slave_owner|E]"
+  relation_slave_owner: "владлец"
+  relation_slave_owner_possessive: "владлец"
   recently_had_sex: "Недавний секс"
   recently_had_sex_desc: "Этот персонаж недавно имел секс и не мог продолжать в течение некоторого времени."
   forced_labor: "Принудительный труд"

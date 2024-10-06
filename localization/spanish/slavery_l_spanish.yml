@@ -1,0 +1,32 @@
+﻿l_spanish:
+  slave: "[esclavo|E]"
+  relation_slave: "esclavo"
+  relation_slave_possessive: "del esclavo"
+
+  slave_owner: "[dueño_del_esclavo|E]"
+  relation_slave_owner: "dueño"
+  relation_slave_owner_possessive: "del dueño"
+
+  recently_had_sex: "Tuvo sexo recientemente"
+  recently_had_sex_desc: "Este personaje tuvo sexo recientemente y no ha podido continuar durante un tiempo."
+  forced_labor: "Trabajo Forzado"
+  forced_labor_desc: "Este personaje está siendo forzado a trabajar en contra de su voluntad."
+
+  carn_prostitution_crime_opinion: "Conocido [GetTrait('prostituta').GetName( GetNullCharacter )]"
+  prostitute_shunned_opinion: "Conocido [GetTrait('prostituta').GetName( GetNullCharacter )]"
+
+  carn_wants_to_be_your_slave_opinion: "Desea un dueño"
+  carn_enslaved_me_opinion: "Me esclavizó"
+  carn_enslaved_close_family_opinion: "Esclavizó a un familiar cercano"
+  carn_enslaved_close_relation_opinion: "Esclaviza a un amigo"
+  carn_freed_me_from_slavery_opinion: "Me liberó"
+  free_slave_close_family_opinion: "Liberó a un familiar cercano"
+  free_slave_friend_opinion: "Liberó a un amigo"
+  extortion_opinion: "Me extorsionó"
+  forced_labor_opinion: "Trabajo forzado"
+  ordinary_labor_opinion: "Trabajo ordinario"
+
+  enslave_war: "Guerra de Esclavización"
+  enslave_war_victory_desc: "Todas las [courtier|E] femeninas de [defender.GetName] serán [imprisoned|E] por [attacker.GetName]"
+  enslave_war_white_peace_desc: "La guerra es infructuosa"
+  enslave_war_defeat_desc: "[attacker.GetName] debe pagar a [defender.GetName] una indemnización de guerra"

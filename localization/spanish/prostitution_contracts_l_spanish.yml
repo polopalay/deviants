@@ -1,0 +1,15 @@
+﻿l_spanish:
+  request_prostitute_contract: "Solicitar Prostituta"
+  request_prostitute_desc_title: "Contrato de Prostituta"
+  request_prostitute_desc: "Solicitar que una prostituta venga a la ubicación del empleador."
+  request_prostitute_request: "Este [task_contract|E] requiere que lleves a una prostituta a una ubicación. Para satisfacer las necesidades sexuales de [TaskContract.GetEmployer.GetTitledFirstNameNoTooltip], completa el contrato para recibir [gold|E]. La habilidad de la prostituta determinará el éxito del contrato. ¿Estás seguro de que quieres aceptar este contrato?"
+
+  request_orgy_contract: "Solicitar Orgía"
+  request_orgy_desc_title: "Contrato de Orgía"
+  request_orgy_desc: "Solicitar a la prostituta que venga y sirva en la orgía"
+  request_orgy_request: "Este [task_contract|E] requiere que la prostituta sirva al empleador y a todos sus caballeros. La habilidad de la prostituta determinará la calidad del contrato."
+
+  request_harem_contract: "Solicitar Harem"
+  request_harem_desc_title: "Contrato de Harem"
+  request_harem_desc: "Requerir que todas las prostitutas vengan para servicio sexual"
+  request_harem_request: "Este [task_contract|E] requiere que proporciones prostitutas de calidad para el servicio. El número de prostitutas determinará la calidad del contrato."

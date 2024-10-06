@@ -1,4 +1,12 @@
 ﻿l_korean:
+  slave: "[slave|E]"
+  relation_slave: "노예"
+  relation_slave_possessive: "노예의"
+
+  slave_owner: "[slave_owner|E]"
+  relation_slave_owner: "주인"
+  relation_slave_owner_possessive: "주인의"
+
   recently_had_sex: "최근 성관계"
   recently_had_sex_desc: "이 캐릭터는 최근에 성관계를 가졌으며, 잠시 동안 계속할 수 없었습니다."
   forced_labor: "강제 노동"

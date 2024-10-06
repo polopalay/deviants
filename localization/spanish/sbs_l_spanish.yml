@@ -1,0 +1,81 @@
+﻿l_spanish:
+  # Opinions
+  have_sex_opinion: "Tuvo sexo recientemente"
+  be_healed_opinion: "Sanado por magia negra"
+  # Artifacts
+  magic_creation: "$trinket$"
+  magic_creation_miscellaneous: "$trinket$"
+  artifact_magic_creation: "Creación Mágica"
+
+  philosopher_stone: "Piedra Filosofal"
+  philosopher_stone.d: "La Piedra Filosofal es una sustancia alquímica legendaria que se dice capaz de convertir metales básicos en oro o plata, y también actúa como un elixir de vida que otorga inmortalidad."
+
+  master_dildo: "Mi Maestro"
+  master_dildo_desc: "Solo mirarlo hace que las rodillas se debiliten."
+
+  mistress_dildo: "Guardiana Humilde"
+  mistress_dildo_desc: "Solo mirarlo hace que las partes femeninas palpen."
+
+  # Effect
+  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] se acuesta con [had_sex_with_effect_partner.GetShortUIName]"
+
+  # Nicknames
+  nickname_the_bitch: "La Perra"
+  nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es una perra caliente, dispuesta a tener sexo sin pagar."
+ 
+  nickname_the_slut: "La Prostituta"
+  nickname_the_slut_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] declara abiertamente ser una prostituta, para la ira y diversión de los clientes."
+
+  nickname_the_wench: "La Ramera"
+  nickname_the_wench_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es famosa en todo el reino como una ramera."
+
+  nickname_the_whore: "La Prostituta"
+  nickname_the_whore_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] solía ser noble, pero renunció a todo para convertirse en prostituta."
+
+  nickname_the_semen_tank: "El Tanque de Semen"
+  nickname_the_semen_tank_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] tiene una fuerte pasión por el semen."
+
+  nickname_the_penis_guillotine: "La Guillotina de Penes"
+  nickname_the_penis_guillotine_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] hace el amor en cualquier lugar, en cualquier momento, con cualquiera."
+
+  nickname_the_sex_machine: "La Máquina del Sexo"
+  nickname_the_sex_machine_desc: "Extractor de Semen, Cortadora de Penes, todos estos títulos no son suficientes para describir el talento de [CHARACTER.GetHerHis|U] en el sexo."
+
+  nickname_the_ladycow: "La Vaca Dama"
+  nickname_the_ladycow_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es la prostituta vaca del ejército de [CHARACTER.GetHerHis|U]. Mi honor y dignidad fueron pisoteados por mis propios soldados."
+
+  nickname_the_exhibitionist: "El Exhibicionista"
+  nickname_the_exhibitionist_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es famosa por [CHARACTER.GetHerHis|U] exhibicionismo, sexo público y micción pública."
+
+  nickname_the_demon_queen: "La Reina Demonio"
+  nickname_the_demon_queen_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es una criatura del infierno que traerá las bendiciones del mal al mundo."
+
+  nickname_the_demon_king: "El Rey Demonio"
+  nickname_the_demon_king_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es una criatura del infierno que traerá las bendiciones del mal al mundo."
+
+  nickname_the_devil_creation: "Criaturas Demoníacas"
+  nickname_the_devil_creation_desc: "Niños nacidos del poder de los demonios, destinados a traer caos y destrucción al mundo."
+
+  # Titles
+  succubus: "Súcubo"
+  d_laamp_satan: "Los Demonios de Satanás"
+
+  # Men at Arms
+  succubus_dark_amry: "Ejército Oscuro"
+  succubus_dark_amry_flavor: "Ejército Oscuro"
+  succubus_death_korps: "Cuerpos de la Muerte"
+  succubus_death_korps_flavor: "Cuerpos de la Muerte"
+  succubus_zombie: "Zombi"
+  succubus_zombie_flavor: "Zombi"
+  succubus_skeleton: "Esqueleto"
+  succubus_skeleton_flavor: "Esqueleto"
+
+  # Modifiers
+  succubus_buff: "Bendición del Diablo"
+  succubus_buff_desc: "Esta persona ha sido bendecida por el Súcubo."
+
+  succubus_generals: "General Demonio"
+  succubus_generals_desc: "Los guerreros demoníacos son convocados para servir a la amante del diablo."
+
+  cast_spell_recetly: "Magia Usada Recientemente"
+  cast_spell_recetly_desc: "Magia utilizada recientemente, no puede ser usada por un periodo de tiempo."

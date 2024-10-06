@@ -1,0 +1,14 @@
+﻿l_spanish:
+  trait_slave: "Esclavo"
+  trait_slave_desc: "Este personaje es propiedad de otra persona, reconocido por la ley como menos que un ser humano."
+  trait_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] es propiedad de otra persona, reconocido por la ley como menos que un ser humano."
+
+  trait_former_slave: "Exesclavo"
+  trait_former_slave_desc: "Este personaje es un exesclavo que ha escapado de la esclavitud y se ha convertido en una persona libre."
+  trait_former_slave_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] es un exesclavo que ha escapado de la esclavitud y se ha convertido en una persona libre."
+
+  trait_lifestyle_prostitute: "Prostituta"
+  trait_lifestyle_prostitute_desc: "Este personaje vende su cuerpo por dinero."
+  trait_lifestyle_prostitute_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] está en el negocio de servir sexualmente a los clientes por monedas."
+  trait_track_lifestyle_prostitute: "Prostituta"
+  trait_track_lifestyle_prostitute_desc: "Una vida de venta de sexo"

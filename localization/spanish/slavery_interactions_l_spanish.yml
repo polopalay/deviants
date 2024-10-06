@@ -1,0 +1,33 @@
+﻿l_spanish:
+  carn_enslave_interaction: "Esclavizar"
+  carn_enslave_interaction.desc: "Convierte a [recipient.GetShortUINameNoTooltip] en tu esclavo."
+  carn_wants_to_be_your_slave: "Quiere que seas su dueño: $VALUE|=+0$"
+  carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] es un [noble|E]: $VALUE|=+0$"
+  carn_enslave_you_have_no_reason: "No tienes un [execute_reason|E]: $VALUE|=+0$"
+
+  carn_buy_slave_directly_interaction: "Comprar Esclavo"
+  carn_buy_slave_directly_interaction_desc: "Compra un esclavo por [gold|E]."
+  recipient_secondary_carn_buy_slave_directly_interaction: "Esclavo"
+
+  carn_sell_slave_interaction: "Vender Esclavo"
+  carn_sell_slave_interaction_desc: "Vende a [recipient.GetShortUINameNoTooltip] en el mercado de esclavos por #high [gold_i]#!"
+  recipient_secondary_carn_sell_slave_interaction: "Comprador"
+  carn_buyer_not_enough_gold_for_slave_price_tooltip: "Paga #high [gold_i]#!"
+  carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] es mi [recipient.Custom('KnightCulture')]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U] es mi [councillor|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_friend_reason: "[secondary_recipient.GetShortUIName|U] es mi [friend|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_lover_reason: "[secondary_recipient.GetShortUIName|U] es mi [lover|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_crush_reason: "[secondary_recipient.GetShortUIName|U] es mi [crush|E]: $VALUE|=+0$"
+  carn_secondary_recipient_is_my_soulmate_reason: "[secondary_recipient.GetShortUIName|U] es mi [soulmate|E]: $VALUE|=+0$"
+
+  carn_free_slave_interaction: "Liberar Esclavo"
+  carn_free_slave_interaction.desc: "Libera a [recipient.GetShortUINameNoTooltip] de la esclavitud."
+
+  forced_labor_interaction: "Trabajo Forzado"
+  forced_labor_interaction.desc: "[recipient.GetShortUINameNoTooltip] fue forzado a trabajar demasiado."
+
+  ordinary_labor_interaction: "Trabajo Ordinario"
+  ordinary_labor_interaction.desc: "[recipient.GetShortUIName] está trabajando de manera moderada, adecuada para la salud."
+
+  extortion_interaction: "Extorsionar"
+  extortion_interaction.desc: "Extorsiona a [recipient.GetShortUINameNoTooltip] por [gold|E]."

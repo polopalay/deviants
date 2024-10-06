@@ -1,4 +1,12 @@
 ﻿l_english:
+  slave: "[slave|E]"
+  relation_slave: "slave"
+  relation_slave_possessive: "slave's"
+
+  slave_owner: "[slave_owner|E]"
+  relation_slave_owner: "owner"
+  relation_slave_owner_possessive: "owner's"
+
   recently_had_sex: "Had Sex Recently"
   recently_had_sex_desc: "This character had sex recently and hasn't been able to continue for a while."
   forced_labor: "Forced Labor"
