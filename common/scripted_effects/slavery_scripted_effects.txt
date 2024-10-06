@@ -27,7 +27,7 @@
 		add_trait = slave
 		if = {
 			limit = {gold > 0}
-			pay_short_term_gold = { target = scope:new_owner gold = gold }
+			pay_short_term_gold = { target = scope:new_owner gold = scope:new_slave.gold }
 		}
 		every_spouse = { divorce = scope:new_slave }
 		if = {

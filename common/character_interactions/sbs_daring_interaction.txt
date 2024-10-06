@@ -792,9 +792,9 @@ succubus_mind_break_interaction = {
 			who = scope:recipient
 			multiplier = 0.1
 		}
-		modifier = { add = -2 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
-		modifier = { add = -5 scope:small_price = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
-		modifier = { add = -10 scope:small_price = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -2 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
 	}
 	ai_frequency = 12
 	ai_targets = {
