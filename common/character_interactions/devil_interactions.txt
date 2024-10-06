@@ -1307,6 +1307,11 @@ succubus_create_succubus_interaction = {
 	cooldown = { years = 50 }
 	is_shown = {
 		scope:recipient = {
+			NOR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
+			}
 			has_trait_xp = {
 				trait = sbs_lesser_succubus
 				value >= 100
