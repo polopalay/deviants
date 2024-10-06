@@ -14,7 +14,7 @@ succubus_dark_amry = {
 	}
 
 	stack = 100
-	max_sub_regiments = 5
+	max_sub_regiments = 13
 	can_recruit = {
 		OR = {
 			has_trait = sbs_demon
