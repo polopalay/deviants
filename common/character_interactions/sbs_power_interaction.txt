@@ -32,7 +32,7 @@ succubus_dealing_with_stress_interaction = {
 				has_trait = contrite
 				has_trait = comfort_eater
 				has_trait = inappetetic
-				stress_level >= 1
+				stress >= 1
 			}
 		}
 	}
@@ -43,6 +43,7 @@ succubus_dealing_with_stress_interaction = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
 			scope:recipient ?= { gold >= scope:recipient.dealing_with_stress_value }
+			scope:recipient.dealing_with_stress_value > 0
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
@@ -228,9 +229,10 @@ succubus_dealing_with_stress_interaction = {
 			who = scope:recipient
 			multiplier = 0.1
 		}
-		modifier = { add = 25 scope:recipient = { stress_level = 2 } }
-		modifier = { add = 25 scope:recipient = { stress_level = 3 } }
-		modifier = { add = 25 scope:recipient = { stress_level = 4 } }
+		modifier = { add = 5 scope:recipient = { stress_level = 1 } }
+		modifier = { add = 10 scope:recipient = { stress_level = 2 } }
+		modifier = { add = 15 scope:recipient = { stress_level = 3 } }
+		modifier = { add = 20 scope:recipient = { stress_level = 4 } }
 		modifier = { add = 25 scope:recipient = { stress_level = 5 } }
 		modifier = { add = 5 scope:recipient = { has_trait = drunkard } }
 		modifier = { add = 5 scope:recipient = { has_trait = hashishiyah } }
@@ -351,6 +353,7 @@ succubus_heal_interaction = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
 			scope:recipient ?= { gold >= scope:recipient.heal_price_value }
+			scope:recipient.heal_price_value > 0
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
@@ -683,6 +686,7 @@ succubus_purify_interaction = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
 			scope:recipient ?= { gold >= scope:recipient.purify_price_value }
+			scope:recipient.purify_price_value > 0
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"

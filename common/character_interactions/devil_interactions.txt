@@ -47,6 +47,7 @@ deal_with_the_devil_interaction = {
 	is_shown = {
 		scope:actor = {
 			OR = {
+				stress >= 1
 				has_trait = drunkard
 				has_trait = hashishiyah
 				has_trait = rakish
@@ -142,6 +143,7 @@ deal_with_the_devil_interaction = {
 	send_option = {
 		is_shown = {
 			scope:actor ?= { gold >= scope:actor.deal_price_value }
+			scope:actor.deal_price_value > 0
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
@@ -221,6 +223,7 @@ deal_with_the_devil_interaction = {
 
 	on_accept = {
 		scope:actor = {
+			stress_impact = { base = massive_stress_impact_loss }
 			remove_trait = drunkard
 			remove_trait = hashishiyah
 			remove_trait = rakish
@@ -361,6 +364,11 @@ deal_with_the_devil_interaction = {
 
 	ai_will_do = {
 		base = 1
+		modifier = { add = 1 scope:recipient = { stress_level = 1 } }
+		modifier = { add = 2 scope:recipient = { stress_level = 2 } }
+		modifier = { add = 3 scope:recipient = { stress_level = 3 } }
+		modifier = { add = 4 scope:recipient = { stress_level = 4 } }
+		modifier = { add = 5 scope:recipient = { stress_level = 5 } }
 		modifier = { add = 1 scope:recipient = { has_trait = hashishiyah } }
 		modifier = { add = 1 scope:recipient = { has_trait = rakish } }
 		modifier = { add = 1 scope:recipient = { has_trait = reclusive } }
@@ -453,7 +461,7 @@ ask_for_become_lesser_succubus_interaction = {
 	use_diplomatic_range = {
 		scope:actor = { is_ai = yes }
 	}
-	cooldown = { years = 1 }
+	cooldown = { years = 10 }
 
 	is_shown = {
 		scope:actor = {
@@ -687,7 +695,7 @@ ask_for_become_succubus_interaction = {
 	use_diplomatic_range = {
 		scope:actor = { is_ai = yes }
 	}
-	cooldown = { years = 5 }
+	cooldown = { years = 25 }
 
 	is_shown = {
 		scope:actor = {

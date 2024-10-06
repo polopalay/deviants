@@ -518,7 +518,8 @@ succubus_honor_interaction = {
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient ?= { gold >= scope:recipient.purify_price_value }
+			scope:recipient ?= { gold >= scope:recipient.honor_price_value }
+			scope:recipient.honor_price_value > 0
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
@@ -622,7 +623,7 @@ succubus_honor_interaction = {
 			}
 			if = {
 				limit = { scope:gold = yes }
-				pay_short_term_gold = { target = scope:actor gold = scope:recipient.purify_price_value }
+				pay_short_term_gold = { target = scope:actor gold = scope:recipient.honor_price_value }
 			}
 			if = {
 				limit = { scope:demand_conversion = yes }
