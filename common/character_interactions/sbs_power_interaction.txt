@@ -32,7 +32,7 @@ succubus_dealing_with_stress_interaction = {
 				has_trait = contrite
 				has_trait = comfort_eater
 				has_trait = inappetetic
-				stress >= 1
+				stress_level >= 1
 			}
 		}
 	}
