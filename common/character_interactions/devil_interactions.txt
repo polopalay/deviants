@@ -464,13 +464,7 @@ ask_for_become_lesser_succubus_interaction = {
 			}
 			OR = {
 				any_prisoner = { count > 0 }
-				any_courtier = {
-					NOT = {
-						is_spouse_of = scope:actor
-						is_close_family_of = scope:actor
-						is_concubine_of = scope:actor
-					}
-				}
+				any_courtier = { count > 0 }
 			}
 		}
 		scope:recipient = {
@@ -484,19 +478,8 @@ ask_for_become_lesser_succubus_interaction = {
 
 	populate_recipient_list = {
 		scope:actor = {
-			every_courtier = {
-				limit = {
-					NOT = {
-						is_spouse_of = scope:recipient
-						is_close_family_of = scope:recipient
-						is_concubine_of = scope:recipient
-					}
-				}
-				add_to_list = characters
-			}
-			every_prisoner = {
-				add_to_list = characters
-			}
+			every_courtier = { add_to_list = characters }
+			every_prisoner = { add_to_list = characters }
 		}
 	}
 	send_option = {
@@ -675,6 +658,13 @@ ask_for_become_lesser_succubus_interaction = {
 				}
 			}
 		}
+		modifier = { add = -7 scope:secondary_recipient = { is_child_of = scope:actor } }
+		modifier = { add = -6 scope:secondary_recipient = { is_spouse_of = scope:actor } }
+		modifier = { add = -5 scope:secondary_recipient = { is_close_or_extended_family_of = scope:actor } }
+		modifier = { add = -5 scope:secondary_recipient = { has_relation_best_friend = scope:actor } }
+		modifier = { add = -4 scope:secondary_recipient = { has_relation_friend = scope:actor } }
+		modifier = { add = -5 scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
+		modifier = { add = -4 scope:secondary_recipient = { has_relation_lover = scope:actor } }
 	}
 }
 
@@ -1212,13 +1202,7 @@ succubus_create_lesser_succubus_interaction = {
 			}
 			OR = {
 				any_prisoner = { count > 0 }
-				any_courtier = {
-					NOT = {
-						is_spouse_of = scope:recipient
-						is_close_family_of = scope:recipient
-						is_concubine_of = scope:recipient
-					}
-				}
+				any_courtier = { count > 0 }
 			}
 		}
 		scope:actor = {
@@ -1234,16 +1218,7 @@ succubus_create_lesser_succubus_interaction = {
 	populate_recipient_list = {
 		scope:recipient = {
 			every_prisoner = { add_to_list = characters }
-			every_courtier = {
-				limit = {
-					NOR = {
-						is_spouse_of = scope:recipient
-						is_close_family_of = scope:recipient
-						is_concubine_of = scope:recipient
-					}
-				}
-				add_to_list = characters
-			}
+			every_courtier = { add_to_list = characters }
 		}
 	}
 	on_accept = {
@@ -1277,6 +1252,15 @@ succubus_create_lesser_succubus_interaction = {
 			who = scope:recipient
 			multiplier = -0.2
 		}
+		modifier = { add = -80 scope:secondary_recipient = { is_child_of = scope:recipient } }
+		modifier = { add = -80 scope:secondary_recipient = { is_spouse_of = scope:recipient } }
+		modifier = { add = -50 scope:secondary_recipient = { is_close_or_extended_family_of = scope:recipient } }
+		modifier = { add = -50 scope:secondary_recipient = { has_relation_best_friend = scope:recipient } }
+		modifier = { add = -30 scope:secondary_recipient = { has_relation_friend = scope:recipient } }
+		modifier = { add = -80 scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
+		modifier = { add = -50 scope:secondary_recipient = { has_relation_lover = scope:recipient } }
+		modifier = { add = 30 scope:secondary_recipient = { has_relation_nemesis = scope:recipient } }
+		modifier = { add = 20 scope:secondary_recipient = { has_relation_rival = scope:recipient } }
 	}
 	ai_frequency = 12
 	ai_targets = {
