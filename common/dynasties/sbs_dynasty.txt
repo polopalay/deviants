@@ -5,6 +5,6 @@
 
 777777 = {
 	name = "trait_sbs_demon"
-	culture = "trojan"
+	culture = "macedonian"
 }
 
