@@ -1251,12 +1251,6 @@ succubus_create_lesser_succubus_interaction = {
 			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
 		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = sbs_succubus }
-				add_trait_xp = { trait = sbs_succubus track = corruption value = -25 }
-			}
-		}
 		scope:secondary_recipient = {
 			death = {
 				death_reason = death_execution
