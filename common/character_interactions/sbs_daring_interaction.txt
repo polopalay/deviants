@@ -584,7 +584,7 @@ succubus_honor_interaction = {
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient.liege = scope:actor
+			scope:actor.liege = scope:recipient
 		}
 		is_valid = {
 			scope:recipient = {

@@ -1205,7 +1205,7 @@ succubus_absorb_interaction = {
 succubus_create_lesser_succubus_interaction = {
 	icon = lesser_devil
 	desc = succubus_create_lesser_succubus_interaction.desc
-	category = interaction_category_vassal
+	category = interaction_category_diplomacy
 	use_diplomatic_range = yes
 	cooldown = { years = 25 }
 	is_shown = {

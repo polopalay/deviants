@@ -108,7 +108,7 @@ succubus_dealing_with_stress_interaction = {
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient.liege = scope:actor
+			scope:actor.liege = scope:recipient
 		}
 		is_valid = {
 			scope:recipient = {
@@ -419,7 +419,7 @@ succubus_heal_interaction = {
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient.liege = scope:actor
+			scope:actor.liege = scope:recipient
 		}
 		is_valid = {
 			scope:recipient = {
@@ -751,7 +751,7 @@ succubus_purify_interaction = {
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient.liege = scope:actor
+			scope:actor.liege = scope:recipient
 		}
 		is_valid = {
 			scope:recipient = {
@@ -1033,7 +1033,7 @@ succubus_child_interaction = {
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient.liege = scope:actor
+			scope:actor.liege = scope:recipient
 		}
 		is_valid = {
 			scope:recipient = {
