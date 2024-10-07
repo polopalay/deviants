@@ -171,31 +171,6 @@ carn_free_slave_effect = {
 		}
 		
 		if = {
-			limit = { scope:renounce_claims = yes }
-			add_opinion = { modifier = demanded_claim_renouncement target = scope:owner }
-			scope:slave = {
-				every_claim = {
-					explicit = yes
-					limit = {
-						save_temporary_scope_as = temp_claim
-						OR = {
-							holder = scope:owner
-							AND = {
-								exists = holder
-								NOT = { prev = { target_is_liege_or_above = scope:owner } }
-								holder = { target_is_liege_or_above = scope:owner }
-							}
-							scope:owner = {
-								any_held_title = { is_de_jure_liege_or_above_target = scope:temp_claim }
-							}
-						}
-					}
-					scope:slave = { remove_claim = prev }
-				}
-			}
-		}
-		
-		if = {
 			limit = { scope:gain_hook = yes }
 			add_opinion = { modifier = demanded_hook target = scope:owner }
 			scope:owner = {

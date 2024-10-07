@@ -279,7 +279,7 @@ offer_prostitute_interaction = {
 					is_valid_prostitute_trigger = yes
 					scope:recipient = { is_attracted_to_gender_of = scope:actor }
 				}
-				any_courtier = { is_valid_prostitute_trigger = yes scope:recipient = { is_attracted_to_gender_of = prev } NOT = { prev = scope:recipient } }
+				any_courtier = { is_valid_prostitute_trigger = yes scope:recipient = { is_attracted_to_gender_of = prev } NOT = { this = scope:recipient } }
 			}
 		}
 	}
@@ -294,7 +294,7 @@ offer_prostitute_interaction = {
 				limit = {
 					is_valid_prostitute_trigger = yes
 					scope:recipient = { is_attracted_to_gender_of = prev }
-					NOT = { prev = scope:recipient }
+					NOT = { this = scope:recipient }
 				}
 				add_to_list = characters
 			}

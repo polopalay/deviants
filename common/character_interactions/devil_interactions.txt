@@ -1257,8 +1257,8 @@ succubus_create_lesser_succubus_interaction = {
 			scope:actor = {
 				scope:recipient = { is_ruler = no }
 				OR = {
-					any_prisoner = { count > 0 NOT = { prev = scope:recipient } }
-					any_courtier = { count > 0 NOT = { prev = scope:recipient } }
+					any_prisoner = { count > 0 NOT = { this = scope:recipient } }
+					any_courtier = { count > 0 NOT = { this = scope:recipient } }
 				}
 			}
 		}
