@@ -1,9 +1,10 @@
 ﻿l_simp_chinese:
-# Opinions
+ any_prisoner_count: "任何 [prisoners|E]"
+ any_county_province: "任何 [province|E]"
+
  have_sex_opinion: "最近有过性行为"
  be_healed_opinion: "被黑魔法治愈"
 
- # Artifacts
  magic_creation: "$trinket$"
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "魔法创造"
@@ -17,10 +18,8 @@
  mistress_dildo: "谦卑的守护者"
  mistress_dildo_desc: "只看着它就让女性部位感到脉动。"
 
-# Effect
  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] 和 [had_sex_with_effect_partner.GetShortUIName] 发生性关系。"
 
-# Nicknames
  nickname_the_bitch: "母狗"
  nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 是一只发情的母狗，愿意无偿发生性关系。"
 
@@ -56,11 +55,9 @@
  nickname_the_devil_creation: "恶魔生物"
  nickname_the_devil_creation_desc: "从恶魔的力量中诞生的孩子，注定要给世界带来混乱和毁灭。"
 
-# Titles
  d_laamp_satan: "撒旦的恶魔"
  d_laamp_abandon_warhorse: "阿巴顿的战马"
 
-# Men at Arms
  succubus_dark_amry: "邪恶生物"
  succubus_dark_amry_flavor: "邪恶生物"
  succubus_death_korps: "死亡军团"
@@ -70,7 +67,6 @@
  succubus_skeleton: "Skeleton"
  succubus_skeleton_flavor: "Skeleton"
 
-# Modifiers
  succubus_buff: "魔鬼的祝福"
  succubus_buff_desc: "此人曾受到女魅的祝福"
 

@@ -606,7 +606,7 @@ carn_force_start_prostitution_interaction = {
 		modifier = { add = -20 scope:recipient = { has_trait = chaste } }
 		modifier = { add = -20 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
 		modifier = { add = -10 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_shunned has_doctrine = doctrine_adultery_men_shunned } } } }
-		modifier = { add = -10 scope:recipient = { faith = { has_doctrine = doctrine_gender_male_dominated } is_male = yes } }
+		modifier = { add = -10 scope:recipient = { faith = { has_doctrine = doctrine_gender_male_dominated } is_female = no } }
 		modifier = { add = -10 scope:recipient = { faith = { has_doctrine = doctrine_gender_female_dominated } is_female = yes } }
 		modifier = { add = -10 NOT = { scope:recipient = scope:actor } }
 		modifier = { add = 50 scope:forgive = yes }
@@ -637,9 +637,9 @@ carn_force_start_prostitution_interaction = {
 		modifier = { add = 5 scope:hook = yes scope:actor = { is_attracted_to_gender_of = scope:recipient } }
 		modifier = { add = 5 scope:recipient = { age <= 18 } }
 		modifier = { add = 5 scope:recipient = { age <= 20 } }
-		modifier = { add = -30 scope:actor = { faith = { has_doctrine = doctrine_gender_male_dominated } } scope:recipient = { is_male = yes } }
+		modifier = { add = -30 scope:actor = { faith = { has_doctrine = doctrine_gender_male_dominated } } scope:recipient = { is_female = no } }
 		modifier = { add = -30 scope:actor = { faith = { has_doctrine = doctrine_gender_female_dominated } } scope:recipient = { is_female = yes } }
-		modifier = { add = -20 scope:recipient = { is_male = yes } }
+		modifier = { add = -15 scope:recipient = { is_female = no } }
 		modifier = { add = -25 scope:recipient = { is_spouse_of = scope:actor } }
 		modifier = { add = -25 scope:recipient = { is_close_family_of = scope:actor } NOT = { scope:recipient = scope:actor } }
 		modifier = { add = -25 scope:recipient = { is_extended_family_of = scope:actor } }

@@ -3,20 +3,14 @@ succubus_dealing_with_stress_interaction = {
 	desc = succubus_dealing_with_stress_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { years = 1 }
 	is_shown = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = {
-					trait = sbs_succubus
-					track = power
-					value >= 5
-				}
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 10
-				}
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
 			}
 		}
 		scope:recipient = {
@@ -33,6 +27,22 @@ succubus_dealing_with_stress_interaction = {
 				has_trait = comfort_eater
 				has_trait = inappetetic
 				stress_level >= 1
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = {
+					trait = sbs_succubus
+					track = power
+					value >= 5
+				}
+				has_trait_xp = {
+					trait = sbs_lesser_succubus
+					value >= 10
+				}
 			}
 		}
 	}
@@ -294,15 +304,8 @@ succubus_heal_interaction = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = {
-					trait = sbs_succubus
-					track = power
-					value >= 5
-				}
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 10
-				}
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
 			}
 		}
 		scope:recipient = {
@@ -345,6 +348,23 @@ succubus_heal_interaction = {
 				has_trait = measles
 			}
 		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = {
+					trait = sbs_succubus
+					track = power
+					value >= 5
+				}
+				has_trait_xp = {
+					trait = sbs_lesser_succubus
+					value >= 10
+				}
+			}
+		}
+	
 	}
 	localization_values = {
 		RANSOM_COST = scope:recipient.heal_price_value
@@ -638,16 +658,14 @@ succubus_purify_interaction = {
 	desc = succubus_purify_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { years = 2 }
 
 	is_shown = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				AND = {
-					has_trait_xp = { trait = sbs_succubus track = power value >= 10 }
-					is_valid_construction_alchemy2_trigger = yes
-				}
+				has_trait = sbs_succubus
 			}
 		}
 		scope:recipient = {
@@ -676,6 +694,17 @@ succubus_purify_interaction = {
 				has_trait = physique_bad_2
 				has_trait = physique_bad_3
 				has_trait = inbred
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				AND = {
+					has_trait_xp = { trait = sbs_succubus track = power value >= 10 }
+					is_valid_construction_alchemy2_trigger = yes
+				}
 			}
 		}
 	}
@@ -945,9 +974,21 @@ succubus_child_interaction = {
 	desc = succubus_child_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
-	common_interaction = no
+	common_interaction = yes
 	cooldown = { years = 10 }
 	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+			}
+		}
+		scope:recipient = {
+			is_adult = yes
+			age >= 18
+		}
+	}
+	is_valid = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
@@ -956,10 +997,6 @@ succubus_child_interaction = {
 					have_soul_forge_trigger = yes
 				}
 			}
-		}
-		scope:recipient = {
-			is_adult = yes
-			age >= 18
 		}
 	}
 	localization_values = {

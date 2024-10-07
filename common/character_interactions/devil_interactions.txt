@@ -39,6 +39,7 @@ deal_with_the_devil_interaction = {
 	icon = fascinate
 	desc = deal_with_the_devil_interaction.desc
 	category = interaction_category_diplomacy
+	common_interaction = yes
 	use_diplomatic_range = {
 		scope:actor = { is_ai = yes }
 	}
@@ -461,6 +462,7 @@ ask_for_become_lesser_succubus_interaction = {
 	use_diplomatic_range = {
 		scope:actor = { is_ai = yes }
 	}
+	common_interaction = yes
 	cooldown = { years = 10 }
 
 	is_shown = {
@@ -695,6 +697,7 @@ ask_for_become_succubus_interaction = {
 	use_diplomatic_range = {
 		scope:actor = { is_ai = yes }
 	}
+	common_interaction = yes
 	cooldown = { years = 25 }
 
 	is_shown = {
@@ -1208,6 +1211,7 @@ succubus_create_lesser_succubus_interaction = {
 	category = interaction_category_diplomacy
 	use_diplomatic_range = yes
 	cooldown = { years = 25 }
+	common_interaction = yes
 	is_shown = {
 		scope:recipient = {
 			NOR = {
@@ -1224,11 +1228,15 @@ succubus_create_lesser_succubus_interaction = {
 				has_trait = witch
 				any_secret = { secret_type = secret_witch }
 			}
+		}
+		scope:actor = {
 			OR = {
-				any_prisoner = { count > 0 }
-				any_courtier = { count > 0 }
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
 			}
 		}
+	}
+	is_valid = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
@@ -1238,11 +1246,32 @@ succubus_create_lesser_succubus_interaction = {
 				}
 			}
 		}
+		OR = {
+			scope:recipient = {
+				is_ruler = yes
+				OR = {
+					any_prisoner = { count > 0 }
+					any_courtier = { count > 0 }
+				}
+			}
+			scope:actor = {
+				scope:recipient = { is_ruler = no }
+				OR = {
+					any_prisoner = { count > 0 NOT = { prev = scope:recipient } }
+					any_courtier = { count > 0 NOT = { prev = scope:recipient } }
+				}
+			}
+		}
 	}
 	populate_recipient_list = {
 		scope:recipient = {
+			is_ruler = yes
 			every_prisoner = { add_to_list = characters }
 			every_courtier = { add_to_list = characters }
+		}
+		scope:actor = {
+			every_prisoner = { limit = { NOT = { this = scope:recipient } scope:recipient = { is_ruler = no } } add_to_list = characters }
+			every_courtier = { limit = { NOT = { this = scope:recipient } scope:recipient = { is_ruler = no } } add_to_list = characters }
 		}
 	}
 	on_accept = {
@@ -1294,42 +1323,64 @@ succubus_create_lesser_succubus_interaction = {
 		base = 0
 		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
+		modifier = { add = -100 scope:secondary_recipient = { is_child_of = scope:recipient } }
+		modifier = { add = -100 scope:secondary_recipient = { is_spouse_of = scope:recipient } }
+		modifier = { add = -100 scope:secondary_recipient = { is_close_or_extended_family_of = scope:recipient } }
+		modifier = { add = -100 scope:secondary_recipient = { has_relation_best_friend = scope:recipient } }
+		modifier = { add = -100 scope:secondary_recipient = { has_relation_friend = scope:recipient } }
+		modifier = { add = -100 scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
+		modifier = { add = -100 scope:secondary_recipient = { has_relation_lover = scope:recipient } }
 		modifier = { add = 100 scope:recipient = { is_ai = no } }
-		modifier = { add = -19 scope:recipient = { has_trait = sbs_succubus } }
 	}
 }
 
 succubus_create_succubus_interaction = {
 	icon = devil
 	desc = succubus_create_succubus_interaction.desc
-	category = interaction_category_vassal
+	category = interaction_category_diplomacy
 	use_diplomatic_range = yes
+	common_interaction = yes
 	cooldown = { years = 50 }
 	is_shown = {
 		scope:recipient = {
 			NOR = {
 				has_trait = sbs_demon
 				has_trait = sbs_succubus
-				has_trait = sbs_lesser_succubus
 			}
-			has_trait_xp = {
-				trait = sbs_lesser_succubus
-				value >= 100
-			}
-			any_prisoner = { count >= 13 }
-			any_courtier = {
-				NOT = {
-					is_spouse_of = scope:recipient
-					is_close_or_extended_family_of = scope:recipient
-				}
-			}
+			has_trait = sbs_lesser_succubus
 		}
 		scope:actor = {
 			has_trait = sbs_demon
 		}
 	}
+	is_valid = {
+		scope:recipient = {
+			has_trait_xp = {
+				trait = sbs_lesser_succubus
+				value >= 100
+			}
+		}
+		OR = {
+			scope:recipient = {
+				is_ruler = yes
+				any_prisoner = { count >= 13 }
+				any_courtier = {
+					OR = {
+						is_spouse_of = scope:recipient
+						is_close_or_extended_family_of = scope:recipient
+					}
+				}
+			}
+			scope:actor = {
+				scope:recipient = { is_ruler = no }
+				any_prisoner = { count >= 13 NOT = { this = scope:recipient } }
+				any_courtier = { OR = { is_spouse_of = scope:recipient is_close_or_extended_family_of = scope:recipient } NOT = { this = scope:recipient } }
+			}
+		}
+	}
 	populate_recipient_list = {
 		scope:recipient = {
+			is_ruler = yes
 			every_courtier = {
 				limit = {
 					OR = {
@@ -1340,17 +1391,45 @@ succubus_create_succubus_interaction = {
 				add_to_list = characters
 			}
 		}
+		scope:actor = {
+			every_courtier = {
+				limit = {
+					OR = {
+						is_spouse_of = scope:recipient
+						is_close_or_extended_family_of = scope:recipient
+					}
+					NOT = { this = scope:recipient }
+					scope:recipient = { is_ruler = no }
+				}
+				add_to_list = characters
+			}
+		}
 	}
 	on_accept = {
 		scope:recipient = {
-			every_prisoner = {
-				death = {
-					death_reason = death_execution
-					killer = scope:recipient
+			if = {
+				limit = { is_ruler = yes }
+				every_prisoner = {
+					death = {
+						death_reason = death_execution
+						killer = scope:recipient
+					}
 				}
 			}
 			add_trait = sbs_succubus
 			set_immortal_age = 18
+		}
+		scope:actor = {
+			if = {
+				limit = { scope:recipient = { is_ruler = no } }
+				every_prisoner = {
+					limit = { NOT = { this = scope:recipient } }
+					death = {
+						death_reason = death_execution
+						killer = scope:recipient
+					}
+				}
+			}
 		}
 		scope:secondary_recipient = {
 			death = {

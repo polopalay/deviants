@@ -1,9 +1,10 @@
 ﻿l_french:
-# Opinions
+ any_prisoner_count: "Tout [prisoners|E]"
+ any_county_province: "Toute [province|E]"
+
  have_sex_opinion: "A eu des relations sexuelles récemment"
  be_healed_opinion: "Guéri par la magie noire"
 
- # Artifacts
  magic_creation: "$trinket$"
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "Création Magique"
@@ -17,10 +18,8 @@
  mistress_dildo: "Gardien Humble"
  mistress_dildo_desc: "Rien qu'à le regarder, les parties féminines palpitent."
 
-# Effect
  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] couche avec [had_sex_with_effect_partner.GetShortUIName]"
 
-# Nicknames
  nickname_the_bitch: "La Chienne"
  nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] est une chienne en chaleur, prête à baiser sans payer."
 
@@ -57,11 +56,9 @@
  nickname_the_devil_creation: "Créatures Démons"
  nickname_the_devil_creation_desc: "Enfants nés du pouvoir des démons, destinés à apporter le chaos et la destruction dans le monde."
 
-# Titles
  d_laamp_satan: "Les Diables de Satan"
  d_laamp_abandon_warhorse: "Les Chevaux de Guerre d'Abaddon"
 
-# Men at Arms
  succubus_dark_amry: "Armée Sombre"
  succubus_dark_amry_flavor: "Armée Sombre"
  succubus_death_korps: "Korps de la Mort"
@@ -71,7 +68,6 @@
  succubus_skeleton: "Squelette"
  succubus_skeleton_flavor: "Squelette"
 
-# Modifiers
  succubus_buff: "Bénédiction du Diable"
  succubus_buff_desc: "Cette personne a été bénie par le Succube."
 

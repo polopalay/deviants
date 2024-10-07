@@ -9,7 +9,7 @@
 			limit = {
 				is_female = yes
 				is_adult = yes
-				$PROSTITUTE$ = { is_male = yes is_adult = yes }
+				$PROSTITUTE$ = { is_female = no is_adult = yes }
 				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
 			}
 			add_to_variable_list = { name = potential_father_variable_list target = $PROSTITUTE$ }
@@ -17,7 +17,7 @@
 		}
 		else_if = {
 			limit = {
-				is_male = yes
+				is_female = no
 				is_adult = yes
 				$PROSTITUTE$ = { is_female = yes is_adult = yes }
 				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = scope:had_sex_with_effect_partner }
@@ -91,7 +91,7 @@
 				modifier = {
 					add = -100
 					OR = {
-						is_male = yes
+						is_female = no
 						any_artifact = { has_artifact_modifier = master_dildo_modifier }
 						any_artifact = { has_artifact_modifier = mistress_dildo_modifier }
 					}

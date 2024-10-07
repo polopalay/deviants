@@ -1,9 +1,10 @@
 ﻿l_korean:
-# Opinions
+  any_prisoner_count: "모든 [prisoners|E]"
+  any_county_province: "모든 [province|E]"
+
   have_sex_opinion: "최근 성관계"
   be_healed_opinion: "흑마법으로 치유됨"
 
- # Artifacts
   magic_creation: "$trinket$"
   magic_creation_miscellaneous: "$trinket$"
   artifact_magic_creation: "마법 창조"
@@ -17,10 +18,8 @@
   mistress_dildo: "겸손한 수호자"
   mistress_dildo_desc: "그것을 보는 것만으로도 여성의 부분이 두근거립니다."
 
-# Effect
   prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U]가 [had_sex_with_effect_partner.GetShortUIName]와 성관계를 가짐"
 
-# Nicknames
   nickname_the_bitch: "창녀"
   nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]는 음탕한 창녀로, 돈 없이도 성관계를 맺을 준비가 되어 있습니다."
 
@@ -57,11 +56,9 @@
   nickname_the_devil_creation: "악마의 창조물"
   nickname_the_devil_creation_desc: "악마의 힘에서 태어난 아이들로, 세상에 혼돈과 파괴를 가져올 운명을 지닌 존재입니다."
 
-# Titles
   d_laamp_satan: "사탄의 악마들"
   d_laamp_abandon_warhorse: "아바돈의 전쟁 말들"
 
-# Men at Arms
   succubus_dark_amry: "어둠의 군대"
   succubus_dark_amry_flavor: "어둠의 군대"
   succubus_death_korps: "죽음의 군단"
@@ -71,7 +68,6 @@
   succubus_skeleton: "해골"
   succubus_skeleton_flavor: "해골"
 
-# Modifiers
   succubus_buff: "악마의 축복"
   succubus_buff_desc: "이 사람은 서큐버스의 축복을 받았습니다."
 

@@ -1,9 +1,10 @@
 ﻿l_german:
-# Opinions
+  any_prisoner_count: "Jeder [prisoners|E]"
+  any_county_province: "Jede [province|E]"
+
   have_sex_opinion: "Hat kürzlich sexuelle Beziehungen gehabt"
   be_healed_opinion: "Durch schwarze Magie geheilt"
 
- # Artifacts
   magic_creation: "$trinket$"
   magic_creation_miscellaneous: "$trinket$"
   artifact_magic_creation: "Magische Kreation"
@@ -17,10 +18,8 @@
   mistress_dildo: "Demütiger Wächter"
   mistress_dildo_desc: "Allein beim Anblick pulsieren die weiblichen Teile."
 
-# Effect
   prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] schläft mit [had_sex_with_effect_partner.GetShortUIName]"
 
-# Nicknames
   nickname_the_bitch: "Die Hündin"
   nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] ist eine erregte Hündin, bereit, ohne Bezahlung zu schlafen."
 
@@ -57,11 +56,9 @@
   nickname_the_devil_creation: "Dämonische Kreaturen"
   nickname_the_devil_creation_desc: "Kinder, die aus der Macht der Dämonen geboren wurden, dazu bestimmt, Chaos und Zerstörung in die Welt zu bringen."
 
-# Titles
   d_laamp_satan: "Die Teufel von Satan"
   d_laamp_abandon_warhorse: "Abaddons Kriegspferde"
 
-# Men at Arms
   succubus_dark_amry: "Dunkle Armee"
   succubus_dark_amry_flavor: "Dunkle Armee"
   succubus_death_korps: "Toten-Korps"
@@ -71,7 +68,6 @@
   succubus_skeleton: "Skelett"
   succubus_skeleton_flavor: "Skelett"
 
-# Modifiers
   succubus_buff: "Segen des Teufels"
   succubus_buff_desc: "Diese Person wurde von der Succubus gesegnet."
 

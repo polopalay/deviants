@@ -75,14 +75,15 @@ lilim_character = {
 			remove_trait = sbs_lesser_succubus
 			add_trait = sbs_succubus
 			set_immortal_age = 18
+			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = power value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = daring value = 25 }
 		}
 	}
 	1178.1.1 = {
 		effect = {
-			add_trait_xp = { trait = sbs_succubus track = loyalty value = 66 }
+			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
 			add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
-			add_trait_xp = { trait = sbs_succubus track = power value = 100 }
-			add_trait_xp = { trait = sbs_succubus track = daring value = 100 }
 		}
 	}
 }

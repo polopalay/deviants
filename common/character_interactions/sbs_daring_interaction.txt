@@ -4,6 +4,7 @@ succubus_weight_interaction = {
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	cooldown = { years = 1 }
+	common_interaction = yes
 
 	is_shown = {
 		scope:actor = {
@@ -62,12 +63,13 @@ succubus_makeup_interaction = {
 	desc = succubus_makeup_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
+	common_interaction = yes
 
 	is_shown = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = { trait = sbs_succubus track = daring value >= 1 }
+				has_trait = sbs_succubus
 			}
 		}
 		scope:recipient = {
@@ -75,6 +77,14 @@ succubus_makeup_interaction = {
 				this = scope:actor
 				is_vassal_of = scope:actor
 				is_courtier_of = scope:actor
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 1 }
 			}
 		}
 	}
@@ -473,19 +483,13 @@ succubus_honor_interaction = {
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	cooldown = { years = 5 }
+	common_interaction = yes
 	is_shown = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = {
-					trait = sbs_succubus
-					track = daring
-					value >= 5
-				}
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 10
-				}
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
 			}
 		}
 		scope:recipient = {
@@ -509,6 +513,22 @@ succubus_honor_interaction = {
 				has_trait = kinslayer_2
 				has_trait = kinslayer_3
 				has_trait = murderer
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = {
+					trait = sbs_succubus
+					track = daring
+					value >= 5
+				}
+				has_trait_xp = {
+					trait = sbs_lesser_succubus
+					value >= 10
+				}
 			}
 		}
 	}
@@ -744,12 +764,13 @@ succubus_mind_break_interaction = {
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
 	cooldown = { years = 4 }
+	common_interaction = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = { trait = sbs_succubus track = daring value >= 10 }
+				has_trait = sbs_succubus
 			}
 		}
 		scope:recipient = {
@@ -763,6 +784,14 @@ succubus_mind_break_interaction = {
 					has_trait = witch
 					any_secret = { secret_type = secret_witch }
 				}
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 10 }
 			}
 		}
 	}
@@ -792,9 +821,9 @@ succubus_mind_break_interaction = {
 			who = scope:recipient
 			multiplier = 0.1
 		}
-		modifier = { add = -2 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
-		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
-		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted trait_is_sin = lustful } } } }
+		modifier = { add = -2 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted NOT = { trait_is_sin = lustful } } } } }
+		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted NOT = { trait_is_sin = lustful } } } } }
+		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted NOT = { trait_is_sin = lustful } } } } }
 	}
 	ai_frequency = 12
 	ai_targets = {

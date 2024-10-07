@@ -1,8 +1,10 @@
 ﻿l_spanish:
-  # Opinions
+  any_prisoner_count: "Cualquier [prisoners|E]"
+  any_county_province: "Cualquier [province|E]"
+
   have_sex_opinion: "Tuvo sexo recientemente"
   be_healed_opinion: "Sanado por magia negra"
-  # Artifacts
+
   magic_creation: "$trinket$"
   magic_creation_miscellaneous: "$trinket$"
   artifact_magic_creation: "Creación Mágica"
@@ -16,10 +18,8 @@
   mistress_dildo: "Guardiana Humilde"
   mistress_dildo_desc: "Solo mirarlo hace que las partes femeninas palpen."
 
-  # Effect
   prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] se acuesta con [had_sex_with_effect_partner.GetShortUIName]"
 
-  # Nicknames
   nickname_the_bitch: "La Perra"
   nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] es una perra caliente, dispuesta a tener sexo sin pagar."
  
@@ -56,12 +56,10 @@
   nickname_the_devil_creation: "Criaturas Demoníacas"
   nickname_the_devil_creation_desc: "Niños nacidos del poder de los demonios, destinados a traer caos y destrucción al mundo."
 
-  # Titles
   succubus: "Súcubo"
   d_laamp_satan: "Los Demonios de Satanás"
   d_laamp_abandon_warhorse: "Los Caballos de Guerra de Abaddon"
 
-  # Men at Arms
   succubus_dark_amry: "Ejército Oscuro"
   succubus_dark_amry_flavor: "Ejército Oscuro"
   succubus_death_korps: "Cuerpos de la Muerte"
@@ -71,7 +69,6 @@
   succubus_skeleton: "Esqueleto"
   succubus_skeleton_flavor: "Esqueleto"
 
-  # Modifiers
   succubus_buff: "Bendición del Diablo"
   succubus_buff_desc: "Esta persona ha sido bendecida por el Súcubo."
 

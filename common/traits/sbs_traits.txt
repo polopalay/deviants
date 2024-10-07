@@ -76,19 +76,7 @@ sbs_succubus = {
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { NOT = { exists = this } }
-				desc = trait_sbs_succubus_neutral
-			}
-			triggered_desc = {
-				trigger = { is_female = yes }
-				desc = trait_sbs_succubus_female
-			}
-			desc = trait_sbs_succubus_male
-		}
-	}
+	name = trait_sbs_succubus_neutral
 
 	desc = {
 		first_valid = {
@@ -229,19 +217,7 @@ sbs_lesser_succubus = {
 
 	opposites = { demon succubus chaste incapable }
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { NOT = { exists = this } }
-				desc = trait_lesser_succubus_neutral
-			}
-			triggered_desc = {
-				trigger = { is_female = yes }
-				desc = trait_lesser_succubus_female
-			}
-			desc = trait_lesser_succubus_female
-		}
-	}
+	name = trait_lesser_succubus_neutral
 
 	desc = {
 		first_valid = {
