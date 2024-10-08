@@ -715,6 +715,7 @@ succubus_mind_break_interaction = {
 		}
 		scope:recipient = {
 			OR = {
+				is_female = no
 				NOT = { has_trait = lustful }
 				NOR = {
 					has_trait = deviant
