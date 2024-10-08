@@ -1215,6 +1215,7 @@ succubus_create_lesser_succubus_interaction = {
 	common_interaction = yes
 	is_shown = {
 		scope:recipient = {
+			is_female = yes
 			NOR = {
 				has_trait = sbs_demon
 				has_trait = sbs_succubus
@@ -1231,7 +1232,6 @@ succubus_create_lesser_succubus_interaction = {
 			}
 		}
 		scope:actor = {
-			is_female = yes
 			OR = {
 				has_trait = sbs_demon
 				has_trait = sbs_succubus

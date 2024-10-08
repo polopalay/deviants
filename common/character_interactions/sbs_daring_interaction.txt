@@ -160,29 +160,6 @@ succubus_makeup_interaction = {
 		flag = succubus_red_eyes
 	}
 	send_option = {
-		is_shown = {
-			scope:recipient = {
-				OR = {
-					has_character_flag = succubus_white_hair
-					has_character_flag = succubus_red_hair
-				}
-			}
-		}
-		flag = succubus_default_hair
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_white_hair } }
-		}
-		flag = succubus_white_hair
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_red_hair } }
-		}
-		flag = succubus_red_hair
-	}
-	send_option = {
 		flag = naked
 	}
 	send_option = {
@@ -343,27 +320,6 @@ succubus_makeup_interaction = {
 			}
 		}
 		else_if = {
-			limit = { scope:succubus_default_hair = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_white_hair
-				remove_character_flag = succubus_red_hair
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_red_hair = yes }
-			scope:recipient = {
-				add_character_flag = succubus_red_hair
-				remove_character_flag = succubus_white_hair
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_white_hair = yes }
-			scope:recipient = {
-				add_character_flag = succubus_white_hair
-				remove_character_flag = succubus_red_hair
-			}
-		}
-		else_if = {
 			limit = { scope:succubus_default_eyes = yes }
 			scope:recipient = {
 				remove_character_flag = succubus_white_eyes
@@ -414,7 +370,27 @@ succubus_makeup_interaction = {
 			}
 		}
 	}
-	auto_accept = yes
+	auto_accept = { scope:actor = scope:recipient }
+	ai_accept = {
+		base = 1
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 24
+	ai_targets = {
+		ai_recipients = self
+		ai_recipients = vassals
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 5 scope:naked = yes }
+		modifier = { add = 50 scope:glass = yes scope:recipient = { OR = { has_character_flag = teacher_1 has_character_flag = teacher_2 has_character_flag = has_reading_glasses } } }
+	}
 }
 
 succubus_honor_interaction = {
