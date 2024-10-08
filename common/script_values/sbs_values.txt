@@ -215,6 +215,22 @@ heal_price_value = {
 		limit = { has_trait = measles }
 		add = 50
 	}
+	if = {
+		limit = { current_weight >= 25 }
+		add = 10
+	}
+	if = {
+		limit = { current_weight >= 50 }
+		add = 10
+	}
+	if = {
+		limit = { current_weight <= -25 }
+		add = 10
+	}
+	if = {
+		limit = { current_weight <= -50 }
+		add = 10
+	}
 }
 
 purify_price_value = {

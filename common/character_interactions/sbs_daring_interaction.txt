@@ -1,63 +1,3 @@
-succubus_weight_interaction = {
-	icon = full_body_hair
-	desc = succubus_weight_interaction.desc
-	category = interaction_category_friendly
-	use_diplomatic_range = yes
-	cooldown = { years = 1 }
-	common_interaction = yes
-
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait = sbs_demon
-				has_trait_xp = {
-					trait = sbs_succubus
-					track = daring
-					value >= 2
-				}
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 4
-				}
-			}
-		}
-		scope:recipient = {
-			OR = {
-				current_weight >= 25
-				current_weight <= -25
-			}
-		}
-	}
-	on_accept = {
-		scope:recipient = {
-			change_current_weight = -200
-			change_current_weight = 100
-		}
-		scope:actor = {
-			if = {
-				limit = { has_trait = sbs_succubus }
-				add_trait_xp = {
-					trait = sbs_succubus
-					track = daring
-					value = -2
-				}
-			}
-			if = {
-				limit = { has_trait = sbs_lesser_succubus }
-				add_trait_xp = {
-					trait = sbs_lesser_succubus
-					value = -4
-				}
-			}
-		}
-	}
-	auto_accept = yes
-	ai_frequency = 12
-	ai_targets = { ai_recipients = self }
-	ai_potential = { always = yes }
-	ai_will_do = { base = 100 }
-}
-
 succubus_makeup_interaction = {
 	icon = no_body_hair
 	desc = succubus_makeup_interaction.desc
@@ -763,7 +703,7 @@ succubus_mind_break_interaction = {
 	desc = succubus_mind_break_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
-	cooldown = { years = 4 }
+	cooldown = { years = 5 }
 	common_interaction = yes
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
@@ -804,7 +744,29 @@ succubus_mind_break_interaction = {
 		}
 		scope:recipient = {
 			hidden_effect = {
-				mind_break_personality = yes
+				if = {
+					limit = { is_female = yes }
+					mind_break_personality = yes
+				}
+				else = {
+					if = {
+						limit = { has_character_modifier = succubus_debuff }
+						random = {
+							chance = 25
+							modifier = { has_trait = vengeful add = 10 }
+							modifier = { has_trait = callous add = 10 }
+							modifier = { has_trait = sadistic add = 10 }
+							modifier = { has_trait = wrathful add = 5 }
+							modifier = { has_trait = forgiving add = -10 }
+							modifier = { has_trait = compassionate add = -10 }
+							remove_character_modifier = succubus_debuff
+							add_trait = seed_of_destruction
+						}
+					}
+					else = {
+						add_character_modifier = succubus_debuff
+					}
+				}
 				if = {
 					limit = { is_ai = yes }
 					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
@@ -832,6 +794,8 @@ succubus_mind_break_interaction = {
 		ai_recipients = prisoners
 		ai_recipients = courtiers
 		ai_recipients = scripted_relations
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }

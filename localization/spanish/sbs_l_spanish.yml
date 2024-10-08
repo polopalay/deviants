@@ -71,6 +71,8 @@
 
   succubus_buff: "Bendición del Diablo"
   succubus_buff_desc: "Esta persona ha sido bendecida por el Súcubo."
+  succubus_debuff: "Maldición del Diablo"
+  succubus_debuff_desc: "Esta persona ha sido maldecida por el Súcubo."
 
   succubus_generals: "General Demonio"
   succubus_generals_desc: "Los guerreros demoníacos son convocados para servir a la amante del diablo."

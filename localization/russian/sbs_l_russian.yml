@@ -70,6 +70,8 @@
 
   succubus_buff: "Благословение Дьявола"
   succubus_buff_desc: "Этот человек был благословлен Суккубом."
+  succubus_debuff: "Проклятие Дьявола"
+  succubus_debuff_desc: "Этот человек был проклят Суккубом."
 
   succubus_generals: "Дьявольский Генерал"
   succubus_generals_desc: "Воители дьявола призваны служить госпоже дьявола."

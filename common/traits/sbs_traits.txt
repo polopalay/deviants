@@ -25,7 +25,7 @@ sbs_demon = {
 			desc = sbs_demon_character_desc
 		}
 	}
-	opposites = { lesser_succubus incapable }
+	opposites = { sbs_succubus sbs_lesser_succubus seed_of_destruction incapable }
 
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
@@ -73,6 +73,8 @@ sbs_succubus = {
 	flag = immortal_incapability
 	flag = carn_cannot_be_enslaved
 
+	valid_sex = female
+
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
@@ -88,7 +90,7 @@ sbs_succubus = {
 		}
 	}
 
-	opposites = { demon lesser_succubus chaste incapable }
+	opposites = { sbs_demon sbs_lesser_succubus seed_of_destruction chaste incapable }
 
 	general_opinion = 5
 	monthly_lifestyle_xp_gain_mult = -1000
@@ -212,10 +214,12 @@ sbs_lesser_succubus = {
 	flag = immortal_incapability
 	flag = carn_cannot_be_enslaved
 
+	valid_sex = female
+
 	ai_greed = dominant_positive_ai_value
 	ai_zeal = dominant_negative_ai_value
 
-	opposites = { demon succubus chaste incapable }
+	opposites = { sbs_demon sbs_succubus seed_of_destruction chaste incapable }
 
 	name = trait_lesser_succubus_neutral
 
@@ -276,6 +280,51 @@ sbs_lesser_succubus = {
 			enemy_hostile_scheme_phase_duration_add = 50
 		}
 	}
+	ruler_designer_cost = 50
+}
+
+seed_of_destruction = {
+	category = health
+	icon = corruption.dds
+	
+	immortal = yes
+	can_have_children = no
+	no_prowess_loss_from_age = yes
+	add_commander_trait = yes
+
+	flag = is_immortal
+	flag = immortal_visuals
+	flag = immortal_fertility
+	flag = immortal_incapability
+	flag = carn_cannot_be_enslaved
+
+	valid_sex = male
+	opposites = { sbs_demon sbs_succubus sbs_lesser_succubus forgiving compassionate incapable }
+
+	ai_vengefulness = dominant_positive_ai_value
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = seed_of_destruction_desc
+			}
+			desc = seed_of_destruction_character_desc
+		}
+	}
+
+	monthly_lifestyle_xp_gain_mult = -1000
+	long_reign_bonus_mult = -1000
+	prowess = 6
+	martial = 6
+	intrigue = 6
+	health = 1
+	negate_health_penalty_add = 1
+	character_travel_speed = 1
+	character_travel_safety = 1
+	enemy_hostile_scheme_phase_duration_add = 10
 	ruler_designer_cost = 50
 }
 

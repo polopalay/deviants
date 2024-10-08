@@ -1,10 +1,10 @@
 ﻿l_english:
-  any_prisoner_count: "Any [prisoners|E]"
-  any_county_province: "Any [province|E]"
-# Opinions
+ any_prisoner_count: "Any [prisoners|E]"
+ any_county_province: "Any [province|E]"
+
  have_sex_opinion: "Had sex recently"
  be_healed_opinion: "Healed by black magic"
- # Artifacts
+
  magic_creation: "$trinket$"
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "Magic Creation"
@@ -18,10 +18,8 @@
  mistress_dildo: "Humble Guardian"
  mistress_dildo_desc: "Just looking at it makes lady parts pulse."
 
-# Effect
  prostitute_effect.tt: "[had_sex_root_character.GetShortUIName|U] lays with [had_sex_with_effect_partner.GetShortUIName]"
 
-# Nicknames
  nickname_the_bitch: "The Bitch"
  nickname_the_bitch_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is a horny bitch, willing to fuck without paying."
  
@@ -58,11 +56,9 @@
  nickname_the_devil_creation: "Demonic Creatures"
  nickname_the_devil_creation_desc: "Children born from the power of demons, destined to bring chaos and destruction to the world."
 
-# Titles
  d_laamp_satan: "Satan's Devils"
  d_laamp_abandon_warhorse: "Abaddon's Warhorses"
 
-# Men at Arms
  succubus_dark_amry: "Dark Army"
  succubus_dark_amry_flavor: "Dark Army"
  succubus_death_korps: "Death Korps"
@@ -72,9 +68,10 @@
  succubus_skeleton: "Skeleton"
  succubus_skeleton_flavor: "Skeleton"
 
-# Modifiers
  succubus_buff: "Devil's Blessing"
- succubus_buff_desc: "This person had been blessed by the Succubus."
+ succubus_buff_desc: "This person had been blessed by the Devil."
+ succubus_debuff: "Devil's Curse"
+ succubus_debuff_desc: "This person had been cursed by the Devil."
 
  succubus_generals: "Devil General"
  succubus_generals_desc: "The devil's warriors are summoned to serve the devil's mistress."

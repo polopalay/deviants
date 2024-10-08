@@ -8,7 +8,6 @@
   trait_sbs_succubus_male: "Incube"
   sbs_succubus_desc: "Certains l'ont vu, d'autres en ont entendu parler, tout le monde chuchote au sujet du comportement étrange de [ROOT.GetCharacter.GetNamePossessive]."
   sbs_succubus_character_desc: "Quoi qu'il y ait à l'intérieur, personne ne pense qu'il y a quelque chose d'étrange à propos de [ROOT.GetCharacter.GetName]."
-
   trait_track_corruption: "Déviant"
   trait_track_corruption_desc: "Des âmes qu'elle collecte, elle gagne plus de pouvoir pour invoquer des créatures monstrueuses."
   trait_track_power: "Pouvoir"
@@ -23,10 +22,13 @@
   trait_lesser_succubus_male: "Moins d'Incube"
   lesser_sbs_succubus_desc: "Quoi qu'il y ait à l'intérieur, personne ne pense qu'il y a quelque chose d'étrange à propos de [ROOT.GetCharacter.GetName]."
   lesser_sbs_succubus_character_desc: "La plupart des gens l'ont vu, tout le monde en a entendu parler. Le comportement de [ROOT.GetCharacter.GetNamePossessive] est moralement dépravé. Elle est évoquée avec le même mépris que l'on utiliserait pour parler d'une prostituée de rue ordinaire."
-
   trait_track_sbs_lesser_succubus: "Pouvoir"
   trait_track_sbs_lesser_succubus_desc: "Elle sert de prostituée bon marché, servant les hommes pour obtenir leur semence."
 
   trait_deviant_blood: "Sang du Diable"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName] est un enfant du diable."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] est un enfant du diable."
+
+  trait_seed_of_destruction: "Graine de destruction"
+  seed_of_destruction_desc: "[ROOT.GetCharacter.GetName] est donné par le diable, est un signe de destruction et de chaos."
+  seed_of_destruction_character_desc: "Les serviteurs d'Abaddon, qui apportent la destruction et le chaos dans le monde."

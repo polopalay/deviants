@@ -70,6 +70,8 @@
 
   succubus_buff: "Segen des Teufels"
   succubus_buff_desc: "Diese Person wurde von der Succubus gesegnet."
+  succubus_debuff: "Fluch des Teufels"
+  succubus_debuff_desc: "Diese Person wurde von der Succubus verflucht."
 
   succubus_generals: "Teufelsgeneral"
   succubus_generals_desc: "Die Krieger des Teufels werden gerufen, um der Herrin des Teufels zu dienen."

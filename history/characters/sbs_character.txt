@@ -12,8 +12,8 @@
 	religion = "lilith"
 	culture = "hebrew"
 	trait = greedy
-	trait = calm
 	trait = callous
+	trait = lustful
 	trait = education_intrigue_5
 	trait = sbs_demon
 	1.1.1 = {

@@ -70,6 +70,8 @@
 
  succubus_buff: "Bénédiction du Diable"
  succubus_buff_desc: "Cette personne a été bénie par le Succube."
+ succubus_debuff: "Malédiction du Diable"
+ succubus_debuff_desc: "Cette personne a été maudite par le Succube."
 
  succubus_generals: "Général du Diable"
  succubus_generals_desc: "Les guerriers du diable sont convoqués pour servir la maîtresse du diable."

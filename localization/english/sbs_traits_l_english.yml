@@ -28,3 +28,7 @@
  trait_deviant_blood: "Devil Blood"
  deviant_blood_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
  deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] is a child of the devil"
+
+ trait_seed_of_destruction: "Seed of destruction"
+ seed_of_destruction_desc: "[ROOT.GetCharacter.GetName] is given power by the devil, is a sign of destruction and chaos."
+ seed_of_destruction_character_desc: "The servants of abaddon, who bring destruction and chaos to the world."

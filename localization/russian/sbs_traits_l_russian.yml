@@ -8,7 +8,6 @@
   trait_sbs_succubus_male: "Инкуб"
   sbs_succubus_desc: "Некоторые видели это, другие слышали об этом, все шепчутся о странном поведении [ROOT.GetCharacter.GetNamePossessive]."
   sbs_succubus_character_desc: "Независимо от того, что внутри, никто не думает, что в [ROOT.GetCharacter.GetName] есть что-то странное."
-
   trait_track_corruption: "Отклонение"
   trait_track_corruption_desc: "Из собранных ей душ она получает больше силы для призыва чудовищ."
   trait_track_power: "Сила"
@@ -23,10 +22,13 @@
   trait_lesser_succubus_male: "Меньший Инкуб"
   lesser_sbs_succubus_desc: "Независимо от того, что внутри, никто не думает, что в [ROOT.GetCharacter.GetName] есть что-то странное."
   lesser_sbs_succubus_character_desc: "Большинство это видели, все об этом слышали. Поведение [ROOT.GetCharacter.GetNamePossessive] морально развращено. О ней говорят с таким же презрением, как о обычной уличной проститутке."
-
   trait_track_sbs_lesser_succubus: "Сила"
   trait_track_sbs_lesser_succubus_desc: "Она служит дешевой проституткой, обслуживая мужчин для получения их семени."
 
   trait_deviant_blood: "Кровь дьявола"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName] — дитя дьявола."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName] — дитя дьявола."
+  
+  trait_seed_of_destruction: "Семя разрушения"
+  seed_of_destruction_desc: "[ROOT.GetCharacter.GetName] дано дьяволом, это знак разрушения и хаоса."
+  seed_of_destruction_character_desc: "Слуги Абаддона, которые приносят разрушение и хаос в мир."

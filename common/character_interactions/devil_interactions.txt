@@ -467,6 +467,7 @@ ask_for_become_lesser_succubus_interaction = {
 
 	is_shown = {
 		scope:actor = {
+			is_female = yes
 			NOR = {
 				has_trait = sbs_demon
 				has_trait = sbs_succubus
@@ -1230,6 +1231,7 @@ succubus_create_lesser_succubus_interaction = {
 			}
 		}
 		scope:actor = {
+			is_female = yes
 			OR = {
 				has_trait = sbs_demon
 				has_trait = sbs_succubus

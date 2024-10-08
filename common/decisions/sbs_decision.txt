@@ -78,15 +78,12 @@ become_demon = {
 	is_shown = {
 		is_ai = no
 		is_ruler = yes
-		has_trait_xp = {
-			trait = sbs_succubus
-			track = corruption
-			value >= 100
-		}
-		has_trait_xp = {
-			trait = sbs_succubus
-			track = loyalty
-			value >= 100
+		OR = {
+			AND = {
+				has_trait_xp = { trait = sbs_succubus track = corruption value >= 100 }
+				has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
+			}
+			has_trait = seed_of_destruction
 		}
 	}
 	is_valid = {
@@ -99,7 +96,14 @@ become_demon = {
 				killer = root
 			}
 		}
-		remove_trait = sbs_succubus
+		if = {
+			limit = { has_trait = seed_of_destruction }
+			remove_trait = seed_of_destruction
+		}
+		if = {
+			limit = { has_trait = sbs_succubus }
+			remove_trait = sbs_succubus
+		}
 		add_trait = sbs_demon
 		set_immortal_age = 18
 	}

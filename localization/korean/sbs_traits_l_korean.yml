@@ -8,7 +8,6 @@
   trait_sbs_succubus_male: "인큐버스"
   sbs_succubus_desc: "어떤 사람은 보았고, 어떤 사람은 들었습니다. 모두가 [ROOT.GetCharacter.GetNamePossessive]의 이상한 행동에 대해 속삭이고 있습니다."
   sbs_succubus_character_desc: "내부가 무엇이든 간에, [ROOT.GetCharacter.GetName]에 대해 이상하다고 생각하는 사람은 없다."
-
   trait_track_corruption: "변태"
   trait_track_corruption_desc: "그녀가 수집한 영혼들로부터, 그녀는 괴물 같은 생물을 소환할 수 있는 더 많은 힘을 얻는다."
   trait_track_power: "힘"
@@ -23,10 +22,13 @@
   trait_lesser_succubus_male: "하위 인큐버스"
   lesser_sbs_succubus_desc: "내부가 무엇이든 간에, [ROOT.GetCharacter.GetName]에 대해 이상하다고 생각하는 사람은 없다."
   lesser_sbs_succubus_character_desc: "대부분이 보았고, 모두가 들었다. [ROOT.GetCharacter.GetNamePossessive]의 행동은 도덕적으로 타락해 있다. 그녀는 일반적인 거리 매춘부를 이야기할 때와 같은 경멸로 언급된다."
-  
   trait_track_sbs_lesser_succubus: "힘"
   trait_track_sbs_lesser_succubus_desc: "그녀는 저렴한 매춘부로서 남성들에게 그들의 정액을 얻기 위해 봉사한다."
 
   trait_deviant_blood: "악마의 피"
   deviant_blood_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 자식이다."
   deviant_blood_character_desc: "[ROOT.GetCharacter.GetName]은(는) 악마의 자식이다."
+
+  trait_seed_of_destruction: "파괴의 씨앗"
+  seed_of_destruction_desc: "[ROOT.GetCharacter.GetName]은(는) 악마로부터 권력을 받았으며, 파괴와 혼돈의 징후이다."
+  seed_of_destruction_character_desc: "파괴와 혼돈을 세계로 가져오는 아바돈의 하인들."
