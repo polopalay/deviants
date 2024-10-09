@@ -8,6 +8,7 @@
   relation_slave_owner_possessive: "owner's"
 
   carn_working_as_prostitute_1_modifier: "Working as a $trait_lifestyle_prostitute$"
+  carn_working_as_prostitute_1_modifier_desc: "This character is shamelessly selling their body to anyone with coin."
   recently_had_sex: "Had Sex Recently"
   recently_had_sex_desc: "This character had sex recently and hasn't been able to continue for a while."
   forced_labor: "Forced Labor"

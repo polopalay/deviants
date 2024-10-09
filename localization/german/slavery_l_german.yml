@@ -8,6 +8,7 @@
   relation_slave_owner_possessive: "des Sklavenhalters"
 
   carn_working_as_prostitute_1_modifier: "Arbeitet als $trait_lifestyle_prostitute$"
+  carn_working_as_prostitute_1_modifier_desc: "Diese Figur verkauft schamlos ihren Körper an jeden, der Münzen hat."
   recently_had_sex: "Hat Kürzlich Sex Hatte"
   recently_had_sex_desc: "Diese Figur hatte kürzlich sexuelle Beziehungen und konnte seit einiger Zeit nicht weitermachen."
   forced_labor: "Zwangsarbeit"

@@ -8,6 +8,7 @@
   relation_slave_owner_possessive: "奴隶主的"
 
   carn_working_as_prostitute_1_modifier: "作为$trait_lifestyle_prostitute$工作"
+  carn_working_as_prostitute_1_modifier_desc: "该角色不知廉耻地向肯出钱的人出卖自己的肉体。"
   recently_had_sex: "最近发生过性关系"
   recently_had_sex_desc: "这个角色最近发生过性关系，已经一段时间无法继续。"
   forced_labor: "强迫劳动"

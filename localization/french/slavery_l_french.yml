@@ -8,6 +8,7 @@
   relation_slave_owner_possessive: "du maître"
 
   carn_working_as_prostitute_1_modifier: "Travaille comme $trait_lifestyle_prostitute$"
+  carn_working_as_prostitute_1_modifier_desc: "Ce personnage vend sans honte son corps à quiconque a de l'argent."
   recently_had_sex: "A eu des Relations Sexuelles Récemment"
   recently_had_sex_desc: "Ce personnage a eu des relations sexuelles récemment et n'a pas pu continuer depuis un moment."
   forced_labor: "Travail Forcé"
