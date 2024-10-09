@@ -121,7 +121,6 @@ sexual = {
 				}
 
 				on_complete = {
-					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
 						random = { chance = 25
@@ -223,7 +222,6 @@ sexual = {
 				}
 
 				on_complete = {
-					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
 						random = { 
@@ -345,7 +343,6 @@ sexual = {
 				}
 
 				on_complete = {
-					lost_level_of_fame_piety = yes
 					if = {
 						limit = { have_devil_building_trigger = no }
 						random_list = {
@@ -549,7 +546,6 @@ witchcraft = {
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					promoted_legend ?= { save_scope_as = promoted_legend }
 					remove_legend_notification_variables_effect = yes
-					gain_level_of_fame_piety_f = yes
 					trigger_event = story_event_legends.0002
 				}
 			}
@@ -632,7 +628,6 @@ witchcraft = {
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					promoted_legend ?= { save_scope_as = promoted_legend }
 					remove_legend_notification_variables_effect = yes
-					gain_level_of_fame_piety_i = yes
 					trigger_event = story_event_legends.0002
 				}
 			}
@@ -726,7 +721,6 @@ witchcraft = {
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					promoted_legend ?= { save_scope_as = promoted_legend }
 					remove_legend_notification_variables_effect = yes
-					gain_level_of_fame_piety_m = yes
 					trigger_event = story_event_legends.0002
 				}
 			}

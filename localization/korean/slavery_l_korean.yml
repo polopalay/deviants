@@ -7,6 +7,7 @@
   relation_slave_owner: "주인"
   relation_slave_owner_possessive: "주인의"
 
+  carn_working_as_prostitute_1_modifier: "성매매로 일함"
   recently_had_sex: "최근 성관계"
   recently_had_sex_desc: "이 캐릭터는 최근에 성관계를 가졌으며, 잠시 동안 계속할 수 없었습니다."
   forced_labor: "강제 노동"

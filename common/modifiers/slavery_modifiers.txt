@@ -1,5 +1,10 @@
-recently_had_sex = {
+carn_working_as_prostitute_1_modifier = {
 	icon = prostitute_positive
+	spouse_opinion = -10
+}
+
+recently_had_sex = {
+	icon = prostitute_negative
 	health = -0.25
 }
 
