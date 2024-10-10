@@ -288,7 +288,7 @@ seed_of_destruction = {
 	icon = corruption.dds
 	
 	immortal = yes
-	can_have_children = no
+	can_have_children = yes
 	no_prowess_loss_from_age = yes
 	add_commander_trait = yes
 

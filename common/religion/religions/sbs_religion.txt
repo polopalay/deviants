@@ -216,6 +216,7 @@ satanic_religion = {
 			doctrine = doctrine_concubines
 		}
 		lilith = {
+			religious_head = d_lilith
 			color = { 238 115 221 }
 			icon = custom_faith_black_sheep
 
@@ -232,6 +233,7 @@ satanic_religion = {
 			doctrine = doctrine_deviancy_virtuous
 		}
 		abaddon = {
+			religious_head = d_abandon
 			color = { 139 0 0 }
 			icon = custom_faith_pentagram_inverted
 

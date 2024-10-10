@@ -913,10 +913,6 @@ succubus_absorb_interaction = {
 	common_interaction = yes
 	cooldown = { years = 10 }
 	is_shown = {
-		scope:actor = {
-			is_ruler = yes
-			NOT = { is_at_war_with = scope:recipient }
-		}
 		OR = {
 			AND = {
 				scope:actor = { has_trait = sbs_lesser_succubus }
@@ -1009,11 +1005,22 @@ succubus_absorb_interaction = {
 				}
 			}
 		}
+		scope:actor = {
+			is_ruler = yes
+			NOT = { is_at_war_with = scope:recipient }
+		}
 		scope:recipient = {
 			OR = {
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
+				is_parent_of = scope:actor
+				is_child_of = scope:actor
 			}
+		}
+	}
+	is_valid = {
+		scope:recipient = {
+			NOT = { has_character_modifier = succubus_buff }
 		}
 	}
 	send_option = {
@@ -1196,9 +1203,24 @@ succubus_absorb_interaction = {
 			}
 		}
 	}
-	auto_accept = yes
+	auto_accept = {
+		scope:recipient = {
+			is_courtier_of = scope:actor
+		}
+	}
+	ai_accept = {
+		base = -25
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.5
+		}
+		modifier = { add = 20 scope:recipient = { is_vassal_of = scope:actor } } 
+		modifier = { add = 25 scope:recipient = { is_parent_of = scope:actor } }
+	}
 	ai_frequency = 12
 	ai_targets = {
+		ai_recipients = family
 		ai_recipients = courtiers
 		ai_recipients = vassals
 	}

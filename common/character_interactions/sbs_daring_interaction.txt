@@ -722,6 +722,11 @@ succubus_mind_break_interaction = {
 		scope:recipient = {
 			hidden_effect = {
 				if = {
+					limit = { is_ai = yes }
+					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+					add_character_flag = carn_wants_to_be_a_slave
+				}
+				if = {
 					limit = { is_female = yes }
 					mind_break_personality = yes
 				}
@@ -730,6 +735,7 @@ succubus_mind_break_interaction = {
 						limit = { has_character_modifier = succubus_debuff }
 						random = {
 							chance = 25
+							modifier = { has_trait = deviant_blood add = 25 }
 							modifier = { has_trait = vengeful add = 10 }
 							modifier = { has_trait = callous add = 10 }
 							modifier = { has_trait = sadistic add = 10 }
@@ -737,17 +743,14 @@ succubus_mind_break_interaction = {
 							modifier = { has_trait = forgiving add = -10 }
 							modifier = { has_trait = compassionate add = -10 }
 							remove_character_modifier = succubus_debuff
+							remove_character_flag = carn_wants_to_be_a_slave
+							remove_trait = deviant_blood
 							add_trait = seed_of_destruction
 						}
 					}
 					else = {
 						add_character_modifier = succubus_debuff
 					}
-				}
-				if = {
-					limit = { is_ai = yes }
-					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
-					add_character_flag = carn_wants_to_be_a_slave
 				}
 			}
 			add_character_modifier = succubus_buff

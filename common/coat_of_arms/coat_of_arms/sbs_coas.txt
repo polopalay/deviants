@@ -25,3 +25,31 @@
 
 	}
 }
+
+d_lilith = {
+	pattern="pattern_solid.dds"
+	color1=purple
+	colored_emblem={
+		color1=grey
+		color2=black
+		texture="ce_fleece.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+		}
+
+	}
+}
+
+d_abandon = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=black
+		color2=grey
+		texture="ce_swords_crossed.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+		}
+
+	}
+}

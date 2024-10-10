@@ -14,24 +14,25 @@ succubus_dark_amry = {
 	}
 
 	stack = 100
-	max_sub_regiments = 13
+	max_sub_regiments = 10
 	can_recruit = {
 		OR = {
 			has_trait = sbs_demon
 			has_trait = sbs_succubus
 			has_trait = sbs_lesser_succubus
+			has_trait = seed_of_destruction
 		}
 	}
-	buy_cost = { gold = 150 }
-	low_maintenance_cost = { gold = 0.2 }
-	high_maintenance_cost = { gold = 0.5 }
-	ai_quality = { value = 80 }
+
+	buy_cost = { gold = heavy_infantry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+	ai_quality = { value = 100 }
 }
 
 succubus_death_korps  = {
 	icon = heavy_infantry
 	type = heavy_infantry
-	can_recruit = { always = no }
 
 	pursuit = 100
 	screen = 100
@@ -47,9 +48,15 @@ succubus_death_korps  = {
 	}
 
 	stack = 100
-	buy_cost = { gold = 0 }
-	low_maintenance_cost = { gold = 0 }
-	high_maintenance_cost = { gold = 0 }
+	max_sub_regiments = 10
+	can_recruit = {
+		has_trait = sbs_demon
+	}
+
+	buy_cost = { gold = heavy_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_cavalry_high_maint_cost }
+	ai_quality = { value = 100 }
 }
 
 succubus_zombie = {
@@ -75,6 +82,7 @@ succubus_zombie = {
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
+	ai_quality = { value = culture_ai_weight_skirmishers }
 }
 
 succubus_skeleton = {
@@ -100,4 +108,5 @@ succubus_skeleton = {
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
+	ai_quality = { value = culture_ai_weight_skirmishers }
 }
