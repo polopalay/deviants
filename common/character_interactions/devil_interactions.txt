@@ -1403,6 +1403,7 @@ succubus_create_succubus_interaction = {
 					}
 				}
 			}
+			remove_trait = sbs_lesser_succubus
 			add_trait = sbs_succubus
 			set_immortal_age = 18
 		}

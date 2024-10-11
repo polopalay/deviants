@@ -50,7 +50,16 @@ become_demon = {
 		}
 	}
 	is_valid = {
-		any_prisoner = { count >= 666 }
+		OR = {
+			AND = {
+				has_trait = sbs_succubus
+				any_prisoner = { count >= 13 }
+			}
+			AND = {
+				has_trait = seed_of_destruction
+				any_prisoner = { count >= 666 }
+			}
+		}
 	}
 	effect = {
 		every_prisoner = {
