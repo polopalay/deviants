@@ -691,7 +691,10 @@ succubus_mind_break_interaction = {
 		}
 		scope:recipient = {
 			OR = {
-				is_female = no
+				NOT = {
+					is_female = yes
+					has_trait = seed_of_destruction
+				}
 				NOT = { has_trait = lustful }
 				NOR = {
 					has_trait = deviant
@@ -745,6 +748,7 @@ succubus_mind_break_interaction = {
 							remove_character_modifier = succubus_debuff
 							remove_character_flag = carn_wants_to_be_a_slave
 							remove_trait = deviant_blood
+							set_immortal_age = 18
 							add_trait = seed_of_destruction
 						}
 					}

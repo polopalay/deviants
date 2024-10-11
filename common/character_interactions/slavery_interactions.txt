@@ -339,12 +339,9 @@ carn_free_slave_interaction = {
 	
 	send_options_exclusive = no
 	on_accept = {
-		if = {
-			limit = { scope:actor = { has_relation_slave = scope:recipient } }
-			scope:actor = { save_scope_as = owner }
-			scope:recipient = { save_scope_as = slave }
-			carn_free_slave_effect = yes
-		}
+		scope:actor = { save_scope_as = owner }
+		scope:recipient = { save_scope_as = slave }
+		carn_free_slave_effect = yes
 	}
 	ai_targets = {
 		ai_recipients = family
@@ -355,7 +352,7 @@ carn_free_slave_interaction = {
 	ai_potential = { always = yes }
 	ai_frequency = 12
 	ai_accept = {
-		base = 0
+		base = 5
 		modifier = {
 			scope:recipient = {
 				NOR = {
@@ -494,6 +491,7 @@ carn_free_slave_interaction = {
 		}
 	}
 }
+
 forced_labor_interaction = {
 	icon = forced_labor_interaction
 	category = interaction_category_prison

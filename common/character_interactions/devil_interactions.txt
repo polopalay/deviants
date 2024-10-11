@@ -1,41 +1,4 @@
-﻿sbs_switch_body_interaction = {
-	icon = two_body
-	desc = sbs_switch_body_interaction.desc
-	category = interaction_category_diplomacy
-	interface_priority = 1
-	common_interaction = yes
-	use_diplomatic_range = yes
-	is_shown = {
-		NOT = { scope:recipient = scope:actor }
-		scope:actor = {
-			is_ai = no
-		}
-		scope:recipient = {
-			is_ruler = yes
-			primary_title.tier >= tier_county
-		}
-		OR = {
-			AND = {
-				scope:actor = { has_trait = sbs_lesser_succubus }
-				scope:recipient = { has_trait = sbs_lesser_succubus }
-			}
-			AND = {
-				scope:actor = { has_trait = sbs_succubus }
-				scope:recipient = { has_trait = sbs_succubus }
-			}
-			AND = {
-				scope:actor = { has_trait = sbs_demon }
-				scope:recipient = { has_trait = sbs_demon }
-			}
-		}
-	}
-	on_accept = {
-		scope:actor = { set_player_character = scope:recipient }
-	}
-	auto_accept = yes
-}
-
-deal_with_the_devil_interaction = {
+﻿deal_with_the_devil_interaction = {
 	icon = fascinate
 	desc = deal_with_the_devil_interaction.desc
 	category = interaction_category_diplomacy

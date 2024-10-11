@@ -1225,7 +1225,7 @@ succubus_child_interaction = {
 		base = 0
 		modifier = { add = 5 scope:recipient = scope:actor scope:recipient = { any_child = { is_alive = yes count = 0 } } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
-		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } scope:recipient = { any_child = { is_alive = yes count = 0 } } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
 	}
