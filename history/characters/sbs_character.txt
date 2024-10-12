@@ -1,4 +1,59 @@
-﻿lilith_character = {
+﻿lilim_character = {
+	name = "Lilim"
+	dna = lilim_dna
+	dynasty = 666666
+	mother = lilith_character
+	father = abaddon_character
+	martial = 6
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 6
+	learning = 6
+	prowess = 6
+	female = yes
+	religion = "lilith"
+	culture = "hebrew"
+	trait = greedy
+	trait = sadistic
+	trait = lustful
+	trait = education_martial_3
+	trait = education_intrigue_3
+	trait = sbs_lesser_succubus
+	666.1.1 = {
+		birth = "666.6.13"
+		effect = {
+			give_nickname = nickname_the_devil_creation
+			add_character_flag = has_scripted_appearance
+			add_character_flag = do_not_generate_starting_family
+			add_secret = { type = secret_deviant }
+			add_secret = { type = secret_witch }
+			set_immortal_age = 18
+		}
+	}
+	666.12.13 = {
+		effect = {
+			set_landless_government_effect = yes
+		}
+	}
+	1066.1.1 = {
+		effect = {
+			remove_trait = sbs_lesser_succubus
+			add_trait = sbs_succubus
+			set_immortal_age = 18
+			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = power value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = daring value = 25 }
+		}
+	}
+	1178.1.1 = {
+		effect = {
+			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
+		}
+	}
+}
+
+lilith_character = {
 	name = "Lilith"
 	dna = lilith_dna
 	dynasty = 666666
@@ -67,57 +122,117 @@ abaddon_character = {
 	}
 }
 
-lilim_character = {
-	name = "Lilim"
-	dna = lilim_dna
-	dynasty = 666666
-	mother = lilith_character
-	father = abaddon_character
+beelzebub_character = {
+	name = "Beelzebub"
+	dna = beelzebub_dna
+	dynasty = 888888
 	martial = 13
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 6
-	learning = 6
+	diplomacy = 13
+	intrigue = 13
+	stewardship = 13
+	learning = 13
 	prowess = 13
 	female = yes
-	religion = "lilith"
-	culture = "hebrew"
+	religion = "beelzebub"
+	culture = "gothic"
+	trait = patient
+	trait = content
 	trait = greedy
-	trait = sadistic
-	trait = lustful
-	trait = education_martial_3
-	trait = education_intrigue_3
-	trait = sbs_lesser_succubus
-	666.1.1 = {
-		birth = "666.6.13"
+	trait = education_learning_5
+	trait = sbs_demon
+	1.1.1 = {
+		birth = "1.1.1"
 		effect = {
-			give_nickname = nickname_the_devil_creation
+			give_nickname = nickname_the_demon_queen
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
-			add_secret = { type = secret_deviant }
-			add_secret = { type = secret_witch }
 			set_immortal_age = 18
-		}
-	}
-	666.12.13 = {
-		effect = {
-			set_landless_government_effect = yes
-		}
-	}
-	1066.1.1 = {
-		effect = {
-			remove_trait = sbs_lesser_succubus
-			add_trait = sbs_succubus
-			set_immortal_age = 18
-			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
-			add_trait_xp = { trait = sbs_succubus track = power value = 33 }
-			add_trait_xp = { trait = sbs_succubus track = daring value = 25 }
-		}
-	}
-	1178.1.1 = {
-		effect = {
-			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
-			add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
 		}
 	}
 }
+
+mammon_character = {
+	name = "Mammon"
+	dna = mammon_dna
+	dynasty = 999999
+	martial = 13
+	diplomacy = 13
+	intrigue = 13
+	stewardship = 13
+	learning = 13
+	prowess = 13
+	religion = "mammon"
+	culture = "hunnic"
+	trait = just
+	trait = diligent
+	trait = brave
+	trait = education_martial_5
+	trait = sbs_demon
+	1.1.1 = {
+		birth = "1.1.1"
+		effect = {
+			give_nickname = nickname_the_demon_king
+			add_character_flag = has_scripted_appearance
+			add_character_flag = do_not_generate_starting_family
+			set_immortal_age = 18
+		}
+	}
+}
+
+asmodeus_character = {
+	name = "Asmodeus"
+	dna = asmodeus_dna
+	dynasty = 13131313
+	martial = 13
+	diplomacy = 13
+	intrigue = 13
+	stewardship = 13
+	learning = 13
+	prowess = 13
+	religion = "asmodeus"
+	culture = "trojan"
+	trait = calm
+	trait = just
+	trait = lustful
+	trait = education_diplomacy_5
+	trait = sbs_demon
+	1.1.1 = {
+		birth = "1.1.1"
+		effect = {
+			give_nickname = nickname_the_demon_king
+			add_character_flag = has_scripted_appearance
+			add_character_flag = do_not_generate_starting_family
+			set_immortal_age = 18
+		}
+	}
+}
+
+belial_character = {
+	name = "Belial"
+	dna = belial_dna
+	dynasty = 148148148
+	martial = 13
+	diplomacy = 13
+	intrigue = 13
+	stewardship = 13
+	learning = 13
+	prowess = 13
+	female = yes
+	religion = "belial"
+	culture = "ancient_egyptian"
+	trait = ambitious
+	trait = stubborn
+	trait = greedy
+	trait = education_stewardship_5
+	trait = sbs_demon
+	1.1.1 = {
+		birth = "1.1.1"
+		effect = {
+			give_nickname = nickname_the_demon_queen
+			add_character_flag = has_scripted_appearance
+			add_character_flag = do_not_generate_starting_family
+			set_immortal_age = 18
+		}
+	}
+}
+

@@ -4,7 +4,26 @@
 }
 
 777777 = {
-	name = "trait_sbs_demon"
+	name = "d_abandon"
 	culture = "macedonian"
 }
 
+888888 = {
+	name = "d_beelzebub"
+	culture = "gothic"
+}
+
+999999 = {
+	name = "d_mammon"
+	culture = "hunnic"
+}
+
+13131313 = {
+	name = "d_asmodeus"
+	culture = "trojan"
+}
+
+14881488 = {
+	name = "d_belial"
+	culture = "ancient_egyptian"
+}

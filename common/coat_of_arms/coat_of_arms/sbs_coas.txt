@@ -1,4 +1,4 @@
-﻿666666 = {
+﻿666666={
 	pattern="pattern_solid.dds"
 	color1=purple
 	colored_emblem={
@@ -12,7 +12,7 @@
 	}
 }
 
-777777 = {
+777777={
 	pattern="pattern_solid.dds"
 	color1=red
 	colored_emblem={
@@ -26,7 +26,77 @@
 	}
 }
 
-d_lilith = {
+888888={
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	colored_emblem={
+		color1=yellow
+		color2=white
+		color3=black
+		texture="ce_dragon_fylfot.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+			scale={ 1.100000 1.100000 }
+		}
+
+	}
+
+}
+
+999999={
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=red
+	color3=yellow
+	color4=white
+	colored_emblem={
+		color1=yellow
+		color2=black
+		texture="ce_bull_head.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+		}
+
+	}
+}
+
+13131313={
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=blue
+	color3=white
+	color4=yellow
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_african_circles.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+		}
+
+	}
+}
+
+148148148={
+	pattern="pattern_vertical_split_01.dds"
+	color1=black
+	color2=red
+	color3=white
+	color4=white
+	colored_emblem={
+		color1=yellow
+		color2=white
+		texture="ce_african_ceremonial_mask_02.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+		}
+
+	}
+
+}
+
+d_lilith={
 	pattern="pattern_solid.dds"
 	color1=purple
 	colored_emblem={
@@ -40,7 +110,7 @@ d_lilith = {
 	}
 }
 
-d_abandon = {
+d_abandon={
 	pattern="pattern_solid.dds"
 	color1=red
 	colored_emblem={
@@ -49,6 +119,74 @@ d_abandon = {
 		texture="ce_swords_crossed.dds"
 		instance={
 			position={ 0.500000 0.520000 }
+		}
+
+	}
+}
+
+d_beelzebub={
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	colored_emblem={
+		color1=yellow
+		color2=white
+		color3=black
+		texture="ce_dragon_fylfot.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+			scale={ 1.100000 1.100000 }
+		}
+
+	}
+}
+
+d_mammon={
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=red
+	color3=yellow
+	color4=white
+	colored_emblem={
+		color1=yellow
+		color2=black
+		texture="ce_bull_head.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+		}
+
+	}
+}
+
+d_belial={
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=blue
+	color3=white
+	color4=yellow
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_african_circles.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+		}
+
+	}
+}
+
+d_asmodeus={
+	pattern="pattern_vertical_split_01.dds"
+	color1=black
+	color2=red
+	color3=white
+	color4=white
+	colored_emblem={
+		color1=yellow
+		color2=white
+		texture="ce_african_ceremonial_mask_02.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
 		}
 
 	}

@@ -32,6 +32,7 @@
 				has_trait = profligate
 				has_trait = seducer
 				has_trait = paranoid
+				scope:actor = { faith = { has_doctrine = tenet_polyamory } }
 			}
 		}
 		scope:recipient = {
@@ -163,6 +164,7 @@
 		modifier = { add = -10 scope:actor = { has_trait = disfigured } }
 		modifier = { add = -25 scope:recipient = { is_close_family_of = scope:actor faith = { NOT = { has_doctrine = tenet_divine_marriage } } } }
 		modifier = { add = -50 scope:actor = { has_std_trigger = yes } }
+		modifier = { add = 10 scope:recipient = { faith = { has_doctrine = tenet_polyamory } } }
 		modifier = {
 			desc = cant_have_sex_without_contraception
 			add = -25
@@ -233,6 +235,7 @@
 		modifier = { add = 10 scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
 		modifier = { add = 5 scope:actor = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } scope:use_contraception = yes }
 		modifier = { add = -20 scope:actor = { is_close_family_of = scope:recipient faith = { NOT = { has_doctrine = tenet_divine_marriage } } } }
+		modifier = { add = 10 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
 	}
 }
 

@@ -46,3 +46,75 @@ d_abandon = {
 	always_follows_primary_heir = yes
 	de_jure_drift_disabled = yes
 }
+
+d_beelzebub = {
+	color = { 154 205 50 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+
+	capital = c_cologne
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	destroy_if_invalid_heir = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+}
+
+d_mammon = {
+	color = { 255 215 0 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+
+	capital = c_esztergom
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	destroy_if_invalid_heir = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+}
+
+d_asmodeus = {
+	color = { 0 0 139 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+
+	capital = c_byzantion
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	destroy_if_invalid_heir = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+}
+
+d_belial = {
+	color = { 255 0 0 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+
+	capital = c_alexandria
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	destroy_if_invalid_heir = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+}

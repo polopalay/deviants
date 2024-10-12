@@ -200,12 +200,13 @@ satanic_religion = {
 
 	faiths = {
 		beelzebub = {
+			religious_head = d_beelzebub
 			color = { 50 50 255 }
 			icon = custom_faith_10
 
 			holy_site = jerusalem
 			holy_site = rome
-			holy_site = alexandria
+			holy_site = cologne
 			holy_site = antioch
 			holy_site = kent
 
@@ -223,7 +224,7 @@ satanic_religion = {
 			holy_site = jerusalem
 			holy_site = rome
 			holy_site = cologne
-			holy_site = kent
+			holy_site = alexandria
 			holy_site = constantinople
 
 			doctrine = tenet_carnal_exaltation
@@ -252,14 +253,15 @@ satanic_religion = {
 			doctrine = doctrine_pluralism_fundamentalist
 		}
 		mammon = {
+			religious_head = d_mammon
 			color = { 255 215 0 }
 			icon = custom_faith_fp1_thors_hammer
 
-			holy_site = jerusalem
 			holy_site = rome
-			holy_site = cologne
-			holy_site = kent
 			holy_site = constantinople
+			holy_site = visoki
+			holy_site = ragusa
+			holy_site = esztergom
 
 			doctrine = tenet_hedonistic
 			doctrine = tenet_communal_possessions
@@ -268,6 +270,7 @@ satanic_religion = {
 			doctrine = doctrine_funeral_sky_burial
 		}
 		asmodeus = {
+			religious_head = d_asmodeus
 			color = { 255 0 0 }
 			icon = custom_faith_lamb
 
@@ -284,13 +287,14 @@ satanic_religion = {
 			doctrine = doctrine_pluralism_fundamentalist
 		}
 		belial = {
+			religious_head = d_belial
 			color = { 247 185 238 }
 			icon = custom_faith_eye_of_providence
 
 			holy_site = jerusalem
 			holy_site = rome
 			holy_site = cologne
-			holy_site = antioch
+			holy_site = alexandria
 			holy_site = constantinople
 
 			doctrine = tenet_esotericism

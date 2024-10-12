@@ -735,7 +735,7 @@ succubus_mind_break_interaction = {
 				}
 				else = {
 					if = {
-						limit = { has_character_modifier = succubus_debuff }
+						limit = { has_character_modifier = succubus_debuff NOT = { has_trait = seed_of_destruction } }
 						random = {
 							chance = 25
 							modifier = { has_trait = deviant_blood add = 25 }
@@ -752,7 +752,8 @@ succubus_mind_break_interaction = {
 							add_trait = seed_of_destruction
 						}
 					}
-					else = {
+					else_if = {
+						limit = { NOT = { has_trait = seed_of_destruction } }
 						add_character_modifier = succubus_debuff
 					}
 				}
