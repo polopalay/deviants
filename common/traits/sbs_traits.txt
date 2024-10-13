@@ -299,7 +299,7 @@ seed_of_destruction = {
 	flag = carn_cannot_be_enslaved
 
 	valid_sex = male
-	opposites = { sbs_demon sbs_succubus sbs_lesser_succubus forgiving compassionate incapable }
+	opposites = { sbs_demon sbs_succubus sbs_lesser_succubus incapable }
 
 	ai_vengefulness = dominant_positive_ai_value
 
