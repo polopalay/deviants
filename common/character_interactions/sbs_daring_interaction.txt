@@ -752,11 +752,11 @@ succubus_mind_break_interaction = {
 			else_if = {
 				limit = { has_character_modifier = succubus_debuff }
 				random = {
-					chance = 25
-					modifier = { has_trait = deviant_blood add = 50 }
-					modifier = { has_trait = vengeful add = 10 }
-					modifier = { has_trait = callous add = 10 }
-					modifier = { has_trait = sadistic add = 10 }
+					chance = 5
+					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { has_trait = vengeful add = 5 }
+					modifier = { has_trait = callous add = 5 }
+					modifier = { has_trait = sadistic add = 5 }
 					modifier = { has_trait = wrathful add = 5 }
 					modifier = { has_trait = forgiving add = -10 }
 					modifier = { has_trait = compassionate add = -10 }
@@ -770,7 +770,7 @@ succubus_mind_break_interaction = {
 			else = {
 				add_character_modifier = { modifier = succubus_debuff years = 10 }
 			}
-			add_character_modifier = { modifier = succubus_debuff years = 10 }
+			add_character_modifier = { modifier = succubus_buff years = 10 }
 		}
 	}
 	ai_accept = {
@@ -798,9 +798,9 @@ succubus_mind_break_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } }
-		modifier = { add = 5 scope:recipient = { is_vassal_of = scope:actor } }
-		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 1 scope:recipient = { is_courtier_of = scope:actor } }
+		modifier = { add = 1 scope:recipient = { is_vassal_of = scope:actor } }
+		modifier = { add = 1 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
 		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 100 scope:recipient = { is_ai = no } }
 	}
