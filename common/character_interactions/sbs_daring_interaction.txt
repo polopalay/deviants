@@ -694,6 +694,7 @@ succubus_mind_break_interaction = {
 			}
 		}
 		scope:recipient = {
+			is_adult = yes
 			OR = {
 				NOT = {
 					is_female = yes
@@ -778,6 +779,7 @@ succubus_mind_break_interaction = {
 	}
 	ai_frequency = 12
 	ai_targets = {
+		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = prisoners
@@ -792,6 +794,7 @@ succubus_mind_break_interaction = {
 		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_vassal_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 100 scope:recipient = { is_ai = no } }
 	}
 }
