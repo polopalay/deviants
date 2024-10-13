@@ -440,7 +440,7 @@ ask_for_become_lesser_succubus_interaction = {
 		scope:recipient = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait = sbs_succubus
+				is_valid_construction_alchemy3_trigger = yes
 			}
 		}
 	}
@@ -1227,10 +1227,7 @@ succubus_create_lesser_succubus_interaction = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				AND = {
-					has_trait_xp = { trait = sbs_succubus track = corruption value >= 25 }
-					is_valid_construction_alchemy3_trigger = yes
-				}
+				is_valid_construction_alchemy3_trigger = yes
 			}
 		}
 		OR = {

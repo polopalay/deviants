@@ -1,6 +1,6 @@
 ﻿d_laamp_satan = {
 	color = { 139 0 0 }
-	capital = c_jerusalem
+	capital = c_acre
 
 	definite_form = yes
 	landless = yes
@@ -89,7 +89,7 @@ d_asmodeus = {
 	ruler_uses_title_name = no
 	landless = yes
 
-	capital = c_byzantion
+	capital = c_attica
 
 	ai_primary_priority = {
 		add = @always_primary_score

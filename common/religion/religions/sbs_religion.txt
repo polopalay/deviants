@@ -204,16 +204,17 @@ satanic_religion = {
 			color = { 50 50 255 }
 			icon = custom_faith_10
 
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = cologne
-			holy_site = antioch
+			holy_site = lyon
+			holy_site = santiago
+			holy_site = paderborn
+			holy_site = albi
 			holy_site = kent
 
-			doctrine = tenet_communal_possessions
-			doctrine = tenet_communal_identity
+			doctrine = tenet_natural_primitivism
+			doctrine = tenet_gruesome_festivals
 			doctrine = tenet_hedonistic
 
+			doctrine = doctrine_witchcraft_virtuous
 			doctrine = doctrine_concubines
 		}
 		lilith = {
@@ -222,10 +223,10 @@ satanic_religion = {
 			icon = custom_faith_black_sheep
 
 			holy_site = jerusalem
-			holy_site = rome
-			holy_site = cologne
-			holy_site = alexandria
-			holy_site = constantinople
+			holy_site = babylon
+			holy_site = sufed
+			holy_site = gerizim
+			holy_site = sinai
 
 			doctrine = tenet_carnal_exaltation
 			doctrine = tenet_divine_marriage
@@ -238,10 +239,10 @@ satanic_religion = {
 			color = { 139 0 0 }
 			icon = custom_faith_pentagram_inverted
 
-			holy_site = jerusalem
+			holy_site = athens
 			holy_site = rome
 			holy_site = cologne
-			holy_site = alexandria
+			holy_site = carthage
 			holy_site = constantinople
 
 			doctrine = tenet_armed_pilgrimages
@@ -274,8 +275,8 @@ satanic_religion = {
 			color = { 255 0 0 }
 			icon = custom_faith_lamb
 
-			holy_site = jerusalem
-			holy_site = rome
+			holy_site = carthage
+			holy_site = athens
 			holy_site = constantinople
 			holy_site = alexandria
 			holy_site = antioch
@@ -292,10 +293,10 @@ satanic_religion = {
 			icon = custom_faith_eye_of_providence
 
 			holy_site = jerusalem
-			holy_site = rome
-			holy_site = cologne
+			holy_site = sinai
+			holy_site = antioch
 			holy_site = alexandria
-			holy_site = constantinople
+			holy_site = aswan
 
 			doctrine = tenet_esotericism
 			doctrine = tenet_literalism
