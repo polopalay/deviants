@@ -241,7 +241,7 @@ satanic_religion = {
 
 			holy_site = athens
 			holy_site = rome
-			holy_site = cologne
+			holy_site = lyon
 			holy_site = carthage
 			holy_site = constantinople
 
