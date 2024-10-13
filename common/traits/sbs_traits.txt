@@ -46,14 +46,14 @@ sbs_demon = {
 	legitimacy_baseline_add = 1.3
 	monthly_dynasty_prestige = 1.3
 	monthly_prestige = 1.3
-	men_at_arms_maintenance = -0.6
+	men_at_arms_maintenance = -0.13
 	knight_effectivenesuccubus_mult = 0.6
 	monthly_piety = 0.6
 	no_water_crossing_penalty = yes
 	supply_duration = 0.6
 	stress_gain_mult = -0.6
-	movement_speed = 1.3
-	naval_movement_speed_mult = 1.3
+	movement_speed = 0.6
+	naval_movement_speed_mult = 0.6
 
 	ruler_designer_cost = 400
 }
@@ -166,7 +166,7 @@ sbs_succubus = {
 				martial = 2
 				prowess = 2
 				diplomacy = 2
-				men_at_arms_maintenance = -0.1
+				men_at_arms_maintenance = -0.02
 				knight_effectivenesuccubus_mult = 0.1
 				monthly_piety = 0.1
 				stress_gain_mult = -0.2
@@ -176,7 +176,7 @@ sbs_succubus = {
 				martial = 3
 				prowess = 3
 				diplomacy = 3
-				men_at_arms_maintenance = -0.2
+				men_at_arms_maintenance = -0.03
 				knight_effectivenesuccubus_mult = 0.2
 				monthly_piety = 0.2
 			}
@@ -185,14 +185,14 @@ sbs_succubus = {
 				martial = 4
 				prowess = 4
 				diplomacy = 4
-				men_at_arms_maintenance = -0.2
+				men_at_arms_maintenance = -0.05
 				knight_effectivenesuccubus_mult = 0.2
 				monthly_piety = 0.3
 				no_water_crossing_penalty = yes
 				supply_duration = 0.5
 				stress_gain_mult = -0.5
-				movement_speed = 1
-				naval_movement_speed_mult = 1
+				movement_speed = 0.5
+				naval_movement_speed_mult = 0.5
 			}
 		}
 	}

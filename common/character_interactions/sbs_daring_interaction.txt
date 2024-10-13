@@ -658,6 +658,7 @@ succubus_honor_interaction = {
 		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
+		ai_recipients = neighboring_rulers
 		max = 5
 	}
 	ai_potential = { always = yes }
@@ -667,10 +668,11 @@ succubus_honor_interaction = {
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:actor = { gold <= 0 } }
-		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
+		modifier = { add = 5 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
 	}
 }
 
@@ -780,15 +782,14 @@ succubus_mind_break_interaction = {
 		ai_recipients = courtiers
 		ai_recipients = scripted_relations
 		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
-		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
-		modifier = { add = 10 scope:recipient = { is_imprisoned_by = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { is_vassal_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
 		modifier = { add = 100 scope:recipient = { is_ai = no } }
 	}
 }

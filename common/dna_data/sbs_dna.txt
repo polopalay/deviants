@@ -457,6 +457,7 @@ beelzebub_dna={
  			succubus_womb={ "no_womb" 127 "no_womb" 127 }
  			succubus_marking={ "no_marking" 127 "no_marking" 127 }
  			horns={ "no_horns" 0 "no_horns" 0 }
+ 			accessory_genes={ "" 127 "" 127 }
  		}
  	}
 	enabled=yes
@@ -574,6 +575,7 @@ mammon_dna={
  			horns={ "no_horns" 0 "no_horns" 0 }
 	 		beards={ "ep3_beards_curly" 177 "no_beard" 0 }
 			gene_baldness={ "no_baldness" 127 "no_baldness" 127 }
+ 			accessory_genes={ "" 127 "" 127 }
 		}
 	}
 	enabled=yes
@@ -691,6 +693,7 @@ asmodeus_dna={
  			horns={ "no_horns" 0 "no_horns" 0 }
  			beards={ "fp2_beards_straight" 126 "no_beard" 0 }
 			gene_baldness={ "no_baldness" 127 "no_baldness" 127 }
+ 			accessory_genes={ "" 127 "" 127 }
  		}
 	}
 	enabled=yes
@@ -807,6 +810,7 @@ belial_dna={
  			succubus_marking={ "no_marking" 127 "no_marking" 127 }
  			horns={ "no_horns" 0 "no_horns" 0 }
  			hairstyles={ "indian_hairstyles_straight" 255 "all_hairstyles" 0 }
+ 			accessory_genes={ "" 127 "" 127 }
  		}
 	}
 	enabed=yes

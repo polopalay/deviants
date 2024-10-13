@@ -23,7 +23,7 @@
 	culture = "trojan"
 }
 
-14881488 = {
+14814813 = {
 	name = "d_belial"
 	culture = "ancient_egyptian"
 }

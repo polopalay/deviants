@@ -275,6 +275,8 @@ succubus_dealing_with_stress_interaction = {
 		ai_recipients = self
 		ai_recipients = family
 		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = neighboring_rulers
 		max = 5
 	}
 	ai_potential = { always = yes }
@@ -283,11 +285,11 @@ succubus_dealing_with_stress_interaction = {
 		modifier = { add = 100 scope:recipient = scope:actor }
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
-		modifier = { add = 5 scope:actor = { gold <= 0 } }
-		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
+		modifier = { add = 5 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
 	}
 
 }
@@ -651,6 +653,8 @@ succubus_heal_interaction = {
 		ai_recipients = self
 		ai_recipients = family
 		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = neighboring_rulers
 		max = 5
 	}
 	ai_potential = { always = yes }
@@ -659,11 +663,11 @@ succubus_heal_interaction = {
 		modifier = { add = 100 scope:recipient = scope:actor }
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
-		modifier = { add = 5 scope:actor = { gold <= 0 } }
-		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
+		modifier = { add = 5 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
 	}
 }
 
@@ -967,6 +971,8 @@ succubus_purify_interaction = {
 		ai_recipients = self
 		ai_recipients = family
 		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = neighboring_rulers
 		max = 5
 	}
 	ai_potential = { always = yes }
@@ -975,11 +981,11 @@ succubus_purify_interaction = {
 		modifier = { add = 100 scope:recipient = scope:actor }
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
-		modifier = { add = 5 scope:actor = { gold <= 0 } }
-		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
+		modifier = { add = 5 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
 	}
 }
 
@@ -1218,6 +1224,7 @@ succubus_child_interaction = {
 		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
+		ai_recipients = neighboring_rulers
 		max = 5
 	}
 	ai_potential = { always = yes }
@@ -1225,8 +1232,9 @@ succubus_child_interaction = {
 		base = 0
 		modifier = { add = 5 scope:recipient = scope:actor scope:recipient = { any_child = { is_alive = yes count = 0 } } }
 		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
-		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } scope:recipient = { any_child = { is_alive = yes count = 0 } } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
+		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } scope:recipient = { any_child = { is_alive = yes count = 0 } } }
+		modifier = { add = 5 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
 	}
 }

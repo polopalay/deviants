@@ -78,7 +78,7 @@
 	}
 }
 
-148148148={
+14814813={
 	pattern="pattern_vertical_split_01.dds"
 	color1=black
 	color2=red
