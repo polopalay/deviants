@@ -317,15 +317,14 @@ seed_of_destruction = {
 
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
-	prowess = 6
-	martial = 6
-	intrigue = 6
+	prowess = 1
+	martial = 1
 	health = 1
 	negate_health_penalty_add = 1
 	character_travel_speed = 1
 	character_travel_safety = 1
 	enemy_hostile_scheme_phase_duration_add = 10
-	ruler_designer_cost = 50
+	ruler_designer_cost = 20
 }
 
 deviant_blood = {
@@ -343,20 +342,22 @@ deviant_blood = {
 		}
 	}
 
+	flag = carn_cannot_be_enslaved
+
 	birth = 0.1
 
-	diplomacy = 6
-	martial = 6
-	stewardship = 6
-	intrigue = 6
-	learning = 6
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
 
-	monthly_lifestyle_xp_gain_mult = 0.6
-	enemy_hostile_scheme_phase_duration_add = 60
+	monthly_lifestyle_xp_gain_mult = 0.1
+	enemy_hostile_scheme_phase_duration_add = 10
 
-	dread_decay_mult = -0.6
-	dread_baseline_add = 60
-	army_maintenance_mult = -0.6
+	dread_decay_mult = -0.1
+	dread_baseline_add = 10
+	army_maintenance_mult = -0.1
 
-	ruler_designer_cost = 50
+	ruler_designer_cost = 30
 }
