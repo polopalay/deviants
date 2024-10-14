@@ -51,11 +51,6 @@ sbs_travel.0100 = {
 		current_travel_plan = { delay_travel_plan = { days = 1 } }
 		add_piety = minor_piety_gain
 		hidden_effect = {
-			add_opinion = {
-				target = root
-				modifier = hate_opinion
-				opinion = -100
-			}
 			add_trait_xp = {
 				trait = sbs_succubus
 				track = daring

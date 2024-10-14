@@ -85,6 +85,26 @@
 				has_trait = physique_bad_2
 				has_trait = physique_bad_3
 				has_trait = inbred
+
+				has_trait = bastard
+				has_trait = legitimized_bastard
+				has_trait = disputed_heritage
+				has_trait = child_of_concubine_female
+				has_trait = child_of_concubine_male
+				has_trait = wild_oat
+				has_trait = bastard_founder
+				has_trait = witch
+				has_trait = deviant
+				has_trait = cannibal
+				has_trait = deviant
+				has_trait = adulterer
+				has_trait = sodomite
+				has_trait = incestuous
+				has_trait = fornicator
+				has_trait = kinslayer_1
+				has_trait = kinslayer_2
+				has_trait = kinslayer_3
+				has_trait = murderer
 			}
 			NOR = {
 				has_trait = sbs_demon
@@ -164,6 +184,7 @@
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
 			scope:actor = {
+				is_adult = yes
 				OR = {
 					NOT = {
 						has_trait = sbs_lesser_succubus
@@ -259,6 +280,38 @@
 			remove_trait = physique_bad_2
 			remove_trait = physique_bad_3
 			remove_trait = inbred
+
+			remove_trait = bastard
+			remove_trait = legitimized_bastard
+			remove_trait = disputed_heritage
+			remove_trait = child_of_concubine_female
+			remove_trait = child_of_concubine_male
+			remove_trait = wild_oat
+			remove_trait = bastard_founder
+			if = {
+				limit = { has_trait = witch }
+				remove_trait = witch
+				add_secret = { type = secret_witch is_known_by = scope:actor }
+			}
+			if = {
+				limit = { has_trait = deviant }
+				remove_trait = deviant
+				add_secret = { type = secret_deviant is_known_by = scope:actor }
+			}
+			if = {
+				limit = { has_trait = cannibal }
+				remove_trait = cannibal
+				add_secret = { type = secret_cannibal is_known_by = scope:actor }
+			}
+			remove_trait = adulterer
+			remove_trait = sodomite
+			remove_trait = incestuous
+			remove_trait = fornicator
+			remove_trait = kinslayer_1
+			remove_trait = kinslayer_2
+			remove_trait = kinslayer_3
+			remove_trait = murderer
+
 			hidden_effect = {
 				if = {
 					limit = { NOT = { has_trait = beauty_good_1 } }
