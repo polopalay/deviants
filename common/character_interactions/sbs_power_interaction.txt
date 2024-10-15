@@ -1127,11 +1127,6 @@ succubus_child_interaction = {
 		flag = small_price
 		localization = "small_price"
 	}
-	send_option = {
-		flag = female
-		localization = "Female"
-	}
-	send_options_exclusive = no
 	on_accept = {
 		scope:recipient = {
 			if = {
@@ -1176,7 +1171,7 @@ succubus_child_interaction = {
 				dynasty_house = house
 				culture = culture
 				faith = faith
-				gender_female_chance = { value = 0 if = { limit = { scope:female = yes } add = 100 } }
+				gender_female_chance = 50
 				trait = deviant_blood
 			}
 		}
@@ -1203,8 +1198,6 @@ succubus_child_interaction = {
 			multiplier = 0.1
 		}
 		modifier = { add = 25 scope:recipient = { any_child = { count = 0 } } }
-		modifier = { add = -20 scope:female = yes scope:recipient = { faith = { has_doctrine = doctrine_gender_male_dominated } } }
-		modifier = { add = -20 scope:female = no scope:recipient = { faith = { has_doctrine = doctrine_gender_female_dominated } } }
 		modifier = { add = -10 scope:gold = yes }
 		modifier = { add = -10 scope:hook = yes }
 		modifier = { add = -10 scope:favor = yes }
@@ -1234,14 +1227,10 @@ succubus_child_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 20 scope:recipient = scope:actor scope:female = no scope:recipient = { is_female = yes any_child = { is_alive = yes dynasty = scope:recipient.dynasty count = 0 } } }
-		modifier = { add = 20 scope:recipient = scope:actor scope:female = yes scope:recipient = { is_female = no any_child = { is_alive = yes dynasty = scope:recipient.dynasty count = 0 } } }
-		modifier = { add = 18 scope:recipient = { is_child_of = scope:actor } scope:female = no scope:recipient = { is_female = yes any_child = { is_alive = yes dynasty = scope:recipient.dynasty count = 0 } } }
-		modifier = { add = 18 scope:recipient = { is_child_of = scope:actor } scope:female = yes scope:recipient = { is_female = no any_child = { is_alive = yes dynasty = scope:recipient.dynasty count = 0 } } }
-		modifier = { add = 5 scope:recipient = scope:actor scope:female = no scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count < 2 } } }
-		modifier = { add = 5 scope:recipient = scope:actor scope:female = yes scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count < 2 } } }
-		modifier = { add = 2 scope:recipient = { is_child_of = scope:actor } scope:female = no scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count < 2 } } }
-		modifier = { add = 2 scope:recipient = { is_child_of = scope:actor } scope:female = yes scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count < 2 } } }
+		modifier = { add = 100 scope:recipient = scope:actor scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count = 0 } } }
+		modifier = { add = 18 scope:recipient = { is_child_of = scope:actor } scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count = 0 } } }
+		modifier = { add = 5 scope:recipient = scope:actor scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count < 2 } } }
+		modifier = { add = 2 scope:recipient = { is_child_of = scope:actor } scope:recipient = { any_child = { is_alive = yes dynasty = scope:recipient.dynasty count < 2 } } }
 		modifier = { add = 5 scope:demand_conversion = yes NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:forgive = yes scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
 		modifier = { add = 2 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
