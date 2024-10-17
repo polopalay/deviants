@@ -83,3 +83,11 @@
 
   cast_spell_recetly: "Недавно использованная магия"
   cast_spell_recetly_desc: "Недавно использованная магия, не может быть использована в течение некоторого времени."
+
+  action_can_offer_prostitute_combined_group_name: "Предложить проститутку"
+  action_can_offer_prostitute_combined_group_label: "Может предложить проститутку"
+  action_can_offer_prostitute_combined_group_description: "Вы можете предложить проститутку персонажам"
+  action_can_offer_prostitute_combined_label: "Предложить проститутку для [recipient.GetShortUIName|E]"
+  action_can_offer_prostitute: "Предложить проститутку"
+  action_can_offer_prostitute_desc: "Предложить [recipient.GetShortUIName] сексуальные услуги"
+  action_can_offer_prostitute_click: ""

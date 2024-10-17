@@ -83,3 +83,12 @@
 
   cast_spell_recetly: "최근 마법 사용"
   cast_spell_recetly_desc: "최근에 마법을 사용하였으므로 일정 시간 동안 사용할 수 없습니다."
+
+  action_can_offer_prostitute_combined_group_name: "성매매 제공"
+  action_can_offer_prostitute_combined_group_label: "성매매 제공 가능"
+  action_can_offer_prostitute_combined_group_description: "캐릭터에게 성매매를 제공할 수 있습니다"
+  action_can_offer_prostitute_combined_label: "[recipient.GetShortUIName|E]에게 성매매 제공"
+  action_can_offer_prostitute: "성매매 제공"
+  action_can_offer_prostitute_desc: "[recipient.GetShortUIName]에게 성적 서비스를 제공합니다"
+  action_can_offer_prostitute_click: ""
+

@@ -83,3 +83,12 @@
 
   cast_spell_recetly: "Vor kurzem Magie verwendet"
   cast_spell_recetly_desc: "Vor kurzem verwendete Magie, kann für eine gewisse Zeit nicht verwendet werden."
+
+  action_can_offer_prostitute_combined_group_name: "Prostituierte anbieten"
+  action_can_offer_prostitute_combined_group_label: "Kann Prostituierte anbieten"
+  action_can_offer_prostitute_combined_group_description: "Sie können einem Charakter eine Prostituierte anbieten"
+  action_can_offer_prostitute_combined_label: "Prostituierte für [recipient.GetShortUIName|E] anbieten"
+  action_can_offer_prostitute: "Prostituierte anbieten"
+  action_can_offer_prostitute_desc: "Bieten Sie [recipient.GetShortUIName] sexuelle Dienstleistungen an"
+  action_can_offer_prostitute_click: ""
+

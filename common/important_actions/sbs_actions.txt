@@ -1,0 +1,63 @@
+action_can_offer_prostitute = {
+	priority = 1000
+	combine_into_one = yes
+
+	check_create_action = {
+		if = {
+			limit = { is_valid_prostitute_trigger = yes }
+			add_to_list = prostitute_list
+			every_courtier = {
+				limit = {
+					is_valid_prostitute_trigger = yes
+				}
+				add_to_list = prostitute_list
+			}
+		}
+		if = {
+			limit = {
+				any_in_list = {
+					list = prostitute_list
+					count > 0
+				}
+			}
+			every_ruler = {
+				limit = {
+					in_diplomatic_range = root
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+					NOT = { is_at_war_with = scope:actor }
+					NOT = { has_character_modifier = recently_had_sex }
+					NOT = { has_trait = celibate }
+					OR = {
+						stress >= 1
+						has_trait = rakish
+						has_trait = lustful
+						has_trait = gluttonous
+						has_trait = profligate
+						has_trait = seducer
+						has_trait = deviant
+						has_trait = paranoid
+						any_secret = { secret_type = secret_deviant }
+					}
+					any_in_list = {
+						list = prostitute_list
+						prev = { is_attracted_to_gender_of = prev }
+					}
+				}
+				try_create_important_action = {
+					important_action_type = action_can_offer_prostitute
+					actor = root
+					recipient = this
+				}
+			}
+		}
+	}
+	effect = {
+		open_interaction_window = {
+			interaction = offer_prostitute_interaction
+			actor = scope:actor
+			recipient = scope:recipient
+		}
+	}
+}

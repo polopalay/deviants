@@ -83,3 +83,11 @@
 
  cast_spell_recetly: "Magie Récemment Utilisée"
  cast_spell_recetly_desc: "Magie récemment utilisée, ne peut pas être utilisée pendant un certain temps."
+
+ action_can_offer_prostitute_combined_group_name: "Offrir une prostituée"
+ action_can_offer_prostitute_combined_group_label: "Peut offrir une prostituée"
+ action_can_offer_prostitute_combined_group_description: "Vous pouvez offrir une prostituée aux personnages"
+ action_can_offer_prostitute_combined_label: "Offrir une prostituée à [recipient.GetShortUIName|E]"
+ action_can_offer_prostitute: "Offrir une prostituée"
+ action_can_offer_prostitute_desc: "Offrir des services sexuels à [recipient.GetShortUIName]"
+ action_can_offer_prostitute_click: ""

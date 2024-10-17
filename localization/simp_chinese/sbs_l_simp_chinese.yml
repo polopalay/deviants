@@ -81,3 +81,11 @@
 
  cast_spell_recetly: "最近使用魔法"
  cast_spell_recetly_desc: "最近使用的魔法，无法在一段时间内使用。"
+
+ action_can_offer_prostitute_combined_group_name: "提供妓女"
+ action_can_offer_prostitute_combined_group_label: "可以提供妓女"
+ action_can_offer_prostitute_combined_group_description: "您可以向角色提供妓女"
+ action_can_offer_prostitute_combined_label: "为[recipient.GetShortUIName|E]提供妓女"
+ action_can_offer_prostitute: "提供妓女"
+ action_can_offer_prostitute_desc: "为[recipient.GetShortUIName]提供性服务"
+ action_can_offer_prostitute_click: ""
