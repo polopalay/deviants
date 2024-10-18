@@ -11,9 +11,6 @@
  succubus_purify_interaction: "Purify"
  succubus_purify_interaction.desc: "Purify [recipient.GetShortUIName]'s bloodstream, eliminating all bad genes"
 
- succubus_imprison_interaction: "Imprison"
- succubus_imprison_interaction.desc: "Imprison [recipient.GetShortUIName] to your dungeon"
-
  succubus_mind_break_interaction: "The Devil's gift"
  succubus_mind_break_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
 
