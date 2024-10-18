@@ -13,6 +13,6 @@ language_demon = {
 		}
 	}
 	
-	color = gothic
+	color = demonic
 }
 
