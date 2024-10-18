@@ -211,8 +211,8 @@ satanic_religion = {
 			holy_site = kent
 
 			doctrine = tenet_natural_primitivism
-			doctrine = tenet_gruesome_festivals
-			doctrine = tenet_hedonistic
+			doctrine = tenet_sanctity_of_nature
+			doctrine = tenet_megaliths
 
 			doctrine = doctrine_witchcraft_virtuous
 			doctrine = doctrine_concubines
