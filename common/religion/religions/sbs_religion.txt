@@ -214,8 +214,7 @@ satanic_religion = {
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_megaliths
 
-			doctrine = doctrine_witchcraft_virtuous
-			doctrine = doctrine_concubines
+			doctrine = doctrine_funeral_sky_burial
 		}
 		lilith = {
 			religious_head = k_lilith
@@ -268,7 +267,7 @@ satanic_religion = {
 			doctrine = tenet_communal_possessions
 			doctrine = tenet_tax_nonbelievers
 
-			doctrine = doctrine_funeral_sky_burial
+			doctrine = doctrine_funeral_cremation
 		}
 		asmodeus = {
 			religious_head = k_asmodeus
