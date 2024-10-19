@@ -57,12 +57,12 @@
   nickname_the_devil_creation_desc: "Niños nacidos del poder de los demonios, destinados a traer caos y destrucción al mundo."
 
   d_laamp_satan: "Los Demonios de Satanás"
-  d_lilith: "La Puta de Lilith"
-  d_abandon: "Los Caballos de Guerra de Abaddon"
-  d_beelzebub: "La Enfermedad de Belcebú"
-  d_mammon: "El Guerrero de Mammon"
-  d_belial: "Los Hijos de Belial"
-  d_asmodeus: "Asmodeo y su Familia"
+  k_lilith: "La Puta de Lilith"
+  k_abandon: "Los Caballos de Guerra de Abaddon"
+  k_beelzebub: "La Enfermedad de Belcebú"
+  k_mammon: "El Guerrero de Mammon"
+  k_belial: "Los Hijos de Belial"
+  k_asmodeus: "Asmodeo y su Familia"
 
   succubus_dark_amry: "Ejército Oscuro"
   succubus_dark_amry_flavor: "Ejército Oscuro"

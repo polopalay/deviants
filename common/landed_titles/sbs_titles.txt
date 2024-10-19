@@ -11,7 +11,7 @@
 	ai_primary_priority = { add = @never_primary_score }
 }
 
-d_lilith = {
+k_lilith = {
 	color = { 225 105 180 }
 	definite_form = yes
 	ruler_uses_title_name = no
@@ -29,7 +29,7 @@ d_lilith = {
 	de_jure_drift_disabled = yes
 }
 
-d_abandon = {
+k_abandon = {
 	color = { 139 0 64 }
 	definite_form = yes
 	ruler_uses_title_name = no
@@ -47,7 +47,7 @@ d_abandon = {
 	de_jure_drift_disabled = yes
 }
 
-d_beelzebub = {
+k_beelzebub = {
 	color = { 154 205 50 }
 	definite_form = yes
 	ruler_uses_title_name = no
@@ -65,7 +65,7 @@ d_beelzebub = {
 	de_jure_drift_disabled = yes
 }
 
-d_mammon = {
+k_mammon = {
 	color = { 255 215 0 }
 	definite_form = yes
 	ruler_uses_title_name = no
@@ -83,7 +83,7 @@ d_mammon = {
 	de_jure_drift_disabled = yes
 }
 
-d_asmodeus = {
+k_asmodeus = {
 	color = { 0 0 139 }
 	definite_form = yes
 	ruler_uses_title_name = no
@@ -101,7 +101,7 @@ d_asmodeus = {
 	de_jure_drift_disabled = yes
 }
 
-d_belial = {
+k_belial = {
 	color = { 255 0 0 }
 	definite_form = yes
 	ruler_uses_title_name = no

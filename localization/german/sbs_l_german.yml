@@ -57,12 +57,12 @@
   nickname_the_devil_creation_desc: "Kinder, die aus der Macht der Dämonen geboren wurden, dazu bestimmt, Chaos und Zerstörung in die Welt zu bringen."
 
   d_laamp_satan: "Die Teufel von Satan"
-  d_lilith: "Liliths Hure"
-  d_abandon: "Abaddons Kriegspferde"
-  d_beelzebub: "Die Krankheit von Beelzebub"
-  d_mammon: "Mammons Krieger"
-  d_asmodeus: "Asmodeus' Dämonen"
-  d_belial: "Belials Kinder"
+  k_lilith: "Liliths Hure"
+  k_abandon: "Abaddons Kriegspferde"
+  k_beelzebub: "Die Krankheit von Beelzebub"
+  k_mammon: "Mammons Krieger"
+  k_asmodeus: "Asmodeus' Dämonen"
+  k_belial: "Belials Kinder"
 
   succubus_dark_amry: "Dunkle Armee"
   succubus_dark_amry_flavor: "Dunkle Armee"

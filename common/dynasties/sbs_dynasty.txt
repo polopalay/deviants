@@ -4,26 +4,26 @@
 }
 
 777777 = {
-	name = "d_abandon"
+	name = "k_abandon"
 	culture = "macedonian"
 }
 
 888888 = {
-	name = "d_beelzebub"
+	name = "k_beelzebub"
 	culture = "gothic"
 }
 
 999999 = {
-	name = "d_mammon"
+	name = "k_mammon"
 	culture = "hunnic"
 }
 
 13131313 = {
-	name = "d_asmodeus"
+	name = "k_asmodeus"
 	culture = "trojan"
 }
 
 14814813 = {
-	name = "d_belial"
+	name = "k_belial"
 	culture = "ancient_egyptian"
 }

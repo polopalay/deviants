@@ -41,7 +41,7 @@ satanic_religion = {
 		sins = { chaste honest compassionate forgiving temperate }
 	}
 	custom_faith_icons = {
-		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_dove custom_faith_ichthys custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
+		 benevolent blessed_child bull cross_crusader_wicked midgard munificent murder_jester murder_war bacchants norse_pagan ruthless sabianism sethianism teutonic virgin war_child nocturnal khajiit_mane kynareth mephala scaled_court
 	}
 
 	holy_order_maa = { succubus_dark_amry }
@@ -200,9 +200,9 @@ satanic_religion = {
 
 	faiths = {
 		beelzebub = {
-			religious_head = d_beelzebub
+			religious_head = k_beelzebub
 			color = { 50 50 255 }
-			icon = custom_faith_10
+			icon = clover
 
 			holy_site = lyon
 			holy_site = santiago
@@ -218,9 +218,9 @@ satanic_religion = {
 			doctrine = doctrine_concubines
 		}
 		lilith = {
-			religious_head = d_lilith
+			religious_head = k_lilith
 			color = { 238 115 221 }
-			icon = custom_faith_black_sheep
+			icon = murder_rose
 
 			holy_site = jerusalem
 			holy_site = babylon
@@ -235,9 +235,9 @@ satanic_religion = {
 			doctrine = doctrine_deviancy_virtuous
 		}
 		abaddon = {
-			religious_head = d_abandon
+			religious_head = k_abandon
 			color = { 139 0 0 }
-			icon = custom_faith_pentagram_inverted
+			icon = bloodthirsty
 
 			holy_site = athens
 			holy_site = rome
@@ -254,9 +254,9 @@ satanic_religion = {
 			doctrine = doctrine_pluralism_fundamentalist
 		}
 		mammon = {
-			religious_head = d_mammon
+			religious_head = k_mammon
 			color = { 255 215 0 }
-			icon = custom_faith_fp1_thors_hammer
+			icon = munificent
 
 			holy_site = rome
 			holy_site = constantinople
@@ -271,9 +271,9 @@ satanic_religion = {
 			doctrine = doctrine_funeral_sky_burial
 		}
 		asmodeus = {
-			religious_head = d_asmodeus
+			religious_head = k_asmodeus
 			color = { 255 0 0 }
-			icon = custom_faith_lamb
+			icon = family
 
 			holy_site = carthage
 			holy_site = athens
@@ -288,9 +288,9 @@ satanic_religion = {
 			doctrine = doctrine_pluralism_fundamentalist
 		}
 		belial = {
-			religious_head = d_belial
+			religious_head = k_belial
 			color = { 247 185 238 }
-			icon = custom_faith_eye_of_providence
+			icon = murder
 
 			holy_site = jerusalem
 			holy_site = sinai

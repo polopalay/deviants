@@ -57,12 +57,12 @@
   nickname_the_devil_creation_desc: "Дети, рожденные от силы демонов, предназначенные для принесения хаоса и разрушения в мир."
 
   d_laamp_satan: "Дьяволы Сатаны"
-  d_lilith: "Путана Лилит"
-  d_abandon: "Боевые лошади Абаддона"
-  d_beelzebub: "Болезнь Беельзебуба"
-  d_mammon: "Воин Маммона"
-  d_asmodeus: "Асмодей"
-  d_belial: "Дети Белиала"
+  k_lilith: "Путана Лилит"
+  k_abandon: "Боевые лошади Абаддона"
+  k_beelzebub: "Болезнь Беельзебуба"
+  k_mammon: "Воин Маммона"
+  k_asmodeus: "Асмодей"
+  k_belial: "Дети Белиала"
 
   succubus_dark_amry: "Темная армия"
   succubus_dark_amry_flavor: "Темная армия"

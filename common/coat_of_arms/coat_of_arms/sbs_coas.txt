@@ -96,7 +96,7 @@
 
 }
 
-d_lilith={
+k_lilith={
 	pattern="pattern_solid.dds"
 	color1=purple
 	colored_emblem={
@@ -110,7 +110,7 @@ d_lilith={
 	}
 }
 
-d_abandon={
+k_abandon={
 	pattern="pattern_solid.dds"
 	color1=red
 	colored_emblem={
@@ -124,7 +124,7 @@ d_abandon={
 	}
 }
 
-d_beelzebub={
+k_beelzebub={
 	pattern="pattern_solid.dds"
 	color1=green
 	color2=white
@@ -141,7 +141,7 @@ d_beelzebub={
 	}
 }
 
-d_mammon={
+k_mammon={
 	pattern="pattern_solid.dds"
 	color1=red
 	color2=red
@@ -158,7 +158,7 @@ d_mammon={
 	}
 }
 
-d_belial={
+k_belial={
 	pattern="pattern_solid.dds"
 	color1=yellow
 	color2=blue
@@ -175,7 +175,7 @@ d_belial={
 	}
 }
 
-d_asmodeus={
+k_asmodeus={
 	pattern="pattern_vertical_split_01.dds"
 	color1=black
 	color2=red

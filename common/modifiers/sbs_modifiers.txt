@@ -1,5 +1,5 @@
 cast_spell_recetly = {
-	icon = souls_positive
+	icon = souls_negative
 	health = -1
 }
 

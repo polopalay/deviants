@@ -1,39 +1,39 @@
-﻿d_lilith = {
+﻿k_lilith = {
 	6.1.3 = {
 		holder = lilith_character
 		government = theocracy_government
 	}
 }
 
-d_abandon = {
+k_abandon = {
 	6.1.3 = {
 		holder = abaddon_character
 		government = theocracy_government
 	}
 }
 
-d_beelzebub = {
+k_beelzebub = {
 	6.1.3 = {
 		holder = beelzebub_character
 		government = theocracy_government
 	}
 }
 
-d_mammon = {
+k_mammon = {
 	6.1.3 = {
 		holder = mammon_character
 		government = theocracy_government
 	}
 }
 
-d_belial = {
+k_belial = {
 	6.1.3 = {
 		holder = belial_character
 		government = theocracy_government
 	}
 }
 
-d_asmodeus = {
+k_asmodeus = {
 	6.1.3 = {
 		holder = asmodeus_character
 		government = theocracy_government
