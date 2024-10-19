@@ -458,6 +458,7 @@ beelzebub_dna={
  			succubus_marking={ "no_marking" 127 "no_marking" 127 }
  			horns={ "no_horns" 0 "no_horns" 0 }
  			accessory_genes={ "" 127 "" 127 }
+			headgear={ "no_headgear" 24 "no_headgear" 0 }
  		}
  	}
 	enabled=yes
@@ -809,7 +810,6 @@ belial_dna={
  			succubus_womb={ "no_womb" 127 "no_womb" 127 }
  			succubus_marking={ "no_marking" 127 "no_marking" 127 }
  			horns={ "no_horns" 0 "no_horns" 0 }
- 			hairstyles={ "indian_hairstyles_straight" 255 "all_hairstyles" 0 }
  			accessory_genes={ "" 127 "" 127 }
  		}
 	}
