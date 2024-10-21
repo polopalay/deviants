@@ -1,0 +1,396 @@
+succubus_makeup_interaction = {
+	icon = no_body_hair
+	desc = succubus_makeup_interaction.desc
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+			}
+		}
+		scope:recipient = {
+			OR = {
+				this = scope:actor
+				is_vassal_of = scope:actor
+				is_courtier_of = scope:actor
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 1 }
+			}
+		}
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = succubus_horn0
+					has_character_flag = succubus_horn1
+					has_character_flag = succubus_horn2
+					has_character_flag = succubus_horn3
+					has_character_flag = succubus_horn4
+				}
+			}
+		}
+		flag = succubus_no_horn
+		localization = succubus_no_horn
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_horn0 } }
+		}
+		flag = succubus_horn0
+		localization = succubus_horn0
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_horn1 } }
+		}
+		flag = succubus_horn1
+		localization = succubus_horn1
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_horn2 } }
+		}
+		flag = succubus_horn2
+		localization = succubus_horn2
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_horn3 } }
+		}
+		flag = succubus_horn3
+		localization = succubus_horn3
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_horn4 } }
+		}
+		flag = succubus_horn4
+		localization = succubus_horn4
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = succubus_marking_1
+					has_character_flag = succubus_marking_2
+					has_character_flag = succubus_marking_3
+					has_character_flag = succubus_marking_4
+					has_character_flag = succubus_marking_5
+					has_character_flag = succubus_marking_6
+				}
+			}
+		}
+		flag = succubus_no_eyes
+		localization = succubus_no_eyes
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_marking_1 } }
+		}
+		flag = succubus_marking_1
+		localization = succubus_marking_1
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_marking_2 } }
+		}
+		flag = succubus_marking_2
+		localization = succubus_marking_2
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_marking_3 } }
+		}
+		flag = succubus_marking_3
+		localization = succubus_marking_3
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_marking_4 } }
+		}
+		flag = succubus_marking_4
+		localization = succubus_marking_4
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_marking_5 } }
+		}
+		flag = succubus_marking_5
+		localization = succubus_marking_5
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_marking_6 } }
+		}
+		flag = succubus_marking_6
+		localization = succubus_marking_6
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = {
+				OR = {
+					has_character_flag = succubus_white_eyes
+					has_character_flag = succubus_red_eyes
+				}
+			}
+		}
+		flag = succubus_default_eyes
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_white_eyes } }
+		}
+		flag = succubus_white_eyes
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { NOT = { has_character_flag = succubus_red_eyes } }
+		}
+		flag = succubus_red_eyes
+	}
+	send_option = {
+		flag = naked
+	}
+	send_option = {
+		flag = glass
+	}
+	send_options_exclusive = yes
+
+	on_accept = {
+		if = {
+			limit = { scope:succubus_no_horn = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_horn0
+				remove_character_flag = succubus_horn1
+				remove_character_flag = succubus_horn2
+				remove_character_flag = succubus_horn3
+				remove_character_flag = succubus_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_horn0 = yes }
+			scope:recipient = {
+				add_character_flag = succubus_horn0
+				remove_character_flag = succubus_horn1
+				remove_character_flag = succubus_horn2
+				remove_character_flag = succubus_horn3
+				remove_character_flag = succubus_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_horn1 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_horn0
+				add_character_flag = succubus_horn1
+				remove_character_flag = succubus_horn2
+				remove_character_flag = succubus_horn3
+				remove_character_flag = succubus_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_horn2 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_horn0
+				remove_character_flag = succubus_horn1
+				add_character_flag = succubus_horn2
+				remove_character_flag = succubus_horn3
+				remove_character_flag = succubus_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_horn3 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_horn0
+				remove_character_flag = succubus_horn1
+				remove_character_flag = succubus_horn2
+				add_character_flag = succubus_horn3
+				remove_character_flag = succubus_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_horn4 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_horn0
+				remove_character_flag = succubus_horn1
+				remove_character_flag = succubus_horn2
+				remove_character_flag = succubus_horn3
+				add_character_flag = succubus_horn4
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_marking_1 = yes }
+			scope:recipient = {
+				add_character_flag = succubus_marking_1
+				remove_character_flag = succubus_marking_2
+				remove_character_flag = succubus_marking_3
+				remove_character_flag = succubus_marking_4
+				remove_character_flag = succubus_marking_5
+				remove_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_marking_2 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_marking_1
+				add_character_flag = succubus_marking_2
+				remove_character_flag = succubus_marking_3
+				remove_character_flag = succubus_marking_4
+				remove_character_flag = succubus_marking_5
+				remove_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_marking_3 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_marking_1
+				remove_character_flag = succubus_marking_2
+				add_character_flag = succubus_marking_3
+				remove_character_flag = succubus_marking_4
+				remove_character_flag = succubus_marking_5
+				remove_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_marking_4 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_marking_1
+				remove_character_flag = succubus_marking_2
+				remove_character_flag = succubus_marking_3
+				add_character_flag = succubus_marking_4
+				remove_character_flag = succubus_marking_5
+				remove_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_marking_5 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_marking_1
+				remove_character_flag = succubus_marking_2
+				remove_character_flag = succubus_marking_3
+				remove_character_flag = succubus_marking_4
+				add_character_flag = succubus_marking_5
+				remove_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_marking_6 = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_marking_1
+				remove_character_flag = succubus_marking_2
+				remove_character_flag = succubus_marking_3
+				remove_character_flag = succubus_marking_4
+				remove_character_flag = succubus_marking_5
+				add_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_no_eyes = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_marking_1
+				remove_character_flag = succubus_marking_2
+				remove_character_flag = succubus_marking_3
+				remove_character_flag = succubus_marking_4
+				remove_character_flag = succubus_marking_5
+				remove_character_flag = succubus_marking_6
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_white_eyes = yes }
+			scope:recipient = {
+				add_character_flag = succubus_white_eyes
+				remove_character_flag = succubus_red_eyes
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_red_eyes = yes }
+			scope:recipient = {
+				add_character_flag = succubus_red_eyes
+				remove_character_flag = succubus_white_eyes
+			}
+		}
+		else_if = {
+			limit = { scope:succubus_default_eyes = yes }
+			scope:recipient = {
+				remove_character_flag = succubus_white_eyes
+				remove_character_flag = succubus_red_eyes
+			}
+		}
+		else_if = {
+			limit = { scope:naked = yes }
+			scope:recipient = {
+				if = {
+					limit = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+					remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+				}
+				else = {
+					add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:glass = yes }
+			scope:recipient = {
+				if = {
+					limit = {
+						NOR = {
+							has_character_flag = teacher_1
+							has_character_flag = teacher_2
+							has_character_flag = has_reading_glasses
+						}
+					}
+					hidden_effect = {
+						add_character_flag = has_reading_glasses
+					}
+				}
+				else = {
+					hidden_effect = {
+						remove_character_flag = teacher_1
+						remove_character_flag = teacher_2
+						remove_character_flag = has_reading_glasses
+					}
+				}
+			}
+		}
+
+		scope:actor = {
+			if = {
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -1 }
+			}
+		}
+	}
+	auto_accept = { scope:actor = scope:recipient }
+	ai_accept = {
+		base = 1
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 1
+		}
+	}
+	ai_frequency = 24
+	ai_targets = {
+		ai_recipients = self
+		ai_recipients = vassals
+		ai_recipients = courtiers
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 5 scope:naked = yes scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } has_character_modifier = carn_working_as_prostitute_1_modifier } }
+		modifier = { add = 5 scope:naked = yes scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier NOT = { has_character_modifier = carn_working_as_prostitute_1_modifier } } }
+		modifier = { add = 50 scope:glass = yes scope:recipient = { OR = { has_character_flag = teacher_1 has_character_flag = teacher_2 has_character_flag = has_reading_glasses } } }
+	}
+}
