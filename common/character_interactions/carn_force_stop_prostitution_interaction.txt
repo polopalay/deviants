@@ -1,0 +1,118 @@
+﻿carn_force_stop_prostitution_interaction = {
+	icon = stop_prostitution_interaction
+	desc = carn_force_stop_prostitution_interaction.desc
+	category = interaction_category_prison
+	use_diplomatic_range = yes
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
+			is_ruler = yes
+		}
+		scope:recipient = {
+			is_adult = yes
+			has_character_modifier = carn_working_as_prostitute_1_modifier
+			OR = {
+				scope:actor = scope:recipient
+				is_courtier_of = scope:actor
+			}
+		}
+	}
+
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+			scope:recipient.liege = scope:actor
+		}
+		is_valid = {
+			scope:actor = {
+				has_imprisonment_reason = scope:recipient
+			}
+		}
+		flag = forgive
+		localization = forgive_interaction
+	}
+	send_options_exclusive = no
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_modifier = carn_working_as_prostitute_1_modifier
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					scope:forgive = yes
+					has_imprisonment_reason = scope:recipient
+				}
+				consume_imprisonment_reasons = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+		}
+	}
+
+	auto_accept = {
+		OR = {
+			scope:recipient = scope:actor
+			scope:recipient = { has_trait = slave }
+		}
+	}
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.2
+		}
+		modifier = { add = 100 scope:recipient = { age > carn_prostitution_age_cutoff is_immortal = no } }
+		modifier = { add = 50 scope:recipient = { age > 30 is_immortal = no } }
+		modifier = { add = 50 scope:recipient = { has_trait = chaste } }
+		modifier = { add = -50 scope:recipient = { faith = { has_doctrine = tenet_polyamory } } }
+		modifier = { add = 25 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_crime has_doctrine = doctrine_adultery_men_crime } } } }
+		modifier = { add = 10 scope:recipient = { faith = { OR = { has_doctrine = doctrine_adultery_women_shunned has_doctrine = doctrine_adultery_men_shunned } } } }
+		modifier = { add = -10 scope:recipient = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
+		modifier = { add = -25 scope:recipient = { has_trait = lustful } }
+		modifier = { add = -50 scope:recipient = { OR = { has_trait = sbs_succubus has_trait = sbs_lesser_succubus } } }
+		modifier = { add = 50 scope:forgive = yes }
+		modifier = { add = 50 scope:hook = yes }
+	}
+
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = self
+		ai_recipients = courtiers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 0
+		modifier = { add = 100 scope:recipient = { age > carn_prostitution_age_cutoff is_immortal = no } }
+		modifier = { add = 50 scope:recipient = { age > 30 is_immortal = no } }
+		modifier = { add = 50 scope:actor = { has_trait = chaste } scope:recipient = scope:actor }
+		modifier = { add = 20 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
+		modifier = { add = 10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
+		modifier = { add = -25 scope:actor = { has_trait = lustful } }
+		modifier = { add = -25 scope:actor = { has_trait = rakish } }
+		modifier = { add = -25 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
+		modifier = { add = -50 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
+		modifier = { add = 1 scope:forgive = yes }
+		modifier = { add = 1 scope:hook = yes }
+	}
+}

@@ -193,10 +193,4 @@ mind_break_personality = {
 		limit = { NOT = { has_trait = lustful } }
 		add_trait = lustful
 	}
-	add_secret = { type = secret_deviant }
-	add_secret = { type = secret_witch }
-	if = {
-		limit = { have_devil_nicknames_trigger = no is_female = yes }
-		give_prostitution_nickname = yes
-	}
 }

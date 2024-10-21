@@ -1,403 +1,6 @@
-succubus_makeup_interaction = {
-	icon = no_body_hair
-	desc = succubus_makeup_interaction.desc
-	category = interaction_category_friendly
-	use_diplomatic_range = yes
-	common_interaction = yes
-
-	is_shown = {
-		scope:actor = {
-			OR = {
-				has_trait = sbs_demon
-				has_trait = sbs_succubus
-			}
-		}
-		scope:recipient = {
-			OR = {
-				this = scope:actor
-				is_vassal_of = scope:actor
-				is_courtier_of = scope:actor
-			}
-		}
-	}
-	is_valid = {
-		scope:actor = {
-			OR = {
-				has_trait = sbs_demon
-				has_trait_xp = { trait = sbs_succubus track = daring value >= 1 }
-			}
-		}
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = {
-				OR = {
-					has_character_flag = succubus_horn0
-					has_character_flag = succubus_horn1
-					has_character_flag = succubus_horn2
-					has_character_flag = succubus_horn3
-					has_character_flag = succubus_horn4
-				}
-			}
-		}
-		flag = succubus_no_horn
-		localization = succubus_no_horn
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_horn0 } }
-		}
-		flag = succubus_horn0
-		localization = succubus_horn0
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_horn1 } }
-		}
-		flag = succubus_horn1
-		localization = succubus_horn1
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_horn2 } }
-		}
-		flag = succubus_horn2
-		localization = succubus_horn2
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_horn3 } }
-		}
-		flag = succubus_horn3
-		localization = succubus_horn3
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_horn4 } }
-		}
-		flag = succubus_horn4
-		localization = succubus_horn4
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = {
-				OR = {
-					has_character_flag = succubus_marking_1
-					has_character_flag = succubus_marking_2
-					has_character_flag = succubus_marking_3
-					has_character_flag = succubus_marking_4
-					has_character_flag = succubus_marking_5
-					has_character_flag = succubus_marking_6
-				}
-			}
-		}
-		flag = succubus_no_eyes
-		localization = succubus_no_eyes
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_marking_1 } }
-		}
-		flag = succubus_marking_1
-		localization = succubus_marking_1
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_marking_2 } }
-		}
-		flag = succubus_marking_2
-		localization = succubus_marking_2
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_marking_3 } }
-		}
-		flag = succubus_marking_3
-		localization = succubus_marking_3
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_marking_4 } }
-		}
-		flag = succubus_marking_4
-		localization = succubus_marking_4
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_marking_5 } }
-		}
-		flag = succubus_marking_5
-		localization = succubus_marking_5
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_marking_6 } }
-		}
-		flag = succubus_marking_6
-		localization = succubus_marking_6
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = {
-				OR = {
-					has_character_flag = succubus_white_eyes
-					has_character_flag = succubus_red_eyes
-				}
-			}
-		}
-		flag = succubus_default_eyes
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_white_eyes } }
-		}
-		flag = succubus_white_eyes
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { NOT = { has_character_flag = succubus_red_eyes } }
-		}
-		flag = succubus_red_eyes
-	}
-	send_option = {
-		flag = naked
-	}
-	send_option = {
-		flag = glass
-	}
-	send_options_exclusive = yes
-
-	on_accept = {
-		if = {
-			limit = { scope:succubus_no_horn = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_horn0
-				remove_character_flag = succubus_horn1
-				remove_character_flag = succubus_horn2
-				remove_character_flag = succubus_horn3
-				remove_character_flag = succubus_horn4
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_horn0 = yes }
-			scope:recipient = {
-				add_character_flag = succubus_horn0
-				remove_character_flag = succubus_horn1
-				remove_character_flag = succubus_horn2
-				remove_character_flag = succubus_horn3
-				remove_character_flag = succubus_horn4
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_horn1 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_horn0
-				add_character_flag = succubus_horn1
-				remove_character_flag = succubus_horn2
-				remove_character_flag = succubus_horn3
-				remove_character_flag = succubus_horn4
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_horn2 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_horn0
-				remove_character_flag = succubus_horn1
-				add_character_flag = succubus_horn2
-				remove_character_flag = succubus_horn3
-				remove_character_flag = succubus_horn4
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_horn3 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_horn0
-				remove_character_flag = succubus_horn1
-				remove_character_flag = succubus_horn2
-				add_character_flag = succubus_horn3
-				remove_character_flag = succubus_horn4
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_horn4 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_horn0
-				remove_character_flag = succubus_horn1
-				remove_character_flag = succubus_horn2
-				remove_character_flag = succubus_horn3
-				add_character_flag = succubus_horn4
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_marking_1 = yes }
-			scope:recipient = {
-				add_character_flag = succubus_marking_1
-				remove_character_flag = succubus_marking_2
-				remove_character_flag = succubus_marking_3
-				remove_character_flag = succubus_marking_4
-				remove_character_flag = succubus_marking_5
-				remove_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_marking_2 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_marking_1
-				add_character_flag = succubus_marking_2
-				remove_character_flag = succubus_marking_3
-				remove_character_flag = succubus_marking_4
-				remove_character_flag = succubus_marking_5
-				remove_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_marking_3 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_marking_1
-				remove_character_flag = succubus_marking_2
-				add_character_flag = succubus_marking_3
-				remove_character_flag = succubus_marking_4
-				remove_character_flag = succubus_marking_5
-				remove_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_marking_4 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_marking_1
-				remove_character_flag = succubus_marking_2
-				remove_character_flag = succubus_marking_3
-				add_character_flag = succubus_marking_4
-				remove_character_flag = succubus_marking_5
-				remove_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_marking_5 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_marking_1
-				remove_character_flag = succubus_marking_2
-				remove_character_flag = succubus_marking_3
-				remove_character_flag = succubus_marking_4
-				add_character_flag = succubus_marking_5
-				remove_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_marking_6 = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_marking_1
-				remove_character_flag = succubus_marking_2
-				remove_character_flag = succubus_marking_3
-				remove_character_flag = succubus_marking_4
-				remove_character_flag = succubus_marking_5
-				add_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_no_eyes = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_marking_1
-				remove_character_flag = succubus_marking_2
-				remove_character_flag = succubus_marking_3
-				remove_character_flag = succubus_marking_4
-				remove_character_flag = succubus_marking_5
-				remove_character_flag = succubus_marking_6
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_white_eyes = yes }
-			scope:recipient = {
-				add_character_flag = succubus_white_eyes
-				remove_character_flag = succubus_red_eyes
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_red_eyes = yes }
-			scope:recipient = {
-				add_character_flag = succubus_red_eyes
-				remove_character_flag = succubus_white_eyes
-			}
-		}
-		else_if = {
-			limit = { scope:succubus_default_eyes = yes }
-			scope:recipient = {
-				remove_character_flag = succubus_white_eyes
-				remove_character_flag = succubus_red_eyes
-			}
-		}
-		else_if = {
-			limit = { scope:naked = yes }
-			scope:recipient = {
-				if = {
-					limit = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-					remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-				}
-				else = {
-					add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-				}
-			}
-		}
-		else_if = {
-			limit = { scope:glass = yes }
-			scope:recipient = {
-				if = {
-					limit = {
-						NOR = {
-							has_character_flag = teacher_1
-							has_character_flag = teacher_2
-							has_character_flag = has_reading_glasses
-						}
-					}
-					hidden_effect = {
-						add_character_flag = has_reading_glasses
-					}
-				}
-				else = {
-					hidden_effect = {
-						remove_character_flag = teacher_1
-						remove_character_flag = teacher_2
-						remove_character_flag = has_reading_glasses
-					}
-				}
-			}
-		}
-
-		scope:actor = {
-			if = {
-				limit = { has_trait = sbs_succubus }
-				add_trait_xp = { trait = sbs_succubus track = daring value = -1 }
-			}
-		}
-	}
-	auto_accept = { scope:actor = scope:recipient }
-	ai_accept = {
-		base = 1
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = 1
-		}
-	}
-	ai_frequency = 24
-	ai_targets = {
-		ai_recipients = self
-		ai_recipients = vassals
-		ai_recipients = courtiers
-		max = 5
-	}
-	ai_potential = { always = yes }
-	ai_will_do = {
-		base = 0
-		modifier = { add = 5 scope:naked = yes scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } has_character_modifier = carn_working_as_prostitute_1_modifier } }
-		modifier = { add = 5 scope:naked = yes scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier NOT = { has_character_modifier = carn_working_as_prostitute_1_modifier } } }
-		modifier = { add = 50 scope:glass = yes scope:recipient = { OR = { has_character_flag = teacher_1 has_character_flag = teacher_2 has_character_flag = has_reading_glasses } } }
-	}
-}
-
-succubus_mind_break_interaction = {
+sbs_mind_break_interaction = {
 	icon = mesmerize
-	desc = succubus_mind_break_interaction.desc
+	desc = sbs_mind_break_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
 	cooldown = { years = 2 }
@@ -411,26 +14,11 @@ succubus_mind_break_interaction = {
 			}
 		}
 		scope:recipient = {
-			is_adult = yes
-			OR = {
-				NOT = {
-					is_female = yes
-					has_trait = seed_of_destruction
-				}
-				NOT = {
-					has_trait = sbs_lesser_succubus
-					has_trait = sbs_succubus
-					has_trait = sbs_demon
-				}
-				NOT = { has_trait = lustful }
-				NOR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-				NOR = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
+			NOT = {
+				has_trait = seed_of_destruction
+				has_trait = sbs_lesser_succubus
+				has_trait = sbs_succubus
+				has_trait = sbs_demon
 			}
 		}
 	}
@@ -438,54 +26,177 @@ succubus_mind_break_interaction = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = { trait = sbs_succubus track = daring value >= 10 }
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 25 }
 			}
 		}
 	}
+
+	send_option = {
+		is_shown = {
+			scope:recipient = { is_adult = yes }
+		}
+		is_valid = {
+			scope:recipient = { NOT = { has_trait = lifestyle_prostitute has_character_modifier = carn_working_as_prostitute_1_modifier } }
+		}
+		flag = prostitution
+		localization = "carn_force_start_prostitution_interaction"
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				NOT = {
+					has_trait = witch
+					any_secret = { secret_type = secret_witch }
+				}
+			}
+		}
+		flag = witch
+		localization = "trait_witch"
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { is_adult = yes }
+		}
+		is_valid = {
+			scope:recipient = {
+				NOT = {
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+				}
+			}
+		}
+		flag = deviant
+		localization = "trait_deviant"
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { is_female = yes is_adult = yes }
+		}
+		is_valid = {
+			scope:recipient = { NOT = { has_trait = lustful } }
+		}
+		flag = mind_break_personality
+		localization = "sbs_mind_break_interaction"
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { is_female = no }
+		}
+		is_valid = {
+			scope:recipient = { NOT = { has_trait = seed_of_destruction } }
+		}
+		flag = seed_of_destruction
+		localization = "sbs_mind_break_interaction"
+	}
+	send_options_exclusive = no
 	on_accept = {
 		scope:actor = {
 			if = {
 				limit = { has_trait = sbs_succubus }
-				add_trait_xp = { trait = sbs_succubus track = daring value = -10 }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -25 }
+			}
+		}
+		if = {
+			limit = { scope:witch = yes }
+			scope:recipient = {
+				add_secret = { type = secret_witch }
+			}
+			scope:actor = {
+				limit = {
+					has_trait = sbs_succubus
+				}
+				add_trait_xp = { trait = sbs_succubus track = loyalty value = 1 }
+			}
+		}
+		if = {
+			limit = { scope:deviant = yes }
+			scope:recipient = {
+				add_secret = { type = secret_deviant }
+			}
+			scope:actor = {
+				limit = {
+					has_trait = sbs_succubus
+				}
+				add_trait_xp = { trait = sbs_succubus track = corruption value = 1 }
 			}
 		}
 		scope:recipient = {
 			if = {
-				limit = {
-					is_ruler = no
-					NOR = {
-						has_trait = slave
-						has_character_flag = carn_cannot_be_enslaved
-						has_trait_with_flag = carn_cannot_be_enslaved
+				limit = { scope:prostitution = yes }
+				add_trait = lifestyle_prostitute
+				add_character_modifier = carn_working_as_prostitute_1_modifier
+				every_courtier_or_guest = {
+					limit = { is_adult = yes is_attracted_to_gender_of = scope:recipient }
+					had_sex_with_effect = {
+						CHARACTER = scope:recipient
+						PREGNANCY_CHANCE = pregnancy_chance
 					}
+					pay_short_term_gold = { target = scope:actor gold = scope:recipient.prostitute_price_value }
 				}
-				add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
-				add_character_flag = carn_wants_to_be_a_slave
+				every_vassal_or_below = {
+					limit = { is_adult = yes is_attracted_to_gender_of = scope:recipient }
+					had_sex_with_effect = {
+						CHARACTER = scope:recipient
+						PREGNANCY_CHANCE = pregnancy_chance
+					}
+					pay_short_term_gold = { target = scope:actor gold = scope:recipient.prostitute_price_value }
+				}
 			}
 			if = {
-				limit = { is_female = yes }
+				limit = { scope:mind_break_personality = yes }
 				mind_break_personality = yes
-			}
-			else_if = {
-				limit = { has_character_modifier = succubus_debuff }
-				random = {
-					chance = 5
-					modifier = { has_trait = deviant_blood add = 5 }
-					modifier = { has_trait = vengeful add = 5 }
-					modifier = { has_trait = callous add = 5 }
-					modifier = { has_trait = sadistic add = 5 }
-					modifier = { has_trait = wrathful add = 5 }
-					modifier = { has_trait = forgiving add = -10 }
-					modifier = { has_trait = compassionate add = -10 }
-					remove_character_modifier = succubus_debuff
-					remove_character_flag = carn_wants_to_be_a_slave
-					remove_trait = deviant_blood
-					set_immortal_age = 18
-					add_trait = seed_of_destruction
+				if = {
+					limit = {
+						NOR = {
+							has_trait = slave
+							has_character_flag = carn_cannot_be_enslaved
+							has_trait_with_flag = carn_cannot_be_enslaved
+						}
+					}
+					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
 				}
 			}
-			else = {
-				add_character_modifier = { modifier = succubus_debuff years = 10 }
+			if = {
+				limit = { scope:seed_of_destruction = yes }
+				random_list = {
+					10 = {
+						modifier = { has_trait = deviant_blood add = 40 }
+						modifier = { has_character_modifier = succubus_debuff add = 10 }
+						remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+						remove_character_modifier = succubus_debuff
+						remove_trait = deviant_blood
+						set_immortal_age = 18
+						add_trait = seed_of_destruction
+					}
+					10 = {
+						modifier = { has_trait = deviant_blood add = 40 }
+						add_character_modifier = succubus_debuff
+					}
+					5 = { add_trait = depressed_1 }
+					5 = { add_trait = depressed_genetic }
+					5 = { add_trait = lunatic_1 }
+					5 = { add_trait = lunatic_genetic }
+					5 = { add_trait = possessed_1 }
+					5 = { add_trait = possessed_genetic }
+					5 = { add_trait = ill }
+					5 = { add_trait = pneumonic }
+					5 = { add_trait = gout_ridden }
+					5 = { add_trait = typhus }
+					5 = { add_trait = consumption }
+					5 = { add_trait = cancer }
+					5 = { add_trait = great_pox }
+					5 = { add_trait = smallpox }
+					5 = { add_trait = bubonic_plague }
+					5 = { add_trait = lovers_pox }
+					5 = { add_trait = great_pox }
+					5 = { add_trait = bubonic_plague }
+					5 = { add_trait = measles }
+					5 = { add_trait = dysentery }
+					5 = { add_trait = ergotism }
+					5 = { add_trait = dull }
+					5 = { add_trait = weak }
+					5 = { add_trait = inbred }
+				}
 			}
 			add_character_modifier = { modifier = succubus_buff years = 10 }
 		}
@@ -497,9 +208,18 @@ succubus_mind_break_interaction = {
 			who = scope:recipient
 			multiplier = 0.1
 		}
-		modifier = { add = -2 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted NOT = { trait_is_sin = lustful } } } } }
-		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted NOT = { trait_is_sin = lustful } } } } }
-		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_deviancy_accepted NOT = { trait_is_sin = lustful } } } } }
+		modifier = { add = -2 scope:mind_break_personality = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { trait_is_sin = lustful } } }
+		modifier = { add = -5 scope:mind_break_personality = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { trait_is_sin = lustful } } }
+		modifier = { add = -10 scope:mind_break_personality = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { trait_is_sin = lustful } } }
+		modifier = { add = -2 scope:witch = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } } }
+		modifier = { add = -5 scope:witch = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
+		modifier = { add = -10 scope:witch = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
+		modifier = { add = -2 scope:deviant = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } } }
+		modifier = { add = -5 scope:deviant = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
+		modifier = { add = -10 scope:deviant = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
+		modifier = { add = -5 scope:prostitution = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -8 scope:prostitution = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -12 scope:prostitution = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
 	}
 	ai_frequency = 12
 	ai_targets = {
@@ -515,10 +235,10 @@ succubus_mind_break_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 1 scope:recipient = { is_courtier_of = scope:actor } }
-		modifier = { add = 1 scope:recipient = { is_vassal_of = scope:actor } }
-		modifier = { add = 1 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
-		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
-		modifier = { add = 100 scope:recipient = { is_ai = no } }
+		modifier = { add = 5 scope:recipient = { is_vassal_of = scope:actor } scope:mind_break_personality = yes }
+		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } scope:mind_break_personality = yes scope:prostitution = yes }
+		modifier = { add = 5 scope:actor.liege = scope:recipient OR = { scope:witch = yes scope:deviant = yes scope:prostitution = yes } }
+		modifier = { add = 100 scope:recipient = { is_child_of = scope:actor } OR = { scope:seed_of_destruction = yes scope:mind_break_personality = yes } }
+		modifier = { add = 100 scope:recipient = { is_ai = no } OR = { scope:seed_of_destruction = yes scope:mind_break_personality = yes scope:witch = yes scope:deviant = yes } }
 	}
 }

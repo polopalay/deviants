@@ -39,10 +39,8 @@
 				has_trait = blind
 				has_trait = sickly
 				has_trait = infirm
-				has_trait = incapable
 				has_trait = leper
-				has_trait = dysentery
-				has_trait = ergotism
+				has_trait = incapable
 				has_trait = wounded_1
 				has_trait = wounded_2
 				has_trait = wounded_3
@@ -61,6 +59,9 @@
 				has_trait = possessed_genetic
 				has_trait = bubonic_plague
 				has_trait = measles
+				has_trait = dysentery
+				has_trait = ergotism
+
 				current_weight >= 25
 				current_weight <= -25
 
@@ -151,7 +152,7 @@
 				}
 			}
 		}
-	
+
 	}
 	localization_values = {
 		RANSOM_COST = scope:actor.deal_price_value
@@ -577,9 +578,9 @@
 	}
 }
 
-succubus_heal_interaction = {
+devil_dead_interaction = {
 	icon = healing
-	desc = succubus_heal_interaction.desc
+	desc = devil_dead_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = yes
@@ -720,7 +721,7 @@ succubus_heal_interaction = {
 				}
 			}
 		}
-	
+
 	}
 	localization_values = {
 		RANSOM_COST = scope:recipient.heal_price_value
@@ -827,11 +828,11 @@ succubus_heal_interaction = {
 		localization = "small_price"
 	}
 	send_option = {
-			is_valid = {
-				scope:recipient = { any_secret = { NOT = { is_known_by = scope:actor } } }
-			}
-			flag = expose_secret
-			localization = expose_secret_interaction
+		is_valid = {
+			scope:recipient = { any_secret = { NOT = { is_known_by = scope:actor } } }
+		}
+		flag = expose_secret
+		localization = expose_secret_interaction
 	}
 	send_options_exclusive = no
 	on_accept = {

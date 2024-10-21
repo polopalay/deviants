@@ -1,0 +1,61 @@
+﻿carn_sell_slave_interaction = {
+	icon = sell_slave_interaction
+	category = interaction_category_prison
+	desc = carn_sell_slave_interaction.desc
+	common_interaction = yes
+	needs_recipient_to_open = yes
+	is_shown = {
+		scope:actor = {
+			any_courtier = { has_trait = slave scope:recipient.gold >= prev.carn_slave_price_value }
+		}
+		scope:recipient = {
+			is_ruler = yes
+		}
+		NOT = { scope:actor = scope:recipient }
+	}
+	populate_recipient_list = {
+		scope:actor = {
+			every_courtier = { limit = { has_trait = slave scope:recipient.gold >= prev.carn_slave_price_value } add_to_list = characters }
+		}
+	}
+	on_accept = {
+		carn_buy_slave_effect = {
+			SELLER = scope:actor
+			BUYER = scope:recipient
+			SLAVE = scope:secondary_recipient
+		}
+	}
+	ai_accept = {
+		base = 0
+		opinion_modifier = { opinion_target = scope:actor multiplier = 1 }
+		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_knight_of = scope:recipient } add = 25 }
+		modifier = { desc = carn_secondary_recipient_is_my_councillor_reason scope:secondary_recipient = { is_councillor_of = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_friend_reason scope:secondary_recipient = { has_relation_friend = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_lover_reason scope:secondary_recipient = { has_relation_lover = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_crush_reason scope:secondary_recipient = { has_relation_crush = scope:recipient } add = 50 }
+		modifier = { desc = carn_secondary_recipient_is_my_soulmate_reason scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = 100 }
+		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_close_or_extended_family_of = scope:recipient } add = 100 }
+	}
+	ai_frequency = 12
+	ai_potential = { always = yes }
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = guests
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
+	ai_will_do = {
+		base = 0
+		modifier = { scope:recipient.gold < 0 add = 10 }
+		modifier = { scope:secondary_recipient = { is_knight_of = scope:recipient } add = -25 }
+		modifier = { scope:secondary_recipient = { is_councillor_of = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_friend = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_lover = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_crush = scope:recipient } add = -50 }
+		modifier = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = -100 }
+	}
+}

@@ -1,0 +1,206 @@
+﻿carn_free_slave_interaction = {
+	icon = free_slave_interaction
+	category = interaction_category_prison
+	desc = carn_free_slave_interaction.desc
+	common_interaction = yes
+	is_shown = {
+		scope:recipient = {
+			has_trait = slave
+			is_courtier_of = scope:actor
+		}
+	}
+	localization_values = {
+		RANSOM_COST = scope:recipient.carn_slave_price_value
+		CURRENT_GOLD = scope:recipient.carn_slave_price_value
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient ?= { gold >= scope:recipient.carn_slave_price_value }
+		}
+		flag = gold
+		localization = "RANSOM_GOLD_OPTION"
+	}
+	send_option = {
+		is_shown = {
+			scope:recipient ?= { gold >= 1 gold < scope:recipient.carn_slave_price_value }
+		}
+		flag = current_gold
+		localization = "RANSOM_CURRENT_GOLD_OPTION"
+	}
+	send_option = {
+		flag = demand_conversion
+		localization = "RELEASE_DEMAND_CONVERSION"
+		is_valid = {
+			NOT = { scope:recipient.faith = scope:actor.faith }
+			custom_description = {
+				text = cannot_demand_religious_head_conversion
+				subject = scope:actor
+				NOT = {
+					AND = {
+						exists = scope:recipient.faith.religious_head
+						scope:recipient.faith.religious_head = scope:recipient
+					}
+				}
+			}
+		}
+	}
+	
+	send_option = {
+		flag = gain_hook
+		localization = "RELEASE_GAIN_HOOK"
+	}
+	
+	send_options_exclusive = no
+	on_accept = {
+		scope:actor = { save_scope_as = owner }
+		scope:recipient = { save_scope_as = slave }
+		carn_free_slave_effect = yes
+	}
+	ai_targets = {
+		ai_recipients = family
+		ai_recipients = children
+		ai_recipients = scripted_relations
+		max = 10
+	}
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_accept = {
+		base = 5
+		modifier = {
+			scope:recipient = {
+				NOR = {
+					has_character_flag = carn_wants_to_be_a_slave
+					has_trait_with_flag = carn_wants_to_be_a_slave
+					has_opinion_modifier = {
+						target = scope:actor
+						modifier = carn_wants_to_be_your_slave_opinion
+					}
+				}
+			}
+			add = 100
+			desc = "WANTS_FREEDOM_REASON"
+		}
+		modifier = {
+			scope:recipient = { ai_zeal <= 20 }
+			scope:demand_conversion = yes
+			add = -20
+			desc = "CONVERSION_NEGATIVE_REASON"
+		}
+		modifier = {
+			scope:recipient = { ai_zeal > 20 }
+			scope:demand_conversion = yes
+			add = {
+				value = ai_zeal
+				if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value = faith_astray_level
+							}
+						}
+					}
+					multiply = -1
+				}
+				else = {
+					multiply = -2
+				}
+			}
+			desc = "CONVERSION_NEGATIVE_REASON"
+		}
+		modifier = {
+			add = {
+				value = -50
+				if = {
+					limit = { scope:recipient = { ai_vengefulness > 0 } }
+					subtract = ai_vengefulness
+				}
+			}
+			scope:gain_hook = yes
+			desc = "GAIN_HOOK_NEGATIVE_REASON"
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = { add = 20 scope:gain_hook = yes }
+		modifier = { add = 20 scope:demand_conversion = yes }
+		modifier = { add = 20 scope:gold = yes }
+		modifier = { add = 20 scope:current_gold = yes }
+		modifier = {
+			add = -40
+			scope:actor = {
+				NOT = {
+					has_trait = forgiving
+				}
+			}
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = -100
+			scope:actor = { NOT = { has_trait = forgiving } }
+			scope:actor.ai_vengefulness >= very_high_positive_ai_value
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+					scope:recipient = {
+						is_spouse_of = scope:actor
+						exposed_cheating_on_spouse_trigger = { SPOUSE = scope:actor }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 10
+			scope:actor = { ai_compassion >= low_positive_ai_value }
+			scope:recipient = { is_adult = no }
+		}
+		modifier = {
+			add = 10
+			scope:actor = { ai_compassion >= very_high_positive_ai_value }
+		}
+		modifier = {
+			add = 10
+			scope:actor = {
+				OR = {
+					ai_compassion >= very_high_positive_ai_value
+					AND = {
+						ai_compassion >= high_negative_ai_value
+						opinion = {
+							target = scope:recipient
+							value >= low_negative_opinion
+						}
+					}
+				}
+			}
+			scope:recipient = {
+				OR = {
+					is_close_family_of = scope:actor
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_soulmate = scope:actor
+					has_relation_crush = scope:actor
+				}
+			}
+		}
+		modifier = {
+			add = 40
+			scope:actor = {
+				is_at_war = no
+				ai_compassion >= very_high_negative_ai_value
+			}
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+	}
+}

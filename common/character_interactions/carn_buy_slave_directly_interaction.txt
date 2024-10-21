@@ -1,0 +1,61 @@
+﻿carn_buy_slave_directly_interaction = {
+	icon = buy_slave_interaction
+	category = interaction_category_prison
+	desc = carn_buy_slave_directly_interaction.desc
+	common_interaction = yes
+	needs_recipient_to_open = yes
+	is_shown = {
+		scope:actor = {
+			is_ruler = yes
+		}
+		scope:recipient = {
+			is_ruler = yes
+			any_courtier = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value }
+		}
+		NOT = { scope:actor = scope:recipient }
+	}
+	populate_recipient_list = {
+		scope:recipient = {
+			every_courtier = { limit = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value } add_to_list = characters }
+		}
+	}
+	on_accept = {
+		carn_buy_slave_effect = {
+			SELLER = scope:recipient
+			BUYER = scope:actor
+			SLAVE = scope:secondary_recipient
+		}
+	}
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		ai_recipients = courtiers
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_accept = {
+		base = 0
+		opinion_modifier = {
+			opinion_target = scope:actor
+			multiplier = 1
+		}
+		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_knight_of = scope:recipient } add = -25 }
+		modifier = { desc = carn_secondary_recipient_is_my_councillor_reason scope:secondary_recipient = { is_councillor_of = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_friend_reason scope:secondary_recipient = { has_relation_friend = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_lover_reason scope:secondary_recipient = { has_relation_lover = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_crush_reason scope:secondary_recipient = { has_relation_crush = scope:recipient } add = -50 }
+		modifier = { desc = carn_secondary_recipient_is_my_soulmate_reason scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = -100 }
+	}
+	ai_will_do = {
+		base = 0
+		modifier = { scope:secondary_recipient = { is_spouse_of = scope:actor } add = 50 }
+		modifier = { scope:secondary_recipient = { is_close_family_of = scope:actor } add = 40 }
+		modifier = { scope:secondary_recipient = { has_relation_friend = scope:actor } add = 10 }
+		modifier = { scope:secondary_recipient = { has_relation_lover = scope:actor } add = 10 }
+		modifier = { scope:secondary_recipient = { has_relation_soulmate = scope:actor } add = 100 }
+	}
+}

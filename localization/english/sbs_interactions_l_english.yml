@@ -5,17 +5,17 @@
  succubus_dealing_with_stress_interaction: "Dealing with stress"
  succubus_dealing_with_stress_interaction.desc: "Eliminate stress and all the effects it brings"
 
- succubus_heal_interaction: "Healing"
- succubus_heal_interaction.desc: "Eliminates all kinds of diseases, injuries, and all disgraceful names"
+ devil_dead_interaction: "Healing"
+ devil_dead_interaction.desc: "Eliminates all kinds of diseases, injuries, and all disgraceful names"
 
  succubus_purify_interaction: "Purify"
  succubus_purify_interaction.desc: "Purify [recipient.GetShortUIName]'s bloodstream, eliminating all bad genes"
 
- succubus_mind_break_interaction: "The Devil's gift"
- succubus_mind_break_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
+ sbs_mind_break_interaction: "The Devil's gift"
+ sbs_mind_break_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
 
- succubus_child_interaction: "Create Child"
- succubus_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"
+ sbs_child_interaction: "Create Child"
+ sbs_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"
 
  succubus_rumor_interaction: "Spreading Rumors"
  succubus_rumor_interaction.desc: "Spreading bad rumors about [recipient.GetShortUIName]"
@@ -23,19 +23,19 @@
  sbs_switch_body_interaction: "Switch"
  sbs_switch_body_interaction.desc: "Play [recipient.GetShortUIName]"
  
- succubus_create_lesser_succubus_interaction: "Create Lesser Succubus"
- succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
- recipient_secondary_succubus_create_lesser_succubus_interaction: "Choose one"
+ create_lesser_succubus_interaction: "Create Lesser Succubus"
+ create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] will become Lesser Succubus"
+ recipient_secondary_create_lesser_succubus_interaction: "Choose one"
 
- succubus_create_succubus_interaction: "Create Succubus"
- succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
- recipient_secondary_succubus_create_succubus_interaction: "Choose one"
+ create_succubus_interaction: "Create Succubus"
+ create_succubus_interaction.desc: "[recipient.GetShortUIName] will become a Succubus"
+ recipient_secondary_create_succubus_interaction: "Choose one"
 
- succubus_absorb_interaction: "Absorb"
- succubus_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
+ sbs_absorb_interaction: "Absorb"
+ sbs_absorb_interaction.desc: "Absorb the power from [recipient.GetShortUIName] into loyalty"
 
- succubus_makeup_interaction: "Makeup"
- succubus_makeup_interaction.desc: "Apply makeup to [recipient.GetShortUIName]"
+ sbs_makeup_interaction: "Makeup"
+ sbs_makeup_interaction.desc: "Apply makeup to [recipient.GetShortUIName]"
  succubus_no_horn: "No Horn"
  succubus_horn0: "Long curved horns"
  succubus_horn1: "Twisted horns"

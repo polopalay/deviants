@@ -1,6 +1,6 @@
-succubus_makeup_interaction = {
+sbs_makeup_interaction = {
 	icon = no_body_hair
-	desc = succubus_makeup_interaction.desc
+	desc = sbs_makeup_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = yes

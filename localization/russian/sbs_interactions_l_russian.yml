@@ -5,8 +5,8 @@
   succubus_dealing_with_stress_interaction: "Снятие стресса"
   succubus_dealing_with_stress_interaction.desc: "Устраните стресс и все его последствия."
 
-  succubus_heal_interaction: "Исцеление"
-  succubus_heal_interaction.desc: "Устраняет все виды болезней, травм и все позорные имена."
+  devil_dead_interaction: "Исцеление"
+  devil_dead_interaction.desc: "Устраняет все виды болезней, травм и все позорные имена."
 
   succubus_purify_interaction: "Очищение"
   succubus_purify_interaction.desc: "Очищает кровь [recipient.GetShortUIName], устраняя все плохие гены."
@@ -14,11 +14,11 @@
   succubus_imprison_interaction: "Заключить в тюрьму"
   succubus_imprison_interaction.desc: "Заключите [recipient.GetShortUIName] в свою темницу."
 
-  succubus_mind_break_interaction: "Разрушение разума"
-  succubus_mind_break_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
+  sbs_mind_break_interaction: "Разрушение разума"
+  sbs_mind_break_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
 
-  succubus_child_interaction: "Создать ребенка"
-  succubus_child_interaction.desc: "Создать ребенка от [recipient.GetShortUIName]."
+  sbs_child_interaction: "Создать ребенка"
+  sbs_child_interaction.desc: "Создать ребенка от [recipient.GetShortUIName]."
 
   succubus_rumor_interaction: "Распространение слухов"
   succubus_rumor_interaction.desc: "Распространение плохих слухов о [recipient.GetShortUIName]."
@@ -26,19 +26,19 @@
   sbs_switch_body_interaction: "Сменить тело"
   sbs_switch_body_interaction.desc: "Играть за [recipient.GetShortUIName]."
 
-  succubus_create_lesser_succubus_interaction: "Создать младшего суккуба"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] станет младшим суккубом."
-  recipient_secondary_succubus_create_lesser_succubus_interaction: "Выбрать один"
+  create_lesser_succubus_interaction: "Создать младшего суккуба"
+  create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] станет младшим суккубом."
+  recipient_secondary_create_lesser_succubus_interaction: "Выбрать один"
 
-  succubus_create_succubus_interaction: "Создать суккуба"
-  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] станет суккубом."
-  recipient_secondary_succubus_create_succubus_interaction: "Выбрать один"
+  create_succubus_interaction: "Создать суккуба"
+  create_succubus_interaction.desc: "[recipient.GetShortUIName] станет суккубом."
+  recipient_secondary_create_succubus_interaction: "Выбрать один"
 
-  succubus_absorb_interaction: "Поглотить"
-  succubus_absorb_interaction.desc: "Поглотить силу от [recipient.GetShortUIName] в верность."
+  sbs_absorb_interaction: "Поглотить"
+  sbs_absorb_interaction.desc: "Поглотить силу от [recipient.GetShortUIName] в верность."
 
-  succubus_makeup_interaction: "Макияж"
-  succubus_makeup_interaction.desc: "Нанесите макияж на [recipient.GetShortUIName]."
+  sbs_makeup_interaction: "Макияж"
+  sbs_makeup_interaction.desc: "Нанесите макияж на [recipient.GetShortUIName]."
   
   succubus_no_horn: "Нет рогов"
   succubus_horn0: "Длинные изогнутые рога"

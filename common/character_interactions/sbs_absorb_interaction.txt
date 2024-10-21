@@ -1,6 +1,6 @@
-﻿succubus_absorb_interaction = {
+﻿sbs_absorb_interaction = {
 	icon = drain_life
-	desc = succubus_absorb_interaction.desc
+	desc = sbs_absorb_interaction.desc
 	category = interaction_category_vassal
 	use_diplomatic_range = yes
 	common_interaction = yes
@@ -308,7 +308,7 @@
 			who = scope:recipient
 			multiplier = 0.5
 		}
-		modifier = { add = 20 scope:recipient = { is_vassal_of = scope:actor } } 
+		modifier = { add = 20 scope:recipient = { is_vassal_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_parent_of = scope:actor } }
 	}
 	ai_frequency = 12

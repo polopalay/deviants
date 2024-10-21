@@ -1,6 +1,6 @@
-succubus_child_interaction = {
+sbs_child_interaction = {
 	icon = pregnant
-	desc = succubus_child_interaction.desc
+	desc = sbs_child_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
 	common_interaction = yes
@@ -131,6 +131,9 @@ succubus_child_interaction = {
 		localization = "small_price"
 	}
 	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
 		is_valid = {
 			scope:recipient = { any_secret = { NOT = { is_known_by = scope:actor } } }
 		}

@@ -5,8 +5,8 @@
   succubus_dealing_with_stress_interaction: "Stress bewältigen"
   succubus_dealing_with_stress_interaction.desc: "Eliminieren Sie Stress und alle seine Auswirkungen"
 
-  succubus_heal_interaction: "Heilung"
-  succubus_heal_interaction.desc: "Beseitigt alle Arten von Krankheiten, Verletzungen und alle unehrenhaften Namen"
+  devil_dead_interaction: "Heilung"
+  devil_dead_interaction.desc: "Beseitigt alle Arten von Krankheiten, Verletzungen und alle unehrenhaften Namen"
 
   succubus_purify_interaction: "Reinigen"
   succubus_purify_interaction.desc: "Reinigen Sie das Blut von [recipient.GetShortUIName], indem Sie alle schlechten Gene entfernen"
@@ -14,11 +14,11 @@
   succubus_imprison_interaction: "Einsperren"
   succubus_imprison_interaction.desc: "Sperren Sie [recipient.GetShortUIName] in Ihrem Verlies ein"
 
-  succubus_mind_break_interaction: "Geistige Zerrüttung"
-  succubus_mind_break_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
+  sbs_mind_break_interaction: "Geistige Zerrüttung"
+  sbs_mind_break_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
 
-  succubus_child_interaction: "Ein Kind erschaffen"
-  succubus_child_interaction.desc: "Ein Kind erschaffen, das das Kind von [recipient.GetShortUIName] sein wird"
+  sbs_child_interaction: "Ein Kind erschaffen"
+  sbs_child_interaction.desc: "Ein Kind erschaffen, das das Kind von [recipient.GetShortUIName] sein wird"
 
   succubus_rumor_interaction: "Gerüchte verbreiten"
   succubus_rumor_interaction.desc: "Verbreiten Sie schlechte Gerüchte über [recipient.GetShortUIName]"
@@ -26,19 +26,19 @@
   sbs_switch_body_interaction: "Wechseln"
   sbs_switch_body_interaction.desc: "Inkarniere [recipient.GetShortUIName]"
 
-  succubus_create_lesser_succubus_interaction: "Einen niederen Succubus erschaffen"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem niederen Succubus"
-  recipient_secondary_succubus_create_lesser_succubus_interaction: "Wählen eine"
+  create_lesser_succubus_interaction: "Einen niederen Succubus erschaffen"
+  create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem niederen Succubus"
+  recipient_secondary_create_lesser_succubus_interaction: "Wählen eine"
 
-  succubus_create_succubus_interaction: "Einen Succubus erschaffen"
-  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem Succubus"
-  recipient_secondary_succubus_create_succubus_interaction: "Wählen eine"
+  create_succubus_interaction: "Einen Succubus erschaffen"
+  create_succubus_interaction.desc: "[recipient.GetShortUIName] wird zu einem Succubus"
+  recipient_secondary_create_succubus_interaction: "Wählen eine"
 
-  succubus_absorb_interaction: "Absorbieren"
-  succubus_absorb_interaction.desc: "Absorbieren Sie die Macht von [recipient.GetShortUIName] in Loyalität"
+  sbs_absorb_interaction: "Absorbieren"
+  sbs_absorb_interaction.desc: "Absorbieren Sie die Macht von [recipient.GetShortUIName] in Loyalität"
 
-  succubus_makeup_interaction: "Make-up"
-  succubus_makeup_interaction.desc: "Tragen Sie Make-up auf [recipient.GetShortUIName] auf"
+  sbs_makeup_interaction: "Make-up"
+  sbs_makeup_interaction.desc: "Tragen Sie Make-up auf [recipient.GetShortUIName] auf"
 
   succubus_no_horn: "Ohne Hörner"
   succubus_horn0: "Lange, gebogene Hörner"

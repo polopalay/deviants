@@ -5,8 +5,8 @@
   succubus_dealing_with_stress_interaction: "应对压力"
   succubus_dealing_with_stress_interaction.desc: "消除压力及其带来的所有影响"
 
-  succubus_heal_interaction: "治愈"
-  succubus_heal_interaction.desc: "消除各种疾病、伤害和所有不光彩的名称"
+  devil_dead_interaction: "治愈"
+  devil_dead_interaction.desc: "消除各种疾病、伤害和所有不光彩的名称"
 
   succubus_purify_interaction: "净化"
   succubus_purify_interaction.desc: "净化[recipient.GetShortUIName]的血液，消除所有坏基因"
@@ -14,11 +14,11 @@
   succubus_imprison_interaction: "监禁"
   succubus_imprison_interaction.desc: "将[recipient.GetShortUIName]监禁到你的地牢"
 
-  succubus_mind_break_interaction: "心灵崩溃"
-  succubus_mind_break_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
+  sbs_mind_break_interaction: "心灵崩溃"
+  sbs_mind_break_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
 
-  succubus_child_interaction: "创造孩子"
-  succubus_child_interaction.desc: "创造一个是[recipient.GetShortUIName]的孩子"
+  sbs_child_interaction: "创造孩子"
+  sbs_child_interaction.desc: "创造一个是[recipient.GetShortUIName]的孩子"
 
   succubus_rumor_interaction: "散布谣言"
   succubus_rumor_interaction.desc: "散布关于[recipient.GetShortUIName]的坏谣言"
@@ -26,19 +26,19 @@
   sbs_switch_body_interaction: "切换"
   sbs_switch_body_interaction.desc: "扮演[recipient.GetShortUIName]"
 
-  succubus_create_lesser_succubus_interaction: "创造小魅魔"
-  succubus_create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]将变成小魅魔"
-  recipient_secondary_succubus_create_lesser_succubus_interaction: "选择一个"
+  create_lesser_succubus_interaction: "创造小魅魔"
+  create_lesser_succubus_interaction.desc: "[recipient.GetShortUIName]将变成小魅魔"
+  recipient_secondary_create_lesser_succubus_interaction: "选择一个"
 
-  succubus_create_succubus_interaction: "创造魅魔"
-  succubus_create_succubus_interaction.desc: "[recipient.GetShortUIName]将变成魅魔"
-  recipient_secondary_succubus_create_succubus_interaction: "选择一个"
+  create_succubus_interaction: "创造魅魔"
+  create_succubus_interaction.desc: "[recipient.GetShortUIName]将变成魅魔"
+  recipient_secondary_create_succubus_interaction: "选择一个"
 
-  succubus_absorb_interaction: "吸收"
-  succubus_absorb_interaction.desc: "将[recipient.GetShortUIName]的力量吸收到忠诚中"
+  sbs_absorb_interaction: "吸收"
+  sbs_absorb_interaction.desc: "将[recipient.GetShortUIName]的力量吸收到忠诚中"
 
-  succubus_makeup_interaction: "化妆"
-  succubus_makeup_interaction.desc: "给[recipient.GetShortUIName]化妆"
+  sbs_makeup_interaction: "化妆"
+  sbs_makeup_interaction.desc: "给[recipient.GetShortUIName]化妆"
   succubus_no_horn: "没有角"
   succubus_horn0: "长弯曲角"
   succubus_horn1: "扭曲的角"
