@@ -32,5 +32,5 @@
   trait_seed_of_destruction: "Семя разрушения"
   seed_of_destruction_desc: "[ROOT.GetCharacter.GetName] дано дьяволом, это знак разрушения и хаоса."
   seed_of_destruction_character_desc: "Слуги Абаддона, которые приносят разрушение и хаос в мир."
-  trait_track_trait_seed_of_destruction: "Коррупция"
-  trait_track_trait_seed_of_destruction_desc: "Семена разрушения нуждаются во времени для прорастания."
+  trait_track_seed_of_destruction: "Коррупция"
+  trait_track_seed_of_destruction_desc: "Семена разрушения нуждаются во времени для прорастания."

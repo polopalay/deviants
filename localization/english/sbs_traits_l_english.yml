@@ -32,5 +32,5 @@
  trait_seed_of_destruction: "Seed of destruction"
  seed_of_destruction_desc: "[ROOT.GetCharacter.GetName] is given power by the devil, is a sign of destruction and chaos."
  seed_of_destruction_character_desc: "The servants of abaddon, who bring destruction and chaos to the world."
- trait_track_trait_seed_of_destruction: "Corruption"
- trait_track_trait_seed_of_destruction_desc: "The seeds of destruction need time to germinate."
+ trait_track_seed_of_destruction: "Corruption"
+ trait_track_seed_of_destruction_desc: "The seeds of destruction need time to germinate."

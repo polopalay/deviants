@@ -30,72 +30,6 @@ sbs_mind_break_interaction = {
 			}
 		}
 	}
-
-	send_option = {
-		is_shown = {
-			scope:recipient = { is_adult = yes }
-		}
-		is_valid = {
-			scope:recipient = { NOT = { has_trait = lifestyle_prostitute has_character_modifier = carn_working_as_prostitute_1_modifier } }
-		}
-		flag = prostitution
-		localization = "carn_force_start_prostitution_interaction"
-	}
-	send_option = {
-		is_valid = {
-			scope:recipient = {
-				NOT = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
-			}
-		}
-		flag = witch
-		localization = "trait_witch"
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { is_adult = yes }
-		}
-		is_valid = {
-			scope:recipient = {
-				NOT = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-			}
-		}
-		flag = deviant
-		localization = "trait_deviant"
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { is_female = yes is_adult = yes }
-		}
-		is_valid = {
-			scope:recipient = { NOT = { has_trait = lustful } }
-		}
-		flag = mind_break_personality
-		localization = "sbs_mind_break_interaction"
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { is_female = no }
-		}
-		is_valid = {
-			scope:recipient = { NOT = { has_trait = seed_of_destruction } }
-		}
-		flag = seed_of_destruction
-		localization = "sbs_mind_break_interaction"
-	}
-	send_option = {
-		is_shown = {
-			scope:recipient = { is_ruler = no }
-		}
-		flag = create_laamp
-		localization = "sbs_create_laamp"
-	}
-	send_options_exclusive = no
 	on_accept = {
 		scope:actor = {
 			if = {
@@ -103,138 +37,89 @@ sbs_mind_break_interaction = {
 				add_trait_xp = { trait = sbs_succubus track = daring value = -25 }
 			}
 		}
-		if = {
-			limit = { scope:witch = yes }
-			scope:recipient = {
-				add_secret = { type = secret_witch }
-			}
-			scope:actor = {
-				if = {
-					limit = { has_trait = sbs_succubus }
-					add_trait_xp = { trait = sbs_succubus track = loyalty value = 1 }
-				}
-				else = {
-					pay_short_term_gold = {
-						target = scope:actor
-						gold = tiny_gold_value
-					}
-				}
-			}
-		}
-		if = {
-			limit = { scope:deviant = yes }
-			scope:recipient = { add_secret = { type = secret_deviant } }
-			scope:actor = {
-				if = {
-					limit = { has_trait = sbs_succubus }
-					add_trait_xp = { trait = sbs_succubus track = corruption value = 1 }
-				}
-				else = {
-					pay_short_term_gold = {
-						target = scope:actor
-						gold = tiny_gold_value
-					}
-				}
-			}
-		}
-		if = {
-			limit = { scope:create_laamp = yes }
-			scope:recipient = {
-				create_landless_adventurer_title_effect = {
-					REASON = flag:voluntary
-					FLAVOR_CHAR = scope:recipient
-				}
-				pay_short_term_gold = {
-					target = scope:actor
-					gold = medium_gold_value
-				}
-			}
-		}
 		scope:recipient = {
-			if = {
-				limit = { scope:prostitution = yes }
-				add_trait = lifestyle_prostitute
-				add_character_modifier = carn_working_as_prostitute_1_modifier
-				every_courtier_or_guest = {
-					limit = { is_adult = yes is_attracted_to_gender_of = scope:recipient }
-					had_sex_with_effect = {
-						CHARACTER = scope:recipient
-						PREGNANCY_CHANCE = pregnancy_chance
+			random_list = {
+				5 = {
+					modifier = { has_trait = deviant_blood add = 2000 }
+					modifier = { has_character_modifier = succubus_debuff add = 5 }
+					if = {
+						limit = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } }
+						remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
 					}
-					pay_short_term_gold = { target = scope:actor gold = scope:recipient.prostitute_price_value }
-				}
-				every_vassal_or_below = {
-					limit = { is_adult = yes is_attracted_to_gender_of = scope:recipient }
-					had_sex_with_effect = {
-						CHARACTER = scope:recipient
-						PREGNANCY_CHANCE = pregnancy_chance
+					if = {
+						limit = { has_character_modifier = succubus_debuff }
+						remove_character_modifier = succubus_debuff
 					}
-					pay_short_term_gold = { target = scope:actor gold = scope:recipient.prostitute_price_value }
+					if = {
+						limit = { is_female = no }
+						add_trait = seed_of_destruction
+						set_immortal_age = 18
+					}
+					if = {
+						limit = { is_ruler = no has_trait = deviant_blood }
+						remove_trait = deviant_blood
+						create_landless_adventurer_title_effect = {
+							REASON = flag:voluntary
+							FLAVOR_CHAR = scope:recipient
+						}
+					}
 				}
-			}
-			if = {
-				limit = { scope:mind_break_personality = yes }
-				mind_break_personality = yes
-				if = {
-					limit = {
+				5 = {
+					modifier = { has_trait = deviant_blood add = 5 }
+					add_character_modifier = succubus_debuff
+				}
+				5 = {
+					modifier = { any_secret = { secret_type = secret_deviant } add = -5 }
+					scope:recipient = {
+						add_secret = { type = secret_deviant }
+					}
+				}
+				5 = {
+					modifier = { any_secret = { secret_type = secret_witch } add = -5 }
+					scope:recipient = { add_secret = { type = secret_witch } }
+				}
+				5 = {
+					modifier = {
 						NOR = {
 							has_trait = slave
 							has_character_flag = carn_cannot_be_enslaved
 							has_trait_with_flag = carn_cannot_be_enslaved
+							has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
 						}
+						add = -5
 					}
 					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
 				}
-			}
-			if = {
-				limit = { scope:seed_of_destruction = yes }
-				scope:actor = {
-					if = {
-						limit = { has_trait = sbs_succubus }
-						add_trait_xp = { trait = sbs_succubus track = loyalty value = 1 }
-						add_trait_xp = { trait = sbs_succubus track = corruption value = 1 }
+				5 = {
+					pay_short_term_gold = {
+						target = scope:actor
+						gold = tiny_gold_value
 					}
 				}
-				random_list = {
-					10 = {
-						modifier = { has_trait = deviant_blood add = 40 }
-						modifier = { has_character_modifier = succubus_debuff add = 10 }
-						remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
-						remove_character_modifier = succubus_debuff
-						remove_trait = deviant_blood
-						add_trait = seed_of_destruction
-						set_immortal_age = 18
-					}
-					10 = {
-						modifier = { has_trait = deviant_blood add = 40 }
-						remove_trait = deviant_blood
-						add_character_modifier = succubus_debuff
-					}
-					5 = { add_trait = depressed_1 }
-					5 = { add_trait = depressed_genetic }
-					5 = { add_trait = lunatic_1 }
-					5 = { add_trait = lunatic_genetic }
-					5 = { add_trait = possessed_1 }
-					5 = { add_trait = possessed_genetic }
-					5 = { add_trait = ill }
-					5 = { add_trait = pneumonic }
-					5 = { add_trait = gout_ridden }
-					5 = { add_trait = typhus }
-					5 = { add_trait = consumption }
-					5 = { add_trait = cancer }
-					5 = { add_trait = great_pox }
-					5 = { add_trait = smallpox }
-					5 = { add_trait = bubonic_plague }
-					5 = { add_trait = lovers_pox }
-					5 = { add_trait = great_pox }
-					5 = { add_trait = bubonic_plague }
-					5 = { add_trait = measles }
-					5 = { add_trait = dysentery }
-					5 = { add_trait = ergotism }
-					5 = { add_trait = dull }
-					5 = { add_trait = weak }
-					5 = { add_trait = inbred }
-				}
+				5 = { add_trait = depressed_1 }
+				5 = { add_trait = depressed_genetic }
+				5 = { add_trait = lunatic_1 }
+				5 = { add_trait = lunatic_genetic }
+				5 = { add_trait = possessed_1 }
+				5 = { add_trait = possessed_genetic }
+				5 = { add_trait = ill }
+				5 = { add_trait = pneumonic }
+				5 = { add_trait = gout_ridden }
+				5 = { add_trait = typhus }
+				5 = { add_trait = consumption }
+				5 = { add_trait = cancer }
+				5 = { add_trait = great_pox }
+				5 = { add_trait = smallpox }
+				5 = { add_trait = bubonic_plague }
+				5 = { add_trait = lovers_pox }
+				5 = { add_trait = great_pox }
+				5 = { add_trait = bubonic_plague }
+				5 = { add_trait = measles }
+				5 = { add_trait = dysentery }
+				5 = { add_trait = ergotism }
+				5 = { add_trait = dull }
+				5 = { add_trait = weak }
+				5 = { add_trait = inbred }
 			}
 			add_character_modifier = { modifier = succubus_buff years = 10 }
 		}
@@ -246,33 +131,14 @@ sbs_mind_break_interaction = {
 			who = scope:recipient
 			multiplier = 0.1
 		}
-		modifier = { add = -2 scope:witch = yes scope:recipient.faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } }
-		modifier = { add = -3 scope:witch = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } } }
-		modifier = { add = -5 scope:witch = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
-		modifier = { add = -10 scope:witch = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
-		modifier = { add = -2 scope:deviant = yes scope:recipient.faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } }
-		modifier = { add = -3 scope:deviant = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } } }
-		modifier = { add = -5 scope:deviant = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
-		modifier = { add = -10 scope:deviant = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
-		modifier = { add = -2 scope:prostitution = yes scope:recipient = { faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
-		modifier = { add = -3 scope:prostitution = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
-		modifier = { add = -5 scope:prostitution = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
-		modifier = { add = -10 scope:prostitution = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
-		modifier = { add = -2 scope:mind_break_personality = yes scope:recipient = { faith = { trait_is_sin = lustful } } }
-		modifier = { add = -3 scope:mind_break_personality = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { trait_is_sin = lustful } } }
-		modifier = { add = -5 scope:mind_break_personality = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { trait_is_sin = lustful } } }
-		modifier = { add = -10 scope:mind_break_personality = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { trait_is_sin = lustful } } }
-		modifier = { add = -2 scope:seed_of_destruction = yes }
-		modifier = { add = -3 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -5 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -10 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
-		modifier = { add = -2 scope:create_laamp = yes }
-		modifier = { add = -3 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } NOT = { scope:recipient.faith = scope:actor.faith } }
-		modifier = { add = -5 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } NOT = { scope:recipient.faith = scope:actor.faith } }
-		modifier = { add = -10 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } NOT = { scope:recipient.faith = scope:actor.faith } }
-		modifier = { add = 5 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } scope:recipient.faith.religious_head = scope:actor }
-		modifier = { add = 10 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } scope:recipient.faith.religious_head = scope:actor }
-		modifier = { add = 25 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } scope:recipient.faith.religious_head = scope:actor }
+		modifier = { add = -2 scope:recipient.faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } }
+		modifier = { add = -3 scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } } }
+		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
+		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
+		modifier = { add = -2 scope:recipient.faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } }
+		modifier = { add = -3 scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } } }
+		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
+		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
 	}
 	ai_frequency = 6
 	ai_targets = {
@@ -289,11 +155,8 @@ sbs_mind_break_interaction = {
 	ai_will_do = {
 		base = 10
 		modifier = { add = 5 scope:recipient = { is_vassal_of = scope:actor } scope:mind_break_personality = yes }
-		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } scope:mind_break_personality = yes scope:prostitution = yes }
-		modifier = { add = 5 scope:actor.liege = scope:recipient OR = { scope:witch = yes scope:deviant = yes scope:prostitution = yes } }
-		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } scope:seed_of_destruction = yes }
-		modifier = { add = 40 scope:recipient = { is_child_of = scope:actor } scope:create_laamp = yes }
-		modifier = { add = 10  scope:create_laamp = yes }
-		modifier = { add = 50 scope:recipient = { is_ai = no } OR = { scope:seed_of_destruction = yes scope:mind_break_personality = yes scope:witch = yes scope:deviant = yes } }
+		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } }
+		modifier = { add = 5 scope:actor.liege = scope:recipient }
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 	}
 }
