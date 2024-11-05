@@ -64,6 +64,12 @@
 	}
 	on_accept = {
 		carn_enslave_effect = { SLAVE = scope:recipient OWNER = scope:actor DRAMA = yes }
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = 5 }
+			}
+		}
 	}
 	ai_targets = { ai_recipients = prisoners }
 	ai_frequency = 12

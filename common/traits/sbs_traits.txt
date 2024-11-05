@@ -315,6 +315,17 @@ seed_of_destruction = {
 		}
 	}
 
+	track = {
+		50 = {
+			character_travel_speed = 10
+			character_travel_safety = 10
+		}
+		100 = {
+			health = 1
+			negate_health_penalty_add = 1
+		}
+	}
+
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
 	prowess = 1

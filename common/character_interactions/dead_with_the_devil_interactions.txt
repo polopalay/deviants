@@ -724,13 +724,13 @@ devil_dead_interaction = {
 
 	}
 	localization_values = {
-		RANSOM_COST = scope:recipient.heal_price_value
+		RANSOM_COST = scope:recipient.deal_price_value
 	}
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient ?= { gold >= scope:recipient.heal_price_value }
-			scope:recipient.heal_price_value > 0
+			scope:recipient ?= { gold >= scope:recipient.deal_price_value }
+			scope:recipient.deal_price_value > 0
 		}
 		flag = gold
 		localization = "RANSOM_GOLD_OPTION"
@@ -870,7 +870,7 @@ devil_dead_interaction = {
 			}
 			if = {
 				limit = { scope:gold = yes }
-				pay_short_term_gold = { target = scope:actor gold = scope:recipient.heal_price_value }
+				pay_short_term_gold = { target = scope:actor gold = scope:recipient.deal_price_value }
 			}
 			if = {
 				limit = { scope:demand_conversion = yes }

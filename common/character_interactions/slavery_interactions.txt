@@ -13,6 +13,12 @@
 	}
 	auto_accept = yes
 	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = 5 }
+			}
+		}
 		scope:recipient = {
 			add_character_modifier = forced_labor
 			add_opinion = { target = scope:actor modifier = forced_labor_opinion }
@@ -47,6 +53,12 @@ ordinary_labor_interaction = {
 	}
 	auto_accept = yes
 	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = -5 }
+			}
+		}
 		scope:recipient = {
 			remove_character_modifier = forced_labor
 			add_opinion = { target = scope:actor modifier = ordinary_labor_opinion }
@@ -83,6 +95,12 @@ extortion_interaction = {
 	}
 	auto_accept = yes
 	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = 5 }
+			}
+		}
 		scope:recipient = {
 			pay_short_term_gold = { target = scope:actor gold = gold }
 			add_opinion = { target = scope:actor modifier = extortion_opinion }

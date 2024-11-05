@@ -202,24 +202,32 @@ sbs_mind_break_interaction = {
 		}
 	}
 	ai_accept = {
-		base = 10
+		base = 5
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
 			multiplier = 0.1
 		}
-		modifier = { add = -2 scope:mind_break_personality = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { trait_is_sin = lustful } } }
-		modifier = { add = -5 scope:mind_break_personality = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { trait_is_sin = lustful } } }
-		modifier = { add = -10 scope:mind_break_personality = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { trait_is_sin = lustful } } }
-		modifier = { add = -2 scope:witch = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } } }
+		modifier = { add = -2 scope:witch = yes scope:recipient.faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } }
+		modifier = { add = -3 scope:witch = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } } }
 		modifier = { add = -5 scope:witch = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
 		modifier = { add = -10 scope:witch = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
-		modifier = { add = -2 scope:deviant = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } } }
+		modifier = { add = -2 scope:deviant = yes scope:recipient.faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } }
+		modifier = { add = -3 scope:deviant = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } } }
 		modifier = { add = -5 scope:deviant = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
 		modifier = { add = -10 scope:deviant = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
-		modifier = { add = -5 scope:prostitution = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
-		modifier = { add = -8 scope:prostitution = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
-		modifier = { add = -12 scope:prostitution = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -2 scope:prostitution = yes scope:recipient = { faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -3 scope:prostitution = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -5 scope:prostitution = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -10 scope:prostitution = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted  } } } }
+		modifier = { add = -2 scope:mind_break_personality = yes scope:recipient = { faith = { trait_is_sin = lustful } } }
+		modifier = { add = -3 scope:mind_break_personality = yes scope:recipient = { ai_zeal > high_positive_ai_value faith = { trait_is_sin = lustful } } }
+		modifier = { add = -5 scope:mind_break_personality = yes scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { trait_is_sin = lustful } } }
+		modifier = { add = -10 scope:mind_break_personality = yes scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { trait_is_sin = lustful } } }
+		modifier = { add = -2 scope:seed_of_destruction = yes }
+		modifier = { add = -3 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -5 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -10 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
 	}
 	ai_frequency = 12
 	ai_targets = {

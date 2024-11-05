@@ -32,3 +32,5 @@
   trait_seed_of_destruction: "毁灭之种"
   seed_of_destruction_desc: "[ROOT.GetCharacter.GetName]被魔鬼赋予力量，是毁灭和混乱的标志。"
   seed_of_destruction_character_desc: "阿巴冬的仆人，他们将毁灭和混乱带入世界。"
+  trait_track_trait_seed_of_destruction: "腐化"
+  trait_track_trait_seed_of_destruction_desc: "毁灭之种需要时间发芽。"

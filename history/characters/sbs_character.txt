@@ -33,6 +33,7 @@
 	666.12.13 = {
 		effect = {
 			set_landless_government_effect = yes
+			add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
 		}
 	}
 	1066.1.1 = {
@@ -40,6 +41,7 @@
 			remove_trait = sbs_lesser_succubus
 			add_trait = sbs_succubus
 			set_immortal_age = 18
+			add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
 			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
 			add_trait_xp = { trait = sbs_succubus track = power value = 33 }
 			add_trait_xp = { trait = sbs_succubus track = daring value = 25 }
@@ -47,8 +49,10 @@
 	}
 	1178.1.1 = {
 		effect = {
-			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
 			add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
+			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = power value = 33 }
+			add_trait_xp = { trait = sbs_succubus track = daring value = 25 }
 		}
 	}
 }

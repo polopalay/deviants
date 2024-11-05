@@ -32,3 +32,5 @@
   trait_seed_of_destruction: "파괴의 씨앗"
   seed_of_destruction_desc: "[ROOT.GetCharacter.GetName]은(는) 악마로부터 권력을 받았으며, 파괴와 혼돈의 징후이다."
   seed_of_destruction_character_desc: "파괴와 혼돈을 세계로 가져오는 아바돈의 하인들."
+  trait_track_trait_seed_of_destruction: "타락"
+  trait_track_trait_seed_of_destruction_desc: "파괴의 씨앗은 발아하는 데 시간이 필요하다."
