@@ -16,6 +16,7 @@
 
   sbs_mind_break_interaction: "Разрушение разума"
   sbs_mind_break_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
+  sbs_create_laamp: "Создать лагерь дьявола"
 
   sbs_child_interaction: "Создать ребенка"
   sbs_child_interaction.desc: "Создать ребенка от [recipient.GetShortUIName]."

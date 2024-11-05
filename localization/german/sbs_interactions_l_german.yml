@@ -16,6 +16,7 @@
 
   sbs_mind_break_interaction: "Geistige Zerrüttung"
   sbs_mind_break_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
+  sbs_create_laamp: "Teufelslager erstellen"
 
   sbs_child_interaction: "Ein Kind erschaffen"
   sbs_child_interaction.desc: "Ein Kind erschaffen, das das Kind von [recipient.GetShortUIName] sein wird"

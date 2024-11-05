@@ -16,6 +16,7 @@
 
   sbs_mind_break_interaction: "El regalo del Diablo"
   sbs_mind_break_interaction.desc: "Dar a [recipient.GetShortUIName] una \"bendición\""
+  sbs_create_laamp: "Crear Campamento del Diablo"
 
   sbs_child_interaction: "Crear Hijo"
   sbs_child_interaction.desc: "Crear un hijo que sea hijo de [recipient.GetShortUIName]"

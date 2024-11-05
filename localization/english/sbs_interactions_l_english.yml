@@ -13,6 +13,7 @@
 
  sbs_mind_break_interaction: "The Devil's gift"
  sbs_mind_break_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
+ sbs_create_laamp: "Create Devil's Camp"
 
  sbs_child_interaction: "Create Child"
  sbs_child_interaction.desc: "Create a child that is the child of [recipient.GetShortUIName]"

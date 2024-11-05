@@ -16,6 +16,7 @@
 
   sbs_mind_break_interaction: "정신 파괴"
   sbs_mind_break_interaction.desc: "[recipient.GetShortUIName]에게 음탕한 생각에 시달리게 합니다."
+  sbs_create_laamp: "악마의 캠프 만들기"
 
   sbs_child_interaction: "아이 만들기"
   sbs_child_interaction.desc: "[recipient.GetShortUIName]의 자녀를 만듭니다."

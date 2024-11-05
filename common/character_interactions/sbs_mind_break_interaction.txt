@@ -88,6 +88,13 @@ sbs_mind_break_interaction = {
 		flag = seed_of_destruction
 		localization = "sbs_mind_break_interaction"
 	}
+	send_option = {
+		is_shown = {
+			scope:recipient = { is_ruler = no }
+		}
+		flag = create_laamp
+		localization = "sbs_create_laamp"
+	}
 	send_options_exclusive = no
 	on_accept = {
 		scope:actor = {
@@ -102,22 +109,45 @@ sbs_mind_break_interaction = {
 				add_secret = { type = secret_witch }
 			}
 			scope:actor = {
-				limit = {
-					has_trait = sbs_succubus
+				if = {
+					limit = { has_trait = sbs_succubus }
+					add_trait_xp = { trait = sbs_succubus track = loyalty value = 1 }
 				}
-				add_trait_xp = { trait = sbs_succubus track = loyalty value = 1 }
+				else = {
+					pay_short_term_gold = {
+						target = scope:actor
+						gold = tiny_gold_value
+					}
+				}
 			}
 		}
 		if = {
 			limit = { scope:deviant = yes }
-			scope:recipient = {
-				add_secret = { type = secret_deviant }
-			}
+			scope:recipient = { add_secret = { type = secret_deviant } }
 			scope:actor = {
-				limit = {
-					has_trait = sbs_succubus
+				if = {
+					limit = { has_trait = sbs_succubus }
+					add_trait_xp = { trait = sbs_succubus track = corruption value = 1 }
 				}
-				add_trait_xp = { trait = sbs_succubus track = corruption value = 1 }
+				else = {
+					pay_short_term_gold = {
+						target = scope:actor
+						gold = tiny_gold_value
+					}
+				}
+			}
+		}
+		if = {
+			limit = { scope:create_laamp = yes }
+			scope:recipient = {
+				create_landless_adventurer_title_effect = {
+					REASON = flag:voluntary
+					FLAVOR_CHAR = scope:recipient
+				}
+				pay_short_term_gold = {
+					target = scope:actor
+					gold = medium_gold_value
+				}
 			}
 		}
 		scope:recipient = {
@@ -158,6 +188,13 @@ sbs_mind_break_interaction = {
 			}
 			if = {
 				limit = { scope:seed_of_destruction = yes }
+				scope:actor = {
+					if = {
+						limit = { has_trait = sbs_succubus }
+						add_trait_xp = { trait = sbs_succubus track = loyalty value = 1 }
+						add_trait_xp = { trait = sbs_succubus track = corruption value = 1 }
+					}
+				}
 				random_list = {
 					10 = {
 						modifier = { has_trait = deviant_blood add = 40 }
@@ -165,11 +202,12 @@ sbs_mind_break_interaction = {
 						remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
 						remove_character_modifier = succubus_debuff
 						remove_trait = deviant_blood
-						set_immortal_age = 18
 						add_trait = seed_of_destruction
+						set_immortal_age = 18
 					}
 					10 = {
 						modifier = { has_trait = deviant_blood add = 40 }
+						remove_trait = deviant_blood
 						add_character_modifier = succubus_debuff
 					}
 					5 = { add_trait = depressed_1 }
@@ -228,8 +266,15 @@ sbs_mind_break_interaction = {
 		modifier = { add = -3 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
 		modifier = { add = -5 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
 		modifier = { add = -10 scope:seed_of_destruction = yes scope:recipient = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = -2 scope:create_laamp = yes }
+		modifier = { add = -3 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } NOT = { scope:recipient.faith = scope:actor.faith } }
+		modifier = { add = -5 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } NOT = { scope:recipient.faith = scope:actor.faith } }
+		modifier = { add = -10 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } NOT = { scope:recipient.faith = scope:actor.faith } }
+		modifier = { add = 5 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } scope:recipient.faith.religious_head = scope:actor }
+		modifier = { add = 10 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } scope:recipient.faith.religious_head = scope:actor }
+		modifier = { add = 25 scope:create_laamp = yes scope:recipient = { ai_zeal > high_positive_ai_value } scope:recipient.faith.religious_head = scope:actor }
 	}
-	ai_frequency = 12
+	ai_frequency = 6
 	ai_targets = {
 		ai_recipients = family
 		ai_recipients = liege
@@ -242,11 +287,13 @@ sbs_mind_break_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 0
+		base = 10
 		modifier = { add = 5 scope:recipient = { is_vassal_of = scope:actor } scope:mind_break_personality = yes }
 		modifier = { add = 5 scope:recipient = { is_courtier_of = scope:actor } scope:mind_break_personality = yes scope:prostitution = yes }
 		modifier = { add = 5 scope:actor.liege = scope:recipient OR = { scope:witch = yes scope:deviant = yes scope:prostitution = yes } }
-		modifier = { add = 100 scope:recipient = { is_child_of = scope:actor } OR = { scope:seed_of_destruction = yes scope:mind_break_personality = yes } }
-		modifier = { add = 100 scope:recipient = { is_ai = no } OR = { scope:seed_of_destruction = yes scope:mind_break_personality = yes scope:witch = yes scope:deviant = yes } }
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } scope:seed_of_destruction = yes }
+		modifier = { add = 40 scope:recipient = { is_child_of = scope:actor } scope:create_laamp = yes }
+		modifier = { add = 10  scope:create_laamp = yes }
+		modifier = { add = 50 scope:recipient = { is_ai = no } OR = { scope:seed_of_destruction = yes scope:mind_break_personality = yes scope:witch = yes scope:deviant = yes } }
 	}
 }

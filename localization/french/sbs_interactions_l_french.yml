@@ -16,6 +16,7 @@
 
   sbs_mind_break_interaction: "Rupture Mentale"
   sbs_mind_break_interaction.desc: "Amène [recipient.GetShortUIName] à être hanté par des pensées lubriques"
+  sbs_create_laamp: "Créer un Camp du Diable"
 
   sbs_child_interaction: "Créer un Enfant"
   sbs_child_interaction.desc: "Créer un enfant qui sera l'enfant de [recipient.GetShortUIName]"
