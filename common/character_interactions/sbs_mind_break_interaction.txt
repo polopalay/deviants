@@ -40,7 +40,7 @@ sbs_mind_break_interaction = {
 		scope:recipient = {
 			random_list = {
 				5 = {
-					modifier = { has_trait = deviant_blood add = 2000 }
+					modifier = { has_trait = deviant_blood add = 10 }
 					modifier = { has_character_modifier = succubus_debuff add = 5 }
 					if = {
 						limit = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } }
