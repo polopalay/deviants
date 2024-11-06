@@ -14,8 +14,8 @@
   succubus_imprison_interaction: "Einsperren"
   succubus_imprison_interaction.desc: "Sperren Sie [recipient.GetShortUIName] in Ihrem Verlies ein"
 
-  sbs_mind_break_interaction: "Geistige Zerrüttung"
-  sbs_mind_break_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
+  sbs_devils_gift_interaction: "Geistige Zerrüttung"
+  sbs_devils_gift_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
   sbs_create_laamp: "Teufelslager erstellen"
 
   sbs_child_interaction: "Ein Kind erschaffen"

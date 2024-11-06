@@ -14,8 +14,8 @@
   succubus_imprison_interaction: "Aprisionar"
   succubus_imprison_interaction.desc: "Aprisionar a [recipient.GetShortUIName] en tu mazmorras"
 
-  sbs_mind_break_interaction: "El regalo del Diablo"
-  sbs_mind_break_interaction.desc: "Dar a [recipient.GetShortUIName] una \"bendición\""
+  sbs_devils_gift_interaction: "El regalo del Diablo"
+  sbs_devils_gift_interaction.desc: "Dar a [recipient.GetShortUIName] una \"bendición\""
   sbs_create_laamp: "Crear Campamento del Diablo"
 
   sbs_child_interaction: "Crear Hijo"

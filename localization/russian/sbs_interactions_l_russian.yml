@@ -14,8 +14,8 @@
   succubus_imprison_interaction: "Заключить в тюрьму"
   succubus_imprison_interaction.desc: "Заключите [recipient.GetShortUIName] в свою темницу."
 
-  sbs_mind_break_interaction: "Разрушение разума"
-  sbs_mind_break_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
+  sbs_devils_gift_interaction: "Разрушение разума"
+  sbs_devils_gift_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
   sbs_create_laamp: "Создать лагерь дьявола"
 
   sbs_child_interaction: "Создать ребенка"

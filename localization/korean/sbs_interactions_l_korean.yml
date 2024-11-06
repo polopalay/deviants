@@ -14,8 +14,8 @@
   succubus_imprison_interaction: "감금"
   succubus_imprison_interaction.desc: "[recipient.GetShortUIName]를 당신의 감옥에 감금합니다."
 
-  sbs_mind_break_interaction: "정신 파괴"
-  sbs_mind_break_interaction.desc: "[recipient.GetShortUIName]에게 음탕한 생각에 시달리게 합니다."
+  sbs_devils_gift_interaction: "정신 파괴"
+  sbs_devils_gift_interaction.desc: "[recipient.GetShortUIName]에게 음탕한 생각에 시달리게 합니다."
   sbs_create_laamp: "악마의 캠프 만들기"
 
   sbs_child_interaction: "아이 만들기"

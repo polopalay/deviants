@@ -14,8 +14,8 @@
   succubus_imprison_interaction: "监禁"
   succubus_imprison_interaction.desc: "将[recipient.GetShortUIName]监禁到你的地牢"
 
-  sbs_mind_break_interaction: "心灵崩溃"
-  sbs_mind_break_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
+  sbs_devils_gift_interaction: "心灵崩溃"
+  sbs_devils_gift_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
   sbs_create_laamp: "创建恶魔营地"
 
   sbs_child_interaction: "创造孩子"

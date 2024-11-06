@@ -14,8 +14,8 @@
   succubus_imprison_interaction: "Emprisonner"
   succubus_imprison_interaction.desc: "Emprisonnez [recipient.GetShortUIName] dans votre donjon"
 
-  sbs_mind_break_interaction: "Rupture Mentale"
-  sbs_mind_break_interaction.desc: "Amène [recipient.GetShortUIName] à être hanté par des pensées lubriques"
+  sbs_devils_gift_interaction: "Rupture Mentale"
+  sbs_devils_gift_interaction.desc: "Amène [recipient.GetShortUIName] à être hanté par des pensées lubriques"
   sbs_create_laamp: "Créer un Camp du Diable"
 
   sbs_child_interaction: "Créer un Enfant"

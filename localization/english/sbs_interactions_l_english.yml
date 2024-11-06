@@ -11,8 +11,8 @@
  succubus_purify_interaction: "Purify"
  succubus_purify_interaction.desc: "Purify [recipient.GetShortUIName]'s bloodstream, eliminating all bad genes"
 
- sbs_mind_break_interaction: "The Devil's gift"
- sbs_mind_break_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
+ sbs_devils_gift_interaction: "The Devil's gift"
+ sbs_devils_gift_interaction.desc: "Give [recipient.GetShortUIName] a \"blessing\""
  sbs_create_laamp: "Create Devil's Camp"
 
  sbs_child_interaction: "Create Child"

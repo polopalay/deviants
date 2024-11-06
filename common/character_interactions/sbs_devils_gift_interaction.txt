@@ -1,0 +1,491 @@
+sbs_devils_gift_interaction = {
+	icon = mesmerize
+	desc = sbs_devils_gift_interaction.desc
+	category = interaction_category_hostile
+	use_diplomatic_range = yes
+	cooldown = { years = 2 }
+	common_interaction = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+			}
+		}
+		scope:recipient = {
+			NOT = {
+				has_trait = seed_of_destruction
+				has_trait = sbs_lesser_succubus
+				has_trait = sbs_succubus
+				has_trait = sbs_demon
+			}
+		}
+	}
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_trait = sbs_demon
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 25 }
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = sbs_succubus }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -25 }
+			}
+		}
+		scope:recipient = {
+			random_list = {
+				5 = {
+					modifier = { has_trait = deviant_blood add = 45 }
+					modifier = { is_female = yes add = -50 }
+					remove_trait = deviant_blood
+					add_trait = seed_of_destruction
+					set_immortal_age = 18
+				}
+				5 = {
+					modifier = { has_trait = deviant_blood add = 45 }
+					modifier = { is_ruler = yes add = -50 }
+					create_landless_adventurer_title_effect = {
+						REASON = flag:voluntary
+						FLAVOR_CHAR = scope:recipient
+					}
+				}
+				5 = {
+					modifier = { has_trait = deviant_blood add = 45 }
+					modifier = { NOT = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } } add = -50 }
+					remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+				}
+				0 = {
+					modifier = {
+						has_trait = lustful
+						is_adult = yes
+						scope:actor = {
+							any_knight = {
+								scope:recipient = { is_attracted_to_gender_of = prev }	
+								is_adult = yes
+							}
+						}
+						add = 5
+					}
+					scope:actor = {
+						every_knight = {
+							limit = {
+								scope:recipient = { is_attracted_to_gender_of = prev }	
+								is_adult = yes
+							}
+							prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+						}
+					}
+				}
+				0 = {
+					modifier = {
+						scope:actor = {
+							has_trait = lustful
+							is_adult = yes
+						}
+						any_knight = {
+							scope:actor = { is_attracted_to_gender_of = prev }	
+							is_adult = yes
+						}
+						add = 5
+					}
+					any_knight = {
+						scope:actor = { is_attracted_to_gender_of = prev }	
+						is_adult = yes
+						prostitute_effect = { PROSTITUTE = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
+					}
+				}
+				0 = {
+					modifier = {
+						scope:recipient = { is_adult = yes is_attracted_to_gender_of = scope:actor }
+						scope:actor = { is_adult = yes }
+						add = 5
+					}
+					prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+				}
+				3 = {
+					modifier = { has_trait = deviant_blood add = -3 }
+					add_character_modifier = { modifier = succubus_debuff years = 10 }
+				}
+				3 = {
+					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } add = -5 }
+					modifier = { has_trait = deviant_blood add = 3 }
+					scope:recipient = {
+						add_secret = { type = secret_deviant }
+					}
+				}
+				3 = {
+					modifier = { OR = { any_secret = { secret_type = secret_witch } has_trait = witch } add = -5 }
+					modifier = { has_trait = deviant_blood add = 3 }
+					scope:recipient = { add_secret = { type = secret_witch } }
+				}
+				3 = {
+					modifier = {
+						OR = {
+							has_trait = slave
+							has_character_flag = carn_cannot_be_enslaved
+							has_trait_with_flag = carn_cannot_be_enslaved
+							has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+						}
+						add = -3
+					}
+					modifier = { has_trait = deviant_blood add = -3 }
+					add_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+				}
+				0 = {
+					modifier = {
+						has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+						add = 1
+					}
+					modifier = { has_trait = deviant_blood add = -1 }
+					carn_enslave_effect = { SLAVE = scope:recipient OWNER = scope:actor DRAMA = yes }
+				}
+				3 = {
+					modifier = { has_trait = deviant_blood add = -3 }
+					pay_short_term_gold = {
+						target = scope:actor
+						gold = tiny_gold_value
+					}
+				}
+				2 = {
+					modifier = { has_trait = depressed_1 add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = depressed_1
+				}
+				2 = {
+					modifier = { has_trait = depressed_genetic add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = depressed_genetic
+				}
+				2 = {
+					modifier = { has_trait = lunatic_1 add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = lunatic_1
+				}
+				2 = {
+					modifier = { has_trait = lunatic_genetic add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = lunatic_genetic
+				}
+				2 = {
+					modifier = { has_trait = possessed_1 add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = possessed_1
+				}
+				2 = {
+					modifier = { has_trait = possessed_genetic add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = possessed_genetic
+				}
+				2 = {
+					modifier = { has_trait = ill add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = ill
+				}
+				2 = {
+					modifier = { has_trait = pneumonic add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = pneumonic
+				}
+				2 = {
+					modifier = { has_trait = gout_ridden add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = gout_ridden
+				}
+				2 = {
+					modifier = { has_trait = typhus add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = typhus
+				}
+				2 = {
+					modifier = { has_trait = consumption add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = consumption
+				}
+				2 = {
+					modifier = { has_trait = cancer add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = cancer
+				}
+				2 = {
+					modifier = { has_trait = great_pox add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = great_pox
+				}
+				2 = {
+					modifier = { has_trait = smallpox add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = smallpox
+				}
+				2 = {
+					modifier = { has_trait = bubonic_plague add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = bubonic_plague
+				}
+				2 = {
+					modifier = { has_trait = lovers_pox add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = lovers_pox
+				}
+				2 = {
+					modifier = { has_trait = great_pox add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = great_pox
+				}
+				2 = {
+					modifier = { has_trait = bubonic_plague add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = bubonic_plague
+				}
+				2 = {
+					modifier = { has_trait = measles add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = measles
+				}
+				2 = {
+					modifier = { has_trait = dysentery add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = dysentery
+				}
+				2 = {
+					modifier = { has_trait = ergotism add = -2 }
+					modifier = { has_trait = deviant_blood add = -2 }
+					add_trait = ergotism
+				}
+				1 = {
+					modifier = { has_trait = inbred add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = inbred
+				}
+				1 = {
+					modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = dull
+				}
+				2 = {
+					modifier = { OR = { has_trait = dull has_trait = shrewd } add = -2 }
+					add_trait = shrewd
+				}
+				1 = {
+					modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = weak
+				}
+				2 = {
+					modifier = { OR = { has_trait = weak has_trait = strong } add = -2 }
+					add_trait = strong
+				}
+				1 = {
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = infertile
+				}
+				2 = {
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -2 }
+					add_trait = fecund
+				}
+				2 = {
+					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -2 }
+					add_trait = physique_good_1
+				}
+				1 = {
+					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = physique_bad_1
+				}
+				2 = {
+					modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -2 }
+					add_trait = intellect_good_1
+				}
+				1 = {
+					modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = intellect_bad_1
+				}
+				2 = {
+					modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -2 }
+					add_trait = beauty_good_1
+				}
+				1 = {
+					modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -1 }
+					modifier = { has_trait = deviant_blood add = -1 }
+					add_trait = beauty_bad_1
+				}
+				0 = {
+					modifier = { OR = { has_trait = physique_good_1 } add = 2 }
+					remove_trait = physique_good_1
+					add_trait = physique_good_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = physique_good_2 } add = 2 }
+					remove_trait = physique_good_2
+					add_trait = physique_good_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = intellect_good_1 } add = 2 }
+					remove_trait = intellect_good_1
+					add_trait = intellect_good_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
+					remove_trait = intellect_good_2
+					add_trait = intellect_good_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = beauty_good_1 } add = 2 }
+					remove_trait = beauty_good_1
+					add_trait = beauty_good_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = beauty_good_2 } add = 2 }
+					remove_trait = beauty_good_2
+					add_trait = beauty_good_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_intrigue_1 } add = 2 }
+					remove_trait = education_intrigue_1
+					add_trait = education_intrigue_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_intrigue_2 } add = 2 }
+					remove_trait = education_intrigue_2
+					add_trait = education_intrigue_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_intrigue_3 } add = 1 }
+					remove_trait = education_intrigue_3
+					add_trait = education_intrigue_4
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_intrigue_4 } add = 1 }
+					remove_trait = education_intrigue_4
+					add_trait = education_intrigue_5
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_diplomacy_1 } add = 2 }
+					remove_trait = education_diplomacy_1
+					add_trait = education_diplomacy_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_diplomacy_2 } add = 2 }
+					remove_trait = education_diplomacy_2
+					add_trait = education_diplomacy_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_diplomacy_3 } add = 1 }
+					remove_trait = education_diplomacy_3
+					add_trait = education_diplomacy_4
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_diplomacy_4 } add = 1 }
+					remove_trait = education_diplomacy_4
+					add_trait = education_diplomacy_5
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_stewardship_1 } add = 2 }
+					remove_trait = education_stewardship_1
+					add_trait = education_stewardship_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_stewardship_2 } add = 2 }
+					remove_trait = education_stewardship_2
+					add_trait = education_stewardship_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_stewardship_3 } add = 1 }
+					remove_trait = education_stewardship_3
+					add_trait = education_stewardship_4
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_stewardship_4 } add = 1 }
+					remove_trait = education_stewardship_4
+					add_trait = education_stewardship_5
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_martial_1 } add = 2 }
+					remove_trait = education_martial_1
+					add_trait = education_martial_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_martial_2 } add = 2 }
+					remove_trait = education_martial_2
+					add_trait = education_martial_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_martial_3 } add = 1 }
+					remove_trait = education_martial_3
+					add_trait = education_martial_4
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_martial_4 } add = 1 }
+					remove_trait = education_martial_4
+					add_trait = education_martial_5
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_learning_1 } add = 2 }
+					remove_trait = education_learning_1
+					add_trait = education_learning_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_learning_2 } add = 2 }
+					remove_trait = education_learning_2
+					add_trait = education_learning_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_learning_3 } add = 1 }
+					remove_trait = education_learning_3
+					add_trait = education_learning_4
+				}
+				0 = {
+					modifier = { OR = { has_trait = education_learning_4 } add = 1 }
+					remove_trait = education_learning_4
+					add_trait = education_learning_5
+				}
+			}
+			add_character_modifier = { modifier = succubus_buff years = 10 }
+		}
+	}
+	ai_accept = {
+		base = 5
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.1
+		}
+		modifier = { add = -2 scope:recipient.faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } }
+		modifier = { add = -3 scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous  } } } }
+		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
+		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_witchcraft_accepted has_doctrine = doctrine_witchcraft_virtuous } } } }
+		modifier = { add = -2 scope:recipient.faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } }
+		modifier = { add = -3 scope:recipient = { ai_zeal > high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous  } } } }
+		modifier = { add = -5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
+		modifier = { add = -10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { NOR = { has_doctrine = doctrine_deviancy_accepted has_doctrine = doctrine_deviancy_virtuous } } } }
+		modifier = { add = 2 scope:recipient.faith = { has_doctrine = doctrine_witchcraft_virtuous  } }
+		modifier = { add = 3 scope:recipient = { ai_zeal > high_positive_ai_value faith = { has_doctrine = doctrine_witchcraft_virtuous  } } }
+		modifier = { add = 5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { has_doctrine = doctrine_witchcraft_virtuous } } }
+		modifier = { add = 10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { has_doctrine = doctrine_witchcraft_virtuous } } }
+		modifier = { add = 2 scope:recipient.faith = { has_doctrine = doctrine_deviancy_virtuous  } }
+		modifier = { add = 3 scope:recipient = { ai_zeal > high_positive_ai_value faith = { has_doctrine = doctrine_deviancy_virtuous  } } }
+		modifier = { add = 5 scope:recipient = { ai_zeal > very_high_positive_ai_value faith = { has_doctrine = doctrine_deviancy_virtuous } } }
+		modifier = { add = 10 scope:recipient = { ai_zeal > dominant_positive_ai_value faith = { has_doctrine = doctrine_deviancy_virtuous } } }
+	}
+	ai_frequency = 6
+	ai_targets = {
+		ai_recipients = family
+		ai_recipients = liege
+		ai_recipients = vassals
+		ai_recipients = courtiers
+		ai_recipients = scripted_relations
+		ai_recipients = neighboring_rulers
+		max = 5
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 10
+		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
+	}
+}
