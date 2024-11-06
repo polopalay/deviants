@@ -40,23 +40,25 @@ sbs_devils_gift_interaction = {
 		scope:recipient = {
 			random_list = {
 				5 = {
-					modifier = { has_trait = deviant_blood add = 45 }
-					modifier = { is_female = yes add = -50 }
+					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { has_trait = seed_of_destruction add = -10 }
+					modifier = { is_female = yes add = -10 }
 					remove_trait = deviant_blood
 					add_trait = seed_of_destruction
 					set_immortal_age = 18
 				}
 				5 = {
-					modifier = { has_trait = deviant_blood add = 45 }
-					modifier = { is_ruler = yes add = -50 }
+					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { has_trait = seed_of_destruction add = 10 }
+					modifier = { is_ruler = yes add = -20 }
 					create_landless_adventurer_title_effect = {
 						REASON = flag:voluntary
 						FLAVOR_CHAR = scope:recipient
 					}
 				}
 				5 = {
-					modifier = { has_trait = deviant_blood add = 45 }
-					modifier = { NOT = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } } add = -50 }
+					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { NOT = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } } add = -10 }
 					remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
 				}
 				0 = {
@@ -93,9 +95,11 @@ sbs_devils_gift_interaction = {
 						}
 						add = 5
 					}
-					any_knight = {
-						scope:actor = { is_attracted_to_gender_of = prev }	
-						is_adult = yes
+					every_knight = {
+						limit = {
+							scope:actor = { is_attracted_to_gender_of = prev }	
+							is_adult = yes
+						}
 						prostitute_effect = { PROSTITUTE = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 					}
 				}
@@ -105,7 +109,7 @@ sbs_devils_gift_interaction = {
 						scope:actor = { is_adult = yes }
 						add = 5
 					}
-					prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
+					prostitute_effect = { PROSTITUTE = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				}
 				3 = {
 					modifier = { has_trait = deviant_blood add = -3 }

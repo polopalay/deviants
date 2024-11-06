@@ -107,7 +107,7 @@ masturbate = {
 				add_durability = -1
 			}
 		}
-		if = {
+		else_if = {
 			limit = { any_character_artifact = { has_artifact_modifier = mistress_dildo_modifier } }
 			stress_impact = { base = major_stress_impact_loss }
 			random_artifact = {
