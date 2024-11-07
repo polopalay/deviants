@@ -39,20 +39,37 @@ sbs_devils_gift_interaction = {
 		}
 		scope:recipient = {
 			random_list = {
-				5 = {
+				0 = {
 					modifier = { has_trait = deviant_blood add = 5 }
-					modifier = { has_trait = seed_of_destruction add = -10 }
-					modifier = { is_female = yes add = -10 }
+					modifier = { is_female = yes add = 5 }
 					remove_trait = deviant_blood
 					add_trait = seed_of_destruction
 					set_immortal_age = 18
+					if = {
+						limit = { is_ruler = no }
+						create_landless_adventurer_title_effect = {
+							REASON = flag:voluntary
+							FLAVOR_CHAR = scope:recipient
+						}
+					}
 				}
-				5 = {
+				0 = {
 					modifier = { has_trait = deviant_blood add = 5 }
-					modifier = { has_trait = lustful add = -10 }
-					modifier = { is_female = no add = -10 }
+					modifier = { is_female = no add = 5 }
 					remove_trait = deviant_blood
 					mind_break_personality = yes
+					if = {
+						limit = { scope:actor = { is_ai = yes } }
+						add_trait = sbs_lesser_succubus
+						set_immortal_age = 18
+					}
+					if = {
+						limit = { is_ruler = no }
+						create_landless_adventurer_title_effect = {
+							REASON = flag:voluntary
+							FLAVOR_CHAR = scope:recipient
+						}
+					}
 				}
 				0 = {
 					modifier = { is_adult = yes add = 5 }
@@ -68,6 +85,18 @@ sbs_devils_gift_interaction = {
 					modifier = { has_trait = deviant_blood add = 5 }
 					modifier = { NOT = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } } add = -10 }
 					remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
+				}
+				5 = {
+					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } add = -10 }
+					scope:recipient = {
+						add_secret = { type = secret_deviant }
+					}
+				}
+				5 = {
+					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { OR = { any_secret = { secret_type = secret_witch } has_trait = witch } add = -10 }
+					scope:recipient = { add_secret = { type = secret_witch } }
 				}
 				0 = {
 					modifier = {
@@ -122,18 +151,6 @@ sbs_devils_gift_interaction = {
 				3 = {
 					modifier = { has_trait = deviant_blood add = -3 }
 					add_character_modifier = { modifier = succubus_debuff years = 10 }
-				}
-				3 = {
-					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } add = -5 }
-					modifier = { has_trait = deviant_blood add = 3 }
-					scope:recipient = {
-						add_secret = { type = secret_deviant }
-					}
-				}
-				3 = {
-					modifier = { OR = { any_secret = { secret_type = secret_witch } has_trait = witch } add = -5 }
-					modifier = { has_trait = deviant_blood add = 3 }
-					scope:recipient = { add_secret = { type = secret_witch } }
 				}
 				3 = {
 					modifier = {
@@ -497,7 +514,8 @@ sbs_devils_gift_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 10
+		base = 5
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 	}
 }

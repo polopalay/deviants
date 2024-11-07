@@ -190,6 +190,9 @@
 	send_option = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
+		is_shown = {
+			NOT = { scope:actor.faith = scope:recipient.faith }
+		}
 		is_valid = {
 			# Cannot ask Religious Heads to convert
 			custom_description = {
@@ -768,7 +771,6 @@ devil_dead_interaction = {
 		localization = "RELEASE_DEMAND_CONVERSION"
 		is_shown = {
 			NOT = { scope:actor.faith = scope:recipient.faith }
-
 		}
 		is_valid = {
 			# Cannot ask Religious Heads to convert

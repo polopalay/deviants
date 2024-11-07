@@ -168,74 +168,27 @@
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 50
 		modifier = {
-			add = 5
-			scope:actor = {
-				has_trait = lustful
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-				OR = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
-			}
-		}
-		modifier = {
-			add = 1
+			add = 10
 			scope:hook = yes
-			scope:actor = {
-				has_trait = lustful
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-				OR = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
-			}
 		}
 		modifier = {
-			add = 1
+			add = 10
 			scope:favor = yes
-			scope:actor = {
-				has_trait = lustful
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-				OR = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
-			}
 		}
 		modifier = {
-			add = 1
+			add = 10
 			scope:demand_conversion = yes
 			NOT = { scope:actor = { has_trait = zealous } }
-			scope:actor = {
-				has_trait = lustful
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-				OR = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
-			}
 		}
-		modifier = { add = -7 scope:secondary_recipient = { is_child_of = scope:actor } }
-		modifier = { add = -6 scope:secondary_recipient = { is_spouse_of = scope:actor } }
-		modifier = { add = -5 scope:secondary_recipient = { is_close_or_extended_family_of = scope:actor } }
-		modifier = { add = -5 scope:secondary_recipient = { has_relation_best_friend = scope:actor } }
-		modifier = { add = -4 scope:secondary_recipient = { has_relation_friend = scope:actor } }
-		modifier = { add = -5 scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
-		modifier = { add = -4 scope:secondary_recipient = { has_relation_lover = scope:actor } }
+		modifier = { add = -75 scope:secondary_recipient = { is_child_of = scope:actor } }
+		modifier = { add = -60 scope:secondary_recipient = { is_spouse_of = scope:actor } }
+		modifier = { add = -50 scope:secondary_recipient = { is_close_or_extended_family_of = scope:actor } }
+		modifier = { add = -50 scope:secondary_recipient = { has_relation_best_friend = scope:actor } }
+		modifier = { add = -40 scope:secondary_recipient = { has_relation_friend = scope:actor } }
+		modifier = { add = -50 scope:secondary_recipient = { has_relation_soulmate = scope:actor } }
+		modifier = { add = -40 scope:secondary_recipient = { has_relation_lover = scope:actor } }
 	}
 }
 
@@ -263,7 +216,7 @@ ask_for_become_succubus_interaction = {
 				trait = sbs_lesser_succubus
 				value >= 100
 			}
-			any_prisoner = { count >= 13 }
+			any_prisoner = { count >= 1 }
 			any_courtier = {
 				OR = {
 					is_spouse_of = scope:actor
@@ -342,7 +295,7 @@ ask_for_become_succubus_interaction = {
 				}
 				set_character_faith_with_conversion = scope:recipient.faith
 			}
-			every_prisoner = {
+			random_prisoner = {
 				death = {
 					death_reason = death_execution
 					killer = scope:actor
@@ -351,12 +304,6 @@ ask_for_become_succubus_interaction = {
 			remove_trait = sbs_lesser_succubus
 			add_trait = sbs_succubus
 			set_immortal_age = 18
-			if = {
-				limit = { has_trait = deviant_blood }
-				remove_trait = deviant_blood
-				add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
-				add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
-			}
 		}
 		scope:recipient = {
 			if = {
@@ -410,51 +357,19 @@ ask_for_become_succubus_interaction = {
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 50
 		modifier = {
-			add = 25
-			scope:actor = {
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 100
-				}
-			}
-		}
-		modifier = {
-			add = 5
+			add = 50
 			scope:hook = yes
-			scope:actor = {
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 100
-				}
-			}
 		}
 		modifier = {
-			add = 5
+			add = 50
 			scope:favor = yes
-			scope:actor = {
-				has_trait_xp = {
-					trait = sbs_lesser_succubus
-					value >= 100
-				}
-			}
 		}
 		modifier = {
-			add = 5
+			add = 50
 			scope:demand_conversion = yes
 			NOT = { scope:actor = { has_trait = zealous } }
-			scope:actor = {
-				has_trait = lustful
-				OR = {
-					has_trait = deviant
-					any_secret = { secret_type = secret_deviant }
-				}
-				OR = {
-					has_trait = witch
-					any_secret = { secret_type = secret_witch }
-				}
-			}
 		}
 	}
 }
@@ -579,16 +494,9 @@ create_lesser_succubus_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 25 scope:recipient = { is_child_of = scope:actor } }
+		modifier = { add = 100 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
-		modifier = { add = -100 scope:secondary_recipient = { is_child_of = scope:recipient } }
-		modifier = { add = -100 scope:secondary_recipient = { is_spouse_of = scope:recipient } }
-		modifier = { add = -100 scope:secondary_recipient = { is_close_or_extended_family_of = scope:recipient } }
-		modifier = { add = -100 scope:secondary_recipient = { has_relation_best_friend = scope:recipient } }
-		modifier = { add = -100 scope:secondary_recipient = { has_relation_friend = scope:recipient } }
-		modifier = { add = -100 scope:secondary_recipient = { has_relation_soulmate = scope:recipient } }
-		modifier = { add = -100 scope:secondary_recipient = { has_relation_lover = scope:recipient } }
 		modifier = { add = 100 scope:recipient = { is_ai = no } }
 	}
 }
@@ -622,7 +530,7 @@ create_succubus_interaction = {
 		OR = {
 			scope:recipient = {
 				is_ruler = yes
-				any_prisoner = { count >= 13 }
+				any_prisoner = { count >= 1 }
 				any_courtier = {
 					OR = {
 						is_spouse_of = scope:recipient
@@ -688,7 +596,7 @@ create_succubus_interaction = {
 		scope:actor = {
 			if = {
 				limit = { scope:recipient = { is_ruler = no } }
-				every_prisoner = {
+				random_prisoner = {
 					limit = { NOT = { this = scope:recipient } }
 					death = {
 						death_reason = death_execution
@@ -730,9 +638,9 @@ create_succubus_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
+		modifier = { add = 100 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
-		modifier = { add = 25 scope:secondary_recipient = { is_child_of = scope:recipient } }
 		modifier = { add = 100 scope:recipient = { is_ai = no } }
 	}
 }
