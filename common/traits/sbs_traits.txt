@@ -71,7 +71,6 @@ sbs_succubus = {
 	flag = immortal_visuals
 	flag = immortal_fertility
 	flag = immortal_incapability
-	flag = carn_cannot_be_enslaved
 
 	valid_sex = female
 
@@ -212,7 +211,6 @@ sbs_lesser_succubus = {
 	flag = immortal_visuals
 	flag = immortal_fertility
 	flag = immortal_incapability
-	flag = carn_cannot_be_enslaved
 
 	valid_sex = female
 
@@ -296,7 +294,6 @@ seed_of_destruction = {
 	flag = immortal_visuals
 	flag = immortal_fertility
 	flag = immortal_incapability
-	flag = carn_cannot_be_enslaved
 
 	valid_sex = male
 	opposites = { sbs_demon sbs_succubus sbs_lesser_succubus incapable }
@@ -352,8 +349,6 @@ deviant_blood = {
 			desc = deviant_blood_character_desc
 		}
 	}
-
-	flag = carn_cannot_be_enslaved
 
 	birth = 0.1
 
