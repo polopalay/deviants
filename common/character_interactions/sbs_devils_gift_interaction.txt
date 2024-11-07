@@ -49,6 +49,14 @@ sbs_devils_gift_interaction = {
 				}
 				5 = {
 					modifier = { has_trait = deviant_blood add = 5 }
+					modifier = { has_trait = lustful add = -10 }
+					modifier = { is_female = no add = -10 }
+					remove_trait = deviant_blood
+					mind_break_personality = yes
+				}
+				0 = {
+					modifier = { is_adult = yes add = 5 }
+					modifier = { has_trait = deviant_blood add = 5 }
 					modifier = { has_trait = seed_of_destruction add = 10 }
 					modifier = { is_ruler = yes add = -20 }
 					create_landless_adventurer_title_effect = {
