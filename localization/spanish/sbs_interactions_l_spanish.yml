@@ -8,15 +8,14 @@
   devil_dead_interaction: "Curación"
   devil_dead_interaction.desc: "Elimina todo tipo de enfermedades, lesiones y todos los nombres vergonzosos"
 
-  succubus_purify_interaction: "Purificar"
-  succubus_purify_interaction.desc: "Purifica el torrente sanguíneo de [recipient.GetShortUIName], eliminando todos los genes dañinos"
-
   succubus_imprison_interaction: "Aprisionar"
   succubus_imprison_interaction.desc: "Aprisionar a [recipient.GetShortUIName] en tu mazmorras"
 
   sbs_devils_gift_interaction: "El regalo del Diablo"
   sbs_devils_gift_interaction.desc: "Dar a [recipient.GetShortUIName] una \"bendición\""
-  sbs_create_laamp: "Crear Campamento del Diablo"
+
+  sbs_devils_curse_interaction: "La maldición del Diablo"
+  sbs_devils_curse_interaction.desc: "Dar a [recipient.GetShortUIName] una \"maldición\""
 
   sbs_child_interaction: "Crear Hijo"
   sbs_child_interaction.desc: "Crear un hijo que sea hijo de [recipient.GetShortUIName]"
@@ -61,9 +60,6 @@
   succubus_red_hair: "Cabello Rojo"
   naked: "Desnudo"
   glass: "Cristal"
-
-  succubus_honor_interaction: "Eliminar el Rasgo Deshonroso"
-  succubus_honor_interaction.desc: "Eliminar el rasgo deshonroso de [recipient.GetShortUIName]"
 
   deal_with_the_devil_interaction: "Trato con el Diablo"
   deal_with_the_devil_interaction.desc: "Hacer un trato con el diablo, obtener lo que quieras a cambio de un \"pequeño\" precio"

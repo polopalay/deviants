@@ -27,6 +27,7 @@ demon_generals = {
 			value = -100
 		}
 	}
+	ai_potential = { always = yes }
 	ai_check_interval = 12
 	ai_will_do = { base = 10 }
 }
@@ -39,7 +40,6 @@ become_demon = {
 	decision_group_type = decisions
 
 	is_shown = {
-		is_ai = no
 		is_ruler = yes
 		OR = {
 			AND = {
@@ -47,6 +47,10 @@ become_demon = {
 				has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
 			}
 			has_trait = seed_of_destruction
+			AND = {
+				faith.religion = religion:satanic_religion
+				faith.religious_head = root
+			}
 		}
 	}
 	is_valid = {
@@ -59,13 +63,25 @@ become_demon = {
 				has_trait = seed_of_destruction
 				any_prisoner = { count >= 666 }
 			}
+			AND = {
+				faith.religion = religion:satanic_religion
+				faith.religious_head = root
+			}
 		}
 	}
 	effect = {
-		every_prisoner = {
-			death = {
-				death_reason = death_execution
-				killer = root
+		if = {
+			limit = {
+				NOT = {
+					faith.religion = religion:satanic_religion
+					faith.religious_head = root
+				}
+			}
+			every_prisoner = {
+				death = {
+					death_reason = death_execution
+					killer = root
+				}
 			}
 		}
 		if = {
@@ -76,10 +92,28 @@ become_demon = {
 			limit = { has_trait = sbs_succubus }
 			remove_trait = sbs_succubus
 		}
+		if = {
+			limit = { has_trait = sbs_lesser_succubus }
+			remove_trait = sbs_lesser_succubus
+		}
+		if = {
+			limit = { has_trait = deviant_blood }
+			remove_trait = deviant_blood
+		}
 		add_trait = sbs_demon
+		set_culture = culture:sbs_demonic
 		set_immortal_age = 18
+		if = {
+			limit = { is_female = yes }
+			give_nickname = nickname_the_demon_queen
+		}
+		else = {
+			give_nickname = nickname_the_demon_king
+		}
 	}
-	ai_check_interval = 0
+	ai_potential = { always = yes }
+	ai_check_interval = 12
+	ai_will_do = { base = 100 }
 }
 
 masturbate = {
@@ -117,4 +151,7 @@ masturbate = {
 		}
 		add_character_flag = { flag = pussy_cum months = 1 }
 	}
+	ai_potential = { always = yes }
+	ai_check_interval = 12
+	ai_will_do = { base = 100 }
 }

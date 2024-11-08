@@ -8,15 +8,14 @@
   devil_dead_interaction: "Heilung"
   devil_dead_interaction.desc: "Beseitigt alle Arten von Krankheiten, Verletzungen und alle unehrenhaften Namen"
 
-  succubus_purify_interaction: "Reinigen"
-  succubus_purify_interaction.desc: "Reinigen Sie das Blut von [recipient.GetShortUIName], indem Sie alle schlechten Gene entfernen"
-
   succubus_imprison_interaction: "Einsperren"
   succubus_imprison_interaction.desc: "Sperren Sie [recipient.GetShortUIName] in Ihrem Verlies ein"
 
   sbs_devils_gift_interaction: "Geistige Zerrüttung"
   sbs_devils_gift_interaction.desc: "Bringt [recipient.GetShortUIName] dazu, von lüsternen Gedanken heimgesucht zu werden"
-  sbs_create_laamp: "Teufelslager erstellen"
+
+  sbs_devils_curse_interaction: "Fluch"
+  sbs_devils_curse_interaction.desc: "Geben Sie [recipient.GetShortUIName] einen \"Fluch\""
 
   sbs_child_interaction: "Ein Kind erschaffen"
   sbs_child_interaction.desc: "Ein Kind erschaffen, das das Kind von [recipient.GetShortUIName] sein wird"
@@ -63,9 +62,6 @@
   succubus_red_hair: "Rote Haare"
   naked: "Nackt"
   glass: "Glas"
-
-  succubus_honor_interaction: "Unehrenhaften Trait entfernen"
-  succubus_honor_interaction.desc: "Entfernen Sie den unehrenhaften Trait von [recipient.GetShortUIName]"
 
   deal_with_the_devil_interaction: "Pakt mit dem Teufel"
   deal_with_the_devil_interaction.desc: "Schließe einen Pakt mit dem Teufel und erhalte, was immer du willst, zu einem \"kleinen\" Preis."

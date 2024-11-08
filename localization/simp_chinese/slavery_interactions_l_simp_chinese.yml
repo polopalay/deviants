@@ -10,7 +10,7 @@
   recipient_secondary_carn_buy_slave_directly_interaction: "奴隶"
 
   carn_sell_slave_interaction: "出售奴隶"
-  carn_sell_slave_interaction_desc: "在奴隶市场上以 #high [gold_i]#! 出售 [recipient.GetShortUINameNoTooltip]"
+  carn_sell_slave_interaction.desc: "在奴隶市场上以 #high [gold_i]#! 出售 [recipient.GetShortUINameNoTooltip]"
   recipient_secondary_carn_sell_slave_interaction: "买家"
   carn_buyer_not_enough_gold_for_slave_price_tooltip: "支付 #high [gold_i]#!"
   carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] 是我的 [recipient.Custom('KnightCulture')]: $VALUE|=+0$"

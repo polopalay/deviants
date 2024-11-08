@@ -8,21 +8,17 @@
   devil_dead_interaction: "치유"
   devil_dead_interaction.desc: "모든 종류의 질병, 부상 및 모든 불명예스러운 이름을 제거합니다."
 
-  succubus_purify_interaction: "정화"
-  succubus_purify_interaction.desc: "[recipient.GetShortUIName]의 혈액을 정화하여 나쁜 유전자를 제거합니다."
-
   succubus_imprison_interaction: "감금"
   succubus_imprison_interaction.desc: "[recipient.GetShortUIName]를 당신의 감옥에 감금합니다."
 
   sbs_devils_gift_interaction: "정신 파괴"
   sbs_devils_gift_interaction.desc: "[recipient.GetShortUIName]에게 음탕한 생각에 시달리게 합니다."
-  sbs_create_laamp: "악마의 캠프 만들기"
+
+  sbs_devils_curse_interaction: "저주"
+  sbs_devils_curse_interaction.desc: "[recipient.GetShortUIName]에게 \"저주\"를 부여합니다."
 
   sbs_child_interaction: "아이 만들기"
   sbs_child_interaction.desc: "[recipient.GetShortUIName]의 자녀를 만듭니다."
-
-  succubus_rumor_interaction: "소문 퍼뜨리기"
-  succubus_rumor_interaction.desc: "[recipient.GetShortUIName]에 대한 나쁜 소문을 퍼뜨립니다."
 
   sbs_switch_body_interaction: "변경"
   sbs_switch_body_interaction.desc: "[recipient.GetShortUIName]를 플레이합니다."
@@ -65,9 +61,6 @@
   succubus_red_hair: "붉은 머리"
   naked: "나체"
   glass: "유리"
-
-  succubus_honor_interaction: "불명예스러운 특성 제거"
-  succubus_honor_interaction.desc: "[recipient.GetShortUIName]의 불명예스러운 특성을 제거합니다."
 
   deal_with_the_devil_interaction: "악마와 거래하기"
   deal_with_the_devil_interaction.desc: "악마와 거래하여 원하는 것을 \"작은\" 대가로 얻으세요."

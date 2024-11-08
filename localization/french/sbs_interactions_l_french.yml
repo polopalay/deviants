@@ -8,15 +8,14 @@
   devil_dead_interaction: "Guérison"
   devil_dead_interaction.desc: "Élimine toutes sortes de maladies, blessures et tous les noms disgracieux"
 
-  succubus_purify_interaction: "Purifier"
-  succubus_purify_interaction.desc: "Purifiez le sang de [recipient.GetShortUIName], en éliminant tous les mauvais gènes"
-
   succubus_imprison_interaction: "Emprisonner"
   succubus_imprison_interaction.desc: "Emprisonnez [recipient.GetShortUIName] dans votre donjon"
 
   sbs_devils_gift_interaction: "Rupture Mentale"
   sbs_devils_gift_interaction.desc: "Amène [recipient.GetShortUIName] à être hanté par des pensées lubriques"
-  sbs_create_laamp: "Créer un Camp du Diable"
+
+  sbs_devils_curse_interaction: "Malédiction"
+  sbs_devils_curse_interaction.desc: "Donnez à [recipient.GetShortUIName] une \"malédiction\""
 
   sbs_child_interaction: "Créer un Enfant"
   sbs_child_interaction.desc: "Créer un enfant qui sera l'enfant de [recipient.GetShortUIName]"
@@ -65,9 +64,6 @@
 
   naked: "Nue"
   glass: "Verre"
-
-  succubus_honor_interaction: "Retirer le Trait Disgracieux"
-  succubus_honor_interaction.desc: "Retirez le Trait disgracieux de [recipient.GetShortUIName]"
 
   deal_with_the_devil_interaction: "Faire un pacte avec le diable"
   deal_with_the_devil_interaction.desc: "Faites un pacte avec le diable pour obtenir ce que vous voulez à un \"petit\" prix."

@@ -10,7 +10,7 @@
  recipient_secondary_carn_buy_slave_directly_interaction: "Slave"
 
  carn_sell_slave_interaction: "Sell Slave"
- carn_sell_slave_interaction_desc: "Sell [recipient.GetShortUINameNoTooltip] on the slave_market for #high [gold_i]#!"
+ carn_sell_slave_interaction.desc: "Sell [recipient.GetShortUINameNoTooltip] on the slave_market for #high [gold_i]#!"
  recipient_secondary_carn_sell_slave_interaction: "Buyer"
  carn_buyer_not_enough_gold_for_slave_price_tooltip: "Pays #high [gold_i]#!"
  carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] is my [recipient.Custom('KnightCulture')]: $VALUE|=+0$"

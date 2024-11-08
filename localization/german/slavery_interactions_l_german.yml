@@ -10,7 +10,7 @@
   recipient_secondary_carn_buy_slave_directly_interaction: "Sklave"
 
   carn_sell_slave_interaction: "Einen Sklaven verkaufen"
-  carn_sell_slave_interaction_desc: "[recipient.GetShortUINameNoTooltip] auf dem Sklavenmarkt für #high [gold_i]#! verkaufen"
+  carn_sell_slave_interaction.desc: "[recipient.GetShortUINameNoTooltip] auf dem Sklavenmarkt für #high [gold_i]#! verkaufen"
   recipient_secondary_carn_sell_slave_interaction: "Käufer"
   carn_buyer_not_enough_gold_for_slave_price_tooltip: "Zahlt #high [gold_i]#!"
   carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] ist mein [Ritter|E]: $VALUE|=+0$"

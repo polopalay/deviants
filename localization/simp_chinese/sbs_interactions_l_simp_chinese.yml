@@ -16,13 +16,12 @@
 
   sbs_devils_gift_interaction: "心灵崩溃"
   sbs_devils_gift_interaction.desc: "使[recipient.GetShortUIName]受到淫荡思想的困扰"
-  sbs_create_laamp: "创建恶魔营地"
+
+  sbs_devils_curse_interaction: "诅咒"
+  sbs_devils_curse_interaction.desc: "给[recipient.GetShortUIName]一个\"诅咒\""
 
   sbs_child_interaction: "创造孩子"
   sbs_child_interaction.desc: "创造一个是[recipient.GetShortUIName]的孩子"
-
-  succubus_rumor_interaction: "散布谣言"
-  succubus_rumor_interaction.desc: "散布关于[recipient.GetShortUIName]的坏谣言"
 
   sbs_switch_body_interaction: "切换"
   sbs_switch_body_interaction.desc: "扮演[recipient.GetShortUIName]"
@@ -61,9 +60,6 @@
   succubus_red_hair: "红发"
   naked: "裸体"
   glass: "玻璃"
-
-  succubus_honor_interaction: "移除不光彩的特质"
-  succubus_honor_interaction.desc: "从[recipient.GetShortUIName]移除不光彩的特质"
 
   deal_with_the_devil_interaction: "与魔鬼交易"
   deal_with_the_devil_interaction.desc: "与魔鬼达成协议，以 \"小 \"代价获得你想要的一切。"

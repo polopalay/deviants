@@ -254,7 +254,13 @@
 			add_character_modifier = { modifier = succubus_buff years = 30 }
 			if = {
 				limit = { has_trait = sbs_lesser_succubus }
-				add_trait_xp = { trait = sbs_lesser_succubus value = -20 }
+				if = {
+					limit = { scope:lesser_succubus = yes }
+					add_trait_xp = { trait = sbs_lesser_succubus value = -20 }
+				}
+				else = {
+					add_trait_xp = { trait = sbs_lesser_succubus value = -100 }
+				}
 			}
 			if = {
 				limit = { has_trait = sbs_succubus }

@@ -219,7 +219,7 @@
 	send_option = {
 		is_shown = {
 			NOT = { scope:actor = scope:recipient }
-			scope:recipient = {
+			scope:actor = {
 				is_adult = yes
 				OR = {
 					NOT = { has_trait = lustful }
@@ -409,7 +409,30 @@
 			}
 			if = {
 				limit = { scope:small_price = yes }
-				mind_break_personality = yes
+				if = {
+					limit = { NOT = { has_trait = lustful } }
+					mind_break_personality = yes
+				}
+				if = {
+					limit = { NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+					if = {
+						limit = { faith = { OR = { has_doctrine = doctrine_deviancy_crime has_doctrine = doctrine_deviancy_shunned } } }
+						add_secret = { type = secret_deviant }
+					}
+					else = {
+						add_trait = deviant
+					}
+				}
+				if = {
+					limit = { NOR = { has_trait = witch any_secret = { secret_type = secret_witch } } }
+					if = {
+						limit = { faith = { OR = { has_doctrine = doctrine_witchcraft_crime has_doctrine = doctrine_witchcraft_shunned } } }
+						add_secret = { type = secret_witch }
+					}
+					else = {
+						add_trait = witch
+					}
+				}
 			}
 			if = {
 				limit = { scope:expose_secret = yes }
@@ -830,6 +853,9 @@ devil_dead_interaction = {
 		localization = "small_price"
 	}
 	send_option = {
+		is_shown = {
+			NOT = { scope:actor = scope:recipient }
+		}
 		is_valid = {
 			scope:recipient = { any_secret = { NOT = { is_known_by = scope:actor } } }
 		}
@@ -880,7 +906,30 @@ devil_dead_interaction = {
 			}
 			if = {
 				limit = { scope:small_price = yes }
-				mind_break_personality = yes
+				if = {
+					limit = { NOT = { has_trait = lustful } }
+					mind_break_personality = yes
+				}
+				if = {
+					limit = { NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
+					if = {
+						limit = { faith = { OR = { has_doctrine = doctrine_deviancy_crime has_doctrine = doctrine_deviancy_shunned } } }
+						add_secret = { type = secret_deviant }
+					}
+					else = {
+						add_trait = deviant
+					}
+				}
+				if = {
+					limit = { NOR = { has_trait = witch any_secret = { secret_type = secret_witch } } }
+					if = {
+						limit = { faith = { OR = { has_doctrine = doctrine_witchcraft_crime has_doctrine = doctrine_witchcraft_shunned } } }
+						add_secret = { type = secret_witch }
+					}
+					else = {
+						add_trait = witch
+					}
+				}
 			}
 			if = {
 				limit = { scope:expose_secret = yes }

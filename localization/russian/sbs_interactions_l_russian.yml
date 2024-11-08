@@ -16,13 +16,12 @@
 
   sbs_devils_gift_interaction: "Разрушение разума"
   sbs_devils_gift_interaction.desc: "Вызывает у [recipient.GetShortUIName] влечение к похотливым мыслям."
-  sbs_create_laamp: "Создать лагерь дьявола"
+
+  sbs_devils_curse_interaction: "Проклятие"
+  sbs_devils_curse_interaction.desc: "Дает [recipient.GetShortUIName] \"проклятие\"."
 
   sbs_child_interaction: "Создать ребенка"
   sbs_child_interaction.desc: "Создать ребенка от [recipient.GetShortUIName]."
-
-  succubus_rumor_interaction: "Распространение слухов"
-  succubus_rumor_interaction.desc: "Распространение плохих слухов о [recipient.GetShortUIName]."
 
   sbs_switch_body_interaction: "Сменить тело"
   sbs_switch_body_interaction.desc: "Играть за [recipient.GetShortUIName]."
@@ -62,9 +61,6 @@
   succubus_red_hair: "Красные волосы"
   naked: "Нагой"
   glass: "Стекло"
-
-  succubus_honor_interaction: "Удалить позорное качество"
-  succubus_honor_interaction.desc: "Удалите позорное качество у [recipient.GetShortUIName]."
 
   deal_with_the_devil_interaction: "Сделка с дьяволом"
   deal_with_the_devil_interaction.desc: "Заключите сделку с дьяволом и получите все, что хотите, за \"небольшую\" цену."

@@ -107,7 +107,6 @@
 				set_character_faith_with_conversion = scope:recipient.faith
 			}
 			remove_character_modifier = succubus_buff
-			mind_break_personality = yes
 			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
 			if = {

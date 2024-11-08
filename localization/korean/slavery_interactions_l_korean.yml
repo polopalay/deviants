@@ -10,7 +10,7 @@
   recipient_secondary_carn_buy_slave_directly_interaction: "노예"
 
   carn_sell_slave_interaction: "노예 판매"
-  carn_sell_slave_interaction_desc: "[recipient.GetShortUINameNoTooltip]를 노예 시장에서 #high [gold_i]#!에 판매합니다."
+  carn_sell_slave_interaction.desc: "[recipient.GetShortUINameNoTooltip]를 노예 시장에서 #high [gold_i]#!에 판매합니다."
   recipient_secondary_carn_sell_slave_interaction: "구매자"
   carn_buyer_not_enough_gold_for_slave_price_tooltip: "지불 #high [gold_i]#!"
   carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U]는 내 [recipient.Custom('KnightCulture')]입니다: $VALUE|=+0$"
