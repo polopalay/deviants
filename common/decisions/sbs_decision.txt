@@ -41,6 +41,7 @@ become_demon = {
 
 	is_shown = {
 		is_ruler = yes
+		NOT = { has_trait = sbs_demon }
 		OR = {
 			AND = {
 				has_trait_xp = { trait = sbs_succubus track = corruption value >= 100 }
@@ -109,6 +110,78 @@ become_demon = {
 		}
 		else = {
 			give_nickname = nickname_the_demon_king
+		}
+		if = {
+			limit = { faith = faith:beelzebub faith.religious_head = root }
+			copy_inheritable_appearance_from = character:beelzebub_character
+			if = {
+				limit = { NOT = { mother = character:beelzebub_character } }
+				set_mother = character:beelzebub_character
+			}
+			if = {
+				limit = { is_lowborn = yes }
+				set_house = character:beelzebub_character.house
+			}
+		}
+		else_if = {
+			limit = { faith = faith:lilith faith.religious_head = root }
+			copy_inheritable_appearance_from = character:lilith_character
+			if = {
+				limit = { NOT = { father = character:lilith_character } }
+				set_mother = character:lilith_character
+			}
+			if = {
+				limit = { is_lowborn = yes }
+				set_house = character:lilith_character.house
+			}
+		}
+		else_if = {
+			limit = { faith = faith:abaddon faith.religious_head = root }
+			copy_inheritable_appearance_from = character:abaddon_character
+			if = {
+				limit = { NOT = { father = character:abaddon_character } }
+				set_father = character:abaddon_character
+			}
+			if = {
+				limit = { is_lowborn = yes }
+				set_house = character:abaddon_character.house
+			}
+		}
+		else_if = {
+			limit = { faith = faith:mammon faith.religious_head = root }
+			copy_inheritable_appearance_from = character:mammon_character
+			if = {
+				limit = { NOT = { father = character:mammon_character } }
+				set_father = character:mammon_character
+			}
+			if = {
+				limit = { is_lowborn = yes }
+				set_house = character:mammon_character.house
+			}
+		}
+		else_if = {
+			limit = { faith = faith:asmodeus faith.religious_head = root }
+			copy_inheritable_appearance_from = character:asmodeus_character
+			if = {
+				limit = { NOT = { father = character:asmodeus_character } }
+				set_father = character:asmodeus_character
+			}
+			if = {
+				limit = { is_lowborn = yes }
+				set_house = character:asmodeus_character.house
+			}
+		}
+		else_if = {
+			limit = { faith = faith:belial faith.religious_head = root }
+			copy_inheritable_appearance_from = character:belial_character
+			if = {
+				limit = { NOT = { father = character:belial_character } }
+				set_mother = character:belial_character
+			}
+			if = {
+				limit = { is_lowborn = yes }
+				set_house = character:belial_character.house
+			}
 		}
 	}
 	ai_potential = { always = yes }
