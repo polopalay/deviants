@@ -166,9 +166,7 @@ succubus_outfit = {
 		}
 	}
 	succubus_7 = {
-		traits = {
-			succubus
-		}
+		traits = { sbs_succubus }
 		trigger = {
 			has_trait_xp = {
 				trait = sbs_succubus
