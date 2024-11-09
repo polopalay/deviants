@@ -157,6 +157,7 @@
 	ai_potential = { always = yes }
 	ai_frequency = 12
 	ai_targets = {
+		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
@@ -215,10 +216,13 @@ ask_for_become_succubus_interaction = {
 				trait = sbs_lesser_succubus
 				value >= 100
 			}
-			any_prisoner = { count >= 1 }
+			OR = {
+				any_prisoner = { count >= 1 }
+				any_courtier = { NOT = { this = scope:recipient } count > 2 }
+			}
 			any_courtier = {
 				OR = {
-					is_spouse_of = scope:actor
+					NOT = { this = scope:recipient }
 					is_close_or_extended_family_of = scope:actor
 				}
 			}
@@ -230,7 +234,7 @@ ask_for_become_succubus_interaction = {
 			every_courtier = {
 				limit = {
 					OR = {
-						is_spouse_of = scope:actor
+						NOT = { this = scope:recipient }
 						is_close_or_extended_family_of = scope:actor
 					}
 				}
@@ -294,10 +298,22 @@ ask_for_become_succubus_interaction = {
 				}
 				set_character_faith_with_conversion = scope:recipient.faith
 			}
-			random_prisoner = {
-				death = {
-					death_reason = death_execution
-					killer = scope:actor
+			if = {
+				limit = { any_prisoner = { count > 0 } }
+				random_prisoner = {
+					death = {
+						death_reason = death_execution
+						killer = scope:actor
+					}
+				}
+			}
+			else = {
+				random_courtier = {
+					limit = { NOT = { this = scope:recipient this = scope:secondary_recipient } }
+					death = {
+						death_reason = death_execution
+						killer = scope:actor
+					}
 				}
 			}
 			remove_trait = sbs_lesser_succubus
@@ -346,6 +362,7 @@ ask_for_become_succubus_interaction = {
 	ai_potential = { always = yes }
 	ai_frequency = 12
 	ai_targets = {
+		ai_recipients = family
 		ai_recipients = liege
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
@@ -488,11 +505,13 @@ create_lesser_succubus_interaction = {
 		ai_recipients = prisoners
 		ai_recipients = courtiers
 		ai_recipients = scripted_relations
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 0
+		base = 10
 		modifier = { add = 100 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }
@@ -529,7 +548,10 @@ create_succubus_interaction = {
 		OR = {
 			scope:recipient = {
 				is_ruler = yes
-				any_prisoner = { count >= 1 }
+				OR = {
+					any_prisoner = { count >= 1 }
+					any_courtier = { NOT = { this = scope:recipient } count >= 2 }
+				}
 				any_courtier = {
 					OR = {
 						is_spouse_of = scope:recipient
@@ -539,8 +561,8 @@ create_succubus_interaction = {
 			}
 			scope:actor = {
 				scope:recipient = { is_ruler = no }
-				any_prisoner = { count >= 13 NOT = { this = scope:recipient } }
-				any_courtier = { OR = { is_spouse_of = scope:recipient is_close_or_extended_family_of = scope:recipient } NOT = { this = scope:recipient } }
+				any_prisoner = { count >= 1 NOT = { this = scope:recipient } }
+				any_courtier = { OR = { is_close_or_extended_family_of = scope:recipient } NOT = { this = scope:recipient } }
 			}
 		}
 	}
@@ -550,7 +572,7 @@ create_succubus_interaction = {
 			every_courtier = {
 				limit = {
 					OR = {
-						is_spouse_of = scope:recipient
+						NOT = { this = scope:recipient }
 						is_close_or_extended_family_of = scope:recipient
 					}
 				}
@@ -561,6 +583,7 @@ create_succubus_interaction = {
 			every_courtier = {
 				limit = {
 					OR = {
+						NOT = { this = scope:recipient }
 						is_spouse_of = scope:recipient
 						is_close_or_extended_family_of = scope:recipient
 					}
@@ -594,9 +617,17 @@ create_succubus_interaction = {
 		}
 		scope:actor = {
 			if = {
-				limit = { scope:recipient = { is_ruler = no } }
+				limit = { any_prisoner = { count > 0 } }
 				random_prisoner = {
-					limit = { NOT = { this = scope:recipient } }
+					death = {
+						death_reason = death_execution
+						killer = scope:recipient
+					}
+				}
+			}
+			else = {
+				random_courtier = {
+					limit = { NOT = { this = scope:recipient this = scope:secondary_recipient } }
 					death = {
 						death_reason = death_execution
 						killer = scope:recipient
@@ -616,7 +647,7 @@ create_succubus_interaction = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 0,5
+			multiplier = 0.5
 		}
 		opinion_modifier = {
 			opinion_target = scope:secondary_recipient
@@ -632,11 +663,13 @@ create_succubus_interaction = {
 		ai_recipients = prisoners
 		ai_recipients = courtiers
 		ai_recipients = scripted_relations
+		ai_recipients = neighboring_rulers
+		ai_recipients = nearby_domicile_owners
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 0
+		base = 10
 		modifier = { add = 100 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_courtier_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { is_female = yes is_vassal_of = scope:actor } }

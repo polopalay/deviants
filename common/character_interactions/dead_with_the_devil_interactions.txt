@@ -309,7 +309,7 @@
 			recover_from_disease_effect = { DISEASE = great_pox }
 			recover_from_disease_effect = { DISEASE = smallpox }
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
-			recover_from_disease_effect = { DISEASE = lovers_pox }
+			remove_trait = lovers_pox
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
 			recover_from_disease_effect = { DISEASE = dysentery }
 			recover_from_disease_effect = { DISEASE = ergotism }
@@ -1167,7 +1167,7 @@ devil_dead_interaction = {
 			recover_from_disease_effect = { DISEASE = great_pox }
 			recover_from_disease_effect = { DISEASE = smallpox }
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
-			recover_from_disease_effect = { DISEASE = lovers_pox }
+			remove_trait = lovers_pox
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
 			recover_from_disease_effect = { DISEASE = dysentery }
 			recover_from_disease_effect = { DISEASE = ergotism }
