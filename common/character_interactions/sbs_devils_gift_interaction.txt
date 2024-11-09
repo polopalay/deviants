@@ -62,6 +62,7 @@ sbs_devils_gift_interaction = {
 				0 = {
 					modifier = { OR = { has_trait = seed_of_destruction has_trait = sbs_lesser_succubus has_trait = sbs_succubus has_trait = sbs_demon } add = 50 }
 					modifier = { is_ruler = yes add = -50 }
+					modifier = { has_trait = slave add = -50 }
 					create_landless_adventurer_title_effect = {
 						REASON = flag:voluntary
 						FLAVOR_CHAR = scope:recipient
