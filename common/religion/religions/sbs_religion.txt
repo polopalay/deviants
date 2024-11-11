@@ -232,6 +232,7 @@ satanic_religion = {
 			doctrine = tenet_polyamory
 
 			doctrine = doctrine_deviancy_virtuous
+			doctrine = special_doctrine_naked_priests
 		}
 		abaddon = {
 			religious_head = k_abandon
@@ -244,11 +245,10 @@ satanic_religion = {
 			holy_site = carthage
 			holy_site = constantinople
 
-			doctrine = tenet_armed_pilgrimages
+			doctrine = tenet_warmonger
 			doctrine = tenet_fp3_fedayeen
 			doctrine = tenet_ritual_cannibalism
 
-			doctrine = doctrine_concubines
 			doctrine = doctrine_funeral_cremation
 			doctrine = doctrine_pluralism_fundamentalist
 		}
@@ -267,6 +267,7 @@ satanic_religion = {
 			doctrine = tenet_communal_possessions
 			doctrine = tenet_tax_nonbelievers
 
+			doctrine = doctrine_concubines
 			doctrine = doctrine_funeral_cremation
 		}
 		asmodeus = {

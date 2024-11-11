@@ -41,6 +41,7 @@
 			limit = { is_imprisoned_by = scope:new_owner }
 			release_from_prison = yes
 		}
+		add_character_flag = blocked_from_leaving
 		if = {
 			limit = { 
 				$DRAMA$ = yes
@@ -177,6 +178,7 @@ carn_free_slave_effect = {
 				add_hook = { target = scope:slave type = favor_hook }
 			}
 		}
+		remove_character_flag = blocked_from_leaving
 		if = {
 			limit = {
 				scope:gold = no

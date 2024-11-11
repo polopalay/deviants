@@ -3,7 +3,7 @@ sbs_devils_gift_interaction = {
 	desc = sbs_devils_gift_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes
-	cooldown = { years = 2 }
+	cooldown = { years = 1 }
 	common_interaction = yes
 	is_shown = {
 		scope:actor = {
@@ -49,20 +49,48 @@ sbs_devils_gift_interaction = {
 					remove_trait = deviant_blood
 					mind_break_personality = yes
 					if = {
-						limit = { NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-						add_secret = { type = secret_deviant }
+						limit = {
+							NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } }
+						}
+						if = {
+							OR = {
+								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:actor }
+								AND = {
+									exists = liege
+									trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:actor }
+								}
+							}
+							add_secret = { type = secret_deviant }
+							random_secret = { limit = { secret_type = secret_deviant } reveal_to = scope:actor }
+						}
+						else = {
+							add_trait = deviant
+						}
 					}
 					if = {
 						limit = { NOR = { has_trait = witch any_secret = { secret_type = secret_witch } } }
-						add_secret = { type = secret_witch }
+						if = {
+							OR = {
+								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:actor }
+								AND = {
+									exists = liege
+									trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:actor }
+								}
+							}
+							add_secret = { type = secret_witch }
+							random_secret = { limit = { secret_type = secret_witch } reveal_to = scope:actor }
+						}
+						else = {
+							add_trait = witch
+						}
 					}
 					add_trait = sbs_lesser_succubus
 					set_immortal_age = 18
 				}
 				0 = {
-					modifier = { OR = { has_trait = seed_of_destruction has_trait = sbs_lesser_succubus has_trait = sbs_succubus has_trait = sbs_demon } add = 50 }
-					modifier = { is_ruler = yes add = -50 }
-					modifier = { has_trait = slave add = -50 }
+					modifier = { OR = { has_trait = seed_of_destruction has_trait = sbs_lesser_succubus has_trait = sbs_succubus has_trait = sbs_demon } add = 100 }
+					modifier = { is_ruler = yes add = -100 }
+					modifier = { has_trait = slave add = -100 }
 					create_landless_adventurer_title_effect = {
 						REASON = flag:voluntary
 						FLAVOR_CHAR = scope:recipient
@@ -81,15 +109,63 @@ sbs_devils_gift_interaction = {
 					}
 					prostitute_effect = { PROSTITUTE = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				}
-				5 = {
-					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } add = -5 }
-					scope:recipient = {
+				0 = {
+					modifier = { has_trait = sbs_lesser_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
+					add_trait_xp = { trait = sbs_lesser_succubus value = 10 }
+				}
+				0 = {
+					modifier = { has_trait = seed_of_destruction = scope:actor = { has_trait = sbs_demon } }
+					add_trait_xp = { trait = seed_of_destruction value = 10 }
+				}
+				0 = {
+					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
+					add_trait_xp = { trait = sbs_succubus track = corruption value = 5 }
+				}
+				0 = {
+					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
+					add_trait_xp = { trait = sbs_succubus track = loyalty value = 5 }
+				}
+				0 = {
+					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
+					add_trait_xp = { trait = sbs_succubus track = power value = 10 }
+				}
+				0 = {
+					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
+					add_trait_xp = { trait = sbs_succubus track = daring value = 10 }
+				}
+				10 = {
+					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } is_adult = yes add = -10 }
+					if = {
+						OR = {
+							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:actor }
+							AND = {
+								exists = liege
+								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:actor }
+							}
+						}
 						add_secret = { type = secret_deviant }
+						random_secret = { limit = { secret_type = secret_deviant } reveal_to = scope:actor }
+					}
+					else = {
+						add_trait = deviant
 					}
 				}
-				5 = {
-					modifier = { OR = { any_secret = { secret_type = secret_witch } has_trait = witch } add = -5 }
-					scope:recipient = { add_secret = { type = secret_witch } }
+				10 = {
+					modifier = { OR = { any_secret = { secret_type = secret_witch } has_trait = witch } is_adult = yes add = -10 }
+					if = {
+						OR = {
+							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:actor }
+							AND = {
+								exists = liege
+								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:actor }
+							}
+						}
+						add_secret = { type = secret_witch }
+						random_secret = { limit = { secret_type = secret_witch } reveal_to = scope:actor }
+					}
+					else = {
+						add_trait = witch
+					}
 				}
 				2 = {
 					modifier = { OR = { has_trait = dull has_trait = shrewd } add = -2 }
@@ -265,7 +341,7 @@ sbs_devils_gift_interaction = {
 					modifier = { NOT = { has_trait = education_learning_1 has_trait = education_learning_2 has_trait = education_learning_3 has_trait = education_learning_4 has_trait = education_learning_5 } is_adult = yes add = 1 }
 					add_trait = education_learning_1
 				}
-				10 = {
+				40 = {
 					add_character_modifier = { modifier = succubus_buff years = 10 }
 				}
 			}
@@ -298,14 +374,16 @@ sbs_devils_gift_interaction = {
 	}
 	ai_frequency = 6
 	ai_targets = {
+		ai_recipients = self
 		ai_recipients = family
 		ai_recipients = courtiers
 		max = 5
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 1
+		base = 0
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
+		modifier = { add = 5 scope:recipient = scope:actor }
 	}
 }

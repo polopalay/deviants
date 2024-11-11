@@ -1,8 +1,8 @@
 demon_generals = {
-	desc = sbs_demon_generals.desc
+	desc = demon_generals.desc
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_realm.dds" }
-	confirm_text = sbs_demon_generals.c
-	selection_tooltip = sbs_demon_generals.t
+	confirm_text = demon_generals.c
+	selection_tooltip = demon_generals.t
 	decision_group_type = decisions
 	cooldown = { years = 50 }
 	is_shown = {
@@ -118,10 +118,7 @@ become_demon = {
 				limit = { NOT = { mother = character:beelzebub_character } }
 				set_mother = character:beelzebub_character
 			}
-			if = {
-				limit = { is_lowborn = yes }
-				set_house = character:beelzebub_character.house
-			}
+			set_house = character:beelzebub_character.house
 		}
 		else_if = {
 			limit = { faith = faith:lilith faith.religious_head = root }
@@ -130,10 +127,7 @@ become_demon = {
 				limit = { NOT = { father = character:lilith_character } }
 				set_mother = character:lilith_character
 			}
-			if = {
-				limit = { is_lowborn = yes }
-				set_house = character:lilith_character.house
-			}
+			set_house = character:lilith_character.house
 		}
 		else_if = {
 			limit = { faith = faith:abaddon faith.religious_head = root }
@@ -142,10 +136,7 @@ become_demon = {
 				limit = { NOT = { father = character:abaddon_character } }
 				set_father = character:abaddon_character
 			}
-			if = {
-				limit = { is_lowborn = yes }
-				set_house = character:abaddon_character.house
-			}
+			set_house = character:abaddon_character.house
 		}
 		else_if = {
 			limit = { faith = faith:mammon faith.religious_head = root }
@@ -154,10 +145,7 @@ become_demon = {
 				limit = { NOT = { father = character:mammon_character } }
 				set_father = character:mammon_character
 			}
-			if = {
-				limit = { is_lowborn = yes }
-				set_house = character:mammon_character.house
-			}
+			set_house = character:mammon_character.house
 		}
 		else_if = {
 			limit = { faith = faith:asmodeus faith.religious_head = root }
@@ -166,10 +154,7 @@ become_demon = {
 				limit = { NOT = { father = character:asmodeus_character } }
 				set_father = character:asmodeus_character
 			}
-			if = {
-				limit = { is_lowborn = yes }
-				set_house = character:asmodeus_character.house
-			}
+			set_house = character:asmodeus_character.house
 		}
 		else_if = {
 			limit = { faith = faith:belial faith.religious_head = root }
@@ -178,10 +163,7 @@ become_demon = {
 				limit = { NOT = { father = character:belial_character } }
 				set_mother = character:belial_character
 			}
-			if = {
-				limit = { is_lowborn = yes }
-				set_house = character:belial_character.house
-			}
+			set_house = character:belial_character.house
 		}
 	}
 	ai_potential = { always = yes }

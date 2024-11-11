@@ -114,6 +114,10 @@
 				remove_trait = deviant_blood
 				add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
 			}
+			if = {
+				limit = { scope: secondary_recipient = { is_close_family_of = scope:actor } }
+				add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
+			}
 		}
 		scope:recipient = {
 			if = {
@@ -158,10 +162,7 @@
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = family
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = courtiers
+		ai_recipients = scripted_relations
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
 		max = 5
@@ -218,7 +219,7 @@ ask_for_become_succubus_interaction = {
 			}
 			OR = {
 				any_prisoner = { count >= 1 }
-				any_courtier = { NOT = { this = scope:recipient } count > 2 }
+				any_courtier = { NOT = { this = scope:recipient } count >= 2 }
 			}
 			any_courtier = {
 				OR = {
@@ -319,6 +320,10 @@ ask_for_become_succubus_interaction = {
 			remove_trait = sbs_lesser_succubus
 			add_trait = sbs_succubus
 			set_immortal_age = 18
+			if = {
+				limit = { scope: secondary_recipient = { is_close_family_of = scope:actor } }
+				add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
+			}
 		}
 		scope:recipient = {
 			if = {
@@ -363,10 +368,7 @@ ask_for_become_succubus_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = family
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = peer_vassals
-		ai_recipients = courtiers
+		ai_recipients = scripted_relations
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
 		max = 5
@@ -467,6 +469,10 @@ create_lesser_succubus_interaction = {
 				remove_trait = deviant_blood
 				add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
 			}
+			if = {
+				limit = { scope: secondary_recipient = { is_close_family_of = scope:recipient } }
+				add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
+			}
 		}
 		scope:secondary_recipient = {
 			death = {
@@ -500,10 +506,6 @@ create_lesser_succubus_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = family
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = prisoners
-		ai_recipients = courtiers
 		ai_recipients = scripted_relations
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
@@ -609,10 +611,8 @@ create_succubus_interaction = {
 			add_trait = sbs_succubus
 			set_immortal_age = 18
 			if = {
-				limit = { has_trait = deviant_blood }
-				remove_trait = deviant_blood
+				limit = { scope: secondary_recipient = { is_close_family_of = scope:recipient } }
 				add_trait_xp = { trait = sbs_succubus track = corruption value = 50 }
-				add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
 			}
 		}
 		scope:actor = {
@@ -658,10 +658,6 @@ create_succubus_interaction = {
 	ai_frequency = 12
 	ai_targets = {
 		ai_recipients = family
-		ai_recipients = liege
-		ai_recipients = vassals
-		ai_recipients = prisoners
-		ai_recipients = courtiers
 		ai_recipients = scripted_relations
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
