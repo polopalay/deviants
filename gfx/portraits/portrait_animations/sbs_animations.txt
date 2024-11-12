@@ -1,0 +1,2374 @@
+idle = {
+	default = {
+		default = { head = "idle_entry" torso = "idle_entry" }
+
+		incapable = {
+			animation = { head = "incapable" torso = "incapable" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 10000
+					has_trait = incapable
+				}
+			}
+		}
+
+		imprisoned_house_arrest = {
+			animation = { head = "misc_arrest" torso = "misc_arrest" }
+			portrait_modifier = {
+				animations_props = arrest_prop
+				animations = misc_arrest_decal
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 10000
+					OR = {
+						AND = {
+							is_imprisoned = yes
+							NOT = { is_in_prison_type = dungeon }
+						}
+						has_trait = slave
+					}
+				}
+			}
+		}
+
+		imprisoned_dungeon = {
+			animation = { head = "misc_dungeon" torso = "misc_dungeon" }
+			portrait_modifier = {
+				animations_props = dungeon_props
+				animations = misc_dungeon_decal
+				animations = no_cloak
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 10000
+					is_imprisoned = yes
+					is_in_prison_type = dungeon
+				}
+			}
+		}
+
+		ill_coughing = {
+			animation = { head = "cough" torso = "cough" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_alive = yes
+					OR = {
+						has_trait = pneumonic
+						has_trait = consumption
+					}
+				}
+			}
+		}
+
+		ill_shiver = {
+			animation = { head = "shiver" torso = "shiver" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_alive = yes
+					OR = {
+						has_trait = typhus
+						has_trait = ill
+					}
+				}
+			}
+		}
+
+		ill_sick = {
+			animation = { head = "emotion_sick" torso = "emotion_sick" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_alive = yes
+					OR = {
+						has_trait = measles
+						has_trait = smallpox
+						has_trait = bubonic_plague
+					}
+				}
+			}
+		}
+
+		ill_stomach = {
+			animation = { head = "stomach_sick_start" torso = "stomach_sick_start" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_alive = yes
+					has_trait = dysentery
+				}
+			}
+		}
+		
+		character_conqueror_war = {
+			animation = { head = "marshal_shield" torso = "marshal_shield" }
+			portrait_modifier_pack = council_marshal_shield
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					has_trait = conqueror
+					is_at_war = yes
+				}
+			}
+		}
+		
+		character_conqueror_peace = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					has_trait = conqueror
+					is_at_war = no
+				}
+			}
+			portrait_modifier_pack = one_handed_sword
+		}
+		
+		character_mercenary_1 = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 1000
+					primary_title ?= {
+						is_mercenary_company = yes
+					}
+					has_personality_malicious_trigger = yes
+				}
+			}
+			portrait_modifier_pack = one_handed_axe
+		}
+		
+		character_mercenary_2 = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 1000
+					primary_title ?= {
+						is_mercenary_company = yes
+					}
+					has_personality_levelheaded_trigger = yes
+				}
+			}
+			portrait_modifier_pack = two_handed_hammer
+		}
+		
+		character_mercenary_3 = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 1000
+					primary_title ?= {
+						is_mercenary_company = yes
+					}
+					has_personality_dominant_trigger = yes
+				}
+			}
+			portrait_modifier_pack = one_handed_mace
+		}
+		
+		character_mercenary_4 = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 1000
+					primary_title ?= {
+						is_mercenary_company = yes
+					}
+				}
+			}
+			portrait_modifier_pack = one_handed_sword
+		}
+		
+		character_murchad = {
+			animation = { head = "emotion_thinking_entry" torso = "emotion_thinking_entry" }
+			portrait_modifier = {
+				animations = AI_rational_decal				
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					this = character:83355
+				}
+			}
+		}
+		
+		character_robert = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					this = character:1128
+				}
+			}
+			portrait_modifier_pack = one_handed_sword
+		}
+		
+		character_yahya = {
+			animation = { head = "chessCocky1_entry" torso = "chessCocky1_entry" }
+			portrait_modifier = {
+				animations_props = fp2_chess_piece_prop_left_hand
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations = child_additive
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					this = character:3924
+				}
+			}
+		}
+		
+		camp_purpose_mercenaries = {
+			animation = { head = "marshal_shield" torso = "marshal_shield" }
+			portrait_modifier_pack = council_marshal_shield
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_ruler = yes
+					age >= 10
+					has_realm_law = camp_purpose_mercenaries
+					portrait_sickness_trigger = no
+				}
+			}
+		}
+		
+		camp_purpose_brigands = {
+			animation = { head = "council_marshal" torso = "council_marshal" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_ruler = yes
+					age >= 10
+					has_realm_law = camp_purpose_brigands
+					portrait_sickness_trigger = no
+				}
+			}
+			portrait_modifier_pack = one_handed_mace
+		}
+		
+		camp_purpose_scholars = {
+			animation = { head = "writing" torso = "writing" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_ruler = yes
+					age >= 10
+					NOT = { this = character:41702 }
+					NOR = {
+						has_trait = blind
+						has_trait = maimed
+					}
+					has_realm_law = camp_purpose_scholars
+					portrait_sickness_trigger = no
+				}
+			}
+			portrait_modifier = {
+				animations_props = fp4_writing_book_prop
+				animations = female_prop_fix_additive
+			}
+		}
+		
+		camp_purpose_explorers = {
+			animation = { head = "survey_start" torso = "survey_start" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 5000
+					is_ruler = yes
+					age >= 10
+					has_realm_law = camp_purpose_explorers
+					portrait_sickness_trigger = no
+				}
+			}
+		}
+		
+		AI_idle_infant = {
+			animation = { head = "idle_entry" torso = "idleInfant_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					scope:age <= 5
+				}
+			}
+		}
+		
+		AI_idle_ergotism = {
+			animation = { head = "dancing_plague_loop" torso = "dancing_plague_loop" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					has_trait = ergotism
+				}
+			}
+		}
+
+		idle_scepter = {
+			animation = { head = "scepter" torso = "scepter" }
+			portrait_modifier = {
+				animations = fat_additive
+				animations_props = ep3_byzantine_scepter_prop
+				animations = cloak_additive
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					primary_title = title:e_byzantium
+					faith.religion = religion:christianity_religion
+				}
+			}
+		}
+
+		idle_writing = {
+			animation = { head = "writing" torso = "writing" }
+			portrait_modifier = {
+				animations_props = fp4_writing_book_prop
+				animations = female_prop_fix_additive
+			}
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					has_character_flag = generated_scribe
+				}
+			}
+		}
+
+		AI_idle_child = {
+			animation = { head = "idle_entry" torso = "idleInfant_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					scope:age <= 13
+				}
+			}
+		}
+
+		AI_idle_basic = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 99
+					#scope:age >= 10
+					scope:current_weight <= 75
+				}
+			}
+		}
+
+		AI_idle_fat = {
+			animation = { head = "idle_entry" torso = "idleFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					#scope:age >= 10
+					scope:current_weight >= 75
+				}
+			}
+		}
+
+##########################################################################################################################################################################################
+##########################################################################################################################################################################################
+
+		AI_honorable = {
+			animation = { head = "AI_honorable_entry" torso = "AI_honorable_entry" }
+			weight = {
+				base = 0
+				# Score set to 100 + the actual ai_value score (will range from 150 to 200)
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_honor
+					}
+					#scope:age >= 10
+					scope:ai_honor >= max_positive_honor
+					scope:current_weight <= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no
+				}
+			}
+		}
+
+		AI_honorable_fat = {
+			animation = { head = "AI_honorable_entry" torso = "AI_honorableFat_entry" }
+			weight = {
+				base = 0
+				# Score set to 100 + the actual ai_value score (will range from 150 to 200)
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_honor
+					}
+					#scope:age >= 10
+					scope:ai_honor >= max_positive_honor
+					scope:current_weight >= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no
+				}
+			}
+		}
+
+		AI_honorable_dwarf = {
+			animation = { head = "AI_honorable_entry" torso = "AI_honorableFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_honor
+					}
+					#scope:age >= 10
+					scope:ai_honor >= max_positive_honor
+					scope:current_weight <= 70
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no
+				}
+			}
+		}
+
+		AI_honorable_fat_dwarf = {
+			animation = { head = "AI_honorable_entry" torso = "AI_honorableFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_honor
+					}
+					#scope:age >= 10
+					scope:ai_honor >= max_positive_honor
+					scope:current_weight >= 70
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no
+				}
+			}
+		}
+
+		AI_honorable_MENA = {
+			animation = { head = "AI_honorable_entry" torso = "AI_honorableFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_honor
+					}
+					#scope:age >= 10
+					scope:ai_honor >= max_positive_honor
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+		}
+
+##########################################################################################################################################################################################
+##########################################################################################################################################################################################
+
+
+		AI_dishonorable = {
+			animation = { head = "AI_dishonorable_entry" torso = "AI_dishonorable_entry" }
+			weight = {
+				base = 0
+				# Score set to 100 + the inverse of the negative ai_value score (will range from 150 to 200)
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_honor
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_honor <= max_negative_honor
+					scope:current_weight <= 20
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no				
+				}
+			}
+			portrait_modifier = {
+				animations = AI_dishonorable_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_dishonorable_fat = {
+			animation = { head = "AI_dishonorable_entry" torso = "AI_dishonorableFat_entry" }
+			weight = {
+				base = 0
+				# Score set to 100 + the inverse of the negative ai_value score (will range from 150 to 200)
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_honor
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_honor <= max_negative_honor
+					scope:current_weight >= 20
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no  				
+				}
+			}
+			portrait_modifier = {
+				animations = AI_dishonorable_decal
+			}
+		}
+
+		AI_dishonorable_dwarf = {
+			animation = { head = "AI_dishonorable_entry" torso = "AI_dishonorableFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_honor
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_honor <= max_negative_honor
+					scope:current_weight <= 40
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no  				
+				}
+			}
+			portrait_modifier = {
+				animations = AI_dishonorable_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_dishonorable_fat_dwarf = {
+			animation = { head = "AI_dishonorable_entry" torso = "AI_dishonorableFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_honor
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_honor <= max_negative_honor
+					scope:current_weight >= 40
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no  			
+				}
+			}
+			portrait_modifier = {
+				animations = AI_dishonorable_decal
+			}
+		}
+
+		AI_dishonorable_MENA = {
+			animation = { head = "AI_dishonorable_entry" torso = "AI_dishonorableFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_honor
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_honor <= max_negative_honor
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = AI_dishonorable_decal
+			}
+		}
+
+###############################################################################################################################################################################
+###############################################################################################################################################################################
+
+		AI_bold = {
+			animation = { head = "AI_bold_entry" torso = "AI_bold_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_boldness
+					}
+					#scope:age >= 10
+					scope:ai_boldness >= high_positive_boldness
+					scope:current_weight <= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {
+				animations = AI_bold_decal
+			}
+		}
+
+		AI_bold_fat = {
+			animation = { head = "AI_bold_entry" torso = "AI_boldFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_boldness
+					}
+					#scope:age >= 10
+					scope:ai_boldness >= high_positive_boldness
+					scope:current_weight >= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }					
+				}
+			}
+			portrait_modifier = {
+				animations = AI_bold_decal
+			}
+		}
+
+		AI_bold_dwarf = {
+			animation = { head = "AI_bold_entry" torso = "AI_boldFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_boldness
+					}
+					#scope:age >= 10
+					scope:ai_boldness >= high_positive_boldness
+					scope:current_weight <= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }					
+				}
+			}
+			portrait_modifier = {
+				animations = AI_bold_decal
+			}
+		}
+
+		AI_bold_fat_dwarf = {
+			animation = { head = "AI_bold_entry" torso = "AI_boldFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_boldness
+					}
+					#scope:age >= 10
+					scope:ai_boldness >= high_positive_boldness
+					scope:current_weight >= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }	
+				}
+			}
+			portrait_modifier = {
+				animations = AI_bold_decal
+			}
+		}
+
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+
+		AI_coward = {
+			animation = { head = "AI_coward_entry" torso = "AI_coward_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_boldness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_boldness <= max_negative_boldness
+					scope:current_weight <= 45
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no	  
+				}
+			}
+		}
+
+		AI_coward_fat = {
+			animation = { head = "AI_coward_entry" torso = "AI_cowardFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_boldness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_boldness <= max_negative_boldness
+					scope:current_weight >= 45
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		
+				}
+			}
+		}
+
+		AI_coward_dwarf = {
+			animation = { head = "AI_coward_entry" torso = "AI_cowardFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_boldness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_boldness <= max_negative_boldness
+					scope:current_weight <= 60
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no	  					
+				}
+			}
+		}
+
+		AI_coward_fat_dwarf = {
+			animation = { head = "AI_coward_entry" torso = "AI_cowardFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_boldness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_boldness <= max_negative_boldness
+					scope:current_weight >= 60
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no  			
+				}
+			}
+		}
+
+		AI_coward_MENA = {
+			animation = { head = "AI_coward_entry" torso = "AI_cowardFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_boldness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_boldness <= max_negative_boldness
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_greedy_pregnant_armor_dwarf = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSeriousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					OR = {
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						portrait_wear_armor_trigger = yes
+					}
+					scope:ai_greed >= high_positive_ai_value
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+				}
+			}
+		}
+
+		AI_greedy_pregnant = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSerious_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					scope:ai_greed >= high_positive_ai_value
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+				}
+			}
+		}
+
+		AI_greedy = {
+			animation = { head = "AI_greedy_entry" torso = "AI_greedy_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					#scope:age >= 10
+					scope:ai_greed >= high_positive_ai_value
+					scope:current_weight <= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no
+				}
+			}
+			portrait_modifier = {
+				animations = AI_greedy_decal
+			}
+		}
+
+		AI_greedy_fat = {
+			animation = { head = "AI_greedy_entry" torso = "AI_greedyFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					#scope:age >= 10
+					scope:ai_greed >= high_positive_ai_value
+					scope:current_weight >= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no				
+				}
+			}
+			portrait_modifier = {
+				animations = AI_greedy_decal
+			}
+		}
+
+		AI_greedy_dwarf = {
+			animation = { head = "AI_greedy_entry" torso = "AI_greedyFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					#scope:age >= 10
+					scope:ai_greed >= high_positive_ai_value
+					scope:current_weight <= 40
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		
+				}
+			}
+			portrait_modifier = {
+				animations = AI_greedy_decal
+			}
+		}
+
+		AI_greedy_fat_dwarf = {
+			animation = { head = "AI_greedy_entry" torso = "AI_greedyFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					#scope:age >= 10
+					scope:ai_greed >= high_positive_ai_value
+					scope:current_weight >= 40
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no	  
+				}
+			}
+			portrait_modifier = {
+				animations = AI_greedy_decal
+			}
+		}
+
+		AI_greedy_MENA = {
+			animation = { head = "AI_greedy_entry" torso = "AI_greedyFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_greed
+					}
+					#scope:age >= 10
+					scope:ai_greed >= high_positive_ai_value
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = AI_greedy_decal
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_content_dwarf_armor = {
+			animation = { head = "AI_content_entry" torso = "AI_contentFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness >= medium_positive_ai_value
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					portrait_wear_armor_trigger = yes
+				}
+			}
+			portrait_modifier = {
+				animations = AI_content_decal
+			}
+		}
+
+		AI_content = {
+			animation = { head = "AI_content_entry" torso = "AI_content_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_greed
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_greed <= medium_negative_ai_value
+					scope:current_weight <= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+				}
+			}
+			portrait_modifier = {
+				animations = AI_content_decal
+			}
+		}
+
+		AI_content_fat = {
+			animation = { head = "AI_content_entry" torso = "AI_contentFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_greed
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_greed <= medium_negative_ai_value
+					scope:current_weight >= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+				}
+			}
+			portrait_modifier = {
+				animations = AI_content_decal
+			}
+		}
+
+		AI_content_dwarf = {
+			animation = { head = "AI_content_entry" torso = "AI_contentFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_greed
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_greed <= medium_negative_ai_value
+					scope:current_weight <= 80
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+				}
+			}
+			portrait_modifier = {
+				animations = AI_content_decal
+			}
+		}
+
+		AI_content_fat_dwarf = {
+			animation = { head = "AI_content_entry" torso = "AI_contentFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					#scope:age >= 10
+					scope:ai_greed >= high_positive_ai_value
+					scope:current_weight >= 40
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+				}
+			}
+			portrait_modifier = {
+				animations = AI_content_decal
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_vengeful_pregnant_armor_or_dwarf = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSeriousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					OR = {
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						portrait_wear_armor_trigger = yes
+					}
+					scope:ai_vengefulness >= medium_positive_ai_value
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+				}
+			}
+		}
+
+		AI_vengeful_pregnant = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSerious_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					scope:ai_vengefulness >= medium_positive_ai_value
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+				}
+			}
+		}
+
+		AI_vengeful = {
+			animation = { head = "AI_vengeful_entry" torso = "AI_vengeful_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness >= medium_positive_ai_value
+					scope:current_weight <= 65
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {
+				animations = AI_vengeful_decal
+				animations = cloak_additive
+			}
+		}
+
+		AI_vengeful_fat = {
+			animation = { head = "AI_vengeful_entry" torso = "AI_vengefulFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness >= medium_positive_ai_value
+					scope:current_weight >= 65
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {							
+				animations = AI_vengeful_decal	
+				animations = cloak_additive			
+			}
+		}
+
+		AI_vengeful_dwarf = {
+			animation = { head = "AI_vengeful_entry" torso = "AI_vengefulFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness >= medium_positive_ai_value
+					scope:current_weight <= 60
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {							
+				animations = AI_vengeful_decal	
+				animations = cloak_additive			
+			}
+		}
+
+		AI_vengeful_fat_dwarf = {
+			animation = { head = "AI_vengeful_entry" torso = "AI_vengefulFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_vengefulness
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness >= medium_positive_ai_value
+					scope:current_weight >= 60
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }		
+				}
+			}
+			portrait_modifier = {							
+				animations = AI_vengeful_decal	
+				animations = cloak_additive			
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_forgiving = {
+			animation = { head = "AI_forgiving_entry" torso = "AI_forgiving_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_vengefulness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness <= medium_negative_vengefulness
+					scope:current_weight <= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no					 
+				}
+			}
+			portrait_modifier = {						
+				animations = AI_forgiving_decal				
+			}
+		}
+
+		AI_forgiving_fat = {
+			animation = { head = "AI_forgiving_entry" torso = "AI_forgivingFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_vengefulness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness <= medium_negative_vengefulness
+					scope:current_weight >= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no				  
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal
+			}
+		}
+
+		AI_forgiving_dwarf = {
+			animation = { head = "AI_forgiving_entry" torso = "AI_forgivingFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_vengefulness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness <= medium_negative_vengefulness
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no				 
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal				
+			}
+		}
+
+		AI_forgiving_MENA = {
+			animation = { head = "AI_forgiving_entry" torso = "AI_forgivingFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_vengefulness
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_vengefulness <= medium_negative_vengefulness
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_rational = {
+			animation = { head = "AI_rational_entry" torso = "AI_rational_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_rationality
+					}
+					#scope:age >= 10
+					scope:ai_rationality >= high_positive_rationality
+					scope:current_weight <= 70
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+				modifier = {
+					add = -100
+					this = character:7757
+				}
+			}
+			portrait_modifier = {
+				animations = AI_rational_decal
+			}
+		}
+
+		AI_rational_fat = {
+			animation = { head = "AI_rational_entry" torso = "AI_rationalFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_rationality
+					}
+					#scope:age >= 10
+					scope:ai_rationality >= high_positive_rationality
+					scope:current_weight >= 70
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {
+				animations = AI_rational_decal				
+			}
+		}
+
+		AI_rational_dwarf = {
+			animation = { head = "AI_rational_entry" torso = "AI_rationalFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_rationality
+					}
+					#scope:age >= 10
+					scope:ai_rationality >= high_positive_rationality
+					scope:current_weight <= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }				
+				}
+			}
+			portrait_modifier = {
+				animations = AI_rational_decal				
+			}
+		}
+
+		AI_rational_fat_dwarf = {
+			animation = { head = "AI_rational_entry" torso = "AI_rationalFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_rationality
+					}
+					#scope:age >= 10
+					scope:ai_rationality >= high_positive_rationality
+					scope:current_weight >= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {
+				animations = AI_rational_decal				
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_irrational = {
+			animation = { head = "AI_irrational_entry" torso = "AI_irrational_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_rationality
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_rationality <= high_negative_ai_value
+					scope:current_weight <= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {
+				animations = AI_irrational_decal				
+			}
+		}
+
+		AI_irrational_fat = {
+			animation = { head = "AI_irrational_entry" torso = "AI_irrationalFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_rationality
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_rationality <= high_negative_ai_value
+					scope:current_weight >= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }		
+				}
+			}
+			portrait_modifier = {
+				animations = AI_irrational_decal				
+			}
+		}
+
+		AI_irrational_dwarf = {
+			animation = { head = "AI_irrational_entry" torso = "AI_irrationalFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_rationality
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_rationality <= high_negative_ai_value
+					scope:current_weight <= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {
+				animations = AI_irrational_decal				
+			}
+		}
+
+		AI_irrational_fat_dwarf = {
+			animation = { head = "AI_irrational_entry" torso = "AI_irrationalFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_rationality
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_rationality <= high_negative_ai_value
+					scope:current_weight >= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }		 
+				}
+			}
+			portrait_modifier = {
+				animations = AI_irrational_decal				
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_compassionate = {
+			animation = { head = "AI_compassionate_entry" torso = "AI_compassionate_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_compassion
+					}
+					#scope:age >= 10
+					scope:ai_compassion >= high_positive_compassion
+					scope:current_weight <= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		  
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal
+			}
+		}
+
+		AI_compassionate_fat = {
+			animation = { head = "AI_compassionate_entry" torso = "AI_compassionateFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_compassion
+					}
+					#scope:age >= 10
+					scope:ai_compassion >= high_positive_compassion
+					scope:current_weight >= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no										
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal
+			}
+		}
+
+		AI_compassionate_dwarf = {
+			animation = { head = "AI_compassionate_entry" torso = "AI_compassionateFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_compassion
+					}
+					#scope:age >= 10
+					scope:ai_compassion >= high_positive_compassion
+					scope:current_weight <= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		 
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_compassionate_fat_dwarf = {
+			animation = { head = "AI_compassionate_entry" torso = "AI_compassionateFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_compassion
+					}
+					#scope:age >= 10
+					scope:ai_compassion >= high_positive_compassion
+					scope:current_weight >= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no	 
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_compassionate_MENA = {
+			animation = { head = "AI_compassionate_entry" torso = "AI_compassionateFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_compassion
+					}
+					#scope:age >= 10
+					scope:ai_compassion >= high_positive_compassion
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = AI_forgiving_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_callous_pregnant_armor_or_dwarf = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSeriousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					OR = {
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						portrait_wear_armor_trigger = yes
+					}
+					scope:ai_compassion <= max_negative_compassion
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }		 
+				}
+			}
+		}
+
+		AI_callous_pregnant = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSerious_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					scope:ai_compassion <= max_negative_compassion
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }		 
+				}
+			}
+		}
+
+		AI_callous = {
+			animation = { head = "AI_callous_entry" torso = "AI_callous_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_compassion <= max_negative_compassion
+					scope:current_weight <= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no												
+				}
+			}
+			portrait_modifier = {
+				animations = AI_callous_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_callous_fat = {
+			animation = { head = "AI_callous_entry" torso = "AI_callousFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_compassion <= max_negative_compassion
+					scope:current_weight >= 60
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no												
+				}
+			}
+			portrait_modifier = {
+				animations = AI_callous_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_callous_dwarf = {
+			animation = { head = "AI_callous_entry" torso = "AI_callousFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_compassion <= max_negative_compassion
+					scope:current_weight <= 60
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		 
+				}
+			}
+			portrait_modifier = {
+				animations = AI_callous_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_callous_fat_dwarf = {
+			animation = { head = "AI_callous_entry" torso = "AI_callousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_compassion <= max_negative_compassion
+					scope:current_weight >= 60
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		  
+				}
+			}
+			portrait_modifier = {
+				animations = AI_callous_decal
+			}
+		}
+
+		AI_callous_MENA = {
+			animation = { head = "AI_callous_entry" torso = "AI_callousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_compassion
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_compassion <= max_negative_compassion
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = yes
+							portrait_mena_clothing_trigger = yes
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = AI_callous_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+############################################################################################################################################################
+############################################################################################################################################################
+
+		AI_zealous_pregnant_dwarf_or_armor = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSeriousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					OR = {
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						portrait_wear_armor_trigger = yes
+					}
+					scope:ai_zeal >= high_positive_zeal
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+				}
+			}		
+		}
+
+		AI_zealous_pregnant = {
+			animation = { head = "misc_pregnantSerious_entry" torso = "misc_pregnantSerious_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					scope:ai_zeal >= high_positive_zeal
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+				}
+			}		
+		}
+
+		AI_zealous_muscular = {
+			animation = { head = "AI_zealous_entry" torso = "AI_zealousFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					#scope:age >= 10
+					scope:ai_zeal >= high_positive_zeal
+					prowess >= 13											
+				}
+			}
+			portrait_modifier = {
+				animations = AI_zealous_decal				# One or multiple portrait modifier overrides
+			}			
+		}
+
+		AI_zealous = {
+			animation = { head = "AI_zealous_entry" torso = "AI_zealous_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					#scope:age >= 10
+					scope:ai_zeal >= high_positive_zeal
+					scope:current_weight <= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }		 
+				}
+				modifier = {
+					add = 5000
+					OR = {
+						this = character:7757
+						this = character:41702
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = AI_zealous_decal				# One or multiple portrait modifier overrides
+			}			
+		}
+
+		AI_zealous_fat = {
+			animation = { head = "AI_zealous_entry" torso = "AI_zealousFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					#scope:age >= 10
+					scope:ai_zeal >= high_positive_zeal
+					scope:current_weight >= 40
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }		 
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_zealous_decal				# One or multiple portrait modifier overrides
+			}			
+		}
+
+		AI_zealous_dwarf = {
+			animation = { head = "AI_zealous_entry" torso = "AI_zealousFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					#scope:age >= 10
+					scope:ai_zeal >= high_positive_zeal
+					scope:current_weight <= 55
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_zealous_decal				# One or multiple portrait modifier overrides
+			}			
+		}
+
+		AI_zealous_fat_dwarf = {
+			animation = { head = "AI_zealous_entry" torso = "AI_zealousFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = scope:ai_zeal
+					}
+					#scope:age >= 10
+					scope:ai_zeal >= high_positive_zeal
+					scope:current_weight >= 55
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }		
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_zealous_decal				# One or multiple portrait modifier overrides
+			}			
+		}
+
+
+#####################################################################################################################################################################
+#####################################################################################################################################################################
+
+		AI_cynical_muscular = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynicalFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_zeal
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_zeal <= high_negative_zeal
+					prowess >= 13	  
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_cynical_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_cynical_child = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynicalFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					scope:age <= 4
+				}
+			}
+		}
+
+		AI_cynical = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynical_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_zeal
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_zeal <= high_negative_zeal
+					scope:current_weight <= 20
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		 
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_cynical_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_cynical_fat = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynicalFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_zeal
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_zeal <= high_negative_zeal
+					scope:current_weight >= 20
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		 
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_cynical_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_cynical_dwarf = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynicalFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_zeal
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_zeal <= high_negative_zeal
+					scope:current_weight <= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no	 
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_cynical_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+		AI_cynical_fat_dwarf = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynicalFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_zeal
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_zeal <= high_negative_zeal
+					scope:current_weight >= 65
+					portrait_has_trait_trigger = { TRAIT = dwarf }
+					NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					portrait_wear_armor_trigger = no
+					portrait_mena_clothing_trigger = no		 
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_cynical_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+
+		AI_cynical_MENA = {
+			animation = { head = "AI_cynical_entry" torso = "AI_cynicalFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = {
+						value = 100
+						add = {
+							value = ai_zeal
+							multiply = -1
+						}
+					}
+					#scope:age >= 10
+					scope:ai_zeal <= high_negative_zeal
+					OR = {
+						AND = {
+							portrait_wear_armor_trigger = no
+							portrait_mena_clothing_trigger = no
+						}
+						AND = {
+							is_female = yes
+							portrait_afr_berber_clothing_trigger = yes
+						}
+					}
+				}
+			}
+			portrait_modifier = {							# Triggered portrait modifier for when this animation is picked. The first one satisfying the trigger will be picked.
+				animations = AI_cynical_decal				# One or multiple portrait modifier overrides
+			}
+		}
+
+##########################################################################################################################################################################################################################################################################################################################################
+##########################################################################################################################################################################################################################################################################################################################################
+
+# misc_pregnantSerious_entry (above) is for characeters with negative traits
+#
+# misc_pregnant_entry (below) is for characters with positive traits
+#
+# we had to put pregnant triggers all the way down here because we need to prioritize playing misc_pregnantSerious_entry. hence, you can find misc_pregnantSerious_entry above.
+# 
+
+		AI_pregnant_dwarf_or_armor = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnantFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					OR = {
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						portrait_wear_armor_trigger = yes
+					}
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+				}
+			}
+		}
+
+		AI_pregnant = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnant_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					portrait_has_trait_trigger = { TRAIT = pregnant }
+					NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+				}
+			}
+		}
+	}
+}
+
+#####################################################################################################################################################################
+#####################################################################################################################################################################
+#																		Council Animations																			#
+#####################################################################################################################################################################
+#####################################################################################################################################################################
+
+chancellor = {
+	default = { 
+		default = { head = "council_chancellor" torso = "council_chancellor" } 
+
+		portrait_modifier = {
+			animations = council_chancellor_decal
+			animations_props = chancellor_prop
+		}
+
+		council_chancellor_task = {
+			animation = { head = "writing" torso = "writing" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					is_performing_council_task = task_integrate_title
+				}
+			}
+			portrait_modifier = {
+				animations_props = fp4_writing_book_prop
+				animations = female_prop_fix_additive
+			}
+		}
+
+		council_chancellor = {
+			animation = { head = "council_chancellor" torso = "council_chancellor" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					AND = {
+						scope:current_weight <= 40
+						NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					}
+				}
+			}
+			portrait_modifier_pack = council_chancellor
+		}
+
+		council_chancellor_fat = { # Also just dwarf
+			animation = { head = "council_chancellor" torso = "council_chancellorFat" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					OR = {
+						AND = { # Dwarf
+							scope:current_weight <= 40
+							portrait_has_trait_trigger = { TRAIT = dwarf }
+							NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+						}
+						AND = { # Fat
+							scope:current_weight >= 40
+							NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+							NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+						}
+					}
+				}
+			}
+			portrait_modifier_pack = council_chancellor
+		}
+
+		council_chancellor_fat_dwarf = {
+			animation = { head = "council_chancellor" torso = "council_chancellorFatDwarf" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					AND = {
+						#scope:age >= 10
+						scope:current_weight >= 40
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }
+					}
+				}
+			}
+			portrait_modifier_pack = council_chancellor
+		}
+
+		council_chancellor_pregnant = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnant_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					AND = {
+						scope:current_weight < 60
+						portrait_has_trait_trigger = { TRAIT = pregnant }
+						NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = emotion_happy_decal
+			}
+		}
+
+		council_chancellor_pregnant_dwarf = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnantFat_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					OR = {
+						AND = {
+							scope:current_weight < 60
+							portrait_has_trait_trigger = { TRAIT = pregnant }
+							portrait_has_trait_trigger = { TRAIT = dwarf }
+						}
+						AND = {
+							scope:current_weight >= 60
+							portrait_has_trait_trigger = { TRAIT = pregnant }
+						}
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = emotion_happy_decal
+			}
+		}
+
+		council_chancellor_pregnant_fat_dwarf = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnantFatDwarf_entry" }
+			weight = {
+				base = 0
+				modifier = {
+					add = 100
+					AND = {
+						scope:current_weight >= 60
+						portrait_has_trait_trigger = { TRAIT = pregnant }
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+					}
+				}
+			}
+			portrait_modifier = {
+				animations = emotion_happy_decal
+			}
+		}
+	}
+}

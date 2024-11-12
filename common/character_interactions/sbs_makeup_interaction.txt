@@ -160,6 +160,12 @@ sbs_makeup_interaction = {
 		flag = succubus_red_eyes
 	}
 	send_option = {
+		is_shown = {
+			OR = {
+				scope:recipient = { should_be_naked_trigger = no }
+				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier 
+			}
+		}
 		flag = naked
 	}
 	send_option = {

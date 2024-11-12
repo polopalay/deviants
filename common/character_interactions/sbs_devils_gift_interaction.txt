@@ -53,13 +53,7 @@ sbs_devils_gift_interaction = {
 							NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } }
 						}
 						if = {
-							OR = {
-								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:actor }
-								AND = {
-									exists = liege
-									trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-								}
-							}
+							trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 							add_secret = { type = secret_deviant }
 							random_secret = { limit = { secret_type = secret_deviant } reveal_to = scope:actor }
 						}
@@ -70,13 +64,7 @@ sbs_devils_gift_interaction = {
 					if = {
 						limit = { NOR = { has_trait = witch any_secret = { secret_type = secret_witch } } }
 						if = {
-							OR = {
-								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:actor }
-								AND = {
-									exists = liege
-									trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-								}
-							}
+							trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 							add_secret = { type = secret_witch }
 							random_secret = { limit = { secret_type = secret_witch } reveal_to = scope:actor }
 						}
@@ -136,13 +124,7 @@ sbs_devils_gift_interaction = {
 				10 = {
 					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } is_adult = yes add = -10 }
 					if = {
-						OR = {
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:actor }
-							AND = {
-								exists = liege
-								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-							}
-						}
+						trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 						add_secret = { type = secret_deviant }
 						random_secret = { limit = { secret_type = secret_deviant } reveal_to = scope:actor }
 					}
@@ -153,13 +135,7 @@ sbs_devils_gift_interaction = {
 				10 = {
 					modifier = { OR = { any_secret = { secret_type = secret_witch } has_trait = witch } is_adult = yes add = -10 }
 					if = {
-						OR = {
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:actor }
-							AND = {
-								exists = liege
-								trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-							}
-						}
+						trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 						add_secret = { type = secret_witch }
 						random_secret = { limit = { secret_type = secret_witch } reveal_to = scope:actor }
 					}

@@ -1,0 +1,19 @@
+portrait_prisoner_trigger = {
+	exists = this
+	OR = {
+		AND = {
+			is_imprisoned = yes
+			is_in_prison_type = dungeon
+		}
+		has_trait = slave
+	}
+}
+
+allowed_to_marry_same_sex_trigger = {
+	faith = {
+		NOR = {
+			has_doctrine_parameter = homosexuality_shunned 
+			has_doctrine_parameter = homosexuality_illegal
+		}
+	}
+}

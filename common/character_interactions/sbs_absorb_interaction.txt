@@ -6,6 +6,7 @@
 	common_interaction = yes
 	cooldown = { years = 25 }
 	is_shown = {
+		NOT = { scope:recipient = scope:actor }
 		OR = {
 			AND = {
 				scope:actor = { has_trait = sbs_lesser_succubus }
@@ -107,7 +108,7 @@
 				is_courtier_of = scope:actor
 				is_vassal_of = scope:actor
 				is_parent_of = scope:actor
-				is_child_of = scope:actor
+				is_close_family_of = scope:actor
 			}
 		}
 	}

@@ -91,3 +91,9 @@
  action_can_offer_prostitute: "Offer Prostitute"
  action_can_offer_prostitute_desc: "Offer [recipient.GetShortUIName] sexual services"
  action_can_offer_prostitute_click: ""
+
+secret_prostitute: "Secret Prostitute"
+secret_prostitute_desc: "Is a prostitute"
+secret_prostitute_tooltip_desc: "This character is a prostitute"
+secret_prostitute_type_desc: "$secret_prostitute_tooltip_desc$"
+

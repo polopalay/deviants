@@ -75,113 +75,47 @@
 				has_trait = bastard_founder
 				AND = {
 					has_trait = witch
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 				}
 				AND = {
 					has_trait = deviant
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 				}
 				AND = {
 					has_trait = cannibal
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = faith GENDER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = cannibal }
 				}
 				AND = {
 					has_trait = sodomite
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = faith GENDER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = sodomite }
 				}
 				AND = {
 					has_trait = fornicator
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 				}
 				AND = {
 					has_trait = adulterer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 				}
 				AND = {
 					has_trait = incestuous
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = incestuous }
 				}
 				AND = {
 					has_trait = kinslayer_1
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_1 }
 				}
 				AND = {
 					has_trait = kinslayer_2
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_2 }
 				}
 				AND = {
 					has_trait = kinslayer_3
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger	= { TRAIT = kinslayer_3 }
 				}
 				AND = {
 					has_trait = murderer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 				}
 
 				has_trait = albino
@@ -433,13 +367,7 @@
 			if = {
 				limit = {
 					has_trait = witch
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 				}
 				if = {
 					limit = { NOT = { any_secret = { any_secret = secret_witch } } }
@@ -454,13 +382,7 @@
 			if = {
 				limit = {
 					has_trait = deviant
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 				}
 				remove_trait = deviant
 				if = {
@@ -475,13 +397,7 @@
 			if = {
 				limit = {
 					has_trait = cannibal
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = cannibal }
 				}
 				remove_trait = cannibal
 				if = {
@@ -496,13 +412,7 @@
 			if = {
 				limit = {
 					has_trait = sodomite
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = sodomite }
 				}
 				remove_trait = sodomite
 				if = {
@@ -517,13 +427,7 @@
 			if = {
 				limit = {
 					has_trait = incestuous
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = incestuous }
 				}
 				remove_trait = incestuous
 				if = {
@@ -538,78 +442,42 @@
 			if = {
 				limit = {
 					has_trait = adulterer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 				}
 				remove_trait = adulterer
 			}
 			if = {
 				limit = {
 					has_trait = fornicator
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 				}
 				remove_trait = fornicator
 			}
 			if = {
 				limit = {
 					has_trait = kinslayer_1
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_1 }
 				}
 				remove_trait = kinslayer_1
 			}
 			if = {
 				limit = {
 					has_trait = kinslayer_2
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_2 }
 				}
 				remove_trait = kinslayer_2
 			}
 			if = {
 				limit = {
 					has_trait = kinslayer_3
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_3 }
 				}
 				remove_trait = kinslayer_3
 			}
 			if = {
 				limit = {
 					has_trait = murderer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENGER_CHARACTER = scope:actor }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege GENDER_CHARACTER = scope:actor }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 				}
 				remove_trait = murderer
 			}
@@ -708,17 +576,20 @@
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 0.1
+			multiplier = 0.05
 		}
 		modifier = { add = 25 scope:hook = yes }
-		modifier = { add = 20 scope:favor = yes }
+		modifier = { add = 20 scope:favor = yes scope:actor = {  primary_title.tier >= tier_county } }
 		modifier = { add = 20 scope:gold = yes }
 		modifier = { add = 10 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_county } }
 		modifier = { add = 25 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_duchy } }
 		modifier = { add = 50 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_kingdom } }
 		modifier = { add = 100 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
-		modifier = { add = 30 scope:small_price = yes }
-		modifier = { add = 10 scope:expose_secret = yes }
+		modifier = { add = 25 scope:small_price = yes scope:actor = {  primary_title.tier >= tier_county } }
+		modifier = { add = 10 scope:expose_secret = yes scope:actor = {  primary_title.tier >= tier_county } }
+		modifier = { add = -50 scope:actor = {  primary_title.tier < tier_county } }
+		modifier = { add = -25 scope:actor = {  primary_title.tier = tier_county } }
+		modifier = { add = -10 scope:actor = {  primary_title.tier = tier_duchy } }
 	}
 
 	ai_potential = { always = yes }
@@ -819,130 +690,70 @@
 			add = 5
 			scope:actor = {
 				has_trait = witch
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = deviant
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = cannibal
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = cannibal }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = sodomite
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = sodomite }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = adulterer
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = fornicator
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = kinslayer_1
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_1 }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = kinslayer_2
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_2 }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = kinslayer_3
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_3 }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:actor = {
 				has_trait = murderer
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENDER_CHARACTER = scope:actor }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege.faith GENDER_CHARACTER = scope:actor }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 			}
 		}
 		modifier = { add = -2 scope:demand_conversion = yes scope:actor = { primary_title.tier = tier_county } }
@@ -1002,113 +813,47 @@ devil_dead_interaction = {
 
 				AND = {
 					has_trait = witch
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 				}
 				AND = {
 					has_trait = deviant
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 				}
 				AND = {
 					has_trait = cannibal
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = faith GENDER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = cannibal }
 				}
 				AND = {
 					has_trait = sodomite
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = faith GENDER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = sodomite }
 				}
 				AND = {
 					has_trait = fornicator
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 				}
 				AND = {
 					has_trait = adulterer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 				}
 				AND = {
 					has_trait = incestuous
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = incestuous }
 				}
 				AND = {
 					has_trait = kinslayer_1
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_1 }
 				}
 				AND = {
 					has_trait = kinslayer_2
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_2 }
 				}
 				AND = {
 					has_trait = kinslayer_3
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger	= { TRAIT = kinslayer_3 }
 				}
 				AND = {
 					has_trait = murderer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 				}
 
 				has_trait = depressed_1
@@ -1432,16 +1177,11 @@ devil_dead_interaction = {
 			remove_trait = child_of_concubine_male
 			remove_trait = wild_oat
 			remove_trait = bastard_founder
+
 			if = {
 				limit = {
 					has_trait = witch
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 				}
 				if = {
 					limit = { NOT = { any_secret = { any_secret = secret_witch } } }
@@ -1456,13 +1196,7 @@ devil_dead_interaction = {
 			if = {
 				limit = {
 					has_trait = deviant
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 				}
 				remove_trait = deviant
 				if = {
@@ -1477,13 +1211,7 @@ devil_dead_interaction = {
 			if = {
 				limit = {
 					has_trait = cannibal
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = cannibal }
 				}
 				remove_trait = cannibal
 				if = {
@@ -1498,13 +1226,7 @@ devil_dead_interaction = {
 			if = {
 				limit = {
 					has_trait = sodomite
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = sodomite }
 				}
 				remove_trait = sodomite
 				if = {
@@ -1519,13 +1241,7 @@ devil_dead_interaction = {
 			if = {
 				limit = {
 					has_trait = incestuous
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = incestuous }
 				}
 				remove_trait = incestuous
 				if = {
@@ -1540,78 +1256,42 @@ devil_dead_interaction = {
 			if = {
 				limit = {
 					has_trait = adulterer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 				}
 				remove_trait = adulterer
 			}
 			if = {
 				limit = {
 					has_trait = fornicator
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 				}
 				remove_trait = fornicator
 			}
 			if = {
 				limit = {
 					has_trait = kinslayer_1
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_1 }
 				}
 				remove_trait = kinslayer_1
 			}
 			if = {
 				limit = {
 					has_trait = kinslayer_2
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_2 }
 				}
 				remove_trait = kinslayer_2
 			}
 			if = {
 				limit = {
 					has_trait = kinslayer_3
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_3 }
 				}
 				remove_trait = kinslayer_3
 			}
 			if = {
 				limit = {
 					has_trait = murderer
-					OR = {
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENGER_CHARACTER = scope:recipient }
-						AND = {
-							exists = liege
-							trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege GENDER_CHARACTER = scope:recipient }
-						}
-					}
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 				}
 				remove_trait = murderer
 			}
@@ -1702,7 +1382,7 @@ devil_dead_interaction = {
 		opinion_modifier = {
 			opinion_target = scope:actor
 			who = scope:recipient
-			multiplier = 0.1
+			multiplier = 0.05
 		}
 		modifier = { add = 5 scope:recipient = { stress_level = 1 } }
 		modifier = { add = 10 scope:recipient = { stress_level = 2 } }
@@ -1732,130 +1412,70 @@ devil_dead_interaction = {
 			add = 20
 			scope:recipient = {
 				has_trait = witch
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = witch FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 			}
 		}
 		modifier = {
 			add = 20
 			scope:recipient = {
 				has_trait = deviant
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = deviant FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = deviant }
 			}
 		}
 		modifier = {
 			add = 20
 			scope:recipient = {
 				has_trait = cannibal
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = cannibal }
 			}
 		}
 		modifier = {
 			add = 10
 			scope:recipient = {
 				has_trait = sodomite
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = sodomite }
 			}
 		}
 		modifier = {
 			add = 10
 			scope:recipient = {
 				has_trait = adulterer
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 			}
 		}
 		modifier = {
 			add = 10
 			scope:recipient = {
 				has_trait = fornicator
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 			}
 		}
 		modifier = {
 			add = 20
 			scope:recipient = {
 				has_trait = kinslayer_1
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_1 FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_1 }
 			}
 		}
 		modifier = {
 			add = 15
 			scope:recipient = {
 				has_trait = kinslayer_2
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_2 FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_2 }
 			}
 		}
 		modifier = {
 			add = 10
 			scope:recipient = {
 				has_trait = kinslayer_3
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = kinslayer_3 FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = kinslayer_3 }
 			}
 		}
 		modifier = {
 			add = 5
 			scope:recipient = {
 				has_trait = murderer
-				OR = {
-					trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = faith GENDER_CHARACTER = scope:recipient }
-					AND = {
-						exists = liege
-						trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = murderer FAITH = liege.faith GENDER_CHARACTER = scope:recipient }
-					}
-				}
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 			}
 		}
 
@@ -1957,7 +1577,6 @@ devil_dead_interaction = {
 		modifier = { add = 5 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_usable_hook = scope:actor } }
 		modifier = { add = 5 scope:recipient = { has_imprisonment_reason = scope:actor } scope:actor.liege = scope:recipient }
-		modifier = { add = 5 NOT = { scope:actor.faith = scope:recipient.faith } OR = { scope:recipient = { is_vassal_of = scope:actor is_liege_or_above_of = scope:actor } } }
 		modifier = { add = 5 scope:demand_conversion = yes scope:recipient = { primary_title.tier >= tier_duchy } }
 	}
 }

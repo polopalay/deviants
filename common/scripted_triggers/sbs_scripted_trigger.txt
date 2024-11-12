@@ -126,3 +126,13 @@ is_in_landless_adventurer_government = {
 		government_has_flag = government_is_landless_adventurer
 	}
 }
+
+trait_is_shunned_or_criminal_in_faith_or_liege_trigger = {
+	OR = {
+		trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = faith GENDER_CHARACTER = this }
+		AND = {
+			exists = liege
+			trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = liege.faith GENDER_CHARACTER = this }
+		}
+	}
+}

@@ -135,7 +135,7 @@
 				modifier = { add = 10 scope:secondary_recipient = { age <= 20 } }
 				modifier = { add = -20 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 				modifier = { add = -30 scope:secondary_recipient = { age >= 40 is_immortal = no } }
-				modifier = { add = 25 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+				modifier = { add = 25 scope:secondary_recipient = { should_be_naked_trigger = yes } }
 				pay_short_term_gold = { target = scope:secondary_recipient gold = scope:secondary_recipient.prostitute_tips_value }
 			}
 		}
@@ -183,7 +183,7 @@
 		modifier = { add = -5 scope:secondary_recipient = { age >= 30 is_immortal = no } }
 		modifier = { add = -10 scope:secondary_recipient = { age >= 40 is_immortal = no } }
 		modifier = { add = -25 scope:recipient = { is_close_family_of = scope:secondary_recipient faith = { NOT = { has_doctrine = tenet_divine_marriage } } } }
-		modifier = { add = 10 scope:secondary_recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+		modifier = { add = 10 scope:secondary_recipient = { should_be_naked_trigger = yes } }
 		modifier = {
 			desc = cant_have_sex_without_contraception
 			add = -25

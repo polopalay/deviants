@@ -201,7 +201,7 @@ satanic_religion = {
 	faiths = {
 		beelzebub = {
 			religious_head = k_beelzebub
-			color = { 50 50 255 }
+			color = { 50 255 50 }
 			icon = clover
 
 			holy_site = lyon

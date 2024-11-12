@@ -375,3 +375,78 @@ succubus_outfit = {
 		}
 	}
 }
+
+physical_traits_portrait_modifier = {
+	physical_1 = {
+		traits = { 
+			physique_good_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 1.05
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_head_width
+					value = 1.05
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_head_height
+					value = 1.05
+				}
+			}
+		}
+	}
+	physical_2 = {
+		traits = { 
+			physique_good_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 1.1
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_head_width
+					value = 1.1
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_head_height
+					value = 1.1
+				}
+			}
+		}
+	}
+	physical_3 = {
+		traits = { 
+			physique_good_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 1.2
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_head_width
+					value = 1.2
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_head_height
+					value = 1.2
+				}
+			}
+		}
+	}
+}
