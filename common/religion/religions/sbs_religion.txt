@@ -36,6 +36,8 @@ satanic_religion = {
 	#Funeral tradition
 	doctrine = doctrine_funeral_mummification
 
+	doctrine = tenet_gnosticism
+
 	traits = {
 		virtues = { lustful deceitful callous sadistic vengeful greedy }
 		sins = { chaste honest compassionate forgiving temperate }

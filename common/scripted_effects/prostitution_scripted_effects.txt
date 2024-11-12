@@ -4,13 +4,14 @@
 
 	custom_tooltip = prostitute_effect.tt
 	$PROSTITUTE$ = {
-		if = {
-			limit = { any_secret = { NOT = { is_known_by = scope:had_sex_root_character } secret_type = secret_prostitute } }
+		random = {
+			chance = 10
+			modifier = { any_secret = { is_known_by = scope:had_sex_root_character secret_type = secret_prostitute } add = -100 }
 			random_secret = {
 				limit = { secret_type = secret_prostitute }
 				reveal_to = scope:had_sex_root_character
 			}
-		}	
+		}
 	}
 
 	hidden_effect = {

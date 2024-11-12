@@ -1,7 +1,6 @@
 carn_prostitution_crime_opinion = {
 	opinion = -10
 	imprisonment_reason = yes
-	execute_reason = yes
 }
 
 carn_prostitution_shunned_opinion = {

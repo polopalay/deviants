@@ -8,12 +8,3 @@ portrait_prisoner_trigger = {
 		has_trait = slave
 	}
 }
-
-allowed_to_marry_same_sex_trigger = {
-	faith = {
-		NOR = {
-			has_doctrine_parameter = homosexuality_shunned 
-			has_doctrine_parameter = homosexuality_illegal
-		}
-	}
-}

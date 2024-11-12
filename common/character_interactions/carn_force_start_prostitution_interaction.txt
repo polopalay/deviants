@@ -90,11 +90,22 @@
 			if = {
 				limit = { NOT = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } }
 				if = {
-					limit = { trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = lifestyle_prostitute } }
+					limit = { trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer } }
 					add_secret = { type = secret_prostitute }
+					random_secret = {
+						limit = { secret_type = secret_prostitute }
+						reveal_to = scope:actor
+					}
 				}
 				else = {
 					add_trait = lifestyle_prostitute
+				}
+			}
+			else_if = {
+				limit = { any_secret = { secret_type = secret_prostitute NOT = { is_known_by = scope:actor } } }
+				random_secret = {
+					limit = { secret_type = secret_prostitute }
+					reveal_to = scope:actor
 				}
 			}
 			if = {

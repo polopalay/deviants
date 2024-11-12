@@ -66,23 +66,32 @@ lifestyle_prostitute = {
 	ai_greed = medium_positive_ai_value
 	ai_sociability = medium_positive_ai_value
 
-	triggered_opinion = {
-		opinion_modifier = adultery_female_crime
-		opinion_modifier = carn_prostitution_crime_opinion
-		ignore_opinion_value_if_same_trait = yes
+	culture_modifier = {
+		parameter = adulterer_fornicator_penalties
+		same_culture_opinion = -15
 	}
-	triggered_opinion = {
-		parameter = adultery_female_shunned
-		opinion_modifier = carn_prostitution_shunned_opinion
-		ignore_opinion_value_if_same_trait = yes
-	}
+
 	triggered_opinion = {
 		parameter = adultery_male_crime
+		male_only = yes
 		opinion_modifier = carn_prostitution_crime_opinion
 		ignore_opinion_value_if_same_trait = yes
 	}
 	triggered_opinion = {
 		parameter = adultery_male_shunned
+		male_only = yes
+		opinion_modifier = carn_prostitution_shunned_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		opinion_modifier = adultery_female_crime
+		female_only = yes
+		opinion_modifier = carn_prostitution_crime_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = adultery_female_shunned
+		female_only = yes
 		opinion_modifier = carn_prostitution_shunned_opinion
 		ignore_opinion_value_if_same_trait = yes
 	}
