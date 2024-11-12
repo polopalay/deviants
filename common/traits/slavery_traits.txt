@@ -84,7 +84,7 @@ lifestyle_prostitute = {
 		ignore_opinion_value_if_same_trait = yes
 	}
 	triggered_opinion = {
-		opinion_modifier = adultery_female_crime
+		parameter = adultery_female_crime
 		female_only = yes
 		opinion_modifier = carn_prostitution_crime_opinion
 		ignore_opinion_value_if_same_trait = yes
