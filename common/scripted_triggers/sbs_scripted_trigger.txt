@@ -128,11 +128,5 @@ is_in_landless_adventurer_government = {
 }
 
 trait_is_shunned_or_criminal_in_faith_or_liege_trigger = {
-	OR = {
-		trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = faith GENDER_CHARACTER = this }
-		AND = {
-			exists = liege
-			trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = liege.faith GENDER_CHARACTER = this }
-		}
-	}
+	trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = { TRAIT = $TRAIT$ GENDER_CHARACTER = this }
 }

@@ -50,6 +50,26 @@
 	on_accept = {
 		scope:recipient = {
 			remove_character_modifier = carn_working_as_prostitute_1_modifier
+			if = {
+				limit = {
+					has_trait = lifestyle_prostitute
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
+				}
+				remove_trait = lifestyle_prostitute
+				if = {
+					limit = {
+						NOT = { any_secret = { secret_type = secret_prostitute } }
+						OR = {
+							has_trait = rakish
+							has_trait = lustful
+							has_trait = seducer
+							has_trait = deviant
+							any_secret = { secret_type = secret_deviant }
+						}
+					}
+					add_secret = { type = secret_prostitute }
+				}
+			}
 		}
 		scope:actor = {
 			if = {
@@ -110,6 +130,7 @@
 		modifier = { add = 100 scope:recipient = { age > carn_prostitution_age_cutoff is_immortal = no } }
 		modifier = { add = 50 scope:recipient = { age > 30 is_immortal = no } }
 		modifier = { add = 50 scope:actor = { has_trait = chaste } scope:recipient = scope:actor }
+		modifier = { add = 50 scope:recipient = scope:actor scope:recipient = { trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer } } }
 		modifier = { add = 20 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
 		modifier = { add = 10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
 		modifier = { add = -25 scope:actor = { has_trait = lustful } }

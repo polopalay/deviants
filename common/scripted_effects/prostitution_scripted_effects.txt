@@ -3,6 +3,15 @@
 	$PROSTITUTE$ = { save_scope_as = had_sex_with_effect_partner }
 
 	custom_tooltip = prostitute_effect.tt
+	$PROSTITUTE$ = {
+		if = {
+			limit = { any_secret = { NOT = { is_known_by = scope:had_sex_root_character } secret_type = secret_prostitute } }
+			random_secret = {
+				limit = { secret_type = secret_prostitute }
+				reveal_to = scope:had_sex_root_character
+			}
+		}	
+	}
 
 	hidden_effect = {
 		if = {
@@ -70,7 +79,7 @@
 		}
 
 		risk_of_std_from_effect = { PARTNER = $PROSTITUTE$ }
-		hidden_effect = { $PROSTITUTE$ = { risk_of_std_from_effect = { PARTNER = scope:had_sex_root_character } } }
+		$PROSTITUTE$ = { risk_of_std_from_effect = { PARTNER = scope:had_sex_root_character } }
 		add_opinion = {
 			target = scope:had_sex_with_effect_partner
 			modifier = have_sex_opinion
