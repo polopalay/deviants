@@ -14,7 +14,7 @@
 
 	send_options_exclusive = no
 
-	is_valid = {
+	is_shown = {
 		NOT = { scope:recipient = scope:actor }
 		scope:recipient = {
 			is_adult = yes

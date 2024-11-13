@@ -102,8 +102,19 @@ become_demon = {
 			remove_trait = deviant_blood
 		}
 		add_trait = sbs_demon
-		set_culture = culture:sbs_demonic
 		set_immortal_age = 18
+
+		if = {
+			limit = {
+				culture = {
+					NOT = {
+						has_same_culture_heritage = culture:sbs_demonic
+						has_same_culture_language = culture:sbs_demonic
+					}
+				}
+			}
+			set_culture = culture:sbs_demonic
+		}
 		if = {
 			limit = { is_female = yes }
 			give_nickname = nickname_the_demon_queen
