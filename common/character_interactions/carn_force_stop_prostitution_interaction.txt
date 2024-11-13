@@ -50,26 +50,6 @@
 	on_accept = {
 		scope:recipient = {
 			remove_character_modifier = carn_working_as_prostitute_1_modifier
-			if = {
-				limit = {
-					has_trait = lifestyle_prostitute
-					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
-				}
-				remove_trait = lifestyle_prostitute
-				if = {
-					limit = {
-						NOT = { any_secret = { secret_type = secret_prostitute } }
-						OR = {
-							has_trait = rakish
-							has_trait = lustful
-							has_trait = seducer
-							has_trait = deviant
-							any_secret = { secret_type = secret_deviant }
-						}
-					}
-					add_secret = { type = secret_prostitute }
-				}
-			}
 		}
 		scope:actor = {
 			if = {

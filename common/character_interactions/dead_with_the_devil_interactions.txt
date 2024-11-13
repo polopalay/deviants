@@ -117,6 +117,10 @@
 					has_trait = murderer
 					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 				}
+				AND = {
+					has_trait = lifestyle_prostitute
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
+				}
 
 				has_trait = albino
 				has_trait = lisping
@@ -481,6 +485,21 @@
 				}
 				remove_trait = murderer
 			}
+			if = {
+				limit = {
+					has_trait = lifestyle_prostitute
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
+				}
+				remove_trait = lifestyle_prostitute
+				if = {
+					limit = { NOT = { any_secret = { any_secret = secret_prostitute } } }
+					add_secret = { type = secret_prostitute }
+					random_secret = {
+						limit = { secret_type = secret_prostitute }
+						reveal_to = scope:recipient
+					}
+				}
+			}
 
 			if = {
 				limit = {
@@ -764,6 +783,13 @@
 				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
 			}
 		}
+		modifier = {
+			add = 5
+			scope:actor = {
+				has_trait = lifestyle_prostitute
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
+			}
+		}
 		modifier = { add = -2 scope:demand_conversion = yes scope:actor = { primary_title.tier = tier_county } }
 		modifier = { add = -3 scope:demand_conversion = yes scope:actor = { primary_title.tier = tier_duchy } }
 		modifier = { add = -5 scope:demand_conversion = yes scope:actor = { primary_title.tier = tier_kingdom } }
@@ -862,6 +888,10 @@ devil_dead_interaction = {
 				AND = {
 					has_trait = murderer
 					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
+				}
+				AND = {
+					has_trait = lifestyle_prostitute
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 				}
 
 				has_trait = depressed_1
@@ -1236,6 +1266,22 @@ devil_dead_interaction = {
 			}
 			if = {
 				limit = {
+					has_trait = lifestyle_prostitute
+					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
+				}
+				remove_trait = lifestyle_prostitute
+				if = {
+					limit = { NOT = { any_secret = { any_secret = secret_prostitute } } }
+					add_secret = { type = secret_prostitute }
+					random_secret = {
+						limit = { secret_type = secret_prostitute }
+						reveal_to = scope:actor
+					}
+				}
+			}
+
+			if = {
+				limit = {
 					has_trait = adulterer
 					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 				}
@@ -1492,6 +1538,13 @@ devil_dead_interaction = {
 			scope:recipient = {
 				has_trait = murderer
 				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
+			}
+		}
+		modifier = {
+			add = 5
+			scope:recipient = {
+				has_trait = lifestyle_prostitute
+				trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 			}
 		}
 

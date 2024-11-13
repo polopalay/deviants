@@ -413,7 +413,7 @@ succubus_cost_honor_price_value = {
 			has_trait = fornicator
 			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 		}
-		add = 3
+		add = 1
 	}
 	if = {
 		limit = {
@@ -440,6 +440,13 @@ succubus_cost_honor_price_value = {
 		limit = {
 			has_trait = murderer
 			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_trait = lifestyle_prostitute
+			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 		}
 		add = 1
 	}
@@ -866,7 +873,7 @@ honor_price_value = {
 			has_trait = fornicator
 			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = fornicator }
 		}
-		add = 20
+		add = 10
 	}
 	if = {
 		limit = {
@@ -893,6 +900,13 @@ honor_price_value = {
 		limit = {
 			has_trait = murderer
 			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = murderer }
+		}
+		add = 10
+	}
+	if = {
+		limit = {
+			has_trait = lifestyle_prostitute
+			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer }
 		}
 		add = 10
 	}
