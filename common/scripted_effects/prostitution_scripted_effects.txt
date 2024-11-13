@@ -7,6 +7,7 @@
 		random = {
 			chance = 10
 			modifier = { any_secret = { is_known_by = scope:had_sex_root_character secret_type = secret_prostitute } add = -100 }
+			modifier = { any_secret = { secret_type = secret_prostitute count = 0 } add = -100 }
 			random_secret = {
 				limit = { secret_type = secret_prostitute }
 				reveal_to = scope:had_sex_root_character
