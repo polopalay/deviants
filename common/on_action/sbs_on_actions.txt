@@ -7,7 +7,6 @@ quarterly_playable_pulse = {
 			has_trait = sbs_lesser_succubus
 		}
 		is_ruler = yes
-		is_landed = yes
 		is_imprisoned = no
 	}
 	random_on_action = {

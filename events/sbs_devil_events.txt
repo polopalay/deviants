@@ -2263,6 +2263,7 @@ sbs_devil.1319 = {
 			modifier = { add = 50 has_character_flag = succubus_marking_5 }
 			modifier = { add = -25 have_devil_nicknames_trigger = yes }
 			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual NOT = { has_trait = sbs_succubus } } }
+			modifier = { add = -100 is_landed = no }
 			random_list = {
 				20 = {
 					modifier = { add = 40 has_character_flag = succubus_horn1 }
