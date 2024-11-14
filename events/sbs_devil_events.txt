@@ -2295,6 +2295,7 @@ sbs_devil.1319 = {
 		random = {
 			chance = 10
 			modifier = { add = 15  has_character_flag = succubus_marking_6 }
+			modifier = { add = -100 is_landed = no }
 			modifier = {
 				add = -100
 				OR = {
