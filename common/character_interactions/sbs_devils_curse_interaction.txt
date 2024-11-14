@@ -342,6 +342,7 @@ sbs_devils_curse_interaction = {
 					add_trait = beauty_bad_1
 				}
 				20 = {
+					modifier = { has_character_flag = succubus_debuff add = -18 }
 					add_character_modifier = { modifier = succubus_debuff years = 10 }
 				}
 			}

@@ -9,6 +9,10 @@
 
   carn_working_as_prostitute_1_modifier: "作为$trait_lifestyle_prostitute$工作"
   carn_working_as_prostitute_1_modifier_desc: "该角色不知廉耻地向肯出钱的人出卖自己的肉体。"
+  carn_working_as_prostitute_2_modifier: "作为$trait_lifestyle_prostitute$工作"
+  carn_working_as_prostitute_2_modifier_desc: "该角色受到众多顾客青睐。"
+  carn_working_as_prostitute_3_modifier: "作为$trait_lifestyle_prostitute$工作"
+  carn_working_as_prostitute_3_modifier_desc: "该角色每天晚上都会特别接待贵族。"
   recently_had_sex: "最近发生过性关系"
   recently_had_sex_desc: "这个角色最近发生过性关系，已经一段时间无法继续。"
   forced_labor: "强迫劳动"

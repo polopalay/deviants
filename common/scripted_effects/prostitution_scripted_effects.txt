@@ -42,6 +42,28 @@
 		if = {
 			limit = { has_trait = lifestyle_prostitute }
 			add_trait_xp = { trait = lifestyle_prostitute value = 5 }
+			if = {
+				limit = { has_trait_xp = { trait = lifestyle_prostitute value < 50 } }
+				remove_character_modifier = carn_working_as_prostitute_2_modifier
+				remove_character_modifier = carn_working_as_prostitute_3_modifier
+				add_character_modifier = carn_working_as_prostitute_1_modifier
+			}
+			else_if = {
+				lmit = { has_trait_xp = { trait = lifestyle_prostitute value >= 50 } has_trait_xp = { trait = lifestyle_prostitute value < 100 } }
+				remove_character_modifier = carn_working_as_prostitute_1_modifier
+				remove_character_modifier = carn_working_as_prostitute_3_modifier
+				add_character_modifier = carn_working_as_prostitute_2_modifier
+			}
+			else_if = {
+				limit = { has_trait_xp = { trait = lifestyle_prostitute value >= 100 } }
+				remove_character_modifier = carn_working_as_prostitute_1_modifier
+				remove_character_modifier = carn_working_as_prostitute_2_modifier
+				add_character_modifier = carn_working_as_prostitute_3_modifier
+		}
+		else = {
+			remove_character_modifier = carn_working_as_prostitute_2_modifier
+			remove_character_modifier = carn_working_as_prostitute_3_modifier
+			add_character_modifier = carn_working_as_prostitute_1_modifier
 		}
 		if = {
 			limit = { has_trait = sbs_succubus }

@@ -9,6 +9,10 @@
 
   carn_working_as_prostitute_1_modifier: "Работает как $trait_lifestyle_prostitute$"
   carn_working_as_prostitute_1_modifier_desc: "Этот персонаж бесстыдно продает свое тело любому, у кого есть деньги."
+  carn_working_as_prostitute_2_modifier: "Работает как $trait_lifestyle_prostitute$"
+  carn_working_as_prostitute_2_modifier_desc: "Этот персонаж является влиятельным проститутом, которого посещают многие клиенты."
+  carn_working_as_prostitute_3_modifier: "Работает как $trait_lifestyle_prostitute$"
+  carn_working_as_prostitute_3_modifier_desc: "Этот персонаж получает ночные визиты от дворянства и королей."
   recently_had_sex: "Недавний секс"
   recently_had_sex_desc: "Этот персонаж недавно имел секс и не мог продолжать в течение некоторого времени."
   forced_labor: "Принудительный труд"

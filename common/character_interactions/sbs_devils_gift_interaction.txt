@@ -319,6 +319,7 @@ sbs_devils_gift_interaction = {
 					add_trait = education_learning_1
 				}
 				40 = {
+					modifier = { has_character_modifier = succubus_buff add = -35 }
 					add_character_modifier = { modifier = succubus_buff years = 10 }
 				}
 			}

@@ -1,7 +1,25 @@
 carn_working_as_prostitute_1_modifier = {
 	icon = prostitute_positive
-	spouse_opinion = -10
+	spouse_opinion = -20
+	monthly_income = 0.5
+	monthly_prestige = -0.5
+	dread_loss_mult = 1.0
 }
+carn_working_as_prostitute_2_modifier = {
+	icon = prostitute_positive
+	spouse_opinion = -20
+	monthly_income = 1.0
+	monthly_prestige = -0.25
+	dread_loss_mult = 0.5
+}
+
+carn_working_as_prostitute_3_modifier = {
+	icon = prostitute_positive
+	spouse_opinion = -20
+	monthly_income = 2.0
+	monthly_prestige = -0.1
+}
+
 
 recently_had_sex = {
 	icon = prostitute_negative
