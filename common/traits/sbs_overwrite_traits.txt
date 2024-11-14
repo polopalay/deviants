@@ -1,0 +1,37 @@
+incapable = {
+	diplomacy = -6
+	intrigue = -6
+	stewardship = -6
+	martial = -6
+	learning = -6
+	prowess = -12
+	health = -2
+	fertility = -0.3
+	
+	dread_baseline_add = -25
+	dread_loss_mult = 1
+	category = health
+
+	incapacitating = yes
+	
+	can_have_children = no
+
+	disables_combat_leadership = yes
+	
+	shown_in_ruler_designer = no
+	opposites = { sbs_demon sbs_succubus sbs_lesser_succubus seed_of_destruction }
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_incapable_desc
+			}
+			desc = trait_incapable_character_desc
+		}
+	}
+
+	ai_energy = -100
+}
