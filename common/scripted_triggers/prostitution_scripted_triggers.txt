@@ -6,6 +6,7 @@
 		has_character_modifier = carn_working_as_prostitute_2_modifier
 		has_character_modifier = carn_working_as_prostitute_3_modifier
 	}
+	NOT = { has_character_modifier = recently_had_sex }
 }
 
 has_valid_prostitute_trigger = {
