@@ -3,17 +3,6 @@
 	$PROSTITUTE$ = { save_scope_as = had_sex_with_effect_partner }
 
 	custom_tooltip = prostitute_effect.tt
-	$PROSTITUTE$ = {
-		random = {
-			chance = 10
-			modifier = { any_secret = { is_known_by = scope:had_sex_root_character secret_type = secret_prostitute } add = -100 }
-			modifier = { any_secret = { secret_type = secret_prostitute count = 0 } add = -100 }
-			random_secret = {
-				limit = { secret_type = secret_prostitute }
-				reveal_to = scope:had_sex_root_character
-			}
-		}
-	}
 
 	hidden_effect = {
 		if = {
@@ -40,36 +29,10 @@
 		}
 		add_character_modifier = { modifier = recently_had_sex years = 2 }
 		if = {
-			limit = { has_trait = lifestyle_prostitute }
-			add_trait_xp = { trait = lifestyle_prostitute value = 5 }
-			if = {
-				limit = { has_trait_xp = { trait = lifestyle_prostitute value < 50 } }
-				remove_character_modifier = carn_working_as_prostitute_2_modifier
-				remove_character_modifier = carn_working_as_prostitute_3_modifier
-				add_character_modifier = carn_working_as_prostitute_1_modifier
-			}
-			else_if = {
-				lmit = { has_trait_xp = { trait = lifestyle_prostitute value >= 50 } has_trait_xp = { trait = lifestyle_prostitute value < 100 } }
-				remove_character_modifier = carn_working_as_prostitute_1_modifier
-				remove_character_modifier = carn_working_as_prostitute_3_modifier
-				add_character_modifier = carn_working_as_prostitute_2_modifier
-			}
-			else_if = {
-				limit = { has_trait_xp = { trait = lifestyle_prostitute value >= 100 } }
-				remove_character_modifier = carn_working_as_prostitute_1_modifier
-				remove_character_modifier = carn_working_as_prostitute_2_modifier
-				add_character_modifier = carn_working_as_prostitute_3_modifier
-		}
-		else = {
-			remove_character_modifier = carn_working_as_prostitute_2_modifier
-			remove_character_modifier = carn_working_as_prostitute_3_modifier
-			add_character_modifier = carn_working_as_prostitute_1_modifier
-		}
-		if = {
 			limit = { has_trait = sbs_succubus }
 			random_list = {
-				1 = { add_trait_xp = { trait = sbs_succubus track = power value = 2 } }
-				1 = { add_trait_xp = { trait = sbs_succubus track = daring value = 2 } }
+				1 = { add_trait_xp = { trait = sbs_succubus track = power value = 5 } }
+				1 = { add_trait_xp = { trait = sbs_succubus track = daring value = 5 } }
 			}
 		}
 		if = {
@@ -86,14 +49,64 @@
 			}
 			add_character_modifier = { modifier = recently_had_sex years = 2 }
 			if = {
-				limit = { has_trait = lifestyle_prostitute }
-				add_trait_xp = { trait = lifestyle_prostitute value = 5 }
+				limit = { OR = { has_trait_xp = { trait = lifestyle_prostitute value < 50 } NOT = { has_trait = lifestyle_prostitute } } }
+				if = {
+					limit = { NOT = { has_character_modifier = carn_working_as_prostitute_1_modifier } }
+					add_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				if = { 
+					limit = { has_character_modifier = carn_working_as_prostitute_2_modifier }
+					remove_character_modifier = carn_working_as_prostitute_2_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_3_modifier }
+					remove_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+			}
+			else_if = {
+				limit = { has_trait_xp = { trait = lifestyle_prostitute value >=50 } has_trait_xp = { trait = lifestyle_prostitute value < 100 } }
+				if = {
+					limit = { NOT = { has_character_modifier = carn_working_as_prostitute_2_modifier } }
+					add_character_modifier = carn_working_as_prostitute_2_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_1_modifier }
+					remove_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_3_modifier }
+					remove_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+			}
+			else_if = {
+				limit = { has_trait_xp = { trait = lifestyle_prostitute value >= 100 } }
+				if = {
+					limit = { NOT = { has_character_modifier = carn_working_as_prostitute_3_modifier } }
+					add_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_1_modifier }
+					remove_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_2_modifier }
+					remove_character_modifier = carn_working_as_prostitute_2_modifier
+				}
+			}
+			random = {
+				chance = 10
+				modifier = { any_secret = { is_known_by = scope:had_sex_root_character secret_type = secret_prostitute } add = -100 }
+				modifier = { any_secret = { secret_type = secret_prostitute count = 0 } add = -100 }
+				random_secret = {
+					limit = { secret_type = secret_prostitute }
+					reveal_to = scope:had_sex_root_character
+				}
 			}
 			if = {
 				limit = { has_trait = sbs_succubus }
 				random_list = {
-					1 = { add_trait_xp = { trait = sbs_succubus track = power value = 2 } }
-					1 = { add_trait_xp = { trait = sbs_succubus track = daring value = 2 } }
+					1 = { add_trait_xp = { trait = sbs_succubus track = power value = 5 } }
+					1 = { add_trait_xp = { trait = sbs_succubus track = daring value = 5 } }
 				}
 			}
 			if = {

@@ -396,6 +396,8 @@ sbs_makeup_interaction = {
 	ai_will_do = {
 		base = 0
 		modifier = { add = 5 scope:naked = yes scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } has_character_modifier = carn_working_as_prostitute_1_modifier } }
+		modifier = { add = 5 scope:naked = yes scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } has_character_modifier = carn_working_as_prostitute_2_modifier } }
+		modifier = { add = 5 scope:naked = yes scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } has_character_modifier = carn_working_as_prostitute_3_modifier } }
 		modifier = { add = 5 scope:naked = yes scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier NOT = { has_character_modifier = carn_working_as_prostitute_1_modifier } } }
 		modifier = { add = 50 scope:glass = yes scope:recipient = { OR = { has_character_flag = teacher_1 has_character_flag = teacher_2 has_character_flag = has_reading_glasses } } }
 	}

@@ -45,7 +45,11 @@
 					}
 					scope:actor = {
 						any_courtier = {
-							has_character_modifier = carn_working_as_prostitute_1_modifier
+							OR = {
+								has_character_modifier = carn_working_as_prostitute_1_modifier
+								has_character_modifier = carn_working_as_prostitute_2_modifier
+								has_character_modifier = carn_working_as_prostitute_3_modifier
+							}
 							count < maximum_prostitute
 						}
 					}
@@ -109,8 +113,49 @@
 				}
 			}
 			if = {
-				limit = { NOT = { has_character_modifier = carn_working_as_prostitute_1_modifier } }
-				add_character_modifier = carn_working_as_prostitute_1_modifier
+				limit = { OR = { has_trait_xp = { trait = lifestyle_prostitute value < 50 } NOT = { has_trait = lifestyle_prostitute } } }
+				if = {
+					limit = { NOT = { has_character_modifier = carn_working_as_prostitute_1_modifier } }
+					add_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				if = { 
+					limit = { has_character_modifier = carn_working_as_prostitute_2_modifier }
+					remove_character_modifier = carn_working_as_prostitute_2_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_3_modifier }
+					remove_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+			}
+			else_if = {
+				limit = { has_trait_xp = { trait = lifestyle_prostitute value >=50 } has_trait_xp = { trait = lifestyle_prostitute value < 100 } }
+				if = {
+					limit = { NOT = { has_character_modifier = carn_working_as_prostitute_2_modifier } }
+					add_character_modifier = carn_working_as_prostitute_2_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_1_modifier }
+					remove_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_3_modifier }
+					remove_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+			}
+			else_if = {
+				limit = { has_trait_xp = { trait = lifestyle_prostitute value >= 100 } }
+				if = {
+					limit = { NOT = { has_character_modifier = carn_working_as_prostitute_3_modifier } }
+					add_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_1_modifier }
+					remove_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				if = {
+					limit = { has_character_modifier = carn_working_as_prostitute_2_modifier }
+					remove_character_modifier = carn_working_as_prostitute_2_modifier
+				}
 			}
 			if = {
 				limit = { is_imprisoned_by = scope:actor }
@@ -210,7 +255,6 @@
 		modifier = { add = -10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
 		modifier = { add = -15 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
 		modifier = { add = -25 scope:actor = { has_trait = chaste } scope:actor = scope:recipient }
-		modifier = { add = -50 scope:actor = { any_courtier = { has_character_modifier = carn_working_as_prostitute_1_modifier } } }
 		modifier = { add = -100 scope:recipient = { age > carn_prostitution_age_cutoff is_immortal = no } }
 		modifier = { add = -20 scope:recipient = { has_trait = beauty_bad_1 } }
 		modifier = { add = -50 scope:recipient = { has_trait = beauty_bad_2 } }

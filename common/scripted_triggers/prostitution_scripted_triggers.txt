@@ -1,8 +1,11 @@
 ﻿is_valid_prostitute_trigger = {
 	is_adult = yes
 	is_in_army = no
-	has_character_modifier = carn_working_as_prostitute_1_modifier
-	NOT = { has_character_modifier = recently_had_sex }
+	OR = {
+		has_character_modifier = carn_working_as_prostitute_1_modifier
+		has_character_modifier = carn_working_as_prostitute_2_modifier
+		has_character_modifier = carn_working_as_prostitute_3_modifier
+	}
 }
 
 has_valid_prostitute_trigger = {

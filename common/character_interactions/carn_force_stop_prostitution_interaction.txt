@@ -12,7 +12,11 @@
 		}
 		scope:recipient = {
 			is_adult = yes
-			has_character_modifier = carn_working_as_prostitute_1_modifier
+			OR = {
+				has_character_modifier = carn_working_as_prostitute_1_modifier
+				has_character_modifier = carn_working_as_prostitute_2_modifier
+				has_character_modifier = carn_working_as_prostitute_3_modifier
+			}
 			OR = {
 				scope:actor = scope:recipient
 				is_courtier_of = scope:actor
@@ -49,7 +53,24 @@
 
 	on_accept = {
 		scope:recipient = {
-			remove_character_modifier = carn_working_as_prostitute_1_modifier
+			if = {
+				limit = {
+					has_character_modifier = carn_working_as_prostitute_1_modifier
+				}
+				remove_character_modifier = carn_working_as_prostitute_1_modifier
+			}
+			if = {
+				limit = {
+					has_character_modifier = carn_working_as_prostitute_2_modifier
+				}
+				remove_character_modifier = carn_working_as_prostitute_2_modifier
+			}
+			if = {
+				limit = {
+					has_character_modifier = carn_working_as_prostitute_3_modifier
+				}
+				remove_character_modifier = carn_working_as_prostitute_3_modifier
+			}
 		}
 		scope:actor = {
 			if = {
