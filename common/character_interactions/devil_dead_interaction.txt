@@ -387,9 +387,9 @@
 					has_trait = witch
 					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
 				}
+				remove_trait = witch
 				if = {
 					limit = { NOT = { any_secret = { any_secret = secret_witch } } }
-					remove_trait = witch
 					add_secret = { type = secret_witch }
 					random_secret = {
 						limit = { secret_type = secret_witch }
@@ -464,7 +464,7 @@
 				}
 				remove_trait = lifestyle_prostitute
 				if = {
-					limit = { NOT = { any_secret = { any_secret = secret_prostitute } } }
+					limit = { NOT = { any_secret = { secret_type = secret_prostitute } } }
 					add_secret = { type = secret_prostitute }
 					random_secret = {
 						limit = { secret_type = secret_prostitute }

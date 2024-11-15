@@ -88,11 +88,11 @@ request_prostitute = {
 		task_contract_employer = { save_scope_as = employer }
 		task_contract_taker = {
 			if = {
-				limit = { is_valid_prostitute_trigger = yes }
+				limit = { carn_is_working_as_prostitute_trigger = yes }
 				add_to_list = random_protitute_list
 			}
 			every_courtier = {
-				limit = { is_valid_prostitute_trigger = yes }
+				limit = { carn_is_working_as_prostitute_trigger = yes }
 				add_to_list = random_protitute_list
 			}
 			random_in_list = {
@@ -279,11 +279,11 @@ request_orgy = {
 		task_contract_employer = { save_scope_as = employer }
 		task_contract_taker = {
 			if = {
-				limit = { is_valid_prostitute_trigger = yes }
+				limit = { carn_is_working_as_prostitute_trigger = yes }
 				add_to_list = random_protitute_list
 			}
 			every_courtier = {
-				limit = { is_valid_prostitute_trigger = yes }
+				limit = { carn_is_working_as_prostitute_trigger = yes }
 				add_to_list = random_protitute_list
 			}
 			random_in_list = {

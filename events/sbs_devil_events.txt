@@ -2258,6 +2258,7 @@ sbs_devil.1319 = {
 		ai_chance = { base = 100 }
 		name = sbs_devil.1319.a
 		custom_tooltip = sbs_devil.1319.a.tt
+		trigger = { is_landed = yes }
 		random = {
 			chance = 50
 			modifier = { add = 50 has_character_flag = succubus_marking_5 }

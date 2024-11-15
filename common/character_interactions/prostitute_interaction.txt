@@ -36,7 +36,7 @@
 			}
 		}
 		scope:recipient = {
-			is_valid_prostitute_trigger = yes
+			carn_is_working_as_prostitute_trigger = yes
 			is_attracted_to_gender_of = scope:actor
 		}
 	}

@@ -38,10 +38,10 @@
 		scope:actor = {
 			OR = {
 				AND = {
-					is_valid_prostitute_trigger = yes
+					carn_is_working_as_prostitute_trigger = yes
 					scope:recipient = { is_attracted_to_gender_of = scope:actor }
 				}
-				any_courtier = { is_valid_prostitute_trigger = yes scope:recipient = { is_attracted_to_gender_of = prev } NOT = { this = scope:recipient } }
+				any_courtier = { carn_is_working_as_prostitute_trigger = yes scope:recipient = { is_attracted_to_gender_of = prev } NOT = { this = scope:recipient } }
 			}
 		}
 	}
@@ -49,12 +49,12 @@
 	populate_recipient_list = {
 		scope:actor = {
 			if = {
-				limit = { is_valid_prostitute_trigger = yes scope:recipient = { is_attracted_to_gender_of = scope:actor } }
+				limit = { carn_is_working_as_prostitute_trigger = yes scope:recipient = { is_attracted_to_gender_of = scope:actor } }
 				add_to_list = characters
 			}
 			every_courtier = {
 				limit = {
-					is_valid_prostitute_trigger = yes
+					carn_is_working_as_prostitute_trigger = yes
 					scope:recipient = { is_attracted_to_gender_of = prev }
 					NOT = { this = scope:recipient }
 				}

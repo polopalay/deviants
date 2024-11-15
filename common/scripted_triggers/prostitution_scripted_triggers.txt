@@ -1,4 +1,4 @@
-﻿is_valid_prostitute_trigger = {
+﻿carn_is_working_as_prostitute_trigger = {
 	is_adult = yes
 	is_in_army = no
 	OR = {
@@ -11,7 +11,7 @@
 
 has_valid_prostitute_trigger = {
 	OR = {
-		is_valid_prostitute_trigger = yes
-		any_courtier = { is_valid_prostitute_trigger = yes }
+		carn_is_working_as_prostitute_trigger = yes
+		any_courtier = { carn_is_working_as_prostitute_trigger = yes }
 	}
 }

@@ -336,8 +336,8 @@ prostitute_contracts_event.3000 = {
 	option = {
 		trigger = {
 			OR = {
-				is_valid_prostitute_trigger = yes
-				any_courtier = { is_valid_prostitute_trigger = yes }
+				carn_is_working_as_prostitute_trigger = yes
+				any_courtier = { carn_is_working_as_prostitute_trigger = yes }
 			}
 		}
 		ai_chance = { base = 100 }
@@ -345,10 +345,10 @@ prostitute_contracts_event.3000 = {
 		custom_tooltip = prostitute_contracts_event.3000.a.tt
 		random_list = {
 			10 = {
-				modifier = { add = 10 is_valid_prostitute_trigger = yes }
-				modifier = { add = 10 any_courtier = {  is_valid_prostitute_trigger = yes count >= 1 } }
-				modifier = { add = 10 any_courtier = { is_valid_prostitute_trigger = yes count >= 2 } }
-				modifier = { add = 10 any_courtier = { is_valid_prostitute_trigger = yes count >= 3 } }
+				modifier = { add = 10 carn_is_working_as_prostitute_trigger = yes }
+				modifier = { add = 10 any_courtier = {  carn_is_working_as_prostitute_trigger = yes count >= 1 } }
+				modifier = { add = 10 any_courtier = { carn_is_working_as_prostitute_trigger = yes count >= 2 } }
+				modifier = { add = 10 any_courtier = { carn_is_working_as_prostitute_trigger = yes count >= 3 } }
 				scope:task_contract = { complete_task_contract = success_critical }
 				trigger_event = prostitute_contracts_event.3200
 			}
@@ -362,11 +362,11 @@ prostitute_contracts_event.3000 = {
 			}
 		}
 		if = {
-			limit = { is_valid_prostitute_trigger = yes }
+			limit = { carn_is_working_as_prostitute_trigger = yes }
 			scope:employer = { prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance } }
 		}
 		every_courtier = {
-			limit = { is_valid_prostitute_trigger = yes }
+			limit = { carn_is_working_as_prostitute_trigger = yes }
 			save_scope_as = request_prostitute
 			scope:employer = { prostitute_effect = { PROSTITUTE = scope:request_prostitute PREGNANCY_CHANCE = pregnancy_chance } }
 		}
@@ -381,7 +381,7 @@ prostitute_contracts_event.3000 = {
 	}
 }
 
-#Success 
+#Success
 prostitute_contracts_event.3100 = {
 	type = character_event
 	title = prostitute_contracts_event.3100.t
@@ -435,7 +435,7 @@ prostitute_contracts_event.3200 = {
 	}
 }
 
-#Failure 
+#Failure
 prostitute_contracts_event.3330 = {
 	type = character_event
 	title = prostitute_contracts_event.3300.t
