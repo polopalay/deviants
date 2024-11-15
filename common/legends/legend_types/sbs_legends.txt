@@ -122,7 +122,7 @@ sexual = {
 
 				on_complete = {
 					if = {
-						limit = { have_devil_building_trigger = no }
+						limit = { have_devil_building_trigger = no is_landed = yes }
 						random = { chance = 25
 							random_list = {
 								1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
@@ -223,7 +223,7 @@ sexual = {
 
 				on_complete = {
 					if = {
-						limit = { have_devil_building_trigger = no }
+						limit = { have_devil_building_trigger = no is_landed = yes }
 						random = { 
 							chance = 50
 							random_list = {
@@ -344,7 +344,7 @@ sexual = {
 
 				on_complete = {
 					if = {
-						limit = { have_devil_building_trigger = no }
+						limit = { have_devil_building_trigger = no is_landed = yes }
 						random_list = {
 							1 = { modifier = { add = -1 have_witch_forest_trigger = yes } give_building_witch_forest = yes }
 							1 = { modifier = { add = -1 have_soul_forge_trigger = yes } give_building_soul_forge = yes }
