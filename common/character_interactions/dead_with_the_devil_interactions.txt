@@ -293,7 +293,8 @@
 			remove_trait = maimed
 			remove_trait = one_legged
 			remove_trait = disfigured
-			remove_trait = eunuch
+			remove_trait = eunuch_1
+			remove_trait = beardless_eunuch
 			remove_trait = blind
 			remove_trait = sickly
 			remove_trait = infirm
