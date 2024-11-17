@@ -119,6 +119,7 @@
 				has_trait = smallpox
 				has_trait = bubonic_plague
 				has_trait = lovers_pox
+				has_trait = early_great_pox
 				has_trait = great_pox
 				has_trait = possessed_genetic
 				has_trait = bubonic_plague
@@ -549,6 +550,7 @@
 			recover_from_disease_effect = { DISEASE = smallpox }
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
 			recover_from_disease_effect = { DISEASE = lovers_pox }
+			recover_from_disease_effect = { DISEASE = early_great_pox }
 			recover_from_disease_effect = { DISEASE = bubonic_plague }
 			recover_from_disease_effect = { DISEASE = dysentery }
 			recover_from_disease_effect = { DISEASE = ergotism }
@@ -762,6 +764,7 @@
 		modifier = { add = 10 scope:recipient = { has_trait = great_pox } }
 		modifier = { add = 10 scope:recipient = { has_trait = smallpox } }
 		modifier = { add = 10 scope:recipient = { has_trait = lovers_pox } }
+		modifier = { add = 10 scope:recipient = { has_trait = early_great_pox } }
 		modifier = { add = 20 scope:recipient = { has_trait = eunuch } }
 		modifier = { add = 20 scope:recipient = { has_trait = disfigured } }
 		modifier = { add = 20 scope:recipient = { has_trait = incapable } }

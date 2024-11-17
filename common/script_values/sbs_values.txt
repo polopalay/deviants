@@ -203,8 +203,12 @@ succubus_cost_heal_value = {
 		add = 3
 	}
 	if = {
-		limit = { has_trait = great_pox }
+		limit = { has_trait = early_great_pox }
 		add = 3
+	}
+	if = {
+		limit = { has_trait = great_pox }
+		add = 5
 	}
 	if = {
 		limit = { has_trait = possessed_genetic }
@@ -656,8 +660,12 @@ heal_price_value = {
 		add = 30
 	}
 	if = {
-		limit = { has_trait = great_pox }
+		limit = { has_trait = early_great_pox }
 		add = 30
+	}
+	if = {
+		limit = { has_trait = great_pox }
+		add = 50
 	}
 	if = {
 		limit = { has_trait = possessed_genetic }
