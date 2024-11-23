@@ -6,7 +6,6 @@ legend_semen_tank_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
-		is_female = yes
 	}
 	random_events = {
 		chance_of_no_event = 90
@@ -28,7 +27,6 @@ legend_sex_machine_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
-		is_female = yes
 	}
 	random_events = {
 		chance_of_no_event = 90
@@ -52,7 +50,6 @@ legend_ladycow_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
-		is_female = yes
 	}
 	random_events = {
 		chance_of_no_event = 90
@@ -61,7 +58,7 @@ legend_ladycow_ongoing_events = {
 		100 = sbs_loyalty.8000
 		100 = sbs_loyalty.8099
 		100 = sbs_loyalty.8900
-		20 = sbs_loyalty.8200
+		50 = sbs_loyalty.8200
 	}
 }
 
@@ -73,7 +70,6 @@ legend_penis_guillotine_ongoing_events = {
 		is_travelling = no
 		is_in_army = no
 		is_ruler = yes
-		is_female = yes
 	}
 	random_events = {
 		chance_of_no_event = 90
@@ -81,7 +77,6 @@ legend_penis_guillotine_ongoing_events = {
 
 		100 = sbs_courtier.7000
 		100 = sbs_courtier.5100
-		100 = sbs_courtier.6000
 	}
 }
 
@@ -91,9 +86,7 @@ legend_exhibitionist_ongoing_events = {
 		has_trait = sbs_succubus
 		is_imprisoned = no
 		is_travelling = no
-		is_in_army = no
 		is_ruler = yes
-		is_female = yes
 	}
 	random_events = {
 		chance_of_no_event = 90

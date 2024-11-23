@@ -18,23 +18,21 @@ sbs_blackmail.1100 = {
 		has_trait = sbs_succubus
 		is_female = yes
 		any_vassal = {
-			is_female = no
-			age >= 18
 			is_ai = yes
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
+			is_attracted_to_gender_of = root
 		}
 	}
 	immediate = {
 		random_vassal  = {
 			limit = {
-				age >= 18
-				is_female = no
 				is_ai = yes
 				is_adult = yes
 				is_incapable = no
 				is_imprisoned = no
+				is_attracted_to_gender_of = root
 			}
 			save_scope_as = deviant_go_random_1
 		}
@@ -174,23 +172,19 @@ sbs_blackmail.1200 = {
 		has_trait = sbs_succubus
 		is_female = yes
 		any_vassal = {
-			is_female = no
-			age >= 18
-			is_ai = yes
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
+			is_attracted_to_gender_of = root
 		}
 	}
 	immediate = {
 		random_vassal  = {
 			limit = {
-				age >= 18
-				is_female = no
-				is_ai = yes
 				is_adult = yes
 				is_incapable = no
 				is_imprisoned = no
+				is_attracted_to_gender_of = root
 			}
 			save_scope_as = deviant_go_random_1
 		}
@@ -382,23 +376,19 @@ sbs_blackmail.1300 = {
 	trigger = {
 		has_trait = sbs_succubus
 		any_vassal = {
-			is_female = no
-			age >= 18
-			is_ai = yes
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
+			is_attracted_to_gender_of = root
 		}
 	}
 	immediate = {
 		random_vassal  = {
 			limit = {
-				age >= 18
-				is_female = no
-				is_ai = yes
 				is_adult = yes
 				is_incapable = no
 				is_imprisoned = no
+				is_attracted_to_gender_of = root
 			}
 			save_scope_as = deviant_go_random_1
 		}
@@ -486,8 +476,6 @@ sbs_blackmail.1301 = {
 		if = {
 			limit = {
 				any_vassal = {
-					age >= 18
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
@@ -496,9 +484,6 @@ sbs_blackmail.1301 = {
 			}
 			random_vassal  = {
 				limit = {
-					age >= 18
-					is_female = no
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
@@ -510,8 +495,6 @@ sbs_blackmail.1301 = {
 		if = {
 			limit = {
 				any_vassal = {
-					age >= 18
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
@@ -521,9 +504,6 @@ sbs_blackmail.1301 = {
 			}
 			random_vassal  = {
 				limit = {
-					age >= 18
-					is_female = no
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
@@ -536,8 +516,6 @@ sbs_blackmail.1301 = {
 		if = {
 			limit = {
 				any_courtier_or_guest = {
-					age >= 18
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
@@ -548,9 +526,6 @@ sbs_blackmail.1301 = {
 			}
 			random_courtier_or_guest = {
 				limit = {
-					age >= 18
-					is_female = no
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
@@ -622,49 +597,22 @@ sbs_blackmail.1400 = {
 		is_married = no
 		can_marry_trigger = yes
 		any_courtier = {
-			is_female = no
-			age >= 18
-			is_ai = yes
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
-			is_married = no
-			is_knight = yes
 			can_marry_trigger = yes
 			NOT = { has_relation_lover = root }
 		}
 	}
 	immediate = {
-		if = {
+		random_courtier  = {
 			limit = {
-				any_courtier = {
-					is_female = no
-					age >= 18
-					is_ai = yes
-					is_adult = yes
-					is_incapable = no
-					is_imprisoned = no
-					is_married = no
-					is_knight = yes
-					can_marry_trigger = yes
-					NOT = { has_relation_lover = root }
-				}
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = no
+				can_marry_trigger = yes
 			}
-			random_courtier  = {
-				limit = {
-					is_female = no
-					age >= 18
-					is_ai = yes
-					is_adult = yes
-					is_incapable = no
-					is_imprisoned = no
-					is_married = no
-					is_knight = yes
-					can_marry_trigger = yes
-					NOT = { has_relation_lover = root }
-				}
-				save_scope_as = deviant_go_random_1
-			}
+			save_scope_as = deviant_go_random_1
 		}
 	}
 	# agree to marry
@@ -712,6 +660,9 @@ sbs_blackmail.1400 = {
 	}
 	# beg to be his sex toy instead
 	option = {
+		trigger = {
+			scope:deviant_go_random_1 = { NOT = { has_relation_lover = root } }
+		}
 		name = sbs_blackmail.1400.d
 		custom_tooltip = sbs_blackmail.1400.d.tt
 		set_relation_lover = {
@@ -749,21 +700,15 @@ sbs_blackmail.2000 = {
 		is_female = yes
 		is_married = yes
 		primary_spouse = {
-			is_female = no
-			age >= 18
-			is_ai = yes
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
 		}
 		any_courtier = {
-			is_female = no
-			age >= 18
-			is_ai = yes
 			is_adult = yes
 			is_incapable = no
 			is_imprisoned = no
-			is_knight = yes
+			is_attracted_to_gender_of = root
 			NOT = { is_spouse_of = root }
 		}
 	}
@@ -771,25 +716,19 @@ sbs_blackmail.2000 = {
 		if = {
 			limit = {
 				any_courtier = {
-					is_female = no
-					age >= 18
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
-					is_knight = yes
+					is_attracted_to_gender_of = root
 					NOT = { is_spouse_of = root }
 				}
 			}
 			random_courtier  = {
 				limit = {
-					age >= 18
 					is_female = no
-					is_ai = yes
 					is_adult = yes
 					is_incapable = no
 					is_imprisoned = no
-					is_knight = yes
 					NOT = { is_spouse_of = root }
 				}
 				save_scope_as = deviant_go_random_1

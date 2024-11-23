@@ -2258,7 +2258,6 @@ sbs_devil.1319 = {
 		ai_chance = { base = 100 }
 		name = sbs_devil.1319.a
 		custom_tooltip = sbs_devil.1319.a.tt
-		trigger = { is_landed = yes }
 		random = {
 			chance = 50
 			modifier = { add = 50 has_character_flag = succubus_marking_5 }
@@ -2268,7 +2267,7 @@ sbs_devil.1319 = {
 				20 = {
 					modifier = { add = 40 has_character_flag = succubus_horn1 }
 					modifier = { add = 40 has_character_flag = succubus_marking_1 }
-					modifier = { add = -1000 NOR = { any_vassal = { count = 0 } NOT = { exists = liege } } }
+					modifier = { add = -1000 any_vassal = { count = 0 } }
 					create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
 				}
 				20 = {
@@ -2285,12 +2284,11 @@ sbs_devil.1319 = {
 					modifier = { add = 30 has_character_flag = succubus_horn4 }
 					modifier = { add = 30 has_character_flag = succubus_marking_4 }
 					modifier = { add = 20 has_trait = lifestyle_prostitute }
-					modifier = { add = -1000 any_vassal = { count = 0 } NOT = { exists = liege } }
+					modifier = { add = -1000 liege = { any_vassal = { count < 10 } } }
 					create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
 				}
 				20 = {
-					modifier = { add = 180 has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
-					modifier = { add = -1000 is_landed = no }
+					modifier = { add = 20 should_be_naked_trigger = yes }
 					create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
 				}
 			}

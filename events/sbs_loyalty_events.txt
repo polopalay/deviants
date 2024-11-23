@@ -17,10 +17,10 @@ sbs_loyalty.8000 = {
 	trigger = {
 		is_ruler = yes
 		is_female = yes
-		age >= 18
+		is_adult = yes
 		any_knight = {
-			age >= 18
-			is_female = no
+			is_adult = yes
+			is_attracted_to_gender_of = root
 		}
 		NOR = {
 			has_nickname = nickname_the_ladycow
@@ -33,7 +33,7 @@ sbs_loyalty.8000 = {
 	immediate = {
 		random_knight = {
 			save_scope_as = sbs_loyalty_random_1
-			limit = { is_adult = yes is_female = no }
+			limit = { is_adult = yes is_attracted_to_gender_of = root }
 		}
 	}
 	option = {
@@ -239,15 +239,15 @@ sbs_loyalty.8099 = {
 	trigger = {
 		has_trait_xp = {
 			trait = sbs_succubus
-			track = daring
+			track = loyalty
 			value >= 1
 		}
+		is_adult = yes
 		is_ruler = yes
 		is_female = yes
-		age >= 18
 		any_knight = {
-			age >= 18
-			is_female = no
+			is_adult = yes
+			is_attracted_to_gender_of = root
 		}
 		OR = {
 			has_character_flag = slave
@@ -260,7 +260,7 @@ sbs_loyalty.8099 = {
 	immediate = {
 		random_knight = {
 			save_scope_as = sbs_loyalty_random_1
-			limit = { is_adult = yes is_female = no }
+			limit = { is_adult = yes is_attracted_to_gender_of = root }
 		}
 	}
 	option = {
@@ -454,20 +454,14 @@ sbs_loyalty.8200 = {
 	theme = realm
 	override_background = { reference = army_camp }
 	trigger = {
+		is_adult = yes
 		is_ruler = yes
 		is_female = yes
-		age >= 18
 		any_knight = {
-			age >= 18
-			is_female = no
+			is_adult = yes
+			is_attracted_to_gender_of = root
 		}
-		OR = {
-			has_nickname = nickname_the_ladycow
-			has_nickname = nickname_the_demon_queen
-			has_nickname = nickname_the_demon_king
-			has_nickname = nickname_the_devil_creation
-			has_character_flag = slave
-		}
+		has_character_flag = slave
 	}
 	right_portrait = {
 		character = root
@@ -481,8 +475,7 @@ sbs_loyalty.8200 = {
 		random_knight = {
 			limit = {
 				is_adult = yes
-				age >= 18
-				is_female = no
+				is_attracted_to_gender_of = root
 			}
 			save_scope_as = deviant_go_random_1
 		}
@@ -752,8 +745,8 @@ sbs_loyalty.8206 = {
 				}
 			}
 			give_nickname = nickname_the_ladycow
-			remove_character_flag = slave
 		}
+		remove_character_flag = slave
 	}
 }
 #8207 if shaking hip, fucking him on the stage
@@ -863,17 +856,17 @@ sbs_loyalty.8900 = {
 		animation = scheme
 	}
 	trigger = {
+		is_adult = yes
 		is_ruler = yes
 		is_female = yes
-		age >= 18
 		has_trait_xp = {
 			trait = sbs_succubus
 			track = loyalty
-			value < 1
+			value = 0
 		}
 		any_knight = {
-			age >= 18
-			is_female = no
+			is_adult = yes
+			is_attracted_to_gender_of = root
 		}
 		OR = {
 			has_nickname = nickname_the_ladycow
@@ -886,7 +879,7 @@ sbs_loyalty.8900 = {
 	immediate = {
 		random_knight = {
 			save_scope_as = sbs_loyalty_random_1
-			limit = { is_adult = yes is_female = no }
+			limit = { is_adult = yes is_attracted_to_gender_of = root }
 		}
 	}
 	option = {
