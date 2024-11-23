@@ -50,13 +50,15 @@ sbs_courtier.1304 = {
 		character = scope:deviant_go_random_1
 		animation = chaplain
 	}
+	trigger = {
+		any_vassal = {
+			is_adult = yes
+		}
+	}
 	immediate = {
 		random_vassal = {
+			limit = { is_adult = yes }
 			save_scope_as = deviant_go_random_1
-			limit = {
-				is_available_ai_adult = yes
-				age >= 18
-			}
 		}
 	}
 	# agree to a normal bath
@@ -652,6 +654,7 @@ sbs_courtier.1440 = {
 		is_female = yes
 		age >= 18
 		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+		every_councillor = { count > 0 }
 	}
 	option = {
 		name = sbs_courtier.1440.a
@@ -756,7 +759,7 @@ sbs_courtier.1460 = {
 		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		any_councillor = {
 			is_female = no
-			is_available_ai_adult = yes
+			is_adult = yes
 			age >= 18
 		}
 	}
@@ -764,7 +767,7 @@ sbs_courtier.1460 = {
 		random_councillor = {
 			limit = {
 				is_female = no
-				is_available_ai_adult = yes
+				is_adult = yes
 				age >= 18
 			}
 			save_scope_as = deviant_go_random_1

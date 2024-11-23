@@ -2264,11 +2264,11 @@ sbs_devil.1319 = {
 			modifier = { add = 50 has_character_flag = succubus_marking_5 }
 			modifier = { add = -25 have_devil_nicknames_trigger = yes }
 			modifier = { add = -100 OR = { has_personal_legend_seed = sexual promoted_legend.legend_type = legend_type:sexual NOT = { has_trait = sbs_succubus } } }
-			modifier = { add = -100 is_landed = no }
 			random_list = {
 				20 = {
 					modifier = { add = 40 has_character_flag = succubus_horn1 }
 					modifier = { add = 40 has_character_flag = succubus_marking_1 }
+					modifier = { add = -1000 NOR = { any_vassal = { count = 0 } NOT = { exists = liege } } }
 					create_legend_seed = { type = sexual quality = famed chronicle = semen_tank }
 				}
 				20 = {
@@ -2285,10 +2285,12 @@ sbs_devil.1319 = {
 					modifier = { add = 30 has_character_flag = succubus_horn4 }
 					modifier = { add = 30 has_character_flag = succubus_marking_4 }
 					modifier = { add = 20 has_trait = lifestyle_prostitute }
+					modifier = { add = -1000 any_vassal = { count = 0 } NOT = { exists = liege } }
 					create_legend_seed = { type = sexual quality = famed chronicle = penis_guillotine }
 				}
 				20 = {
 					modifier = { add = 180 has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+					modifier = { add = -1000 is_landed = no }
 					create_legend_seed = { type = sexual quality = famed chronicle = exhibitionist }
 				}
 			}

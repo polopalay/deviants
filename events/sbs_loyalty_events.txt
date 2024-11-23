@@ -480,7 +480,7 @@ sbs_loyalty.8200 = {
 	immediate = {
 		random_knight = {
 			limit = {
-				is_available_ai_adult = yes
+				is_adult = yes
 				age >= 18
 				is_female = no
 			}

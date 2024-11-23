@@ -500,7 +500,7 @@ sbs_travel.0105 = {
 	trigger = {
 		any_pool_character = {
 			province = root.location
-			is_available_ai_adult = yes
+			is_adult = yes
 			age >= 18
 			is_female = no
 		}
@@ -509,7 +509,7 @@ sbs_travel.0105 = {
 		random_pool_character = {
 			province = root.location
 			limit = {
-				is_available_ai_adult = yes
+				is_adult = yes
 				age >= 18
 				is_female = no
 			}
