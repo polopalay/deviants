@@ -144,13 +144,6 @@ sbs_child_interaction = {
 	on_accept = {
 		scope:recipient = {
 			if = {
-				limit = {
-					scope:hook = yes
-					has_hook = scope:actor
-				}
-				use_hook = scope:actor
-			}
-			if = {
 				limit = { scope:gold = yes }
 				pay_short_term_gold = { target = scope:actor gold = major_gold_value }
 			}
@@ -170,6 +163,24 @@ sbs_child_interaction = {
 				}
 			}
 			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:actor
+				}
+				use_hook = scope:actor
+			}
+			if = {
+				limit = { exists = capital_province }
+				save_scope_as = child_location
+			}
+			else_if = {
+				limit = { exists = liege }
+				liege.capital_province = { save_scope_as = child_location }
+			}
+			else = {
+				scope:actor.capital_province = { save_scope_as = child_location }
+			}
+			if = {
 				limit = { is_female = yes }
 				save_scope_as = mother
 				if = {
@@ -186,7 +197,7 @@ sbs_child_interaction = {
 			}
 			create_character = {
 				age = 0
-				location = capital_province
+				location = scope:child_location
 				mother = scope:mother
 				father = scope:father
 				dynasty_house = house

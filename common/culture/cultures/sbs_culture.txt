@@ -9,6 +9,7 @@ sbs_demonic = {
 		tradition_diasporic
 		tradition_horse_lords
 		tradition_swords_for_hire
+		tradition_by_the_sword
 	}
 	
 	name_list = name_list_hell

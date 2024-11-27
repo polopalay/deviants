@@ -13,7 +13,6 @@
 		}
 		scope:actor = {
 			is_adult = yes
-			is_ruler = yes
 		}
 		scope:recipient = {
 			is_adult = yes

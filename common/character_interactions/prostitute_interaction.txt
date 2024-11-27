@@ -182,7 +182,7 @@
 		ai_recipients = guests
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
-		ai_recipients = nearby_domicile_owners
+		ai_recipients = realm_characters
 		max = 5
 	}
 	ai_will_do = {

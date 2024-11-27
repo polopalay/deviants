@@ -4,11 +4,11 @@
 	category = interaction_category_prison
 	use_diplomatic_range = yes
 	common_interaction = yes
+	cooldown_against_recipient = { years = 2 }
 
 	is_shown = {
 		scope:actor = {
 			is_adult = yes
-			is_ruler = yes
 		}
 		scope:recipient = {
 			is_adult = yes
