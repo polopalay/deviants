@@ -18,6 +18,13 @@
 				has_character_modifier = carn_working_as_prostitute_3_modifier
 			}
 			OR = {
+				has_trait = lifestyle_prostitute
+				any_secret = {
+					is_known_by = scope:actor
+					secret_type = secret_prostitute
+				}
+			}
+			OR = {
 				scope:actor = scope:recipient
 				is_courtier_of = scope:actor
 			}
