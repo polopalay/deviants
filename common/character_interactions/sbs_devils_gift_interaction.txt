@@ -103,7 +103,7 @@ sbs_devils_gift_interaction = {
 					add_trait_xp = { trait = sbs_lesser_succubus value = 10 }
 				}
 				0 = {
-					modifier = { has_trait = seed_of_destruction = scope:actor = { has_trait = sbs_demon } }
+					modifier = { has_trait = seed_of_destruction  scope:actor = { has_trait = sbs_demon } }
 					add_trait_xp = { trait = seed_of_destruction value = 10 }
 				}
 				0 = {

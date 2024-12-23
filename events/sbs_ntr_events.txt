@@ -1,0 +1,548 @@
+namespace = sbs_ntr_event
+
+sbs_ntr_event.0100 = {
+	type = character_event
+	title = sbs_ntr_event.0100.t
+	desc = sbs_ntr_event.0100.desc
+	theme = friendly
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		primary_spouse.father = {
+			save_scope_as = ntr_character
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0100.a
+		custom_tooltip = sbs_ntr_event.0100.a.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		add_character_flag = { flag = pussy_cum months = 6 }
+		trigger_event = sbs_ntr_event.0110
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0100.b
+		custom_tooltip = sbs_ntr_event.0100.b.tt
+		trigger_event = sbs_ntr_event.0120
+	}
+	option = {
+		name = sbs_ntr_event.0100.c
+		custom_tooltip = sbs_ntr_event.0100.c.tt
+	}
+}
+
+sbs_ntr_event.0110 = {
+	type = character_event
+	title = sbs_ntr_event.0110.t
+	desc = sbs_ntr_event.0110.desc
+	theme = friendly
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0110.a
+		custom_tooltip = sbs_ntr_event.0110.a.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		add_character_flag = { flag = pussy_cum months = 6 }
+		add_character_flag = { flag = body_cum months = 6 }
+		add_character_flag = { flag = ass_cum months = 6 }
+		add_character_flag = { flag = face_cum months = 6 }
+		trigger_event = sbs_ntr_event.0111
+	}
+	option = {
+		name = sbs_ntr_event.0110.b
+		custom_tooltip = sbs_ntr_event.0110.b.tt
+	}
+}
+
+sbs_ntr_event.0111 = {
+	type = character_event
+	title = sbs_ntr_event.0111.t
+	desc = sbs_ntr_event.0111.desc
+	theme = friendly
+	override_background = { reference = bedchamber }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = happy_teacher
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0111.a
+		custom_tooltip = sbs_ntr_event.0110.a.tt
+		set_relation_lover = {
+			reason = lover_shared_deviancy
+			target = scope:ntr_character
+		}
+	}
+	option = {
+		name = sbs_ntr_event.0111.b
+		custom_tooltip = sbs_ntr_event.0111.b.tt
+	}
+}
+
+sbs_ntr_event.0120 = {
+	type = character_event
+	title = sbs_ntr_event.0120.t
+	desc = sbs_ntr_event.0120.desc
+	theme = friendly
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0120.a
+		custom_tooltip = sbs_ntr_event.0120.a.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		add_character_flag = { flag = pussy_cum months = 6 }
+		trigger_event = sbs_ntr_event.0121
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0120.b
+		custom_tooltip = sbs_ntr_event.0120.b.tt
+		trigger_event = sbs_ntr_event.0122
+	}
+	option = {
+		name = sbs_ntr_event.0120.c
+		custom_tooltip = sbs_ntr_event.0120.c.tt
+	}
+}
+
+sbs_ntr_event.0121 = {
+	type = character_event
+	title = sbs_ntr_event.0121.t
+	desc = sbs_ntr_event.0121.desc
+	theme = friendly
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	#accept
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0121.a
+		custom_tooltip = sbs_ntr_event.0121.a.tt
+		set_relation_lover = {
+			reason = lover_shared_deviancy
+			target = scope:ntr_character
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0121.b
+		custom_tooltip = sbs_ntr_event.0121.b.tt
+	}
+}
+
+sbs_ntr_event.0122 = {
+	type = character_event
+	title = sbs_ntr_event.0122.t
+	desc = sbs_ntr_event.0122.desc
+	theme = friendly
+	override_background = { reference = bath_house }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+		outfit_tags = { no_clothes }
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0122.a
+		custom_tooltip = sbs_ntr_event.0122.a.tt
+		trigger_event = sbs_ntr_event.0111
+	}
+	option = {
+		name = sbs_ntr_event.0122.b
+		custom_tooltip = sbs_ntr_event.0122.b.tt
+	}
+}
+
+sbs_ntr_event.0210 = {
+	type = letter_event
+	sender = scope:ntr_character
+	opening = sbs_ntr_event.0210.t
+	desc = sbs_ntr_event.0210.desc
+	immediate = {
+		primary_spouse.father = {
+			save_scope_as = ntr_character
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0210.a
+		custom_tooltip = sbs_ntr_event.0210.a.tt
+		trigger_event = sbs_ntr_event.0221
+	}
+	option = {
+		name = sbs_ntr_event.0210.b
+		custom_tooltip = sbs_ntr_event.0210.b.tt
+	}
+}
+
+sbs_ntr_event.0220 = {
+	type = letter_event
+	sender = scope:ntr_character
+	opening = sbs_ntr_event.0220.t
+	desc = sbs_ntr_event.0220.desc
+	immediate = {
+		primary_spouse.father = {
+			save_scope_as = ntr_character
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0220.a
+		custom_tooltip = sbs_ntr_event.0220.a.tt
+		trigger_event = sbs_ntr_event.0221
+	}
+	option = {
+		name = sbs_ntr_event.0220.b
+		custom_tooltip = sbs_ntr_event.0220.b.tt
+	}
+}
+
+sbs_ntr_event.0221 = {
+	type = character_event
+	title = sbs_ntr_event.0221.t
+	desc = sbs_ntr_event.0221.desc
+	theme = friendly
+	override_background = { reference = garden }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0221.a
+		custom_tooltip = sbs_ntr_event.0221.a.tt
+		trigger_event = sbs_ntr_event.0222
+	}
+	option = {
+		name = sbs_ntr_event.0221.b
+		custom_tooltip = sbs_ntr_event.0221.b.tt
+	}
+}
+
+sbs_ntr_event.0222 = {
+	type = character_event
+	title = sbs_ntr_event.0222.t
+	desc = sbs_ntr_event.0222.desc
+	theme = friendly
+	override_background = { reference = garden }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0222.a
+		custom_tooltip = sbs_ntr_event.0222.a.tt
+		trigger_event = sbs_ntr_event.0223
+	}
+	option = {
+		name = sbs_ntr_event.0222.b
+		custom_tooltip = sbs_ntr_event.0222.b.tt
+	}
+}
+
+sbs_ntr_event.0223 = {
+	type = character_event
+	title = sbs_ntr_event.0223.t
+	desc = sbs_ntr_event.0223.desc
+	theme = friendly
+	override_background = { reference = garden }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0223.a
+		custom_tooltip = sbs_ntr_event.0223.a.tt
+		trigger_event = sbs_ntr_event.0224
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+	}
+	option = {
+		name = sbs_ntr_event.0223.b
+		custom_tooltip = sbs_ntr_event.0223.b.tt
+	}
+}
+
+sbs_ntr_event.0224 = {
+	type = character_event
+	title = sbs_ntr_event.0224.t
+	desc = sbs_ntr_event.0224.desc
+	theme = friendly
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0224.a
+		custom_tooltip = sbs_ntr_event.0224.a.tt
+		trigger_event = sbs_ntr_event.0225
+	}
+	option = {
+		name = sbs_ntr_event.0224.b
+		custom_tooltip = sbs_ntr_event.0224.b.tt
+	}
+}
+
+sbs_ntr_event.0225 = {
+	type = character_event
+	title = sbs_ntr_event.0225.t
+	desc = sbs_ntr_event.0225.desc
+	theme = friendly
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = shame
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0225.a
+		custom_tooltip = sbs_ntr_event.0225.a.tt
+		trigger_event = sbs_ntr_event.0226
+	}
+	option = {
+		name = sbs_ntr_event.0225.b
+		custom_tooltip = sbs_ntr_event.0225.b.tt
+	}
+}
+
+sbs_ntr_event.0226 = {
+	type = character_event
+	title = sbs_ntr_event.0226.t
+	desc = sbs_ntr_event.0226.desc
+	theme = friendly
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = personality_dishonorable
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0226.a
+		custom_tooltip = sbs_ntr_event.0226.a.tt
+		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+	}
+}
+
+
+sbs_ntr_event.0230 = {
+	type = letter_event
+	sender = scope:ntr_character
+	opening = sbs_ntr_event.0230.t
+	desc = sbs_ntr_event.0230.desc
+	immediate = {
+		primary_spouse.father = {
+			save_scope_as = ntr_character
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0230.a
+		custom_tooltip = sbs_ntr_event.0230.a.tt
+		trigger_event = sbs_ntr_event.0231
+	}
+	option = {
+		name = sbs_ntr_event.0230.b
+		custom_tooltip = sbs_ntr_event.0230.b.tt
+	}
+}
+
+sbs_ntr_event.0231 = {
+	type = character_event
+	title = sbs_ntr_event.0231.t
+	desc = sbs_ntr_event.0231.desc
+	theme = friendly
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0231.a
+		custom_tooltip = sbs_ntr_event.0231.a.tt
+		hidden_effect = {
+			remove_trait = sbs_lesser_succubus
+			remove_trait = sbs_succubus
+			remove_trait = sbs_demon
+			add_trait = immortal
+			set_immortal_age = 18
+		}
+		primary_spouse = {
+			father = {
+				remove_trait = seed_of_destruction
+				add_trait = sbs_demon
+				set_immortal_age = 40
+			}
+			death = { death_reason = death_ill }
+		}
+		every_courtier = { death = { death_reason = death_ill } }
+	}
+	option = {
+		name = sbs_ntr_event.0231.b
+		custom_tooltip = sbs_ntr_event.0231.b.tt
+	}
+}
+
+sbs_ntr_event.0240 = {
+	type = letter_event
+	sender = scope:ntr_character
+	opening = sbs_ntr_event.0240.t
+	desc = sbs_ntr_event.0240.desc
+	immediate = {
+		primary_spouse.father = {
+			save_scope_as = ntr_character
+			random_courtier = {
+				limit = { is_attracted_to_gender_of = root is_adult = yes }
+				save_scope_as = ntr_character_2
+			}
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0240.a
+		custom_tooltip = sbs_ntr_event.0240.a.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character_2
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		scope:ntr_character_2 = {
+			pay_short_term_gold = { target = scope:ntr_character gold = root.prostitute_price_value }
+		}
+	}
+	option = {
+		name = sbs_ntr_event.0240.b
+		custom_tooltip = sbs_ntr_event.0240.b.tt
+	}
+}
+
+sbs_ntr_event.0250 = {
+	type = letter_event
+	sender = scope:ntr_character
+	opening = sbs_ntr_event.0250.t
+	desc = sbs_ntr_event.0250.desc
+	immediate = {
+		primary_spouse.father = {
+			save_scope_as = ntr_character
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0250.a
+		custom_tooltip = sbs_ntr_event.0250.a.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+	}
+	option = {
+		name = sbs_ntr_event.0250.b
+		custom_tooltip = sbs_ntr_event.0250.b.tt
+	}
+}
+

@@ -178,7 +178,7 @@ mammon_character = {
 			give_nickname = nickname_the_demon_king
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
-			set_immortal_age = 18
+			set_immortal_age = 40
 		}
 	}
 }
@@ -206,7 +206,7 @@ asmodeus_character = {
 			give_nickname = nickname_the_demon_king
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
-			set_immortal_age = 18
+			set_immortal_age = 40
 		}
 	}
 }
