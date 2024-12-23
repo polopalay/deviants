@@ -5,6 +5,8 @@
   have_sex_opinion: "최근 성관계"
   be_healed_opinion: "흑마법으로 치유됨"
 
+  COA_DESIGNER_CATEGORY_cherilewd: "음란"
+
   magic_creation: "$trinket$"
   magic_creation_miscellaneous: "$trinket$"
   artifact_magic_creation: "마법 창조"
@@ -61,8 +63,8 @@
   k_abandon: "아바돈의 전쟁 말들"
   k_beelzebub: "벨제부브의 질병"
   k_mammon: "마몬의 전사"
-  k_asmodeus: "아스모데우스의 악마"
-  k_belial: "벨리알의 자식"
+  k_belial: "벨리아의 과학자"
+  k_asmodeus: "아스모데우스의 과학자"
 
   succubus_dark_amry: "어둠의 군대"
   succubus_dark_amry_flavor: "어둠의 군대"

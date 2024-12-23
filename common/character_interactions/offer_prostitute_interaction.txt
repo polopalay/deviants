@@ -206,6 +206,8 @@
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = nearby_domicile_owners
+		ai_recipients = realm_characters
+		ai_recipients = sub_realm_characters
 		max = 5
 	}
 
@@ -214,17 +216,12 @@
 		modifier = { add = 50 scope:actor = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
 		modifier = { add = 25 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
 		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
-		modifier = { add = 10 scope:actor = { has_trait = lustful } }
-		modifier = { add = 10 scope:actor = { has_trait = greedy } }
-		modifier = { add = 10 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
+		modifier = { add = 20 scope:actor = { has_trait = lustful } }
+		modifier = { add = 20 scope:actor = { has_trait = greedy } }
+		modifier = { add = 20 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
 		modifier = { add = -5 scope:actor = { has_trait = chaste } }
 		modifier = { add = -10 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_crime has_doctrine = doctrine_adultery_women_crime } } } }
 		modifier = { add = -8 scope:actor = { faith = { OR = { has_doctrine = doctrine_adultery_men_shunned has_doctrine = doctrine_adultery_women_shunned } } } }
 		modifier = { add = -50 scope:recipient = { has_std_trigger = yes } }
-		modifier = {
-			add = 5
-			scope:actor = {  NOR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } }
-			scope:use_contraception = yes
-		}
 	}
 }

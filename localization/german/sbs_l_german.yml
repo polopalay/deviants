@@ -5,6 +5,8 @@
   have_sex_opinion: "Hat kürzlich sexuelle Beziehungen gehabt"
   be_healed_opinion: "Durch schwarze Magie geheilt"
 
+  COA_DESIGNER_CATEGORY_cherilewd: "Lewd"
+
   magic_creation: "$trinket$"
   magic_creation_miscellaneous: "$trinket$"
   artifact_magic_creation: "Magische Kreation"
@@ -61,8 +63,8 @@
   k_abandon: "Abaddons Kriegspferde"
   k_beelzebub: "Die Krankheit von Beelzebub"
   k_mammon: "Mammons Krieger"
-  k_asmodeus: "Asmodeus' Dämonen"
-  k_belial: "Belials Kinder"
+  k_belial: "Beliaths Wissenschaftler"
+  k_asmodeus: "Asmodeus' Kinder"
 
   succubus_dark_amry: "Dunkle Armee"
   succubus_dark_amry_flavor: "Dunkle Armee"

@@ -183,6 +183,7 @@
 		ai_recipients = courtiers
 		ai_recipients = neighboring_rulers
 		ai_recipients = realm_characters
+		ai_recipients = sub_realm_characters
 		max = 5
 	}
 	ai_will_do = {

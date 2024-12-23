@@ -109,6 +109,24 @@
 				}
 			}
 			else_if = {
+				limit = {
+					NOT = { has_trait = lifestyle_prostitute }
+					any_secret = { secret_type = secret_prostitute }
+					NOT = { trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = adulterer } }
+				}
+				random_secret = {
+					limit = { secret_type = secret_prostitute }
+					save_scope_as = prostitute_secret
+				}
+				if = {
+					limit = { exists = scope:prostitute_secret }
+					scope:prostitute_secret = {
+						expose_secret = scope:recipient
+					}
+				}
+
+			}
+			else_if = {
 				limit = { any_secret = { secret_type = secret_prostitute NOT = { is_known_by = scope:actor } } }
 				random_secret = {
 					limit = { secret_type = secret_prostitute }
@@ -236,15 +254,15 @@
 		base = 0
 		modifier = { add = 100 scope:actor = scope:recipient scope:recipient = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
 		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
-		modifier = { add = 15 scope:actor = { has_trait = lustful } scope:recipient = scope:actor }
-		modifier = { add = 15 scope:actor = { has_trait = rakish } scope:recipient = scope:actor }
-		modifier = { add = 10 scope:actor = { has_trait = greedy } scope:recipient = scope:actor }
-		modifier = { add = 15 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } scope:recipient = scope:actor } }
-		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory is_attracted_to_gender_of = scope:recipient } } }
-		modifier = { add = 12 scope:actor = { has_trait = lustful is_attracted_to_gender_of = scope:recipient } }
-		modifier = { add = 12 scope:actor = { has_trait = greedy } is_attracted_to_gender_of = scope:recipient }
-		modifier = { add = 12 scope:actor = { has_trait = rakish is_attracted_to_gender_of = scope:recipient } }
-		modifier = { add = 12 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 40 scope:actor = { has_trait = lustful } scope:recipient = scope:actor }
+		modifier = { add = 40 scope:actor = { has_trait = rakish } scope:recipient = scope:actor }
+		modifier = { add = 40 scope:actor = { has_trait = greedy } scope:recipient = scope:actor }
+		modifier = { add = 40 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } scope:recipient = scope:actor } }
+		modifier = { add = 40 scope:actor = { faith = { has_doctrine = tenet_polyamory is_attracted_to_gender_of = scope:recipient } } }
+		modifier = { add = 24 scope:actor = { has_trait = lustful is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 24 scope:actor = { has_trait = greedy } is_attracted_to_gender_of = scope:recipient }
+		modifier = { add = 24 scope:actor = { has_trait = rakish is_attracted_to_gender_of = scope:recipient } }
+		modifier = { add = 24 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } is_attracted_to_gender_of = scope:recipient } }
 		modifier = { add = 5 scope:forgive = yes scope:actor = { is_attracted_to_gender_of = scope:recipient } }
 		modifier = { add = 5 scope:hook = yes scope:actor = { is_attracted_to_gender_of = scope:recipient } }
 		modifier = { add = 5 scope:recipient = { age <= 18 } }

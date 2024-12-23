@@ -5,6 +5,8 @@
  have_sex_opinion: "Had sex recently"
  be_healed_opinion: "Healed by black magic"
 
+ COA_DESIGNER_CATEGORY_cherilewd: "Lewd"
+
  magic_creation: "$trinket$"
  magic_creation_miscellaneous: "$trinket$"
  artifact_magic_creation: "Magic Creation"
@@ -61,8 +63,8 @@
  k_abandon: "Abaddon's Warhorses"
  k_beelzebub: "Beelzebub's Disease"
  k_mammon: "Mammon's Warrior"
- k_belial: "Beliath's Children"
- k_asmodeus: "Asmodeus's Family"
+ k_belial: "Beliath's Scientist"
+ k_asmodeus: "Asmodeus's Children"
 
  succubus_dark_amry: "Dark Army"
  succubus_dark_amry_flavor: "Dark Army"
