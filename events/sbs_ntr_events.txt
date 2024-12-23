@@ -6,6 +6,10 @@ sbs_ntr_event.0100 = {
 	desc = sbs_ntr_event.0100.desc
 	theme = friendly
 	override_background = { reference = bath_house }
+	trigger = {
+		exists = primary_spouse.father
+		NOT = { has_relation_lover = primary_spouse.father }
+	}
 	right_portrait = {
 		character = scope:ntr_character
 		animation = scheme
@@ -56,7 +60,7 @@ sbs_ntr_event.0110 = {
 	}
 	left_portrait = {
 		character = root
-		animation = personality_greedy
+		animation = personality_gradd_secret = { type = secret_deviant }eedy
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -182,6 +186,10 @@ sbs_ntr_event.0121 = {
 			reason = lover_shared_deviancy
 			target = scope:ntr_character
 		}
+		scope:ntr_character = {
+			add_trait = immortal
+			set_immortal_age = 40
+		}
 	}
 	option = {
 		ai_chance = { base = 80 }
@@ -223,6 +231,11 @@ sbs_ntr_event.0210 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0210.t
 	desc = sbs_ntr_event.0210.desc
+	trigger = {
+		exists = primary_spouse.father
+		has_relation_lover = primary_spouse.father
+		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+	}
 	immediate = {
 		primary_spouse.father = {
 			save_scope_as = ntr_character
@@ -245,6 +258,11 @@ sbs_ntr_event.0220 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0220.t
 	desc = sbs_ntr_event.0220.desc
+	trigger = {
+		exists = primary_spouse.father
+		has_relation_lover = primary_spouse.father
+		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+	}
 	immediate = {
 		primary_spouse.father = {
 			save_scope_as = ntr_character
@@ -430,6 +448,11 @@ sbs_ntr_event.0230 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0230.t
 	desc = sbs_ntr_event.0230.desc
+	trigger = {
+		exists = primary_spouse.father
+		has_relation_lover = primary_spouse.father
+		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+	}
 	immediate = {
 		primary_spouse.father = {
 			save_scope_as = ntr_character
@@ -472,20 +495,67 @@ sbs_ntr_event.0231 = {
 			remove_trait = sbs_demon
 			add_trait = immortal
 			set_immortal_age = 18
-		}
-		primary_spouse = {
-			father = {
-				remove_trait = seed_of_destruction
-				add_trait = sbs_demon
-				set_immortal_age = 40
+			scope:ntr_character = {
+				remove_trait = immoral
+				add_trait = seed_of_destruction
+				set_immortal_age = 36
 			}
+		}
+		scope:ntr_character = {
+			primary_spouse = { death = { death_reason = death_ill } }
+		}
+		add_opinion = { target = scope:ntr_character modifier = carn_wants_to_be_your_slave_opinion }
+		primary_spouse = {
 			death = { death_reason = death_ill }
 		}
-		every_courtier = { death = { death_reason = death_ill } }
+		every_courtier = { limit = { NOT = { this = root.primary_spouse } } death = { death_reason = death_ill } }
+		trigger_event = sbs_ntr_event.0232
 	}
 	option = {
 		name = sbs_ntr_event.0231.b
 		custom_tooltip = sbs_ntr_event.0231.b.tt
+	}
+}
+
+sbs_ntr_event.0232 = {
+	type = character_event
+	title = sbs_ntr_event.0232.t
+	desc = sbs_ntr_event.0232.desc
+	theme = friendly
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = scope:ntr_character
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_ntr_event.0232.a
+		custom_tooltip = sbs_ntr_event.0232.a.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		every_held_title = {
+			create_title_and_vassal_change = {
+				type = usurped
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			change_title_holder = {
+				holder = scope:ntr_character
+				change = scope:change
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		scope:ntr_character = {
+			add_courtier = root
+		}
+		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 	}
 }
 
@@ -494,6 +564,10 @@ sbs_ntr_event.0240 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0240.t
 	desc = sbs_ntr_event.0240.desc
+	trigger = {
+		exists = primary_spouse.father
+		has_relation_lover = primary_spouse.father
+	}
 	immediate = {
 		primary_spouse.father = {
 			save_scope_as = ntr_character
@@ -526,6 +600,10 @@ sbs_ntr_event.0250 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0250.t
 	desc = sbs_ntr_event.0250.desc
+	trigger = {
+		exists = primary_spouse.father
+		has_relation_lover = primary_spouse.father
+	}
 	immediate = {
 		primary_spouse.father = {
 			save_scope_as = ntr_character

@@ -14,6 +14,29 @@ quarterly_playable_pulse = {
 	}
 }
 
+quarterly_playable_pulse = {
+	trigger = {
+		is_adult = yes
+		is_female = yes
+		OR = {
+			any_secret = { secret_type = secret_deviant }
+			has_trait = deviant
+		}
+		exists = primary_spouse
+		is_ruler = yes
+		is_landed = yes
+	}
+	random_events = {
+		50 = 0
+		25 = sbs_ntr_event.0100
+		10 = sbs_ntr_event.0210
+		10 = sbs_ntr_event.0220
+		50 = sbs_ntr_event.0230
+		10 = sbs_ntr_event.0240
+		10 = sbs_ntr_event.0250
+	}
+}
+
 sbs_devil_on_action = {
 	random_events = {
 		chance_to_happen = 10

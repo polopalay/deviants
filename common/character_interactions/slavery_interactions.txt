@@ -121,16 +121,3 @@ extortion_interaction = {
 		modifier = { add = 50 ai_greed >= 51 }
 	}
 }
-
-demo = {
-	is_shown = {
-		scope:actor = {
-			is_ai = no
-		}
-	}
-	on_accept = {
-		scope:actor = {
-			trigger_event = sbs_ntr_event.0230
-		}
-	}
-}

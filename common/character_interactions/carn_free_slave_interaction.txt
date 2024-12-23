@@ -65,7 +65,7 @@
 	ai_potential = { always = yes }
 	ai_frequency = 12
 	ai_accept = {
-		base = 5
+		base = 0
 		modifier = {
 			scope:recipient = {
 				NOR = {
