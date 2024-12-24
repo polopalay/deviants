@@ -1,0 +1,71 @@
+﻿slave_training_interaction = {
+	category = interaction_category_prison
+	desc = slave_training_interaction.desc
+	common_interaction = no
+	cooldown = { months = 6 }
+	cooldown_against_recipient = { years = 1 }
+	is_shown = {
+		scope:recipient = {
+			has_trait = slave
+			is_courtier_of = scope:actor
+			is_adult = yes
+		}
+	}
+	auto_accept = yes
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = 1 }
+			}
+			save_scope_as = owner
+		}
+		scope:recipient = {
+			if = {
+				limit = { has_trait = immortal is_female = yes }
+				random_list = {
+					50 = { trigger_event = sbs_slavery_event.0100 }
+					25 = { trigger_event = sbs_slavery_event.0200 }
+					25 = { trigger_event = sbs_slavery_event.0300 }
+					0 = {
+						modifier = { exists = scope:actor.liege add = 5 }
+						trigger_event = sbs_slavery_event.0400
+					}
+					0 = {
+						modifier = { exists = scope:recipient = { any_secret = { secret_type = secret_prostitute } } add = 25 }
+						trigger_event = sbs_slavery_event.0400
+					}
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
+				add_trait = wounded_1
+			}
+			else_if = {
+				limit = { NOT = { has_trait = wounded_2 has_trait = wounded_3 } }
+				remove_trait = wounded_1
+				add_trait = wounded_2
+			}
+			else_if = {
+				limit = { NOT = { has_trait = wounded_3 } }
+				remove_trait = wounded_2
+				add_trait = wounded_3
+			}
+		}
+	}
+	ai_targets = { ai_recipients = courtiers }
+	ai_potential = { always = yes }
+	ai_frequency = 6
+	ai_will_do = {
+		base = 50
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 1000 }
+		modifier = { scope:recipient = { is_ai = no } add = 1000 }
+		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = -25 }
+		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = -25 }
+		modifier = { scope:recipient = { has_relation_soulmate = scope:actor } add = -25 }
+		modifier = { add = -25 ai_vengefulness < 0 }
+		modifier = { add = 25 ai_vengefulness >= 0 ai_greed < 26 }
+		modifier = { add = 50 ai_vengefulness >= 26 ai_greed < 51 }
+		modifier = { add = 100 ai_vengefulness >= 51 }
+	}
+}

@@ -67,7 +67,7 @@
 		scope:actor = {
 			if = {
 				limit = { has_trait = seed_of_destruction }
-				add_trait_xp = { trait = seed_of_destruction value = 5 }
+				add_trait_xp = { trait = seed_of_destruction value = 1 }
 			}
 		}
 	}

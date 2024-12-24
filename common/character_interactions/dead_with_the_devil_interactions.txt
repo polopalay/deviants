@@ -1,5 +1,4 @@
 ﻿deal_with_the_devil_interaction = {
-	icon = fascinate
 	desc = deal_with_the_devil_interaction.desc
 	category = interaction_category_diplomacy
 	common_interaction = yes

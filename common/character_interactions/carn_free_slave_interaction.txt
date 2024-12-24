@@ -135,6 +135,7 @@
 	}
 	ai_will_do = {
 		base = 0
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = -1000 }
 		modifier = { add = 20 scope:gain_hook = yes }
 		modifier = { add = 20 scope:demand_conversion = yes }
 		modifier = { add = 20 scope:gold = yes }

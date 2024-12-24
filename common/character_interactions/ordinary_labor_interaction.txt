@@ -1,0 +1,39 @@
+﻿ordinary_labor_interaction = {
+	category = interaction_category_prison
+	desc = ordinary_labor_interaction.desc
+	common_interaction = no
+	is_shown = {
+		scope:recipient = {
+			has_trait = slave
+			has_character_modifier = forced_labor
+			is_courtier_of = scope:actor
+		}
+	}
+	auto_accept = yes
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = -5 }
+			}
+		}
+		scope:recipient = {
+			remove_character_modifier = forced_labor
+			add_opinion = { target = scope:actor modifier = ordinary_labor_opinion }
+		}
+	}
+	ai_targets = { ai_recipients = courtiers }
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_will_do = {
+		base = 0
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = -50 }
+		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = 50 }
+		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = 50 }
+		modifier = {  scope:recipient = { has_relation_soulmate = scope:actor } add = 100 }
+		modifier = { add = 25 ai_vengefulness < 0 }
+		modifier = { add = -25 ai_vengefulness >= 0 ai_greed < 26 }
+		modifier = { add = -50 ai_vengefulness >= 26 ai_greed < 51 }
+		modifier = { add = -100 ai_vengefulness >= 51 }
+	}
+}

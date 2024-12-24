@@ -7,7 +7,7 @@ sbs_slavery_event.0100 = {
 	theme = friendly
 	override_background = { reference = bedchamber }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -45,9 +45,10 @@ sbs_slavery_event.0100 = {
 				trigger_event = sbs_slavery_event.0118
 			}
 			5 = {
-				modifier = { has_trait = pregnant house = { any_house_member = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } count = 0 } } add = -5 }
+				modifier = { has_trait = pregnant any_close_family_member = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } count = 0 } add = -5 }
 				trigger_event = sbs_slavery_event.0119
 			}
+		}
 	}
 	option = {
 		ai_chance = { base = 20 }
@@ -87,7 +88,7 @@ sbs_slavery_event.0110 = {
 	theme = secret
 	override_background = { reference = dungeon }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -123,7 +124,7 @@ sbs_slavery_event.0111 = {
 	theme = secret
 	override_background = { reference = garden }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -149,7 +150,7 @@ sbs_slavery_event.0112 = {
 	theme = secret
 	override_background = { reference = throne_room }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -178,7 +179,7 @@ sbs_slavery_event.0113 = {
 	theme = secret
 	override_background = { reference = throne_room }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -207,7 +208,7 @@ sbs_slavery_event.0114 = {
 	theme = secret
 	override_background = { reference = throne_room }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -241,7 +242,7 @@ sbs_slavery_event.0115 = {
 	theme = secret
 	override_background = { reference = wilderness }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -264,7 +265,7 @@ sbs_slavery_event.0116 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -290,7 +291,7 @@ sbs_slavery_event.0117 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -314,7 +315,7 @@ sbs_slavery_event.0118 = {
 	theme = secret
 	override_background = { reference = throne_room }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -340,15 +341,13 @@ sbs_slavery_event.0119 = {
 	theme = secret
 	override_background = { reference = throne_room }
 	immediate = {
-		house = {
-			random_house_member = {
-				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-				save_scope_as = owner2
-			}
+		random_close_family_member = {
+			limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+			save_scope_as = owner2
 		}
 	}
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -374,7 +373,7 @@ sbs_slavery_event.0120 = {
 	theme = secret
 	override_background = { reference = dungeon }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -403,7 +402,7 @@ sbs_slavery_event.0121 = {
 	theme = secret
 	override_background = { reference = garden }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -452,7 +451,7 @@ sbs_slavery_event.0122 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -498,7 +497,7 @@ sbs_slavery_event.0123 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -520,7 +519,7 @@ sbs_slavery_event.0124 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
@@ -565,7 +564,7 @@ sbs_slavery_event.0125 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = anger
 	}
 	left_portrait = {
@@ -616,7 +615,7 @@ sbs_slavery_event.0126 = {
 	theme = secret
 	override_background = { reference = alley_day }
 	right_portrait = {
-		character = scope:ntr_character
+		character = scope:owner
 		animation = anger
 	}
 	left_portrait = {
@@ -657,6 +656,453 @@ sbs_slavery_event.0126 = {
 						target = scope:root
 						type = dungeon
 					}
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0200 = {
+	type = character_event
+	title = sbs_slavery_event.0200.t
+	desc = sbs_slavery_event.0200.desc
+	theme = secret
+	override_background = { reference = alley_day }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prison
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0200.a
+		custom_tooltip = sbs_slavery_event.0200.a.tt
+		random_list = {
+			2 = {
+				modifier = { OR = { has_trait = dull has_trait = shrewd } add = -2 }
+				add_trait = shrewd
+			}
+			2 = {
+				modifier = { OR = { has_trait = weak has_trait = strong } add = -2 }
+				add_trait = strong
+			}
+			2 = {
+				modifier = { OR = { has_trait = fecund has_trait = infertile } add = -2 }
+				add_trait = fecund
+			}
+			2 = {
+				modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -2 }
+				add_trait = physique_good_1
+			}
+			2 = {
+				modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -2 }
+				add_trait = intellect_good_1
+			}
+			2 = {
+				modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -2 }
+				add_trait = beauty_good_1
+			}
+			0 = {
+				modifier = { OR = { has_trait = physique_good_1 } add = 2 }
+				remove_trait = physique_good_1
+				add_trait = physique_good_2
+			}
+			0 = {
+				modifier = { OR = { has_trait = physique_good_2 } add = 2 }
+				remove_trait = physique_good_2
+				add_trait = physique_good_3
+			}
+			0 = {
+				modifier = { OR = { has_trait = physique_good_2 } add = 2 }
+				remove_trait = physique_good_2
+				add_trait = physique_good_1
+			}
+			0 = {
+				modifier = { OR = { has_trait = intellect_good_3 } add = 2 }
+				remove_trait = intellect_good_3
+				add_trait = intellect_good_2
+			}
+			0 = {
+				modifier = { OR = { has_trait = intellect_good_1 } add = 2 }
+				remove_trait = intellect_good_1
+				add_trait = intellect_good_2
+			}
+			0 = {
+				modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
+				remove_trait = intellect_good_2
+				add_trait = intellect_good_3
+			}
+			0 = {
+				modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
+				remove_trait = intellect_good_2
+				add_trait = intellect_good_1
+			}
+			0 = {
+				modifier = { OR = { has_trait = intellect_good_3 } add = 2 }
+				remove_trait = intellect_good_3
+				add_trait = intellect_good_2
+			}
+			0 = {
+				modifier = { OR = { has_trait = beauty_good_1 } add = 2 }
+				remove_trait = beauty_good_1
+				add_trait = beauty_good_2
+			}
+			0 = {
+				modifier = { OR = { has_trait = beauty_good_2 } add = 2 }
+				remove_trait = beauty_good_2
+				add_trait = beauty_good_3
+			}
+			2 = {
+				modifier = { has_trait = depressed add = -2 }
+				add_trait = depressed_1
+			}
+			2 = {
+				modifier = { has_trait = depressed add = -2 }
+				add_trait = depressed_genetic
+			}
+			2 = {
+				modifier = { has_trait = lunatic add = -2 }
+				add_trait = lunatic_1
+			}
+			2 = {
+				modifier = { has_trait = lunatic add = -2 }
+				add_trait = lunatic_genetic
+			}
+			2 = {
+				modifier = { has_trait = possessed add = -2 }
+				add_trait = possessed_1
+			}
+			2 = {
+				modifier = { has_trait = possessed add = -2 }
+				add_trait = possessed_genetic
+			}
+			1 = {
+				modifier = { has_trait = inbred add = -1 }
+				add_trait = inbred
+			}
+			1 = {
+				modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -1 }
+				add_trait = dull
+			}
+			1 = {
+				modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -1 }
+				add_trait = weak
+			}
+			1 = {
+				modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
+				add_trait = infertile
+			}
+			1 = {
+				modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = physique_bad } add = -1 }
+				add_trait = physique_bad_1
+			}
+			0 = {
+				modifier = { has_trait = physique_bad_1 add = 1 }
+				remove_trait = physique_bad_1
+				add_trait = physique_bad_2
+			}
+			0 = {
+				modifier = { has_trait = physique_bad_2 add = 1 }
+				remove_trait = physique_bad_2
+				add_trait = physique_bad_1
+			}
+			0 = {
+				modifier = { has_trait = physique_bad_2 add = 1 }
+				remove_trait = physique_bad_2
+				add_trait = physique_bad_3
+			}
+			0 = {
+				modifier = { has_trait = physique_bad_3 add = 1 }
+				remove_trait = physique_bad_3
+				add_trait = physique_bad_2
+			}
+			1 = {
+				modifier = { OR = { has_trait = intellect_good has_trait = intellect_bad } add = -1 }
+				add_trait = intellect_bad_1
+			}
+			0 = {
+				modifier = { has_trait = intellect_bad_1 add = 1 }
+				remove_trait = intellect_bad_1
+				add_trait = intellect_bad_2
+			}
+			0 = {
+				modifier = { has_trait = intellect_bad_2 add = 1 }
+				remove_trait = intellect_bad_2
+				add_trait = intellect_bad_1
+			}
+			0 = {
+				modifier = { has_trait = intellect_bad_2 add = 1 }
+				remove_trait = intellect_bad_2
+				add_trait = intellect_bad_3
+			}
+
+			0 = {
+				modifier = { has_trait = intellect_bad_3 add = 1 }
+				remove_trait = intellect_bad_3
+				add_trait = intellect_bad_2
+			}
+			1 = {
+				add_character_modifier = { modifier = lost_in_lust_modifier years = 10 }
+			}
+		}
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.0200.b
+		custom_tooltip = sbs_slavery_event.0200.b.tt
+		had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+		scope:owner = {
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+		add_character_modifier = { modifier = sleep_deprived_modifier months = 6 }
+		add_character_modifier = { modifier = lost_in_lust_modifier years = 10 }
+	}
+}
+
+sbs_slavery_event.0300 = {
+	type = character_event
+	title = sbs_slavery_event.0300.t
+	desc = sbs_slavery_event.0300.desc
+	theme = secret
+	override_background = { reference = prison }
+	immediate = {
+		scope:owner = {
+			imprison =  {
+				target = scope:root
+				type = house_arrest
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prison
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0300.a
+		custom_tooltip = sbs_slavery_event.0300.a.tt
+		duel = {
+			skill = prowess
+			target = scope:owner
+			# if win
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
+				trigger_event = {
+					id = sbs_slavery_event.0310
+					days = { 7 14 }
+				}
+			}
+			# if lose
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+			}
+			release_from_prison = yes
+		}
+	}
+}
+
+sbs_slavery_event.0310 = {
+	type = character_event
+	title = sbs_slavery_event.0310.t
+	desc = sbs_slavery_event.0310.desc
+	theme = secret
+	override_background = { reference = prison }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prison
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0310.a
+		custom_tooltip = sbs_slavery_event.0310.a.tt
+		scope:owner = {
+			imprison =  {
+				target = scope:root
+				type = house_arrest
+			}
+		}
+		duel = {
+			skill = prowess
+			target = scope:owner
+			# if win
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
+				trigger_event = {
+					id = sbs_slavery_event.0310
+					days = { 7 14 }
+				}
+			}
+			# if lose
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				release_from_prison = yes
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0400 = {
+	type = character_event
+	title = sbs_slavery_event.0400.t
+	desc = sbs_slavery_event.0400.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		scope:owner.liege = {
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = scope:owner2
+		animation = thinking
+	}
+	lower_center_portrait = {
+		character = root
+		animation = prison
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0400.a
+		custom_tooltip = sbs_slavery_event.0400.a.tt
+		scope:owner2 = {
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		hidden_effect = {
+			trigger_event = sbs_slavery_event.0410
+		}
+	}
+}
+
+sbs_slavery_event.0410 = {
+	type = character_event
+	title = sbs_slavery_event.0410.t
+	desc = sbs_slavery_event.0410.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		scope:owner.liege = {
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:owner2
+		animation = scheme
+		outfit_tags = { no_clothes }
+	}
+	lower_center_portrait = {
+		character = root
+		animation = prison
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0410.a
+		custom_tooltip = sbs_slavery_event.0410.a.tt
+		scope:owner2 = {
+			add_courtier = root
+			pay_short_term_gold = { target = scope:owner gold = root.carn_slave_price_value }
+			set_diarch = scope:owner
+			start_diarchy = regency
+			set_diarchy_swing = 1000
+		}
+	}
+}
+
+sbs_slavery_event.0500 = {
+	type = character_event
+	title = sbs_slavery_event.0500.t
+	desc = sbs_slavery_event.0500.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		scope:owner.liege = {
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = eccentric
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0500.a
+		custom_tooltip = sbs_slavery_event.0500.a.tt
+		random_secret = {
+			limit = { secret_type = secret_prostitute }
+			save_scope_as = prostitute_secret
+		}
+		if = {
+			limit = { exists = scope:prostitute_secret }
+			scope:prostitute_secret = {
+				expose_secret = scope:recipient
+			}
+		}
+		scope:owner = {
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }	
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+			}
+			every_vassal_or_below = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+				every_courtier = {
+					limit = { is_adult = yes is_attracted_to_gender_of = root }
+					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+					pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 				}
 			}
 		}

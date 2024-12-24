@@ -1,0 +1,43 @@
+﻿extortion_interaction = {
+	category = interaction_category_prison
+	desc = extortion_interaction.desc
+	cooldown = { years = 1 }
+	cooldown_against_recipient = { years = 5 }
+	common_interaction = yes
+	is_shown = {
+		scope:recipient = {
+			is_adult = yes
+			has_trait = slave
+			is_courtier_of = scope:actor
+			gold > 0
+		}
+	}
+	auto_accept = yes
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { has_trait = seed_of_destruction }
+				add_trait_xp = { trait = seed_of_destruction value = 1 }
+			}
+		}
+		scope:recipient = {
+			pay_short_term_gold = { target = scope:actor gold = gold }
+			add_opinion = { target = scope:actor modifier = extortion_opinion }
+		}
+	}
+	ai_targets = { ai_recipients = courtiers }
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_will_do = {
+		base = 25
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 50 }
+		modifier = { add = -25 scope:actor.dynasty = scope:recipient.dynasty }
+		modifier = { add = -25 is_close_or_extended_family_of = scope:recipient }
+		modifier = { add = -25 is_close_family_of = scope:recipient }
+		modifier = { add = 50 has_execute_reason = scope:recipient }
+		modifier = { add = -25 ai_greed < 0 }
+		modifier = { add = 10 ai_greed >= 0 ai_greed < 26 }
+		modifier = { add = 25 ai_greed >= 26 ai_greed < 51 }
+		modifier = { add = 50 ai_greed >= 51 }
+	}
+}

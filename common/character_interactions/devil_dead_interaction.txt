@@ -1,5 +1,4 @@
 ﻿devil_dead_interaction = {
-	icon = healing
 	desc = devil_dead_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes
