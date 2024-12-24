@@ -117,6 +117,12 @@
   sbs_ntr_event.0232.desc: "[ntr_character.GetFirstName] and me rushed at each other like two beasts, we threw away all reason, both of us were just two lustful beasts mating with each other."
   sbs_ntr_event.0232.a: "Throw it all away"
   sbs_ntr_event.0232.a.tt: "Now I'll live like a slutty whore"
+  sbs_ntr_event.0232.b: "Share"
+  sbs_ntr_event.0232.b.tt: "Share your power with me"
+  sbs_ntr_event.0232.c: "Companion"
+  sbs_ntr_event.0232.c.tt: "Let me accompany you"
+  sbs_ntr_event.0232.d: "You devil"
+  sbs_ntr_event.0232.d.tt: "You are a devil, go to hell"
 
   sbs_ntr_event.0240.t: "The exchange"
   sbs_ntr_event.0240.desc: "[ntr_character.GetFirstName] and one of his vassals came to see me:\n\"Our land is facing many difficulties, can you please use your body to help this family.\""

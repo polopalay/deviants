@@ -1,12 +1,17 @@
 ﻿carn_free_slave_interaction = {
-	icon = free_slave_interaction
 	category = interaction_category_prison
 	desc = carn_free_slave_interaction.desc
 	common_interaction = yes
 	is_shown = {
+		scope:actor = {
+			is_ruler = yes
+		}
 		scope:recipient = {
 			has_trait = slave
-			is_courtier_of = scope:actor
+			OR = {
+				is_courtier_of = scope:actor
+				this = scope:actor
+			}
 		}
 	}
 	localization_values = {
@@ -15,6 +20,7 @@
 	}
 	send_option = {
 		is_shown = {
+			NOT = { scope:recipient = scope:actor }
 			scope:recipient ?= { gold >= scope:recipient.carn_slave_price_value }
 		}
 		flag = gold
@@ -22,6 +28,7 @@
 	}
 	send_option = {
 		is_shown = {
+			NOT = { scope:recipient = scope:actor }
 			scope:recipient ?= { gold >= 1 gold < scope:recipient.carn_slave_price_value }
 		}
 		flag = current_gold
@@ -30,6 +37,9 @@
 	send_option = {
 		flag = demand_conversion
 		localization = "RELEASE_DEMAND_CONVERSION"
+		is_shown = {
+			NOT = { scope:recipient = scope:actor }
+		}
 		is_valid = {
 			NOT = { scope:recipient.faith = scope:actor.faith }
 			custom_description = {
@@ -46,6 +56,9 @@
 	}
 	
 	send_option = {
+		is_shown = {
+			NOT = { scope:recipient = scope:actor }
+		}
 		flag = gain_hook
 		localization = "RELEASE_GAIN_HOOK"
 	}

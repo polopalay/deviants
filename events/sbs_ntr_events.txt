@@ -60,7 +60,7 @@ sbs_ntr_event.0110 = {
 	}
 	left_portrait = {
 		character = root
-		animation = personality_gradd_secret = { type = secret_deviant }eedy
+		animation = personality_greedy
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -188,7 +188,7 @@ sbs_ntr_event.0121 = {
 		}
 		scope:ntr_character = {
 			add_trait = immortal
-			set_immortal_age = 40
+			set_immortal_age = 45
 		}
 	}
 	option = {
@@ -258,6 +258,7 @@ sbs_ntr_event.0220 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0220.t
 	desc = sbs_ntr_event.0220.desc
+	cooldown = { years = 5 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
@@ -284,6 +285,7 @@ sbs_ntr_event.0221 = {
 	type = character_event
 	title = sbs_ntr_event.0221.t
 	desc = sbs_ntr_event.0221.desc
+	cooldown = { years = 5 }
 	theme = friendly
 	override_background = { reference = garden }
 	right_portrait = {
@@ -490,19 +492,11 @@ sbs_ntr_event.0231 = {
 		name = sbs_ntr_event.0231.a
 		custom_tooltip = sbs_ntr_event.0231.a.tt
 		hidden_effect = {
-			remove_trait = sbs_lesser_succubus
-			remove_trait = sbs_succubus
-			remove_trait = sbs_demon
-			add_trait = immortal
-			set_immortal_age = 18
 			scope:ntr_character = {
-				remove_trait = immoral
+				remove_trait = immortal
 				add_trait = seed_of_destruction
-				set_immortal_age = 36
+				set_immortal_age = 45
 			}
-		}
-		scope:ntr_character = {
-			primary_spouse = { death = { death_reason = death_ill } }
 		}
 		add_opinion = { target = scope:ntr_character modifier = carn_wants_to_be_your_slave_opinion }
 		primary_spouse = {
@@ -540,6 +534,98 @@ sbs_ntr_event.0232 = {
 			CHARACTER = scope:ntr_character
 			PREGNANCY_CHANCE = seduce_pregnancy_chance
 		}
+		hidden_effect = {
+			remove_trait = sbs_lesser_succubus
+			remove_trait = sbs_succubus
+			remove_trait = sbs_demon
+			add_trait = immortal
+			set_immortal_age = 18
+		}
+		scope:ntr_character = {
+			primary_spouse = {
+				mind_break_personality = yes
+				hidden_effect = {
+					remove_trait = sbs_succubus
+					remove_trait = sbs_demon
+					remove_trait = immortal
+					add_trait = sbs_lesser_succubus
+					set_immortal_age = 18
+				}
+			}
+		}
+		every_held_title = {
+			create_title_and_vassal_change = {
+				type = usurped
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			change_title_holder = {
+				holder = scope:ntr_character
+				change = scope:change
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
+		mind_break_personality = yes
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_ntr_event.0232.b
+		custom_tooltip = sbs_ntr_event.0232.b.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		mind_break_personality = yes
+		scope:ntr_character = {
+			primary_spouse = {
+				mind_break_personality = yes
+				hidden_effect = {
+					remove_trait = sbs_succubus
+					remove_trait = sbs_demon
+					remove_trait = immortal
+					add_trait = sbs_lesser_succubus
+					set_immortal_age = 18
+				}
+			}
+		}
+		hidden_effect = {
+			remove_trait = sbs_succubus
+			remove_trait = sbs_demon
+			remove_trait = immortal
+			add_trait = sbs_lesser_succubus
+			set_immortal_age = 18
+		}
+		every_held_title = {
+			create_title_and_vassal_change = {
+				type = usurped
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			change_title_holder = {
+				holder = scope:ntr_character
+				change = scope:change
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_ntr_event.0232.c
+		custom_tooltip = sbs_ntr_event.0232.c.tt
+		had_sex_with_effect = {
+			CHARACTER = scope:ntr_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+		mind_break_personality = yes
+		hidden_effect = {
+			remove_trait = sbs_succubus
+			remove_trait = sbs_demon
+			remove_trait = immortal
+			add_trait = sbs_lesser_succubus
+			set_immortal_age = 18
+		}
 		every_held_title = {
 			create_title_and_vassal_change = {
 				type = usurped
@@ -553,9 +639,22 @@ sbs_ntr_event.0232 = {
 			resolve_title_and_vassal_change = scope:change
 		}
 		scope:ntr_character = {
-			add_courtier = root
+			primary_spouse = {
+				death = { death_reason = death_ill }
+			}
+			marry = root
 		}
-		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_ntr_event.0232.d
+		custom_tooltip = sbs_ntr_event.0232.d.tt
+		scope:ntr_character = {
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
 	}
 }
 
@@ -564,6 +663,7 @@ sbs_ntr_event.0240 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0240.t
 	desc = sbs_ntr_event.0240.desc
+	cooldown = { years = 5 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
@@ -600,6 +700,7 @@ sbs_ntr_event.0250 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0250.t
 	desc = sbs_ntr_event.0250.desc
+	cooldown = { years = 5 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father

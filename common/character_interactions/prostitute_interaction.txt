@@ -1,5 +1,4 @@
 ﻿prostitute_interaction = {
-	icon = prostitute_interaction
 	desc = prostitute_interaction.desc
 	category = interaction_category_diplomacy
 	use_diplomatic_range = yes

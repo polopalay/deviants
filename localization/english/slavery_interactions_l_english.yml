@@ -31,3 +31,6 @@
 
  extortion_interaction: "Extort"
  extortion_interaction.desc: "Extort [recipient.GetShortUINameNoTooltip] for [gold|E]"
+
+ slave_training_interaction: "Train Slave"
+ slave_training_interaction.desc: "Train [recipient.GetShortUINameNoTooltip] to be a docile slave"

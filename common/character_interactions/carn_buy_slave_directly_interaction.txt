@@ -1,5 +1,4 @@
 ﻿carn_buy_slave_directly_interaction = {
-	icon = buy_slave_interaction
 	category = interaction_category_prison
 	desc = carn_buy_slave_directly_interaction.desc
 	common_interaction = yes

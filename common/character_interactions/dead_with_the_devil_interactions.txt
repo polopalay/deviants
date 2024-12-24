@@ -617,9 +617,9 @@
 		modifier = { add = 100 scope:demand_conversion = yes scope:recipient = { primary_title.tier = tier_empire } }
 		modifier = { add = 25 scope:small_price = yes scope:actor = {  primary_title.tier >= tier_county } }
 		modifier = { add = 10 scope:expose_secret = yes scope:actor = {  primary_title.tier >= tier_county } }
-		modifier = { add = -50 scope:actor = {  primary_title.tier < tier_county } }
-		modifier = { add = -25 scope:actor = {  primary_title.tier = tier_county } }
-		modifier = { add = -10 scope:actor = {  primary_title.tier = tier_duchy } }
+		modifier = { add = -50 scope:actor = {  primary_title.tier < tier_county is_ai = yes } }
+		modifier = { add = -25 scope:actor = {  primary_title.tier = tier_county is_ai = yes } }
+		modifier = { add = -10 scope:actor = {  primary_title.tier = tier_duchy is_ai = yes } }
 	}
 
 	ai_potential = { always = yes }

@@ -185,6 +185,7 @@ carn_free_slave_effect = {
 				scope:current_gold = no
 				scope:demand_conversion = no
 				scope:gain_hook = no
+				NOT = { scope:slave = scope:owner }
 			}
 			add_opinion = { target = scope:owner modifier = carn_freed_me_from_slavery_opinion }
 			every_spouse = {

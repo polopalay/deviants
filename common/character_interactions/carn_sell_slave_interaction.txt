@@ -1,5 +1,4 @@
 ﻿carn_sell_slave_interaction = {
-	icon = sell_slave_interaction
 	category = interaction_category_prison
 	desc = carn_sell_slave_interaction.desc
 	common_interaction = yes

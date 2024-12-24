@@ -1,5 +1,4 @@
 sbs_devils_curse_interaction = {
-	icon = torment
 	desc = sbs_devils_curse_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes

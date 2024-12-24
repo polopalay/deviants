@@ -1,5 +1,4 @@
 sbs_makeup_interaction = {
-	icon = no_body_hair
 	desc = sbs_makeup_interaction.desc
 	category = interaction_category_friendly
 	use_diplomatic_range = yes

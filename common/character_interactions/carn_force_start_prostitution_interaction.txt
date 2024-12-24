@@ -1,5 +1,4 @@
 ﻿carn_force_start_prostitution_interaction = {
-	icon = start_prostitution_interaction
 	desc = carn_force_start_prostitution_interaction.desc
 	extra_icon = hook_icon
 	category = interaction_category_prison

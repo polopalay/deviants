@@ -1,5 +1,4 @@
 ﻿sbs_absorb_interaction = {
-	icon = drain_life
 	desc = sbs_absorb_interaction.desc
 	category = interaction_category_vassal
 	use_diplomatic_range = yes

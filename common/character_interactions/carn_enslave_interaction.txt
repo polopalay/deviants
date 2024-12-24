@@ -1,5 +1,4 @@
 ﻿carn_enslave_interaction = {
-	icon = enslave_interaction
 	desc = carn_enslave_interaction.desc
 	category = interaction_category_prison
 	common_interaction = yes
@@ -18,6 +17,7 @@
 						value >= faith_hostile_level
 					}
 				}
+				has_trait = seed_of_destruction
 			}
 		}
 		scope:recipient = {
@@ -83,6 +83,7 @@
 		modifier = { add = -20 is_close_or_extended_family_of = scope:recipient }
 		modifier = { add = -20 is_close_family_of = scope:recipient }
 		modifier = { add = 50 scope:actor = { has_execute_reason = scope:recipient } OR = { has_trait = sadistic has_trait = lunatic } }
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 25 }
 		modifier = {.
 			add = 20
 			scope:actor = {
