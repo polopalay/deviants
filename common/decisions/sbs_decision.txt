@@ -62,7 +62,7 @@ become_demon = {
 			}
 			AND = {
 				has_trait = seed_of_destruction
-				any_prisoner = { count >= 13 }
+				any_courtier = { has_trait = slave is_ai = yes count >= 6 }
 			}
 			AND = {
 				faith.religion = religion:satanic_religion
@@ -78,11 +78,14 @@ become_demon = {
 					faith.religious_head = root
 				}
 			}
-			every_prisoner = {
-				limit = { is_ai = yes }
-				death = {
-					death_reason = death_execution
-					killer = root
+			if = {
+				limit = { has_trait = sbs_succubus }
+				every_courtier = {
+					limit = { is_ai = yes has_trait = slave }
+					death = {
+						death_reason = death_execution
+						killer = root
+					}
 				}
 			}
 		}

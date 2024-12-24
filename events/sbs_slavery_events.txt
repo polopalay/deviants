@@ -674,7 +674,7 @@ sbs_slavery_event.0200 = {
 	}
 	left_portrait = {
 		character = root
-		animation = prison
+		animation = imprisoned_dungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -871,7 +871,7 @@ sbs_slavery_event.0300 = {
 	title = sbs_slavery_event.0300.t
 	desc = sbs_slavery_event.0300.desc
 	theme = secret
-	override_background = { reference = prison }
+	override_background = { reference = dungeon }
 	immediate = {
 		scope:owner = {
 			imprison =  {
@@ -886,7 +886,7 @@ sbs_slavery_event.0300 = {
 	}
 	left_portrait = {
 		character = root
-		animation = prison
+		animation = imprisoned_dungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -928,14 +928,14 @@ sbs_slavery_event.0310 = {
 	title = sbs_slavery_event.0310.t
 	desc = sbs_slavery_event.0310.desc
 	theme = secret
-	override_background = { reference = prison }
+	override_background = { reference = dungeon }
 	right_portrait = {
 		character = scope:owner
 		animation = scheme
 	}
 	left_portrait = {
 		character = root
-		animation = prison
+		animation = imprisoned_dungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -947,6 +947,10 @@ sbs_slavery_event.0310 = {
 				target = scope:root
 				type = house_arrest
 			}
+		}
+		add_character_modifier = {
+			modifier = stress_smelling_of_sweat
+			years = 1
 		}
 		duel = {
 			skill = prowess
@@ -999,7 +1003,7 @@ sbs_slavery_event.0400 = {
 	}
 	lower_center_portrait = {
 		character = root
-		animation = prison
+		animation = imprisoned_dungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -1037,11 +1041,11 @@ sbs_slavery_event.0410 = {
 	}
 	lower_center_portrait = {
 		character = root
-		animation = prison
+		animation = imprisoned_dungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = { base = 20 }
 		name = sbs_slavery_event.0410.a
 		custom_tooltip = sbs_slavery_event.0410.a.tt
 		scope:owner2 = {
@@ -1050,6 +1054,14 @@ sbs_slavery_event.0410 = {
 			set_diarch = scope:owner
 			start_diarchy = regency
 			set_diarchy_swing = 1000
+		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0410.b
+		custom_tooltip = sbs_slavery_event.0410.b.tt
+		scope:owner2 = {
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 		}
 	}
 }
