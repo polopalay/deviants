@@ -42,6 +42,7 @@
 			opinion_target = scope:actor
 			multiplier = 1
 		}
+		modifier = { scope:secondary_recipient = { is_immortal = yes } add = -1000 }
 		modifier = { desc = carn_secondary_recipient_is_my_knight_reason scope:secondary_recipient = { is_knight_of = scope:recipient } add = -25 }
 		modifier = { desc = carn_secondary_recipient_is_my_councillor_reason scope:secondary_recipient = { is_councillor_of = scope:recipient } add = -50 }
 		modifier = { desc = carn_secondary_recipient_is_my_friend_reason scope:secondary_recipient = { has_relation_friend = scope:recipient } add = -50 }

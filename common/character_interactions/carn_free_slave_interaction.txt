@@ -70,10 +70,14 @@
 		carn_free_slave_effect = yes
 	}
 	ai_targets = {
+		ai_recipients = self
 		ai_recipients = family
 		ai_recipients = children
 		ai_recipients = scripted_relations
 		max = 10
+	}
+	auto_accept = {
+		scope:recipient = scope:actor
 	}
 	ai_potential = { always = yes }
 	ai_frequency = 12
@@ -135,6 +139,7 @@
 	}
 	ai_will_do = {
 		base = 0
+		modifier = { add = 9999 scope:recipient = scope:actor }
 		modifier = { scope:actor = { has_trait = seed_of_destruction } add = -1000 }
 		modifier = { add = 20 scope:gain_hook = yes }
 		modifier = { add = 20 scope:demand_conversion = yes }

@@ -534,6 +534,7 @@ sbs_ntr_event.0232 = {
 			CHARACTER = scope:ntr_character
 			PREGNANCY_CHANCE = seduce_pregnancy_chance
 		}
+		remove_relation_lover = scope:ntr_character
 		hidden_effect = {
 			remove_trait = sbs_lesser_succubus
 			remove_trait = sbs_succubus

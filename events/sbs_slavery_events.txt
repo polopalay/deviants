@@ -93,7 +93,7 @@ sbs_slavery_event.0110 = {
 	}
 	left_portrait = {
 		character = root
-		animation = imprisoned_dungeon
+		animation = prisondungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -674,179 +674,190 @@ sbs_slavery_event.0200 = {
 	}
 	left_portrait = {
 		character = root
-		animation = imprisoned_dungeon
+		animation = prisondungeon
 		outfit_tags = { no_clothes }
 	}
 	option = {
 		ai_chance = { base = 80 }
 		name = sbs_slavery_event.0200.a
 		custom_tooltip = sbs_slavery_event.0200.a.tt
-		random_list = {
-			2 = {
-				modifier = { OR = { has_trait = dull has_trait = shrewd } add = -2 }
-				add_trait = shrewd
-			}
-			2 = {
-				modifier = { OR = { has_trait = weak has_trait = strong } add = -2 }
-				add_trait = strong
-			}
-			2 = {
-				modifier = { OR = { has_trait = fecund has_trait = infertile } add = -2 }
-				add_trait = fecund
-			}
-			2 = {
-				modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -2 }
-				add_trait = physique_good_1
-			}
-			2 = {
-				modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -2 }
-				add_trait = intellect_good_1
-			}
-			2 = {
-				modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -2 }
-				add_trait = beauty_good_1
-			}
-			0 = {
-				modifier = { OR = { has_trait = physique_good_1 } add = 2 }
-				remove_trait = physique_good_1
-				add_trait = physique_good_2
-			}
-			0 = {
-				modifier = { OR = { has_trait = physique_good_2 } add = 2 }
-				remove_trait = physique_good_2
-				add_trait = physique_good_3
-			}
-			0 = {
-				modifier = { OR = { has_trait = physique_good_2 } add = 2 }
-				remove_trait = physique_good_2
-				add_trait = physique_good_1
-			}
-			0 = {
+		hidden_effect = {
+			random_list = {
+				4 = {
+					modifier = { OR = { has_trait = dull has_trait = shrewd } add = -4 }
+					add_trait = shrewd
+				}
+				4 = {
+					modifier = { OR = { has_trait = weak has_trait = strong } add = -4 }
+					add_trait = strong
+				}
+				4 = {
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -4 }
+					add_trait = fecund
+				}
+				2 = {
+					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -2 }
+					add_trait = physique_good_1
+				}
+				1 = {
+					modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -1 }
+					add_trait = beauty_good_1
+				}
+				2 = {
+					modifier = { OR = { has_trait = physique_good_1 } add = 2 }
+					remove_trait = physique_good_1
+					add_trait = physique_good_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = physique_good_2 } add = 2 }
+					remove_trait = physique_good_2
+					add_trait = physique_good_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = physique_good_2 } add = 2 }
+					remove_trait = physique_good_2
+					add_trait = physique_good_1
+				}
+				2 = {
+					modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -2 }
+					add_trait = intellect_good_1
+				}
+				0 = {
+					modifier = { OR = { has_trait = intellect_good_1 } add = 2 }
+					remove_trait = intellect_good_1
+					add_trait = intellect_good_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
+					remove_trait = intellect_good_2
+					add_trait = intellect_good_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
+					remove_trait = intellect_good_2
+					add_trait = intellect_good_1
+				}
+				0 = {
 				modifier = { OR = { has_trait = intellect_good_3 } add = 2 }
-				remove_trait = intellect_good_3
-				add_trait = intellect_good_2
-			}
-			0 = {
-				modifier = { OR = { has_trait = intellect_good_1 } add = 2 }
-				remove_trait = intellect_good_1
-				add_trait = intellect_good_2
-			}
-			0 = {
-				modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
-				remove_trait = intellect_good_2
-				add_trait = intellect_good_3
-			}
-			0 = {
-				modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
-				remove_trait = intellect_good_2
-				add_trait = intellect_good_1
-			}
-			0 = {
-				modifier = { OR = { has_trait = intellect_good_3 } add = 2 }
-				remove_trait = intellect_good_3
-				add_trait = intellect_good_2
-			}
-			0 = {
-				modifier = { OR = { has_trait = beauty_good_1 } add = 2 }
-				remove_trait = beauty_good_1
-				add_trait = beauty_good_2
-			}
-			0 = {
-				modifier = { OR = { has_trait = beauty_good_2 } add = 2 }
-				remove_trait = beauty_good_2
-				add_trait = beauty_good_3
-			}
-			2 = {
-				modifier = { has_trait = depressed add = -2 }
-				add_trait = depressed_1
-			}
-			2 = {
-				modifier = { has_trait = depressed add = -2 }
-				add_trait = depressed_genetic
-			}
-			2 = {
-				modifier = { has_trait = lunatic add = -2 }
-				add_trait = lunatic_1
-			}
-			2 = {
-				modifier = { has_trait = lunatic add = -2 }
-				add_trait = lunatic_genetic
-			}
-			2 = {
-				modifier = { has_trait = possessed add = -2 }
-				add_trait = possessed_1
-			}
-			2 = {
-				modifier = { has_trait = possessed add = -2 }
-				add_trait = possessed_genetic
-			}
-			1 = {
-				modifier = { has_trait = inbred add = -1 }
-				add_trait = inbred
-			}
-			1 = {
-				modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -1 }
-				add_trait = dull
-			}
-			1 = {
-				modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -1 }
-				add_trait = weak
-			}
-			1 = {
-				modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
-				add_trait = infertile
-			}
-			1 = {
-				modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = physique_bad } add = -1 }
-				add_trait = physique_bad_1
-			}
-			0 = {
-				modifier = { has_trait = physique_bad_1 add = 1 }
-				remove_trait = physique_bad_1
-				add_trait = physique_bad_2
-			}
-			0 = {
-				modifier = { has_trait = physique_bad_2 add = 1 }
-				remove_trait = physique_bad_2
-				add_trait = physique_bad_1
-			}
-			0 = {
-				modifier = { has_trait = physique_bad_2 add = 1 }
-				remove_trait = physique_bad_2
-				add_trait = physique_bad_3
-			}
-			0 = {
-				modifier = { has_trait = physique_bad_3 add = 1 }
-				remove_trait = physique_bad_3
-				add_trait = physique_bad_2
-			}
-			1 = {
-				modifier = { OR = { has_trait = intellect_good has_trait = intellect_bad } add = -1 }
-				add_trait = intellect_bad_1
-			}
-			0 = {
-				modifier = { has_trait = intellect_bad_1 add = 1 }
-				remove_trait = intellect_bad_1
-				add_trait = intellect_bad_2
-			}
-			0 = {
-				modifier = { has_trait = intellect_bad_2 add = 1 }
-				remove_trait = intellect_bad_2
-				add_trait = intellect_bad_1
-			}
-			0 = {
-				modifier = { has_trait = intellect_bad_2 add = 1 }
-				remove_trait = intellect_bad_2
-				add_trait = intellect_bad_3
-			}
-
-			0 = {
-				modifier = { has_trait = intellect_bad_3 add = 1 }
-				remove_trait = intellect_bad_3
-				add_trait = intellect_bad_2
-			}
-			1 = {
-				add_character_modifier = { modifier = lost_in_lust_modifier years = 10 }
+					remove_trait = intellect_good_3
+					add_trait = intellect_good_2
+				}
+				2 = {
+					modifier = { OR = { has_trait = beauty_good has_trait = beauty_good } add = -2 }
+					add_trait = beauty_good_1
+				}
+				0 = {
+					modifier = { OR = { has_trait = beauty_good_1 } add = 1 }
+					remove_trait = beauty_good_1
+					add_trait = beauty_good_2
+				}
+				0 = {
+					modifier = { OR = { has_trait = beauty_good_2 } add = 1 }
+					remove_trait = beauty_good_2
+					add_trait = beauty_good_1
+				}
+				0 = {
+					modifier = { OR = { has_trait = beauty_good_2 } add = 1 }
+					remove_trait = beauty_good_2
+					add_trait = beauty_good_3
+				}
+				0 = {
+					modifier = { OR = { has_trait = beauty_good_3 } add = 1 }
+					remove_trait = beauty_good_3
+					add_trait = beauty_good_2
+				}
+				2 = {
+					modifier = { has_trait = depressed add = -2 }
+					add_trait = depressed_1
+				}
+				2 = {
+					modifier = { has_trait = depressed add = -2 }
+					add_trait = depressed_genetic
+				}
+				2 = {
+					modifier = { has_trait = lunatic add = -2 }
+					add_trait = lunatic_1
+				}
+				2 = {
+					modifier = { has_trait = lunatic add = -2 }
+					add_trait = lunatic_genetic
+				}
+				2 = {
+					modifier = { has_trait = possessed add = -2 }
+					add_trait = possessed_1
+				}
+				2 = {
+					modifier = { has_trait = possessed add = -2 }
+					add_trait = possessed_genetic
+				}
+				2 = {
+					modifier = { has_trait = inbred add = -2 }
+					add_trait = inbred
+				}
+				5 = {
+					modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -5 }
+					add_trait = dull
+				}
+				5 = {
+					modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -5 }
+					add_trait = weak
+				}
+				1 = {
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
+					add_trait = infertile
+				}
+				1 = {
+					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = physique_bad } add = -1 }
+					add_trait = physique_bad_1
+				}
+				0 = {
+					modifier = { has_trait = physique_bad_1 add = 1 }
+					remove_trait = physique_bad_1
+					add_trait = physique_bad_2
+				}
+				0 = {
+					modifier = { has_trait = physique_bad_2 add = 1 }
+					remove_trait = physique_bad_2
+					add_trait = physique_bad_1
+				}
+				0 = {
+					modifier = { has_trait = physique_bad_2 add = 1 }
+					remove_trait = physique_bad_2
+					add_trait = physique_bad_3
+				}
+				0 = {
+					modifier = { has_trait = physique_bad_3 add = 1 }
+					remove_trait = physique_bad_3
+					add_trait = physique_bad_2
+				}
+				1 = {
+					modifier = { OR = { has_trait = intellect_good has_trait = intellect_bad } add = -1 }
+					add_trait = intellect_bad_1
+				}
+				0 = {
+					modifier = { has_trait = intellect_bad_1 add = 1 }
+					remove_trait = intellect_bad_1
+					add_trait = intellect_bad_2
+				}
+				0 = {
+					modifier = { has_trait = intellect_bad_2 add = 1 }
+					remove_trait = intellect_bad_2
+					add_trait = intellect_bad_1
+				}
+				0 = {
+					modifier = { has_trait = intellect_bad_2 add = 1 }
+					remove_trait = intellect_bad_2
+					add_trait = intellect_bad_3
+				}
+	
+				0 = {
+					modifier = { has_trait = intellect_bad_3 add = 1 }
+					remove_trait = intellect_bad_3
+					add_trait = intellect_bad_2
+				}
+				5 = {
+					add_character_modifier = { modifier = lost_in_lust_modifier years = 10 }
+				}
 			}
 		}
 	}
@@ -886,13 +897,18 @@ sbs_slavery_event.0300 = {
 	}
 	left_portrait = {
 		character = root
-		animation = imprisoned_dungeon
+		animation = prisonhouse
 		outfit_tags = { no_clothes }
 	}
 	option = {
 		ai_chance = { base = 80 }
 		name = sbs_slavery_event.0300.a
 		custom_tooltip = sbs_slavery_event.0300.a.tt
+		every_courtier = {
+			limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+		}
 		duel = {
 			skill = prowess
 			target = scope:owner
@@ -904,10 +920,7 @@ sbs_slavery_event.0300 = {
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
-				trigger_event = {
-					id = sbs_slavery_event.0310
-					days = { 7 14 }
-				}
+				release_from_prison = yes
 			}
 			# if lose
 			50 = {
@@ -917,8 +930,11 @@ sbs_slavery_event.0300 = {
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				trigger_event = {
+					id = sbs_slavery_event.0310
+					days = { 7 14 }
+				}
 			}
-			release_from_prison = yes
 		}
 	}
 }
@@ -935,7 +951,7 @@ sbs_slavery_event.0310 = {
 	}
 	left_portrait = {
 		character = root
-		animation = imprisoned_dungeon
+		animation = prisonhouse
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -963,10 +979,7 @@ sbs_slavery_event.0310 = {
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
-				trigger_event = {
-					id = sbs_slavery_event.0310
-					days = { 7 14 }
-				}
+				release_from_prison = yes
 			}
 			# if lose
 			50 = {
@@ -976,7 +989,15 @@ sbs_slavery_event.0310 = {
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
-				release_from_prison = yes
+				every_courtier = {
+					limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+					pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+				}
+				trigger_event = {
+					id = sbs_slavery_event.0310
+					days = { 7 14 }
+				}
 			}
 		}
 	}
@@ -1003,7 +1024,7 @@ sbs_slavery_event.0400 = {
 	}
 	lower_center_portrait = {
 		character = root
-		animation = imprisoned_dungeon
+		animation = prisonhouse
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -1041,7 +1062,7 @@ sbs_slavery_event.0410 = {
 	}
 	lower_center_portrait = {
 		character = root
-		animation = imprisoned_dungeon
+		animation = prisonhouse
 		outfit_tags = { no_clothes }
 	}
 	option = {
@@ -1104,17 +1125,142 @@ sbs_slavery_event.0500 = {
 			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }	
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				if = {
+					limit = { is_adult = yes is_attracted_to_gender_of = root }
+					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				}
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 			}
 			every_vassal_or_below = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root }
-				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				if = {
+					limit = { is_adult = yes is_attracted_to_gender_of = root }
+					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				}
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 				every_courtier = {
 					limit = { is_adult = yes is_attracted_to_gender_of = root }
 					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 					pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0600 = {
+	type = character_event
+	title = sbs_slavery_event.0600.t
+	desc = sbs_slavery_event.0600.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		scope:owner.liege = {
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = eccentric
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0600.a
+		custom_tooltip = sbs_slavery_event.0600.a.tt
+		add_piety_level = -6
+		add_prestige_level = -6
+		add_legitimacy = -1000
+		scope:owner = {
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+			every_vassal_or_below = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root }
+				every_courtier = {
+					limit = { is_adult = yes is_attracted_to_gender_of = root }
+					had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0700 = {
+	type = character_event
+	title = sbs_slavery_event.0700.t
+	desc = sbs_slavery_event.0700.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		random_relation = {
+			type = friend
+			limit = { is_attracted_to_gender_of = root is_adult = yes }
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0700.a
+		custom_tooltip = sbs_slavery_event.0700.a.tt
+		had_sex_with_effect = { CHARACTER = scope:owner2 PREGNANCY_CHANCE = pregnancy_chance }
+		remove_relation_friend = scope:owner2
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.0700.b
+		custom_tooltip = sbs_slavery_event.0700.b.tt
+	}
+}
+
+sbs_slavery_event.0800 = {
+	type = character_event
+	title = sbs_slavery_event.0800.t
+	desc = sbs_slavery_event.0800.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		random_neighboring_top_liege_realm_owner = {
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0800.a
+		custom_tooltip = sbs_slavery_event.0800.a.tt
+		scope:owner2 = {
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root }
+				had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+			every_vassal_or_below = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root }
+				every_courtier = {
+					limit = { is_adult = yes is_attracted_to_gender_of = root }
+					had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
 				}
 			}
 		}

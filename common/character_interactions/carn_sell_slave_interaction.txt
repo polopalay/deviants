@@ -56,5 +56,6 @@
 		modifier = { scope:secondary_recipient = { has_relation_lover = scope:recipient } add = -50 }
 		modifier = { scope:secondary_recipient = { has_relation_crush = scope:recipient } add = -50 }
 		modifier = { scope:secondary_recipient = { has_relation_soulmate = scope:recipient } add = -100 }
+		modifier = { scope:secondary_recipient = { is_immortal = yes } add = -1000 }
 	}
 }
