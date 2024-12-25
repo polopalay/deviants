@@ -187,7 +187,7 @@ sbs_slavery_event.0113 = {
 		custom_tooltip = sbs_slavery_event.0113.a.tt
 		scope:owner = {
 			every_courtier = {
-				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
 				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 			}
@@ -388,7 +388,7 @@ sbs_slavery_event.0120 = {
 		custom_tooltip = sbs_slavery_event.0120.a.tt
 		scope:owner = {
 			every_courtier = {
-				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
 				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 			}
@@ -1462,7 +1462,7 @@ sbs_slavery_event.0800 = {
 			every_vassal_or_below = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
 				every_courtier = {
-					limit = { is_adult = yes is_attracted_to_gender_of = root }
+					limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
 					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy }
 				}
 			}
