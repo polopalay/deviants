@@ -62,7 +62,7 @@ become_demon = {
 			}
 			AND = {
 				has_trait = seed_of_destruction
-				any_courtier = { has_trait = slave is_ai = yes count >= 6 }
+				any_courtier = { has_trait = slave is_ai = yes count >= 6 is_immortal = no }
 			}
 			AND = {
 				faith.religion = religion:satanic_religion
@@ -80,8 +80,18 @@ become_demon = {
 			}
 			if = {
 				limit = { has_trait = sbs_succubus }
-				every_courtier = {
+				every_prisoner = {
 					limit = { is_ai = yes has_trait = slave }
+					death = {
+						death_reason = death_execution
+						killer = root
+					}
+				}
+			}
+			else_if = {
+				limit = { has_trait = seed_of_destruction }
+				every_courtier = {
+					limit = { is_ai = yes has_trait = slave is_immortal = no }
 					death = {
 						death_reason = death_execution
 						killer = root
@@ -220,6 +230,40 @@ masturbate = {
 			}
 		}
 		add_character_flag = { flag = pussy_cum months = 1 }
+	}
+	ai_potential = { always = yes }
+	ai_check_interval = 12
+	ai_will_do = { base = 100 }
+}
+
+recruit_slaves = {
+	picture = { reference = "gfx/interface/illustrations/decisions/deviant_courtesans.dds" }
+	desc = recruit_slaves.desc
+	confirm_text = recruit_slaves.c
+	selection_tooltip = recruit_slaves.t
+	decision_group_type = decisions
+	cooldown = { years = 2 }
+	is_shown = {
+		is_ruler = yes
+		any_living_character = {
+			NOT = { liege = root }
+			is_ruler = no
+			NOT = { exists = liege }
+			has_trait = slave
+		}
+	}
+	effect = {
+		random_living_character = {
+			limit = {
+				has_trait = slave
+				NOT = { liege = root }
+				is_ruler = no
+				NOT = { exists = liege }
+			}
+			root = {
+				add_courtier = prev
+			}
+		}
 	}
 	ai_potential = { always = yes }
 	ai_check_interval = 12

@@ -441,6 +441,7 @@ sbs_ntr_event.0226 = {
 		name = sbs_ntr_event.0226.a
 		custom_tooltip = sbs_ntr_event.0226.a.tt
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		add_secret = { type = secret_witch }
 	}
 }
 
@@ -453,7 +454,10 @@ sbs_ntr_event.0230 = {
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
-		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+		OR = {
+			any_secret = { secret_type = secret_deviant }
+			has_trait = deviant
+		}
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -499,10 +503,27 @@ sbs_ntr_event.0231 = {
 			}
 		}
 		add_opinion = { target = scope:ntr_character modifier = carn_wants_to_be_your_slave_opinion }
-		primary_spouse = {
-			death = { death_reason = death_ill }
+		add_trait = gallivanter
+		every_courtier = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -100
+			}
 		}
-		every_courtier = { limit = { NOT = { this = root.primary_spouse } } death = { death_reason = death_ill } }
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -100
+			}
+		}
+		primary_spouse = {
+			death = {
+				death_reason = death_execution
+				killer = root
+			}
+		}
 		trigger_event = sbs_ntr_event.0232
 	}
 	option = {
@@ -567,6 +588,8 @@ sbs_ntr_event.0232 = {
 			resolve_title_and_vassal_change = scope:change
 		}
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
+		add_trait = disinherited
+		add_trait = denounced
 		mind_break_personality = yes
 	}
 	option = {
@@ -610,6 +633,8 @@ sbs_ntr_event.0232 = {
 			resolve_title_and_vassal_change = scope:change
 		}
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
+		add_trait = disinherited
+		add_trait = denounced
 	}
 	option = {
 		ai_chance = { base = 20 }
@@ -629,7 +654,7 @@ sbs_ntr_event.0232 = {
 		}
 		every_held_title = {
 			create_title_and_vassal_change = {
-				type = usurped
+				type = granted
 				save_scope_as = change
 				add_claim_on_loss = no
 			}
@@ -641,10 +666,15 @@ sbs_ntr_event.0232 = {
 		}
 		scope:ntr_character = {
 			primary_spouse = {
-				death = { death_reason = death_ill }
+				death = {
+					death_reason = death_execution
+					killer = root
+				}
 			}
 			marry = root
 		}
+		add_trait = disinherited
+		add_trait = denounced
 	}
 	option = {
 		ai_chance = { base = 20 }

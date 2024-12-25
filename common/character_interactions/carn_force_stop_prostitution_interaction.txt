@@ -17,13 +17,6 @@
 				has_character_modifier = carn_working_as_prostitute_3_modifier
 			}
 			OR = {
-				has_trait = lifestyle_prostitute
-				any_secret = {
-					is_known_by = scope:actor
-					secret_type = secret_prostitute
-				}
-			}
-			OR = {
 				scope:actor = scope:recipient
 				is_courtier_of = scope:actor
 			}
@@ -144,5 +137,6 @@
 		modifier = { add = -50 scope:actor = { has_trait = rakish } }
 		modifier = { add = -50 scope:actor = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } } }
 		modifier = { add = -50 scope:actor = { faith = { has_doctrine = tenet_polyamory } } }
+		modifier = { add = -50 scope:recipient = { has_trait = slave } }
 	}
 }

@@ -141,10 +141,6 @@
 		base = 0
 		modifier = { add = 9999 scope:recipient = scope:actor }
 		modifier = { scope:actor = { has_trait = seed_of_destruction } add = -1000 }
-		modifier = { add = 20 scope:gain_hook = yes }
-		modifier = { add = 20 scope:demand_conversion = yes }
-		modifier = { add = 20 scope:gold = yes }
-		modifier = { add = 20 scope:current_gold = yes }
 		modifier = {
 			add = -40
 			scope:actor = {

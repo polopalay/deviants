@@ -2,8 +2,8 @@
 	category = interaction_category_prison
 	desc = slave_training_interaction.desc
 	common_interaction = no
-	cooldown = { months = 6 }
-	cooldown_against_recipient = { years = 1 }
+	cooldown = { months = 3 }
+	cooldown_against_recipient = { months = 6 }
 	is_shown = {
 		scope:actor = {
 			is_adult = yes
@@ -25,25 +25,85 @@
 		}
 		scope:recipient = {
 			if = {
-				limit = { has_trait = immortal is_female = yes  scope:actor = { is_attracted_to_gender_of = scope:recipient } }
+				limit = {
+					OR = {
+						AND = {
+							age >= 16
+							age <= 45
+						}
+						is_immortal = yes
+					}
+					is_female = yes
+					is_lowborn = no
+				}
 				random_list = {
-					50 = { trigger_event = sbs_slavery_event.0100 }
-					5 = { trigger_event = sbs_slavery_event.0200 }
-					25 = { trigger_event = sbs_slavery_event.0300 }
+					25 = { trigger_event = sbs_slavery_event.0100 }
+					10 = {
+						modifier = {
+							scope:recipient = {
+								OR = {
+									has_trait = lovers_pox
+									has_trait = early_great_pox
+									has_trait = great_pox
+									has_trait = leper
+									has_trait = disfigured
+								}
+							}
+							add = 40
+						}
+						modifier = {
+							scope:recipient = {
+								OR = {
+									has_trait = blind
+									has_trait = one_eyed
+									has_trait = eunuch
+									has_trait = scarred
+									has_trait = cancer
+									has_trait = one_legged
+								}
+							}
+							add = 15
+						}
+						trigger_event = sbs_slavery_event.0200
+					}
+					10 = { trigger_event = sbs_slavery_event.0300 }
 					0 = {
-						modifier = { exists = scope:actor.liege add = 5 }
+						modifier = { exists = scope:actor.liege NOT = { scope:actor.liege = scope:actor } add = 5 }
 						trigger_event = sbs_slavery_event.0400
 					}
 					0 = {
-						modifier = { exists = scope:recipient = { any_secret = { secret_type = secret_prostitute } } add = 25 }
-						trigger_event = sbs_slavery_event.0400
+						modifier = { scope:recipient = { any_secret = { secret_type = secret_prostitute } } add = 25 }
+						trigger_event = sbs_slavery_event.0500
 					}
-					25 = { trigger_event = sbs_slavery_event.0600 }
+					10 = { trigger_event = sbs_slavery_event.0600 }
 					0 = {
-						modifier = { scope:recipient = { any_relation = { type = friend is_adult = yes is_attracted_to_gender_of = scope:recipient } } add = 25 }
+						modifier = {
+							scope:recipient = {
+								OR = {
+									any_relation = { type = friend is_adult = yes is_attracted_to_gender_of = scope:recipient }
+									any_relation = { type = best_friend is_adult = yes is_attracted_to_gender_of = scope:recipient }
+								}
+							}
+							add = 10
+						}
 						trigger_event = sbs_slavery_event.0700
 					}
-					25 = { trigger_event = sbs_slavery_event.0800 }
+					10 = {
+						scope:actor = { is_landed = yes }
+						trigger_event = sbs_slavery_event.0800
+					}
+					0 = {
+						modifier = {
+							scope:recipient = {
+								OR = {
+									any_relation = { type = rival is_adult = yes }
+									any_relation = { type = nemesis is_adult = yes }
+								}
+							}
+							add = 50
+						}
+						trigger_event = sbs_slavery_event.0900
+					}
 				}
 			}
 			else_if = {
@@ -64,17 +124,21 @@
 	}
 	ai_targets = { ai_recipients = courtiers }
 	ai_potential = { always = yes }
-	ai_frequency = 6
+	ai_frequency = 1
 	ai_will_do = {
-		base = 50
-		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 1000 }
-		modifier = { scope:recipient = { is_ai = no } add = 1000 }
+		base = 0
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 100 }
+		modifier = { scope:recipient = { is_female = yes OR = { AND = { age >= 16 age <= 45 } is_immortal = yes } is_female = yes is_lowborn = no } add = 1000 }
 		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = -25 }
 		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = -25 }
 		modifier = { scope:recipient = { has_relation_soulmate = scope:actor } add = -25 }
-		modifier = { add = -25 ai_vengefulness < 0 }
-		modifier = { add = 25 ai_vengefulness >= 0 ai_greed < 26 }
-		modifier = { add = 50 ai_vengefulness >= 26 ai_greed < 51 }
-		modifier = { add = 100 ai_vengefulness >= 51 }
+		modifier = { scope:recipient = { has_trait = wounded_1 } add = -25 }
+		modifier = { scope:recipient = { has_trait = wounded_2 } add = -50 }
+		modifier = { scope:recipient = { has_trait = wounded_3 } add = -100 }
+		modifier = { add = -25 ai_vengefulness < very_low_positive_ai_value }
+		modifier = { add = -25 ai_vengefulness < low_positive_ai_value }
+		modifier = { add = 25 ai_vengefulness >= high_positive_ai_value }
+		modifier = { add = 25 ai_vengefulness >= very_high_positive_ai_value }
+		modifier = { add = 100 ai_vengefulness >= dominant_positive_ai_value }
 	}
 }

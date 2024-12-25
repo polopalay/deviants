@@ -143,7 +143,10 @@
 						any_artifact = { has_artifact_modifier = mistress_dildo_modifier }
 					}
 				}
-				trigger_event = { id = sbs_event.0550 days = { 7 14 } }
+				if = {
+					limit = { OR = { has_trait = sbs_succubus has_trait = sbs_lesser_succubus has_trait = sbs_demon } is_female = yes }
+					trigger_event = { id = sbs_event.0550 days = { 7 14 } }
+				}
 			}
 		}
 	}

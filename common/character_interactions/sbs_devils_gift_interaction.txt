@@ -1,5 +1,4 @@
 sbs_devils_gift_interaction = {
-	icon = mesmerize
 	desc = sbs_devils_gift_interaction.desc
 	category = interaction_category_hostile
 	use_diplomatic_range = yes

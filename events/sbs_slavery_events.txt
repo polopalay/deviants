@@ -44,8 +44,8 @@ sbs_slavery_event.0100 = {
 				modifier = { has_trait = pregnant add = -5 }
 				trigger_event = sbs_slavery_event.0118
 			}
-			5 = {
-				modifier = { has_trait = pregnant any_close_family_member = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } count = 0 } add = -5 }
+			0 = {
+				modifier = { any_close_family_member = { is_alive = yes is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } } add = 5 }
 				trigger_event = sbs_slavery_event.0119
 			}
 		}
@@ -100,20 +100,12 @@ sbs_slavery_event.0110 = {
 		ai_chance = { base = 80 }
 		name = sbs_slavery_event.0110.a
 		custom_tooltip = sbs_slavery_event.0110.a.tt
-			if = {
-				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
-				add_trait = wounded_1
+		random_secret = {
+			limit = {
+				NOT = { is_known_by = scope:owner }
 			}
-			else_if = {
-				limit = { NOT = { has_trait = wounded_2 has_trait = wounded_3 } }
-				remove_trait = wounded_1
-				add_trait = wounded_2
-			}
-			else_if = {
-				limit = { NOT = { has_trait = wounded_3 } }
-				remove_trait = wounded_2
-				add_trait = wounded_3
-			}
+			reveal_to = scope:owner
+		}
 	}
 }
 
@@ -140,6 +132,7 @@ sbs_slavery_event.0111 = {
 		add_character_flag = { flag = ass_cum months = 6 }
 		add_character_flag = { flag = body_cum months = 6 }
 		add_character_flag = { flag = face_cum months = 6 }
+		trigger_event = sbs_slavery_event.1000
 	}
 }
 
@@ -169,6 +162,7 @@ sbs_slavery_event.0112 = {
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 			}
 		}
+		add_character_modifier = { modifier = licentious_04_modifier years = 1 }
 	}
 }
 
@@ -198,6 +192,7 @@ sbs_slavery_event.0113 = {
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 			}
 		}
+		add_character_modifier = { modifier = licentious_02_modifier years = 1 }
 	}
 }
 
@@ -232,6 +227,7 @@ sbs_slavery_event.0114 = {
 			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 			pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 		}
+		add_character_modifier = { modifier = licentious_01_modifier years = 1 }
 	}
 }
 
@@ -255,6 +251,7 @@ sbs_slavery_event.0115 = {
 		name = sbs_slavery_event.0115.a
 		custom_tooltip = sbs_slavery_event.0115.a.tt
 		add_character_flag = { flag = pussy_cum months = 6 }
+		trigger_event = sbs_slavery_event.1100
 	}
 }
 
@@ -303,8 +300,14 @@ sbs_slavery_event.0117 = {
 		ai_chance = { base = 80 }
 		name = sbs_slavery_event.0117.a
 		custom_tooltip = sbs_slavery_event.0117.a.tt
-		add_character_flag = { flag = pussy_cum months = 6 }
-		add_character_flag = { flag = ass_cum months = 6 }
+		trigger_event = sbs_slavery_event.2100
+		add_character_modifier = { modifier = licentious_01_modifier years = 2 }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.0117.b
+		custom_tooltip = sbs_slavery_event.0117.b.tt
+		trigger_event = sbs_slavery_event.2300
 	}
 }
 
@@ -342,7 +345,7 @@ sbs_slavery_event.0119 = {
 	override_background = { reference = throne_room }
 	immediate = {
 		random_close_family_member = {
-			limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+			limit = { is_adult = yes is_alive = yes is_attracted_to_gender_of = root NOT = { this = root } }
 			save_scope_as = owner2
 		}
 	}
@@ -599,8 +602,8 @@ sbs_slavery_event.0125 = {
 				custom_tooltip = { text = sbs_slavery_event.0125.bl.tt }
 				scope:owner = {
 					imprison =  {
-						target = scope:root
-						type = dungeon
+						target = root
+						type = house_arrest
 					}
 				}
 			}
@@ -642,6 +645,8 @@ sbs_slavery_event.0126 = {
 					REASON = flag:voluntary
 					FLAVOR_CHAR = root
 				}
+				root = { save_scope_as = slave }
+				carn_free_slave_effect = yes
 			}
 			# if lose
 			50 = {
@@ -653,8 +658,8 @@ sbs_slavery_event.0126 = {
 				custom_tooltip = { text = sbs_slavery_event.0126.bl.tt }
 				scope:owner = {
 					imprison =  {
-						target = scope:root
-						type = dungeon
+						target = root
+						type = house_arrest
 					}
 				}
 			}
@@ -683,180 +688,113 @@ sbs_slavery_event.0200 = {
 		custom_tooltip = sbs_slavery_event.0200.a.tt
 		hidden_effect = {
 			random_list = {
-				4 = {
-					modifier = { OR = { has_trait = dull has_trait = shrewd } add = -4 }
-					add_trait = shrewd
+				0 = {
+					modifier = { OR = { has_trait = leper } add = 50 }
+					remove_trait = leper
 				}
-				4 = {
-					modifier = { OR = { has_trait = weak has_trait = strong } add = -4 }
+				0 = {
+					modifier = { OR = { has_trait = lovers_pox } add = 50 }
+					remove_trait = lovers_pox
+				}
+				0 = {
+					modifier = { OR = { has_trait = early_great_pox } add = 50 }
+					remove_trait = early_great_pox
+				}
+				0 = {
+					modifier = { OR = { has_trait = disfigured } add = 50 }
+					remove_trait = disfigured
+				}
+				0 = {
+					modifier = { OR = { has_trait = great_pox } add = 50 }
+					remove_trait = great_pox
+				}
+				0 = {
+					modifier = { OR = { has_trait = blind } add = 20 }
+					remove_trait = blind
+				}
+				0 = {
+					modifier = { OR = { has_trait = one_eyed } add = 20 }
+					remove_trait = one_eyed
+				}
+				0 = {
+					modifier = { OR = { has_trait = eunuch } add = 20 }
+					remove_trait = eunuch
+				}
+				0 = {
+					modifier = { OR = { has_trait = scarred } add = 20 }
+					remove_trait = scarred
+				}
+				0 = {
+					modifier = { OR = { has_trait = one_legged } add = 20 }
+					remove_trait = one_legged
+				}
+				0 = {
+					modifier = { OR = { has_trait = cancer } add = 20 }
+					remove_trait = cancer
+				}
+				2 = {
+					modifier = { current_weight >= 30 add = 8 }
+					change_current_weight = -10
+				}
+				2 = {
+					modifier = { current_weight < -30 add = 8 }
+					change_current_weight = 10
+				}
+				2 = {
+					modifier = { OR = { has_trait = weak has_trait = strong } add = -2 }
 					add_trait = strong
 				}
-				4 = {
-					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -4 }
+				2 = {
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -2 }
 					add_trait = fecund
 				}
 				2 = {
-					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -2 }
-					add_trait = physique_good_1
-				}
-				1 = {
-					modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -1 }
-					add_trait = beauty_good_1
-				}
-				2 = {
-					modifier = { OR = { has_trait = physique_good_1 } add = 2 }
-					remove_trait = physique_good_1
-					add_trait = physique_good_2
-				}
-				0 = {
-					modifier = { OR = { has_trait = physique_good_2 } add = 2 }
-					remove_trait = physique_good_2
-					add_trait = physique_good_3
-				}
-				0 = {
-					modifier = { OR = { has_trait = physique_good_2 } add = 2 }
-					remove_trait = physique_good_2
-					add_trait = physique_good_1
-				}
-				2 = {
-					modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -2 }
-					add_trait = intellect_good_1
-				}
-				0 = {
-					modifier = { OR = { has_trait = intellect_good_1 } add = 2 }
-					remove_trait = intellect_good_1
-					add_trait = intellect_good_2
-				}
-				0 = {
-					modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
-					remove_trait = intellect_good_2
-					add_trait = intellect_good_3
-				}
-				0 = {
-					modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
-					remove_trait = intellect_good_2
-					add_trait = intellect_good_1
-				}
-				0 = {
-				modifier = { OR = { has_trait = intellect_good_3 } add = 2 }
-					remove_trait = intellect_good_3
-					add_trait = intellect_good_2
-				}
-				2 = {
-					modifier = { OR = { has_trait = beauty_good has_trait = beauty_good } add = -2 }
-					add_trait = beauty_good_1
-				}
-				0 = {
-					modifier = { OR = { has_trait = beauty_good_1 } add = 1 }
-					remove_trait = beauty_good_1
-					add_trait = beauty_good_2
-				}
-				0 = {
-					modifier = { OR = { has_trait = beauty_good_2 } add = 1 }
-					remove_trait = beauty_good_2
-					add_trait = beauty_good_1
-				}
-				0 = {
-					modifier = { OR = { has_trait = beauty_good_2 } add = 1 }
-					remove_trait = beauty_good_2
-					add_trait = beauty_good_3
-				}
-				0 = {
-					modifier = { OR = { has_trait = beauty_good_3 } add = 1 }
-					remove_trait = beauty_good_3
-					add_trait = beauty_good_2
-				}
-				2 = {
-					modifier = { has_trait = depressed add = -2 }
-					add_trait = depressed_1
-				}
-				2 = {
-					modifier = { has_trait = depressed add = -2 }
-					add_trait = depressed_genetic
-				}
-				2 = {
-					modifier = { has_trait = lunatic add = -2 }
-					add_trait = lunatic_1
-				}
-				2 = {
-					modifier = { has_trait = lunatic add = -2 }
-					add_trait = lunatic_genetic
-				}
-				2 = {
-					modifier = { has_trait = possessed add = -2 }
-					add_trait = possessed_1
-				}
-				2 = {
-					modifier = { has_trait = possessed add = -2 }
-					add_trait = possessed_genetic
-				}
-				2 = {
-					modifier = { has_trait = inbred add = -2 }
-					add_trait = inbred
-				}
-				5 = {
-					modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -5 }
+					modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -2 }
 					add_trait = dull
 				}
-				5 = {
-					modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -5 }
+				2 = {
+					modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -2 }
 					add_trait = weak
 				}
-				1 = {
-					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
-					add_trait = infertile
+				2 = {
+					modifier = { has_trait = modifier_amazing_fertility_counsel add = -2 }
+					add_character_modifier = { modifier = very_successful_fertility_treatment years = 10 }
 				}
-				1 = {
-					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = physique_bad } add = -1 }
-					add_trait = physique_bad_1
+				2 = {
+					modifier = { has_trait = very_successful_fertility_treatment add = -2 }
+					add_character_modifier = { modifier = very_successful_fertility_treatment years = 10 }
 				}
-				0 = {
-					modifier = { has_trait = physique_bad_1 add = 1 }
-					remove_trait = physique_bad_1
-					add_trait = physique_bad_2
+				2 = {
+					modifier = { has_trait = confident_lover add = -2 }
+					add_character_modifier = { modifier = confident_lover years = 10 }
 				}
-				0 = {
-					modifier = { has_trait = physique_bad_2 add = 1 }
-					remove_trait = physique_bad_2
-					add_trait = physique_bad_1
+				3 = {
+					modifier = { has_trait = modifier_great_fertility_counsel add = -3 }
+					add_character_modifier = { modifier = modifier_great_fertility_counsel years = 10 }
 				}
-				0 = {
-					modifier = { has_trait = physique_bad_2 add = 1 }
-					remove_trait = physique_bad_2
-					add_trait = physique_bad_3
+				3 = {
+					modifier = { has_trait = modifier_bad_fertility_counsel add = -3 }
+					add_character_modifier = { modifier = modifier_bad_fertility_counsel years = 10 }
 				}
-				0 = {
-					modifier = { has_trait = physique_bad_3 add = 1 }
-					remove_trait = physique_bad_3
-					add_trait = physique_bad_2
+				3 = {
+					modifier = { has_trait = successful_fertility_treatment add = -3 }
+					add_character_modifier = { modifier = successful_fertility_treatment years = 10 }
 				}
-				1 = {
-					modifier = { OR = { has_trait = intellect_good has_trait = intellect_bad } add = -1 }
-					add_trait = intellect_bad_1
+				3 = {
+					modifier = { has_trait = stanky_modifier add = -3 }
+					add_character_modifier = { modifier = stanky_modifier years = 1 }
 				}
-				0 = {
-					modifier = { has_trait = intellect_bad_1 add = 1 }
-					remove_trait = intellect_bad_1
-					add_trait = intellect_bad_2
-				}
-				0 = {
-					modifier = { has_trait = intellect_bad_2 add = 1 }
-					remove_trait = intellect_bad_2
-					add_trait = intellect_bad_1
-				}
-				0 = {
-					modifier = { has_trait = intellect_bad_2 add = 1 }
-					remove_trait = intellect_bad_2
-					add_trait = intellect_bad_3
-				}
-	
-				0 = {
-					modifier = { has_trait = intellect_bad_3 add = 1 }
-					remove_trait = intellect_bad_3
-					add_trait = intellect_bad_2
+				3 = {
+					modifier = { has_trait = botched_fertility_treatment add = -3 }
+					add_character_modifier = { modifier = botched_fertility_treatment years = 1 }
 				}
 				5 = {
+					modifier = { has_trait = lost_in_lust_modifier add = -4 }
 					add_character_modifier = { modifier = lost_in_lust_modifier years = 10 }
+				}
+				5 = {
+					modifier = { has_trait = possessed_by_lust_demon_modifier add = -4 }
+					add_character_modifier = { modifier = possessed_by_lust_demon_modifier years = 10 }
 				}
 			}
 		}
@@ -869,11 +807,12 @@ sbs_slavery_event.0200 = {
 		scope:owner = {
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-				had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 			}
 		}
 		add_character_modifier = { modifier = sleep_deprived_modifier months = 6 }
 		add_character_modifier = { modifier = lost_in_lust_modifier years = 10 }
+		add_character_modifier = { modifier = possessed_by_lust_demon_modifier years = 10 }
 	}
 }
 
@@ -883,14 +822,6 @@ sbs_slavery_event.0300 = {
 	desc = sbs_slavery_event.0300.desc
 	theme = secret
 	override_background = { reference = dungeon }
-	immediate = {
-		scope:owner = {
-			imprison =  {
-				target = scope:root
-				type = house_arrest
-			}
-		}
-	}
 	right_portrait = {
 		character = scope:owner
 		animation = scheme
@@ -916,20 +847,26 @@ sbs_slavery_event.0300 = {
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					multiplier = 3.5
+					multiplier = 2
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
-				release_from_prison = yes
 			}
 			# if lose
 			50 = {
 				compare_modifier = {
 					value = scope:duel_value
-					multiplier = -3.5
+					multiplier = -3
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				scope:owner = {
+					every_courtier = {
+						limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+						prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+					}
+				}
 				trigger_event = {
 					id = sbs_slavery_event.0310
 					days = { 7 14 }
@@ -958,41 +895,257 @@ sbs_slavery_event.0310 = {
 		ai_chance = { base = 80 }
 		name = sbs_slavery_event.0310.a
 		custom_tooltip = sbs_slavery_event.0310.a.tt
-		scope:owner = {
-			imprison =  {
-				target = scope:root
-				type = house_arrest
-			}
-		}
-		add_character_modifier = {
-			modifier = stress_smelling_of_sweat
-			years = 1
-		}
+		add_character_modifier = { modifier = stress_smelling_of_sweat years = 1 }
 		duel = {
 			skill = prowess
 			target = scope:owner
 			# if win
-			50 = {
+			75 = {
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = 3.5
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
-				release_from_prison = yes
 			}
 			# if lose
-			50 = {
+			25 = {
 				compare_modifier = {
 					value = scope:duel_value
 					multiplier = -3.5
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
-				every_courtier = {
-					limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
-					pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+				scope:owner = {
+					every_courtier = {
+						limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+						prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+					}
+				}
+				trigger_event = {
+					id = sbs_slavery_event.0320
+					days = { 7 14 }
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0320 = {
+	type = character_event
+	title = sbs_slavery_event.0310.t
+	desc = sbs_slavery_event.0310.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0310.a
+		custom_tooltip = sbs_slavery_event.0310.a.tt
+		add_character_modifier = { modifier = stress_smelling_of_sweat years = 1 }
+		duel = {
+			skill = martial
+			target = scope:owner
+			# if win
+			75 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
+			}
+			# if lose
+			25 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				scope:owner = {
+					every_courtier = {
+						limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+						prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+					}
+				}
+				trigger_event = {
+					id = sbs_slavery_event.0330
+					days = { 7 14 }
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0330 = {
+	type = character_event
+	title = sbs_slavery_event.0310.t
+	desc = sbs_slavery_event.0310.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0310.a
+		custom_tooltip = sbs_slavery_event.0310.a.tt
+		add_character_modifier = { modifier = stress_smelling_of_sweat years = 1 }
+		duel = {
+			skill = stewardship
+			target = scope:owner
+			# if win
+			75 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
+			}
+			# if lose
+			25 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				scope:owner = {
+					every_courtier = {
+						limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+						prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+					}
+				}
+				trigger_event = {
+					id = sbs_slavery_event.0340
+					days = { 7 14 }
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0340 = {
+	type = character_event
+	title = sbs_slavery_event.0310.t
+	desc = sbs_slavery_event.0310.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0310.a
+		custom_tooltip = sbs_slavery_event.0310.a.tt
+		add_character_modifier = { modifier = stress_smelling_of_sweat years = 1 }
+		duel = {
+			skill = diplomacy
+			target = scope:owner
+			# if win
+			75 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
+			}
+			# if lose
+			25 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				scope:owner = {
+					every_courtier = {
+						limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+						prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+					}
+				}
+				trigger_event = {
+					id = sbs_slavery_event.0350
+					days = { 7 14 }
+				}
+			}
+		}
+	}
+}
+
+sbs_slavery_event.0350 = {
+	type = character_event
+	title = sbs_slavery_event.0310.t
+	desc = sbs_slavery_event.0310.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = prisonhouse
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0310.a
+		custom_tooltip = sbs_slavery_event.0310.a.tt
+		add_character_modifier = { modifier = stress_smelling_of_sweat years = 1 }
+		duel = {
+			skill = learning
+			target = scope:owner
+			# if win
+			75 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bw.tt }
+			}
+			# if lose
+			25 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.0300.bl.tt }
+				scope:owner = {
+					every_courtier = {
+						limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+						prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
+					}
 				}
 				trigger_event = {
 					id = sbs_slavery_event.0310
@@ -1121,22 +1274,17 @@ sbs_slavery_event.0500 = {
 				expose_secret = scope:recipient
 			}
 		}
+		add_character_modifier = { modifier = stress_smelling_of_sweat years = 1 }
 		scope:owner = {
 			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }	
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-				if = {
-					limit = { is_adult = yes is_attracted_to_gender_of = root }
-					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
-				}
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 			}
 			every_vassal_or_below = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root }
-				if = {
-					limit = { is_adult = yes is_attracted_to_gender_of = root }
-					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
-				}
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 				pay_short_term_gold = { target = scope:owner gold = root.prostitute_tips_value }
 				every_courtier = {
 					limit = { is_adult = yes is_attracted_to_gender_of = root }
@@ -1154,11 +1302,6 @@ sbs_slavery_event.0600 = {
 	desc = sbs_slavery_event.0600.desc
 	theme = secret
 	override_background = { reference = throne_room }
-	immediate = {
-		scope:owner.liege = {
-			save_scope_as = owner2
-		}
-	}
 	right_portrait = {
 		character = scope:owner
 		animation = scheme
@@ -1175,16 +1318,17 @@ sbs_slavery_event.0600 = {
 		add_piety_level = -6
 		add_prestige_level = -6
 		add_legitimacy = -1000
+		change_influence_level = -6
 		scope:owner = {
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-				had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 			}
 			every_vassal_or_below = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root }
 				every_courtier = {
 					limit = { is_adult = yes is_attracted_to_gender_of = root }
-					had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 				}
 			}
 		}
@@ -1219,6 +1363,10 @@ sbs_slavery_event.0700 = {
 		custom_tooltip = sbs_slavery_event.0700.a.tt
 		had_sex_with_effect = { CHARACTER = scope:owner2 PREGNANCY_CHANCE = pregnancy_chance }
 		remove_relation_friend = scope:owner2
+		if = {
+			limit = { has_relation_best_friend = scope:owner2 }
+			remove_relation_best_friend = scope:owner2
+		}
 	}
 	option = {
 		ai_chance = { base = 20 }
@@ -1234,8 +1382,11 @@ sbs_slavery_event.0800 = {
 	theme = secret
 	override_background = { reference = throne_room }
 	immediate = {
-		random_neighboring_top_liege_realm_owner = {
-			save_scope_as = owner2
+		scope:owner = {
+			random_neighboring_and_across_water_top_liege_realm_owner = {
+				limit = { NOT = { this = scope:owner } }
+				save_scope_as = owner2
+			}
 		}
 	}
 	right_portrait = {
@@ -1254,15 +1405,276 @@ sbs_slavery_event.0800 = {
 		scope:owner2 = {
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root }
-				had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 			}
 			every_vassal_or_below = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root }
 				every_courtier = {
 					limit = { is_adult = yes is_attracted_to_gender_of = root }
-					had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+					prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy }
 				}
 			}
 		}
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0800.b
+		custom_tooltip = sbs_slavery_event.0800.b.tt
+		scope:owner2 = {
+			add_courtier = root
+			pay_short_term_gold = { target = scope:owner gold = root.carn_slave_price_value }
+		}
+	}
+}
+
+sbs_slavery_event.0900 = {
+	type = character_event
+	title = sbs_slavery_event.0900.t
+	desc = sbs_slavery_event.0900.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	immediate = {
+		random_relation = {
+			type = rival
+			limit = { is_attracted_to_gender_of = root is_adult = yes }
+			save_scope_as = owner2
+		}
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.0900.a
+		custom_tooltip = sbs_slavery_event.0900.a.tt
+		if = {
+			limit = { scope:owner2 = { is_attracted_to_gender_of = root } }
+			had_sex_with_effect = { CHARACTER = scope:owner2 PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
+				add_trait = wounded_1
+			}
+			else_if = {
+				limit = { NOT = { has_trait = wounded_2 has_trait = wounded_3 } }
+				remove_trait = wounded_1
+				add_trait = wounded_2
+			}
+			else_if = {
+				limit = { NOT = { has_trait = wounded_3 } }
+				remove_trait = wounded_2
+				add_trait = wounded_3
+			}
+		}
+		remove_relation_rival = scope:owner2
+		if = {
+			limit = { has_relation_nemesis = scope:owner2 }
+			remove_relation_nemesis = scope:owner2
+		}
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.0900.b
+		custom_tooltip = sbs_slavery_event.0900.b.tt
+		trigger_event = sbs_slavery_event.0125
+	}
+}
+
+sbs_slavery_event.1000 = {
+	type = character_event
+	title = sbs_slavery_event.1000.t
+	desc = sbs_slavery_event.1000.desc
+	theme = secret
+	override_background = { reference = garden }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.1000.a
+		custom_tooltip = sbs_slavery_event.1000.a.tt
+		add_prestige = medium_prestige_loss
+		trigger_event = sbs_slavery_event.1100
+	}
+}
+
+sbs_slavery_event.1100 = {
+	type = character_event
+	title = sbs_slavery_event.1100.t
+	desc = sbs_slavery_event.1100.desc
+	theme = secret
+	override_background = { reference = wilderness }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.1000.a
+		custom_tooltip = sbs_slavery_event.1000.a.tt
+		add_piety = medium_piety_loss
+		had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+		add_character_modifier = { modifier = stanky_modifier years = 2 }
+		add_character_modifier = { modifier = licentious_04_modifier years = 1 }
+	}
+}
+
+sbs_slavery_event.2100 = {
+	type = character_event
+	title = sbs_slavery_event.2100.t
+	desc = sbs_slavery_event.2100.desc
+	theme = secret
+	override_background = { reference = alley_day }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.2100.a
+		custom_tooltip = sbs_slavery_event.2100.a.tt
+		trigger_event = sbs_slavery_event.2200
+		add_character_modifier = { modifier = licentious_05_modifier years = 1 }
+	}
+	option = {
+		ai_chance = { base = 80 }
+		name = sbs_slavery_event.2100.b
+		custom_tooltip = sbs_slavery_event.2100.b.tt
+		trigger_event = sbs_slavery_event.2300
+	}
+}
+
+sbs_slavery_event.2200 = {
+	type = character_event
+	title = sbs_slavery_event.2200.t
+	desc = sbs_slavery_event.2200.desc
+	theme = secret
+	override_background = { reference = alley_day }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.2200.a
+		custom_tooltip = sbs_slavery_event.2200.a.tt
+		scope:owner = {
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+		trigger_event = sbs_slavery_event.2210
+	}
+}
+
+sbs_slavery_event.2210 = {
+	type = character_event
+	title = sbs_slavery_event.2210.t
+	desc = sbs_slavery_event.2210.desc
+	theme = secret
+	override_background = { reference = alley_day }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.2210.a
+		custom_tooltip = sbs_slavery_event.2210.a.tt
+		random_living_character = {
+			limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		if = {
+			limit = { current_weight > -20 }
+			change_current_weight = -5
+		}
+		random_list = {
+			1 = {
+				trigger_event = {
+					id = sbs_slavery_event.2210
+					days = { 3 7 }
+				} 
+			}
+			1 = { trigger_event = sbs_slavery_event.2220 }
+		}
+	}
+}
+
+sbs_slavery_event.2220 = {
+	type = character_event
+	title = sbs_slavery_event.2220.t
+	desc = sbs_slavery_event.2220.desc
+	theme = secret
+	override_background = { reference = alley_day }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.2220.a
+		custom_tooltip = sbs_slavery_event.2220.a.tt
+		trigger_event = sbs_slavery_event.2300
+		add_character_flag = { flag = pussy_cum  months = 6 }
+		add_character_modifier = { modifier = licentious_03_modifier years = 2 }
+	}
+}
+
+sbs_slavery_event.2300 = {
+	type = character_event
+	title = sbs_slavery_event.2300.t
+	desc = sbs_slavery_event.2300.desc
+	theme = secret
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.2300.a
+		custom_tooltip = sbs_slavery_event.2300.a.tt
+		add_stress = minor_stress_gain
 	}
 }

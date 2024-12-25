@@ -19,6 +19,11 @@
  masturbate.t: "Relieve stress"
  masturbate.c: "Put it in your pussy"
 
+ recruit_slaves: "Recruit slaves"
+ recruit_slaves.desc: "There are slaves who have run away from their masters and are hiding around here, it is not against the law to capture them."
+ recruit_slaves.t: "Search"
+ recruit_slaves.c: "They are just around here somewhere"
+
  start_ritual_philosophers_stone_decision: "Start ritual of Philosopher's Stone"
  start_ritual_philosophers_stone_decision.d: "$legend_chapter_rital_start_philosopher_stone$"
  start_ritual_philosophers_stone_decision.t: "The secret of the folk song has been revealed, let's start the ritual"

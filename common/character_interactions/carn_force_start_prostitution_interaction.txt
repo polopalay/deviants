@@ -9,13 +9,13 @@
 		OR = {
 			scope:actor = { faith = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted } }
 			scope:actor = { OR = { has_trait = rakish has_trait = lustful has_trait = deviant any_secret = { secret_type = secret_deviant } any_secret = { secret_type = secret_prostitute } } }
+			scope:recipient = { has_trait = slave }
 		}
 		scope:actor = {
 			is_adult = yes
 		}
 		scope:recipient = {
 			is_adult = yes
-			NOT = { has_trait = celibate }
 			OR = {
 				age < carn_prostitution_age_cutoff
 				is_immortal = yes
@@ -252,6 +252,7 @@
 	ai_will_do = {
 		base = 0
 		modifier = { add = 100 scope:actor = scope:recipient scope:recipient = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus } } }
+		modifier = { add = 100 scope:recipient = { has_trait = slave } }
 		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
 		modifier = { add = 40 scope:actor = { has_trait = lustful } scope:recipient = scope:actor }
 		modifier = { add = 40 scope:actor = { has_trait = rakish } scope:recipient = scope:actor }
