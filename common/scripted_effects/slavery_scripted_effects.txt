@@ -105,10 +105,10 @@
 			}
 		}
 		scope:new_owner = {
-			set_relation_slave = scope:new_slave
+			set_relation_slave = { target = scope:new_slave }
 		}
 		scope:slave = {
-			set_relation_slave_owner = scope:new_owner
+			set_relation_slave_owner = { target = scope:new_owner }
 		}
 	}
 }
@@ -139,10 +139,10 @@ carn_buy_slave_effect = {
 			}
 		}
 		scope:slave = {
-			set_relation_slave_owner = scope:buyer
+			set_relation_slave_owner = { target = scope:buyer }
 		}
 		scope:buyer = {
-			set_relation_slave = scope:slave
+			set_relation_slave = { target = scope:slave }
 		}
 	}
 }

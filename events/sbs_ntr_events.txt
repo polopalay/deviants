@@ -441,7 +441,7 @@ sbs_ntr_event.0226 = {
 		name = sbs_ntr_event.0226.a
 		custom_tooltip = sbs_ntr_event.0226.a.tt
 		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-		add_secret = { type = secret_witch }
+		add_secret = { type = secret_deviant }
 	}
 }
 
@@ -587,13 +587,14 @@ sbs_ntr_event.0232 = {
 			}
 			resolve_title_and_vassal_change = scope:change
 		}
-		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 		add_trait = disinherited
 		add_trait = denounced
+		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 		mind_break_personality = yes
+		set_relation_slave_owner = { target =  scope:ntr_character }
+		scope:ntr_character = { set_relation_slave = { target = root } }
 	}
 	option = {
-		ai_chance = { base = 20 }
 		name = sbs_ntr_event.0232.b
 		custom_tooltip = sbs_ntr_event.0232.b.tt
 		had_sex_with_effect = {
@@ -632,12 +633,13 @@ sbs_ntr_event.0232 = {
 			}
 			resolve_title_and_vassal_change = scope:change
 		}
-		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 		add_trait = disinherited
 		add_trait = denounced
+		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
+		set_relation_slave_owner = { target =  scope:ntr_character }
+		scope:ntr_character = { set_relation_slave = { target = root } }
 	}
 	option = {
-		ai_chance = { base = 20 }
 		name = sbs_ntr_event.0232.c
 		custom_tooltip = sbs_ntr_event.0232.c.tt
 		had_sex_with_effect = {
@@ -677,7 +679,6 @@ sbs_ntr_event.0232 = {
 		add_trait = denounced
 	}
 	option = {
-		ai_chance = { base = 20 }
 		name = sbs_ntr_event.0232.d
 		custom_tooltip = sbs_ntr_event.0232.d.tt
 		scope:ntr_character = {

@@ -58,11 +58,14 @@ become_demon = {
 		OR = {
 			AND = {
 				has_trait = sbs_succubus
+				has_trait_xp = { trait = sbs_succubus track = corruption value >= 100 }
+				has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
 				any_prisoner = { count >= 6 }
 			}
 			AND = {
 				has_trait = seed_of_destruction
-				any_courtier = { has_trait = slave is_ai = yes count >= 6 is_immortal = no }
+				has_trait_xp = { trait = seed_of_destruction value >= 100 }
+				any_courtier = { has_trait = slave is_ai = yes count >= 13 is_immortal = no }
 			}
 			AND = {
 				faith.religion = religion:satanic_religion
@@ -120,6 +123,8 @@ become_demon = {
 
 		if = {
 			limit = {
+				faith.religion = religion:satanic_religion
+				faith.religious_head = root
 				culture = {
 					NOT = {
 						has_same_culture_heritage = culture:sbs_demonic
@@ -242,30 +247,30 @@ recruit_slaves = {
 	confirm_text = recruit_slaves.c
 	selection_tooltip = recruit_slaves.t
 	decision_group_type = decisions
-	cooldown = { years = 2 }
 	is_shown = {
+		is_ai = yes
 		is_ruler = yes
-		any_living_character = {
-			NOT = { liege = root }
+		is_adult = yes
+		any_relation = {
+			type = slave
 			is_ruler = no
-			NOT = { exists = liege }
-			has_trait = slave
+			NOT = { liege = root }
 		}
 	}
 	effect = {
-		random_living_character = {
+		every_relation = {
+			type = slave
 			limit = {
-				has_trait = slave
-				NOT = { liege = root }
 				is_ruler = no
-				NOT = { exists = liege }
+				NOT = { liege = root }
 			}
-			root = {
-				add_courtier = prev
-			}
+			save_scope_as = slave
+		}
+		root = {
+			add_courtier = scope:slave
 		}
 	}
 	ai_potential = { always = yes }
-	ai_check_interval = 12
+	ai_check_interval = 1
 	ai_will_do = { base = 100 }
 }
