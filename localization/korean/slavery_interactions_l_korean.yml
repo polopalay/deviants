@@ -31,3 +31,6 @@
 
   extortion_interaction: "갈취"
   extortion_interaction.desc: "[recipient.GetShortUINameNoTooltip]에게서 [gold|E]를 갈취합니다."
+
+  slave_training_interaction: "노예 훈련"
+  slave_training_interaction.desc: "[recipient.GetShortUINameNoTooltip]을 온순한 노예로 훈련"

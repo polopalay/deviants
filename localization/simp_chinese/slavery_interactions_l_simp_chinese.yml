@@ -31,3 +31,6 @@
 
   extortion_interaction: "敲诈"
   extortion_interaction.desc: "敲诈 [recipient.GetShortUINameNoTooltip] 以获取 [gold|E]"
+
+  slave_training_interaction: "训练奴隶"
+  slave_training_interaction.desc: "训练 [recipient.GetShortUINameNoTooltip] 成为温顺的奴隶"

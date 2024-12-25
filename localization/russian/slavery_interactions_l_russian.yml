@@ -31,3 +31,6 @@
 
   extortion_interaction: "Вымогать"
   extortion_interaction.desc: "Вымогать [recipient.GetShortUINameNoTooltip] [gold|E]."
+
+  slave_training_interaction: "Обучение раба"
+  slave_training_interaction.desc: "Обучение [recipient.GetShortUINameNoTooltip] быть послушным рабом"
