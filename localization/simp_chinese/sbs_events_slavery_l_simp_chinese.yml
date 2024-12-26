@@ -235,7 +235,7 @@
   sbs_slavery_event.5000.bl.tt: "Sir I need clothes to wear, please save some honor for me"
 
   sbs_slavery_event.5100.t: "The outfit"
-  sbs_slavery_event.5100.desc: "xxx brought me to the meeting room with his councillors. I was forced to lick all the councillors' shoes clean.\n\"Your Majesty, although we all know that this whore's dirty and lewd behavior is unforgivable, I think that leaving a slave naked like this might reflect badly on your Majesty's reputation, how about providing this whore with decent clothes?\"\n\"At least foreign envoys won't think that your Majesty is a lewd person like this whore\"\n\"Alright, let's throw a rag for this whore to wear, a slave's clothes don't need to be too formal\""
+  sbs_slavery_event.5100.desc: "[owner.GetFirstName] brought me to the meeting room with his councillors. I was forced to lick all the councillors' shoes clean.\n\"Your Majesty, although we all know that this whore's dirty and lewd behavior is unforgivable, I think that leaving a slave naked like this might reflect badly on your Majesty's reputation, how about providing this whore with decent clothes?\"\n\"At least foreign envoys won't think that your Majesty is a lewd person like this whore\"\n\"Alright, let's throw a rag for this whore to wear, a slave's clothes don't need to be too formal\""
   sbs_slavery_event.5100.a: "Kneel down and thank you"
   sbs_slavery_event.5100.a.tt: "At least I have clothes to wear"
 
@@ -245,6 +245,6 @@
   sbs_slavery_event.5200.a.tt: "I begged for mercy from my master, if I continued to let the prisoners torment me like this, I might die"
 
   sbs_slavery_event.5300.t: "Slave Blood"
-  sbs_slavery_event.5300.desc: "I was dragged in front of xxx's other slaves in a naked state.\n\"This one was once a noble of a famous family, but she voluntarily became a slave for everyone to trample on. Whoever wants to maintain their slave blood, then rape her, her noble pussy is very sensitive to conception\""
+  sbs_slavery_event.5300.desc: "I was dragged in front of [owner.GetFirstName]'s other slaves in a naked state.\n\"This one was once a noble of a famous family, but she voluntarily became a slave for everyone to trample on. Whoever wants to maintain their slave blood, then rape her, her noble pussy is very sensitive to conception\""
   sbs_slavery_event.5300.a: "Spread my legs"
   sbs_slavery_event.5300.a.tt: "I spread my legs, waiting for the hot streams of semen to impregnate me"

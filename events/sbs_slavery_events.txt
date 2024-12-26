@@ -711,8 +711,8 @@ sbs_slavery_event.0200 = {
 					remove_trait = one_eyed
 				}
 				0 = {
-					modifier = { OR = { has_trait = eunuch } add = 20 }
-					remove_trait = eunuch
+					modifier = { OR = { has_trait = eunuch_1 } add = 20 }
+					remove_trait = eunuch_1
 				}
 				0 = {
 					modifier = { OR = { has_trait = scarred } add = 20 }
@@ -1972,19 +1972,21 @@ sbs_slavery_event.5200 = {
 	}
 	option = {
 		ai_chance = { base = 20 }
-		name = sbs_slavery_event.4000.a
-		custom_tooltip = sbs_slavery_event.4000.a.tt
-		every_prisoner = {
-			limit = { is_adult = yes is_attracted_to_gender_of = root }
-			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		name = sbs_slavery_event.5200.a
+		custom_tooltip = sbs_slavery_event.5200.a.tt
+		scope:owner = {
+			every_prisoner = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
 		}
 	}
 }
 
 sbs_slavery_event.5300 = {
 	type = character_event
-	title = sbs_slavery_event.5200.t
-	desc = sbs_slavery_event.5200.desc
+	title = sbs_slavery_event.5300.t
+	desc = sbs_slavery_event.5300.desc
 	theme = secret
 	override_background = { reference = dungeon }
 	right_portrait = {
@@ -1998,11 +2000,87 @@ sbs_slavery_event.5300 = {
 	}
 	option = {
 		ai_chance = { base = 20 }
-		name = sbs_slavery_event.4000.a
-		custom_tooltip = sbs_slavery_event.4000.a.tt
+		name = sbs_slavery_event.5300.a
+		custom_tooltip = sbs_slavery_event.5300.a.tt
+		scope:owner = {
+			every_courtier = {
+				limit = { has_trait = slave is_adult = yes is_female = no }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+	}
+}
+
+sbs_slavery_event.6000 = {
+	type = character_event
+	title = sbs_slavery_event.6000.t
+	desc = sbs_slavery_event.6000.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.6000.a
+		custom_tooltip = sbs_slavery_event.6000.a.tt
+		remove_trait = drunkard
+		scope:owner = {
+			every_courtier = {
+				limit = { has_trait = slave is_adult = yes is_female = no }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.6000.b
+		custom_tooltip = sbs_slavery_event.6000.b.tt
+		scope:owner = {
+			every_courtier = {
+				limit = { has_trait = slave is_adult = yes is_female = no }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+	}
+}
+
+sbs_slavery_event.8888 = {
+	trigger = { is_ruler = yes any_courtier = { has_trait = slave any_relation = { type = slave_owner count = 0 } } }
+	hidden = yes
+	immediate = {
 		every_courtier = {
-			limit = { has_trait = slave is_adult = yes is_female = no }
-			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			limit = {
+				has_trait = slave
+				any_relation = { type = slave_owner count = 0 }
+			}
+			set_relation_slave_owner = { target = root }
+			save_scope_as = slave
+			root = { set_relation_slave = { target = scope:slave } }
+		}
+	}
+}
+
+sbs_slavery_event.9999 = {
+	trigger = { is_ruler = yes any_relation = { type = slave is_ruler = no NOT = { liege = root } } }
+	hidden = yes
+	immediate = {
+		every_relation = {
+			type = slave
+			limit = {
+				is_ruler = no
+				NOT = { liege = root }
+			}
+			save_scope_as = slave
+		}
+		root = {
+			add_courtier = scope:slave
 		}
 	}
 }

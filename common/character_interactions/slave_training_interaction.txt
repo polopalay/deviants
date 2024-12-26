@@ -56,7 +56,7 @@
 								OR = {
 									has_trait = blind
 									has_trait = one_eyed
-									has_trait = eunuch
+									has_trait = eunuch_1
 									has_trait = scarred
 									has_trait = cancer
 									has_trait = one_legged
@@ -71,8 +71,8 @@
 						modifier = { exists = scope:actor.liege NOT = { scope:actor.liege = scope:actor } add = 5 }
 						trigger_event = sbs_slavery_event.0400
 					}
-					5 = {
-						scope:actor = { is_landed = yes }
+					0 = {
+						modifier = { scope:actor = { is_landed = yes } add = 5 }
 						trigger_event = sbs_slavery_event.0800
 					}
 					0 = {
@@ -143,6 +143,13 @@
 							add = 5
 						}
 						trigger_event = sbs_slavery_event.5300
+					}
+					0 = {
+						modifier = {
+							scope:recipient = { has_trait = drunkard }
+							add = 50
+						}
+						trigger_event = sbs_slavery_event.6000
 					}
 				}
 			}

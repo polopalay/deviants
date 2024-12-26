@@ -99,7 +99,7 @@
 	scope:new_owner = {
 		set_relation_slave = { target = scope:new_slave }
 	}
-	scope:slave = {
+	scope:new_slave = {
 		set_relation_slave_owner = { target = scope:new_owner }
 	}
 }
