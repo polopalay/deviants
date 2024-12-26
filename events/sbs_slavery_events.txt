@@ -1824,6 +1824,7 @@ sbs_slavery_event.3000 = {
 			limit = { has_relation_soulmate = scope:owner2 }
 			remove_relation_soulmate = scope:owner2
 		}
+	}
 	option = {
 		ai_chance = { base = 20 }
 		name = sbs_slavery_event.3000.b
@@ -1872,7 +1873,7 @@ sbs_slavery_event.4000 = {
 			remove_trait = sbs_succubus
 			remove_trait = sbs_demon
 			remove_trait = immortal
-			add_trait = lesser_succubus
+			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
 		}
 		root = { save_scope_as = slave }

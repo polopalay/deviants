@@ -65,7 +65,7 @@ become_demon = {
 			AND = {
 				has_trait = seed_of_destruction
 				has_trait_xp = { trait = seed_of_destruction value >= 100 }
-				any_courtier = { has_trait = slave is_ai = yes count >= 6 is_immortal = no }
+				any_courtier = { has_trait = slave is_ai = yes count >= 13 is_immortal = no }
 			}
 			AND = {
 				faith.religion = religion:satanic_religion
