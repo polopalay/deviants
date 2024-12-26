@@ -18,9 +18,9 @@ random_yearly_playable_pulse = {
 			has_trait = lustful
 			any_secret = { secret_type = secret_deviant }
 			has_trait = deviant
-			this = character:7757
-			this = character:223522
-			this = character:466517
+			root = character:7757
+			root = character:223522
+			root = character:466517
 		}
 		exists = primary_spouse
 		exists = primary_spouse.father
@@ -31,7 +31,7 @@ random_yearly_playable_pulse = {
 		25 = sbs_ntr_event.0100
 		10 = sbs_ntr_event.0210
 		10 = sbs_ntr_event.0220
-		25 = sbs_ntr_event.0230
+		100 = sbs_ntr_event.0230
 		10 = sbs_ntr_event.0240
 		10 = sbs_ntr_event.0250
 	}

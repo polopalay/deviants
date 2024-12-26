@@ -2031,6 +2031,7 @@ sbs_slavery_event.6000 = {
 		name = sbs_slavery_event.6000.a
 		custom_tooltip = sbs_slavery_event.6000.a.tt
 		remove_trait = drunkard
+		add_stress = minor_stress_gain
 		scope:owner = {
 			every_courtier = {
 				limit = { has_trait = slave is_adult = yes is_female = no }
@@ -2042,6 +2043,7 @@ sbs_slavery_event.6000 = {
 		ai_chance = { base = 20 }
 		name = sbs_slavery_event.6000.b
 		custom_tooltip = sbs_slavery_event.6000.b.tt
+		add_stress = minor_stress_loss
 		scope:owner = {
 			every_courtier = {
 				limit = { has_trait = slave is_adult = yes is_female = no }

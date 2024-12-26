@@ -115,7 +115,6 @@ sbs_ntr_event.0111 = {
 			reason = lover_shared_deviancy
 			target = scope:ntr_character
 		}
-		add_secret = { type = secret_deviant }
 	}
 	option = {
 		name = sbs_ntr_event.0111.b
@@ -236,8 +235,16 @@ sbs_ntr_event.0210 = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
 		OR = {
-			any_secret = { secret_type = secret_deviant }
-			has_trait = deviant
+			AND = {
+				OR = {
+					any_secret = { secret_type = secret_deviant }
+					has_trait = deviant
+				}
+				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+			root = character:7757
+			root = character:223522
+			root = character:466517
 		}
 	}
 	immediate = {
@@ -447,7 +454,7 @@ sbs_ntr_event.0226 = {
 		ai_chance = { base = 80 }
 		name = sbs_ntr_event.0226.a
 		custom_tooltip = sbs_ntr_event.0226.a.tt
-		add_secret = { type = secret_deviant }
+		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 	}
 }
 
@@ -587,16 +594,16 @@ sbs_ntr_event.0232 = {
 				save_scope_as = change
 				add_claim_on_loss = no
 			}
-			change_title_holder = {
+			change_title_holder_include_vassals = {
 				holder = scope:ntr_character
 				change = scope:change
+				take_baronies = no
 			}
 			resolve_title_and_vassal_change = scope:change
 		}
 		add_trait = disinherited
 		add_trait = denounced
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
-		mind_break_personality = yes
 	}
 	option = {
 		name = sbs_ntr_event.0232.b
@@ -715,6 +722,7 @@ sbs_ntr_event.0240 = {
 		ai_chance = { base = 80 }
 		name = sbs_ntr_event.0240.a
 		custom_tooltip = sbs_ntr_event.0240.a.tt
+		add_secret = { type = secret_prostitute }
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character_2
 			PREGNANCY_CHANCE = seduce_pregnancy_chance
@@ -748,6 +756,7 @@ sbs_ntr_event.0250 = {
 		ai_chance = { base = 80 }
 		name = sbs_ntr_event.0250.a
 		custom_tooltip = sbs_ntr_event.0250.a.tt
+		add_secret = { type = secret_deviant }
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
 			PREGNANCY_CHANCE = seduce_pregnancy_chance

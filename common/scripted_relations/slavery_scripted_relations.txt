@@ -1,6 +1,7 @@
 ﻿slave = {
   	corresponding = slave_owner
 	special_guest = yes
+  	opinion = 50
 }
 
 slave_owner = {
