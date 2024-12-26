@@ -101,9 +101,7 @@ sbs_slavery_event.0110 = {
 		name = sbs_slavery_event.0110.a
 		custom_tooltip = sbs_slavery_event.0110.a.tt
 		random_secret = {
-			limit = {
-				NOT = { is_known_by = scope:owner }
-			}
+			limit = { NOT = { is_known_by = scope:owner } }
 			reveal_to = scope:owner
 		}
 	}
@@ -1714,14 +1712,11 @@ sbs_slavery_event.2210 = {
 			limit = { current_weight > -20 }
 			change_current_weight = -5
 		}
-		random_list = {
-			1 = {
-				trigger_event = {
-					id = sbs_slavery_event.2210
-					days = { 3 7 }
-				} 
+		hidden_effect = {
+			random_list = {
+				1 = { trigger_event = { id = sbs_slavery_event.2210 days = { 3 7 } } }
+				1 = { trigger_event = sbs_slavery_event.2220 }
 			}
-			1 = { trigger_event = sbs_slavery_event.2220 }
 		}
 	}
 }
@@ -1820,6 +1815,13 @@ sbs_slavery_event.3000 = {
 		if = {
 			limit = { has_relation_soulmate = scope:owner2 }
 			remove_relation_soulmate = scope:owner2
+		}
+		scope:owner2 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -100
+			}
 		}
 	}
 	option = {

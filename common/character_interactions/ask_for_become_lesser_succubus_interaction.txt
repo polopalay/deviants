@@ -1,0 +1,139 @@
+﻿ask_for_become_lesser_succubus_interaction = {
+	icon = lesser_devil
+	desc = ask_for_become_lesser_succubus_interaction.desc
+	category = interaction_category_diplomacy
+	use_diplomatic_range = {
+		scope:actor = { is_ai = yes }
+	}
+	common_interaction = yes
+	cooldown = { years = 10 }
+
+	is_shown = {
+		scope:actor = {
+			is_female = yes
+			is_immortal = no
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = sbs_demon
+				AND = {
+					has_trait = sbs_succubus
+					is_valid_construction_alchemy3_trigger = yes
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		scope:actor = {
+			has_trait = lustful
+			OR = {
+				has_trait = deviant
+				any_secret = { secret_type = secret_deviant }
+			}
+			ON = {
+				has_trait = witch
+				any_secret = { secret_type = secret_witch }
+			}
+		}
+	}
+
+	localization_values = {
+		RANSOM_COST = major_gold_value
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient ?= { gold >= major_gold_value }
+		}
+		flag = gold
+		localization = "RANSOM_GOLD_OPTION"
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_option = {
+		is_valid = {
+			exists = scope:recipient
+			scope:recipient = {
+				can_add_hook = {
+					target = scope:actor
+					type = favor_hook
+				}
+			}
+		}
+		flag = favor
+		localization = "RANSOM_OWE_FAVOR_OPTION"
+	}
+	send_options_exclusive = no
+
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = { scope:gold = yes }
+				pay_short_term_gold = {
+					target = scope:recipient
+					gold = major_gold_value
+				}
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:demand_conversion = yes
+				}
+				set_character_faith_with_conversion = scope:recipient.faith
+			}
+			remove_character_modifier = succubus_buff
+			add_trait = sbs_lesser_succubus
+			set_immortal_age = 18
+			if = {
+				limit = { has_trait = deviant_blood }
+				remove_trait = deviant_blood
+				add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = { scope:favor = yes }
+				add_hook = {
+					target = scope:actor
+					type = fabrication_hook
+				}
+			}
+		}
+	}
+	ai_accept = {
+		base = -20
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.5
+		}
+		modifier = { add = 5 scope:gold = yes }
+		modifier = { add = 5 scope:hook = yes }
+		modifier = { add = 5 scope:favor = yes }
+	}
+
+	ai_potential = { always = yes }
+	ai_frequency = 12
+	ai_targets = {
+		ai_recipients = family
+		ai_recipients = head_of_faith
+		max = 5
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}

@@ -154,6 +154,10 @@
 				}
 			}
 			else_if = {
+				limit = { any_secret = { NOT = { is_known_by = scope:actor } } }
+				random_secret = { limit = { NOT = { is_known_by = scope:actor } } reveal_to = scope:actor }
+			}
+			else_if = {
 				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
 				add_trait = wounded_1
 			}
