@@ -1,6 +1,6 @@
 ﻿carn_buy_slave_directly_interaction = {
 	category = interaction_category_prison
-	desc = carn_buy_slave_directly_interaction.desc
+	desc = carn_buy_slave_directly_interaction_desc
 	common_interaction = yes
 	needs_recipient_to_open = yes
 	is_shown = {

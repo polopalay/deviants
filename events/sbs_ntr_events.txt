@@ -597,8 +597,6 @@ sbs_ntr_event.0232 = {
 		add_trait = denounced
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 		mind_break_personality = yes
-		set_relation_slave_owner = { target =  scope:ntr_character }
-		scope:ntr_character = { set_relation_slave = { target = root } }
 	}
 	option = {
 		name = sbs_ntr_event.0232.b
@@ -642,8 +640,6 @@ sbs_ntr_event.0232 = {
 		add_trait = disinherited
 		add_trait = denounced
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
-		set_relation_slave_owner = { target =  scope:ntr_character }
-		scope:ntr_character = { set_relation_slave = { target = root } }
 	}
 	option = {
 		name = sbs_ntr_event.0232.c

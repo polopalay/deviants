@@ -1708,7 +1708,7 @@ sbs_slavery_event.2210 = {
 		custom_tooltip = sbs_slavery_event.2210.a.tt
 		random_living_character = {
 			limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 		}
 		if = {
 			limit = { current_weight > -20 }
@@ -1798,7 +1798,7 @@ sbs_slavery_event.3000 = {
 		animation = shame
 		outfit_tags = { no_clothes }
 	}
-	left_portrait = {
+	right_portrait = {
 		character = scope:owner2
 		animation = shock
 	}
@@ -1901,6 +1901,7 @@ sbs_slavery_event.5000 = {
 		ai_chance = { base = 20 }
 		name = sbs_slavery_event.5000.a
 		custom_tooltip = sbs_slavery_event.5000.a.tt
+		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 	}
 	option = {
 		name = sbs_slavery_event.5000.b
@@ -1980,7 +1981,7 @@ sbs_slavery_event.5200 = {
 	}
 }
 
-sbs_slavery_event.5200 = {
+sbs_slavery_event.5300 = {
 	type = character_event
 	title = sbs_slavery_event.5200.t
 	desc = sbs_slavery_event.5200.desc

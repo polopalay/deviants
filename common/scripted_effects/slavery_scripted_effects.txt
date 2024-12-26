@@ -96,20 +96,11 @@
 			add_courtier = scope:new_slave
 		}
 	}
-	if = {
-		limit = { 
-			OR = {
-				has_game_rule = carn_slavery_content_enabled
-				has_game_rule = carn_slavery_content_require_acceptance
-				has_game_rule = carn_slavery_content_consensual_only
-			}
-		}
-		scope:new_owner = {
-			set_relation_slave = { target = scope:new_slave }
-		}
-		scope:slave = {
-			set_relation_slave_owner = { target = scope:new_owner }
-		}
+	scope:new_owner = {
+		set_relation_slave = { target = scope:new_slave }
+	}
+	scope:slave = {
+		set_relation_slave_owner = { target = scope:new_owner }
 	}
 }
 
@@ -123,27 +114,18 @@ carn_buy_slave_effect = {
 		add_courtier = scope:slave
 	}
 
-	if = {
-		limit = { 
-			OR = {
-				has_game_rule = carn_slavery_content_enabled
-				has_game_rule = carn_slavery_content_require_acceptance
-				has_game_rule = carn_slavery_content_consensual_only
-			}
+	scope:slave = {
+		every_relation = {
+			type = slave_owner
+			remove_relation_slave = scope:slave
+			scope:slave = { remove_relation_slave_owner = prev }
 		}
-		scope:slave = {
-			every_relation = {
-				type = slave_owner
-				remove_relation_slave = scope:slave
-				scope:slave = { remove_relation_slave_owner = prev }
-			}
-		}
-		scope:slave = {
-			set_relation_slave_owner = { target = scope:buyer }
-		}
-		scope:buyer = {
-			set_relation_slave = { target = scope:slave }
-		}
+	}
+	scope:slave = {
+		set_relation_slave_owner = { target = scope:buyer }
+	}
+	scope:buyer = {
+		set_relation_slave = { target = scope:slave }
 	}
 }
 
@@ -224,20 +206,11 @@ carn_free_slave_effect = {
 		remove_character_modifier = forced_labor
 		add_trait = former_slave
 	}
-	if = {
-		limit = { 
-			OR = {
-				has_game_rule = carn_slavery_content_enabled
-				has_game_rule = carn_slavery_content_require_acceptance
-				has_game_rule = carn_slavery_content_consensual_only
-			}
-		}
-		scope:slave = {
-			every_relation = {
-				type = slave_owner
-				remove_relation_slave = scope:slave
-				scope:slave = { remove_relation_slave_owner = prev }
-			}
+	scope:slave = {
+		every_relation = {
+			type = slave_owner
+			remove_relation_slave = scope:slave
+			scope:slave = { remove_relation_slave_owner = prev }
 		}
 	}
 }

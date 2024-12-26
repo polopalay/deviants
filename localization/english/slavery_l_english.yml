@@ -36,3 +36,13 @@
   enslave_war_victory_desc: "All female [courtier|E] of [defender.GetName] will be [imprisoned|E] by [attacker.GetName]"
   enslave_war_white_peace_desc: "The war is fruitless"
   enslave_war_defeat_desc: "[attacker.GetName] must pay [defender.GetName] a war reparations"
+
+  resize_slaves: "Resize Slaves"
+  resize_slaves.desc: "Make all the masterless slaves your slaves"
+  resize_slaves.t: "Resize"
+  resize_slaves.c: "They are just around here somewhere"
+
+  recruit_slaves: "Recruit slaves"
+  recruit_slaves.desc: "There are slaves who have run away from their masters and are hiding around here, it is not against the law to capture them."
+  recruit_slaves.t: "Search"
+  recruit_slaves.c: "They are just around here somewhere"

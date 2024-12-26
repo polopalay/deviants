@@ -245,6 +245,36 @@ masturbate = {
 	ai_will_do = { base = 100 }
 }
 
+resize_slaves = {
+	picture = { reference = "gfx/interface/illustrations/decisions/deviant_courtesans.dds" }
+	desc = recruit_slaves.desc
+	confirm_text = recruit_slaves.c
+	selection_tooltip = recruit_slaves.t
+	decision_group_type = decisions
+	is_shown = {
+		is_ai = yes
+		is_ruler = yes
+		is_adult = yes
+		any_courtier = {
+			has_trait = slave
+			any_relation = { type = slave_owner count = 0 }
+		}
+	}
+	effect = {
+		every_courtier = {
+			limit = {
+				has_trait = slave
+				any_relation = { type = slave_owner count = 0 }
+			}
+			set_relation_slave_owner = { target = root }
+			root = { set_relation_slave = { target = prev } }
+		}
+	}
+	ai_potential = { always = yes }
+	ai_check_interval = 12
+	ai_will_do = { base = 100 }
+}
+
 recruit_slaves = {
 	picture = { reference = "gfx/interface/illustrations/decisions/deviant_courtesans.dds" }
 	desc = recruit_slaves.desc
