@@ -37,10 +37,10 @@ random_yearly_playable_pulse = {
 		is_landed = yes
 	}
 	random_events = {
-		50 = sbs_ntr_event.0100
+		25 = sbs_ntr_event.0100
 		10 = sbs_ntr_event.0210
 		10 = sbs_ntr_event.0220
-		50 = sbs_ntr_event.0230
+		25 = sbs_ntr_event.0230
 		10 = sbs_ntr_event.0240
 		10 = sbs_ntr_event.0250
 	}

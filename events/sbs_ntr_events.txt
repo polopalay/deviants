@@ -115,6 +115,7 @@ sbs_ntr_event.0111 = {
 			reason = lover_shared_deviancy
 			target = scope:ntr_character
 		}
+		add_secret = { type = secret_deviant }
 	}
 	option = {
 		name = sbs_ntr_event.0111.b
@@ -234,7 +235,10 @@ sbs_ntr_event.0210 = {
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
-		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+		OR = {
+			any_secret = { secret_type = secret_deviant }
+			has_trait = deviant
+		}
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -262,7 +266,10 @@ sbs_ntr_event.0220 = {
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
-		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+		OR = {
+			any_secret = { secret_type = secret_deviant }
+			has_trait = deviant
+		}
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -440,7 +447,6 @@ sbs_ntr_event.0226 = {
 		ai_chance = { base = 80 }
 		name = sbs_ntr_event.0226.a
 		custom_tooltip = sbs_ntr_event.0226.a.tt
-		add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 		add_secret = { type = secret_deviant }
 	}
 }
