@@ -104,6 +104,18 @@
 						}
 						trigger_event = sbs_slavery_event.0900
 					}
+					0 = {
+						modifier = {
+							scope:recipient = {
+								OR = {
+									any_relation = { type = lover is_adult = yes }
+									any_relation = { type = soulmate is_adult = yes }
+								}
+							}
+							add = 50
+						}
+						trigger_event = sbs_slavery_event.3000
+					}
 				}
 			}
 			else_if = {
@@ -127,18 +139,18 @@
 	ai_frequency = 1
 	ai_will_do = {
 		base = 0
-		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 100 }
-		modifier = { scope:recipient = { is_female = yes OR = { AND = { age >= 16 age <= 45 } is_immortal = yes } is_female = yes is_lowborn = no } add = 1000 }
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = 50 }
+		modifier = { scope:recipient = { is_ai = no } add = 50 }
+		modifier = {
+			scope:recipient = { is_female = yes OR = { AND = { age >= 16 age <= 45 } is_immortal = yes } is_female = yes is_lowborn = no }
+			scope:actor = { has_trait = seed_of_destruction } 
+			add = 1000
+		}
 		modifier = { scope:recipient = { has_relation_friend = scope:actor } add = -25 }
 		modifier = { scope:recipient = { has_relation_lover = scope:actor } add = -25 }
 		modifier = { scope:recipient = { has_relation_soulmate = scope:actor } add = -25 }
 		modifier = { scope:recipient = { has_trait = wounded_1 } add = -25 }
 		modifier = { scope:recipient = { has_trait = wounded_2 } add = -50 }
 		modifier = { scope:recipient = { has_trait = wounded_3 } add = -100 }
-		modifier = { add = -25 ai_vengefulness < very_low_positive_ai_value }
-		modifier = { add = -25 ai_vengefulness < low_positive_ai_value }
-		modifier = { add = 25 ai_vengefulness >= high_positive_ai_value }
-		modifier = { add = 25 ai_vengefulness >= very_high_positive_ai_value }
-		modifier = { add = 100 ai_vengefulness >= dominant_positive_ai_value }
 	}
 }

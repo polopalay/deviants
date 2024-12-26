@@ -3,7 +3,7 @@ sbs_demon = {
 	icon = demon.dds
 
 	immortal = yes
-	can_have_children = no
+	#can_have_children = no
 	no_prowess_loss_from_age = yes
 	add_commander_trait = yes
 	add_commander_trait = yes
@@ -30,6 +30,7 @@ sbs_demon = {
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
 
+	fertility = -0.99
 	general_opinion = 66
 	character_travel_speed = 66
 	character_travel_safety = 66
@@ -63,7 +64,7 @@ sbs_succubus = {
 	icon = succubus.dds
 
 	immortal = yes
-	can_have_children = no
+	#can_have_children = no
 	no_prowess_loss_from_age = yes
 	add_commander_trait = yes
 
@@ -91,6 +92,7 @@ sbs_succubus = {
 
 	opposites = { sbs_demon sbs_lesser_succubus seed_of_destruction chaste incapable }
 
+	fertility = -0.99
 	general_opinion = 5
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
@@ -203,7 +205,7 @@ sbs_lesser_succubus = {
 	icon = lesser_succubus.dds
 
 	immortal = yes
-	can_have_children = no
+	#can_have_children = no
 	no_prowess_loss_from_age = yes
 	add_commander_trait = yes
 
@@ -233,6 +235,7 @@ sbs_lesser_succubus = {
 		}
 	}
 
+	fertility = -0.99
 	monthly_lifestyle_xp_gain_mult = -1000
 	long_reign_bonus_mult = -1000
 	stewardship = 1

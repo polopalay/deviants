@@ -18,7 +18,13 @@ random_yearly_playable_pulse = {
 	trigger = {
 		is_adult = yes
 		is_female = yes
+		NOT = {
+			has_trait = sbs_succubus
+			has_trait = sbs_lesser_succubus
+			has_trait = sbs_demon
+		}
 		OR = {
+			has_trait = lustful
 			any_secret = { secret_type = secret_deviant }
 			has_trait = deviant
 			this = character:7757

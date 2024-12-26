@@ -160,13 +160,6 @@
   sbs_slavery_event.0800.b: "Please"
   sbs_slavery_event.0800.b.tt: "Please [owner2.GetFirstName] save you."
 
-  sbs_slavery_event.0800.t: "Neighbor"
-  sbs_slavery_event.0800.desc: "I was tied up and taken naked to the capital of the neighboring kingdom. [owner.GetFirstName] declared: \"I will allow the entire kingdom of [owner2.GetFirstName] to fuck this bitch as a testament to the friendship between the two kingdoms\""
-  sbs_slavery_event.0800.a: "Spread"
-  sbs_slavery_event.0800.a.tt: "I spread my legs wide while my hands spread my pussy open in invitation."
-  sbs_slavery_event.0800.b: "Please"
-  sbs_slavery_event.0800.b.tt: "Please [owner2.GetFirstName] save you."
-
   sbs_slavery_event.0900.t: "Enemy"
   sbs_slavery_event.0900.desc: "[owner.GetFirstName] tied me up in an iron cage with a naked appearance, my asshole and pussy were stuffed with two wooden cocks.\n\"I will let you meet someone very special, you dirty whore\"\n[owner.GetFirstName] brought me in front of [owner2.GetFirstName], forced me to kneel down and lick [owner2.GetFirstName]'s shoes\n\"I know this whore has offended you, today I allow you to own her, you can do anything with her\""
   sbs_slavery_event.0900.a: "Kneel down and beg"
@@ -210,3 +203,17 @@
   sbs_slavery_event.2300.desc: "Waking up in the stable, my body was scrubbed clean, my pussy lips and vagina were swollen. There were moments when I thought about myself in the past, a powerful noble, born into a famous family, now, I was spat upon by the whole family, had no choice to live as a slave and be humiliated by my master every day, was this trade-off worth it?"
   sbs_slavery_event.2300.a: "Masturbation"
   sbs_slavery_event.2300.a.tt: "My lustful nature still urges my hand to satisfy itself."
+
+  sbs_slavery_event.3000.t: "My lover"
+  sbs_slavery_event.3000.desc: "xxx ordered the soldiers to pour a bunch of aphrodisiac on me the day before, and ordered that nothing should touch my pussy. The pussy that hadn't been fucked all night was extremely hungry, it was spread open, waiting for the cocks to come and fill it. I was brought before yyy in a naked state.\n\"yyy is this the person you always loved and cherished, she's just a horny whore who's ready to fuck any cock that comes before her, whore, spread your legs to show your lover how slutty you are\""
+  sbs_slavery_event.3000.a: "Cock, cock"
+  sbs_slavery_event.3000.a.tt: "I spread my legs open, waiting for the big, round cocks to penetrate my pussy"
+  sbs_slavery_event.3000.b: "Run away"
+  sbs_slavery_event.3000.b.tt: "Even though I'm a whore, yyy is the last bit of self-respect left in me"
+
+  sbs_slavery_event.4000.t: "Ritual completed"
+  sbs_slavery_event.4000.desc: "ccc I've completed the ritual and become a real demon, you've done a great job as a birthing machine and a reservoir of my semen. I give you the choice to either continue being an immortal horny whore, or free yourself from this life of slavery and become a succubus, my loyal servant."
+  sbs_slavery_event.4000.a: "I am just a horny whore"
+  sbs_slavery_event.4000.a.tt: "I don't want to escape this life, this is my dream"
+  sbs_slavery_event.4000.b: "Free me"
+  sbs_slavery_event.4000.b.tt: "Free me from this life of slavery, I want to return to normal life"

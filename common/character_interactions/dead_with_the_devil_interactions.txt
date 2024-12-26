@@ -599,7 +599,7 @@
 	ai_accept = {
 		base = {
 			value = 0
-			subtract = scope:succubus_cost_value
+			subtract = scope:actor.succubus_cost_value
 			multiply = 2
 		}
 		opinion_modifier = {
