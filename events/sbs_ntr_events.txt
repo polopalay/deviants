@@ -44,6 +44,7 @@ sbs_ntr_event.0100 = {
 	option = {
 		name = sbs_ntr_event.0100.c
 		custom_tooltip = sbs_ntr_event.0100.c.tt
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -88,6 +89,8 @@ sbs_ntr_event.0110 = {
 	option = {
 		name = sbs_ntr_event.0110.b
 		custom_tooltip = sbs_ntr_event.0110.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -119,6 +122,7 @@ sbs_ntr_event.0111 = {
 	option = {
 		name = sbs_ntr_event.0111.b
 		custom_tooltip = sbs_ntr_event.0111.b.tt
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -158,6 +162,8 @@ sbs_ntr_event.0120 = {
 	option = {
 		name = sbs_ntr_event.0120.c
 		custom_tooltip = sbs_ntr_event.0120.c.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -195,6 +201,8 @@ sbs_ntr_event.0121 = {
 		ai_chance = { base = 80 }
 		name = sbs_ntr_event.0121.b
 		custom_tooltip = sbs_ntr_event.0121.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -223,6 +231,8 @@ sbs_ntr_event.0122 = {
 	option = {
 		name = sbs_ntr_event.0122.b
 		custom_tooltip = sbs_ntr_event.0122.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -261,6 +271,8 @@ sbs_ntr_event.0210 = {
 	option = {
 		name = sbs_ntr_event.0210.b
 		custom_tooltip = sbs_ntr_event.0210.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -292,6 +304,8 @@ sbs_ntr_event.0220 = {
 	option = {
 		name = sbs_ntr_event.0220.b
 		custom_tooltip = sbs_ntr_event.0220.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -320,6 +334,8 @@ sbs_ntr_event.0221 = {
 	option = {
 		name = sbs_ntr_event.0221.b
 		custom_tooltip = sbs_ntr_event.0221.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -347,6 +363,8 @@ sbs_ntr_event.0222 = {
 	option = {
 		name = sbs_ntr_event.0222.b
 		custom_tooltip = sbs_ntr_event.0222.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -378,6 +396,8 @@ sbs_ntr_event.0223 = {
 	option = {
 		name = sbs_ntr_event.0223.b
 		custom_tooltip = sbs_ntr_event.0223.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -405,6 +425,8 @@ sbs_ntr_event.0224 = {
 	option = {
 		name = sbs_ntr_event.0224.b
 		custom_tooltip = sbs_ntr_event.0224.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -432,6 +454,8 @@ sbs_ntr_event.0225 = {
 	option = {
 		name = sbs_ntr_event.0225.b
 		custom_tooltip = sbs_ntr_event.0225.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -486,6 +510,8 @@ sbs_ntr_event.0230 = {
 	option = {
 		name = sbs_ntr_event.0230.b
 		custom_tooltip = sbs_ntr_event.0230.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -542,6 +568,8 @@ sbs_ntr_event.0231 = {
 	option = {
 		name = sbs_ntr_event.0231.b
 		custom_tooltip = sbs_ntr_event.0231.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -734,6 +762,8 @@ sbs_ntr_event.0240 = {
 	option = {
 		name = sbs_ntr_event.0240.b
 		custom_tooltip = sbs_ntr_event.0240.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 
@@ -765,6 +795,8 @@ sbs_ntr_event.0250 = {
 	option = {
 		name = sbs_ntr_event.0250.b
 		custom_tooltip = sbs_ntr_event.0250.b.tt
+		remove_relation_lover = scope:ntr_character
+		add_character_flag = sbs_faithful_wife	
 	}
 }
 

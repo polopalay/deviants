@@ -1,14 +1,16 @@
 quarterly_playable_pulse = {
 	on_actions = {
+		random_ntr_on_action
 		sbs_devil_on_action
 		slavery_on_action
 	}
 }
 
-random_yearly_playable_pulse = {
+random_ntr_on_action = {
 	trigger = {
 		is_adult = yes
 		is_female = yes
+		NOT = { has_character_flag = sbs_faithful_wife }
 		NOT = {
 			has_trait = sbs_succubus
 			has_trait = sbs_lesser_succubus

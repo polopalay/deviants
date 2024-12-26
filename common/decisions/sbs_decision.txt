@@ -103,6 +103,10 @@ become_demon = {
 			}
 		}
 		if = {
+			limit = { NOT = { is_immortal = yes } }
+			set_immortal_age = 18
+		}
+		if = {
 			limit = { has_trait = seed_of_destruction }
 			remove_trait = seed_of_destruction
 		}
@@ -119,7 +123,6 @@ become_demon = {
 			remove_trait = deviant_blood
 		}
 		add_trait = sbs_demon
-		set_immortal_age = 18
 
 		if = {
 			limit = {
