@@ -1547,7 +1547,11 @@ sbs_slavery_event.0900 = {
 			had_sex_with_effect = { CHARACTER = scope:owner2 PREGNANCY_CHANCE = pregnancy_chance }
 		}
 		else = {
-			if = {
+			if =  {
+				limit = { any_secret = { NOT = { is_known_by = scope:owner2 } } }
+				random_secret = { limit = { NOT = { is_known_by = scope:owner2 } } reveal_to = scope:owner2 }
+			}
+			else_if = {
 				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
 				add_trait = wounded_1
 			}

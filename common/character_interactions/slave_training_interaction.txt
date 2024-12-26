@@ -68,7 +68,7 @@
 					}
 					5 = { trigger_event = sbs_slavery_event.0300 }
 					0 = {
-						modifier = { exists = scope:actor.liege NOT = { scope:actor.liege = scope:actor } add = 5 }
+						modifier = { scope:actor.liege = { is_attracted_to_gender_of = scope:recipient } NOT = { scope:actor.liege = scope:actor } add = 5 }
 						trigger_event = sbs_slavery_event.0400
 					}
 					0 = {
