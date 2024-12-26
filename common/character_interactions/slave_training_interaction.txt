@@ -66,16 +66,20 @@
 						}
 						trigger_event = sbs_slavery_event.0200
 					}
-					10 = { trigger_event = sbs_slavery_event.0300 }
+					5 = { trigger_event = sbs_slavery_event.0300 }
 					0 = {
 						modifier = { exists = scope:actor.liege NOT = { scope:actor.liege = scope:actor } add = 5 }
 						trigger_event = sbs_slavery_event.0400
 					}
+					5 = {
+						scope:actor = { is_landed = yes }
+						trigger_event = sbs_slavery_event.0800
+					}
 					0 = {
-						modifier = { scope:recipient = { any_secret = { secret_type = secret_prostitute } } add = 25 }
+						modifier = { scope:recipient = { any_secret = { secret_type = secret_prostitute } } add = 100 }
 						trigger_event = sbs_slavery_event.0500
 					}
-					10 = { trigger_event = sbs_slavery_event.0600 }
+					5 = { trigger_event = sbs_slavery_event.0600 }
 					0 = {
 						modifier = {
 							scope:recipient = {
@@ -84,13 +88,9 @@
 									any_relation = { type = best_friend is_adult = yes is_attracted_to_gender_of = scope:recipient }
 								}
 							}
-							add = 10
+							add = 80
 						}
 						trigger_event = sbs_slavery_event.0700
-					}
-					10 = {
-						scope:actor = { is_landed = yes }
-						trigger_event = sbs_slavery_event.0800
 					}
 					0 = {
 						modifier = {
@@ -100,7 +100,7 @@
 									any_relation = { type = nemesis is_adult = yes }
 								}
 							}
-							add = 50
+							add = 100
 						}
 						trigger_event = sbs_slavery_event.0900
 					}
@@ -112,9 +112,37 @@
 									any_relation = { type = soulmate is_adult = yes }
 								}
 							}
-							add = 50
+							add = 100
 						}
 						trigger_event = sbs_slavery_event.3000
+					}
+					0 = {
+						modifier = {
+							scope:recipient = { NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier } }
+							add = 8
+						}
+						trigger_event = sbs_slavery_event.5000
+					}
+					0 = {
+						modifier = {
+							scope:recipient = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
+							add = 5
+						}
+						trigger_event = sbs_slavery_event.5100
+					}
+					0 = {
+						modifier = {
+							scope:actor = { any_prisoner = { NOT = { this = scope:recipient } is_adult = yes is_attracted_to_gender_of = scope:recipient } }
+							add = 5
+						}
+						trigger_event = sbs_slavery_event.5200
+					}
+					0 = {
+						modifier = {
+							scope:actor = { any_courtier = { NOT = { this = scope:recipient } is_adult = yes is_female = no has_trait = slave } }
+							add = 5
+						}
+						trigger_event = sbs_slavery_event.5300
 					}
 				}
 			}

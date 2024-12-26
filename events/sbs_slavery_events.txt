@@ -274,10 +274,7 @@ sbs_slavery_event.0116 = {
 		name = sbs_slavery_event.0116.a
 		custom_tooltip = sbs_slavery_event.0116.a.tt
 		add_stress = minor_stress_loss
-		had_sex_with_effect = {
-			CHARACTER = scope:owner
-			PREGNANCY_CHANCE = pregnancy_chance
-		}
+		had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
 	}
 }
 
@@ -1711,7 +1708,7 @@ sbs_slavery_event.2210 = {
 		custom_tooltip = sbs_slavery_event.2210.a.tt
 		random_living_character = {
 			limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
-			had_sex_with_effect = { CHARACTER = root PREGNANCY_CHANCE = pregnancy_chance }
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance
 		}
 		if = {
 			limit = { current_weight > -20 }
@@ -1881,6 +1878,130 @@ sbs_slavery_event.4000 = {
 		create_landless_adventurer_title_effect = {
 			REASON = flag:voluntary
 			FLAVOR_CHAR = root
+		}
+	}
+}
+
+sbs_slavery_event.5000 = {
+	type = character_event
+	title = sbs_slavery_event.5000.t
+	desc = sbs_slavery_event.5000.desc
+	theme = secret
+	override_background = { reference = army_camp }
+	right_portrait = {
+		character = scope:owner
+		animation = scheme
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.5000.a
+		custom_tooltip = sbs_slavery_event.5000.a.tt
+	}
+	option = {
+		name = sbs_slavery_event.5000.b
+		custom_tooltip = sbs_slavery_event.5000.b.tt
+		duel = {
+			skill = diplomacy
+			target = scope:owner
+			# if win
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.5000.bw.tt }
+			}
+			# if lose
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = { text = sbs_slavery_event.5000.bl.tt }
+				add_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+			}
+		}
+	}
+}
+
+sbs_slavery_event.5100 = {
+	type = character_event
+	title = sbs_slavery_event.5100.t
+	desc = sbs_slavery_event.5100.desc
+	theme = secret
+	override_background = { reference = throne_room }
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.5100.a
+		custom_tooltip = sbs_slavery_event.5100.a.tt
+		remove_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
+	}
+}
+
+sbs_slavery_event.5200 = {
+	type = character_event
+	title = sbs_slavery_event.5200.t
+	desc = sbs_slavery_event.5200.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.4000.a
+		custom_tooltip = sbs_slavery_event.4000.a.tt
+		every_prisoner = {
+			limit = { is_adult = yes is_attracted_to_gender_of = root }
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+	}
+}
+
+sbs_slavery_event.5200 = {
+	type = character_event
+	title = sbs_slavery_event.5200.t
+	desc = sbs_slavery_event.5200.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.4000.a
+		custom_tooltip = sbs_slavery_event.4000.a.tt
+		every_courtier = {
+			limit = { has_trait = slave is_adult = yes is_female = no }
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
 		}
 	}
 }
