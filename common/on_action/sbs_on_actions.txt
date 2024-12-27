@@ -2,7 +2,7 @@ quarterly_playable_pulse = {
 	on_actions = {
 		random_ntr_on_action
 		sbs_devil_on_action
-		slavery_on_action
+		hidden_effect_on_action
 	}
 }
 
@@ -31,13 +31,14 @@ random_ntr_on_action = {
 	}
 }
 
-slavery_on_action = {
+hidden_effect_on_action = {
 	events = {
 		sbs_slavery_event.9995
 		sbs_slavery_event.9996
 		sbs_slavery_event.9997
 		sbs_slavery_event.9998
 		sbs_slavery_event.9999
+		sbs_event.9999
 	}
 }
 

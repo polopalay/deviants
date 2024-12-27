@@ -28,6 +28,7 @@ sbs_ntr_event.0100 = {
 		ai_chance = {
 			base = 10
 			modifier = { has_trait = immortal add = 1000 }
+			modifier = { this = character:7757 add = 1000 }
 			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
 			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 100 }
 		}

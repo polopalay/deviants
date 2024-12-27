@@ -359,7 +359,6 @@ sbs_devils_gift_interaction = {
 							father = { has_trait = sbs_demon }
 							mother = { has_trait = sbs_demon }
 						}
-						is_female = no
 						add = 19
 					}
 					add_character_modifier = { modifier = succubus_generals years = 10 }

@@ -3,7 +3,7 @@
 	desc = slave_training_interaction.desc
 	common_interaction = no
 	cooldown = { months = 6 }
-	cooldown_against_recipient = { months = 12 }
+	cooldown_against_recipient = { months = 6 }
 	is_shown = {
 		scope:actor = {
 			is_adult = yes
@@ -47,7 +47,7 @@
 								has_trait = leper
 								has_trait = disfigured
 							}
-							add = 40
+							add = 90
 						}
 						modifier = {
 							OR = {
@@ -58,7 +58,7 @@
 								has_trait = cancer
 								has_trait = one_legged
 							}
-							add = 15
+							add = 40
 						}
 						trigger_event = sbs_slavery_event.0200
 					}

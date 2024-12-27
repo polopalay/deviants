@@ -267,7 +267,6 @@ satanic_religion = {
 			doctrine = tenet_communal_possessions
 			doctrine = tenet_tax_nonbelievers
 
-			doctrine = doctrine_concubines
 			doctrine = doctrine_funeral_cremation
 		}
 		asmodeus = {

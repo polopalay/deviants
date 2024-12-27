@@ -733,19 +733,24 @@ sbs_slavery_event.0200 = {
 					change_current_weight = 10
 				}
 				1 = {
-					modifier = { OR = { has_trait = weak has_trait = strong } add = -1 }
-					add_trait = strong
-				}
-				1 = {
-					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
+					modifier = { has_trait = fecund add = -1 }
+					remove_trait = infertile
 					add_trait = fecund
 				}
 				1 = {
-					modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -1 }
+					modifier = { has_trait = dull add = -1 }
+					remove_trait shrewd
+					remove_trait intellect_good_1
+					remove_trait intellect_good_2
+					remove_trait intellect_good_3
 					add_trait = dull
 				}
 				1 = {
-					modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -1 }
+					modifier = { has_trait = weak add = -1 }
+					remove_trait = strong
+					remove_trait = physique_good_1
+					remove_trait = physique_good_2
+					remove_trait = physique_good_3
 					add_trait = weak
 				}
 				3 = {
@@ -2146,6 +2151,30 @@ sbs_slavery_event.6110 = {
 		custom_tooltip = sbs_slavery_event.6110.a.tt
 		scope:owner2 = {
 			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		if = {
+			limit = { any_secret = { NOT = { is_known_by = scope:owner } } } 
+			random_secret = { limit = { NOT = { is_known_by = scope:owner } } reveal_to = scope:owner }
+		}
+		else_if = {
+				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
+				add_trait = wounded_1
+		}
+		else_if = {
+			limit = { NOT = { has_trait = wounded_2 has_trait = wounded_3 } }
+			remove_trait = wounded_1
+			add_trait = wounded_2
+		}
+		else_if = {
+			limit = { NOT = { has_trait = wounded_3 } }
+			remove_trait = wounded_2
+			add_trait = wounded_3
+		}
+		else = {
+			death = {
+				death_reason = death_execution
+				killer = scope:owner
+			}
 		}
 		trigger_event = sbs_slavery_event.6110
 	}
