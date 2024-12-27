@@ -69,16 +69,16 @@ succubus_zombie = {
 		}
 	}
 
-	pursuit = 4
-	screen = 4
-	damage = 4
-	toughness = 4
+	pursuit = 10
+	screen = 10
+	damage = 10
+	toughness = 10
 
 	counters = {
 		pikemen = 1
 	}
 
-	stack = 100
+	stack = 1000
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
@@ -95,16 +95,16 @@ succubus_skeleton = {
 		}
 	}
 
-	pursuit = 8
+	pursuit = 20
 	screen = 0
-	damage = 8
+	damage = 20
 	toughness = 0
 
 	counters = {
 		pikemen = 1
 	}
 
-	stack = 100
+	stack = 1000
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
