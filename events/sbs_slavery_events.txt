@@ -328,7 +328,7 @@ sbs_slavery_event.0118 = {
 		custom_tooltip = sbs_slavery_event.0118.a.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:owner
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
 }
@@ -358,7 +358,7 @@ sbs_slavery_event.0119 = {
 		ai_chance = { base = 80 }
 		name = sbs_slavery_event.0119.a
 		custom_tooltip = sbs_slavery_event.0119.a.tt
-		had_sex_with_effect = { CHARACTER = scope:owner2 PREGNANCY_CHANCE = seduce_pregnancy_chance }
+		had_sex_with_effect = { CHARACTER = scope:owner2 PREGNANCY_CHANCE = pregnancy_chance }
 	}
 }
 
@@ -433,7 +433,7 @@ sbs_slavery_event.0121 = {
 				custom_tooltip = { text = sbs_slavery_event.0121.bl.tt }
 				had_sex_with_effect = {
 					CHARACTER = scope:owner
-					PREGNANCY_CHANCE = seduce_pregnancy_chance
+					PREGNANCY_CHANCE = pregnancy_chance
 				}
 			}
 		}
@@ -2059,7 +2059,163 @@ sbs_slavery_event.6000 = {
 	}
 }
 
-sbs_slavery_event.8888 = {
+sbs_slavery_event.6100 = {
+	type = character_event
+	title = sbs_slavery_event.6100.t
+	desc = sbs_slavery_event.6100.desc
+	theme = secret
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.6100.a
+		custom_tooltip = sbs_slavery_event.6100.a.tt
+		if = {
+			limit = { any_secret = { NOT = { is_known_by = scope:owner } } } 
+			random_secret = { limit = { NOT = { is_known_by = scope:owner } } reveal_to = scope:owner }
+		}
+		else_if = {
+				limit = { NOT = { has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 } }
+				add_trait = wounded_1
+		}
+		else_if = {
+			limit = { NOT = { has_trait = wounded_2 has_trait = wounded_3 } }
+			remove_trait = wounded_1
+			add_trait = wounded_2
+		}
+		else_if = {
+			limit = { NOT = { has_trait = wounded_3 } }
+			remove_trait = wounded_2
+			add_trait = wounded_3
+		}
+		scope:owner = {
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+		every_scheme = {
+			limit = {
+				scheme_type = murder 
+				scheme_target_character = scope:owner
+			}
+			end_scheme = yes
+		}
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.6100.b
+		custom_tooltip = sbs_slavery_event.6100.b.tt
+		trigger_event = sbs_slavery_event.6110
+	}
+}
+
+sbs_slavery_event.6110 = {
+	type = character_event
+	title = sbs_slavery_event.6110.t
+	desc = sbs_slavery_event.6110.desc
+	theme = secret
+	immediate = {
+		scope:owner = {
+			random_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } }
+				save_scope_as = owner2
+			}
+		}
+	}
+	override_background = { reference = dungeon }
+	right_portrait = {
+		character = scope:owner
+		animation = thinking
+	}
+	left_portrait = {
+		character = root
+		animation = prisondungeon
+		outfit_tags = { no_clothes }
+	}
+	option = {
+		name = sbs_slavery_event.6110.a
+		custom_tooltip = sbs_slavery_event.6110.a.tt
+		scope:owner2 = {
+			prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+		}
+		trigger_event = sbs_slavery_event.6110
+	}
+	option = {
+		ai_chance = { base = 20 }
+		name = sbs_slavery_event.6110.b
+		custom_tooltip = sbs_slavery_event.6110.b.tt
+		scope:owner = {
+			every_courtier = {
+				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
+				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+			}
+		}
+		every_scheme = {
+			limit = {
+				scheme_type = murder 
+				scheme_target_character = scope:owner
+			}
+			end_scheme = yes
+		}
+	}
+}
+
+sbs_slavery_event.9995 = {
+	trigger = { is_ruler = yes has_trait = seed_of_destruction any_courtier = { has_trait = slave is_imprisoned_by = root is_immortal = yes is_female = yes } }
+	hidden = yes
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_trait = slave
+				is_imprisoned_by = root
+				is_immortal = yes
+				is_female = yes
+			}
+			release_from_prison = yes
+		}
+	}
+}
+
+sbs_slavery_event.9996 = {
+	trigger = { is_ruler = yes OR = { has_trait = slave any_relation = { type = slave_owner } } }
+	hidden = yes
+	immediate = {
+		every_relation = {
+			remove_relation_slave_owner = root
+			root = { remove_relation_slave = prev }
+		}
+		remove_trait = slave
+		add_trait = former_slave
+	}
+}
+
+sbs_slavery_event.9997 = {
+	trigger = { is_ruler = yes any_courtier = { has_trait = slave OR = { has_imprisonment_reason = root has_execute_reason = root has_banish_reason = root } } }
+	hidden = yes
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_trait = slave
+				OR = { has_imprisonment_reason = root has_execute_reason = root has_banish_reason = root }
+			}
+			save_scope_as = slave
+			root = { consume_imprisonment_reasons = scope:slave }
+			root = { consume_execute_reasons = scope:slave }
+			root = { consume_banish_reasons = scope:slave }
+		}
+	}
+}
+
+sbs_slavery_event.9998 = {
 	trigger = { is_ruler = yes any_courtier = { has_trait = slave any_relation = { type = slave_owner count = 0 } } }
 	hidden = yes
 	immediate = {

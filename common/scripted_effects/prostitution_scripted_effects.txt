@@ -27,7 +27,7 @@
 				random = { chance = $PREGNANCY_CHANCE$ make_pregnant = { father = scope:had_sex_root_character } }
 			}
 		}
-		add_character_modifier = { modifier = recently_had_sex years = 2 }
+		add_character_modifier = { modifier = recently_had_sex years = 1 }
 		if = {
 			limit = { has_trait = sbs_succubus }
 			random_list = {
@@ -47,7 +47,7 @@
 				limit = { is_female = yes }
 				random = { chance = 25 add_character_flag = { flag = pussy_cum months = 3 } }
 			}
-			add_character_modifier = { modifier = recently_had_sex years = 2 }
+			add_character_modifier = { modifier = recently_had_sex years = 1 }
 			add_trait_xp = { trait = lifestyle_prostitute value = 10 }
 			if = {
 				limit = { OR = { has_trait_xp = { trait = lifestyle_prostitute value < 50 } NOT = { has_trait = lifestyle_prostitute } } }

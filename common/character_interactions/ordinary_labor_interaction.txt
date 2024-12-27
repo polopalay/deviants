@@ -11,12 +11,6 @@
 	}
 	auto_accept = yes
 	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_trait = seed_of_destruction }
-				add_trait_xp = { trait = seed_of_destruction value = -5 }
-			}
-		}
 		scope:recipient = {
 			remove_character_modifier = forced_labor
 			add_opinion = { target = scope:actor modifier = ordinary_labor_opinion }

@@ -52,7 +52,6 @@ sbs_devils_curse_interaction = {
 						}
 						add = -1
 					}
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -64,7 +63,6 @@ sbs_devils_curse_interaction = {
 						NOT = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } }
 						add = -1
 					}
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -72,7 +70,6 @@ sbs_devils_curse_interaction = {
 					carn_enslave_effect = { SLAVE = scope:recipient OWNER = scope:actor DRAMA = yes }
 				}
 				3 = {
-					modifier = { has_trait = deviant_blood add = 2 }
 					modifier = { has_trait = seed_of_destruction add = 2 }
 					modifier = { has_trait = sbs_lesser_succubus add = 2 }
 					modifier = { has_trait = sbs_succubus add = 2 }
@@ -84,7 +81,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = depressed add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -93,7 +89,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = depressed add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -102,7 +97,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = lunatic add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -111,7 +105,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = lunatic add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -120,7 +113,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = possessed add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -129,7 +121,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = possessed add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -138,7 +129,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = ill add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -147,7 +137,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = pneumonic add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -156,7 +145,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = gout_ridden add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -165,7 +153,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = typhus add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -174,7 +161,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = consumption add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -183,7 +169,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = cancer add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -192,7 +177,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = great_pox add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -201,7 +185,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = smallpox add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -210,7 +193,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = bubonic_plague add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -219,7 +201,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = lovers_pox add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -228,7 +209,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = great_pox add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -237,7 +217,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = bubonic_plague add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -246,7 +225,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = measles add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -255,7 +233,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = dysentery add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -264,7 +241,6 @@ sbs_devils_curse_interaction = {
 				}
 				2 = {
 					modifier = { has_trait = ergotism add = -2 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -273,7 +249,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { has_trait = inbred add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -282,8 +257,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { OR = { has_trait = dull has_trait = intellect_good has_trait = shrewd } add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -292,8 +265,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { OR = { has_trait = weak has_trait = strong has_trait = physique_good } add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -302,8 +273,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -312,8 +281,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { OR = { has_trait = physique_good has_trait = spindly has_trait = physique_bad } add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -322,8 +289,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { OR = { has_trait = intellect_good has_trait = intellect_bad } add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }
@@ -332,8 +297,6 @@ sbs_devils_curse_interaction = {
 				}
 				1 = {
 					modifier = { OR = { has_trait = beauty_good  has_trait = beauty_bad } add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
-					modifier = { has_trait = deviant_blood add = -1 }
 					modifier = { has_trait = seed_of_destruction add = -1 }
 					modifier = { has_trait = sbs_lesser_succubus add = -1 }
 					modifier = { has_trait = sbs_succubus add = -1 }

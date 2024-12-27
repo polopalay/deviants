@@ -25,23 +25,32 @@ sbs_ntr_event.0100 = {
 		}
 	}
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = {
+			base = 10
+			modifier = { has_trait = immortal add = 1000 }
+			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
+			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 100 }
+		}
 		name = sbs_ntr_event.0100.a
 		custom_tooltip = sbs_ntr_event.0100.a.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		add_character_flag = { flag = pussy_cum months = 6 }
 		trigger_event = sbs_ntr_event.0110
 	}
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = {
+			base = 10
+			modifier = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier add = 100 }
+		}
 		name = sbs_ntr_event.0100.b
 		custom_tooltip = sbs_ntr_event.0100.b.tt
 		trigger_event = sbs_ntr_event.0120
 	}
 	option = {
+		ai_chance = { base = 80 }
 		name = sbs_ntr_event.0100.c
 		custom_tooltip = sbs_ntr_event.0100.c.tt
 		add_character_flag = sbs_faithful_wife	
@@ -70,15 +79,7 @@ sbs_ntr_event.0110 = {
 		custom_tooltip = sbs_ntr_event.0110.a.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
-		}
-		had_sex_with_effect = {
-			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
-		}
-		had_sex_with_effect = {
-			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		add_character_flag = { flag = pussy_cum months = 6 }
 		add_character_flag = { flag = body_cum months = 6 }
@@ -148,7 +149,7 @@ sbs_ntr_event.0120 = {
 		custom_tooltip = sbs_ntr_event.0120.a.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		add_character_flag = { flag = pussy_cum months = 6 }
 		trigger_event = sbs_ntr_event.0121
@@ -241,21 +242,11 @@ sbs_ntr_event.0210 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0210.t
 	desc = sbs_ntr_event.0210.desc
+	cooldown = { years = 2 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
-		OR = {
-			AND = {
-				OR = {
-					any_secret = { secret_type = secret_deviant }
-					has_trait = deviant
-				}
-				has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
-			}
-			root = character:7757
-			root = character:223522
-			root = character:466517
-		}
+		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -281,14 +272,11 @@ sbs_ntr_event.0220 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0220.t
 	desc = sbs_ntr_event.0220.desc
-	cooldown = { years = 5 }
+	cooldown = { years = 2 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
-		OR = {
-			any_secret = { secret_type = secret_deviant }
-			has_trait = deviant
-		}
+		NOT = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier }
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -313,7 +301,7 @@ sbs_ntr_event.0221 = {
 	type = character_event
 	title = sbs_ntr_event.0221.t
 	desc = sbs_ntr_event.0221.desc
-	cooldown = { years = 5 }
+	cooldown = { years = 2 }
 	theme = friendly
 	override_background = { reference = garden }
 	right_portrait = {
@@ -390,7 +378,7 @@ sbs_ntr_event.0223 = {
 		trigger_event = sbs_ntr_event.0224
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
 	option = {
@@ -495,6 +483,11 @@ sbs_ntr_event.0230 = {
 			any_secret = { secret_type = secret_deviant }
 			has_trait = deviant
 		}
+		OR = {
+			any_secret = { secret_type = secret_prostitute }
+			has_trait = lifestyle_prostitute
+		}
+		has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -594,7 +587,7 @@ sbs_ntr_event.0232 = {
 		custom_tooltip = sbs_ntr_event.0232.a.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		remove_relation_lover = scope:ntr_character
 		hidden_effect = {
@@ -638,7 +631,7 @@ sbs_ntr_event.0232 = {
 		custom_tooltip = sbs_ntr_event.0232.b.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		mind_break_personality = yes
 		scope:ntr_character = {
@@ -681,7 +674,7 @@ sbs_ntr_event.0232 = {
 		custom_tooltip = sbs_ntr_event.0232.c.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		mind_break_personality = yes
 		hidden_effect = {
@@ -732,10 +725,14 @@ sbs_ntr_event.0240 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0240.t
 	desc = sbs_ntr_event.0240.desc
-	cooldown = { years = 5 }
+	cooldown = { years = 2 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
+		NOR = {
+			has_trait = lifestyle_prostitute
+			any_secret = { secret_type = secret_prostitute }
+		}
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -753,7 +750,7 @@ sbs_ntr_event.0240 = {
 		add_secret = { type = secret_prostitute }
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character_2
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 		scope:ntr_character_2 = {
 			pay_short_term_gold = { target = scope:ntr_character gold = root.prostitute_price_value }
@@ -772,10 +769,14 @@ sbs_ntr_event.0250 = {
 	sender = scope:ntr_character
 	opening = sbs_ntr_event.0250.t
 	desc = sbs_ntr_event.0250.desc
-	cooldown = { years = 5 }
+	cooldown = { years = 2 }
 	trigger = {
 		exists = primary_spouse.father
 		has_relation_lover = primary_spouse.father
+		NOR = {
+			has_trait = deviant
+			any_secret = { secret_type = secret_deviant }
+		}
 	}
 	immediate = {
 		primary_spouse.father = {
@@ -789,7 +790,7 @@ sbs_ntr_event.0250 = {
 		add_secret = { type = secret_deviant }
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = seduce_pregnancy_chance
+			PREGNANCY_CHANCE = pregnancy_chance
 		}
 	}
 	option = {

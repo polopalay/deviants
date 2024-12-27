@@ -14,12 +14,6 @@
 	}
 	auto_accept = yes
 	on_accept = {
-		scope:actor = {
-			if = {
-				limit = { has_trait = seed_of_destruction }
-				add_trait_xp = { trait = seed_of_destruction value = 1 }
-			}
-		}
 		scope:recipient = {
 			pay_short_term_gold = { target = scope:actor gold = gold }
 			add_opinion = { target = scope:actor modifier = extortion_opinion }

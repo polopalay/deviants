@@ -248,3 +248,17 @@
   sbs_slavery_event.6000.a.tt: "Yes, just semen is enough, you don't need anything else"
   sbs_slavery_event.6000.b: "Master's mercy"
   sbs_slavery_event.6000.b.tt: "Serve the soldiers well"
+
+  sbs_slavery_event.6100.t: "Betrayal bitch"
+  sbs_slavery_event.6100.desc: "I was imprisoned by [owner.GetFirstName] for plotting to assassinate [owner.GetFirstName]. He kept whipping me.\n\"This bitch seems to not know your place, do you think I don't notice your tricks, I am your master, you are just a slave bitch, the only thing you should do is satisfy the cocks\""
+  sbs_slavery_event.6100.a: "Beg for mercy"
+  sbs_slavery_event.6100.a.tt: "I am just a bitch, please punish me"
+  sbs_slavery_event.6100.b: "Swear"
+  sbs_slavery_event.6100.b.tt: "You bastard, because of you I lost everything, family, relatives, friends"
+
+  sbs_slavery_event.6110.t: "Punishment"
+  sbs_slavery_event.6110.desc: "[owner.GetFirstName] put me in prison\n\"Let this bitch know her place, you are just a slut's reservoir of this kingdom, you were born a slut, grew up in sluthood, your best job is satisfying cocks, I only satisfy your lust\""
+  sbs_slavery_event.6110.a: "Silence"
+  sbs_slavery_event.6110.a.tt: "[owner.GetFirstName] will punish you until you understand your position as a whore"
+  sbs_slavery_event.6110.b: "Admit I'm Just a Whore"
+  sbs_slavery_event.6110.b.tt: "I'm Just a Slutty Whore, It's All My Sluttiness, Punish This Whore With Cocks"

@@ -214,10 +214,6 @@
 				}
 				consume_imprisonment_reasons = scope:recipient
 			}
-			if = {
-				limit = { has_trait = seed_of_destruction }
-				add_trait_xp = { trait = seed_of_destruction value = 1 }
-			}
 		}
 	}
 

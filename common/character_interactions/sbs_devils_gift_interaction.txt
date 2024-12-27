@@ -16,7 +16,7 @@ sbs_devils_gift_interaction = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait_xp = { trait = sbs_succubus track = daring value >= 25 }
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 10 }
 			}
 		}
 	}
@@ -24,28 +24,42 @@ sbs_devils_gift_interaction = {
 		scope:actor = {
 			if = {
 				limit = { has_trait = sbs_succubus }
-				add_trait_xp = { trait = sbs_succubus track = daring value = -25 }
+				add_trait_xp = { trait = sbs_succubus track = daring value = -10 }
 			}
 		}
 		scope:recipient = {
 			random_list = {
 				0 = {
-					modifier = { has_trait = deviant_blood is_female = no add = 50 }
-					modifier = { has_trait = seed_of_destruction add = -50 }
-					modifier = { has_trait = sbs_lesser_succubus add = -50 }
-					modifier = { has_trait = sbs_succubus add = -50 }
-					modifier = { has_trait = sbs_demon add = -50 }
-					remove_trait = deviant_blood
+					modifier = {
+						OR = {
+							father = { has_trait = sbs_demon }
+							mother = { has_trait = sbs_demon }
+							mother = { has_trait = sbs_succubus }
+						}
+						is_female = no
+						add = 100
+					}
+					modifier = { has_trait = seed_of_destruction add = -100 }
+					modifier = { has_trait = sbs_lesser_succubus add = -100 }
+					modifier = { has_trait = sbs_succubus add = -100 }
+					modifier = { has_trait = sbs_demon add = -100 }
 					add_trait = seed_of_destruction
 					set_immortal_age = 18
 				}
 				0 = {
-					modifier = { has_trait = deviant_blood is_female = yes add = 50 }
-					modifier = { has_trait = seed_of_destruction add = -50 }
-					modifier = { has_trait = sbs_lesser_succubus add = -50 }
-					modifier = { has_trait = sbs_succubus add = -50 }
-					modifier = { has_trait = sbs_demon add = -50 }
-					remove_trait = deviant_blood
+					modifier = {
+						OR = {
+							father = { has_trait = sbs_demon }
+							mother = { has_trait = sbs_demon }
+							mother = { has_trait = sbs_succubus }
+						}
+						is_female = no
+						add = 100
+					}
+					modifier = { has_trait = seed_of_destruction add = -100 }
+					modifier = { has_trait = sbs_lesser_succubus add = -100 }
+					modifier = { has_trait = sbs_succubus add = -100 }
+					modifier = { has_trait = sbs_demon add = -100 }
 					mind_break_personality = yes
 					if = {
 						limit = {
@@ -85,15 +99,11 @@ sbs_devils_gift_interaction = {
 					}
 				}
 				0 = {
-					modifier = { has_opinion_modifier = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion } add = 5 }
-					remove_opinion = { target = scope:actor modifier = carn_wants_to_be_your_slave_opinion }
-				}
-				0 = {
 					modifier = {
 						scope:recipient = { is_adult = yes is_attracted_to_gender_of = scope:actor }
 						scope:actor = { is_adult = yes }
 						NOT = { scope:recipient = scope:actor }
-						add = 5
+						add = 10
 					}
 					prostitute_effect = { PROSTITUTE = scope:actor PREGNANCY_CHANCE = pregnancy_chance }
 				}
@@ -107,19 +117,19 @@ sbs_devils_gift_interaction = {
 				}
 				0 = {
 					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
-					add_trait_xp = { trait = sbs_succubus track = corruption value = 5 }
+					add_trait_xp = { trait = sbs_succubus track = corruption value = 10 }
 				}
 				0 = {
 					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
-					add_trait_xp = { trait = sbs_succubus track = loyalty value = 5 }
+					add_trait_xp = { trait = sbs_succubus track = loyalty value = 10 }
 				}
 				0 = {
 					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
-					add_trait_xp = { trait = sbs_succubus track = power value = 10 }
+					add_trait_xp = { trait = sbs_succubus track = power value = 20 }
 				}
 				0 = {
 					modifier = { has_trait = sbs_succubus add = 10 scope:actor = { has_trait = sbs_demon } }
-					add_trait_xp = { trait = sbs_succubus track = daring value = 10 }
+					add_trait_xp = { trait = sbs_succubus track = daring value = 20 }
 				}
 				10 = {
 					modifier = { OR = { any_secret = { secret_type = secret_deviant } has_trait = deviant } is_adult = yes add = -10 }
@@ -143,6 +153,16 @@ sbs_devils_gift_interaction = {
 						add_trait = witch
 					}
 				}
+				10 = {
+					modifier = { gold < 0 add = 40 }
+					add_gold = 666
+				}
+				10 = {
+					add_prestige = 666
+				}
+				10 = {
+					add_piety = 666
+				}
 				2 = {
 					modifier = { OR = { has_trait = dull has_trait = shrewd } add = -2 }
 					add_trait = shrewd
@@ -152,58 +172,69 @@ sbs_devils_gift_interaction = {
 					add_trait = strong
 				}
 				2 = {
-					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -2 }
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -50 }
+					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes count = 0 } add = 48 }
 					add_trait = fecund
 				}
 				2 = {
-					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -2 }
+					modifier = { has_character_modifier = very_successful_fertility_treatment add = -50 }
+					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes count = 0 } add = 48 }
+					add_character_modifier = { modifier = very_successful_fertility_treatment years = 10 }
+				}
+				2 = {
+					modifier = { has_character_modifier = modifier_great_fertility_counsel add = -50 }
+					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes count = 0 } add = 48 }
+					add_character_modifier = { modifier = modifier_great_fertility_counsel years = 10 }
+				}
+				1 = {
+					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -21}
 					add_trait = physique_good_1
 				}
-				2 = {
-					modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -2 }
+				1 = {
+					modifier = { OR = { has_trait = intellect_good has_trait = dull has_trait = intellect_bad } add = -1 }
 					add_trait = intellect_good_1
 				}
-				2 = {
-					modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -2 }
+				1 = {
+					modifier = { OR = { has_trait = beauty_good has_trait = dull has_trait = beauty_bad } add = -1 }
 					add_trait = beauty_good_1
 				}
 				0 = {
-					modifier = { OR = { has_trait = physique_good_1 } add = 2 }
+					modifier = { OR = { has_trait = physique_good_1 } add = 1 }
 					remove_trait = physique_good_1
 					add_trait = physique_good_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = physique_good_2 } add = 2 }
+					modifier = { OR = { has_trait = physique_good_2 } add = 1 }
 					remove_trait = physique_good_2
 					add_trait = physique_good_3
 				}
 				0 = {
-					modifier = { OR = { has_trait = intellect_good_1 } add = 2 }
+					modifier = { OR = { has_trait = intellect_good_1 } add = 1 }
 					remove_trait = intellect_good_1
 					add_trait = intellect_good_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = intellect_good_2 } add = 2 }
+					modifier = { OR = { has_trait = intellect_good_2 } add = 1 }
 					remove_trait = intellect_good_2
 					add_trait = intellect_good_3
 				}
 				0 = {
-					modifier = { OR = { has_trait = beauty_good_1 } add = 2 }
+					modifier = { OR = { has_trait = beauty_good_1 } add = 1 }
 					remove_trait = beauty_good_1
 					add_trait = beauty_good_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = beauty_good_2 } add = 2 }
+					modifier = { OR = { has_trait = beauty_good_2 } add = 1 }
 					remove_trait = beauty_good_2
 					add_trait = beauty_good_3
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_intrigue_1 } add = 2 }
+					modifier = { OR = { has_trait = education_intrigue_1 } add = 1 }
 					remove_trait = education_intrigue_1
 					add_trait = education_intrigue_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_intrigue_2 } add = 2 }
+					modifier = { OR = { has_trait = education_intrigue_2 } add = 1 }
 					remove_trait = education_intrigue_2
 					add_trait = education_intrigue_3
 				}
@@ -218,12 +249,12 @@ sbs_devils_gift_interaction = {
 					add_trait = education_intrigue_5
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_diplomacy_1 } add = 2 }
+					modifier = { OR = { has_trait = education_diplomacy_1 } add = 1 }
 					remove_trait = education_diplomacy_1
 					add_trait = education_diplomacy_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_diplomacy_2 } add = 2 }
+					modifier = { OR = { has_trait = education_diplomacy_2 } add = 1 }
 					remove_trait = education_diplomacy_2
 					add_trait = education_diplomacy_3
 				}
@@ -238,12 +269,12 @@ sbs_devils_gift_interaction = {
 					add_trait = education_diplomacy_5
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_stewardship_1 } add = 2 }
+					modifier = { OR = { has_trait = education_stewardship_1 } add = 1 }
 					remove_trait = education_stewardship_1
 					add_trait = education_stewardship_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_stewardship_2 } add = 2 }
+					modifier = { OR = { has_trait = education_stewardship_2 } add = 1 }
 					remove_trait = education_stewardship_2
 					add_trait = education_stewardship_3
 				}
@@ -258,12 +289,12 @@ sbs_devils_gift_interaction = {
 					add_trait = education_stewardship_5
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_martial_1 } add = 2 }
+					modifier = { OR = { has_trait = education_martial_1 } add = 1 }
 					remove_trait = education_martial_1
 					add_trait = education_martial_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_martial_2 } add = 2 }
+					modifier = { OR = { has_trait = education_martial_2 } add = 1 }
 					remove_trait = education_martial_2
 					add_trait = education_martial_3
 				}
@@ -278,12 +309,12 @@ sbs_devils_gift_interaction = {
 					add_trait = education_martial_5
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_learning_1 } add = 2 }
+					modifier = { OR = { has_trait = education_learning_1 } add = 1 }
 					remove_trait = education_learning_1
 					add_trait = education_learning_2
 				}
 				0 = {
-					modifier = { OR = { has_trait = education_learning_2 } add = 2 }
+					modifier = { OR = { has_trait = education_learning_2 } add = 1 }
 					remove_trait = education_learning_2
 					add_trait = education_learning_3
 				}
@@ -317,8 +348,24 @@ sbs_devils_gift_interaction = {
 					modifier = { NOT = { has_trait = education_learning_1 has_trait = education_learning_2 has_trait = education_learning_3 has_trait = education_learning_4 has_trait = education_learning_5 } is_adult = yes add = 1 }
 					add_trait = education_learning_1
 				}
-				40 = {
-					modifier = { has_character_modifier = succubus_buff add = -35 }
+				0 = {
+					modifier = {
+						scope:actor = { has_trait = sbs_demon }
+						NOT = { has_character_modifier = succubus_generals }
+						add = 1
+					}
+					modifier = {
+						OR = {
+							father = { has_trait = sbs_demon }
+							mother = { has_trait = sbs_demon }
+						}
+						is_female = no
+						add = 19
+					}
+					add_character_modifier = { modifier = succubus_generals years = 10 }
+				}
+				20 = {
+					modifier = { has_character_modifier = succubus_buff add = -15 }
 					add_character_modifier = { modifier = succubus_buff years = 10 }
 				}
 			}
@@ -359,6 +406,7 @@ sbs_devils_gift_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
+		modifier = { scope:recipient = scope:actor scope:actor = { any_child = { is_alive = yes count = 0 } } add = 100 }
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = scope:actor }

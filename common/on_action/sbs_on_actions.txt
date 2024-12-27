@@ -16,14 +16,6 @@ random_ntr_on_action = {
 			has_trait = sbs_lesser_succubus
 			has_trait = sbs_demon
 		}
-		OR = {
-			has_trait = lustful
-			any_secret = { secret_type = secret_deviant }
-			has_trait = deviant
-			root = character:7757
-			root = character:223522
-			root = character:466517
-		}
 		exists = primary_spouse
 		exists = primary_spouse.father
 		is_ruler = yes
@@ -41,7 +33,10 @@ random_ntr_on_action = {
 
 slavery_on_action = {
 	events = {
-		sbs_slavery_event.8888
+		sbs_slavery_event.9995
+		sbs_slavery_event.9996
+		sbs_slavery_event.9997
+		sbs_slavery_event.9998
 		sbs_slavery_event.9999
 	}
 }
