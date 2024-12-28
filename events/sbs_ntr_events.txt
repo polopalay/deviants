@@ -625,6 +625,7 @@ sbs_ntr_event.0232 = {
 		}
 		add_trait = disinherited
 		add_trait = denounced
+		add_trait = decadent
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 	}
 	option = {
@@ -668,6 +669,7 @@ sbs_ntr_event.0232 = {
 		}
 		add_trait = disinherited
 		add_trait = denounced
+		add_trait = decadent
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 	}
 	option = {
@@ -708,6 +710,7 @@ sbs_ntr_event.0232 = {
 		}
 		add_trait = disinherited
 		add_trait = denounced
+		add_trait = decadent
 	}
 	option = {
 		name = sbs_ntr_event.0232.d

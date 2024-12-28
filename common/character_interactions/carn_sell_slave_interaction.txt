@@ -5,7 +5,7 @@
 	needs_recipient_to_open = yes
 	is_shown = {
 		scope:actor = {
-			any_courtier = { has_trait = slave scope:recipient.gold >= prev.carn_slave_price_value }
+			any_courtier = { has_trait = slave has_relation_slave_owner = scope:actor }
 		}
 		scope:recipient = {
 			is_ruler = yes
@@ -14,15 +14,20 @@
 	}
 	populate_recipient_list = {
 		scope:actor = {
-			every_courtier = { limit = { has_trait = slave scope:recipient.gold >= prev.carn_slave_price_value } add_to_list = characters }
+			every_courtier = {
+				limit = {
+					has_trait = slave
+					has_relation_slave_owner = scope:actor
+				}
+				add_to_list = characters
+			}
 		}
 	}
 	on_accept = {
-		carn_buy_slave_effect = {
-			SELLER = scope:actor
-			BUYER = scope:recipient
-			SLAVE = scope:secondary_recipient
-		}
+		scope:actor = { save_scope_as = seller }
+		scope:recipient = { save_scope_as = slave }
+		scope:secondary_recipient = { save_scope_as = buyer }
+		carn_buy_slave_effect = { SLAVE_PRICE = scope:recipient.carn_slave_price_value }
 	}
 	ai_accept = {
 		base = 0

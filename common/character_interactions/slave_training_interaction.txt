@@ -64,7 +64,12 @@
 					}
 					5 = { trigger_event = sbs_slavery_event.0300 }
 					0 = {
-						modifier = { scope:actor.liege = { is_attracted_to_gender_of = scope:recipient } NOT = { scope:actor.liege = scope:actor } add = 5 }
+						modifier = {
+							scope:actor.liege = { is_attracted_to_gender_of = scope:recipient }
+							NOT = { scope:actor.liege = scope:actor }
+							scope:recipient = { is_immortal = yes }
+							add = 5
+						}
 						trigger_event = sbs_slavery_event.0400
 					}
 					0 = {
@@ -174,6 +179,12 @@
 				limit = { NOT = { has_trait = wounded_3 } }
 				remove_trait = wounded_2
 				add_trait = wounded_3
+			}
+			else = {
+				death = {
+					death_reason = death_execution
+					killer = scope:actor
+				}
 			}
 		}
 	}

@@ -15,6 +15,7 @@
 	flag = can_not_marry
 	flag = can_not_be_granted_titles
 	flag = can_not_leave_court_voluntarily
+	flag = join_factions_less
 	inheritance_blocker = all
 	claim_inheritance_blocker = all
 

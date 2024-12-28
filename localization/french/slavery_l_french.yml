@@ -36,3 +36,12 @@
   enslave_war_victory_desc: "Toutes les [courtisanes|E] de [defender.GetName] seront [emprisonnées|E] par [attacker.GetName]"
   enslave_war_white_peace_desc: "La guerre est vaine"
   enslave_war_defeat_desc: "[attacker.GetName] doit payer des réparations de guerre à [defender.GetName]"
+
+  set_relation_slave_g: "[TARGET_CHARACTER.GetName] devient esclave"
+  set_relation_slave_f: "[TARGET_CHARACTER.GetName] devient mon esclave"
+  remove_relation_slave_g: "[TARGET_CHARACTER.GetName] n'est plus esclave"
+  remove_relation_slave_f: "[TARGET_CHARACTER.GetName] n'est plus mon esclave"
+  set_relation_slave_owner_g: "[TARGET_CHARACTER.GetName] est maintenant propriétaire"
+  set_relation_slave_owner_f: "[TARGET_CHARACTER.GetName] est maintenant mon propriétaire"
+  remove_relation_slave_owner_g: "[TARGET_CHARACTER.GetName] n'est plus propriétaire"
+  remove_relation_slave_owner_f: "[TARGET_CHARACTER.GetName] n'est plus mon propriétaire"

@@ -342,67 +342,31 @@ sbs_event.9999 = {
 	trigger = { 
 		faith.religion = religion:satanic_religion
 		faith.religious_head = root
-		any_spouse = {
-			OR = {
-				AND = {
-					root = { is_female = yes }
-					matrilinear_marriage = yes
-				}
-				AND = {
-					root = { is_female = no }
-					patrilinear_marriage = yes
-				}
-			}
-			count = 0
-		}
+		any_spouse = { count = 0 }
 		can_marry_common_trigger = yes
 	}
 	hidden = yes
 	immediate = {
 		if = {
 			limit = { is_female = no }
-			random_living_character = {
-				limit = {
-					faith.religion = religion:satanic_religion
-					faith.religious_head = this
-					is_female = yes
-					can_marry_trigger = yes
- 				}
+			create_character = {
+				age = 18
+				location = root.location
+				culture = root.culture
+				faith = root.faith
+				gender_female_chance = 100
 				save_scope_as = spouse
-			}
-			if = {
-				limit = { NOT = { exists = spouse } }
-				create_character = {
-					age = 18
-					location = root.location
-					culture = root.culture
-					faith = root.faith
-					gender_female_chance = 100
-					save_scope_as = scope:spouse
-				}
 			}
 			marry = scope:spouse
 		}
 		else = {
-			random_living_character = {
-				limit = {
-					faith.religion = religion:satanic_religion
-					faith.religious_head = this
-					is_female = no
-					can_marry_trigger = yes
- 				}
+			create_character = {
+				age = 18
+				location = root.location
+				culture = root.culture
+				faith = root.faith
+				gender_female_chance = 0
 				save_scope_as = spouse
-			}
-			if = {
-				limit = { NOT = { exists = spouse } }
-				create_character = {
-					age = 18
-					location = root.location
-					culture = root.culture
-					faith = root.faith
-					gender_female_chance = 0
-					save_scope_as = spouse
-				}
 			}
 			marry_matrilineal = scope:spouse
 		}

@@ -1,0 +1,16 @@
+set_relation_slave = {
+	global = set_relation_slave_g
+	first = set_relation_slave_f
+}
+remove_relation_slave = {
+	global = remove_relation_slave_g
+	first = remove_relation_slave_f
+}
+set_relation_slave_owner = {
+	global = set_relation_slave_owner_g
+	first = set_relation_slave_owner_f
+}
+remove_relation_slave_owner = {
+	global = remove_relation_slave_owner_g
+	first = remove_relation_slave_owner_f
+}

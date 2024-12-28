@@ -52,7 +52,7 @@
 				prostitute_effect = { PROSTITUTE = scope:recipient PREGNANCY_CHANCE = pregnancy_chance }
 			}
 			if = {
-				limit = { scope:recipient = { has_trait = slave liege = scope:actor } }
+				limit = { NOT = { scope:recipient = { has_trait = slave liege = scope:actor } } }
 				pay_short_term_gold = { target = scope:recipient gold = scope:recipient.prostitute_price_value }
 				random = {
 					chance = 10

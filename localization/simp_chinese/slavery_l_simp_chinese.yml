@@ -36,3 +36,12 @@
   enslave_war_victory_desc: "[defender.GetName]的所有女性[courtier|E]将被[attacker.GetName] [囚禁|E]"
   enslave_war_white_peace_desc: "战争毫无意义"
   enslave_war_defeat_desc: "[attacker.GetName]必须向[defender.GetName]支付战争赔偿"
+
+  set_relation_slave_g: "[TARGET_CHARACTER.GetName]成为奴隶"
+  set_relation_slave_f: "[TARGET_CHARACTER.GetName]成为我的奴隶"
+  remove_relation_slave_g: "[TARGET_CHARACTER.GetName]不再是奴隶"
+  remove_relation_slave_f: "[TARGET_CHARACTER.GetName]不再是我的奴隶"
+  set_relation_slave_owner_g: "[TARGET_CHARACTER.GetName]现在是主人"
+  set_relation_slave_owner_f: "[TARGET_CHARACTER.GetName]现在是我的主人"
+  remove_relation_slave_owner_g: "[TARGET_CHARACTER.GetName]不再是主人"
+  remove_relation_slave_owner_f: "[TARGET_CHARACTER.GetName] 不再是我的主人"

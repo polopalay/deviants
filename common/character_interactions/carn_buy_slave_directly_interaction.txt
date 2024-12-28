@@ -9,13 +9,19 @@
 		}
 		scope:recipient = {
 			is_ruler = yes
-			any_courtier = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value }
+			any_courtier = { has_trait = slave has_relation_slave_owner = scope:recipient }
 		}
 		NOT = { scope:actor = scope:recipient }
 	}
 	populate_recipient_list = {
 		scope:recipient = {
-			every_courtier = { limit = { has_trait = slave scope:actor.gold >= prev.carn_slave_price_value } add_to_list = characters }
+			every_courtier = {
+				limit = {
+					has_trait = slave
+					has_relation_slave_owner = scope:recipient
+				}
+				add_to_list = characters
+			}
 		}
 	}
 	on_accept = {
@@ -24,6 +30,10 @@
 			BUYER = scope:actor
 			SLAVE = scope:secondary_recipient
 		}
+		scope:actor = { save_scope_as = buyer }
+		scope:recipient = { save_scope_as = seller }
+		scope:secondary_recipient = { save_scope_as = slave }
+		carn_buy_slave_effect = { SLAVE_PRICE = scope:recipient.carn_slave_price_value }
 	}
 	ai_targets = {
 		ai_recipients = liege

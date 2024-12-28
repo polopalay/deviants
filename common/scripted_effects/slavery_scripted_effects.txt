@@ -1,6 +1,8 @@
 ﻿carn_enslave_effect = {
 	$SLAVE$ = { save_temporary_scope_as = new_slave }
+	$SLAVE$ = { save_temporary_scope_as = slave }
 	$OWNER$ = { save_temporary_scope_as = new_owner }
+	$OWNER$ = { save_temporary_scope_as = slave_owner }
 
 	scope:new_slave = {
 		if = {
@@ -105,24 +107,22 @@
 }
 
 carn_buy_slave_effect = {
-	$BUYER$ = { save_scope_as = buyer }
-	$SELLER$ = { save_scope_as = seller }
-	$SLAVE$ = { save_scope_as = slave }
-
+	save_scope_value_as = {
+		name = slave_price
+		value = $SLAVE_PRICE$
+	}
 	scope:buyer = {
-		pay_short_term_gold = { target = scope:seller gold = scope:slave.carn_slave_price_value }
+		pay_short_term_gold = { target = scope:seller gold = scope:slave_price }
 		add_courtier = scope:slave
+		save_scope_as = slave_owner
 	}
 
 	scope:slave = {
-		every_relation = {
-			type = slave_owner
-			remove_relation_slave = scope:slave
-			scope:slave = { remove_relation_slave_owner = prev }
-		}
-	}
-	scope:slave = {
+		remove_relation_slave_owner = scope:seller
 		set_relation_slave_owner = { target = scope:buyer }
+	}
+	scope:seller = {
+		remove_relation_slave = scope:slave
 	}
 	scope:buyer = {
 		set_relation_slave = { target = scope:slave }
@@ -164,7 +164,8 @@ carn_free_slave_effect = {
 		every_relation = {
 			type = slave_owner
 			remove_relation_slave = scope:slave
-			scope:slave = { remove_relation_slave_owner = prev }
+			save_scope_as = slave_owner
+			scope:slave = { remove_relation_slave_owner = scope:slave_owner }
 		}
 		if = {
 			limit = {
@@ -205,12 +206,5 @@ carn_free_slave_effect = {
 		remove_trait = slave
 		remove_character_modifier = forced_labor
 		add_trait = former_slave
-	}
-	scope:slave = {
-		every_relation = {
-			type = slave_owner
-			remove_relation_slave = scope:slave
-			scope:slave = { remove_relation_slave_owner = prev }
-		}
 	}
 }

@@ -36,3 +36,12 @@
   enslave_war_victory_desc: "Все женщины [дворянки|E] [defender.GetName] будут [заключены|E] [attacker.GetName]"
   enslave_war_white_peace_desc: "Война бесполезна"
   enslave_war_defeat_desc: "[attacker.GetName] должен выплатить [defender.GetName] репарации"
+
+  set_relation_slave_g: "[TARGET_CHARACTER.GetName] становится рабом"
+  set_relation_slave_f: "[TARGET_CHARACTER.GetName] становится моим рабом"
+  remove_relation_slave_g: "[TARGET_CHARACTER.GetName] больше не раб"
+  remove_relation_slave_f: "[TARGET_CHARACTER.GetName] больше не мой раб"
+  set_relation_slave_owner_g: "[TARGET_CHARACTER.GetName] теперь владелец"
+  set_relation_slave_owner_f: "[TARGET_CHARACTER.GetName] теперь мой владелец"
+  remove_relation_slave_owner_g: "[TARGET_CHARACTER.GetName] больше не владелец"
+  remove_relation_slave_owner_f: "[TARGET_CHARACTER.GetName] больше не мой владелец"

@@ -31,11 +31,7 @@ sbs_devils_gift_interaction = {
 			random_list = {
 				0 = {
 					modifier = {
-						OR = {
-							father = { has_trait = sbs_demon }
-							mother = { has_trait = sbs_demon }
-							mother = { has_trait = sbs_succubus }
-						}
+						scope:actor = { has_trait = sbs_demon is_parent_of = scope:recipient }
 						is_female = no
 						add = 100
 					}
@@ -48,11 +44,7 @@ sbs_devils_gift_interaction = {
 				}
 				0 = {
 					modifier = {
-						OR = {
-							father = { has_trait = sbs_demon }
-							mother = { has_trait = sbs_demon }
-							mother = { has_trait = sbs_succubus }
-						}
+						scope:actor = { has_trait = sbs_demon is_parent_of = scope:recipient }
 						is_female = no
 						add = 100
 					}
@@ -172,19 +164,23 @@ sbs_devils_gift_interaction = {
 					add_trait = strong
 				}
 				2 = {
-					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -50 }
-					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes count = 0 } add = 48 }
+					modifier = { OR = { has_trait = fecund has_trait = infertile } add = -2 }
 					add_trait = fecund
 				}
 				2 = {
 					modifier = { has_character_modifier = very_successful_fertility_treatment add = -50 }
-					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes count = 0 } add = 48 }
-					add_character_modifier = { modifier = very_successful_fertility_treatment years = 10 }
+					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes house = scope:recipient.house  count = 0 } add = 198 }
+					add_character_modifier = { modifier = very_successful_fertility_treatment years = 4 }
 				}
 				2 = {
-					modifier = { has_character_modifier = modifier_great_fertility_counsel add = -50 }
-					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes count = 0 } add = 48 }
-					add_character_modifier = { modifier = modifier_great_fertility_counsel years = 10 }
+					modifier = { has_character_modifier = modifier_amazing_fertility_counsel add = -50 }
+					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes house = scope:recipient.house  count = 0 } add = 198 }
+					add_character_modifier = { modifier = modifier_amazing_fertility_counsel years = 4 }
+				}
+				2 = {
+					modifier = { has_character_modifier = confident_lover add = -50 }
+					modifier = { is_immortal = yes age > 100 any_child = { is_alive = yes house = scope:recipient.house  count = 0} add = 198 }
+					add_character_modifier = { modifier = confident_lover years = 4 }
 				}
 				1 = {
 					modifier = { OR = { has_trait = physique_good has_trait = weak has_trait = spindly has_trait = physique_bad } add = -21}
@@ -355,16 +351,13 @@ sbs_devils_gift_interaction = {
 						add = 1
 					}
 					modifier = {
-						OR = {
-							father = { has_trait = sbs_demon }
-							mother = { has_trait = sbs_demon }
-						}
+						scope:actor = { has_trait = sbs_demon is_parent_of = scope:recipient }
 						add = 19
 					}
 					add_character_modifier = { modifier = succubus_generals years = 10 }
 				}
 				20 = {
-					modifier = { has_character_modifier = succubus_buff add = -15 }
+					modifier = { has_character_modifier = succubus_buff add = -10 }
 					add_character_modifier = { modifier = succubus_buff years = 10 }
 				}
 			}
@@ -405,7 +398,7 @@ sbs_devils_gift_interaction = {
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { scope:recipient = scope:actor scope:actor = { any_child = { is_alive = yes count = 0 } } add = 100 }
+		modifier = { scope:recipient = scope:actor scope:actor = { any_child = { is_alive = yes house = scope:actor.house count = 0 } } add = 100 }
 		modifier = { add = 50 scope:recipient = { is_child_of = scope:actor } }
 		modifier = { add = 25 scope:recipient = { is_close_family_of = scope:actor } }
 		modifier = { add = 5 scope:recipient = scope:actor }

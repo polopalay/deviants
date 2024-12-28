@@ -1,5 +1,5 @@
 ﻿l_korean:
-  sbs_slavery_event.0100.t: "The Training"
+    sbs_slavery_event.0100.t: "The Training"
   sbs_slavery_event.0100.desc: "I was lying naked in the corner of the castle, suddenly [owner.GetFirstName] came and ordered:\n\"It's been a long time since this slutty bitch has been trained, crawl around the castle with me\""
   sbs_slavery_event.0100.a: "Obey the master's orders"
   sbs_slavery_event.0100.a.tt: "I'm just a lowly slave, what right do I have to resist?"
@@ -105,12 +105,12 @@
   sbs_slavery_event.0126.bw.tt: "You escape from the soldiers"
   sbs_slavery_event.0126.bl.tt: "You are caught again"
 
-  sbs_slavery_event.0200.t: "Drug"
-  sbs_slavery_event.0200.desc: "[owner.GetFirstName] dragged me to the dungeon and fucked me like usual. He made me lick every part of his body, from his asshole to his cock.\n\"It seems like your pussy is getting wider and wider, you need to improve your slutty body.\"\nThen he took out a bottle of medicine and applied it all over my vagina and nipples.\n\"It seems like applying it directly is not effective, drink it directly my slut\""
+  sbs_slavery_event.0200.t: "Medicine"
+  sbs_slavery_event.0200.desc: "I was dragged in between [owner.GetFirstName]'s soldiers and had to fuck them like every day, some of them complained to [owner.GetFirstName]\n\"Sir, this bitch's pussy has shown signs of stretching lately, her breasts are also sagging more and more, it seems like it's getting worse and worse\"\nA soldier spread open my pussy that was still leaking my semen and shoved his fist in.\n\"Sir, there you are, this bitch's pussy is big enough to fit my whole hand\"\nAlthough my mind was numb with pleasure, I still tried to defend my pussy.\n\"Master, I had to fuck all of your soldiers and vassals for many days in a row, I was pregnant with too many children, there were even days when I was on my period, they still held me down to rape me. My pussy can't take that many cocks\"\n[owner.GetFirstName] ordered his subordinates\n\"Spread open this bitch's pussy, I will give you it's a high-dose aphrodisiac, I got it from a wizard friend. Just one drop in your pussy is enough to make your hole tight, but I heard it's more effective if you drink it directly\""
   sbs_slavery_event.0200.a: "Drink it"
-  sbs_slavery_event.0200.a.tt: "I knelt down in front of my master, poured the liquid into my pussy, and sucked my pussy"
-  sbs_slavery_event.0200.b: "Close mouth"
-  sbs_slavery_event.0200.b.tt: "I closed my mouth tightly while pouring the entire potion into my pussy as an alternative"
+  sbs_slavery_event.0200.a.tt: "I opened my mouth, waiting for my master to drop those drops in my mouth"
+  sbs_slavery_event.0200.b: "Spread pussy"
+  sbs_slavery_event.0200.b.tt: "I just need to fuck, please master drop them in my pussy, in my breasts, in my asshole, in all the places that make me happy"
 
   sbs_slavery_event.0300.t: "The bitch's mission"
   sbs_slavery_event.0300.desc: "I was stripped naked and dragged into the prison, [owner.GetFirstName]'s soldiers continuously fucked me for many days. [owner.GetFirstName] made me spread my legs and spread my pussy:\n\"Continue serving my soldiers until they are satisfied\""
@@ -152,13 +152,6 @@
   sbs_slavery_event.0700.a.tt: "I don't care who it is, I just need to fuck, put your cock or anything long and hard into this hungry hole"
   sbs_slavery_event.0700.b: "Turn away"
   sbs_slavery_event.0700.b.tt: "T-That's the last bit of honor this whore has left"
-
-  sbs_slavery_event.0800.t: "Neighbor"
-  sbs_slavery_event.0800.desc: "I was tied up and taken naked to the capital of the neighboring kingdom. [owner.GetFirstName] declared: \"I will allow the entire kingdom of [owner2.GetFirstName] to fuck this bitch as a testament to the friendship between the two kingdoms\""
-  sbs_slavery_event.0800.a: "Spread"
-  sbs_slavery_event.0800.a.tt: "I spread my legs wide while my hands spread my pussy open in invitation."
-  sbs_slavery_event.0800.b: "Please"
-  sbs_slavery_event.0800.b.tt: "Please [owner2.GetFirstName] save you."
 
   sbs_slavery_event.0800.t: "Neighbor"
   sbs_slavery_event.0800.desc: "I was tied up and taken naked to the capital of the neighboring kingdom. [owner.GetFirstName] declared: \"I will allow the entire kingdom of [owner2.GetFirstName] to fuck this bitch as a testament to the friendship between the two kingdoms\""
@@ -248,3 +241,24 @@
   sbs_slavery_event.5300.desc: "I was dragged in front of [owner.GetFirstName]'s other slaves in a naked state.\n\"This one was once a noble of a famous family, but she voluntarily became a slave for everyone to trample on. Whoever wants to maintain their slave blood, then rape her, her noble pussy is very sensitive to conception\""
   sbs_slavery_event.5300.a: "Spread my legs"
   sbs_slavery_event.5300.a.tt: "I spread my legs, waiting for the hot streams of semen to impregnate me"
+
+  sbs_slavery_event.6000.t: "Alcoholic"
+  sbs_slavery_event.6000.desc: "Near the West, I often secretly drank beer to relieve stress, this news reached [owner.GetFirstName]. He ordered the soldiers to tie me up.\n\"This whore has depraved hobbies like drinking beer, soldiers let her know that the only thing that can go into her stomach is semen\"\nThe soldiers were ordered to pour all the beer on me, [owner.GetFirstName] ordered the soldiers to lick all over me while my holes were filled with cocks."
+  sbs_slavery_event.6000.a: "I only need cocks"
+  sbs_slavery_event.6000.a.tt: "Yes, just semen is enough, you don't need anything else"
+  sbs_slavery_event.6000.b: "Master's mercy"
+  sbs_slavery_event.6000.b.tt: "Serve the soldiers well"
+
+  sbs_slavery_event.6100.t: "Betrayal bitch"
+  sbs_slavery_event.6100.desc: "I was imprisoned by [owner.GetFirstName] for plotting to assassinate [owner.GetFirstName]. He kept whipping me.\n\"This bitch seems to not know your place, do you think I don't notice your tricks, I am your master, you are just a slave bitch, the only thing you should do is satisfy the cocks\""
+  sbs_slavery_event.6100.a: "Beg for mercy"
+  sbs_slavery_event.6100.a.tt: "I am just a bitch, please punish me"
+  sbs_slavery_event.6100.b: "Swear"
+  sbs_slavery_event.6100.b.tt: "You bastard, because of you I lost everything, family, relatives, friends"
+
+  sbs_slavery_event.6110.t: "Punishment"
+  sbs_slavery_event.6110.desc: "[owner.GetFirstName] put me in prison\n\"Let this bitch know her place, you are just a slut's reservoir of this kingdom, you were born a slut, grew up in sluthood, your best job is satisfying cocks, I only satisfy your lust\""
+  sbs_slavery_event.6110.a: "Silence"
+  sbs_slavery_event.6110.a.tt: "[owner.GetFirstName] will punish you until you understand your position as a whore"
+  sbs_slavery_event.6110.b: "Admit I'm Just a Whore"
+  sbs_slavery_event.6110.b.tt: "I'm Just a Slutty Whore, It's All My Sluttiness, Punish This Whore With Cocks"

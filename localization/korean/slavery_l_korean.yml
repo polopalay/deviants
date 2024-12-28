@@ -36,3 +36,12 @@
   enslave_war_victory_desc: "[defender.GetName]의 모든 여성 [courtier|E]는 [attacker.GetName]에 의해 [구금될|E] 것입니다"
   enslave_war_white_peace_desc: "전쟁은 무의미합니다"
   enslave_war_defeat_desc: "[attacker.GetName]는 [defender.GetName]에게 전쟁 배상금을 지불해야 합니다"
+
+  set_relation_slave_g: "[TARGET_CHARACTER.GetName]가 노예가 됨"
+  set_relation_slave_f: "[TARGET_CHARACTER.GetName]가 내 노예가 됨"
+  remove_relation_slave_g: "[TARGET_CHARACTER.GetName]가 노예가 아님"
+  remove_relation_slave_f: "[TARGET_CHARACTER.GetName]가 내 노예가 아님"
+  set_relation_slave_owner_g: "[TARGET_CHARACTER.GetName]가 주인이 됨"
+  set_relation_slave_owner_f: "[TARGET_CHARACTER.GetName]가 내 주인이 됨"
+  remove_relation_slave_owner_g: "[TARGET_CHARACTER.GetName]가 주인이 아님"
+  remove_relation_slave_owner_f: "[TARGET_CHARACTER.GetName]가 내 주인이 아님"

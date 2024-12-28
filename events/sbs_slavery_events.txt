@@ -26,7 +26,7 @@ sbs_slavery_event.0100 = {
 			}
 			5 = { trigger_event = sbs_slavery_event.0111 }
 			5 = { 
-				modifier = { scope:owner = { any_vassal = { is_adult = yes is_attracted_to_gender_of = root count = 0 } } add = -5 }
+				modifier = { is_immortal = yes scope:owner = { any_vassal = { is_adult = yes is_attracted_to_gender_of = root count = 0 } } add = -5 }
 				trigger_event = sbs_slavery_event.0112
 			}
 			5 = { 
@@ -39,7 +39,10 @@ sbs_slavery_event.0100 = {
 			}
 			5 = { trigger_event = sbs_slavery_event.0115 }
 			5 = { trigger_event = sbs_slavery_event.0116 }
-			5 = { trigger_event = sbs_slavery_event.0117 }
+			0 = {
+				modifier = { is_immortal = yes add = 5 }
+				trigger_event = sbs_slavery_event.0117
+			}
 			5 = {
 				modifier = { has_trait = pregnant add = -5 }
 				trigger_event = sbs_slavery_event.0118
@@ -739,10 +742,10 @@ sbs_slavery_event.0200 = {
 				}
 				1 = {
 					modifier = { has_trait = dull add = -1 }
-					remove_trait shrewd
-					remove_trait intellect_good_1
-					remove_trait intellect_good_2
-					remove_trait intellect_good_3
+					remove_trait = shrewd
+					remove_trait = intellect_good_1
+					remove_trait = intellect_good_2
+					remove_trait = intellect_good_3
 					add_trait = dull
 				}
 				1 = {
@@ -2234,7 +2237,7 @@ sbs_slavery_event.9997 = {
 		every_courtier = {
 			limit = {
 				has_trait = slave
-				OR = { has_imprisonment_reason = root has_execute_reason = root has_banish_reason = root }
+				root = { OR = { has_imprisonment_reason = prev has_execute_reason = prev has_banish_reason = prev } }
 			}
 			save_scope_as = slave
 			root = { consume_imprisonment_reasons = scope:slave }
