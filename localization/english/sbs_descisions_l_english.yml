@@ -55,3 +55,7 @@
  complete_ritual_philosophers_stone_decision.c: "Complete Ritual"
  complete_ritual_philosophers_stone_decision.e: "Complete the ritual of Philosopher's Stone"
 
+ seal_the_gates_of_hell: "Seal the Gates of Hell"
+ seal_the_gates_of_hell.desc: "The gates of hell are open, and the demons are about to invade the world of humans. You must find a way to seal the gates of hell and prevent the demons from entering the human world."
+ seal_the_gates_of_hell.t: "Seal the Gates of Hell"
+ seal_the_gates_of_hell.c: "Seal the Gates of Hell"

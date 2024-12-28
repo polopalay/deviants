@@ -291,8 +291,8 @@ satanic_religion = {
 			color = { 247 185 238 }
 			icon = murder
 
-			holy_site = jerusalem
 			holy_site = sinai
+			holy_site = jerusalem
 			holy_site = antioch
 			holy_site = alexandria
 			holy_site = aswan

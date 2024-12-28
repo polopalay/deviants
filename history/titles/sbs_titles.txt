@@ -51,3 +51,15 @@ d_laamp_satan = {
 		}
 	}
 }
+
+d_laamp_saint = {
+	1065.1.1 = {
+		holder = jeanne_character
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}

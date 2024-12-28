@@ -27,10 +27,10 @@ sbs_ntr_event.0100 = {
 	option = {
 		ai_chance = {
 			base = 10
+			modifier = { has_trait = chaste add = -5000 }
 			modifier = { has_trait = immortal add = 1000 }
 			modifier = { this = character:7757 add = 1000 }
 			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
-			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 100 }
 		}
 		name = sbs_ntr_event.0100.a
 		custom_tooltip = sbs_ntr_event.0100.a.tt
@@ -44,7 +44,9 @@ sbs_ntr_event.0100 = {
 	option = {
 		ai_chance = {
 			base = 10
+			modifier = { has_trait = chaste add = -5000 }
 			modifier = { has_character_modifier = diplomacy_majesty_4090_no_raiment_modifier add = 100 }
+			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 100 }
 		}
 		name = sbs_ntr_event.0100.b
 		custom_tooltip = sbs_ntr_event.0100.b.tt

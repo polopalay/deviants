@@ -54,3 +54,8 @@
   complete_ritual_philosophers_stone_decision.t: "철학자의 돌 의식을 완료합니다."
   complete_ritual_philosophers_stone_decision.c: "의식 완료"
   complete_ritual_philosophers_stone_decision.e: "철학자의 돌 의식을 완료합니다."
+
+  seal_the_gates_of_hell: "지옥의 문을 봉인"
+  seal_the_gates_of_hell.desc: "지옥의 문이 열렸으며, 악마들이 인간 세계로 침입하려고 합니다. 지옥의 문을 봉인하고 악마들이 인간 세계로 침입하는 것을 막을 방법을 찾아야 합니다."
+  seal_the_gates_of_hell.t: "지옥의 문을 봉인"
+  seal_the_gates_of_hell.c: "지옥의 문을 봉인"

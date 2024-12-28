@@ -73,3 +73,6 @@
   ask_for_become_succubus_interaction: "섹시한 악마가 되기를 요청하기"
   ask_for_become_succubus_interaction.desc: "악마에게 섹시한 악마가 되기를 요청하세요."
   recipient_secondary_ask_for_become_succubus_interaction: "하나 선택하기"
+
+  mind_break_the_saint_interaction: "성인을 깨뜨리기"
+  mind_break_the_saint_interaction.desc: "성인의 정신을 깨뜨립니다."

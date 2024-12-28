@@ -72,3 +72,6 @@
   ask_for_become_succubus_interaction: "请求成为魅魔"
   ask_for_become_succubus_interaction.desc: "请求魔鬼成为魅魔。"
   recipient_secondary_ask_for_become_succubus_interaction: "选择一个"
+
+  mind_break_the_saint_interaction: "精神崩溃圣徒"
+  mind_break_the_saint_interaction.desc: "使圣徒的精神崩溃"

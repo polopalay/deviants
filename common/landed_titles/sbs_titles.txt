@@ -1,4 +1,15 @@
-﻿d_laamp_satan = {
+﻿d_laamp_saint = {
+	color = { 245 235 220 }
+	capital = c_ile_de_france
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_laamp_satan = {
 	color = { 139 0 0 }
 	capital = c_acre
 
@@ -7,8 +18,6 @@
 	ruler_uses_title_name = no
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
-
-	ai_primary_priority = { add = @never_primary_score }
 }
 
 k_lilith = {
@@ -18,10 +27,6 @@ k_lilith = {
 	landless = yes
 
 	capital = c_jerusalem
-
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
 
 	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
@@ -37,10 +42,6 @@ k_abandon = {
 
 	capital = c_roma
 
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
-
 	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
 	always_follows_primary_heir = yes
@@ -54,10 +55,6 @@ k_beelzebub = {
 	landless = yes
 
 	capital = c_cologne
-
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
 
 	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
@@ -73,10 +70,6 @@ k_mammon = {
 
 	capital = c_esztergom
 
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
-
 	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
 	always_follows_primary_heir = yes
@@ -91,10 +84,6 @@ k_asmodeus = {
 
 	capital = c_attica
 
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
-
 	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
 	always_follows_primary_heir = yes
@@ -108,10 +97,6 @@ k_belial = {
 	landless = yes
 
 	capital = c_alexandria
-
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
 
 	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes

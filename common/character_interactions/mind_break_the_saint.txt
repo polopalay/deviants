@@ -1,0 +1,52 @@
+﻿mind_break_the_saint_interaction = {
+	icon = sbs_devils_curse_interaction
+	desc = mind_break_the_saint_interaction.desc
+	category = interaction_category_prison
+	use_diplomatic_range = no
+	is_shown = {
+		scope:actor = {
+			is_ruler = yes
+			faith.religion = religion:satanic_religion
+		}
+		scope:recipient = {
+			this = character:jeanne_character
+			has_character_flag = warrior_of_jesu
+		}
+	}
+	is_valid = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			remove_trait = sbs_succubus
+			remove_trait = seed_of_destruction
+			add_trait = sbs_demon
+			set_immortal_age = 18
+		}
+		scope:recipient = {
+			remove_trait = saint
+			remove_trait = faith_warrior
+			remove_trait = populist_leader
+			set_character_faith_with_conversion = scope:actor.faith
+			remove_trait = immortal
+			mind_break_personality = yes
+			set_trait = sbs_lesser_succubus
+			remove_trait = loyal
+			add_trait = disloyal
+			give_nickname = nick_the_betrayer
+			add_opinion = { target = root modifier = carn_wants_to_be_your_slave_opinion }
+			carn_enslave_effect = { SLAVE = this OWNER = root DRAMA = yes }
+			add_trait = sbs_lesser_succubus
+			set_immortal_age = 18
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 1
+	ai_targets = {
+		ai_recipients = courtiers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}

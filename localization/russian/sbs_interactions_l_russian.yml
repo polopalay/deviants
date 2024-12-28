@@ -73,3 +73,6 @@
   ask_for_become_succubus_interaction: "Попросить стать суккубом"
   ask_for_become_succubus_interaction.desc: "Попросите дьявола стать суккубом."
   recipient_secondary_ask_for_become_succubus_interaction: "Выбрать один"
+
+  mind_break_the_saint_interaction: "Сломать разум святого"
+  mind_break_the_saint_interaction.desc: "Превратите святого в антихриста, своего раба"

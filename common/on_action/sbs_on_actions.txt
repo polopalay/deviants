@@ -16,6 +16,7 @@ random_ntr_on_action = {
 			has_trait = sbs_lesser_succubus
 			has_trait = sbs_demon
 		}
+		NOT = { has_global_variable = seal_the_gates_of_hell }
 		exists = primary_spouse
 		exists = primary_spouse.father
 		is_ruler = yes
@@ -38,6 +39,8 @@ hidden_effect_on_action = {
 		sbs_slavery_event.9997
 		sbs_slavery_event.9998
 		sbs_slavery_event.9999
+		sbs_event.9997
+		sbs_event.9998
 		sbs_event.9999
 	}
 }

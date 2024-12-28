@@ -631,6 +631,7 @@
 					}
 				}
 			}
+			remove_character_flag = warrior_of_jesu
 		}
 	}
 	auto_accept = { scope:actor = scope:recipient }

@@ -74,3 +74,6 @@
   ask_for_become_succubus_interaction: "Bitte um die Transformation zur Succubus"
   ask_for_become_succubus_interaction.desc: "Bitte den Teufel, um eine Succubus zu werden."
   recipient_secondary_ask_for_become_succubus_interaction: "Wähle eine"
+
+  mind_break_the_saint_interaction: "Den Heiligen brechen"
+  mind_break_the_saint_interaction.desc: "Brechen Sie den Geist des Heiligen"

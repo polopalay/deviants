@@ -27,3 +27,8 @@
 	name = "k_belial"
 	culture = "ancient_egyptian"
 }
+
+12121212 = {
+	name = "d_darc"
+	culture = "french"
+}

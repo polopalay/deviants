@@ -76,3 +76,6 @@
   ask_for_become_succubus_interaction: "Demander à devenir Sucube"
   ask_for_become_succubus_interaction.desc: "Demander au diable de devenir une Sucube."
   recipient_secondary_ask_for_become_succubus_interaction: "Choisir un"
+
+  mind_break_the_saint_interaction: "Casser l'esprit du Saint"
+  mind_break_the_saint_interaction.desc: "Cassez l'esprit du Saint [recipient.GetShortUIName]"

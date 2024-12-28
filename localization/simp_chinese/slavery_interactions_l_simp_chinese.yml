@@ -5,9 +5,9 @@
   carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] 是一位 [noble|E]: $VALUE|=+0$"
   carn_enslave_you_have_no_reason: "你没有 [execute_reason|E]: $VALUE|=+0$"
 
-  carn_buy_slave_directly_interaction: "购买奴隶"
-  carn_buy_slave_directly_interaction_desc: "用 [gold|E] 购买一个奴隶"
-  recipient_secondary_carn_buy_slave_directly_interaction: "奴隶"
+  carn_buy_slave_on_market_interaction: "购买奴隶"
+  carn_buy_slave_on_market_interaction_desc: "用 [gold|E] 购买一个奴隶"
+  recipient_secondary_carn_buy_slave_on_market_interaction: "奴隶"
 
   carn_sell_slave_interaction: "出售奴隶"
   carn_sell_slave_interaction.desc: "在奴隶市场上以 #high [gold_i]#! 出售 [recipient.GetShortUINameNoTooltip]"

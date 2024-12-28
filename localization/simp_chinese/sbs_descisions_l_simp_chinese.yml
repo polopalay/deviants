@@ -54,3 +54,8 @@
   complete_ritual_philosophers_stone_decision.t: "完成哲学之石的仪式"
   complete_ritual_philosophers_stone_decision.c: "完成仪式"
   complete_ritual_philosophers_stone_decision.e: "完成哲学之石的仪式"
+
+  seal_the_gates_of_hell: "封印地狱之门"
+  seal_the_gates_of_hell.desc: "地狱之门已经打开，恶魔即将入侵人类世界。你必须找到一种方法来封印地狱之门，阻止恶魔进入 人类世界。"
+  seal_the_gates_of_hell.t: "封印地狱之门"
+  seal_the_gates_of_hell.c: "封印地狱之门"

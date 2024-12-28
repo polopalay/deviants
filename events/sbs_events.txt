@@ -338,6 +338,119 @@ sbs_event.0550 = {
 	}
 }
 
+sbs_event.9997 = {
+	trigger = { 
+		has_character_flag = warrior_of_jesu
+		OR = {
+			has_trait = depressed_1
+			has_trait = depressed_genetic
+			has_trait = lunatic_1
+			has_trait = lunatic_genetic
+			has_trait = possessed_1
+			has_trait = one_eyed
+			has_trait = scarred
+			has_trait = maimed
+			has_trait = one_legged
+			has_trait = disfigured
+			has_trait = eunuch
+			has_trait = blind
+			has_trait = sickly
+			has_trait = infirm
+			has_trait = leper
+			has_trait = incapable
+			has_trait = wounded_1
+			has_trait = wounded_2
+			has_trait = wounded_3
+
+			has_trait = pneumonic
+			has_trait = gout_ridden
+			has_trait = typhus
+			has_trait = consumption
+			has_trait = cancer
+			has_trait = great_pox
+			has_trait = smallpox
+			has_trait = bubonic_plague
+			has_trait = lovers_pox
+			has_trait = early_great_pox
+			has_trait = great_pox
+			has_trait = possessed_genetic
+			has_trait = bubonic_plague
+			has_trait = measles
+			has_trait = dysentery
+			has_trait = ergotism
+		}
+	}
+	hidden = yes
+	immediate = {
+		remove_trait = depressed_1
+		remove_trait = depressed_genetic
+		remove_trait = lunatic_1
+		remove_trait = lunatic_genetic
+		remove_trait = possessed_1
+		remove_trait = possessed_genetic
+		remove_trait = one_eyed
+		remove_trait = scarred
+		remove_trait = maimed
+		remove_trait = one_legged
+		remove_trait = disfigured
+		remove_trait = eunuch_1
+		remove_trait = beardless_eunuch
+		remove_trait = blind
+		remove_trait = sickly
+		remove_trait = infirm
+		remove_trait = incapable
+		remove_trait = leper
+		remove_trait = wounded_1
+		remove_trait = wounded_2
+		remove_trait = wounded_3
+
+		recover_from_disease_effect = { DISEASE = pneumonic }
+		recover_from_disease_effect = { DISEASE = gout_ridden }
+		recover_from_disease_effect = { DISEASE = typhus }
+		recover_from_disease_effect = { DISEASE = consumption }
+		recover_from_disease_effect = { DISEASE = measles }
+		recover_from_disease_effect = { DISEASE = cancer }
+		recover_from_disease_effect = { DISEASE = great_pox }
+		recover_from_disease_effect = { DISEASE = smallpox }
+		recover_from_disease_effect = { DISEASE = bubonic_plague }
+		recover_from_disease_effect = { DISEASE = lovers_pox }
+		recover_from_disease_effect = { DISEASE = early_great_pox }
+		recover_from_disease_effect = { DISEASE = bubonic_plague }
+		recover_from_disease_effect = { DISEASE = dysentery }
+		recover_from_disease_effect = { DISEASE = ergotism }
+	}
+}
+
+sbs_event.9998 = {
+	trigger = { 
+		root = character:jeanne_character
+		OR = {
+			has_trait = rakish
+			has_trait = deviant
+			any_secret = { type = secret_deviant }
+			has_trait = witch
+			any_secret = { type = secret_witch }
+			has_trait = lifestyle_prostitute
+			any_secret = { type = secret_prostitute }
+			NOT = { has_character_flag = warrior_of_jesu }
+			NOT = { religion = religion:christianity_religion }
+		}
+	}
+	hidden = yes
+	immediate = {
+		remove_trait = saint
+		remove_trait = faith_warrior
+		remove_trait = populist_leader
+		set_character_faith_with_conversion = faith:abaddon
+		remove_trait = immortal
+		mind_break_personality = yes
+		set_trait = sbs_lesser_succubus
+		remove_trait = loyal
+		add_trait = disloyal
+		give_nickname = nick_the_betrayer
+	}
+}
+
 sbs_event.9999 = {
 	trigger = { 
 		faith.religion = religion:satanic_religion

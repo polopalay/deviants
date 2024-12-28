@@ -69,3 +69,6 @@
  ask_for_become_succubus_interaction: "Ask for become Succubus"
  ask_for_become_succubus_interaction.desc: "Ask the devil to become a Succubus"
  recipient_secondary_ask_for_become_succubus_interaction: "Choose one"
+
+ mind_break_the_saint_interaction: "Mind Break the Saint"
+ mind_break_the_saint_interaction.desc: "Turn a saint into an antichrist, your slave"

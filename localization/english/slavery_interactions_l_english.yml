@@ -5,9 +5,9 @@
  carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] is a [noble|E]: $VALUE|=+0$"
  carn_enslave_you_have_no_reason: "You do not have an [execute_reason|E]: $VALUE|=+0$"
 
- carn_buy_slave_directly_interaction: "Buy Slave"
- carn_buy_slave_directly_interaction_desc: "Buy a slave for [gold|E]"
- recipient_secondary_carn_buy_slave_directly_interaction: "Slave"
+ carn_buy_slave_on_market_interaction: "Buy Slave"
+ carn_buy_slave_on_market_interaction_desc: "Buy a slave for [gold|E]"
+ recipient_secondary_carn_buy_slave_on_market_interaction: "Slave"
 
  carn_sell_slave_interaction: "Sell Slave"
  carn_sell_slave_interaction.desc: "Sell [recipient.GetShortUINameNoTooltip] on the slave_market for #high [gold_i]#!"

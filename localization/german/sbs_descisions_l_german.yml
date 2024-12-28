@@ -54,3 +54,8 @@
   complete_ritual_philosophers_stone_decision.t: "Das Ritual des Steins der Weisen vervollständigen"
   complete_ritual_philosophers_stone_decision.c: "Das Ritual vervollständigen"
   complete_ritual_philosophers_stone_decision.e: "Das Ritual des Steins der Weisen vervollständigen"
+
+  seal_the_gates_of_hell: "Die Tore der Hölle versiegeln"
+  seal_the_gates_of_hell.desc: "Die Tore der Hölle sind geöffnet, und die Dämonen stehen kurz davor, in die Welt der Menschen einzudringen. Du musst einen Weg finden, die Tore der Hölle zu versiegeln und die Dämonen daran zu hindern, in die Welt der Menschen einzudringen."
+  seal_the_gates_of_hell.t: "Die Tore der Hölle versiegeln"
+  seal_the_gates_of_hell.c: "Die Tore der Hölle versiegeln"

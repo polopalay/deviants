@@ -28,6 +28,7 @@ sbs_devils_gift_interaction = {
 			}
 		}
 		scope:recipient = {
+			remove_character_flag = warrior_of_jesu
 			random_list = {
 				0 = {
 					modifier = {

@@ -562,6 +562,7 @@
 					reveal_to = scope:recipient
 				}
 			}
+			remove_character_flag = warrior_of_jesu
 		}
 		scope:recipient = {
 			if = {

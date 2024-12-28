@@ -54,3 +54,8 @@
   complete_ritual_philosophers_stone_decision.t: "Completar el ritual de la Piedra Filosofal"
   complete_ritual_philosophers_stone_decision.c: "Completar Ritual"
   complete_ritual_philosophers_stone_decision.e: "Completar el ritual de la Piedra Filosofal"
+
+  seal_the_gates_of_hell: "Sellando las Puertas del Infierno"
+  seal_the_gates_of_hell.desc: "Las puertas del infierno se han abierto, los demonios están a punto de invadir el mundo humano. Debes encontrar una manera de sellar las puertas del infierno y evitar que los demonios invadan el mundo humano."
+  seal_the_gates_of_hell.t: "Sellando las Puertas del Infierno"
+  seal_the_gates_of_hell.c: "Sellando las Puertas del Infierno"

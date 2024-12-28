@@ -5,9 +5,9 @@
   carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U]는 [noble|E]입니다: $VALUE|=+0$"
   carn_enslave_you_have_no_reason: "당신은 [execute_reason|E]이 없습니다: $VALUE|=+0$"
 
-  carn_buy_slave_directly_interaction: "노예 구매"
-  carn_buy_slave_directly_interaction_desc: "[gold|E]로 노예를 구매합니다."
-  recipient_secondary_carn_buy_slave_directly_interaction: "노예"
+  carn_buy_slave_on_market_interaction: "노예 구매"
+  carn_buy_slave_on_market_interaction_desc: "[gold|E]로 노예를 구매합니다."
+  recipient_secondary_carn_buy_slave_on_market_interaction: "노예"
 
   carn_sell_slave_interaction: "노예 판매"
   carn_sell_slave_interaction.desc: "[recipient.GetShortUINameNoTooltip]를 노예 시장에서 #high [gold_i]#!에 판매합니다."

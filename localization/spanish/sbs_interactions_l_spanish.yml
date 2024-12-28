@@ -74,3 +74,6 @@
   ask_for_become_succubus_interaction: "Pedir convertirse en Súcubo"
   ask_for_become_succubus_interaction.desc: "Pedir al diablo convertirse en un Súcubo"
   recipient_secondary_ask_for_become_succubus_interaction: "Elegir uno"
+
+  mind_break_the_saint_interaction: "Romper la Mente del Santo"
+  mind_break_the_saint_interaction.desc: "Convertir al santo en un antihéroe, tu esclavo"

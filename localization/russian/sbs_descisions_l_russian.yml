@@ -54,3 +54,8 @@
   complete_ritual_philosophers_stone_decision.t: "Завершить ритуал философского камня"
   complete_ritual_philosophers_stone_decision.c: "Завершить ритуал"
   complete_ritual_philosophers_stone_decision.e: "Завершить ритуал философского камня"
+
+  seal_the_gates_of_hell: "Запечатать врата ада"
+  seal_the_gates_of_hell.desc: "Врата ада открыты, и демоны готовятся вторгнуть в мир людей. Вам нужно найти способ запечатать врата ада и предотвратить втор жение демонов в мир людей."
+  seal_the_gates_of_hell.t: "Запечатать врата ада"
+  seal_the_gates_of_hell.c: "Запечатать врата ада"

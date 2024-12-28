@@ -8,11 +8,9 @@ become_demon = {
 	is_shown = {
 		is_ruler = yes
 		NOT = { has_trait = sbs_demon }
+		NOT = { has_global_variable = seal_the_gates_of_hell }
 		OR = {
-			AND = {
-				has_trait_xp = { trait = sbs_succubus track = corruption value >= 100 }
-				has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
-			}
+			has_trait = sbs_succubus
 			has_trait = seed_of_destruction
 			AND = {
 				faith.religion = religion:satanic_religion
@@ -218,4 +216,234 @@ masturbate = {
 	ai_potential = { always = yes }
 	ai_check_interval = 12
 	ai_will_do = { base = 100 }
+}
+
+seal_the_gates_of_hell = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
+	desc = seal_the_gates_of_hell.desc
+	confirm_text = seal_the_gates_of_hell.c
+	selection_tooltip = seal_the_gates_of_hell.t
+	decision_group_type = decisions
+
+	is_shown = {
+		is_ruler = yes
+		has_character_flag = warrior_of_jesu
+		OR = {
+			AND = {
+				province:2065.religion = religion:christianity_religion
+					custom_description = {
+						text = beelzebub_is_alive
+						character:beelzebub_character = {
+						is_alive = no
+					}
+				}
+				custom_description = {
+					text = beelzebub_isn_seal
+					NOT = { has_global_variable = seal_beelzebub }
+				}
+			}
+			AND = {
+				province:5965.religion = religion:christianity_religion
+				custom_description = {
+					text = lilith_is_alive
+					character:lilith_character = {
+						is_alive = no
+					}
+				}
+				custom_description = {
+					text = lilith_isn_seal
+					NOT = { has_global_variable = seal_lilith }
+				}
+			}
+			AND = {
+				province:482.religion = religion:christianity_religion
+				custom_description = {
+					text = abaddon_is_alive
+					character:abaddon_character = {
+						is_alive = no
+					}
+				}
+				custom_description = {
+					text = abaddon_isn_seal
+					NOT = { has_global_variable = seal_abaddon }
+				}
+			}
+			AND = {
+				province:2575.religion = religion:christianity_religion
+				custom_description = {
+					text = mammon_is_alive
+					character:mammon_character = {
+						is_alive = no
+					}
+				}
+				custom_description = {
+					text = mammon_isn_seal
+					NOT = { has_global_variable = seal_mammon }
+				}
+			}
+			AND = {
+				province:4582.religion = religion:christianity_religion
+				custom_description = {
+					text = asmodeus_is_alive
+					character:asmodeus_character = {
+						is_alive = no
+					}
+				}
+			}
+			AND = {
+				province:6038.religion = religion:christianity_religion
+				custom_description = {
+					text = belial_is_alive
+					character:belial_character = {
+						is_alive = no
+					}
+				}
+			}
+			AND = {
+				custom_description = {
+					text = beelzebub_is_seal
+					has_global_variable = seal_beelzebub
+				}
+				custom_description = {
+					text = lilith_is_seal
+					has_global_variable = seal_lilith
+				}
+				custom_description = {
+					text = abaddon_is_seal
+					has_global_variable = seal_abaddon
+				}
+				custom_description = {
+					text = mammon_is_seal
+					has_global_variable = seal_mammon
+				}
+				custom_description = {
+					text = asmodeus_is_seal
+					has_global_variable = seal_asmodeus
+				}
+				custom_description = {
+					text = belial_is_seal
+					has_global_variable = seal_belial
+				}
+			}
+		}
+	}
+	effect = {
+		add_gold = 1000
+		add_prestige = 1000
+		add_piety = 1000
+		if = {
+			limit = {
+				province:2065.religion = religion:christianity_religion
+				character:beelzebub_character = { is_alive = no }
+				NOT = { has_global_variable = seal_beelzebub }
+			}
+			custom_description = {
+				text = "seal_beelzebub"
+				set_global_variable = { name = seal_beelzebub value = yes }
+			}
+			if = {
+				limit = { NOT = { has_trait = education_learning_5 } }
+				remove_trait = education_learning_1
+				remove_trait = education_learning_2
+				remove_trait = education_learning_3
+				remove_trait = education_learning_4
+				add_trait = education_learning_5
+			}
+		}
+		else_if = {
+			limit = {
+				province:5965.religion = religion:christianity_religion
+				character:lilith_character = { is_alive = no }
+				NOT = { has_global_variable = seal_lilith }
+			}
+			set_global_variable = { name = seal_lilith value = yes }
+			if = {
+				limit = { NOT = { has_trait = education_intrigue_5 } }
+				remove_trait = education_intrigue_1
+				remove_trait = education_intrigue_2
+				remove_trait = education_intrigue_3
+				remove_trait = education_intrigue_4
+				add_trait = education_intrigue_5
+			}
+			else_if = {
+
+			}
+		}
+		else_if = {
+			limit = {
+				province:482.religion = religion:christianity_religion
+				character:abaddon_character = { is_alive = no }
+				NOT = { has_global_variable = seal_abaddon }
+			}
+			set_global_variable = { name = seal_abaddon value = yes }
+			add_trait = logistician
+			add_trait = military_engineer
+			add_trait = aggressive_attacker
+			add_trait = unyielding_defender
+			add_trait = forder
+			add_trait = flexible_leader
+			add_trait = desert_warrior
+			add_trait = jungle_stalker
+			add_trait = reaver
+			add_trait = reckless
+			add_trait = holy_warrior
+			add_trait = open_terrain_expert
+			add_trait = rough_terrain_expert
+			add_trait = forest_fighter
+			add_trait = cautious_leader
+			add_trait = organizer
+			add_trait = winter_soldier
+		}
+		else_if = {
+			limit = {
+				province:2575.religion = religion:christianity_religion
+				character:mammon_character = { is_alive = no }
+				NOT = { has_global_variable = seal_mammon }
+			}
+			set_global_variable = { name = seal_mammon value = yes }
+			if = {
+				limit = { NOT = { has_trait = education_martial_5 } }
+				remove_trait = education_martial_1
+				remove_trait = education_martial_2
+				remove_trait = education_martial_3
+				remove_trait = education_martial_4
+				add_trait = education_martial_5
+			}
+		}
+		else_if = {
+			limit = {
+				province:4582.religion = religion:christianity_religion
+				character:asmodeus_character = { is_alive = no }
+				NOT = { has_global_variable = seal_asmodeus }
+			}
+			set_global_variable = { name = seal_asmodeus value = yes }
+			if = {
+				limit = { NOT = { has_trait = education_diplomacy_5 } }
+				remove_trait = education_diplomacy_1
+				remove_trait = education_diplomacy_2
+				remove_trait = education_diplomacy_3
+				remove_trait = education_diplomacy_4
+				add_trait = education_diplomacy_5
+			}
+		}
+		else_if = {
+			limit = {
+				province:6038.religion = religion:christianity_religion
+				character:belial_character = { is_alive = no }
+				NOT = { has_global_variable = seal_belial }
+			}
+			set_global_variable = { name = seal_belial value = yes }
+			if = {
+				limit = { NOT = { has_trait = education_stewardship_5 } }
+				remove_trait = education_stewardship_1
+				remove_trait = education_stewardship_2
+				remove_trait = education_stewardship_3
+				remove_trait = education_stewardship_4
+				add_trait = education_stewardship_5
+			}
+		}
+		else = {
+			set_global_variable = { name = seal_the_gates_of_hell value = no }
+		}
+	}
 }
