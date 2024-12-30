@@ -338,9 +338,9 @@ sbs_event.0550 = {
 	}
 }
 
-sbs_event.9997 = {
+sbs_event.9993 = {
 	trigger = { 
-		has_character_flag = warrior_of_jesu
+		has_trait = saint
 		OR = {
 			has_trait = depressed_1
 			has_trait = depressed_genetic
@@ -421,9 +421,94 @@ sbs_event.9997 = {
 	}
 }
 
+sbs_event.9993 = {
+	trigger = { is_ruler = yes has_trait = seed_of_destruction any_courtier = { has_trait = slave is_imprisoned_by = root is_immortal = yes is_female = yes } }
+	hidden = yes
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_trait = slave
+				is_imprisoned_by = root
+				is_immortal = yes
+				is_female = yes
+			}
+			release_from_prison = yes
+		}
+	}
+}
+
+sbs_event.9994 = {
+	trigger = { is_ruler = yes OR = { has_trait = slave any_relation = { type = slave_owner } } }
+	hidden = yes
+	immediate = {
+		every_relation = {
+			remove_relation_slave_owner = root
+			root = { remove_relation_slave = prev }
+		}
+		remove_trait = slave
+		add_trait = former_slave
+	}
+}
+
+sbs_event.9995 = {
+	trigger = { is_ruler = yes any_courtier = { has_trait = slave OR = { has_imprisonment_reason = root has_execute_reason = root has_banish_reason = root } } }
+	hidden = yes
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_trait = slave
+				root = { OR = { has_imprisonment_reason = prev has_execute_reason = prev has_banish_reason = prev } }
+			}
+			save_scope_as = slave
+			root = { consume_imprisonment_reasons = scope:slave }
+			root = { consume_execute_reasons = scope:slave }
+			root = { consume_banish_reasons = scope:slave }
+		}
+	}
+}
+
+sbs_event.9996 = {
+	trigger = { is_ruler = yes any_courtier = { has_trait = slave any_relation = { type = slave_owner is_ruler = yes count = 0 } } }
+	hidden = yes
+	immediate = {
+		every_courtier = {
+			limit = {
+				has_trait = slave
+				any_relation = { type = slave_owner is_ruler = yes count = 0 }
+			}
+			every_relation = {
+				type = slave_owner
+				remove_relation_slave = prev
+				prev = { remove_relation_slave_owner = prev }
+			}
+			set_relation_slave_owner = { target = root }
+			save_scope_as = slave
+			root = { set_relation_slave = { target = scope:slave } }
+		}
+	}
+}
+
+sbs_event.9997 = {
+	trigger = { is_ruler = yes any_relation = { type = slave is_ruler = no NOT = { liege = root } } }
+	hidden = yes
+	immediate = {
+		every_relation = {
+			type = slave
+			limit = {
+				is_ruler = no
+				NOT = { liege = root }
+			}
+			save_scope_as = slave
+		}
+		root = {
+			add_courtier = scope:slave
+		}
+	}
+}
+
 sbs_event.9998 = {
 	trigger = { 
-		root = character:jeanne_character
+		has_trait = saint
 		OR = {
 			has_trait = rakish
 			has_trait = deviant
@@ -432,7 +517,6 @@ sbs_event.9998 = {
 			any_secret = { type = secret_witch }
 			has_trait = lifestyle_prostitute
 			any_secret = { type = secret_prostitute }
-			NOT = { has_character_flag = warrior_of_jesu }
 			NOT = { religion = religion:christianity_religion }
 		}
 	}

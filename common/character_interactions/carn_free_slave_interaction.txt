@@ -141,6 +141,7 @@
 		base = 0
 		modifier = { add = 9999 scope:recipient = scope:actor }
 		modifier = { scope:actor = { has_trait = seed_of_destruction } OR = { AND = { age >= 16 age <= 45 } is_immortal = yes } is_female = yes is_lowborn = no add = -1000 }
+		modifier = { scope:actor = { has_trait = seed_of_destruction } add = -100 }
 		modifier = {
 			add = -40
 			scope:actor = {

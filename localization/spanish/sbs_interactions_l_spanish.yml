@@ -77,3 +77,9 @@
 
   mind_break_the_saint_interaction: "Romper la Mente del Santo"
   mind_break_the_saint_interaction.desc: "Convertir al santo en un antihéroe, tu esclavo"
+
+  sbs_looking_new_owner_interaction: "Buscando un nuevo dueño"
+  sbs_looking_new_owner_interaction.desc: "Buscando un nuevo dueño para [recipient.GetShortUIName]"
+
+  sbs_seal_the_devil_interaction: "Sellar al Diablo"
+  sbs_seal_the_devil_interaction.desc: "En el nombre de la espada de Dios, sellaré a estos herejes, amén"

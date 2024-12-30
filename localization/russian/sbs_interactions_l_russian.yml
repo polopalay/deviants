@@ -76,3 +76,9 @@
 
   mind_break_the_saint_interaction: "Сломать разум святого"
   mind_break_the_saint_interaction.desc: "Превратите святого в антихриста, своего раба"
+
+  sbs_looking_new_owner_interaction: "Поиск нового владельца"
+  sbs_looking_new_owner_interaction.desc: "Ищите нового владельца для [recipient.GetShortUIName]"
+
+  sbs_seal_the_devil_interaction: "Запечатать дьявола"
+  sbs_seal_the_devil_interaction.desc: "Во имя меча Божьего я запечатаю этих еретиков, аминь."

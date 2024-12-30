@@ -72,3 +72,9 @@
 
  mind_break_the_saint_interaction: "Mind Break the Saint"
  mind_break_the_saint_interaction.desc: "Turn a saint into an antichrist, your slave"
+
+ sbs_looking_new_owner_interaction: "Looking for a new owner"
+ sbs_looking_new_owner_interaction.desc: "Looking for a new owner for [recipient.GetShortUIName]"
+
+ sbs_seal_the_devil_interaction: "Seal the Devil"
+ sbs_seal_the_devil_interaction.desc : "Au nom de l'épée de Dieu, je scellerai ces hérétiques, amen"

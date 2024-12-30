@@ -76,3 +76,9 @@
 
   mind_break_the_saint_interaction: "성인을 깨뜨리기"
   mind_break_the_saint_interaction.desc: "성인의 정신을 깨뜨립니다."
+
+  sbs_looking_new_owner_interaction: "새 주인 찾기"
+  sbs_looking_new_owner_interaction.desc: "[recipient.GetShortUIName]을 위한 새 주인을 찾습니다."
+
+  sbs_seal_the_devil_interaction: "악마를 봉인하기"
+  sbs_seal_the_devil_interaction.desc: "신의 검의 이름으로, 이 이단자들을 봉인하겠습니다, 아멘"

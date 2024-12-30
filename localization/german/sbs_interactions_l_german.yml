@@ -77,3 +77,9 @@
 
   mind_break_the_saint_interaction: "Den Heiligen brechen"
   mind_break_the_saint_interaction.desc: "Brechen Sie den Geist des Heiligen"
+  
+  sbs_looking_new_owner_interaction: "Suche nach einem neuen Besitzer"
+  sbs_looking_new_owner_interaction.desc: "Suche nach einem neuen Besitzer für [recipient.GetShortUIName]"
+
+  sbs_seal_the_devil_interaction: "Den Teufel versiegeln"
+  sbs_seal_the_devil_interaction.desc: "Im Namen des Schwertes Gottes werde ich diese Ketzer versiegeln, Amen."

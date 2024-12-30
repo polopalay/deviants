@@ -12,6 +12,9 @@ sbs_devils_curse_interaction = {
 				has_trait = sbs_succubus
 			}
 		}
+		scope:recipient = {
+			NOT = { has_trait = saint }
+		}
 	}
 	is_valid = {
 		scope:actor = {
@@ -278,30 +281,6 @@ sbs_devils_curse_interaction = {
 					modifier = { has_trait = sbs_succubus add = -1 }
 					modifier = { has_trait = sbs_demon add = -1 }
 					add_trait = infertile
-				}
-				1 = {
-					modifier = { OR = { has_trait = physique_good has_trait = spindly has_trait = physique_bad } add = -1 }
-					modifier = { has_trait = seed_of_destruction add = -1 }
-					modifier = { has_trait = sbs_lesser_succubus add = -1 }
-					modifier = { has_trait = sbs_succubus add = -1 }
-					modifier = { has_trait = sbs_demon add = -1 }
-					add_trait = physique_bad_1
-				}
-				1 = {
-					modifier = { OR = { has_trait = intellect_good has_trait = intellect_bad } add = -1 }
-					modifier = { has_trait = seed_of_destruction add = -1 }
-					modifier = { has_trait = sbs_lesser_succubus add = -1 }
-					modifier = { has_trait = sbs_succubus add = -1 }
-					modifier = { has_trait = sbs_demon add = -1 }
-					add_trait = intellect_bad_1
-				}
-				1 = {
-					modifier = { OR = { has_trait = beauty_good  has_trait = beauty_bad } add = -1 }
-					modifier = { has_trait = seed_of_destruction add = -1 }
-					modifier = { has_trait = sbs_lesser_succubus add = -1 }
-					modifier = { has_trait = sbs_succubus add = -1 }
-					modifier = { has_trait = sbs_demon add = -1 }
-					add_trait = beauty_bad_1
 				}
 				20 = {
 					modifier = { has_character_flag = succubus_debuff add = -18 }

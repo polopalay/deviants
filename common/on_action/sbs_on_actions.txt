@@ -34,11 +34,11 @@ random_ntr_on_action = {
 
 hidden_effect_on_action = {
 	events = {
-		sbs_slavery_event.9995
-		sbs_slavery_event.9996
-		sbs_slavery_event.9997
-		sbs_slavery_event.9998
-		sbs_slavery_event.9999
+		sbs_event.9992
+		sbs_event.9993
+		sbs_event.9994
+		sbs_event.9995
+		sbs_event.9996
 		sbs_event.9997
 		sbs_event.9998
 		sbs_event.9999

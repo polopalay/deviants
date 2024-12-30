@@ -18,6 +18,7 @@
 				limit = {
 					has_trait = slave
 					has_relation_slave_owner = scope:actor
+					is_ruler = yes
 				}
 				add_to_list = characters
 			}
@@ -25,8 +26,8 @@
 	}
 	on_accept = {
 		scope:actor = { save_scope_as = seller }
-		scope:recipient = { save_scope_as = slave }
-		scope:secondary_recipient = { save_scope_as = buyer }
+		scope:recipient = { save_scope_as = buyer }
+		scope:secondary_recipient = { save_scope_as = slave }
 		carn_buy_slave_effect = { SLAVE_PRICE = scope:recipient.carn_slave_price_value }
 	}
 	ai_accept = {

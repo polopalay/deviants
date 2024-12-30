@@ -252,7 +252,7 @@
 	ai_potential = { always = yes }
 	ai_will_do = {
 		base = 0
-		modifier = { add = 100 scope:actor = scope:recipient scope:recipient = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus has_trait = slave } } }
+		modifier = { add = 100 scope:recipient = { OR = { has_trait = sbs_lesser_succubus has_trait = sbs_succubus has_trait = slave } } }
 		modifier = { add = 20 scope:actor = { faith = { has_doctrine = tenet_polyamory } } scope:recipient = scope:actor }
 		modifier = { add = 40 scope:actor = { has_trait = lustful } scope:recipient = scope:actor }
 		modifier = { add = 40 scope:actor = { has_trait = rakish } scope:recipient = scope:actor }

@@ -38,11 +38,6 @@
 			remove_character_modifier = succubus_buff
 			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
-			if = {
-				limit = { has_trait = deviant_blood }
-				remove_trait = deviant_blood
-				add_trait_xp = { trait = sbs_lesser_succubus value = 50 }
-			}
 		}
 	}
 	ai_accept = {

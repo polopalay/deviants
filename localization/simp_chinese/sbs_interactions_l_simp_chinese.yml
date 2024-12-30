@@ -75,3 +75,10 @@
 
   mind_break_the_saint_interaction: "精神崩溃圣徒"
   mind_break_the_saint_interaction.desc: "使圣徒的精神崩溃"
+
+  sbs_looking_new_owner_interaction: "寻找新主人"
+  sbs_looking_new_owner_interaction.desc: "为[recipient.GetShortUIName]寻找新主人"
+
+  sbs_seal_the_devil_interaction: "封印魔鬼"
+  sbs_seal_the_devil_interaction.desc: "以神之剑的名义，我将封印这些异教徒，阿门。"
+

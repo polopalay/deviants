@@ -79,3 +79,9 @@
 
   mind_break_the_saint_interaction: "Casser l'esprit du Saint"
   mind_break_the_saint_interaction.desc: "Cassez l'esprit du Saint [recipient.GetShortUIName]"
+
+  sbs_looking_new_owner_interaction: "Chercher un nouveau propriétaire"
+  sbs_looking_new_owner_interaction.desc: "Cherchez un nouveau propriétaire pour [recipient.GetShortUIName]"
+
+  sbs_seal_the_devil_interaction: "Sceller le Diable"
+  sbs_seal_the_devil_interaction.desc: "Scellez le diable dans un objet"

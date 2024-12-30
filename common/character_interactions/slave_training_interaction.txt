@@ -7,6 +7,7 @@
 	is_shown = {
 		scope:actor = {
 			is_adult = yes
+			has_relation_slave_owner = scope:recipient
 		}
 		scope:recipient = {
 			has_trait = slave
@@ -37,7 +38,9 @@
 					is_lowborn = no
 				}
 				random_list = {
-					20 = { trigger_event = sbs_slavery_event.0100 }
+					20 = {
+						trigger_event = sbs_slavery_event.0100
+					}
 					10 = {
 						modifier = {
 							OR = {
@@ -155,6 +158,28 @@
 							add = 200
 						}
 						trigger_event = sbs_slavery_event.6100
+					}
+					0 = {
+						modifier = {
+							has_trait = inappetetic
+							add = 200
+						}
+						trigger_event = sbs_slavery_event.6200
+					}
+					0 = {
+						modifier = {
+							has_trait = comfort_eater
+							add = 200
+						}
+						trigger_event = sbs_slavery_event.6300
+					}
+					0 = {
+						modifier = {
+							any_child = { father = scope:owner has_trait = bastard has_trait = slave has_relation_slave_owner = scope:actor }
+							any_courtier = { is_adult = yes NOT = { this = scope:recipient } is_attracted_to_gender_of = scope:recipient count > 1 }
+							add = 5
+						}
+						trigger_event = sbs_slavery_event.6400
 					}
 				}
 			}

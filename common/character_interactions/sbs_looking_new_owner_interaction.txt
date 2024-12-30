@@ -1,0 +1,51 @@
+sbs_looking_new_owner_interaction = {
+	desc = sbs_looking_new_owners_interaction.desc
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
+	common_interaction = yes
+	is_shown = {
+		scope:actor = {
+			has_relation_slave = scope:recipient
+			NOT = { has_trait = seed_of_destruction }
+		}
+		scope:recipient = {
+			has_trait = slave
+			OR = {
+				is_ai = no
+				has_trait = immortal
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { any_living_character = { has_trait = seed_of_destruction } }
+				random_living_character = {
+					limit = { has_trait = seed_of_destruction }
+					save_scope_as = buyer
+				}
+				scope:actor = { save_scope_as = seller }
+				scope:recipient = { save_scope_as = slave }
+				carn_buy_slave_effect = { SLAVE_PRICE = scope:recipient.carn_slave_price_value }
+			}
+			else_if = {
+				random_living_character = {
+					limit = { is_female = no is_adult = yes }
+					save_scope_as = buyer
+				}
+				scope:actor = { save_scope_as = seller }
+				scope:recipient = { save_scope_as = slave }
+				carn_buy_slave_effect = { SLAVE_PRICE = scope:recipient.carn_slave_price_value }
+			}
+		}
+	}
+	auto_accept = yes
+	ai_frequency = 6
+	ai_targets = {
+		ai_recipients = courtiers
+	}
+	ai_potential = { always = yes }
+	ai_will_do = {
+		base = 100
+	}
+}
