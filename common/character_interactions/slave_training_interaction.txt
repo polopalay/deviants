@@ -161,14 +161,20 @@
 					}
 					0 = {
 						modifier = {
-							has_trait = inappetetic
+							OR = {
+								has_trait = inappetetic
+								current_weight < -30
+							}
 							add = 200
 						}
 						trigger_event = sbs_slavery_event.6200
 					}
 					0 = {
 						modifier = {
-							has_trait = comfort_eater
+							OR = {
+								has_trait = comfort_eater
+								current_weight > 30
+							}
 							add = 200
 						}
 						trigger_event = sbs_slavery_event.6300

@@ -2218,6 +2218,7 @@ sbs_slavery_event.6200 = {
 	}
 	option = {
 		ai_chance = { base = 20 }
+		trigger = { has_trait = inappetetic }
 		name = sbs_slavery_event.6200.a
 		custom_tooltip = sbs_slavery_event.6200.a.tt
 		remove_trait = inappetetic
@@ -2257,6 +2258,7 @@ sbs_slavery_event.6210 = {
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
 				prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+				root = { change_current_weight = 5 }
 			}
 		}
 	}
@@ -2278,6 +2280,7 @@ sbs_slavery_event.6300 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
+		trigger = { has_trait = comfort_eater }
 		ai_chance = { base = 20 }
 		name = sbs_slavery_event.6200.a
 		custom_tooltip = sbs_slavery_event.6300.a.tt

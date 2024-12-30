@@ -343,34 +343,6 @@ succubus_cost_purify_price_value = {
 succubus_cost_honor_price_value = {
 	value = 0
 	if = {
-		limit = { has_trait = bastard }
-		add = 2
-	}
-	if = {
-		limit = { has_trait = legitimized_bastard }
-		add = 2
-	}
-	if = {
-		limit = { has_trait = disputed_heritage }
-		add = 1
-	}
-	if = {
-		limit = { has_trait = child_of_concubine_male }
-		add = 1
-	}
-	if = {
-		limit = { has_trait = child_of_concubine_female }
-		add = 1
-	}
-	if = {
-		limit = { has_trait = wild_oat }
-		add = 5
-	}
-	if = {
-		limit = { has_trait = bastard_founder }
-		add = 1
-	}
-	if = {
 		limit = {
 			has_trait = witch
 			trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
@@ -799,34 +771,6 @@ purify_price_value = {
 
 honor_price_value = {
 	value = 0
-	if = {
-		limit = { has_trait = bastard }
-		add = 25
-	}
-	if = {
-		limit = { has_trait = legitimized_bastard }
-		add = 20
-	}
-	if = {
-		limit = { has_trait = disputed_heritage }
-		add = 15
-	}
-	if = {
-		limit = { has_trait = child_of_concubine_male }
-		add = 10
-	}
-	if = {
-		limit = { has_trait = child_of_concubine_female }
-		add = 10
-	}
-	if = {
-		limit = { has_trait = wild_oat }
-		add = 5
-	}
-	if = {
-		limit = { has_trait = bastard_founder }
-		add = 5
-	}
 	if = {
 		limit = {
 			has_trait = witch

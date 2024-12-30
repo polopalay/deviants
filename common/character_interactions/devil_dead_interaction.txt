@@ -29,14 +29,6 @@
 				has_trait = inappetetic
 				stress_level >= 1
 
-				has_trait = bastard
-				has_trait = legitimized_bastard
-				has_trait = disputed_heritage
-				has_trait = child_of_concubine_female
-				has_trait = child_of_concubine_male
-				has_trait = wild_oat
-				has_trait = bastard_founder
-
 				AND = {
 					has_trait = witch
 					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
@@ -374,14 +366,6 @@
 			remove_trait = inappetetic
 			stress_impact = { base = massive_stress_impact_loss }
 
-			remove_trait = bastard
-			remove_trait = legitimized_bastard
-			remove_trait = disputed_heritage
-			remove_trait = child_of_concubine_female
-			remove_trait = child_of_concubine_male
-			remove_trait = wild_oat
-			remove_trait = bastard_founder
-
 			if = {
 				limit = {
 					has_trait = witch
@@ -659,13 +643,6 @@
 		modifier = { add = 5 scope:recipient = { has_trait = comfort_eater } }
 		modifier = { add = 5 scope:recipient = { has_trait = inappetetic } }
 
-		modifier = { add = 20 scope:recipient = { has_trait = bastard } }
-		modifier = { add = 15 scope:recipient = { has_trait = legitimized_bastard } }
-		modifier = { add = 15 scope:recipient = { has_trait = disputed_heritage } }
-		modifier = { add = 10 scope:recipient = { has_trait = child_of_concubine_female } }
-		modifier = { add = 10 scope:recipient = { has_trait = child_of_concubine_male } }
-		modifier = { add = 5 scope:recipient = { has_trait = wild_oat } }
-		modifier = { add = 5 scope:recipient = { has_trait = bastard_founder } }
 		modifier = {
 			add = 20
 			scope:recipient = {

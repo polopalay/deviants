@@ -66,13 +66,6 @@
 				current_weight >= 25
 				current_weight <= -25
 
-				has_trait = bastard
-				has_trait = legitimized_bastard
-				has_trait = disputed_heritage
-				has_trait = child_of_concubine_female
-				has_trait = child_of_concubine_male
-				has_trait = wild_oat
-				has_trait = bastard_founder
 				AND = {
 					has_trait = witch
 					trait_is_shunned_or_criminal_in_faith_or_liege_trigger = { TRAIT = witch }
@@ -363,13 +356,6 @@
 			remove_trait = physique_bad_3
 			remove_trait = inbred
 
-			remove_trait = bastard
-			remove_trait = legitimized_bastard
-			remove_trait = disputed_heritage
-			remove_trait = child_of_concubine_female
-			remove_trait = child_of_concubine_male
-			remove_trait = wild_oat
-			remove_trait = bastard_founder
 			if = {
 				limit = {
 					has_trait = witch
@@ -709,14 +695,6 @@
 		modifier = { add = 2 scope:actor = { has_trait = physique_bad_2 } }
 		modifier = { add = 3 scope:actor = { has_trait = physique_bad_3 } }
 		modifier = { add = 2 scope:actor = { has_trait = inbred } }
-
-		modifier = { add = 2 scope:actor = { has_trait = bastard } }
-		modifier = { add = 2 scope:actor = { has_trait = legitimized_bastard } }
-		modifier = { add = 2 scope:actor = { has_trait = disputed_heritage } }
-		modifier = { add = 1 scope:actor = { has_trait = child_of_concubine_female } }
-		modifier = { add = 1 scope:actor = { has_trait = child_of_concubine_male } }
-		modifier = { add = 1 scope:actor = { has_trait = wild_oat } }
-		modifier = { add = 1 scope:actor = { has_trait = bastard_founder } }
 		modifier = {
 			add = 5
 			scope:actor = {
