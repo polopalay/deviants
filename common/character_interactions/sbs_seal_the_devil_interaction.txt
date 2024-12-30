@@ -36,7 +36,10 @@ sbs_seal_the_devil_interaction = {
 		scope:recipient = {
 			is_imprisoned_by = scope:actor
 			OR = {
-				NOT = { faith.religious_head = scope:recipient }
+				custom_description = {
+					text = NOT_I_AM_HEAD_OF_FAITH_TRIGGER
+					NOT = { faith.religious_head = scope:recipient }
+				}
 				AND = {
 					faith.religious_head = scope:recipient
 					province:2065.religion = religion:christianity_religion
@@ -110,7 +113,7 @@ sbs_seal_the_devil_interaction = {
 					}
 				}
 				custom_description = {
-					text = "seal_beelzebub"
+					text = seal_beelzebub
 					set_global_variable = { name = seal_beelzebub value = yes }
 				}
 			}
@@ -153,6 +156,7 @@ sbs_seal_the_devil_interaction = {
 					add_trait = cautious_leader
 					add_trait = organizer
 					add_trait = winter_soldier
+					add_trait = conqueror
 				}
 				custom_description = {
 					text = "seal_abaddon"
@@ -220,13 +224,6 @@ sbs_seal_the_devil_interaction = {
 			else_if = {
 				limit = { OR = { father = { has_trait = sbs_demon } mother = { has_trait = sbs_demon } } }
 				death = { death_reason = death_execution killer = scope:actor }
-				scope:actor = {
-					add_gold = 10000
-					add_prestige = 10000
-					add_piety = 10000
-				}
-			}
-			else = {
 				if = {
 					limit = { has_trait = education_learning }
 					scope:actor = {
@@ -241,45 +238,59 @@ sbs_seal_the_devil_interaction = {
 				}
 				else_if = {
 					limit = { has_trait = education_intrigue }
-					if = {
-						limit = { has_trait = education_intrigue }
-						change_trait_rank = { trait = education_intrigue_1 rank = 1 }
-					}
-					else_if = {
-						add_trait = education_intrigue_1
+					scope:actor = {
+						if = {
+							limit = { has_trait = education_intrigue }
+							change_trait_rank = { trait = education_intrigue_1 rank = 1 }
+						}
+						else_if = {
+							add_trait = education_intrigue_1
+						}
 					}
 				}
 				else_if = {
 					limit = { has_trait = education_martial }
-					if = {
-						limit = { has_trait = education_martial }
-						change_trait_rank = { trait = education_martial_1 rank = 1 }
-					}
-					else_if = {
-						add_trait = education_martial_1
+					scope:actor = {
+						if = {
+							limit = { has_trait = education_martial }
+							change_trait_rank = { trait = education_martial_1 rank = 1 }
+						}
+						else_if = {
+							add_trait = education_martial_1
+						}
 					}
 				}
 				else_if = {
 					limit = { has_trait = education_diplomacy }
-					if = {
-						limit = { has_trait = education_diplomacy }
-						change_trait_rank = { trait = education_diplomacy_1 rank = 1 }
-					}
-					else_if = {
-						add_trait = education_diplomacy_1
+					scope:actor = {
+						if = {
+							limit = { has_trait = education_diplomacy }
+							change_trait_rank = { trait = education_diplomacy_1 rank = 1 }
+						}
+						else_if = {
+							add_trait = education_diplomacy_1
+						}
 					}
 				}
 				else_if = {
 					limit = { has_trait = education_stewardship }
-					if = {
-						limit = { has_trait = education_stewardship }
-						change_trait_rank = { trait = education_stewardship_1 rank = 1 }
-					}
-					else_if = {
-						add_trait = education_stewardship_1
+					scope:actor = {
+						if = {
+							limit = { has_trait = education_stewardship }
+							change_trait_rank = { trait = education_stewardship_1 rank = 1 }
+						}
+						else_if = {
+							add_trait = education_stewardship_1
+						}
 					}
 				}
-
+				scope:actor = {
+					add_gold = 10000
+					add_prestige = 10000
+					add_piety = 10000
+				}
+			}
+			else = {
 				remove_trait = sbs_demon
 			}
 		}

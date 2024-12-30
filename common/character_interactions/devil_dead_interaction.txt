@@ -631,7 +631,7 @@
 					}
 				}
 			}
-			remove_character_flag = warrior_of_jesu
+			remove_character_flag = antichrist
 		}
 	}
 	auto_accept = { scope:actor = scope:recipient }

@@ -22,6 +22,7 @@
 	trait = reincarnation
 	trait = intellect_good_3
 	trait = physique_good_3
+	trait = conqueror
 	1049.1.1 = {
 		birth = "1049.6.1"
 	}
@@ -29,7 +30,6 @@
 		effect = {
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
-			add_character_flag = warrior_of_jesu
 			set_landless_government_effect = yes
 			add_piety_level = 6
 			add_prestige_level = 6
@@ -61,6 +61,7 @@ lilim_character = {
 	trait = education_martial_3
 	trait = education_intrigue_3
 	trait = sbs_lesser_succubus
+	trait = conqueror
 	666.1.1 = {
 		birth = "666.6.13"
 		effect = {
@@ -123,21 +124,29 @@ lilith_character = {
 			give_nickname = nickname_the_demon_queen
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
+			add_piety_level = 6
+			add_prestige_level = 6
 			add_secret = { type = secret_deviant }
 			add_secret = { type = secret_witch }
 			set_immortal_age = 18
 		}
 	}
 	6.1.3 = {
-       	        effect = {
-       	                set_relation_friend = { reason = friend_generic_history target = character:abaddon_character }
-       	        }
+       	effect = {
+       	    set_relation_friend = { reason = friend_generic_history target = character:abaddon_character }
+       	    set_relation_friend = { reason = friend_generic_history target = character:beelzebub_character }
+			set_relation_friend = { reason = friend_generic_history target = character:mammon_character }
+			set_relation_friend = { reason = friend_generic_history target = character:asmodeus_character }
+			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
        	}
-       	666.1.1 = {
-       	        effect = {
-       	        	set_relation_lover = { reason = lover_history target = character:abaddon_character }
-       		}
-       	}
+    }
+    666.1.1 = {
+		effect = {
+           	set_relation_lover = { reason = lover_history target = character:abaddon_character }
+			set_relation_soulmate = character:abaddon_character
+			marry = character:abaddon_character
+    	}
+    }
 }
 
 abaddon_character = {
@@ -174,13 +183,93 @@ abaddon_character = {
 	trait = cautious_leader
 	trait = organizer
 	trait = winter_soldier
+	trait = conqueror
 	1.1.1 = {
 		birth = "1.1.1"
 		effect = {
 			give_nickname = nickname_the_demon_king
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
+			add_piety_level = 6
+			add_prestige_level = 6
 			set_immortal_age = 40
+		}
+	}
+	6.1.3 = {
+       	effect = {
+       	    set_relation_friend = { reason = friend_generic_history target = character:beelzebub_character }
+			set_relation_friend = { reason = friend_generic_history target = character:mammon_character }
+			set_relation_friend = { reason = friend_generic_history target = character:asmodeus_character }
+			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
+       	}
+    }
+	666.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1000
+				location = province:2575
+				origin = province:2575
+			}
+			
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1000
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 2
+				}
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 2
+				}
+				location = province:2575
+				origin = province:2575
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1000
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 4
+				}
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 2
+				}
+				location = province:2575
+				origin = province:2575
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1000
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 4
+				}
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 4
+				}
+				location = province:2575
+				origin = province:2575
+				inheritable = no
+				war_keep_on_attacker_victory = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1000
+				men_at_arms = {
+					type = onager
+					stacks = 10
+				}
+				location = province:2575
+				origin = province:2575
+				inheritable = no
+				war_keep_on_attacker_victory = no
+			}
 		}
 	}
 }
@@ -209,9 +298,18 @@ beelzebub_character = {
 			give_nickname = nickname_the_demon_queen
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
+			add_piety_level = 6
+			add_prestige_level = 6
 			set_immortal_age = 18
 		}
 	}
+	6.1.3 = {
+       	effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:mammon_character }
+			set_relation_friend = { reason = friend_generic_history target = character:asmodeus_character }
+			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
+       	}
+    }
 }
 
 mammon_character = {
@@ -237,9 +335,17 @@ mammon_character = {
 			give_nickname = nickname_the_demon_king
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
+			add_piety_level = 6
+			add_prestige_level = 6
 			set_immortal_age = 40
 		}
 	}
+	6.1.3 = {
+       	effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:asmodeus_character }
+			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
+       	}
+    }
 }
 
 asmodeus_character = {
@@ -265,9 +371,16 @@ asmodeus_character = {
 			give_nickname = nickname_the_demon_king
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
+			add_piety_level = 6
+			add_prestige_level = 6
 			set_immortal_age = 40
 		}
 	}
+	6.1.3 = {
+       	effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
+       	}
+    }
 }
 
 belial_character = {
@@ -294,6 +407,8 @@ belial_character = {
 			give_nickname = nickname_the_demon_queen
 			add_character_flag = has_scripted_appearance
 			add_character_flag = do_not_generate_starting_family
+			add_piety_level = 6
+			add_prestige_level = 6
 			set_immortal_age = 18
 		}
 	}

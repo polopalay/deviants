@@ -12,14 +12,16 @@
 		}
 		scope:recipient = {
 			has_trait = saint
-			has_character_flag = warrior_of_jesu
 		}
 	}
 	is_valid = {
 		scope:actor = {
 			OR = {
 				has_trait = sbs_demon
-				has_trait = sbs_succubus
+				AND = {
+					has_trait_xp = { trait = sbs_succubus track = loyalty value = 5 }
+					has_trait_xp = { trait = sbs_succubus track = corruption value = 5 }
+				}
 			}
 		}
 		scope:recipient = {
@@ -65,7 +67,6 @@
 				remove_trait = saint
 				remove_trait = faith_warrior
 				remove_trait = populist_leader
-				remove_character_flag = warrior_of_jesu
 				remove_trait = immortal
 				mind_break_personality = yes
 				add_trait = sbs_lesser_succubus

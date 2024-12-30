@@ -28,7 +28,7 @@ sbs_devils_gift_interaction = {
 			}
 		}
 		scope:recipient = {
-			remove_character_flag = warrior_of_jesu
+			remove_character_flag = antichrist
 			random_list = {
 				0 = {
 					modifier = {

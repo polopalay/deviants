@@ -1,0 +1,35 @@
+﻿war = {
+	name = "the_expedition_of_abaddon_1"
+	start_date = 866.1.1
+	end_date = 868.1.1
+	targeted_titles = {
+		k_romagna
+	}
+	casus_belli = invasion_war
+	attackers = { abaddon_character }
+	defenders = { 7853 }
+}
+
+war = {
+	name = "the_expedition_of_abaddon_2"
+	start_date = 1065.1.1
+	end_date = 1067.1.1
+	targeted_titles = {
+		k_italy
+	}
+	casus_belli = invasion_war
+	attackers = { abaddon_character }
+	defenders = { 1316 }
+}
+
+war = {
+	name = "the_expedition_of_abaddon_3"
+	start_date = 1177.1.1
+	end_date = 1179.1.1
+	targeted_titles = {
+		k_sicily
+	}
+	casus_belli = invasion_war
+	attackers = { abaddon_character }
+	defenders = { 211500 }
+}

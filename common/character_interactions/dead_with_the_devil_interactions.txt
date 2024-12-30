@@ -562,7 +562,7 @@
 					reveal_to = scope:recipient
 				}
 			}
-			remove_character_flag = warrior_of_jesu
+			remove_character_flag = antichrist
 		}
 		scope:recipient = {
 			if = {

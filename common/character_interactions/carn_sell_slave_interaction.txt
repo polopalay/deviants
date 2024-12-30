@@ -5,6 +5,7 @@
 	needs_recipient_to_open = yes
 	is_shown = {
 		scope:actor = {
+			is_ruler = yes
 			any_courtier = { has_trait = slave has_relation_slave_owner = scope:actor }
 		}
 		scope:recipient = {
@@ -18,7 +19,6 @@
 				limit = {
 					has_trait = slave
 					has_relation_slave_owner = scope:actor
-					is_ruler = yes
 				}
 				add_to_list = characters
 			}

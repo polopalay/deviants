@@ -253,7 +253,7 @@ seal_the_gates_of_hell = {
 
 	is_shown = {
 		is_ruler = yes
-		has_character_flag = warrior_of_jesu
+		has_trait = saint
 		province:2065.religion = religion:christianity_religion
 		province:5965.religion = religion:christianity_religion
 		province:482.religion = religion:christianity_religion

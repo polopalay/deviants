@@ -14,3 +14,27 @@ remove_relation_slave_owner = {
 	global = remove_relation_slave_owner_g
 	first = remove_relation_slave_owner_f
 }
+seal_beelzebub = {
+	global = seal_beelzebub
+	first = seal_beelzebub
+}
+seal_lilith = {
+	global = seal_lilith
+	first = seal_lilith
+}
+seal_abaddon = {
+	global = seal_abaddon
+	first = seal_abaddon
+}
+seal_mammon = {
+	global = seal_mammon
+	first = seal_mammon
+}
+seal_asmodeus = {
+	global = seal_asmodeus
+	first = seal_asmodeus
+}
+seal_belial = {
+	global = seal_belial
+	first = seal_belial
+}

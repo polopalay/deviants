@@ -17,8 +17,25 @@ random_ntr_on_action = {
 			has_trait = sbs_demon
 		}
 		NOT = { has_global_variable = seal_the_gates_of_hell }
-		exists = primary_spouse
-		exists = primary_spouse.father
+		primary_spouse.father = {
+			OR = {
+				has_trait = cynical
+				has_trait = lustful
+				has_trait = callous
+				has_trait = ambitious
+				has_trait = deceitful
+				has_trait = seducer
+				has_trait = schemer
+				has_trait = torturer
+			}
+			NOT = {
+				has_trait = just
+				has_trait = honest
+				has_trait = chaste
+				has_trait = brave
+				has_trait = zealous
+			}
+		}
 		is_ruler = yes
 		is_landed = yes
 	}
