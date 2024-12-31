@@ -254,6 +254,8 @@ seal_the_gates_of_hell = {
 	is_shown = {
 		is_ruler = yes
 		has_trait = saint
+	}
+	is_valid = {
 		province:2065.religion = religion:christianity_religion
 		province:5965.religion = religion:christianity_religion
 		province:482.religion = religion:christianity_religion
@@ -266,6 +268,7 @@ seal_the_gates_of_hell = {
 		custom_description = { text = mammon_is_seal has_global_variable = seal_mammon }
 		custom_description = { text = asmodeus_is_seal has_global_variable = seal_asmodeus }
 		custom_description = { text = belial_is_seal has_global_variable = seal_belial }
+		NOT = { has_global_variable = seal_the_gates_of_hell }
 	}
 	effect = {
 		add_piety = 10000

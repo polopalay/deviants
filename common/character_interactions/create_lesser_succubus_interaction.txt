@@ -6,6 +6,7 @@
 	common_interaction = yes
 	cooldown = { years = 50 }
 	is_shown = {
+		NOT = { has_global_variable = seal_the_gates_of_hell }
 		scope:recipient = { has_trait = sbs_lesser_succubus }
 		scope:actor = { has_trait = sbs_demon }
 	}

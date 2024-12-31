@@ -7,7 +7,6 @@
 	is_shown = {
 		scope:actor = {
 			is_adult = yes
-			has_relation_slave_owner = scope:recipient
 		}
 		scope:recipient = {
 			has_trait = slave

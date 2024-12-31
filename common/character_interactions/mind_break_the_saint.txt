@@ -27,7 +27,7 @@
 		scope:recipient = {
 			OR = {
 				is_imprisoned_by = scope:actor
-				has_relation_slave_owner = scope:actor
+				has_relation_slave = scope:actor
 			}
 		}
 	}

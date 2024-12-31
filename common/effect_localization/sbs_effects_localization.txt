@@ -38,3 +38,7 @@ seal_belial = {
 	global = seal_belial
 	first = seal_belial
 }
+seal_the_gates_of_hell = {
+	global = seal_the_gates_of_hell
+	first = seal_the_gates_of_hell
+}

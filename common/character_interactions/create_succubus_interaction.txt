@@ -6,6 +6,7 @@
 	cooldown = { years = 25 }
 	common_interaction = yes
 	is_shown = {
+		NOT = { has_global_variable = seal_the_gates_of_hell }
 		scope:recipient = {
 			is_female = yes
 			is_immortal = no

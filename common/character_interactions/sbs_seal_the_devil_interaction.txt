@@ -10,7 +10,12 @@ sbs_seal_the_devil_interaction = {
 			faith.religion = religion:christianity_religion
 		}
 		scope:recipient = {
-			has_trait = sbs_demon
+			OR = {
+				has_trait = sbs_demon
+				has_trait = sbs_succubus
+				has_trait = sbs_lesser_succubus
+				has_trait = seed_of_destruction
+			}
 		}
 	}
 	is_valid = {
@@ -292,6 +297,12 @@ sbs_seal_the_devil_interaction = {
 			}
 			else = {
 				remove_trait = sbs_demon
+				remove_trait = sbs_succubus
+				remove_trait = sbs_lesser_succubus
+				remove_trait = seed_of_destruction
+				scope:actor = {
+					add_piety = 100
+				}
 			}
 		}
 	}

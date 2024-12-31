@@ -26,24 +26,24 @@ sbs_ntr_event.0100 = {
 	}
 	option = {
 		ai_chance = {
-			base = 10
+			base = 25
 			modifier = { has_trait = chaste add = -500 }
 			modifier = { has_trait = lustful add = 200 }
 			modifier = { scope:ntr_character = { has_trait = seducer } add = 200 }
-			modifier = { scope:ntr_character = { has_trait = shrewd add = 20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } add = 20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } add = 30 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 3 } add = 50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } add = 50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } add = 100 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } add = 200 }
-			modifier = { scope:ntr_character = { has_trait = dull add = 20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 1 } add = -20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 2 } add = -30 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 3 } add = -50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } add = -50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } add = -100 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } add = -200 }
+			modifier = { scope:ntr_character = { has_trait = shrewd } add = 20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } } add = 20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } } add = 30 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 3 } } add = 50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } } add = 50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } } add = 100 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } } add = 200 }
+			modifier = { scope:ntr_character = { has_trait = dull } add = 20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 1 } } add = -20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 2 } } add = -30 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 3 } } add = -50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -100 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -200 }
 			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
 		}
 		name = sbs_ntr_event.0100.a
@@ -57,24 +57,24 @@ sbs_ntr_event.0100 = {
 	}
 	option = {
 		ai_chance = {
-			base = 10
+			base = 25
 			modifier = { has_trait = chaste add = -500 }
-			modifier = { scope:ntr_character = { has_trait = schemer } add =  50 }
 			modifier = { scope:ntr_character = { has_trait = seducer } add = 200 }
-			modifier = { scope:ntr_character = { has_trait = shrewd add = 20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } add = 20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } add = 30 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 3 } add = 50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } add = 50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } add = 100 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } add = 200 }
-			modifier = { scope:ntr_character = { has_trait = dull add = 20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 1 } add = -20 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 2 } add = -30 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 3 } add = -50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } add = -50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } add = -100 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } add = -200 }
+			modifier = { scope:ntr_character = { has_trait = shrewd } add = 20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } } add = 20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } } add = 30 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 3 } } add = 50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } } add = 50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } } add = 100 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } } add = 200 }
+			modifier = { scope:ntr_character = { has_trait = dull } add = 20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 1 } } add = -20 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 2 } } add = -30 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 3 } } add = -50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -50 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -100 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -200 }
+			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
 			modifier = { has_trait = dull add =  50 }
 			modifier = { has_trait = trusting add =  50 }
 			modifier = { has_trait = paranoid add =  50 }
@@ -85,7 +85,8 @@ sbs_ntr_event.0100 = {
 		trigger_event = sbs_ntr_event.0120
 	}
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = { base = 50 }
+		modifier = { has_trait = lustful add = -25 }
 		name = sbs_ntr_event.0100.c
 		custom_tooltip = sbs_ntr_event.0100.c.tt
 		add_character_flag = sbs_faithful_wife	

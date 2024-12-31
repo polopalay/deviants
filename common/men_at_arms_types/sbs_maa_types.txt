@@ -91,10 +91,10 @@ succubus_zombie = {
 		}
 	}
 
-	pursuit = 25
-	screen = 25
-	damage = 25
-	toughness = 25
+	pursuit = 15
+	screen = 5
+	damage = 10
+	toughness = 10
 
 	terrain_bonus = {
 		plains = { damage = 13 }
@@ -129,9 +129,9 @@ succubus_skeleton = {
 		}
 	}
 
-	pursuit = 50
+	pursuit = 25
 	screen = 0
-	damage = 50
+	damage = 25
 	toughness = 0
 
 	terrain_bonus = {

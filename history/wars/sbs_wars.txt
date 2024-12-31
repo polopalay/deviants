@@ -7,7 +7,7 @@
 	}
 	casus_belli = invasion_war
 	attackers = { abaddon_character }
-	defenders = { 7853 }
+	defenders = { 7853 30228 90107 144998 184026 90104 }
 }
 
 war = {
@@ -15,11 +15,11 @@ war = {
 	start_date = 1065.1.1
 	end_date = 1067.1.1
 	targeted_titles = {
-		k_italy
+		k_romagna
 	}
 	casus_belli = invasion_war
 	attackers = { abaddon_character }
-	defenders = { 1316 }
+	defenders = { 1316 2008 7757 1128 7800 1118 112600 jeanne_character }
 }
 
 war = {
@@ -27,9 +27,9 @@ war = {
 	start_date = 1177.1.1
 	end_date = 1179.1.1
 	targeted_titles = {
-		k_sicily
+		k_romagna
 	}
 	casus_belli = invasion_war
 	attackers = { abaddon_character }
-	defenders = { 211500 }
+	defenders = { 71810 211500 212501 204500 jeanne_character }
 }

@@ -9,6 +9,7 @@
 	cooldown = { years = 25 }
 
 	is_shown = {
+		NOT = { has_global_variable = seal_the_gates_of_hell }
 		scope:actor = {
 			is_female = yes
 			has_trait = sbs_lesser_succubus
