@@ -59,3 +59,8 @@
  seal_the_gates_of_hell.desc: "The gates of hell are open, and the demons are about to invade the world of humans. You must find a way to seal the gates of hell and prevent the demons from entering the human world."
  seal_the_gates_of_hell.t: "Seal the Gates of Hell"
  seal_the_gates_of_hell.c: "Seal the Gates of Hell"
+
+ alienate_people: "Alienate People"
+ alienate_people.desc: "Corrupt your people. Let them worship the true god"
+ alienate_people.t: "Alienate People"
+ alienate_people.c: "Alienate People"

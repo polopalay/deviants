@@ -6,7 +6,6 @@ sbs_seal_the_devil_interaction = {
 	is_shown = {
 		scope:actor = {
 			is_ruler = yes
-			has_trait = saint
 			faith.religion = religion:christianity_religion
 		}
 		scope:recipient = {
@@ -105,6 +104,15 @@ sbs_seal_the_devil_interaction = {
 	on_accept = {
 		scope:recipient = {
 			if = {
+				limit = { scope:actor = { NOT = { has_trait = saint } } }
+				add_trait = saint
+				give_nickname = nick_the_saint
+			}
+			else_if = {
+				limit = { scope:actor = { NOT = { has_trait = immortal } } }
+				add_trait = immortal
+			}
+			else_if = {
 				limit = { faith.religious_head = scope:recipient faith = faith:beelzebub }
 				death = { death_reason = death_execution killer = scope:actor }
 				scope:actor = {
@@ -223,10 +231,6 @@ sbs_seal_the_devil_interaction = {
 				}
 			}
 			else_if = {
-				limit = { scope:actor = { NOT = { has_trait = immortal } } }
-				death = { death_reason = death_execution killer = scope:actor }
-			}
-			else_if = {
 				limit = { OR = { father = { has_trait = sbs_demon } mother = { has_trait = sbs_demon } } }
 				death = { death_reason = death_execution killer = scope:actor }
 				if = {
@@ -313,6 +317,13 @@ sbs_seal_the_devil_interaction = {
 	}
 	ai_potential = { always = yes }
 	ai_will_do = {
-		base = 100
+		base = 20
+		modifier = { add = -100 scope:actor = { ai_zeal < very_low_positive_ai_value } }
+		modifier = { add = -50 scope:actor = { ai_zeal < low_positive_ai_value } }
+		modifier = { add = -20 scope:actor = { ai_zeal < medium_positive_ai_value } }
+		modifier = { add = 20 scope:actor = { ai_zeal > high_positive_ai_value } }
+		modifier = { add = 50 scope:actor = { ai_zeal > very_high_positive_ai_value } }
+		modifier = { add = 100 scope:actor = { ai_zeal > dominant_positive_ai_value } }
+		modifier = { scope:actor = { has_trait = zealous } add = 100 }
 	}
 }

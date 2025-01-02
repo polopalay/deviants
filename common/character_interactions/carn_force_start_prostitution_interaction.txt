@@ -7,8 +7,16 @@
 
 	is_shown = {
 		OR = {
-			scope:actor = { faith = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted } }
-			scope:actor = { OR = { has_trait = rakish has_trait = lustful has_trait = deviant any_secret = { secret_type = secret_deviant } any_secret = { secret_type = secret_prostitute } } }
+			scope:actor = {
+				OR = {
+					has_trait = rakish
+					has_trait = lustful
+					has_trait = deviant
+					any_secret = { secret_type = secret_deviant }
+					any_secret = { secret_type = secret_prostitute }
+					faith = { has_doctrine = doctrine_adultery_men_accepted has_doctrine = doctrine_adultery_women_accepted }
+				}
+			}
 			scope:recipient = {
 				OR = {
 					has_trait = sbs_succubus
@@ -186,10 +194,6 @@
 			if = {
 				limit = { is_imprisoned_by = scope:actor }
 				release_from_prison = yes
-			}
-			if = {
-				limit = { have_devil_nicknames_trigger = no is_female = yes }
-				give_prostitution_nickname = yes
 			}
 		}
 		scope:actor = {

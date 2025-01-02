@@ -37,12 +37,11 @@
 			set_immortal_age = 18
 			spawn_army = {
 				name = event_troop_default_name
-				levies = 2000
 				location = province:2333
 				origin = province:2333
 				men_at_arms = {
 					type = teutonic_knights
-					stacks = 5
+					stacks = 10
 				}
 				men_at_arms = {
 					type = trebuchet
@@ -57,11 +56,18 @@
 		effect = {
 			spawn_army = {
 				name = event_troop_default_name
-				levies = 2000
 				location = province:2333
 				origin = province:2333
 				men_at_arms = {
 					type = teutonic_knights
+					stacks = 10
+				}
+				men_at_arms = {
+					type = crossbowmen
+					stacks = 5
+				}
+				men_at_arms = {
+					type = bombard
 					stacks = 5
 				}
 				inheritable = no
@@ -126,6 +132,20 @@ lilim_character = {
 			add_trait_xp = { trait = sbs_succubus track = loyalty value = 33 }
 			add_trait_xp = { trait = sbs_succubus track = power value = 33 }
 			add_trait_xp = { trait = sbs_succubus track = daring value = 25 }
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
 		}
 	}
 }
@@ -175,6 +195,26 @@ lilith_character = {
            	set_relation_lover = { reason = lover_history target = character:abaddon_character }
 			set_relation_soulmate = character:abaddon_character
 			marry = character:abaddon_character
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
     	}
     }
 }
@@ -231,72 +271,105 @@ abaddon_character = {
 			set_relation_friend = { reason = friend_generic_history target = character:mammon_character }
 			set_relation_friend = { reason = friend_generic_history target = character:asmodeus_character }
 			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
        	}
     }
 	1065.1.1 = {
 		effect = {
 			spawn_army = {
 				name = event_troop_default_name
-				levies = 1000
-				location = province:2575
-				origin = province:2575
-			}
-			
-			spawn_army = {
-				name = event_troop_default_name
-				levies = 1000
-				men_at_arms = {
-					type = succubus_death_korps
-					stacks = 2
-				}
 				men_at_arms = {
 					type = succubus_dark_amry
-					stacks = 2
+					stacks = 10
 				}
-				location = province:2575
-				origin = province:2575
-				inheritable = no
-			}
-			spawn_army = {
-				name = event_troop_default_name
-				levies = 1000
-				men_at_arms = {
-					type = succubus_death_korps
-					stacks = 4
-				}
-				men_at_arms = {
-					type = succubus_dark_amry
-					stacks = 2
-				}
-				location = province:2575
-				origin = province:2575
-				inheritable = no
-			}
-			spawn_army = {
-				name = event_troop_default_name
-				levies = 1000
-				men_at_arms = {
-					type = succubus_death_korps
-					stacks = 4
-				}
-				men_at_arms = {
-					type = succubus_dark_amry
-					stacks = 4
-				}
-				location = province:2575
-				origin = province:2575
+				location = province:2608
+				origin = province:2608
 				inheritable = no
 				war_keep_on_attacker_victory = no
 			}
 			spawn_army = {
 				name = event_troop_default_name
-				levies = 1000
 				men_at_arms = {
-					type = onager
+					type = succubus_dark_amry
 					stacks = 10
 				}
-				location = province:2575
-				origin = province:2575
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+				war_keep_on_attacker_victory = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+				war_keep_on_attacker_victory = no
+			}
+		}
+	}
+	1178.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
 				inheritable = no
 				war_keep_on_attacker_victory = no
 			}
@@ -340,6 +413,30 @@ beelzebub_character = {
 			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
        	}
     }
+	666.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+		}
+	}
 }
 
 mammon_character = {
@@ -376,6 +473,30 @@ mammon_character = {
 			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
        	}
     }
+	666.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+		}
+	}
 }
 
 asmodeus_character = {
@@ -411,6 +532,30 @@ asmodeus_character = {
 			set_relation_friend = { reason = friend_generic_history target = character:belial_character }
        	}
     }
+	666.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+		}
+	}
 }
 
 belial_character = {
@@ -440,6 +585,30 @@ belial_character = {
 			add_piety_level = 6
 			add_prestige_level = 6
 			set_immortal_age = 18
+		}
+	}
+	666.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
+					stacks = 10
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_death_korps
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
 		}
 	}
 }

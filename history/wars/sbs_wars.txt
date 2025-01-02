@@ -7,7 +7,7 @@
 	}
 	casus_belli = invasion_war
 	attackers = { abaddon_character }
-	defenders = { 7853 30228 90107 144998 184026 90104 }
+	defenders = { 30228 7853 90107 144998 90104 42018 71908 163070 163057 163071 168137 127007 }
 }
 
 war = {
@@ -19,7 +19,7 @@ war = {
 	}
 	casus_belli = invasion_war
 	attackers = { abaddon_character }
-	defenders = { 1316 2008 7757 1128 7800 1118 112600 jeanne_character }
+	defenders = { 1316 2008 7757 1118 1128 214 522 1182 336 240 210 394 1416 476 8622 762 420 71285 167671 2022 1152 73318 7800 1610 73492 73604 7740 167994 180023 1119 jeanne_character }
 }
 
 war = {
@@ -27,9 +27,19 @@ war = {
 	start_date = 1177.1.1
 	end_date = 1179.1.1
 	targeted_titles = {
-		k_romagna
+		k_burgundy
 	}
 	casus_belli = invasion_war
-	attackers = { abaddon_character }
-	defenders = { 71810 211500 212501 204500 jeanne_character }
+	attackers = { abaddon_character lilith_character beelzebub_character mammon_character asmodeus_character belial_character lilim_character }
+	defenders = {
+		# every king follow abarahamic religion
+		212501 71810 204500 205500 221520 219500 212600 210500 201510 207510 208500 209503 200500 202999 206500
+		# every duke in hre
+		213100 205599 212850 212500 7537 212580  212690 212390 206850 212430 212030 212930 212995 7680 
+		# every city in italy
+		aldobrandeschi_1 213100 cisalpine0140 monaldeschi_1 167443 piccolomini_1 barbolani_1 213027 cavalcanti_1 porcari_1 cisalpine0037 asinelli_1 73547 cisalpine0153 213600 cisalpine0208 cisalpine0204 cisalpine0158 carpineto_1 osa_1 beccaria_1 91416 213007 259002 guidi_1 223597 bonacolsi_1 cisalpine0778 213520 71264 218800 218500 34141 235193 180410 71631 144526 
+		# some duke in europe
+		212591 206000 205530 71640 205730
+		jeanne_character
+	}
 }

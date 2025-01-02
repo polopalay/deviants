@@ -59,3 +59,8 @@
   seal_the_gates_of_hell.desc: "지옥의 문이 열렸으며, 악마들이 인간 세계로 침입하려고 합니다. 지옥의 문을 봉인하고 악마들이 인간 세계로 침입하는 것을 막을 방법을 찾아야 합니다."
   seal_the_gates_of_hell.t: "지옥의 문을 봉인"
   seal_the_gates_of_hell.c: "지옥의 문을 봉인"
+
+  alienate_people: "사람들을 소외시키기"
+  alienate_people.desc: "당신은 이미 악마로 변모했습니다. 이제는 인간들을 소외시키고, 당신의 힘을 더욱 강화하기 위해 다른 사람들을 더욱 더 소외시키고 싶어합니다."
+  alienate_people.t: "사람들을 소외시키기"
+  alienate_people.c: "사람들을 소외시키기"

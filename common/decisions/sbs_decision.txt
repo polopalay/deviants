@@ -25,20 +25,12 @@ become_demon = {
 				has_trait_xp = { trait = sbs_succubus track = corruption value >= 100 }
 				has_trait_xp = { trait = sbs_succubus track = loyalty value >= 100 }
 				any_prisoner = { count >= 6 is_ai = yes is_adult = yes is_immortal = no }
-				OR = {
-					any_courtier = { OR = { has_trait = sbs_demon has_trait = sbs_succubus has_trait_xp = { trait = sbs_lesser_succubus value = 100 } } }
-					any_vassal = { OR = { has_trait = sbs_demon has_trait = sbs_succubus has_trait_xp = { trait = sbs_lesser_succubus value = 100 } } }
-				}
 			}
 			AND = {
 				has_trait = seed_of_destruction
 				has_trait_xp = { trait = seed_of_destruction value >= 100 }
 				any_courtier = { has_trait = slave is_ai = yes count >= 13 is_immortal = no is_adult = yes }
 				any_courtier = { has_trait = slave is_female = yes is_immortal = yes }
-				OR = {
-					any_courtier = { OR = { has_trait = sbs_demon has_trait = sbs_succubus has_trait_xp = { trait = sbs_lesser_succubus value = 100 } } }
-					any_vassal = { OR = { has_trait = sbs_demon has_trait = sbs_succubus has_trait_xp = { trait = sbs_lesser_succubus value = 100 } } }
-				}
 			}
 			AND = {
 				faith.religion = religion:satanic_religion
@@ -71,23 +63,6 @@ become_demon = {
 					death = {
 						death_reason = death_execution
 						killer = root
-					}
-				}
-			}
-			if = {
-				limit = { any_courtier = { OR = { has_trait = sbs_demon has_trait = sbs_succubus has_trait_xp = { trait = sbs_lesser_succubus value = 100 } } } }
-				random_courtier = {
-					limit = { OR = { has_trait = sbs_demon has_trait = sbs_succubus has_trait_xp = { trait = sbs_lesser_succubus value = 100 } } }
-					if = {
-						limit = { has_trait = sbs_succubus }
-						remove_trait = sbs_succubus
-						add_trait  = sbs_lesser_succubus
-						set_immortal_age = 18
-						add_trait_xp = { trait = sbs_lesser_succubus value = 100 }
-					}
-					else_if = {
-						limit = { has_trait = sbs_lesser_succubus }
-						add_trait_xp = { trait = sbs_lesser_succubus value = -100 }
 					}
 				}
 			}
@@ -193,6 +168,17 @@ become_demon = {
 			}
 			set_house = character:belial_character.house
 		}
+		if = {
+			limit = { NOT = { faith.religion = religion:satanic_religion } }
+			random_list = {
+				100 = { set_character_faith_with_conversion = faith:beelzebub }
+				100 = { set_character_faith_with_conversion = faith:lilith }
+				100 = { set_character_faith_with_conversion = faith:abaddon }
+				100 = { set_character_faith_with_conversion = faith:mammon }
+				100 = { set_character_faith_with_conversion = faith:asmodeus }
+				100 = { set_character_faith_with_conversion = faith:belial }
+			}
+		}
 		every_relation = {
 			type = slave_owner
 			limit = { is_female = yes is_immortal = yes }
@@ -276,6 +262,107 @@ seal_the_gates_of_hell = {
 			text = seal_the_gates_of_hell
 			set_global_variable = { name = seal_the_gates_of_hell value = yes }
 		}
+	}
+	ai_potential = { always = yes }
+	ai_check_interval = 12
+	ai_will_do = { base = 100 }
+}
+
+alienate_people = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
+	desc = alienate_people.desc
+	confirm_text = alienate_people.c
+	selection_tooltip = alienate_people.t
+	decision_group_type = decisions
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		OR = {
+			NOT = { capital_province.culture = culture }
+			NOT = { capital_province.faith = faith }
+			any_vassal = {
+				primary_title.tier >= tier_county
+				NOR = {
+					faith = root.faith
+					capital_province.faith = root.faith
+					culture = root.culture
+					capital_province.culture = root.culture
+				}
+			}
+		}
+		OR = {
+			has_trait = sbs_demon
+			AND = {
+				has_trait_xp = { trait = sbs_succubus track = power value >= 25 }
+				has_trait_xp = { trait = sbs_succubus track = daring value >= 25 }
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = { has_trait = sbs_succubus }
+			add_trait_xp = { trait = sbs_succubus track = power value = -25 }
+			add_trait_xp = { trait = sbs_succubus track = daring value = -25 }
+		}
+		if = {
+			limit = { NOT = { capital_province.faith = root.faith } }
+			capital_province.county = {
+				set_county_faith = root.faith
+			}
+		}
+		if = {
+			limit = { NOT = { capital_province.culture = root.culture } }
+			capital_province.county = {
+				set_county_culture = root.culture
+			}
+		}
+		every_courtier = {
+			limit = { is_close_family_of = root }
+			if = {
+				limit = { NOT = { faith = root.faith } }
+				set_character_faith_with_conversion = root.faith
+			}
+			if = {
+				limit = { NOT = { culture = root.culture } }
+				set_culture = root.culture
+			}
+		}
+		every_vassal = {
+			limit = { primary_title.tier >= tier_county }
+			if = {
+				limit = { NOT = { faith = root.faith } }
+				set_culture = root.faith
+			}
+			if = {
+				limit = { NOT = { culture = root.culture } }
+				set_culture = root.culture
+			}
+			if = {
+				limit = { is_landed = yes NOT = { capital_province.faith = root.faith } }
+				capital_province.county = {
+					set_county_faith = root.faith
+				}
+			}
+			if = {
+				limit = { is_landed = yes NOT = { capital_province.culture = root.culture } }
+				capital_province.county = {
+					set_county_culture = root.culture
+				}
+			}
+			every_courtier = {
+				limit = { is_close_family_of = prev }
+				if = {
+					limit = { NOT = { faith = root.faith } }
+					set_character_faith_with_conversion = root.faith
+				}
+				if = {
+					limit = { NOT = { culture = root.culture } }
+					set_culture = root.culture
+				}
+			}
+		}
+
 	}
 	ai_potential = { always = yes }
 	ai_check_interval = 12

@@ -109,7 +109,7 @@ succubus_zombie = {
 		pikemen = 1
 	}
 
-	stack = 1000
+	stack = 200
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
@@ -147,7 +147,7 @@ succubus_skeleton = {
 		pikemen = 1
 	}
 
-	stack = 1000
+	stack = 200
 	buy_cost = { gold = 0 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }

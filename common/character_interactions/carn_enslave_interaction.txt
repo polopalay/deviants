@@ -65,7 +65,9 @@
 	on_accept = {
 		carn_enslave_effect = { SLAVE = scope:recipient OWNER = scope:actor DRAMA = yes }
 	}
-	ai_targets = { ai_recipients = prisoners }
+	ai_targets = {
+		ai_recipients = prisoners
+	}
 	ai_frequency = 12
 	ai_potential = { is_at_war = no }
 	ai_will_do = {
@@ -77,7 +79,7 @@
 		modifier = { add = -20 is_close_or_extended_family_of = scope:recipient }
 		modifier = { add = -20 is_close_family_of = scope:recipient }
 		modifier = { add = 50 scope:actor = { has_execute_reason = scope:recipient } OR = { has_trait = sadistic has_trait = lunatic } }
-		modifier = { scope:actor = { has_trait = seed_of_destruction } scope:recipient = { is_ruler = no } add = 200 }
+		modifier = { scope:actor = { has_trait = seed_of_destruction } scope:recipient = { is_ruler = no } add = 2000 }
 		modifier = {
 			add = 20
 			scope:actor = {

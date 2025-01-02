@@ -59,3 +59,8 @@
   seal_the_gates_of_hell.desc: "Las puertas del infierno se han abierto, los demonios están a punto de invadir el mundo humano. Debes encontrar una manera de sellar las puertas del infierno y evitar que los demonios invadan el mundo humano."
   seal_the_gates_of_hell.t: "Sellando las Puertas del Infierno"
   seal_the_gates_of_hell.c: "Sellando las Puertas del Infierno"
+
+  alienate_people: "Alejar a la gente"
+  alienate_people.desc: "La gente te teme y te odia, pero eso no es suficiente. Debes hacer que te odien aún más, alejándolos de ti y de tu círculo social."
+  alienate_people.t: "Alejar a la gente"
+  alienate_people.c: "Alejar a la gente"

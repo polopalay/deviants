@@ -59,3 +59,8 @@
   seal_the_gates_of_hell.desc: "Les portes de l'enfer sont ouvertes, et les démons s'apprêtent à envahir le monde des humains. Vous devez trouver un moyen de sceller les portes de l'enfer et d'empêcher les démons d'entrer dans le monde des humains."
   seal_the_gates_of_hell.t: "Sceller les Portes de l'Enfer"
   seal_the_gates_of_hell.c: "Sceller les Portes de l'Enfer"
+
+  alienate_people: "Aliéner les Gens"
+  alienate_people.desc: "Corrompre votre peuple. Laissez-les adorer le vrai dieu"
+  alienate_people.t: "Aliéner les Gens"
+  alienate_people.c: "Aliéner les Gens"

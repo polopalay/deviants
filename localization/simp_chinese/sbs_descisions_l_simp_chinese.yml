@@ -59,3 +59,8 @@
   seal_the_gates_of_hell.desc: "地狱之门已经打开，恶魔即将入侵人类世界。你必须找到一种方法来封印地狱之门，阻止恶魔进入 人类世界。"
   seal_the_gates_of_hell.t: "封印地狱之门"
   seal_the_gates_of_hell.c: "封印地狱之门"
+
+  alienate_people: "疏远人们"
+  alienate_people.desc: "你已经厌倦了人类的虚伪和无知，你决定疏远他们，让他们感受到你的愤怒和不满。"
+  alienate_people.t: "疏远人们"
+  alienate_people.c: "疏远人们"

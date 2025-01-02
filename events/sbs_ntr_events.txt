@@ -26,10 +26,9 @@ sbs_ntr_event.0100 = {
 	}
 	option = {
 		ai_chance = {
-			base = 25
-			modifier = { has_trait = chaste add = -500 }
-			modifier = { has_trait = lustful add = 200 }
-			modifier = { scope:ntr_character = { has_trait = seducer } add = 200 }
+			base = 20
+			modifier = { has_trait = chaste add = -250 }
+			modifier = { has_trait = lustful add = 40 }
 			modifier = { scope:ntr_character = { has_trait = shrewd } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } } add = 30 }
@@ -44,7 +43,8 @@ sbs_ntr_event.0100 = {
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -50 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -100 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -200 }
-			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
+			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 20 }
+			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 20 }
 		}
 		name = sbs_ntr_event.0100.a
 		custom_tooltip = sbs_ntr_event.0100.a.tt
@@ -57,36 +57,33 @@ sbs_ntr_event.0100 = {
 	}
 	option = {
 		ai_chance = {
-			base = 25
-			modifier = { has_trait = chaste add = -500 }
-			modifier = { scope:ntr_character = { has_trait = seducer } add = 200 }
+			base = 20
+			modifier = { has_trait = chaste add = -250 }
 			modifier = { scope:ntr_character = { has_trait = shrewd } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } } add = 30 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 3 } } add = 50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } } add = 50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } } add = 100 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } } add = 200 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } } add = 30 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } } add = 60 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } } add = 120 }
 			modifier = { scope:ntr_character = { has_trait = dull } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 1 } } add = -20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 2 } } add = -30 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 3 } } add = -50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -50 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -100 }
-			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -200 }
-			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 100 }
-			modifier = { has_trait = dull add =  50 }
-			modifier = { has_trait = trusting add =  50 }
-			modifier = { has_trait = paranoid add =  50 }
-			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 100 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -30 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -60 }
+			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -120 }
+			modifier = { has_trait = dull add =  20 }
+			modifier = { has_trait = trusting add =  20 }
 		}
 		name = sbs_ntr_event.0100.b
 		custom_tooltip = sbs_ntr_event.0100.b.tt
 		trigger_event = sbs_ntr_event.0120
 	}
 	option = {
-		ai_chance = { base = 50 }
-		modifier = { has_trait = lustful add = -25 }
+		ai_chance = { base = 60 }
+		modifier = { has_trait = lustful add = -20 }
+		modifier = { has_trait = chaste add = 200 }
 		name = sbs_ntr_event.0100.c
 		custom_tooltip = sbs_ntr_event.0100.c.tt
 		add_character_flag = sbs_faithful_wife	
@@ -230,8 +227,11 @@ sbs_ntr_event.0121 = {
 			target = scope:ntr_character
 		}
 		scope:ntr_character = {
-			add_trait = immortal
-			set_immortal_age = 45
+			if = {
+				limit = { is_immortal = no }
+				add_trait = immortal
+				set_immortal_age = 45
+			}
 		}
 	}
 	option = {
@@ -565,9 +565,12 @@ sbs_ntr_event.0231 = {
 		custom_tooltip = sbs_ntr_event.0231.a.tt
 		hidden_effect = {
 			scope:ntr_character = {
-				remove_trait = immortal
-				add_trait = seed_of_destruction
-				set_immortal_age = 45
+				if = {
+					limit = { has_trait = immortal }
+					remove_trait = immortal
+					add_trait = seed_of_destruction
+					set_immortal_age = 45
+				}
 			}
 		}
 		add_opinion = { target = scope:ntr_character modifier = carn_wants_to_be_your_slave_opinion }

@@ -4,13 +4,17 @@ sbs_looking_new_owner_interaction = {
 	use_diplomatic_range = yes
 	common_interaction = yes
 	is_shown = {
-		scope:actor = {
-			has_relation_slave = scope:recipient
-			OR = {
-				NOT = { has_trait = seed_of_destruction }
-				age < 16
-				is_female = yes
+		OR = {
+			scope:actor = {
+				has_relation_slave = scope:recipient
+				OR = {
+					NOT = { has_trait = seed_of_destruction }
+					age < 16
+					is_female = yes
+				}
 			}
+			scope:recipient.liege = scope:recipient
+			NOT = { exists = scope:recipient.liege }
 		}
 		scope:recipient = {
 			has_trait = slave

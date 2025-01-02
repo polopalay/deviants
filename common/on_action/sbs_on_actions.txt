@@ -17,28 +17,24 @@ random_ntr_on_action = {
 			has_trait = sbs_demon
 		}
 		NOT = { has_global_variable = seal_the_gates_of_hell }
+		primary_spouse = {
+			NOT = {
+				has_trait = sbs_demon
+				has_trait = seed_of_destruction
+			}
+		}
 		primary_spouse.father = {
 			OR = {
-				has_trait = cynical
-				has_trait = lustful
-				has_trait = callous
-				has_trait = ambitious
-				has_trait = deceitful
 				has_trait = seducer
-				has_trait = schemer
-				has_trait = torturer
-				has_trait = paranoid
-				has_trait = eccentric
-				has_trait = arbitrary
-				has_trait = arrogant
-				has_trait = wrathful
+				has_trait = seed_of_destruction
+			}
+			OR = {
+				has_trait = lustful
 				has_trait = deviant
 				any_secret = { secret_type = secret_deviant }
+				has_trait = seed_of_destruction
 			}
-			NOT = {
-				has_trait = chaste
-				has_trait = zealous
-			}
+			NOT = { has_trait = chaste }
 		}
 		is_ruler = yes
 		is_landed = yes
