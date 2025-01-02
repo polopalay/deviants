@@ -792,8 +792,14 @@ sbs_ntr_event.0232 = {
 			set_immortal_age = 18
 		}
 		random_held_title = {
-			limit = { tier <= tier_county }
+			limit = { tier = tier_county }
 			save_scope_as = title
+		}
+		every_vassal = {
+			limit = { primary_title.tier >= tier_county }
+			save_scope_as = recipient
+			scope:ntr_character = { save_scope_as = actor }
+			offer_vassalization_interaction_effect = yes
 		}
 		every_held_title = {
 			limit = { tier >= tier_county NOT = { this = scope:title } }

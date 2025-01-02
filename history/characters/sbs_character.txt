@@ -273,6 +273,16 @@ abaddon_character = {
 				name = event_troop_default_name
 				men_at_arms = {
 					type = succubus_dark_amry
+					stacks = 5
+				}
+				location = province:2608
+				origin = province:2608
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = succubus_dark_amry
 					stacks = 10
 				}
 				location = province:2608

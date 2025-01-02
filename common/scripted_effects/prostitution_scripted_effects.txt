@@ -116,14 +116,14 @@
 			}
 			random = {
 				chance = 1
-			}
-			if = {
-				limit = { have_devil_nicknames_trigger = no is_female = yes }
-				random_list = {
-					1 = { give_nickname = nickname_the_bitch }
-					1 = { give_nickname = nickname_the_slut }
-					1 = { give_nickname = nickname_the_whore }
-					1 = { give_nickname = nickname_the_wench }
+				if = {
+					limit = { have_devil_nicknames_trigger = no is_female = yes }
+					random_list = {
+						1 = { give_nickname = nickname_the_bitch }
+						1 = { give_nickname = nickname_the_slut }
+						1 = { give_nickname = nickname_the_whore }
+						1 = { give_nickname = nickname_the_wench }
+					}
 				}
 			}
 		}
