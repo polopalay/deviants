@@ -10,8 +10,8 @@ random_ntr_on_action = {
 	trigger = {
 		is_adult = yes
 		is_female = yes
-		NOT = { has_character_flag = sbs_faithful_wife }
 		NOT = {
+			has_trait = chaste
 			has_trait = sbs_succubus
 			has_trait = sbs_lesser_succubus
 			has_trait = sbs_demon
@@ -26,13 +26,30 @@ random_ntr_on_action = {
 		primary_spouse.father = {
 			OR = {
 				has_trait = seducer
-				has_trait = seed_of_destruction
+				has_trait = ambitious
+				has_trait = deceitful
+				has_trait = callous
+				AND = {
+					has_trait = seed_of_destruction
+					any_courtier = {
+						is_female = yes
+						is_immortal = yes
+						count = 0
+					}
+				}
 			}
 			OR = {
 				has_trait = lustful
 				has_trait = deviant
 				any_secret = { secret_type = secret_deviant }
-				has_trait = seed_of_destruction
+				AND = {
+					has_trait = seed_of_destruction
+					any_courtier = {
+						is_female = yes
+						is_immortal = yes
+						count = 0
+					}
+				}
 			}
 			NOT = { has_trait = chaste }
 		}

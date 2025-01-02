@@ -27,9 +27,10 @@ sbs_ntr_event.0100 = {
 	option = {
 		ai_chance = {
 			base = 20
-			modifier = { has_trait = chaste add = -250 }
-			modifier = { has_trait = lustful add = 40 }
+			modifier = { has_trait = lustful add = 20 }
 			modifier = { scope:ntr_character = { has_trait = shrewd } add = 20 }
+			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 20 }
+			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } } add = 30 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 3 } } add = 50 }
@@ -43,8 +44,6 @@ sbs_ntr_event.0100 = {
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -50 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -100 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -200 }
-			modifier = { OR = { has_trait = deviant any_secret = { secret_type = secret_deviant } } add = 20 }
-			modifier = { OR = { has_trait = lifestyle_prostitute any_secret = { secret_type = secret_prostitute } } add = 20 }
 		}
 		name = sbs_ntr_event.0100.a
 		custom_tooltip = sbs_ntr_event.0100.a.tt
@@ -58,7 +57,8 @@ sbs_ntr_event.0100 = {
 	option = {
 		ai_chance = {
 			base = 20
-			modifier = { has_trait = chaste add = -250 }
+			modifier = { has_trait = dull add =  20 }
+			modifier = { has_trait = trusting add =  20 }
 			modifier = { scope:ntr_character = { has_trait = shrewd } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 1 } } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_good rank = 2 } } add = 30 }
@@ -66,15 +66,12 @@ sbs_ntr_event.0100 = {
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 1 } } add = 30 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 2 } } add = 60 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_good rank = 3 } } add = 120 }
-			modifier = { scope:ntr_character = { has_trait = dull } add = 20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 1 } } add = -20 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 2 } } add = -30 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = intellect_bad rank = 3 } } add = -50 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 1 } } add = -30 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 2 } } add = -60 }
 			modifier = { scope:ntr_character = { has_trait_rank = { trait = beauty_bad rank = 3 } } add = -120 }
-			modifier = { has_trait = dull add =  20 }
-			modifier = { has_trait = trusting add =  20 }
 		}
 		name = sbs_ntr_event.0100.b
 		custom_tooltip = sbs_ntr_event.0100.b.tt
@@ -86,7 +83,14 @@ sbs_ntr_event.0100 = {
 		modifier = { has_trait = chaste add = 200 }
 		name = sbs_ntr_event.0100.c
 		custom_tooltip = sbs_ntr_event.0100.c.tt
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -124,7 +128,14 @@ sbs_ntr_event.0110 = {
 		name = sbs_ntr_event.0110.b
 		custom_tooltip = sbs_ntr_event.0110.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -156,7 +167,14 @@ sbs_ntr_event.0111 = {
 	option = {
 		name = sbs_ntr_event.0111.b
 		custom_tooltip = sbs_ntr_event.0111.b.tt
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -197,7 +215,14 @@ sbs_ntr_event.0120 = {
 		name = sbs_ntr_event.0120.c
 		custom_tooltip = sbs_ntr_event.0120.c.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -239,7 +264,14 @@ sbs_ntr_event.0121 = {
 		name = sbs_ntr_event.0121.b
 		custom_tooltip = sbs_ntr_event.0121.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -269,7 +301,14 @@ sbs_ntr_event.0122 = {
 		name = sbs_ntr_event.0122.b
 		custom_tooltip = sbs_ntr_event.0122.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -299,7 +338,14 @@ sbs_ntr_event.0210 = {
 		name = sbs_ntr_event.0210.b
 		custom_tooltip = sbs_ntr_event.0210.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -329,7 +375,14 @@ sbs_ntr_event.0220 = {
 		name = sbs_ntr_event.0220.b
 		custom_tooltip = sbs_ntr_event.0220.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -359,7 +412,14 @@ sbs_ntr_event.0221 = {
 		name = sbs_ntr_event.0221.b
 		custom_tooltip = sbs_ntr_event.0221.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -388,7 +448,14 @@ sbs_ntr_event.0222 = {
 		name = sbs_ntr_event.0222.b
 		custom_tooltip = sbs_ntr_event.0222.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -421,7 +488,14 @@ sbs_ntr_event.0223 = {
 		name = sbs_ntr_event.0223.b
 		custom_tooltip = sbs_ntr_event.0223.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -450,7 +524,14 @@ sbs_ntr_event.0224 = {
 		name = sbs_ntr_event.0224.b
 		custom_tooltip = sbs_ntr_event.0224.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -479,7 +560,14 @@ sbs_ntr_event.0225 = {
 		name = sbs_ntr_event.0225.b
 		custom_tooltip = sbs_ntr_event.0225.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -540,7 +628,14 @@ sbs_ntr_event.0230 = {
 		name = sbs_ntr_event.0230.b
 		custom_tooltip = sbs_ntr_event.0230.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -573,22 +668,6 @@ sbs_ntr_event.0231 = {
 				}
 			}
 		}
-		add_opinion = { target = scope:ntr_character modifier = carn_wants_to_be_your_slave_opinion }
-		add_trait = gallivanter
-		every_courtier = {
-			add_opinion = {
-				target = root
-				modifier = disgusted_opinion
-				opinion = -100
-			}
-		}
-		every_vassal = {
-			add_opinion = {
-				target = root
-				modifier = disgusted_opinion
-				opinion = -100
-			}
-		}
 		primary_spouse = {
 			death = {
 				death_reason = death_execution
@@ -601,7 +680,14 @@ sbs_ntr_event.0231 = {
 		name = sbs_ntr_event.0231.b
 		custom_tooltip = sbs_ntr_event.0231.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -621,12 +707,28 @@ sbs_ntr_event.0232 = {
 		outfit_tags = { no_clothes }
 	}
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = { base = 60 }
 		name = sbs_ntr_event.0232.a
 		custom_tooltip = sbs_ntr_event.0232.a.tt
 		had_sex_with_effect = {
 			CHARACTER = scope:ntr_character
 			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		add_opinion = { target = scope:ntr_character modifier = carn_wants_to_be_your_slave_opinion }
+		add_trait = gallivanter
+		every_courtier = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -100
+			}
+		}
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -100
+			}
 		}
 		remove_relation_lover = scope:ntr_character
 		hidden_effect = {
@@ -645,6 +747,10 @@ sbs_ntr_event.0232 = {
 					remove_trait = immortal
 					add_trait = sbs_lesser_succubus
 					set_immortal_age = 18
+					create_landless_adventurer_title_effect = {
+						REASON = flag:voluntary
+						FLAVOR_CHAR = this
+					}
 				}
 			}
 		}
@@ -667,50 +773,10 @@ sbs_ntr_event.0232 = {
 		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
 	}
 	option = {
-		name = sbs_ntr_event.0232.b
-		custom_tooltip = sbs_ntr_event.0232.b.tt
-		had_sex_with_effect = {
-			CHARACTER = scope:ntr_character
-			PREGNANCY_CHANCE = pregnancy_chance
+		ai_chance = {
+			base = 20
+			modifier = { has_trait = ambitious add = 80 }
 		}
-		mind_break_personality = yes
-		scope:ntr_character = {
-			primary_spouse = {
-				mind_break_personality = yes
-				hidden_effect = {
-					remove_trait = sbs_succubus
-					remove_trait = sbs_demon
-					remove_trait = immortal
-					add_trait = sbs_lesser_succubus
-					set_immortal_age = 18
-				}
-			}
-		}
-		hidden_effect = {
-			remove_trait = sbs_succubus
-			remove_trait = sbs_demon
-			remove_trait = immortal
-			add_trait = sbs_lesser_succubus
-			set_immortal_age = 18
-		}
-		every_held_title = {
-			create_title_and_vassal_change = {
-				type = usurped
-				save_scope_as = change
-				add_claim_on_loss = no
-			}
-			change_title_holder = {
-				holder = scope:ntr_character
-				change = scope:change
-			}
-			resolve_title_and_vassal_change = scope:change
-		}
-		add_trait = disinherited
-		add_trait = denounced
-		add_trait = decadent
-		carn_enslave_effect = { SLAVE = root OWNER = scope:ntr_character DRAMA = yes }
-	}
-	option = {
 		name = sbs_ntr_event.0232.c
 		custom_tooltip = sbs_ntr_event.0232.c.tt
 		had_sex_with_effect = {
@@ -725,7 +791,12 @@ sbs_ntr_event.0232 = {
 			add_trait = sbs_lesser_succubus
 			set_immortal_age = 18
 		}
+		random_held_title = {
+			limit = { tier = tier_county }
+			save_scope_as = title
+		}
 		every_held_title = {
+			limit = { tier > tier_county NOT = { this = scope:title } }
 			create_title_and_vassal_change = {
 				type = granted
 				save_scope_as = change
@@ -738,21 +809,28 @@ sbs_ntr_event.0232 = {
 			resolve_title_and_vassal_change = scope:change
 		}
 		scope:ntr_character = {
-			primary_spouse = {
-				death = {
-					death_reason = death_execution
-					killer = root
+			if = {
+				limit = { primary_title.tier > tier_county }
+				save_scope_as = actor
+				root = {
+					save_scope_as = recipient
+					offer_vassalization_interaction_effect = yes
 				}
+			}
+			carn_enslave_effect = { SLAVE = scope:ntr_character.primary_spouse OWNER = scope:ntr_character DRAMA = yes }
+			primary_spouse = {
+				mind_break_personality = yes
+				add_trait = immortal
+				set_immortal_age = 18
 			}
 			marry = root
 		}
-		add_trait = disinherited
-		add_trait = denounced
-		add_trait = decadent
 	}
 	option = {
+		ai_chance = { base = 20 }
 		name = sbs_ntr_event.0232.d
 		custom_tooltip = sbs_ntr_event.0232.d.tt
+		add_trait = saint
 		scope:ntr_character = {
 			death = {
 				death_reason = death_execution
@@ -802,7 +880,14 @@ sbs_ntr_event.0240 = {
 		name = sbs_ntr_event.0240.b
 		custom_tooltip = sbs_ntr_event.0240.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
@@ -839,7 +924,14 @@ sbs_ntr_event.0250 = {
 		name = sbs_ntr_event.0250.b
 		custom_tooltip = sbs_ntr_event.0250.b.tt
 		remove_relation_lover = scope:ntr_character
-		add_character_flag = sbs_faithful_wife	
+		if = {
+			limit = { has_trait = lustful }
+			remove_trait = lustful
+			add_trait = chaste
+		}
+		else = {
+			add_trait = chaste
+		}
 	}
 }
 
