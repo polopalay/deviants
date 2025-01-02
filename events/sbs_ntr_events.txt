@@ -792,11 +792,11 @@ sbs_ntr_event.0232 = {
 			set_immortal_age = 18
 		}
 		random_held_title = {
-			limit = { tier = tier_county }
+			limit = { tier <= tier_county }
 			save_scope_as = title
 		}
 		every_held_title = {
-			limit = { tier > tier_county NOT = { this = scope:title } }
+			limit = { tier >= tier_county NOT = { this = scope:title } }
 			create_title_and_vassal_change = {
 				type = granted
 				save_scope_as = change
@@ -810,19 +810,18 @@ sbs_ntr_event.0232 = {
 		}
 		scope:ntr_character = {
 			if = {
-				limit = { primary_title.tier > tier_county }
+				limit = { primary_title.tier > tier_county root.primary_title.tier = tier_county }
 				save_scope_as = actor
 				root = {
 					save_scope_as = recipient
 					offer_vassalization_interaction_effect = yes
 				}
 			}
-			carn_enslave_effect = { SLAVE = scope:ntr_character.primary_spouse OWNER = scope:ntr_character DRAMA = yes }
 			primary_spouse = {
-				mind_break_personality = yes
 				add_trait = immortal
 				set_immortal_age = 18
 			}
+			carn_enslave_effect = { SLAVE = scope:ntr_character.primary_spouse OWNER = scope:ntr_character DRAMA = yes }
 			marry = root
 		}
 	}

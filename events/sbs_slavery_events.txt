@@ -38,13 +38,20 @@ sbs_slavery_event.0100 = {
 				trigger_event = sbs_slavery_event.0114
 			}
 			5 = { trigger_event = sbs_slavery_event.0115 }
-			5 = { trigger_event = sbs_slavery_event.0116 }
+			0 = {
+				modifier = { scope:owner = { is_attracted_to_gender_of = root } add = 5 }
+				trigger_event = sbs_slavery_event.0116
+			}
 			0 = {
 				modifier = { is_immortal = yes add = 5 }
 				trigger_event = sbs_slavery_event.0117
 			}
-			5 = {
-				modifier = { has_trait = pregnant add = -5 }
+			0 = {
+				modifier = {
+					NOT = { has_trait = pregnant }
+					scope:owner = { is_female = no }
+					add = 5
+				}
 				trigger_event = sbs_slavery_event.0118
 			}
 			0 = {
@@ -434,9 +441,17 @@ sbs_slavery_event.0121 = {
 					min = -49
 				}
 				custom_tooltip = { text = sbs_slavery_event.0121.bl.tt }
-				had_sex_with_effect = {
-					CHARACTER = scope:owner
-					PREGNANCY_CHANCE = pregnancy_chance
+				if = {
+					limit = { scope:owner = { is_adult = yes is_attracted_to_gender_of = root } }
+					had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+				}
+				else = {
+					scope:owner = {
+						every_courtier = {
+							limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
+							prostitute_effect = { PROSTITUTE = root PREGNANCY_CHANCE = pregnancy_chance }
+						}
+					}
 				}
 			}
 		}
@@ -802,7 +817,10 @@ sbs_slavery_event.0200 = {
 		ai_chance = { base = 20 }
 		name = sbs_slavery_event.0200.b
 		custom_tooltip = sbs_slavery_event.0200.b.tt
-		had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+		if = {
+			limit = { scope:owner = { is_adult = yes is_attracted_to_gender_of = root } }
+			had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+		}
 		scope:owner = {
 			every_courtier = {
 				limit = { is_adult = yes is_attracted_to_gender_of = root NOT = { this = root } NOT = { has_trait = lovers_pox has_trait = great_pox has_trait = early_great_pox } }
@@ -1632,7 +1650,10 @@ sbs_slavery_event.1100 = {
 		name = sbs_slavery_event.1000.a
 		custom_tooltip = sbs_slavery_event.1000.a.tt
 		add_piety = medium_piety_loss
-		had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+		if = {
+			limit = { scope:owner = { is_attracted_to_gender_of = root } }
+			had_sex_with_effect = { CHARACTER = scope:owner PREGNANCY_CHANCE = pregnancy_chance }
+		}
 		add_character_modifier = { modifier = stanky_modifier years = 2 }
 		add_character_modifier = { modifier = licentious_04_modifier months = 3 }
 	}
